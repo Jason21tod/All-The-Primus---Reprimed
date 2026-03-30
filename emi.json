@@ -1,6 +1,53 @@
 {
-  "favorites": [],
+  "favorites": [
+    {
+      "stack": "item:candlelight:fresh_garden_salad"
+    },
+    {
+      "stack": "item:slashblade:proudsoul_tiny{Enchantments:[{id:\"minecraft:soul_speed\",lvl:1s}]}"
+    },
+    {
+      "stack": "item:create:redstone_requester"
+    },
+    {
+      "stack": "item:create:stock_ticker"
+    },
+    {
+      "stack": "item:create:repackager"
+    },
+    {
+      "stack": "item:create:stock_link"
+    },
+    {
+      "stack": "item:create:display_link"
+    },
+    {
+      "stack": "item:quark:bottled_cloud"
+    },
+    {
+      "stack": "item:mermaid_origins:potion_of_mermaid_grace"
+    },
+    {
+      "stack": "item:mermaid_origins:bottled_mermaid_tear"
+    },
+    {
+      "stack": "item:modulargolems:golem_facade{FacadeSkin:\"goety:dark_metal\"}"
+    },
+    {
+      "stack": "item:modulargolems:humanoid_golem_holder{golem_materials:[{material:\"cataclysm:storm\",part:\"modulargolems:humanoid_golem_body\"},{material:\"cataclysm:storm\",part:\"modulargolems:humanoid_golem_arms\"},{material:\"cataclysm:storm\",part:\"modulargolems:humanoid_golem_legs\"}]}"
+    }
+  ],
   "lookup_history": [
+    "item:modulargolems:metal_golem_template",
+    "item:modulargolems:humanoid_golem_body",
+    "item:modulargolems:humanoid_golem_holder{golem_materials:[{material:\"cataclysm:storm\",part:\"modulargolems:humanoid_golem_body\"},{material:\"cataclysm:storm\",part:\"modulargolems:humanoid_golem_arms\"},{material:\"cataclysm:storm\",part:\"modulargolems:humanoid_golem_legs\"}]}",
+    "item:mermaid_origins:potion_of_mermaid_grace",
+    "item:mermaid_origins:bottled_mermaid_tear",
+    "item:quark:bottled_cloud",
+    "item:slashblade_useful_addon:proud_soul_leaves",
+    "item:slashblade:proudsoul_tiny",
+    "item:slashblade:proudsoul",
+    "item:candlelight:fresh_garden_salad",
     "item:goety:pedestal_end_stone"
   ],
   "craft_history": [],

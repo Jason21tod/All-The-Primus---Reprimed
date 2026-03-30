@@ -1,0 +1,51 @@
+#Enable custom tooltips for items
+enableTooltips = true
+#Show separators in tooltips
+showSeparators = true
+#Emblem wearing position: LEFT, CENTER, RIGHT
+emblemPosition = "RIGHT"
+#Emblem depth (0.0-1.0, lower value = closer to body)
+#Range: 0.0 ~ 1.0
+emblemDepth = 0.1
+#Emblem scale (0.1-2.0)
+#Range: 0.1 ~ 2.0
+emblemScale = 0.25
+#Goggles vertical offset (positive = up, negative = down)
+#Range: -0.5 ~ 0.5
+gogglesVerticalOffset = -0.02
+#Goggles depth offset (positive = forward, negative = backward)
+#Range: -0.3 ~ 0.3
+gogglesDepthOffset = -0.21
+#Goggles scale (0.5-2.0)
+#Range: 0.1 ~ 2.0
+gogglesScale = 0.8
+#Goggles X-axis rotation (degrees)
+#Range: 0.0 ~ 0.0
+gogglesRotationX = 0.0
+#Goggles Y-axis rotation (degrees)
+#Range: 0.0 ~ 0.0
+gogglesRotationY = 0.0
+
+[windlight]
+	#Fast fall speed (negative value = downward)
+	#Range: -5.0 ~ -0.1
+	fastFallSpeed = -2.0
+	#Double jump upward force
+	#Range: 0.1 ~ 2.0
+	doubleJumpForce = 0.8
+	#Dash movement speed
+	#Range: 0.5 ~ 10.0
+	dashSpeed = 2.5
+	#Dash vertical boost (upward force)
+	#Range: -1.0 ~ 2.0
+	dashVerticalBoost = 0.25
+	#Dash duration in ticks (20 ticks = 1 second)
+	#Range: 1 ~ 40
+	dashDuration = 5
+	#Dash cooldown in ticks (20 ticks = 1 second)
+	#Range: 0 ~ 100
+	dashCooldown = 60
+	#Minimum horizontal speed required for ground dash
+	#Range: 0.0 ~ 2.0
+	groundDashThreshold = 0.25
+

@@ -1,0 +1,592 @@
+
+[covenant_of_the_seven]
+
+	[covenant_of_the_seven.covenant]
+		#Whether to give the player the mod's rings for free upon first login.
+		ring_first_login = true
+
+	[covenant_of_the_seven.calamity]
+
+		[covenant_of_the_seven.calamity.ring_curse_1]
+			#Amount of passing time before receiving the 1st Curse of the Ring of Calamity, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_1 = 1920
+			#Amount of passing time before advancing the 1st Curse of the Ring of Calamity to Stage 2 from Stage 1, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_2 = 5280
+			#Amount of passing time before advancing the 1st Curse of the Ring of Calamity to Stage 3 from Stage 2, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_3 = 79200
+			#Amount of passing time before advancing the 1st Curse of the Ring of Calamity to Stage 4 from Stage 3, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_4 = 216000
+			#Amount of passing time since advancing the 1st Curse of the Ring of Calamity to Stage 4 to reach its maximum drawback, measured in seconds.
+			#Range: 1 ~ 31557600
+			max_time = 216000
+
+		[covenant_of_the_seven.calamity.ring_curse_2]
+			#Amount of passing time before receiving the 2nd Curse of the Ring of Calamity, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_1 = 600
+			#Amount of passing time before advancing the 2nd Curse of the Ring of Calamity to Stage 2 from Stage 1, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_2 = 13800
+			#Amount of passing time since advancing the 2nd Curse of the Ring of Calamity to Stage 2 to reach its maximum drawback, measured in seconds.
+			#Range: 1 ~ 31557600
+			max_time = 331200
+			#List of mobs to exclude from the effects of the 2nd Curse of the Ring of Calamity
+			#Format: ["modid:mob", "modid:mob"]
+			blacklist = []
+
+		[covenant_of_the_seven.calamity.ring_curse_3]
+			#Amount of passing time before receiving the 3rd Curse of the Ring of Calamity, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_1 = 1080
+			#Amount of passing time before advancing the 3rd Curse of the Ring of Calamity to Stage 2 from Stage 1, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_2 = 27720
+			#Amount of passing time before advancing the 3rd Curse of the Ring of Calamity to Stage 3 from Stage 2, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_3 = 100800
+			#Amount of passing time since advancing the 3rd Curse of the Ring of Calamity to Stage 3 to reach its maximum drawback, measured in seconds.
+			#Range: 1 ~ 31557600
+			max_time = 345600
+
+		[covenant_of_the_seven.calamity.ring_curse_4]
+			#Amount of passing time before receiving the 4th Curse of the Ring of Calamity, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_1 = 1440
+			#Amount of passing time before advancing the 4th Curse of the Ring of Calamity to Stage 2 from Stage 1, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_2 = 56160
+			#Amount of passing time before advancing the 4th Curse of the Ring of Calamity to Stage 3 from Stage 2, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_3 = 201600
+			#Amount of passing time since advancing the 4th Curse of the Ring of Calamity to Stage 3 to reach its maximum drawback, measured in seconds.
+			#Range: 1 ~ 31557600
+			max_time = 172800
+
+		[covenant_of_the_seven.calamity.ring_curse_5]
+			#Amount of passing time before receiving the 5th Curse of the Ring of Calamity, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_1 = 2880
+			#Amount of passing time before advancing the 5th Curse of the Ring of Calamity to Stage 2 from Stage 1, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_2 = 40320
+			#Amount of passing time before advancing the 5th Curse of the Ring of Calamity to Stage 3 from Stage 2, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_3 = 172800
+			#Amount of passing time since advancing the 5th Curse of the Ring of Calamity to Stage 3 to reach its maximum drawback, measured in seconds.
+			#Range: 1 ~ 31557600
+			max_time = 151200
+
+		[covenant_of_the_seven.calamity.ring_curse_6]
+			#Amount of passing time before receiving the 6th Curse of the Ring of Calamity, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_1 = 720
+			#Amount of passing time before advancing the 6th Curse of the Ring of Calamity to Stage 2 from Stage 1, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_2 = 20880
+			#Amount of passing time before advancing the 6th Curse of the Ring of Calamity to Stage 3 from Stage 2, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_3 = 151200
+			#Amount of passing time since advancing the 6th Curse of the Ring of Calamity to Stage 3 to reach its maximum drawback, measured in seconds.
+			#Range: 1 ~ 31557600
+			max_time = 216000
+
+		[covenant_of_the_seven.calamity.ring_curse_7]
+			#Amount of passing time before receiving the 7th Curse of the Ring of Calamity, measured in seconds.
+			#Range: 1 ~ 31557600
+			stage_1 = 3600
+			#Amount of passing time since receiving the 7th Curse of the Ring of Calamity to reach its maximum drawback, measured in seconds.
+			#Range: 1 ~ 31557600
+			max_time = 601200
+
+		[covenant_of_the_seven.calamity.bloodlust]
+			#List of mobs to exclude for the Ring of Calamity's unique resource generation.
+			#Format: ["modid:mob", "modid:mob"]
+			blacklist = ["dummmmmmy:target_dummy"]
+
+		[covenant_of_the_seven.calamity.concept]
+
+			[covenant_of_the_seven.calamity.concept.despair]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Despair" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 259200
+				#Total number of lethal damage taken that exceeds your max HP before the concept of "Despair" is obtained.
+				#Range: > 1
+				statistics = 200
+				#Amount of Current HP Damage the concept of "Despair" provides with each successful attack, measured in percents.
+				#Range: 1.0 ~ 100.0
+				current_hp_damage = 5.0
+				#Amount of Additional Current HP Damage the concept of "Despair" provides with each successful attack when the active ability of "Divine Vessel: Khaslana" is invoked, measured in percents.
+				#Range: 1.0 ~ 100.0
+				additional_current_hp_damage = 5.0
+
+			[covenant_of_the_seven.calamity.concept.insanity]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Insanity" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 86400
+				#Total number of reabsorbed Soul Remnants before the concept of "Insanity" is obtained.
+				#Range: > 1
+				statistics = 200
+				#The minimum distance requirement from the player's last death location to receive the effects provided by the concept of "Insanity".
+				#Range: 1 ~ 1024
+				minimum_distance = 8
+
+				[covenant_of_the_seven.calamity.concept.insanity.attack]
+					#Amount of Attack the concept of "Insanity" provides when you are near your last death location after having lost 1 Soul Remnant.
+					#Range: 1.0 ~ 1000.0
+					1_soul_remnant = 10.0
+					#Amount of Attack the concept of "Insanity" provides when you are near your last death location after having lost 2 Soul Remnants.
+					#Range: 1.0 ~ 1000.0
+					2_soul_remnants = 20.0
+					#Amount of Attack the concept of "Insanity" provides when you are near your last death location after having lost 3 Soul Remnants.
+					#Range: 1.0 ~ 1000.0
+					3_soul_remnants = 30.0
+					#Amount of Attack the concept of "Insanity" provides when you are near your last death location after having lost 4 Soul Remnants.
+					#Range: 1.0 ~ 1000.0
+					4_soul_remnants = 50.0
+					#Amount of Attack the concept of "Insanity" provides when you are near your last death location after having lost 5 Soul Remnants.
+					#Range: 1.0 ~ 1000.0
+					5_soul_remnants = 70.0
+					#Amount of Attack the concept of "Insanity" provides when you are near your last death location after having lost 6 Soul Remnants.
+					#Range: 1.0 ~ 1000.0
+					6_soul_remnants = 100.0
+					#Amount of Attack the concept of "Insanity" provides when you are near your last death location after having lost 7 Soul Remnants.
+					#Range: 1.0 ~ 1000.0
+					7_soul_remnants = 120.0
+					#Amount of Attack the concept of "Insanity" provides when you are near your last death location after having lost 8 Soul Remnants.
+					#Range: 1.0 ~ 1000.0
+					8_soul_remnants = 150.0
+					#Amount of Attack the concept of "Insanity" provides when you are near your last death location after having lost 9 Soul Remnants.
+					#Range: 1.0 ~ 1000.0
+					9_soul_remnants = 200.0
+
+				[covenant_of_the_seven.calamity.concept.insanity.attack_speed]
+					#Amount of Attack Speed the concept of "Insanity" provides when you are near your last death location after having lost 1 Soul Remnant, measured in percents.
+					#Range: 1.0 ~ 1000.0
+					1_soul_remnant = 10.0
+					#Amount of Attack Speed the concept of "Insanity" provides when you are near your last death location after having lost 2 Soul Remnants, measured in percents.
+					#Range: 1.0 ~ 1000.0
+					2_soul_remnants = 20.0
+					#Amount of Attack Speed the concept of "Insanity" provides when you are near your last death location after having lost 3 Soul Remnants, measured in percents.
+					#Range: 1.0 ~ 1000.0
+					3_soul_remnants = 50.0
+					#Amount of Attack Speed the concept of "Insanity" provides when you are near your last death location after having lost 4 Soul Remnants, measured in percents.
+					#Range: 1.0 ~ 1000.0
+					4_soul_remnants = 75.0
+					#Amount of Attack Speed the concept of "Insanity" provides when you are near your last death location after having lost 5 Soul Remnants, measured in percents.
+					#Range: 1.0 ~ 1000.0
+					5_soul_remnants = 100.0
+					#Amount of Attack Speed the concept of "Insanity" provides when you are near your last death location after having lost 6 Soul Remnants, measured in percents.
+					#Range: 1.0 ~ 1000.0
+					6_soul_remnants = 150.0
+					#Amount of Attack Speed the concept of "Insanity" provides when you are near your last death location after having lost 7 Soul Remnants, measured in percents.
+					#Range: 1.0 ~ 1000.0
+					7_soul_remnants = 200.0
+					#Amount of Attack Speed the concept of "Insanity" provides when you are near your last death location after having lost 8 Soul Remnants, measured in percents.
+					#Range: 1.0 ~ 1000.0
+					8_soul_remnants = 250.0
+					#Amount of Attack Speed the concept of "Insanity" provides when you are near your last death location after having lost 9 Soul Remnants, measured in percents.
+					#Range: 1.0 ~ 1000.0
+					9_soul_remnants = 300.0
+
+			[covenant_of_the_seven.calamity.concept.misery]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Misery" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 172800
+				#Total number of entities killed whose Max HP is >200% of your own before the concept of "Misery" is obtained.
+				#Range: > 1
+				statistics = 800
+				#The minimum Max HP difference, relative to your own, the slain non-player entity must have for a chance to trigger the effects of the concept of "Misery," measured in proportion to your Max HP.
+				#Range: 1 ~ 100
+				minimum_non_player_max_hp = 10
+				#The chance for the concept of "Misery" to harvest your Soul Remnant from the body of a slain non-player entity at its death location, measured in percents.
+				#Range: 1.0 ~ 100.0
+				non_player_drop_rate = 10.0
+				#The chance for the concept of "Misery" to sever the Soul Remnant of a slain player entity at their death location, measured in percents.
+				#Range: 1.0 ~ 100.0
+				player_drop_rate = 5.0
+
+			[covenant_of_the_seven.calamity.concept.insolence]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Insolence" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 345600
+				#Total number of deaths without an existing respawn point before the concept of "Insolence" is obtained.
+				#Range: > 1
+				statistics = 200
+
+			[covenant_of_the_seven.calamity.concept.tyranny]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Tyranny" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 86400
+				#Total number of entities killed via explosives before the concept of "Tyranny" is obtained.
+				#Range: > 1
+				statistics = 800
+
+			[covenant_of_the_seven.calamity.concept.anguish]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Anguish" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 43200
+				#Total number of entities killed while you are missing 1 or more Soul Remnants before the concept of "Anguish" is obtained.
+				#Range: > 1
+				statistics = 800
+				#The minimum distance requirement for nearby Soul Remnants to receive the effects provided by the concept of "Anguish".
+				#Range: 1 ~ 1024
+				minimum_distance = 24
+				#Amount of Crit Damage the concept of "Anguish" provides for each nearby Soul Remnant, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				crit_damage = 10.0
+
+			[covenant_of_the_seven.calamity.concept.torment]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Torment" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 28800
+				#Total number of entities killed in Melee before the concept of "Torment" is obtained.
+				#Range: > 1
+				statistics = 800
+				#Amount of bonus Melee Damage, prior to damage reduction calculations, the concept of "Torment" provides for each entity targeting you within the effective range of the 2nd Curse of Calamity, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				attack_damage = 10.0
+
+			[covenant_of_the_seven.calamity.concept.strife]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Strife" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 259200
+				#Total number of mass killings performed in a single strike before the concept of "Strife" is obtained.
+				#Range: > 1
+				statistics = 800
+				#The range of the AoE Damage dealt by the concept of "Strife" relative to the effective range of the 2nd Curse of Calamity, measured in percents.
+				#Range: 1.0 ~ 100.0
+				range_percentage = 40.0
+				#Amount of AoE Damage the concept of "Strife" deals to surrounding entities with each successful attack, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				aoe_damage = 30.0
+				#List of mobs to exclude from the AoE damage dealt by the concept of "Strife"
+				#Format: ["modid:mob", "modid:mob"]
+				blacklist = []
+
+			[covenant_of_the_seven.calamity.concept.derision]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Derision" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 28800
+				#Total number of entities killed via Projectiles before the concept of "Derision" is obtained.
+				#Range: > 1
+				statistics = 800
+				#Amount of bonus Projectile Damage, prior to damage reduction calculations, the concept of "Derision" provides for each entity targeting you within the effective range of the 2nd Curse of Calamity, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				projectile_damage = 10.0
+
+			[covenant_of_the_seven.calamity.concept.lunacy]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Lunacy" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 14400
+				#Total number of entities killed while Sprinting while below 40% HP before the concept of "Lunacy" is obtained.
+				#Range: > 1
+				statistics = 800
+				#Amount of Entity Reach the concept of "Lunacy" provides for each percent of missing HP, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				entity_reach = 1.0
+				#Amount of Movement Speed the concept of "Lunacy" provides for each percent of missing HP, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				movement_speed = 1.0
+
+			[covenant_of_the_seven.calamity.concept.arrogance]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Arrogance" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 14400
+				#Total number of entities killed with arrows shot from a Bow while above 70% HP before the concept of "Arrogance" is obtained.
+				#Range: > 1
+				statistics = 800
+				#Amount of Draw Speed the concept of "Arrogance" provides for each percent of remaining HP, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				draw_speed = 1.0
+				#Amount of Arrow Velocity the concept of "Arrogance" provides for each percent of remaining HP, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				arrow_velocity = 1.0
+
+			[covenant_of_the_seven.calamity.concept.hypocrisy]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Hypocrisy" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 21600
+				#Total number of kills in midair while below 50% HP before the concept of "Hypocrisy" is obtained.
+				#Range: > 1
+				statistics = 800
+				#The minimum Current HP requirement to receive the effects provided by the concept of "Hypocrisy," measured in percents.
+				#Range: 1.0 ~ 100.0
+				minimum_hp = 25.0
+				#Amount of Crit Chance the concept of "Hypocrisy" provides when reaching the HP threshold, measured in percents.
+				#Range: 1.0 ~ 100.0
+				crit_chance = 35.0
+
+			[covenant_of_the_seven.calamity.concept.ruin]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Ruin" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 518400
+				#Total number of entities killed via rapid strikes while below 30% HP before the concept of "Ruin" is obtained.
+				#Range: > 1
+				statistics = 800
+				#The Max HP threshold to receive the effects provided by the concept of "Ruin."
+				#Range: 1.0 ~ 1000.0
+				maximum_hp = 20.0
+				#The minimum Current HP requirement to receive the effects provided by the concept of "Ruin," measured in percents.
+				#Range: 1.0 ~ 100.0
+				minimum_hp = 20.0
+
+			[covenant_of_the_seven.calamity.concept.defiance]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Defiance" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 432000
+				#Total number of entities killed with arrows shot from a Crossbow while above 80% HP before the concept of "Defiance" is obtained.
+				#Range: > 1
+				statistics = 800
+				#The Max HP threshold to receive the effects provided by the concept of "Defiance."
+				#Range: 1.0 ~ 1000.0
+				maximum_hp = 10.0
+				#The minimum Current HP requirement to receive the effects provided by the concept of "Defiance," measured in percents.
+				#Range: 1.0 ~ 100.0
+				minimum_hp = 85.0
+
+			[covenant_of_the_seven.calamity.concept.ferocity]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Ferocity" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 50400
+				#Total number of deaths from Magic Damage while wearing armor before the concept of "Ferocity" is obtained.
+				#Range: > 1
+				statistics = 200
+				#Amount of Prot Pierce the concept of "Ferocity" provides for each wasted Armor Toughness point.
+				#Range: 1.0 ~ 34.0
+				prot_pierce = 1.0
+
+			[covenant_of_the_seven.calamity.concept.brutality]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Brutality" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 50400
+				#Total number of deaths from Physical Damage while wearing armor before the concept of "Brutality" is obtained.
+				#Range: > 1
+				statistics = 200
+				#Amount of Armor Pierce the concept of "Brutality" provides for each wasted Armor point.
+				#Range: 1.0 ~ 100.0
+				armor_pierce = 1.0
+
+			[covenant_of_the_seven.calamity.concept.delusion]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Delusion" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 43200
+				#Total number of kills via arrow shots while wearing no armor before the concept of "Delusion" is obtained.
+				#Range: > 1
+				statistics = 800
+				#Amount of Draw Speed the concept of "Delusion" provides for each missing armor piece, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				draw_speed = 25.0
+
+			[covenant_of_the_seven.calamity.concept.oppression]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Oppression" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 79200
+				#Total number of kills via spell damage while wearing cursed armor before the concept of "Oppression" is obtained.
+				#Range: > 1
+				statistics = 800
+				#Amount of Crit Chance the concept of "Oppression" provides for each curse enchantment for every item in the player inventory, measured in percents.
+				#Range: 1.0 ~ 100.0
+				crit_chance = 5.0
+				#Amount of Crit Damage the concept of "Oppression" provides for each curse enchantment for every item in the player inventory, measured in percents.
+				#Range: 1.0 ~ 100.0
+				crit_damage = 10.0
+
+			[covenant_of_the_seven.calamity.concept.frenzy]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Frenzy" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 518400
+				#Total number of kills via arrows fired from a cursed bow/crossbow before the concept of "Frenzy" is obtained.
+				#Range: > 1
+				statistics = 800
+
+			[covenant_of_the_seven.calamity.concept.decadence]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Decadence" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 432000
+				#Total number of kills using a cursed Melee weapon before the concept of "Decadence" is obtained.
+				#Range: > 1
+				statistics = 800
+
+			[covenant_of_the_seven.calamity.concept.lethargy]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Lethargy" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 345600
+				#Total number of kills via Magic Damage during the night before the concept of "Lethargy" is obtained.
+				#Range: > 1
+				statistics = 800
+				#Maximum amount of Spell Damage the concept of "Lethargy" provides during its peak at midnight, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				max_spell_damage = 150.0
+				#Minimum amount of Spell Damage the concept of "Lethargy" provides during its trough at noon, measured in negative percents.
+				#Range: 1.0 ~ 1000.0
+				min_spell_damage = 100.0
+
+			[covenant_of_the_seven.calamity.concept.vanity]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Vanity" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 345600
+				#Total number of kills via Physical Damage during the day before the concept of "Vanity" is obtained.
+				#Range: > 1
+				statistics = 800
+				#Maximum amount of Attack the concept of "Vanity" provides during its peak at noon, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				max_attack = 250.0
+				#Minimum amount of Spell Damage the concept of "Vanity" provides during its trough at midnight, measured in negative percents.
+				#Range: 1.0 ~ 1000.0
+				min_attack = 150.0
+
+			[covenant_of_the_seven.calamity.concept.resentment]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Resentment" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 518400
+				#Total number of burning target kills before the concept of "Resentment" is obtained.
+				#Range: > 1
+				statistics = 800
+				#The minimum distance requirement to trigger the effects provided by the concept of "Resentment".
+				#Range: 1 ~ 1024
+				minimum_distance = 24
+
+			[covenant_of_the_seven.calamity.concept.insecurity]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Insecurity" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 28800
+				#The minimum Bloodlust requirement to trigger the base effects provided by the concept of "Insecurity," measured in percents.
+				#Range: 1.0 ~ 100.0
+				minimum_bloodlust = 5.0
+				#Total number of deaths from Bloodlust exhaustion before the concept of "Insecurity" is obtained.
+				#Range: > 1
+				statistics = 200
+				#Amount of Spell Damage the concept of "Insecurity" temporarily provides for all spells cast when the active ability of "Divine Vessel: Khaslana" is invoked, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				spell_damage = 450.0
+
+			[covenant_of_the_seven.calamity.concept.deceit]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Deceit" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 7200
+				#Total number of kills via backstabbing before the concept of "Deceit" is obtained.
+				#Range: > 1
+				statistics = 800
+
+			[covenant_of_the_seven.calamity.concept.hubris]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Hubris" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 57600
+				#Total number of long ranged arrow shot kills of >32 blocks before the concept of "Hubris" is obtained.
+				#Range: > 1
+				statistics = 800
+				#The minimum distance requirement to trigger the effects provided by the concept of "Hubris".
+				#Range: 1 ~ 1024
+				minimum_distance = 32
+
+			[covenant_of_the_seven.calamity.concept.spite]
+				#Amount of passing time since wearing the Ring of Calamity before the concept of "Spite" can be equipped, measured in seconds.
+				#Range: 1 ~ 31557600
+				equip_time = 64800
+				#Total number of kills via fully drawn arrow shots before the concept of "Spite" is obtained.
+				#Range: > 1
+				statistics = 800
+				#Amount of added attack damage to arrows the concept of "Spite" provides for every passing second of drawing your bow.
+				#Range: 1 ~ 1000
+				arrow_boost = 1
+
+		[covenant_of_the_seven.calamity.elemental_blasphemy]
+			#Amount of passing time intervals since wearing the Ring of Calamity for curio slots for Elemental Blasphemy are unlocked, measured in seconds.
+			#Range: 1 ~ 31557600
+			equip_time = 86400
+			#Amount of Spell Power the Elemental Blasphemy provides as a final multiplier for each curse in each item in your inventory, measured in percents.
+			#Range: 1.0 ~ 1000.0
+			spell_power = 1.0
+
+		[covenant_of_the_seven.calamity.khaslana]
+			#Amount of Bloodlust "Divine Vessel: Khaslana" drains from targets hit with Projectiles, measured in percents.
+			#Range: 1.0 ~ 100.0
+			bloodlust_drain = 5.0
+
+			[covenant_of_the_seven.calamity.khaslana.attack]
+				#Amount of Attack "Divine Vessel: Khaslana" provides in its base form.
+				#Range: 1 ~ 1000
+				base = 60
+				#Amount of Attack "Divine Vessel: Khaslana" provides in its awakened form.
+				#Range: 1 ~ 1000
+				awakened = 250
+
+			[covenant_of_the_seven.calamity.khaslana.attack_speed]
+				#Amount of Attack Speed "Divine Vessel: Khaslana" provides in its base form, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				base = 80.0
+				#Amount of Attack Speed "Divine Vessel: Khaslana" provides in its awakened form, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				awakened = 320.0
+
+			[covenant_of_the_seven.calamity.khaslana.draw_speed]
+				#Amount of Draw Speed "Divine Vessel: Khaslana" provides in its base form, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				base = 50.0
+				#Amount of Draw Speed "Divine Vessel: Khaslana" provides in its awakened form, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				awakened = 200.0
+
+			[covenant_of_the_seven.calamity.khaslana.spell_damage]
+				#Amount of Spell Damage "Divine Vessel: Khaslana" provides in its base form, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				base = 80.0
+				#Amount of Spell Damage "Divine Vessel: Khaslana" provides in its awakened form, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				awakened = 600.0
+
+			[covenant_of_the_seven.calamity.khaslana.prot_shred]
+				#Amount of Prot Shred "Divine Vessel: Khaslana" provides in its base form.
+				#Range: 1.0 ~ 1000.0
+				base = 20.0
+				#Amount of Prot Shred "Divine Vessel: Khaslana" provides in its awakened form.
+				#Range: 1.0 ~ 1000.0
+				awakened = 80.0
+
+			[covenant_of_the_seven.calamity.khaslana.armor_shred]
+				#Amount of Armor Shred "Divine Vessel: Khaslana" provides in its base form, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				base = 40.0
+				#Amount of Armor Shred "Divine Vessel: Khaslana" provides in its awakened form, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				awakened = 150.0
+
+			[covenant_of_the_seven.calamity.khaslana.crit_chance]
+				#Amount of Crit Chance "Divine Vessel: Khaslana" provides in its base form, measured in percents.
+				#Range: 1.0 ~ 100.0
+				base = 20.0
+				#Amount of Crit Chance "Divine Vessel: Khaslana" provides in its awakened form, measured in percents.
+				#Range: 1.0 ~ 100.0
+				awakened = 60.0
+
+			[covenant_of_the_seven.calamity.khaslana.crit_damage]
+				#Amount of Crit Damage "Divine Vessel: Khaslana" provides in its base form, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				base = 150.0
+				#Amount of Crit Damage "Divine Vessel: Khaslana" provides in its awakened form, measured in percents.
+				#Range: 1.0 ~ 10000.0
+				awakened = 1200.0
+
+			[covenant_of_the_seven.calamity.khaslana.true_damage]
+				#Amount of True Damage "Divine Vessel: Khaslana" provides in its base form when striking targets in Melee, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				base = 20.0
+				#Amount of True Damage "Divine Vessel: Khaslana" provides in its awakened form when striking targets in Melee, measured in percents.
+				#Range: 1.0 ~ 1000.0
+				awakened = 250.0
+
+			[covenant_of_the_seven.calamity.khaslana.active_ability]
+				#Initial duration of the active ability of "Divine Vessel: Khaslana," measured in seconds.
+				#Range: 1 ~ 1000
+				base_duration = 20
+				#Added duration to the active ability of "Divine Vessel: Khaslana" whenever a kill is secured, measured in seconds.
+				#Range: 1 ~ 1000
+				extension_duration = 5
+				#Max duration of the active ability of "Divine Vessel: Khaslana," measured in seconds.
+				#Range: 1 ~ 1000
+				max_duration = 30
+

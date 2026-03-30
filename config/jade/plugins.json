@@ -51,6 +51,21 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "exposure": {
+    "lightroom": true,
+    "photograph_frame": true
+  },
+  "opposing_force": {
+    "skyvern_segment": true
+  },
+  "delightful": {
+    "crop_progress": true,
+    "pie_icons": true,
+    "mushroom_colony": true
+  },
+  "supplementaries": {
+    "hat_stand": true
+  },
   "jade": {
     "coordinates.rel": false,
     "distance": false,
@@ -58,6 +73,16 @@
     "coordinates": false,
     "registry_name": "OFF",
     "mod_name": true
+  },
+  "alekiships": {
+    "furnace": true,
+    "jukebox": true,
+    "brewing_stand": true,
+    "block": true,
+    "note_block": true
+  },
+  "waystones": {
+    "waystone": true
   },
   "corpse": {
     "corpse": true
@@ -74,5 +99,8 @@
     "train_to": true,
     "summon_lifespan": true,
     "trainable": true
+  },
+  "balm": {
+    "jade": true
   }
 }

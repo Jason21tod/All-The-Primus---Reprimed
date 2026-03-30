@@ -1,0 +1,188 @@
+# Don't change this! Version used to track needed updates.
+version = 1
+
+# Controls automatic coating application to loot container items
+
+[loot]
+# Chance to add coating to items in loot (0.0 - 1.0, default 0.08 = 8%)
+coatingChance = 0.08
+# Chance to apply Coating Curse instead of coating (0.0 - 1.0, default 0.01 = 1%)
+curseChance = 0.01
+# Minimum effect amplifier level (0 = level I)
+minAmplifier = 0
+# Maximum effect amplifier level (1 = level II)
+maxAmplifier = 1
+# List of effects that won't be added to loot
+effectBlacklist = [
+    "minecraft:bad_omen"
+]
+
+# Controls visual particle effects for coated items
+
+[particles]
+# Enable/disable coating particles
+enable = true
+# Particle spawn interval in ticks (20 ticks = 1 second)
+interval = 8
+# Particle position spread (0.0 - 1.0)
+spread = 0.2
+# Particle movement velocity (0.0 - 0.1)
+velocity = 0.01
+# Show particles for offhand item
+showInOffhand = true
+# Cycle colors when multiple coatings are present
+cycleColors = true
+
+# Controls weapon coating application and behavior
+
+[coating]
+# List of effects that cannot be applied via crafting
+effectBlacklist = [
+    "minecraft:bad_omen"
+]
+# List of weapons that cannot be coated
+weaponBlacklist = [  ]
+# Convert all effects to hit-based (duration converted to hits using formula)
+forceAllHitBased = false
+# Formula to convert duration (ticks) to hits. Variable: {duration}. Example: '{duration} / 200' = 1 hit per 10 seconds
+durationToHitsFormula = "{duration} / 200"
+# Duration in seconds for hit-based effects when applied to target
+appliedEffectDurationHitBased = 1.0
+# Duration in seconds for time-based effects when applied to target
+appliedEffectDurationTimeBased = 3.0
+
+# Controls armor coating application and behavior
+
+[armorCoating]
+# List of effects that cannot be applied to armor via crafting
+effectBlacklist = [
+    "minecraft:bad_omen"
+]
+# List of armor pieces that cannot be coated
+armorBlacklist = [  ]
+# Armor coating only works if all 4 armor pieces have the same effect
+requireFullSet = false
+# Convert all effects to hit-based (duration converted to hits using formula)
+forceAllHitBased = false
+# Formula to convert duration (ticks) to hits. Variable: {duration}. Example: '{duration} / 200' = 1 hit per 10 seconds
+durationToHitsFormula = "{duration} / 200"
+# Duration in seconds for hit-based effects when applied to attacker
+appliedEffectDurationHitBased = 1.0
+# Duration in seconds for time-based effects when applied to attacker
+appliedEffectDurationTimeBased = 3.0
+
+# Controls tool coating application and behavior (primarily for Inversion curse)
+
+[toolCoating]
+# Enable coating application to tools (pickaxes, shovels, axes, hoes)
+enabled = true
+# List of effects that cannot be applied to tools via crafting
+effectBlacklist = [
+    "minecraft:bad_omen"
+]
+# List of tools that cannot be coated
+toolBlacklist = [  ]
+# Enable effect application when breaking blocks (only works with Inversion curse)
+applyOnBlockBreak = true
+# Convert all effects to hit-based (duration converted to hits using formula)
+forceAllHitBased = false
+# Formula to convert duration (ticks) to hits. Variable: {duration}. Example: '{duration} / 200' = 1 hit per 10 seconds
+durationToHitsFormula = "{duration} / 200"
+# Duration in seconds for hit-based effects when applied to player (with Inversion)
+appliedEffectDurationHitBased = 1.0
+# Duration in seconds for time-based effects when applied to player (with Inversion)
+appliedEffectDurationTimeBased = 3.0
+
+# Controls enchantment levels, formulas and availability
+
+[enchantments]
+
+# Settings for Coating Capacity enchantment
+
+[enchantments.capacity]
+# Enable/disable this enchantment
+enabled = true
+# Maximum enchantment level (1-10)
+maxLevel = 3
+# Formula for coating slots. Variable: {level}. Example: '1 + {level}' = base 1, +1 per level
+slotsFormula = "1 + {level}"
+minPower = 1
+maxPower = 51
+# Can appear in enchanted books from villagers
+availableInBooks = true
+# Can appear in enchanting table
+availableInTable = true
+
+# Settings for Coating Preservation enchantment
+
+[enchantments.preservation]
+enabled = true
+maxLevel = 5
+# Formula for duration extension (time-based). Variable: {level}, {duration}. Example: '{duration} + 100 + ({duration} * 0.2 * 2 * {level})'
+durationFormula = "{duration} + 100 + ({duration} * 0.2 * 2 * {level})"
+# Formula for hits extension (hit-based). Variable: {level}. Example: '1 + 2 * {level}'
+hitsFormula = "1 + 2 * {level}"
+minPower = 1
+maxPower = 51
+availableInBooks = true
+availableInTable = true
+
+# Settings for Coating Potency enchantment
+
+[enchantments.potency]
+enabled = true
+maxLevel = 3
+# Formula for amplifier bonus. Variable: {level}. Example: '{level}' = +1 per level
+amplifierFormula = "{level}"
+minPower = 1
+maxPower = 51
+availableInBooks = true
+availableInTable = true
+
+# Settings for Curse of Uncoatable
+
+[enchantments.curse]
+enabled = true
+minPower = 25
+maxPower = 50
+availableInBooks = false
+availableInTable = false
+
+# Settings for Curse of Inverted Coating
+
+[enchantments.inversion]
+# Enable/disable this curse (extremely rare)
+enabled = true
+minPower = 80
+maxPower = 100
+# Can appear in enchanted books from villagers (not recommended)
+availableInBooks = false
+# Can appear in enchanting table (not recommended)
+availableInTable = false
+# Multiplier for loot chance (0.01 = 1% of normal curse chance, making it 100x rarer)
+lootChanceMultiplier = 0.01
+
+# Settings for Curse of Coating Permanence
+
+[enchantments.permanence]
+# Enable/disable this curse (extremely rare)
+enabled = true
+minPower = 80
+maxPower = 100
+# Can appear in enchanted books from villagers (not recommended)
+availableInBooks = false
+# Can appear in enchanting table (not recommended)
+availableInTable = false
+# Multiplier for loot chance (0.01 = 1% of normal curse chance, making it 100x rarer)
+lootChanceMultiplier = 0.01
+# Effects that won't become infinite with Permanence curse (instant effects recommended)
+effectBlacklist = [
+    "minecraft:instant_health",
+    "minecraft:instant_damage"
+]
+
+# Controls debug logging and diagnostics
+
+[debug]
+# Enable detailed debug logging for troubleshooting
+enableDebugLogging = false
