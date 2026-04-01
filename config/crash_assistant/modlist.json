@@ -1,9 +1,9 @@
 {
-  "fmlloader-1.20.1-47.4.10.jar (modloader)": {
-    "jarName": "fmlloader-1.20.1-47.4.10.jar (modloader)",
+  "fmlloader-1.20.1-47.4.18.jar (modloader)": {
+    "jarName": "fmlloader-1.20.1-47.4.18.jar (modloader)",
     "modId": "forge",
     "name": "forge",
-    "version": "fmlloader-1.20.1-47.4.10.jar"
+    "version": "fmlloader-1.20.1-47.4.18.jar"
   },
   "1.8.1+1.20.1+forge.jar": {
     "jarName": "1.8.1+1.20.1+forge.jar",
@@ -12,14 +12,6 @@
     "version": "1.8.1",
     "curseForgeHash": 4020643785,
     "modrinthHash": "bf45d3dc317a8e1a2412996b54da88140844a6f8"
-  },
-  "a2w-1.0.0.jar": {
-    "jarName": "a2w-1.0.0.jar",
-    "modId": "a2w",
-    "name": "Map Atlases + Waystones Compatibility",
-    "version": "1.0.0",
-    "curseForgeHash": 2025642679,
-    "modrinthHash": "8a92d7edece96ecb260b9c0f7c8a90141f50a128"
   },
   "advancedcompass.forge.1.20.1-1.2.15.jar": {
     "jarName": "advancedcompass.forge.1.20.1-1.2.15.jar",
@@ -236,14 +228,6 @@
     "version": "0.0.5-forge-1.20.1",
     "curseForgeHash": 3051180331,
     "modrinthHash": "0b9701f333af2e37d4a403d02f283701199ec5b8"
-  },
-  "better_punching-2.1.0-forge-1.20.1.jar": {
-    "jarName": "better_punching-2.1.0-forge-1.20.1.jar",
-    "modId": "better_punching",
-    "name": "Better Punching",
-    "version": "1.0.0",
-    "curseForgeHash": 4196715394,
-    "modrinthHash": "17e6f501f822c564e4109f5f9b714cd1a8bdc998"
   },
   "BetterAdvancements-Forge-1.20.1-0.4.2.25.jar": {
     "jarName": "BetterAdvancements-Forge-1.20.1-0.4.2.25.jar",
@@ -965,6 +949,14 @@
     "curseForgeHash": 2060908275,
     "modrinthHash": "cb87cd6b12e3a9cc5bbb979406d310fe50cd92a6"
   },
+  "emiloot_integrates_lootjs-forge-1.0.0.jar": {
+    "jarName": "emiloot_integrates_lootjs-forge-1.0.0.jar",
+    "modId": "emiloot_integrates_lootjs",
+    "name": "EmiLoot Integrates LootJS",
+    "version": "1.0.0",
+    "curseForgeHash": 3644213847,
+    "modrinthHash": "7d621a618cba6b258308a1b66998df5ba4de6f9d"
+  },
   "EMIProfessions-forge-1.20.1-1.0.4.jar": {
     "jarName": "EMIProfessions-forge-1.20.1-1.0.4.jar",
     "modId": "emiprofessions",
@@ -1405,14 +1397,6 @@
     "curseForgeHash": 530640535,
     "modrinthHash": "bfdaefc97081f693feafc22e0ca3d85e38519f74"
   },
-  "guardvillagers-1.20.1-1.6.17.jar": {
-    "jarName": "guardvillagers-1.20.1-1.6.17.jar",
-    "modId": "guardvillagers",
-    "name": "Guard Villagers",
-    "version": "1.20.1-1.6.17",
-    "curseForgeHash": 3326503579,
-    "modrinthHash": "5d338370d734cc73126fe8231f3defa3d120e0c7"
-  },
   "happy_ghast-3.0.0-forge-1.20.1.jar": {
     "jarName": "happy_ghast-3.0.0-forge-1.20.1.jar",
     "modId": "dried_ghast",
@@ -1436,14 +1420,6 @@
     "version": "1.1.2",
     "curseForgeHash": 3253482321,
     "modrinthHash": "6c1f91348f92e77e830a569d20733ab13251afe0"
-  },
-  "hoths_rpg_damage_attributes-1.0.0-forge-1.20.1.jar": {
-    "jarName": "hoths_rpg_damage_attributes-1.0.0-forge-1.20.1.jar",
-    "modId": "hoths_rpg_damage_attributes",
-    "name": "Hoth\u0027s RPG Damage Attributes",
-    "version": "1.0.0",
-    "curseForgeHash": 3690865658,
-    "modrinthHash": "350e02486d0691b9be54df6f6a1f45edc3847ffe"
   },
   "Icarae-Origin-Forge-1.2.0.jar": {
     "jarName": "Icarae-Origin-Forge-1.2.0.jar",
@@ -1564,6 +1540,14 @@
     "version": "2.0.1",
     "curseForgeHash": 4177750491,
     "modrinthHash": "850f9cf009106e112f6dd67604f43a8684f39cd1"
+  },
+  "ItemPhysic_FORGE_v1.8.11_mc1.20.1.jar": {
+    "jarName": "ItemPhysic_FORGE_v1.8.11_mc1.20.1.jar",
+    "modId": "itemphysic",
+    "name": "ItemPhysic",
+    "version": "1.8.11",
+    "curseForgeHash": 1331214049,
+    "modrinthHash": "d08e27a7c1c55f6857bcdb585233110aea688731"
   },
   "iter_rpg-0.7.9-forge-1.20.1.jar": {
     "jarName": "iter_rpg-0.7.9-forge-1.20.1.jar",
@@ -1938,6 +1922,14 @@
     "curseForgeHash": 1974179645,
     "modrinthHash": "ab7e3827aa3cf862eb103c3d38918dfd8757fe63"
   },
+  "mca-social-expansion-0.2.jar": {
+    "jarName": "mca-social-expansion-0.2.jar",
+    "modId": "mcasocial",
+    "name": "MCA Social Expansion",
+    "version": "0.1.5",
+    "curseForgeHash": 1884717482,
+    "modrinthHash": "e8052c698d71472495212ead9f448005ebe45737"
+  },
   "mcqoy-0.4.1+forge-1.20.jar": {
     "jarName": "mcqoy-0.4.1+forge-1.20.jar",
     "modId": "mcqoy",
@@ -1961,6 +1953,14 @@
     "version": "1.9.2",
     "curseForgeHash": 3315618055,
     "modrinthHash": "ff01aa718b71249012c41d9926d3fd2982809fdb"
+  },
+  "minecraft-comes-alive-7.6.15+1.20.1-universal.jar": {
+    "jarName": "minecraft-comes-alive-7.6.15+1.20.1-universal.jar",
+    "modId": "mca",
+    "name": "Minecraft Comes Alive",
+    "version": "7.6.15+1.20.1",
+    "curseForgeHash": 2763790521,
+    "modrinthHash": "1e238ef8c5aa07f241be2dc63eba1ea56c03fc9f"
   },
   "miners_delight-1.20.1-1.2.3.jar": {
     "jarName": "miners_delight-1.20.1-1.2.3.jar",
@@ -2033,14 +2033,6 @@
     "version": "3.12.0.1",
     "curseForgeHash": 2393054142,
     "modrinthHash": "fcebe51e3c2ca34793f9b132fa05b5494ffc76a4"
-  },
-  "modulargolems-2.6.34.jar": {
-    "jarName": "modulargolems-2.6.34.jar",
-    "modId": "modulargolems",
-    "name": "Modular Golems",
-    "version": "2.6.34",
-    "curseForgeHash": 2195517374,
-    "modrinthHash": "250f85cebc7c5a24ed4a57d3a0e0034d596cf828"
   },
   "Monster Hunter Villager 1.2.1-1.20.1.jar": {
     "jarName": "Monster Hunter Villager 1.2.1-1.20.1.jar",
@@ -2402,6 +2394,14 @@
     "curseForgeHash": 1015944596,
     "modrinthHash": "fabd4aa3927e339516c0d5dbe22c751afa48342a"
   },
+  "punchy-2.4.3-forge-1.20.1-v3.jar": {
+    "jarName": "punchy-2.4.3-forge-1.20.1-v3.jar",
+    "modId": "punchy",
+    "name": "Punchy",
+    "version": "1.20.1",
+    "curseForgeHash": 2196173612,
+    "modrinthHash": "bca191dffb87d5a9e7f63013e38b9c462f894501"
+  },
   "PuzzlesLib-v8.1.33-1.20.1-Forge.jar": {
     "jarName": "PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
     "modId": "puzzleslib",
@@ -2545,14 +2545,6 @@
     "version": "2.1.1",
     "curseForgeHash": 2857939410,
     "modrinthHash": "3e13ad86b2cc4107b8a18eec1d980ed19cdc37aa"
-  },
-  "rpgz-0.6.0-forge.jar": {
-    "jarName": "rpgz-0.6.0-forge.jar",
-    "modId": "rpgz",
-    "name": "RpgZ",
-    "version": "0.6.0-forge",
-    "curseForgeHash": 1856776582,
-    "modrinthHash": "8c5b354eaf92f699b5779d8e82fc64c654a389e8"
   },
   "rusticdelight-forge-1.20.1-1.5.1.jar": {
     "jarName": "rusticdelight-forge-1.20.1-1.5.1.jar",
@@ -3018,14 +3010,6 @@
     "curseForgeHash": 662305921,
     "modrinthHash": "2d96968a650213da21cd5bf6e3f74e72ff7b36b4"
   },
-  "villager-guard-autonomy.jar": {
-    "jarName": "villager-guard-autonomy.jar",
-    "modId": "mobconversion",
-    "name": "Mob Conversion",
-    "version": "1.0.1",
-    "curseForgeHash": 676255603,
-    "modrinthHash": "7d0978ead7d7bfcb5c7a8b5ab100d3d8c8e6f63e"
-  },
   "vintagedelight-0.1.6.jar": {
     "jarName": "vintagedelight-0.1.6.jar",
     "modId": "vintagedelight",
@@ -3073,14 +3057,6 @@
     "version": "1.6.1",
     "curseForgeHash": 1245342365,
     "modrinthHash": "9704c7049b49ba6f5969ba2a1442490385764d03"
-  },
-  "waystones-forge-1.20.1-14.1.20.jar": {
-    "jarName": "waystones-forge-1.20.1-14.1.20.jar",
-    "modId": "waystones",
-    "name": "Waystones",
-    "version": "14.1.20",
-    "curseForgeHash": 2729876076,
-    "modrinthHash": "cde06d0f1e9042fb2e0b536a4d2c5443d129dd51"
   },
   "yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar": {
     "jarName": "yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar",

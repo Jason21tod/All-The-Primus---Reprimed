@@ -1034,17 +1034,6 @@
         "value": 2048
       }
     },
-    "hoths_rpg_damage_attributes:indirectmagic_damage": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 999999,
-        "value": 999999
-      }
-    },
     "opposing_force:air_speed": {
       "enabled": false,
       "min": {
@@ -1054,6 +1043,17 @@
       "max": {
         "default": 2048,
         "value": 2048
+      }
+    },
+    "hoths_rpg_damage_attributes:indirectmagic_damage": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 999999,
+        "value": 999999
       }
     },
     "vminus:fall_protection": {
@@ -2134,17 +2134,6 @@
         "value": 100
       }
     },
-    "hoths_rpg_damage_attributes:arrow_damage": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 999999,
-        "value": 999999
-      }
-    },
     "goety:spell_burning": {
       "enabled": false,
       "min": {
@@ -2154,6 +2143,17 @@
       "max": {
         "default": 2048,
         "value": 2048
+      }
+    },
+    "hoths_rpg_damage_attributes:arrow_damage": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 999999,
+        "value": 999999
       }
     },
     "tetra:draw_speed": {
