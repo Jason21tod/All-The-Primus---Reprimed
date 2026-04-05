@@ -100,3 +100,9 @@
 		"icarae_origin:flimsy" = true
 		"origins:carnivore" = true
 
+	[origins."origins:vampire"]
+		enabled = true
+
+	[origins."origins:elven"]
+		enabled = true
+
