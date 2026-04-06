@@ -1,0 +1,42 @@
+Detected that Windows reported recent critical or error events in the Application log,
+which can indicate that a process (including the Minecraft JVM) terminated unexpectedly.
+Scope: Application log; Levels: Error & Critical; Window: last ~15 seconds.
+
+If no java.exe (or related JVM processes) are listed below, you can disregard this message.
+To inspect these events manually:
+  1) Press Win+R, type "eventvwr.msc", press Enter.
+  2) Open "Windows Logs" → "Application".
+  3) Sort by Date and look for entries with Level = Error or Critical near the crash time.
+
+-----------------------
+Time: 2026-04-05 21:34:56.651 BRT
+Source: Application Hang
+Event ID: 1002
+Level: Error
+
+Message:
+  O programa CalculatorApp.exe versão 11.2508.4.0 parou de interagir com o Windows e foi fechado. Para ver se mais informações sobre o problema estão disponíveis, verifique o histórico de problemas no painel de controle Segurança e Manutenção.
+   ID do Processo: 1050
+   Hora de Início: 01dcc55cea7dc856
+   Hora de Término: 4294967295
+   Caminho do Aplicativo: C:\Program Files\WindowsApps\Microsoft.WindowsCalculator_11.2508.4.0_x64__8wekyb3d8bbwe\CalculatorApp.exe
+   ID do Relatório: 2989b6c3-06c4-433e-8757-aff2ddf39586
+   Nome completo do pacote com falha: Microsoft.WindowsCalculator_11.2508.4.0_x64__8wekyb3d8bbwe
+   ID do aplicativo relativo ao pacote com falha: App
+   Tipo com falha: Quiesce
+
+
+Details:
+  - Data[1]: CalculatorApp.exe
+  - Data[2]: 11.2508.4.0
+  - Data[3]: 1050
+  - Data[4]: 01dcc55cea7dc856
+  - Data[5]: 4294967295
+  - Data[6]: C:\Program Files\WindowsApps\Microsoft.WindowsCalculator_11.2508.4.0_x64__8wekyb3d8bbwe\CalculatorApp.exe
+  - Data[7]: 2989b6c3-06c4-433e-8757-aff2ddf39586
+  - Data[8]: Microsoft.WindowsCalculator_11.2508.4.0_x64__8wekyb3d8bbwe
+  - Data[9]: App
+  - Data[10]: Quiesce
+  - Binary: 510075006900650073006300650000000000
+-----------------------
+

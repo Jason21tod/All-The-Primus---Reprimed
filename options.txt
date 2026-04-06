@@ -53,7 +53,7 @@ chatLineSpacing:0.0
 textBackgroundOpacity:0.5
 backgroundForChatOnly:true
 hideServerAddress:false
-advancedItemTooltips:false
+advancedItemTooltips:true
 pauseOnLostFocus:true
 overrideWidth:0
 overrideHeight:0
@@ -122,9 +122,9 @@ key_key.fancytoasts.config_menu:key.keyboard.k
 key_key.puffish_skills.open:key.keyboard.k
 key_key.entityculling.toggle:key.keyboard.unknown
 key_key.walkers_ability:key.keyboard.r
-key_key.walkers:key.keyboard.g
-key_key.walkers_unlock:key.keyboard.u
-key_key.walkers_variants:key.keyboard.v
+key_key.walkers:key.keyboard.g:CONTROL
+key_key.walkers_unlock:key.keyboard.x:CONTROL
+key_key.walkers_variants:key.keyboard.r:CONTROL
 key_key.slashblade.special_move:key.keyboard.v
 key_key.slashblade.summon_blade:key.mouse.middle
 key_key.modernfix.config:key.keyboard.unknown

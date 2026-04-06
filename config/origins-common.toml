@@ -105,4 +105,6 @@
 
 	[origins."origins:elven"]
 		enabled = true
+		"origins:elven_attributes" = true
+		"origins:fragile_bones" = true
 

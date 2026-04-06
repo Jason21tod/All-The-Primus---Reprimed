@@ -1,6 +1,7 @@
 {
     "powers": [
-
+        "origins:elven_attributes",
+        "origins:fragile_bones"
     ],
     "icon": "minecraft:stick",
     "order": 1,

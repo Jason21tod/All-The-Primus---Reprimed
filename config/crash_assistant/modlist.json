@@ -53,14 +53,6 @@
     "curseForgeHash": 2866112664,
     "modrinthHash": "db60da92c2220a735d428c7ff5759a342b6291e0"
   },
-  "alexsmobs-1.22.9.jar": {
-    "jarName": "alexsmobs-1.22.9.jar",
-    "modId": "alexsmobs",
-    "name": "Alex\u0027s Mobs",
-    "version": "1.22.9",
-    "curseForgeHash": 1000930585,
-    "modrinthHash": "dbf93d2f1da19e16739e91e8ea0fc6f4bc2f228f"
-  },
   "alltheleaks-1.1.1+1.20.1-forge.jar": {
     "jarName": "alltheleaks-1.1.1+1.20.1-forge.jar",
     "modId": "alltheleaks",
@@ -181,14 +173,6 @@
     "curseForgeHash": 1940083731,
     "modrinthHash": "3d309df955df5e936524dce787bb833aead4e415"
   },
-  "BetterAdvancements-Forge-1.20.1-0.4.2.25.jar": {
-    "jarName": "BetterAdvancements-Forge-1.20.1-0.4.2.25.jar",
-    "modId": "betteradvancements",
-    "name": "Better Advancements",
-    "version": "0.4.2.25",
-    "curseForgeHash": 2448644593,
-    "modrinthHash": "c747ebbb7654b67c2b62b669605bcda041970ca4"
-  },
   "bettercombat-forge-1.9.0+1.20.1.jar": {
     "jarName": "bettercombat-forge-1.9.0+1.20.1.jar",
     "modId": "bettercombat",
@@ -213,14 +197,6 @@
     "curseForgeHash": 2460769130,
     "modrinthHash": "2a3091bf58e1b9c5ff6e6e01f0f4da17c6dc5650"
   },
-  "bibliocraft-1.20.1-1.3.1.jar": {
-    "jarName": "bibliocraft-1.20.1-1.3.1.jar",
-    "modId": "bibliocraft",
-    "name": "BiblioCraft Legacy",
-    "version": "1.20.1-1.3.1",
-    "curseForgeHash": 2144610093,
-    "modrinthHash": "368a4ec014a2e380392053440d3ceff17adc66fe"
-  },
   "blessfulled-0.6.jar": {
     "jarName": "blessfulled-0.6.jar",
     "modId": "blessfulled",
@@ -228,22 +204,6 @@
     "version": "0.6",
     "curseForgeHash": 3303635114,
     "modrinthHash": "a8a3ad55d993eea95ba4b4edbe0a7dafce897b39"
-  },
-  "blueprint-1.20.1-7.1.3.jar": {
-    "jarName": "blueprint-1.20.1-7.1.3.jar",
-    "modId": "blueprint",
-    "name": "Blueprint",
-    "version": "7.1.3",
-    "curseForgeHash": 2155548073,
-    "modrinthHash": "fdf9cb568546e80485ea4402a39656ed9acfa991"
-  },
-  "blueprintfix-forge-1.0.0-1.20.1.jar": {
-    "jarName": "blueprintfix-forge-1.0.0-1.20.1.jar",
-    "modId": "blueprintfix",
-    "name": "Blueprint Texture Fix",
-    "version": "1.0.0",
-    "curseForgeHash": 530833368,
-    "modrinthHash": "95568c3ffac58b666d444c182a2662e1ac8288c9"
   },
   "bmcfix-forge-1.0.2.jar": {
     "jarName": "bmcfix-forge-1.0.2.jar",
@@ -517,14 +477,6 @@
     "curseForgeHash": 2983036234,
     "modrinthHash": "3c1b92bc44a41c913b58fe20ebde03610018f5ba"
   },
-  "darkermagic-1.3.1-1.20.1-ver.b.jar": {
-    "jarName": "darkermagic-1.3.1-1.20.1-ver.b.jar",
-    "modId": "darkermagic",
-    "name": "Deeper and Darker: Spellbooks",
-    "version": "1.3.1-1.20.1",
-    "curseForgeHash": 3128394941,
-    "modrinthHash": "fc828f6396862b827a4b916f879c56042cef538c"
-  },
   "darkness-forge-1.20.1-2.0.103-fork.jar": {
     "jarName": "darkness-forge-1.20.1-2.0.103-fork.jar",
     "modId": "darkness",
@@ -540,14 +492,6 @@
     "version": "1.0.0.20",
     "curseForgeHash": 67469579,
     "modrinthHash": "f16089cc8af8e5dca8f5a14dc7bab11840d9b9a8"
-  },
-  "deeperdarker-forge-1.20.1-1.3.3.jar": {
-    "jarName": "deeperdarker-forge-1.20.1-1.3.3.jar",
-    "modId": "deeperdarker",
-    "name": "Deeper and Darker",
-    "version": "1.3.3",
-    "curseForgeHash": 4225744846,
-    "modrinthHash": "12f95fa85c62123140d1962702a97a3bb746bbf5"
   },
   "deltaboxlib-forge-2.2.0+1.20.1.jar": {
     "jarName": "deltaboxlib-forge-2.2.0+1.20.1.jar",
@@ -749,14 +693,6 @@
     "curseForgeHash": 3699626144,
     "modrinthHash": "6bfe31adfbf31a53298ee498776129bef351dc3f"
   },
-  "fantasy_armor-forge-1.2.4-1.20.1.jar": {
-    "jarName": "fantasy_armor-forge-1.2.4-1.20.1.jar",
-    "modId": "fantasy_armor",
-    "name": "Fantasy Armor",
-    "version": "1.2.4-1.20.1",
-    "curseForgeHash": 3059636250,
-    "modrinthHash": "546cf8e9e7d047792c01f66e8c50d1e475fd1aad"
-  },
   "fastasyncworldsave-1.20.1-2.6.jar": {
     "jarName": "fastasyncworldsave-1.20.1-2.6.jar",
     "modId": "fastasyncworldsave",
@@ -933,22 +869,6 @@
     "curseForgeHash": 2250732947,
     "modrinthHash": "c7340c206b88db875701e15f05f1b064d17c904a"
   },
-  "goety_cataclysm-1.20-1.7.0.jar": {
-    "jarName": "goety_cataclysm-1.20-1.7.0.jar",
-    "modId": "goety_cataclysm",
-    "name": "Goety Cataclysm",
-    "version": "1.20-1.7.0",
-    "curseForgeHash": 1263173987,
-    "modrinthHash": "33939e8b7e27e4d1149d093b426495d61065bc39"
-  },
-  "goety_spillage-1.20-1.4.6.jar": {
-    "jarName": "goety_spillage-1.20-1.4.6.jar",
-    "modId": "goety_spillage",
-    "name": "Goety and Spillage",
-    "version": "1.20-1.4.6",
-    "curseForgeHash": 4020244399,
-    "modrinthHash": "4b5e1dae580918cbc9be09bdccfd03f0b2fcb6f5"
-  },
   "goetyiron-2.0.2.jar": {
     "jarName": "goetyiron-2.0.2.jar",
     "modId": "goetyiron",
@@ -972,14 +892,6 @@
     "version": "1.5.0-1.20.1",
     "curseForgeHash": 1836558575,
     "modrinthHash": "56e3e339077cffb4da2aed516ee37a99400a3e6e"
-  },
-  "hazennstuff-watered-down-edition-1.1.2.jar": {
-    "jarName": "hazennstuff-watered-down-edition-1.1.2.jar",
-    "modId": "hazennstuff",
-    "name": "Hazen \u0027n Stuff",
-    "version": "1.1.2",
-    "curseForgeHash": 3253482321,
-    "modrinthHash": "6c1f91348f92e77e830a569d20733ab13251afe0"
   },
   "Icarae-Origin-Forge-1.2.0.jar": {
     "jarName": "Icarae-Origin-Forge-1.2.0.jar",
@@ -1770,13 +1682,13 @@
     "curseForgeHash": 3583911177,
     "modrinthHash": "8a403876730a7186165e109f7f5292d31c6c3f4c"
   },
-  "swordskill-1.2.4.1.jar": {
-    "jarName": "swordskill-1.2.4.1.jar",
+  "swordskill-2.0.1-alpha.jar": {
+    "jarName": "swordskill-2.0.1-alpha.jar",
     "modId": "swordskill",
     "name": "swordskill",
-    "version": "1.2.4.1",
-    "curseForgeHash": 1261848378,
-    "modrinthHash": "7a27cf9c19f3827f56bc71658e72bdcc4afb19f1"
+    "version": "2.0.1-alpha",
+    "curseForgeHash": 2417834392,
+    "modrinthHash": "1b42da29b6426eb094811ec6ad6f1e81ae7f94db"
   },
   "TerraBlender-forge-1.20.1-3.0.1.10.jar": {
     "jarName": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
@@ -1801,14 +1713,6 @@
     "version": "6.3.0-1.20.1",
     "curseForgeHash": 3027609012,
     "modrinthHash": "e1a52c88a538e62a4b739ebcef81ab9cf5e19b20"
-  },
-  "treasuredistance-1.20-1.2.jar": {
-    "jarName": "treasuredistance-1.20-1.2.jar",
-    "modId": "treasuredistance",
-    "name": "Treasure Distance mod",
-    "version": "1.20-1.2",
-    "curseForgeHash": 636825256,
-    "modrinthHash": "736d49f14ee48422f6209807c5285e787355d785"
   },
   "txnilib-forge-1.0.24-1.20.1.jar": {
     "jarName": "txnilib-forge-1.0.24-1.20.1.jar",

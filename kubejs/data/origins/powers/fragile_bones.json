@@ -1,0 +1,18 @@
+{
+    "type": "origins:action_when_hit",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "cataclysm:bone_fracture",
+                "duration": 50,
+                "amplifier": 3,
+                "show_icon": false,
+                "show_particles": false,
+                "is_ambient": true
+            }
+        }
+    },
+    "cooldown": 200
+}
