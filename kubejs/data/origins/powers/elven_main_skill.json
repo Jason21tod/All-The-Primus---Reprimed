@@ -1,0 +1,39 @@
+{
+    "type":"origins:multiple",
+    "increase_critical": {
+        "type":"origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "attributeslib:crit_chance",
+                "operation": "multiply_base",
+                "value": 20
+            },
+            {
+                "attribute": "attributeslib:crit_damage",
+                "operation": "addition",
+                "value": 0.5
+            }
+        ],
+        "condition": {
+            "type": "origins:invisible"
+        }
+    },
+    "invi_on_kill": {
+        "type": "origins:active_self",
+        "cooldown": 200,
+        "hud_render": {
+            "should_hender": true,
+            "bar_index": 0
+        },
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "entity_action": {
+            "type":"origins:apply_effect",
+            "effect": {
+                "effect": "irons_spellbooks:true_invisibility",
+                "duration": 200
+            }
+        }
+    }
+}

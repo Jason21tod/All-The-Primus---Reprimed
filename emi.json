@@ -1,8 +1,10 @@
 {
-  "favorites": [],
+  "favorites": [
+    {
+      "stack": "item:iter_rpg:coin"
+    }
+  ],
   "lookup_history": [
-    "item:mermaid_origins:potion_of_mermaid_grace",
-    "item:mermaid_origins:bottled_mermaid_tear",
     "item:quark:bottled_cloud",
     "item:slashblade:proudsoul_tiny",
     "item:slashblade:proudsoul",

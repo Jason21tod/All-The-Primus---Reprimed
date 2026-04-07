@@ -1,5 +1,6 @@
 {
     "powers": [
+        "origins:elven_main_skill",
         "origins:elven_attributes",
         "origins:fragile_bones"
     ],

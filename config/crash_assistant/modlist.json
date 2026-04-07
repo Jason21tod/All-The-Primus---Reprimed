@@ -389,22 +389,6 @@
     "curseForgeHash": 4282386808,
     "modrinthHash": "843b16ca88bc5c390bb22a2a84437e6bffdd43dd"
   },
-  "cosmeticarmorreworked-1.20.1-v1a.jar": {
-    "jarName": "cosmeticarmorreworked-1.20.1-v1a.jar",
-    "modId": "cosmeticarmorreworked",
-    "name": "CosmeticArmorReworked",
-    "version": "1.20.1-v1a",
-    "curseForgeHash": 3614955629,
-    "modrinthHash": "afd9fa3fe95e8c086e8d439df403ed1e5ea5cbea"
-  },
-  "cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar": {
-    "jarName": "cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar",
-    "modId": "cosmeticcorpsecompat",
-    "name": "Cosmetic Armor x Corpse Compat",
-    "version": "1.0.0",
-    "curseForgeHash": 3407618717,
-    "modrinthHash": "68ea28d819d01251c38a9e36a4ce7487cf7b8723"
-  },
   "craftedcore-5.8.2.jar": {
     "jarName": "craftedcore-5.8.2.jar",
     "modId": "craftedcore",
@@ -460,14 +444,6 @@
     "version": "1.6.0",
     "curseForgeHash": 1182066148,
     "modrinthHash": "cc5130f91535cc5c07f3abcd338c6b3551ea5706"
-  },
-  "customvillagertrades-forge-20.25.0.jar": {
-    "jarName": "customvillagertrades-forge-20.25.0.jar",
-    "modId": "customvillagertrades",
-    "name": "Custom Villager Trades",
-    "version": "20.25.0",
-    "curseForgeHash": 997980131,
-    "modrinthHash": "48e82ed57a784b03cd8f7aa695efdbf1a2e85f25"
   },
   "damageindicator-2.2.1-1.20.1.jar": {
     "jarName": "damageindicator-2.2.1-1.20.1.jar",
@@ -701,14 +677,6 @@
     "curseForgeHash": 1473382339,
     "modrinthHash": "3a3180f5fc9d1209ca0ad69084afe8ee42ba44d6"
   },
-  "fastboot-1.20.x-1.2.jar": {
-    "jarName": "fastboot-1.20.x-1.2.jar",
-    "modId": "fastboot",
-    "name": "FastBoot",
-    "version": "1.2",
-    "curseForgeHash": 3152139061,
-    "modrinthHash": "0820d6611bdf664cc84bf351089e75998a9f1962"
-  },
   "FastFurnace-1.20.1-8.0.2.jar": {
     "jarName": "FastFurnace-1.20.1-8.0.2.jar",
     "modId": "fastfurnace",
@@ -820,14 +788,6 @@
     "version": "0.7.6+1.20.1+forge",
     "curseForgeHash": 3620637257,
     "modrinthHash": "2e9ca1c5f028c251e1bc18b9ebaa06d401c8e624"
-  },
-  "GameStages-Forge-1.20.1-15.0.2.jar": {
-    "jarName": "GameStages-Forge-1.20.1-15.0.2.jar",
-    "modId": "gamestages",
-    "name": "GameStages",
-    "version": "15.0.2",
-    "curseForgeHash": 1801538787,
-    "modrinthHash": "e17306593188b9fd16170a9dc47a8e0051a9f1e7"
   },
   "geckolib-forge-1.20.1-4.8.3.jar": {
     "jarName": "geckolib-forge-1.20.1-4.8.3.jar",
@@ -1194,14 +1154,6 @@
     "curseForgeHash": 1868859216,
     "modrinthHash": "18495da41285e8450d1b5fcd066816f6cf55f3a7"
   },
-  "mca-social-expansion-0.2.jar": {
-    "jarName": "mca-social-expansion-0.2.jar",
-    "modId": "mcasocial",
-    "name": "MCA Social Expansion",
-    "version": "0.1.5",
-    "curseForgeHash": 1884717482,
-    "modrinthHash": "e8052c698d71472495212ead9f448005ebe45737"
-  },
   "mcqoy-0.4.1+forge-1.20.jar": {
     "jarName": "mcqoy-0.4.1+forge-1.20.jar",
     "modId": "mcqoy",
@@ -1210,14 +1162,6 @@
     "curseForgeHash": 3530868180,
     "modrinthHash": "3146950f631a45f73772d73f5ba4b3bcde07344b"
   },
-  "mermaid_origins-1.1.4.1-forge-1.20.1.jar": {
-    "jarName": "mermaid_origins-1.1.4.1-forge-1.20.1.jar",
-    "modId": "mermaid_origins",
-    "name": "Mermaid origins",
-    "version": "1.1.4.1",
-    "curseForgeHash": 626108542,
-    "modrinthHash": "42f32a6abe39a49c12014ca06652c6a093ce86f2"
-  },
   "midnightlib-forge-1.9.2+1.20.1.jar": {
     "jarName": "midnightlib-forge-1.9.2+1.20.1.jar",
     "modId": "midnightlib",
@@ -1225,14 +1169,6 @@
     "version": "1.9.2",
     "curseForgeHash": 3315618055,
     "modrinthHash": "ff01aa718b71249012c41d9926d3fd2982809fdb"
-  },
-  "minecraft-comes-alive-7.6.15+1.20.1-universal.jar": {
-    "jarName": "minecraft-comes-alive-7.6.15+1.20.1-universal.jar",
-    "modId": "mca",
-    "name": "Minecraft Comes Alive",
-    "version": "7.6.15+1.20.1",
-    "curseForgeHash": 2763790521,
-    "modrinthHash": "1e238ef8c5aa07f241be2dc63eba1ea56c03fc9f"
   },
   "mobbility-addon-combat-roll-forge-1.0.0.jar": {
     "jarName": "mobbility-addon-combat-roll-forge-1.0.0.jar",
@@ -1594,14 +1530,6 @@
     "curseForgeHash": 850392207,
     "modrinthHash": "6fd9b26951bf67097b6345e22b9e78d16efed5c2"
   },
-  "simplyswords-forge-1.56.0-1.20.1.jar": {
-    "jarName": "simplyswords-forge-1.56.0-1.20.1.jar",
-    "modId": "simplyswords",
-    "name": "Simply Swords",
-    "version": "1.56.0-1.20.1",
-    "curseForgeHash": 3196160906,
-    "modrinthHash": "ff801e939da0f9afc2d96cce4375d8c4bb368533"
-  },
   "SlashBladeResharped-1.20.1-1.8.62.jar": {
     "jarName": "SlashBladeResharped-1.20.1-1.8.62.jar",
     "modId": "slashblade",
@@ -1650,14 +1578,6 @@
     "curseForgeHash": 1062903518,
     "modrinthHash": "214e96498ac1c840e3eee553fc69ba721e4f9a64"
   },
-  "starcatcher-2.2.1-FORGE-1.20.1.jar": {
-    "jarName": "starcatcher-2.2.1-FORGE-1.20.1.jar",
-    "modId": "starcatcher",
-    "name": "Starcatcher",
-    "version": "2.2.1-FORGE-1.20.1",
-    "curseForgeHash": 366551101,
-    "modrinthHash": "1e9345a91af6e11fd43216c58d8e1a616cde346e"
-  },
   "structureessentials-1.20.1-4.8.jar": {
     "jarName": "structureessentials-1.20.1-4.8.jar",
     "modId": "structureessentials",
@@ -1682,13 +1602,13 @@
     "curseForgeHash": 3583911177,
     "modrinthHash": "8a403876730a7186165e109f7f5292d31c6c3f4c"
   },
-  "swordskill-2.0.1-alpha.jar": {
-    "jarName": "swordskill-2.0.1-alpha.jar",
+  "swordskill-1.2.5.jar": {
+    "jarName": "swordskill-1.2.5.jar",
     "modId": "swordskill",
     "name": "swordskill",
-    "version": "2.0.1-alpha",
-    "curseForgeHash": 2417834392,
-    "modrinthHash": "1b42da29b6426eb094811ec6ad6f1e81ae7f94db"
+    "version": "1.2.5",
+    "curseForgeHash": 2611046157,
+    "modrinthHash": "9bfe2c04996e7193da9bc672d35d2c53b8fd70cb"
   },
   "TerraBlender-forge-1.20.1-3.0.1.10.jar": {
     "jarName": "TerraBlender-forge-1.20.1-3.0.1.10.jar",

@@ -12,10 +12,10 @@
             "value": 0.1,
             "operation": "multiply_base"
         },{
-            "name": "+10% de velocidade de puxão de arco",
+            "name": "+50% de velocidade de puxão de arco",
             "attribute": "attributeslib:draw_speed",
-            "value": 0.1,
-            "operation": "addition"
+            "value": 0.5,
+            "operation": "multiply_base"
         }
     ]
 }

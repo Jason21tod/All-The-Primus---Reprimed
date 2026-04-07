@@ -107,4 +107,5 @@
 		enabled = true
 		"origins:elven_attributes" = true
 		"origins:fragile_bones" = true
+		"origins:elven_main_skill" = true
 
