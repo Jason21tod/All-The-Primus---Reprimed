@@ -12,3 +12,5 @@ usercache.json
 modernfix
 logs
 local
+.probe/*
+!.probe/probe-settings.json
