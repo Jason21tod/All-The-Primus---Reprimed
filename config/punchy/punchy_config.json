@@ -20,6 +20,7 @@
   "enableSwimAnimation": true,
   "enableWalkOnWaterAnimation": true,
   "enableDryOutAnimation": true,
+  "enableElytraFlightAnimation": true,
   "enableCustomWalk": true,
   "enableSprintArmSwing": true,
   "enableFallArmAnimation": true,
