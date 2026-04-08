@@ -6,5 +6,6 @@
 			"item": "iron_sword"
 		}
 	},
+	"unlocked_by_default": false,
 	"background": "textures/gui/advancements/backgrounds/stone.png"
 }

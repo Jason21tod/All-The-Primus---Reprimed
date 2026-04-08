@@ -103,6 +103,8 @@
 	[origins."origins:vampire"]
 		enabled = true
 		"origins:vampire_attributes" = true
+		"origins:vampire_blood_thirsty" = true
+		"origins:vampire_thirsty" = true
 
 	[origins."origins:elven"]
 		enabled = true
