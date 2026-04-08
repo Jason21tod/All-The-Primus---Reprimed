@@ -2,7 +2,7 @@ StartupEvents.registry('item', event => {
     event.create('blood_bottle')
         .maxStackSize(16)
         .useAnimation("drink")
-        .useDuration(itemstack => 20)
+        .useDuration(itemstack => 64)
         .use((level, player, hand) => true)
         .finishUsing((itemstack, level, entity) => {
             const effects = entity.potionEffects;

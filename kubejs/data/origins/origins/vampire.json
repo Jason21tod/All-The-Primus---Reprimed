@@ -1,6 +1,6 @@
 {
     "powers": [
-
+        "origins:vampire_attributes"
     ],
     "icon": "irons_spellbooks:blood_vial",
     "order": 0,
