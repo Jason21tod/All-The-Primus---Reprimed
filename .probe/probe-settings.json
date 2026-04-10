@@ -18,12 +18,12 @@
   "modHash": {
     "//": "internal config, used for tracking mod update and modlist change",
     "$default": -1,
-    "$value": 2041855894527532298
+    "$value": -1555098131314420812
   },
   "registryHash": {
     "//": "internal config, used for tracking registry change",
     "$default": -1,
-    "$value": 790590846375958737
+    "$value": 8743396639302559937
   },
   "isolatedScopes": {
     "//": [
