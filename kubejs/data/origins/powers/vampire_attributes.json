@@ -7,6 +7,22 @@
             "command": "tag @s add vampire"
         }
     },
+    "night": {
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": 
+                {
+                    "effect": "minecraft:night_vision",
+                    "duration": 300,
+                    "is_ambient": false,
+                    "show_particles": false,
+                    "show_icon": true,
+                    "amplifier": 2
+                }
+        } 
+    },
     "undead": {
         "type":"origins:entity_group",
         "group": "undead"
