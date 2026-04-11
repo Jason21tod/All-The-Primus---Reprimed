@@ -1,17 +1,31 @@
 {
-    "type": "origins:attribute",
-    "modifiers": [
-        {
-            "name": "+10% de poder de Feitiços de Sangue",
-            "attribute": "irons_spellbooks:blood_spell_power",
-            "value": 0.1,
-            "operation": "multiply_base"
-        },
-        {
-            "name": "+3 de dano de ataque",
-            "attribute": "minecraft:generic.attack_damage",
-            "value": 3,
-            "operation": "addition"
+    "type": "origins:multiple",
+    "tag": {
+        "type":"origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "tag @s add vampire"
         }
-    ]
+    },
+    "undead": {
+        "type":"origins:entity_group",
+        "group": "undead"
+    },
+    "attributes":{
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "name": "+10% de poder de Feitiços de Sangue",
+                "attribute": "irons_spellbooks:blood_spell_power",
+                "value": 0.1,
+                "operation": "multiply_base"
+            },
+            {
+                "name": "+3 de dano de ataque",
+                "attribute": "minecraft:generic.attack_damage",
+                "value": 3,
+                "operation": "addition"
+            }
+        ]
+    }
 }

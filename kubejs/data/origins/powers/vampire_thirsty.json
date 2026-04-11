@@ -64,6 +64,11 @@
                         "comparison": "==",
                         "compare_to": 0
                     }
+                },{
+                    "type":"origins:actor_condition",
+                    "condition": {
+                        "type": "origins:sneaking"
+                    }
                 }
             ]
         },
@@ -134,6 +139,11 @@
                         "resource":"*:*_skill_cooldown",
                         "comparison": "==",
                         "compare_to": 0
+                    }
+                },{
+                    "type":"origins:actor_condition",
+                    "condition": {
+                        "type": "origins:sneaking"
                     }
                 }
             ]
