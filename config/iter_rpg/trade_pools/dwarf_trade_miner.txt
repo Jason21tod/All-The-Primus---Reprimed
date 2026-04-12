@@ -1,0 +1,34 @@
+{
+-1
+[id=*id"minecraft:cobblestone"id*, price=*pr"1"pr*, amount=*am"12"am*, weight=*wg"16"wg*]
+[id=*id"minecraft:granite"id*, price=*pr"1"pr*, amount=*am"12"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:andesite"id*, price=*pr"1"pr*, amount=*am"12"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:diorite"id*, price=*pr"1"pr*, amount=*am"12"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:cobbled_deepslate"id*, price=*pr"1"pr*, amount=*am"12"am*, weight=*wg"12"wg*]
+[id=*id"minecraft:calcite"id*, price=*pr"1"pr*, amount=*am"12"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:tuff"id*, price=*pr"1"pr*, amount=*am"12"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:obsidian"id*, price=*pr"3"pr*, amount=*am"4"am*, weight=*wg"4"wg*]
+-2
+[id=*id"minecraft:coal"id*, price=*pr"2"pr*, amount=*am"16"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:raw_iron"id*, price=*pr"4"pr*, amount=*am"16"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:raw_copper"id*, price=*pr"2"pr*, amount=*am"16"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:raw_gold"id*, price=*pr"6"pr*, amount=*am"16"am*, weight=*wg"8"wg*]
+-3
+[id=*id"minecraft:sculk"id*, price=*pr"8"pr*, amount=*am"4"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:amethyst_shard"id*, price=*pr"5"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:gunpowder"id*, price=*pr"3"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"iter_rpg:spider_silk"id*, price=*pr"6"pr*, amount=*am"3"am*, weight=*wg"4"wg*]
+[id=*id"iter_rpg:abyssquartz_shard"id*, price=*pr"5"pr*, amount=*am"12"am*, weight=*wg"8"wg*]
+[id=*id"iter_rpg:spawner_fragment"id*, price=*pr"20"pr*, amount=*am"1"am*, weight=*wg"2"wg*]
+-4
+[id=*id"minecraft:lapis_lazuli"id*, price=*pr"2"pr*, amount=*am"24"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:redstone"id*, price=*pr"1"pr*, amount=*am"24"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:diamond"id*, price=*pr"18"pr*, amount=*am"4"am*, weight=*wg"4"wg*]
+[id=*id"minecraft:emerald"id*, price=*pr"16"pr*, amount=*am"6"am*, weight=*wg"8"wg*]
+-5
+[id=*id"minecraft:torch"id*, price=*pr"1"pr*, amount=*am"32"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:lantern"id*, price=*pr"4"pr*, amount=*am"4"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:compass"id*, price=*pr"2"pr*, amount=*am"1"am*, weight=*wg"4"wg*]
+[id=*id"minecraft:spyglass"id*, price=*pr"4"pr*, amount=*am"1"am*, weight=*wg"4"wg*]
+[id=*id"minecraft:tnt"id*, price=*pr"6"pr*, amount=*am"8"am*, weight=*wg"4"wg*]
+}

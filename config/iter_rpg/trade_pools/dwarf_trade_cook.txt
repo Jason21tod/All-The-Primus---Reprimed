@@ -1,0 +1,32 @@
+{
+-1
+[id=*id"minecraft:carrot"id*, price=*pr"1"pr*, amount=*am"16"am*, weight=*wg"12"wg*]
+[id=*id"minecraft:potato"id*, price=*pr"1"pr*, amount=*am"16"am*, weight=*wg"12"wg*]
+[id=*id"minecraft:pumpkin"id*, price=*pr"2"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:beetroot"id*, price=*pr"1"pr*, amount=*am"12"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:wheat"id*, price=*pr"1"pr*, amount=*am"24"am*, weight=*wg"12"wg*]
+[id=*id"iter_rpg:twiffle_lump"id*, price=*pr"3"pr*, amount=*am"8"am*, weight=*wg"16"wg*]
+[id=*id"minecraft:egg"id*, price=*pr"2"pr*, amount=*am"6"am*, weight=*wg"8"wg*]
+-2
+[id=*id"minecraft:sweet_berries"id*, price=*pr"1"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:melon_slice"id*, price=*pr"2"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:glow_berries"id*, price=*pr"1"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:milk_bucket"id*, price=*pr"8"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+-3
+[id=*id"minecraft:cooked_beef"id*, price=*pr"4"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:cooked_porkchop"id*, price=*pr"3"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:cooked_chicken"id*, price=*pr"2"pr*, amount=*am"8"am*, weight=*wg"4"wg*]
+[id=*id"minecraft:mutton"id*, price=*pr"3"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:bread"id*, price=*pr"2"pr*, amount=*am"6"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:rabbit_stew"id*, price=*pr"3"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:beetroot_soup"id*, price=*pr"3"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+-4
+[id=*id"iter_rpg:beer_tankard"id*, price=*pr"4"pr*, amount=*am"4"am*, weight=*wg"8"wg*]
+[id=*id"iter_rpg:spider_mead_tankard"id*, price=*pr"6"pr*, amount=*am"4"am*, weight=*wg"2"wg*]
+-5
+[id=*id"minecraft:pumpkin_pie"id*, price=*pr"3"pr*, amount=*am"2"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:cake"id*, price=*pr"6"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:golden_apple"id*, price=*pr"8"pr*, amount=*am"1"am*, weight=*wg"4"wg*]
+[id=*id"minecraft:golden_carrot"id*, price=*pr"3"pr*, amount=*am"4"am*, weight=*wg"4"wg*]
+[id=*id"minecraft:glistening_melon"id*, price=*pr"2"pr*, amount=*am"2"am*, weight=*wg"4"wg*]
+}

@@ -1,0 +1,42 @@
+{
+-1
+[id=*id"minecraft:iron_ingot"id*, price=*pr"4"pr*, amount=*am"8"am*, weight=*wg"12"wg*]
+[id=*id"minecraft:copper_ingot"id*, price=*pr"3"pr*, amount=*am"12"am*, weight=*wg"12"wg*]
+[id=*id"minecraft:gold_ingot"id*, price=*pr"6"pr*, amount=*am"8"am*, weight=*wg"8"wg*]
+[id=*id"iter_rpg:deepsteel_scrap"id*, price=*pr"24"pr*, amount=*am"2"am*, weight=*wg"4"wg*]
+-2
+[id=*id"minecraft:iron_pickaxe"id*, price=*pr"12"pr*, amount=*am"1"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:iron_sword"id*, price=*pr"10"pr*, amount=*am"1"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:iron_axe"id*, price=*pr"12"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:shield"id*, price=*pr"6"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:crossbow"id*, price=*pr"8"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"iter_rpg:iron_dagger"id*, price=*pr"6"pr*, amount=*am"1"am*, weight=*wg"3"wg*]
+[id=*id"iter_rpg:iron_spear"id*, price=*pr"10"pr*, amount=*am"1"am*, weight=*wg"3"wg*]
+[id=*id"iter_rpg:iron_scythe"id*, price=*pr"10"pr*, amount=*am"1"am*, weight=*wg"3"wg*]
+[id=*id"iter_rpg:iron_flail"id*, price=*pr"18"pr*, amount=*am"1"am*, weight=*wg"3"wg*]
+[id=*id"iter_rpg:deepsteel_sword"id*, price=*pr"50"pr*, amount=*am"1"am*, weight=*wg"2"wg*]
+[id=*id"iter_rpg:deepsteel_pickaxe"id*, price=*pr"50"pr*, amount=*am"1"am*, weight=*wg"2"wg*]
+[id=*id"iter_rpg:deepsteel_axe"id*, price=*pr"50"pr*, amount=*am"1"am*, weight=*wg"2"wg*]
+-3
+[id=*id"minecraft:iron_helmet"id*, price=*pr"14"pr*, amount=*am"1"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:iron_chestplate"id*, price=*pr"24"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:iron_leggings"id*, price=*pr"20"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:iron_boots"id*, price=*pr"12"pr*, amount=*am"1"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:chainmail_helmet"id*, price=*pr"24"pr*, amount=*am"1"am*, weight=*wg"1"wg*]
+[id=*id"minecraft:chainmail_chestplate"id*, price=*pr"32"pr*, amount=*am"1"am*, weight=*wg"1"wg*]
+[id=*id"minecraft:chainmail_leggings"id*, price=*pr"28"pr*, amount=*am"1"am*, weight=*wg"1"wg*]
+[id=*id"minecraft:chainmail_boots"id*, price=*pr"22"pr*, amount=*am"1"am*, weight=*wg"1"wg*]
+-4
+[id=*id"minecraft:anvil"id*, price=*pr"24"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:smithing_table"id*, price=*pr"15"pr*, amount=*am"1"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:grindstone"id*, price=*pr"8"pr*, amount=*am"1"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:blast_furnace"id*, price=*pr"16"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"minecraft:cauldron"id*, price=*pr"8"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+-5
+[id=*id"minecraft:chain"id*, price=*pr"3"pr*, amount=*am"16"am*, weight=*wg"8"wg*]
+[id=*id"minecraft:iron_horse_armor"id*, price=*pr"8"pr*, amount=*am"1"am*, weight=*wg"6"wg*]
+[id=*id"iter_rpg:dwarven_components"id*, price=*pr"16"pr*, amount=*am"3"am*, weight=*wg"4"wg*]
+[id=*id"iter_rpg:cruncher"id*, price=*pr"24"pr*, amount=*am"1"am*, weight=*wg"2"wg*]
+[id=*id"iter_rpg:drill"id*, price=*pr"24"pr*, amount=*am"1"am*, weight=*wg"2"wg*]
+[id=*id"iter_rpg:pebble_launcher"id*, price=*pr"24"pr*, amount=*am"1"am*, weight=*wg"2"wg*]
+}
