@@ -1170,6 +1170,7 @@
     "curseForgeHash": 3315618055,
     "modrinthHash": "ff01aa718b71249012c41d9926d3fd2982809fdb"
   },
+<<<<<<< HEAD
   "minecraft-comes-alive-7.6.15+1.20.1-universal.jar": {
     "jarName": "minecraft-comes-alive-7.6.15+1.20.1-universal.jar",
     "modId": "mca",
@@ -1178,6 +1179,8 @@
     "curseForgeHash": 2763790521,
     "modrinthHash": "1e238ef8c5aa07f241be2dc63eba1ea56c03fc9f"
   },
+=======
+>>>>>>> master
   "mobbility-addon-combat-roll-forge-1.0.0.jar": {
     "jarName": "mobbility-addon-combat-roll-forge-1.0.0.jar",
     "modId": "mobbility_combat_roll",
