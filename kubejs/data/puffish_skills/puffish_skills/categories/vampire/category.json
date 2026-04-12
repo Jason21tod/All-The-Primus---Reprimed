@@ -1,0 +1,11 @@
+{
+	"title": "Vampiro",
+	"icon": {
+		"type": "item",
+		"data": {
+			"item": "iron_sword"
+		}
+	},
+	"unlocked_by_default": false,
+	"background": "textures/gui/advancements/backgrounds/stone.png"
+}

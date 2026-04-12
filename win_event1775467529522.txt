@@ -1,0 +1,42 @@
+Detected that Windows reported recent critical or error events in the Application log,
+which can indicate that a process (including the Minecraft JVM) terminated unexpectedly.
+Scope: Application log; Levels: Error & Critical; Window: last ~15 seconds.
+
+If no java.exe (or related JVM processes) are listed below, you can disregard this message.
+To inspect these events manually:
+  1) Press Win+R, type "eventvwr.msc", press Enter.
+  2) Open "Windows Logs" → "Application".
+  3) Sort by Date and look for entries with Level = Error or Critical near the crash time.
+
+-----------------------
+Time: 2026-04-06 06:25:15.666 BRT
+Source: Application Hang
+Event ID: 1002
+Level: Error
+
+Message:
+  O programa XboxGameBarWidgets.exe versão 2603.1001.18.0 parou de interagir com o Windows e foi fechado. Para ver se mais informações sobre o problema estão disponíveis, verifique o histórico de problemas no painel de controle Segurança e Manutenção.
+   ID do Processo: 3764
+   Hora de Início: 01dcc5a5f8eca026
+   Hora de Término: 4294967295
+   Caminho do Aplicativo: C:\Program Files\WindowsApps\Microsoft.GamingApp_2603.1001.18.0_x64__8wekyb3d8bbwe\XboxGameBarWidgets.exe
+   ID do Relatório: 09bad9c8-d5fb-4a44-9ae3-4f8cbe238e6c
+   Nome completo do pacote com falha: Microsoft.GamingApp_2603.1001.18.0_x64__8wekyb3d8bbwe
+   ID do aplicativo relativo ao pacote com falha: Microsoft.Xbox.WidgetsApp
+   Tipo com falha: Quiesce
+
+
+Details:
+  - Data[1]: XboxGameBarWidgets.exe
+  - Data[2]: 2603.1001.18.0
+  - Data[3]: 3764
+  - Data[4]: 01dcc5a5f8eca026
+  - Data[5]: 4294967295
+  - Data[6]: C:\Program Files\WindowsApps\Microsoft.GamingApp_2603.1001.18.0_x64__8wekyb3d8bbwe\XboxGameBarWidgets.exe
+  - Data[7]: 09bad9c8-d5fb-4a44-9ae3-4f8cbe238e6c
+  - Data[8]: Microsoft.GamingApp_2603.1001.18.0_x64__8wekyb3d8bbwe
+  - Data[9]: Microsoft.Xbox.WidgetsApp
+  - Data[10]: Quiesce
+  - Binary: 510075006900650073006300650000000000
+-----------------------
+

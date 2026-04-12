@@ -1,0 +1,12 @@
+{
+    "powers": [
+        "origins:elven_main_skill",
+        "origins:elven_attributes",
+        "origins:fragile_bones"
+    ],
+    "icon": "minecraft:stick",
+    "order": 1,
+    "impact": 1,
+    "name": "Elfo",
+    "description": "Elfos usam de sua velocidade a aptidão com a natureza para ganhar na astúcia e velocidade para subjulgar seu oponentes."
+}

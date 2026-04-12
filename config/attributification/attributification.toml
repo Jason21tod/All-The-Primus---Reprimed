@@ -316,7 +316,7 @@ unidirectional = true
 # If true, only changes visual display without converting values
 onlyVisualChange = false
 # If true, source frozen at base value, only target works
-fullReplacement = true
+fullReplacement = false
 # Value to subtract from target for virtual display (for base value differences)
 subtractValue = 0.0
 # Operation conversion type: DEFAULT, ADDITION_TO_MULTIPLY_BASE, ADDITION_TO_MULTIPLY_TOTAL
