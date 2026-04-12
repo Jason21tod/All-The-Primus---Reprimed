@@ -12,5 +12,9 @@ usercache.json
 modernfix
 logs
 local
+<<<<<<< HEAD
 .probe/*
 !.probe/probe-settings.json
+=======
+.probe
+>>>>>>> master
