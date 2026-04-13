@@ -437,8 +437,8 @@
     "curseForgeHash": 1288931317,
     "modrinthHash": "452175b95ad3db6ff58bb8968f6bf7a9d1e0f480"
   },
-  "Curious Mobs 1.6.0.jar": {
-    "jarName": "Curious Mobs 1.6.0.jar",
+  "CuriousÂ Mobs 1.6.0.jar": {
+    "jarName": "CuriousÂ Mobs 1.6.0.jar",
     "modId": "curious_mobs",
     "name": "Curious Mobs",
     "version": "1.6.0",
@@ -1090,6 +1090,14 @@
     "curseForgeHash": 2024374848,
     "modrinthHash": "a261043a45097d861a13a63ebdbb0ca350e06a63"
   },
+  "letsdocompat-forge-2.2.4.jar": {
+    "jarName": "letsdocompat-forge-2.2.4.jar",
+    "modId": "letsdocompat",
+    "name": "[Let\u0027s Do Addon] Compat",
+    "version": "2.2.4",
+    "curseForgeHash": 1964164046,
+    "modrinthHash": "d5e240f3f41eb1328f12af977a14130b2e79deaa"
+  },
   "lionfishapi-2.4-Fix.jar": {
     "jarName": "lionfishapi-2.4-Fix.jar",
     "modId": "lionfishapi",
@@ -1666,13 +1674,13 @@
     "curseForgeHash": 1798731720,
     "modrinthHash": "2fcc79a165f88621bd6aa27827422ea36f07b3cc"
   },
-  "voicechat-forge-1.20.1-2.6.16.jar": {
-    "jarName": "voicechat-forge-1.20.1-2.6.16.jar",
+  "voicechat-forge-1.20.1-2.6.15.jar": {
+    "jarName": "voicechat-forge-1.20.1-2.6.15.jar",
     "modId": "voicechat",
     "name": "Simple Voice Chat",
-    "version": "1.20.1-2.6.16",
-    "curseForgeHash": 2372371848,
-    "modrinthHash": "fe8ea9af38758aeaa4d0b0af7b7bcc69517acb65"
+    "version": "1.20.1-2.6.15",
+    "curseForgeHash": 4117931016,
+    "modrinthHash": "295b2745fe22603b127cb9fa262e896824a6a530"
   },
   "walkers-5.8.1.jar": {
     "jarName": "walkers-5.8.1.jar",

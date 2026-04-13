@@ -1,5 +1,10 @@
 {
+    "include": [
+        "./**/*.js"
+    ],
     "compilerOptions": {
+        "rootDir": ".",
+        "skipLibCheck": true,
         "target": "ES2015",
         "incremental": true,
         "types": [
@@ -16,11 +21,6 @@
         "moduleResolution": "classic",
         "skipDefaultLibCheck": true,
         "module": "commonjs",
-        "allowJs": true,
-        "rootDir": ".",
-        "skipLibCheck": true
-    },
-    "include": [
-        "./**/*.js"
-    ]
+        "allowJs": true
+    }
 }
