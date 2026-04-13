@@ -132,6 +132,17 @@
         "value": 1024
       }
     },
+    "kubejs:sword_damage": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 0,
+        "value": 0
+      }
+    },
     "goety:frost_potency": {
       "enabled": false,
       "min": {

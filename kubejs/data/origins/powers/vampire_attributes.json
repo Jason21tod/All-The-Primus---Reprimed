@@ -1,17 +1,33 @@
 {
-    "type": "origins:attribute",
-    "modifiers": [
-        {
-            "name": "+10% de poder de Feitiços de Sangue",
-            "attribute": "irons_spellbooks:blood_spell_power",
-            "value": 0.1,
-            "operation": "multiply_base"
+    "type":"origins:multiple",
+    "attributes": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "name": "+10% de poder de Feitiços de Sangue",
+                "attribute": "irons_spellbooks:blood_spell_power",
+                "value": 0.1,
+                "operation": "multiply_base"
+            },
+            {
+                "name": "+2 de dano de ataque",
+                "attribute": "minecraft:generic.attack_damage",
+                "value": 2,
+                "operation": "addition"
+            }
+        ]
+    },
+    "night_vision":{
+        "type":"origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:night_vision",
+            "show_particles": false,
+            "duration": 300
         },
-        {
-            "name": "+3 de dano de ataque",
-            "attribute": "minecraft:generic.attack_damage",
-            "value": 3,
-            "operation": "addition"
+        "condition": {
+                "type": "origins:brightness",
+                "comparison": "<=",
+                "compare_to": 0.5
         }
-    ]
+    }
 }
