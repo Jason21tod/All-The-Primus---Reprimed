@@ -45,6 +45,7 @@
 		enabled = true
 		"origins:vampire_attributes" = true
 		"origins:vampire_thirsty" = true
+		"origins:vampire_weakness" = true
 
 	[origins."origins:merling"]
 		enabled = true
