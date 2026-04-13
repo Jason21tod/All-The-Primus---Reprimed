@@ -96,9 +96,10 @@ export abstract class $DomainCombiner$$Static implements $DomainCombiner {
 declare module "java.security.KeyPair" {
 import { $PrivateKey, $PrivateKey$$Type } from "java.security.PrivateKey"
 import { $PublicKey, $PublicKey$$Type } from "java.security.PublicKey"
+import { $DEREncodable } from "java.security.DEREncodable"
 import { $Serializable } from "java.io.Serializable"
 
-export class $KeyPair implements $Serializable {
+export class $KeyPair implements $Serializable, $DEREncodable {
 constructor(publicKey0: $PublicKey$$Type, privateKey1: $PrivateKey$$Type)
 
 public "getPrivate"(): $PrivateKey
@@ -165,18 +166,21 @@ get "principals"(): $Principal[]
 }
 
 declare module "java.security.PrivateKey" {
-import { $Key } from "java.security.Key"
 import { $Destroyable } from "javax.security.auth.Destroyable"
+import { $AsymmetricKey } from "java.security.AsymmetricKey"
+import { $AlgorithmParameterSpec } from "java.security.spec.AlgorithmParameterSpec"
 
-export interface $PrivateKey extends $Key, $Destroyable {
+export interface $PrivateKey extends $AsymmetricKey, $Destroyable {
 "destroy"(): void
 "getAlgorithm"(): string
 "getEncoded"(): byte[]
 "getFormat"(): string
+"getParams"(): $AlgorithmParameterSpec
 "isDestroyed"(): boolean
 get "algorithm"(): string
 get "encoded"(): byte[]
 get "format"(): string
+get "params"(): $AlgorithmParameterSpec
 get "destroyed"(): boolean
 }
 
@@ -210,8 +214,8 @@ import { $ProtectionDomain$$Type } from "java.security.ProtectionDomain"
 
 /** @deprecated */
 export class $AccessControlContext {
-constructor(accessControlContext0: $AccessControlContext$$Type, domainCombiner1: $DomainCombiner$$Type)
 constructor(protectionDomain0s: $ProtectionDomain$$Type[])
+constructor(accessControlContext0: $AccessControlContext$$Type, domainCombiner1: $DomainCombiner$$Type)
 
 public "checkPermission"(permission0: $Permission$$Type): void
 public "getDomainCombiner"(): $DomainCombiner
@@ -233,8 +237,8 @@ import { $Provider, $Provider$$Type } from "java.security.Provider"
 export class $Signature extends $SignatureSpi {
 public "getAlgorithm"(): string
 public static "getInstance"(string0: string): $Signature
-public static "getInstance"(string0: string, provider1: $Provider$$Type): $Signature
 public static "getInstance"(string0: string, string1: string): $Signature
+public static "getInstance"(string0: string, provider1: $Provider$$Type): $Signature
 /** @deprecated */
 public "getParameter"(string0: string): any
 public "getParameters"(): $AlgorithmParameters
@@ -246,18 +250,41 @@ public "initVerify"(publicKey0: $PublicKey$$Type): void
 public "setParameter"(algorithmParameterSpec0: $AlgorithmParameterSpec$$Type): void
 /** @deprecated */
 public "setParameter"(string0: string, object1: any): void
-public "sign"(): byte[]
 public "sign"(byte0s: byte[], int1: integer, int2: integer): integer
-public "update"(byte0: byte): void
+public "sign"(): byte[]
 public "update"(byte0s: byte[]): void
 public "update"(byte0s: byte[], int1: integer, int2: integer): void
+public "update"(byte0: byte): void
 public "update"(byteBuffer0: $ByteBuffer$$Type): void
-public "verify"(byte0s: byte[], int1: integer, int2: integer): boolean
 public "verify"(byte0s: byte[]): boolean
+public "verify"(byte0s: byte[], int1: integer, int2: integer): boolean
 get "algorithm"(): string
 get "parameters"(): $AlgorithmParameters
 get "provider"(): $Provider
 set "parameter"(value: $AlgorithmParameterSpec$$Type)
+}
+}
+
+declare module "java.security.AsymmetricKey" {
+import { $Key } from "java.security.Key"
+import { $AlgorithmParameterSpec } from "java.security.spec.AlgorithmParameterSpec"
+import { $DEREncodable } from "java.security.DEREncodable"
+
+export interface $AsymmetricKey extends $Key, $DEREncodable {
+"getAlgorithm"(): string
+"getEncoded"(): byte[]
+"getFormat"(): string
+"getParams"(): $AlgorithmParameterSpec
+get "algorithm"(): string
+get "encoded"(): byte[]
+get "format"(): string
+get "params"(): $AlgorithmParameterSpec
+}
+
+export namespace $AsymmetricKey {
+const probejs$$marker: never
+}
+export abstract class $AsymmetricKey$$Static implements $AsymmetricKey {
 }
 }
 
@@ -290,6 +317,18 @@ export namespace $AlgorithmParameterSpec {
 const probejs$$marker: never
 }
 export abstract class $AlgorithmParameterSpec$$Static implements $AlgorithmParameterSpec {
+}
+}
+
+declare module "java.security.DEREncodable" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+export interface $DEREncodable {
+}
+
+export namespace $DEREncodable {
+const probejs$$marker: never
+}
+export abstract class $DEREncodable$$Static implements $DEREncodable {
 }
 }
 
@@ -387,21 +426,23 @@ declare module "java.security.SecureRandom" {
 import { $RandomGenerator } from "java.util.random.RandomGenerator"
 import { $Random } from "java.util.Random"
 import { $SecureRandomParameters, $SecureRandomParameters$$Type } from "java.security.SecureRandomParameters"
+import { $DoubleStream } from "java.util.stream.DoubleStream"
 import { $Provider, $Provider$$Type } from "java.security.Provider"
 
 export class $SecureRandom extends $Random {
-constructor()
 constructor(byte0s: byte[])
+constructor()
 
+public "equiDoubles"(double0: double, double1: double, boolean2: boolean, boolean3: boolean): $DoubleStream
 public "generateSeed"(int0: integer): byte[]
 public "getAlgorithm"(): string
 public static "getDefault"(): $RandomGenerator
 public static "getInstance"(string0: string, secureRandomParameters1: $SecureRandomParameters$$Type, provider2: $Provider$$Type): $SecureRandom
 public static "getInstance"(string0: string, secureRandomParameters1: $SecureRandomParameters$$Type, string2: string): $SecureRandom
 public static "getInstance"(string0: string, secureRandomParameters1: $SecureRandomParameters$$Type): $SecureRandom
-public static "getInstance"(string0: string): $SecureRandom
-public static "getInstance"(string0: string, string1: string): $SecureRandom
 public static "getInstance"(string0: string, provider1: $Provider$$Type): $SecureRandom
+public static "getInstance"(string0: string, string1: string): $SecureRandom
+public static "getInstance"(string0: string): $SecureRandom
 public static "getInstanceStrong"(): $SecureRandom
 public "getParameters"(): $SecureRandomParameters
 public "getProvider"(): $Provider
@@ -411,12 +452,12 @@ public "nextBytes"(byte0s: byte[], secureRandomParameters1: $SecureRandomParamet
 public "nextDouble"(double0: double): double
 public "nextDouble"(double0: double, double1: double): double
 public "nextExponential"(): double
-public "nextFloat"(float0: float, float1: float): float
 public "nextFloat"(float0: float): float
+public "nextFloat"(float0: float, float1: float): float
 public "nextGaussian"(double0: double, double1: double): double
 public "nextInt"(int0: integer, int1: integer): integer
-public "nextLong"(long0: long): long
 public "nextLong"(long0: long, long1: long): long
+public "nextLong"(long0: long): long
 public static "of"(string0: string): $RandomGenerator
 public "reseed"(secureRandomParameters0: $SecureRandomParameters$$Type): void
 public "reseed"(): void
@@ -430,15 +471,18 @@ set "seed"(value: byte[])
 }
 
 declare module "java.security.PublicKey" {
-import { $Key } from "java.security.Key"
+import { $AsymmetricKey } from "java.security.AsymmetricKey"
+import { $AlgorithmParameterSpec } from "java.security.spec.AlgorithmParameterSpec"
 
-export interface $PublicKey extends $Key {
+export interface $PublicKey extends $AsymmetricKey {
 "getAlgorithm"(): string
 "getEncoded"(): byte[]
 "getFormat"(): string
+"getParams"(): $AlgorithmParameterSpec
 get "algorithm"(): string
 get "encoded"(): byte[]
 get "format"(): string
+get "params"(): $AlgorithmParameterSpec
 }
 
 export namespace $PublicKey {
@@ -458,16 +502,16 @@ import { $Provider, $Provider$$Type } from "java.security.Provider"
 
 export class $AlgorithmParameters {
 public "getAlgorithm"(): string
-public "getEncoded"(string0: string): byte[]
 public "getEncoded"(): byte[]
-public static "getInstance"(string0: string): $AlgorithmParameters
+public "getEncoded"(string0: string): byte[]
 public static "getInstance"(string0: string, provider1: $Provider$$Type): $AlgorithmParameters
 public static "getInstance"(string0: string, string1: string): $AlgorithmParameters
+public static "getInstance"(string0: string): $AlgorithmParameters
 public "getParameterSpec"<T extends $AlgorithmParameterSpec>(class0: $Class$$Type<T>): T
 public "getProvider"(): $Provider
+public "init"(byte0s: byte[]): void
 public "init"(byte0s: byte[], string1: string): void
 public "init"(algorithmParameterSpec0: $AlgorithmParameterSpec$$Type): void
-public "init"(byte0s: byte[]): void
 get "algorithm"(): string
 get "encoded"(): byte[]
 get "provider"(): $Provider
@@ -505,17 +549,17 @@ public "getServices"(): $Set<$Provider$Service>
 public "getVersion"(): double
 public "getVersionStr"(): string
 public "isConfigured"(): boolean
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 get "info"(): string
 get "name"(): string

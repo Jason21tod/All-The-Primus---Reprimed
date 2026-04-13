@@ -62,8 +62,8 @@ public "decode"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Pair<A, T>>
 public "deprecated"(int0: integer): $Codec<A>
 public "dispatch"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $Codec<E>
 public "dispatch"<E>(string0: string, function1: $Function$$Type<E, A>, function2: $Function$$Type<A, $Codec<E>>): $Codec<E>
-public "dispatchMap"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $MapCodec<E>
 public "dispatchMap"<E>(string0: string, function1: $Function$$Type<E, A>, function2: $Function$$Type<A, $Codec<E>>): $MapCodec<E>
+public "dispatchMap"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $MapCodec<E>
 public "dispatchStable"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $Codec<E>
 public static "doubleRange"(double0: double, double1: double): $Codec<double>
 public static "either"<F, S>(codec0: $Codec$$Type<F>, codec1: $Codec$$Type<S>): $Codec<$Either<F, S>>
@@ -71,7 +71,6 @@ public static "empty"<A>(): $MapEncoder<A>
 public "encode"<T>(a0: A, dynamicOps1: $DynamicOps$$Type<T>, t2: T): $DataResult<T>
 public "encodeStart"<T>(dynamicOps0: $DynamicOps$$Type<T>, a1: A): $DataResult<T>
 public static "error"<A>(string0: string): $Encoder<A>
-public "fieldOf"(string0: string): $MapCodec<A>
 public "flatComap"<B>(function0: $Function$$Type<B, $DataResult<A>>): $Encoder<B>
 public "flatComapMap"<S>(function0: $Function$$Type<A, S>, function1: $Function$$Type<S, $DataResult<A>>): $Codec<S>
 public "flatMap"<B>(function0: $Function$$Type<A, $DataResult<B>>): $Decoder<B>
@@ -92,20 +91,21 @@ public static "ofBoxed"<A>(boxed0: $Decoder$Boxed$$Type<A>): $Decoder<A>
 public static "ofSimple"<A>(simple0: $Decoder$Simple$$Type<A>): $Decoder<A>
 public static "ofTerminal"<A>(terminal0: $Decoder$Terminal$$Type<A>): $Decoder<A>
 public static "optionalField"<F>(string0: string, codec1: $Codec$$Type<F>): $MapCodec<$Optional<F>>
-public "optionalFieldOf"(string0: string): $MapCodec<$Optional<A>>
+public "optionalFieldOf"(string0: string, a1: A): $MapCodec<A>
 public "optionalFieldOf"(string0: string, a1: A, lifecycle2: $Lifecycle$$Type): $MapCodec<A>
 public "optionalFieldOf"(string0: string, lifecycle1: $Lifecycle$$Type, a2: A, lifecycle3: $Lifecycle$$Type): $MapCodec<A>
-public "optionalFieldOf"(string0: string, a1: A): $MapCodec<A>
-public "orElse"(unaryOperator0: $UnaryOperator$$Type<string>, a1: A): $Codec<A>
-public "orElse"(consumer0: $Consumer$$Type<string>, a1: A): $Codec<A>
+public "optionalFieldOf"(string0: string): $MapCodec<$Optional<A>>
 public "orElse"(a0: A): $Codec<A>
-public "orElseGet"(supplier0: $Supplier$$Type<A>): $Codec<A>
+public "orElse"(consumer0: $Consumer$$Type<string>, a1: A): $Codec<A>
+public "orElse"(unaryOperator0: $UnaryOperator$$Type<string>, a1: A): $Codec<A>
 public "orElseGet"(unaryOperator0: $UnaryOperator$$Type<string>, supplier1: $Supplier$$Type<A>): $Codec<A>
+public "orElseGet"(supplier0: $Supplier$$Type<A>): $Codec<A>
 public "orElseGet"(consumer0: $Consumer$$Type<string>, supplier1: $Supplier$$Type<A>): $Codec<A>
 public static "pair"<F, S>(codec0: $Codec$$Type<F>, codec1: $Codec$$Type<S>): $Codec<$Pair<F, S>>
-public "parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<A>
 public "parse"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<A>
+public "parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<A>
 public "partialDispatch"<E>(string0: string, function1: $Function$$Type<E, $DataResult<A>>, function2: $Function$$Type<A, $DataResult<$Codec<E>>>): $Codec<E>
+public "promotePartial"(consumer0: $Consumer$$Type<string>): $Codec<A>
 public "simple"(): $Decoder$Simple<A>
 public static "simpleMap"<K, V>(codec0: $Codec$$Type<K>, codec1: $Codec$$Type<V>, keyable2: $Keyable$$Type): $SimpleMapCodec<K, V>
 public "stable"(): $Codec<A>
@@ -180,11 +180,11 @@ public "ap"<R2>(dataResult0: $DataResult$$Type<$Function$$Type<R, R2>>): $DataRe
 public "apply2"<R2, S>(biFunction0: $BiFunction$$Type<R, R2, S>, dataResult1: $DataResult$$Type<R2>): $DataResult<S>
 public "apply2stable"<R2, S>(biFunction0: $BiFunction$$Type<R, R2, S>, dataResult1: $DataResult$$Type<R2>): $DataResult<S>
 public "apply3"<R2, R3, S>(function30: $Function3$$Type<R, R2, R3, S>, dataResult1: $DataResult$$Type<R2>, dataResult2: $DataResult$$Type<R3>): $DataResult<S>
-public static "error"<R>(supplier0: $Supplier$$Type<string>, lifecycle1: $Lifecycle$$Type): $DataResult<R>
 public static "error"<R>(supplier0: $Supplier$$Type<string>, r1: R): $DataResult<R>
+public static "error"<R>(supplier0: $Supplier$$Type<string>, lifecycle1: $Lifecycle$$Type): $DataResult<R>
 public "error"(): $Optional<$DataResult$PartialResult<R>>
-public static "error"<R>(supplier0: $Supplier$$Type<string>): $DataResult<R>
 public static "error"<R>(supplier0: $Supplier$$Type<string>, r1: R, lifecycle2: $Lifecycle$$Type): $DataResult<R>
+public static "error"<R>(supplier0: $Supplier$$Type<string>): $DataResult<R>
 public "flatMap"<R2>(function0: $Function$$Type<R, $DataResult<R2>>): $DataResult<R2>
 public "get"(): $Either<R, $DataResult$PartialResult<R>>
 public "getOrThrow"(boolean0: boolean, consumer1: $Consumer$$Type<string>): R
@@ -197,13 +197,13 @@ public "promotePartial"(consumer0: $Consumer$$Type<string>): $DataResult<R>
 public "result"(): $Optional<R>
 public "resultOrPartial"(consumer0: $Consumer$$Type<string>): $Optional<R>
 public "setLifecycle"(lifecycle0: $Lifecycle$$Type): $DataResult<R>
-public "setPartial"(supplier0: $Supplier$$Type<R>): $DataResult<R>
 public "setPartial"(r0: R): $DataResult<R>
-public static "success"<R>(r0: R): $DataResult<R>
+public "setPartial"(supplier0: $Supplier$$Type<R>): $DataResult<R>
 public static "success"<R>(r0: R, lifecycle1: $Lifecycle$$Type): $DataResult<R>
+public static "success"<R>(r0: R): $DataResult<R>
 public static "unbox"<R>(app0: $App$$Type<$DataResult$Mu$$Type, R>): $DataResult<R>
-set "partial"(value: $Supplier$$Type<R>)
 set "partial"(value: R)
+set "partial"(value: $Supplier$$Type<R>)
 }
 }
 
@@ -301,8 +301,8 @@ public "asMapOpt"(): $DataResult<$Stream<$Pair<$Dynamic<T>, $Dynamic<T>>>>
 public "asStreamOpt"(): $DataResult<$Stream<$Dynamic<T>>>
 public "cast"<U>(dynamicOps0: $DynamicOps$$Type<U>): U
 public "castTyped"<U>(dynamicOps0: $DynamicOps$$Type<U>): $Dynamic<U>
-public "convert"<R>(dynamicOps0: $DynamicOps$$Type<R>): $Dynamic<R>
 public static "convert"<S, T>(dynamicOps0: $DynamicOps$$Type<S>, dynamicOps1: $DynamicOps$$Type<T>, s2: S): T
+public "convert"<R>(dynamicOps0: $DynamicOps$$Type<R>): $Dynamic<R>
 public "decode"<A>(decoder0: $Decoder$$Type<A>): $DataResult<$Pair<A, T>>
 public "get"(string0: string): $OptionalDynamic<T>
 public "getElement"(string0: string): $DataResult<T>
@@ -312,8 +312,8 @@ public "getMapValues"(): $DataResult<$Map<$Dynamic<T>, $Dynamic<T>>>
 public "getValue"(): T
 public "into"<V>(function0: $Function$$Type<$Dynamic$$Type<T>, V>): V
 public "map"(function0: $Function$$Type<T, T>): $Dynamic<T>
-public "merge"(dynamic0: $Dynamic$$Type<any>): $OptionalDynamic<T>
 public "merge"(dynamic0: $Dynamic$$Type<any>, dynamic1: $Dynamic$$Type<any>): $OptionalDynamic<T>
+public "merge"(dynamic0: $Dynamic$$Type<any>): $OptionalDynamic<T>
 public "remove"(string0: string): $Dynamic<T>
 public "set"(string0: string, dynamic1: $Dynamic$$Type<any>): $Dynamic<T>
 public "update"(string0: string, function1: $Function$$Type<$Dynamic$$Type<any>, $Dynamic<any>>): $Dynamic<T>
@@ -409,12 +409,11 @@ export interface $Codec<A = any> extends $Encoder<A>, $Decoder<A> {
 "deprecated"(int0: integer): $Codec<A>
 "dispatch"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $Codec<E>
 "dispatch"<E>(string0: string, function1: $Function$$Type<E, A>, function2: $Function$$Type<A, $Codec<E>>): $Codec<E>
-"dispatchMap"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $MapCodec<E>
 "dispatchMap"<E>(string0: string, function1: $Function$$Type<E, A>, function2: $Function$$Type<A, $Codec<E>>): $MapCodec<E>
+"dispatchMap"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $MapCodec<E>
 "dispatchStable"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $Codec<E>
 "encode"<T>(a0: A, dynamicOps1: $DynamicOps$$Type<T>, t2: T): $DataResult<T>
 "encodeStart"<T>(dynamicOps0: $DynamicOps$$Type<T>, a1: A): $DataResult<T>
-"fieldOf"(string0: string): $MapCodec<A>
 "flatComap"<B>(function0: $Function$$Type<B, $DataResult<A>>): $Encoder<B>
 "flatComapMap"<S>(function0: $Function$$Type<A, S>, function1: $Function$$Type<S, $DataResult<A>>): $Codec<S>
 "flatMap"<B>(function0: $Function$$Type<A, $DataResult<B>>): $Decoder<B>
@@ -422,19 +421,20 @@ export interface $Codec<A = any> extends $Encoder<A>, $Decoder<A> {
 "listOf"(): $Codec<$List<A>>
 "map"<B>(function0: $Function$$Type<A, B>): $Decoder<B>
 "mapResult"(resultFunction0: $Codec$ResultFunction$$Type<A>): $Codec<A>
-"optionalFieldOf"(string0: string): $MapCodec<$Optional<A>>
+"optionalFieldOf"(string0: string, a1: A): $MapCodec<A>
 "optionalFieldOf"(string0: string, a1: A, lifecycle2: $Lifecycle$$Type): $MapCodec<A>
 "optionalFieldOf"(string0: string, lifecycle1: $Lifecycle$$Type, a2: A, lifecycle3: $Lifecycle$$Type): $MapCodec<A>
-"optionalFieldOf"(string0: string, a1: A): $MapCodec<A>
-"orElse"(unaryOperator0: $UnaryOperator$$Type<string>, a1: A): $Codec<A>
-"orElse"(consumer0: $Consumer$$Type<string>, a1: A): $Codec<A>
+"optionalFieldOf"(string0: string): $MapCodec<$Optional<A>>
 "orElse"(a0: A): $Codec<A>
-"orElseGet"(supplier0: $Supplier$$Type<A>): $Codec<A>
+"orElse"(consumer0: $Consumer$$Type<string>, a1: A): $Codec<A>
+"orElse"(unaryOperator0: $UnaryOperator$$Type<string>, a1: A): $Codec<A>
 "orElseGet"(unaryOperator0: $UnaryOperator$$Type<string>, supplier1: $Supplier$$Type<A>): $Codec<A>
+"orElseGet"(supplier0: $Supplier$$Type<A>): $Codec<A>
 "orElseGet"(consumer0: $Consumer$$Type<string>, supplier1: $Supplier$$Type<A>): $Codec<A>
-"parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<A>
 "parse"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<A>
+"parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<A>
 "partialDispatch"<E>(string0: string, function1: $Function$$Type<E, $DataResult<A>>, function2: $Function$$Type<A, $DataResult<$Codec<E>>>): $Codec<E>
+"promotePartial"(consumer0: $Consumer$$Type<string>): $Codec<A>
 "simple"(): $Decoder$Simple<A>
 "stable"(): $Codec<A>
 "terminal"(): $Decoder$Terminal<A>
@@ -641,8 +641,8 @@ public "lift7"<T1, T2, T3, T4, T5, T6, T7, R>(app0: $App$$Type<$RecordCodecBuild
 public "lift8"<T1, T2, T3, T4, T5, T6, T7, T8, R>(app0: $App$$Type<$RecordCodecBuilder$Mu$$Type<O>, $Function8$$Type<T1, T2, T3, T4, T5, T6, T7, T8, R>>): $Function8<$App<$RecordCodecBuilder$Mu<O>, T1>, $App<$RecordCodecBuilder$Mu<O>, T2>, $App<$RecordCodecBuilder$Mu<O>, T3>, $App<$RecordCodecBuilder$Mu<O>, T4>, $App<$RecordCodecBuilder$Mu<O>, T5>, $App<$RecordCodecBuilder$Mu<O>, T6>, $App<$RecordCodecBuilder$Mu<O>, T7>, $App<$RecordCodecBuilder$Mu<O>, T8>, $App<$RecordCodecBuilder$Mu<O>, R>>
 public "lift9"<T1, T2, T3, T4, T5, T6, T7, T8, T9, R>(app0: $App$$Type<$RecordCodecBuilder$Mu$$Type<O>, $Function9$$Type<T1, T2, T3, T4, T5, T6, T7, T8, T9, R>>): $Function9<$App<$RecordCodecBuilder$Mu<O>, T1>, $App<$RecordCodecBuilder$Mu<O>, T2>, $App<$RecordCodecBuilder$Mu<O>, T3>, $App<$RecordCodecBuilder$Mu<O>, T4>, $App<$RecordCodecBuilder$Mu<O>, T5>, $App<$RecordCodecBuilder$Mu<O>, T6>, $App<$RecordCodecBuilder$Mu<O>, T7>, $App<$RecordCodecBuilder$Mu<O>, T8>, $App<$RecordCodecBuilder$Mu<O>, T9>, $App<$RecordCodecBuilder$Mu<O>, R>>
 public "map"<T, R>(function0: $Function$$Type<T, R>, app1: $App$$Type<$RecordCodecBuilder$Mu$$Type<O>, T>): $App<$RecordCodecBuilder$Mu<O>, R>
-public "point"<A>(a0: A): $App<$RecordCodecBuilder$Mu<O>, A>
 public "point"<A>(a0: A, lifecycle1: $Lifecycle$$Type): $App<$RecordCodecBuilder$Mu<O>, A>
+public "point"<A>(a0: A): $App<$RecordCodecBuilder$Mu<O>, A>
 public "stable"<A>(a0: A): $App<$RecordCodecBuilder$Mu<O>, A>
 public static "unbox"<F extends $K1, Mu extends $Applicative$Mu>(app0: $App$$Type<Mu, F>): $Applicative<F, Mu>
 }
@@ -705,12 +705,11 @@ export interface $PrimitiveCodec<A = any> extends $Codec<A> {
 "deprecated"(int0: integer): $Codec<A>
 "dispatch"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $Codec<E>
 "dispatch"<E>(string0: string, function1: $Function$$Type<E, A>, function2: $Function$$Type<A, $Codec<E>>): $Codec<E>
-"dispatchMap"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $MapCodec<E>
 "dispatchMap"<E>(string0: string, function1: $Function$$Type<E, A>, function2: $Function$$Type<A, $Codec<E>>): $MapCodec<E>
+"dispatchMap"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $MapCodec<E>
 "dispatchStable"<E>(function0: $Function$$Type<E, A>, function1: $Function$$Type<A, $Codec<E>>): $Codec<E>
 "encode"<T>(a0: A, dynamicOps1: $DynamicOps$$Type<T>, t2: T): $DataResult<T>
 "encodeStart"<T>(dynamicOps0: $DynamicOps$$Type<T>, a1: A): $DataResult<T>
-"fieldOf"(string0: string): $MapCodec<A>
 "flatComap"<B>(function0: $Function$$Type<B, $DataResult<A>>): $Encoder<B>
 "flatComapMap"<S>(function0: $Function$$Type<A, S>, function1: $Function$$Type<S, $DataResult<A>>): $Codec<S>
 "flatMap"<B>(function0: $Function$$Type<A, $DataResult<B>>): $Decoder<B>
@@ -718,19 +717,20 @@ export interface $PrimitiveCodec<A = any> extends $Codec<A> {
 "listOf"(): $Codec<$List<A>>
 "map"<B>(function0: $Function$$Type<A, B>): $Decoder<B>
 "mapResult"(resultFunction0: $Codec$ResultFunction$$Type<A>): $Codec<A>
-"optionalFieldOf"(string0: string): $MapCodec<$Optional<A>>
+"optionalFieldOf"(string0: string, a1: A): $MapCodec<A>
 "optionalFieldOf"(string0: string, a1: A, lifecycle2: $Lifecycle$$Type): $MapCodec<A>
 "optionalFieldOf"(string0: string, lifecycle1: $Lifecycle$$Type, a2: A, lifecycle3: $Lifecycle$$Type): $MapCodec<A>
-"optionalFieldOf"(string0: string, a1: A): $MapCodec<A>
-"orElse"(unaryOperator0: $UnaryOperator$$Type<string>, a1: A): $Codec<A>
-"orElse"(consumer0: $Consumer$$Type<string>, a1: A): $Codec<A>
+"optionalFieldOf"(string0: string): $MapCodec<$Optional<A>>
 "orElse"(a0: A): $Codec<A>
-"orElseGet"(supplier0: $Supplier$$Type<A>): $Codec<A>
+"orElse"(consumer0: $Consumer$$Type<string>, a1: A): $Codec<A>
+"orElse"(unaryOperator0: $UnaryOperator$$Type<string>, a1: A): $Codec<A>
 "orElseGet"(unaryOperator0: $UnaryOperator$$Type<string>, supplier1: $Supplier$$Type<A>): $Codec<A>
+"orElseGet"(supplier0: $Supplier$$Type<A>): $Codec<A>
 "orElseGet"(consumer0: $Consumer$$Type<string>, supplier1: $Supplier$$Type<A>): $Codec<A>
-"parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<A>
 "parse"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<A>
+"parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<A>
 "partialDispatch"<E>(string0: string, function1: $Function$$Type<E, $DataResult<A>>, function2: $Function$$Type<A, $DataResult<$Codec<E>>>): $Codec<E>
+"promotePartial"(consumer0: $Consumer$$Type<string>): $Codec<A>
 "read"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<A>
 "simple"(): $Decoder$Simple<A>
 "stable"(): $Codec<A>
@@ -801,12 +801,12 @@ import { $DataResult, $DataResult$$Type } from "com.mojang.serialization.DataRes
 import { $Iterable$$Type } from "java.lang.Iterable"
 
 export interface $ListBuilder<T = any> {
+"add"(dataResult0: $DataResult$$Type<T>): $ListBuilder<T>
 "add"(t0: T): $ListBuilder<T>
 "add"<E>(e0: E, encoder1: $Encoder$$Type<E>): $ListBuilder<T>
-"add"(dataResult0: $DataResult$$Type<T>): $ListBuilder<T>
 "addAll"<E>(iterable0: $Iterable$$Type<E>, encoder1: $Encoder$$Type<E>): $ListBuilder<T>
-"build"(dataResult0: $DataResult$$Type<T>): $DataResult<T>
 "build"(t0: T): $DataResult<T>
+"build"(dataResult0: $DataResult$$Type<T>): $DataResult<T>
 "mapError"(unaryOperator0: $UnaryOperator$$Type<string>): $ListBuilder<T>
 "ops"(): $DynamicOps<T>
 "withErrorsFrom"(dataResult0: $DataResult$$Type<any>): $ListBuilder<T>
@@ -870,17 +870,17 @@ export interface $DynamicOps<T = any> {
 "getMap"(t0: T): $DataResult<$MapLike<T>>
 "getMapEntries"(t0: T): $DataResult<$Consumer<$BiConsumer<T, T>>>
 "getMapValues"(t0: T): $DataResult<$Stream<$Pair<T, T>>>
-"getNumberValue"(t0: T): $DataResult<number>
 "getNumberValue"(t0: T, number1: number): number
+"getNumberValue"(t0: T): $DataResult<number>
 "getStream"(t0: T): $DataResult<$Stream<T>>
 "getStringValue"(t0: T): $DataResult<string>
 "listBuilder"(): $ListBuilder<T>
 "mapBuilder"(): $RecordBuilder<T>
 "mergeToList"(t0: T, t1: T): $DataResult<T>
 "mergeToList"(t0: T, list1: $List$$Type<T>): $DataResult<T>
-"mergeToMap"(t0: T, map1: $Map$$Type<T, T>): $DataResult<T>
-"mergeToMap"(t0: T, t1: T, t2: T): $DataResult<T>
 "mergeToMap"(t0: T, mapLike1: $MapLike$$Type<T>): $DataResult<T>
+"mergeToMap"(t0: T, t1: T, t2: T): $DataResult<T>
+"mergeToMap"(t0: T, map1: $Map$$Type<T, T>): $DataResult<T>
 "mergeToPrimitive"(t0: T, t1: T): $DataResult<T>
 "remove"(t0: T, string1: string): T
 "set"(t0: T, string1: string, t2: T): T
@@ -1000,8 +1000,8 @@ public "decode"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Pair<$Map<K, V>, T
 public "deprecated"(int0: integer): $Codec<$Map<K, V>>
 public "dispatch"<E>(function0: $Function$$Type<E, $Map<K, V>>, function1: $Function$$Type<$Map$$Type<K, V>, $Codec<E>>): $Codec<E>
 public "dispatch"<E>(string0: string, function1: $Function$$Type<E, $Map<K, V>>, function2: $Function$$Type<$Map$$Type<K, V>, $Codec<E>>): $Codec<E>
-public "dispatchMap"<E>(function0: $Function$$Type<E, $Map<K, V>>, function1: $Function$$Type<$Map$$Type<K, V>, $Codec<E>>): $MapCodec<E>
 public "dispatchMap"<E>(string0: string, function1: $Function$$Type<E, $Map<K, V>>, function2: $Function$$Type<$Map$$Type<K, V>, $Codec<E>>): $MapCodec<E>
+public "dispatchMap"<E>(function0: $Function$$Type<E, $Map<K, V>>, function1: $Function$$Type<$Map$$Type<K, V>, $Codec<E>>): $MapCodec<E>
 public "dispatchStable"<E>(function0: $Function$$Type<E, $Map<K, V>>, function1: $Function$$Type<$Map$$Type<K, V>, $Codec<E>>): $Codec<E>
 public static "doubleRange"(double0: double, double1: double): $Codec<double>
 public static "either"<F, S>(codec0: $Codec$$Type<F>, codec1: $Codec$$Type<S>): $Codec<$Either<F, S>>
@@ -1011,7 +1011,6 @@ public "encode"<T>(map0: $Map$$Type<K, V>, dynamicOps1: $DynamicOps$$Type<T>, t2
 public "encode"<T>(map0: $Map$$Type<K, V>, dynamicOps1: $DynamicOps$$Type<T>, recordBuilder2: $RecordBuilder$$Type<T>): $RecordBuilder<T>
 public "encodeStart"<T>(dynamicOps0: $DynamicOps$$Type<T>, map1: $Map$$Type<K, V>): $DataResult<T>
 public static "error"<A>(string0: string): $Encoder<A>
-public "fieldOf"(string0: string): $MapCodec<$Map<K, V>>
 public "flatComap"<B>(function0: $Function$$Type<B, $DataResult<$Map<K, V>>>): $Encoder<B>
 public "flatComapMap"<S>(function0: $Function$$Type<$Map$$Type<K, V>, S>, function1: $Function$$Type<S, $DataResult<$Map<K, V>>>): $Codec<S>
 public "flatMap"<B>(function0: $Function$$Type<$Map$$Type<K, V>, $DataResult<B>>): $Decoder<B>
@@ -1033,20 +1032,21 @@ public static "ofBoxed"<A>(boxed0: $Decoder$Boxed$$Type<A>): $Decoder<A>
 public static "ofSimple"<A>(simple0: $Decoder$Simple$$Type<A>): $Decoder<A>
 public static "ofTerminal"<A>(terminal0: $Decoder$Terminal$$Type<A>): $Decoder<A>
 public static "optionalField"<F>(string0: string, codec1: $Codec$$Type<F>): $MapCodec<$Optional<F>>
-public "optionalFieldOf"(string0: string): $MapCodec<$Optional<$Map<K, V>>>
+public "optionalFieldOf"(string0: string, map1: $Map$$Type<K, V>): $MapCodec<$Map<K, V>>
 public "optionalFieldOf"(string0: string, map1: $Map$$Type<K, V>, lifecycle2: $Lifecycle$$Type): $MapCodec<$Map<K, V>>
 public "optionalFieldOf"(string0: string, lifecycle1: $Lifecycle$$Type, map2: $Map$$Type<K, V>, lifecycle3: $Lifecycle$$Type): $MapCodec<$Map<K, V>>
-public "optionalFieldOf"(string0: string, map1: $Map$$Type<K, V>): $MapCodec<$Map<K, V>>
-public "orElse"(unaryOperator0: $UnaryOperator$$Type<string>, map1: $Map$$Type<K, V>): $Codec<$Map<K, V>>
-public "orElse"(consumer0: $Consumer$$Type<string>, map1: $Map$$Type<K, V>): $Codec<$Map<K, V>>
+public "optionalFieldOf"(string0: string): $MapCodec<$Optional<$Map<K, V>>>
 public "orElse"(map0: $Map$$Type<K, V>): $Codec<$Map<K, V>>
-public "orElseGet"(supplier0: $Supplier$$Type<$Map<K, V>>): $Codec<$Map<K, V>>
+public "orElse"(consumer0: $Consumer$$Type<string>, map1: $Map$$Type<K, V>): $Codec<$Map<K, V>>
+public "orElse"(unaryOperator0: $UnaryOperator$$Type<string>, map1: $Map$$Type<K, V>): $Codec<$Map<K, V>>
 public "orElseGet"(unaryOperator0: $UnaryOperator$$Type<string>, supplier1: $Supplier$$Type<$Map<K, V>>): $Codec<$Map<K, V>>
+public "orElseGet"(supplier0: $Supplier$$Type<$Map<K, V>>): $Codec<$Map<K, V>>
 public "orElseGet"(consumer0: $Consumer$$Type<string>, supplier1: $Supplier$$Type<$Map<K, V>>): $Codec<$Map<K, V>>
 public static "pair"<F, S>(codec0: $Codec$$Type<F>, codec1: $Codec$$Type<S>): $Codec<$Pair<F, S>>
-public "parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Map<K, V>>
 public "parse"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<$Map<K, V>>
+public "parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Map<K, V>>
 public "partialDispatch"<E>(string0: string, function1: $Function$$Type<E, $DataResult<$Map<K, V>>>, function2: $Function$$Type<$Map$$Type<K, V>, $DataResult<$Codec<E>>>): $Codec<E>
+public "promotePartial"(consumer0: $Consumer$$Type<string>): $Codec<$Map<K, V>>
 public "simple"(): $Decoder$Simple<$Map<K, V>>
 public static "simpleMap"<K, V>(codec0: $Codec$$Type<K>, codec1: $Codec$$Type<V>, keyable2: $Keyable$$Type): $SimpleMapCodec<K, V>
 public "stable"(): $Codec<$Map<K, V>>
@@ -1111,13 +1111,13 @@ public static "of"<A>(mapEncoder0: $MapEncoder$$Type<A>, mapDecoder1: $MapDecode
 public "orElse"(a0: A): $MapCodec<A>
 public "orElse"(consumer0: $Consumer$$Type<string>, a1: A): $MapCodec<A>
 public "orElse"(unaryOperator0: $UnaryOperator$$Type<string>, a1: A): $MapCodec<A>
-public "orElseGet"(supplier0: $Supplier$$Type<A>): $MapCodec<A>
-public "orElseGet"(consumer0: $Consumer$$Type<string>, supplier1: $Supplier$$Type<A>): $MapCodec<A>
 public "orElseGet"(unaryOperator0: $UnaryOperator$$Type<string>, supplier1: $Supplier$$Type<A>): $MapCodec<A>
+public "orElseGet"(consumer0: $Consumer$$Type<string>, supplier1: $Supplier$$Type<A>): $MapCodec<A>
+public "orElseGet"(supplier0: $Supplier$$Type<A>): $MapCodec<A>
 public "setPartial"(supplier0: $Supplier$$Type<A>): $MapCodec<A>
 public "stable"(): $MapCodec<A>
-public static "unit"<A>(supplier0: $Supplier$$Type<A>): $MapCodec<A>
 public static "unit"<A>(a0: A): $MapCodec<A>
+public static "unit"<A>(supplier0: $Supplier$$Type<A>): $MapCodec<A>
 public "xmap"<S>(function0: $Function$$Type<A, S>, function1: $Function$$Type<S, A>): $MapCodec<S>
 set "partial"(value: $Supplier$$Type<A>)
 }
@@ -1239,8 +1239,8 @@ public static "instance"<O>(): $RecordCodecBuilder$Instance<O>
 public static "mapCodec"<O>(function0: $Function$$Type<$RecordCodecBuilder$Instance$$Type<O>, $App<$RecordCodecBuilder$Mu<O>, O>>): $MapCodec<O>
 public static "of"<O, F>(function0: $Function$$Type<O, F>, mapCodec1: $MapCodec$$Type<F>): $RecordCodecBuilder<O, F>
 public static "of"<O, F>(function0: $Function$$Type<O, F>, string1: string, codec2: $Codec$$Type<F>): $RecordCodecBuilder<O, F>
-public static "point"<O, F>(f0: F, lifecycle1: $Lifecycle$$Type): $RecordCodecBuilder<O, F>
 public static "point"<O, F>(f0: F): $RecordCodecBuilder<O, F>
+public static "point"<O, F>(f0: F, lifecycle1: $Lifecycle$$Type): $RecordCodecBuilder<O, F>
 public static "stable"<O, F>(f0: F): $RecordCodecBuilder<O, F>
 public static "unbox"<O, F>(app0: $App$$Type<$RecordCodecBuilder$Mu$$Type<O>, F>): $RecordCodecBuilder<O, F>
 }
@@ -1280,8 +1280,8 @@ public "asLong"(long0: long): long
 public "asLongStream"(): $LongStream
 public "asLongStreamOpt"(): $DataResult<$LongStream>
 public "asMap"<K, V>(function0: $Function$$Type<$Dynamic$$Type<T>, K>, function1: $Function$$Type<$Dynamic$$Type<T>, V>): $Map<K, V>
-public "asMapOpt"(): $DataResult<$Stream<$Pair<$Dynamic<T>, $Dynamic<T>>>>
 public "asMapOpt"<K, V>(function0: $Function$$Type<$Dynamic$$Type<T>, K>, function1: $Function$$Type<$Dynamic$$Type<T>, V>): $DataResult<$Map<K, V>>
+public "asMapOpt"(): $DataResult<$Stream<$Pair<$Dynamic<T>, $Dynamic<T>>>>
 public "asNumber"(number0: number): number
 public "asNumber"(): $DataResult<number>
 public "asShort"(short0: short): short
@@ -1314,11 +1314,11 @@ public "getElementGeneric"(t0: T, t1: T): T
 public "getGeneric"(t0: T): $DataResult<T>
 public "getOps"(): $DynamicOps<T>
 public "read"<A>(decoder0: $Decoder$$Type<A>): $DataResult<A>
-public "readList"<E>(function0: $Function$$Type<$Dynamic$$Type<any>, $DataResult<E>>): $DataResult<$List<E>>
 public "readList"<E>(decoder0: $Decoder$$Type<E>): $DataResult<$List<E>>
-public "readMap"<R>(dataResult0: $DataResult$$Type<R>, function31: $Function3$$Type<R, $Dynamic$$Type<T>, $Dynamic$$Type<T>, $DataResult$$Type<R>>): $DataResult<R>
+public "readList"<E>(function0: $Function$$Type<$Dynamic$$Type<any>, $DataResult<E>>): $DataResult<$List<E>>
 public "readMap"<K, V>(decoder0: $Decoder$$Type<K>, function1: $Function$$Type<K, $Decoder<V>>): $DataResult<$List<$Pair<K, V>>>
 public "readMap"<K, V>(decoder0: $Decoder$$Type<K>, decoder1: $Decoder$$Type<V>): $DataResult<$List<$Pair<K, V>>>
+public "readMap"<R>(dataResult0: $DataResult$$Type<R>, function31: $Function3$$Type<R, $Dynamic$$Type<T>, $Dynamic$$Type<T>, $DataResult$$Type<R>>): $DataResult<R>
 get "ops"(): $DynamicOps<T>
 }
 }
@@ -1502,8 +1502,8 @@ export interface $Decoder<A = any> {
 "fieldOf"(string0: string): $MapDecoder<A>
 "flatMap"<B>(function0: $Function$$Type<A, $DataResult<B>>): $Decoder<B>
 "map"<B>(function0: $Function$$Type<A, B>): $Decoder<B>
-"parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<A>
 "parse"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<A>
+"parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<A>
 "promotePartial"(consumer0: $Consumer$$Type<string>): $Decoder<A>
 "simple"(): $Decoder$Simple<A>
 "terminal"(): $Decoder$Terminal<A>
@@ -1515,16 +1515,16 @@ function error<A>(string0: string): $Decoder<A>
 function ofBoxed<A>(boxed0: $Decoder$Boxed$$Type<A>): $Decoder<A>
 function ofSimple<A>(simple0: $Decoder$Simple$$Type<A>): $Decoder<A>
 function ofTerminal<A>(terminal0: $Decoder$Terminal$$Type<A>): $Decoder<A>
-function unit<A>(a0: A): $MapDecoder<A>
 function unit<A>(supplier0: $Supplier$$Type<A>): $MapDecoder<A>
+function unit<A>(a0: A): $MapDecoder<A>
 }
 export abstract class $Decoder$$Static<A = any> implements $Decoder<A> {
 static "error"<A>(string0: string): $Decoder<A>
 static "ofBoxed"<A>(boxed0: $Decoder$Boxed$$Type<A>): $Decoder<A>
 static "ofSimple"<A>(simple0: $Decoder$Simple$$Type<A>): $Decoder<A>
 static "ofTerminal"<A>(terminal0: $Decoder$Terminal$$Type<A>): $Decoder<A>
-static "unit"<A>(a0: A): $MapDecoder<A>
 static "unit"<A>(supplier0: $Supplier$$Type<A>): $MapDecoder<A>
+static "unit"<A>(a0: A): $MapDecoder<A>
 }
 }
 

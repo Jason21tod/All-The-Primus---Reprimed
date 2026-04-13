@@ -103,6 +103,7 @@ public "getInfinity"(): string
 public static "getInstance"(locale0: $Locale$$Type): $DecimalFormatSymbols
 public static "getInstance"(): $DecimalFormatSymbols
 public "getInternationalCurrencySymbol"(): string
+public "getLocale"(): $Locale
 public "getMinusSign"(): character
 public "getMonetaryDecimalSeparator"(): character
 public "getMonetaryGroupingSeparator"(): character
@@ -135,6 +136,7 @@ get "exponentSeparator"(): string
 get "groupingSeparator"(): character
 get "infinity"(): string
 get "internationalCurrencySymbol"(): string
+get "locale"(): $Locale
 get "minusSign"(): character
 get "monetaryDecimalSeparator"(): character
 get "monetaryGroupingSeparator"(): character
@@ -364,21 +366,21 @@ public "format"(date0: $Date$$Type): string
 public "format"(date0: $Date$$Type, stringBuffer1: $StringBuffer$$Type, fieldPosition2: $FieldPosition$$Type): $StringBuffer
 public static "getAvailableLocales"(): $Locale[]
 public "getCalendar"(): $Calendar
-public static "getDateInstance"(): $DateFormat
 public static "getDateInstance"(int0: integer): $DateFormat
 public static "getDateInstance"(int0: integer, locale1: $Locale$$Type): $DateFormat
-public static "getDateTimeInstance"(): $DateFormat
+public static "getDateInstance"(): $DateFormat
 public static "getDateTimeInstance"(int0: integer, int1: integer, locale2: $Locale$$Type): $DateFormat
 public static "getDateTimeInstance"(int0: integer, int1: integer): $DateFormat
+public static "getDateTimeInstance"(): $DateFormat
 public static "getInstance"(): $DateFormat
 public "getNumberFormat"(): $NumberFormat
-public static "getTimeInstance"(): $DateFormat
 public static "getTimeInstance"(int0: integer): $DateFormat
+public static "getTimeInstance"(): $DateFormat
 public static "getTimeInstance"(int0: integer, locale1: $Locale$$Type): $DateFormat
 public "getTimeZone"(): $TimeZone
 public "isLenient"(): boolean
-public "parse"(string0: string, parsePosition1: $ParsePosition$$Type): $Date
 public "parse"(string0: string): $Date
+public "parse"(string0: string, parsePosition1: $ParsePosition$$Type): $Date
 public "setCalendar"(calendar0: $Calendar$$Type): void
 public "setLenient"(boolean0: boolean): void
 public "setNumberFormat"(numberFormat0: $NumberFormat$$Type): void
@@ -431,31 +433,32 @@ export class $NumberFormat extends $Format {
 static readonly "FRACTION_FIELD": integer
 static readonly "INTEGER_FIELD": integer
 
-public "format"(long0: long, stringBuffer1: $StringBuffer$$Type, fieldPosition2: $FieldPosition$$Type): $StringBuffer
 public "format"(double0: double, stringBuffer1: $StringBuffer$$Type, fieldPosition2: $FieldPosition$$Type): $StringBuffer
+public "format"(long0: long, stringBuffer1: $StringBuffer$$Type, fieldPosition2: $FieldPosition$$Type): $StringBuffer
 public "format"(double0: double): string
 public "format"(long0: long): string
 public static "getAvailableLocales"(): $Locale[]
-public static "getCompactNumberInstance"(): $NumberFormat
 public static "getCompactNumberInstance"(locale0: $Locale$$Type, style1: $NumberFormat$Style$$Type): $NumberFormat
+public static "getCompactNumberInstance"(): $NumberFormat
 public "getCurrency"(): $Currency
 public static "getCurrencyInstance"(locale0: $Locale$$Type): $NumberFormat
 public static "getCurrencyInstance"(): $NumberFormat
-public static "getInstance"(): $NumberFormat
 public static "getInstance"(locale0: $Locale$$Type): $NumberFormat
-public static "getIntegerInstance"(): $NumberFormat
+public static "getInstance"(): $NumberFormat
 public static "getIntegerInstance"(locale0: $Locale$$Type): $NumberFormat
+public static "getIntegerInstance"(): $NumberFormat
 public "getMaximumFractionDigits"(): integer
 public "getMaximumIntegerDigits"(): integer
 public "getMinimumFractionDigits"(): integer
 public "getMinimumIntegerDigits"(): integer
-public static "getNumberInstance"(locale0: $Locale$$Type): $NumberFormat
 public static "getNumberInstance"(): $NumberFormat
+public static "getNumberInstance"(locale0: $Locale$$Type): $NumberFormat
 public static "getPercentInstance"(): $NumberFormat
 public static "getPercentInstance"(locale0: $Locale$$Type): $NumberFormat
 public "getRoundingMode"(): $RoundingMode
 public "isGroupingUsed"(): boolean
 public "isParseIntegerOnly"(): boolean
+public "isStrict"(): boolean
 public "parse"(string0: string): number
 public "parse"(string0: string, parsePosition1: $ParsePosition$$Type): number
 public "setCurrency"(currency0: $Currency$$Type): void
@@ -466,6 +469,7 @@ public "setMinimumFractionDigits"(int0: integer): void
 public "setMinimumIntegerDigits"(int0: integer): void
 public "setParseIntegerOnly"(boolean0: boolean): void
 public "setRoundingMode"(roundingMode0: $RoundingMode$$Type): void
+public "setStrict"(boolean0: boolean): void
 get "currency"(): $Currency
 get "maximumFractionDigits"(): integer
 get "maximumIntegerDigits"(): integer
@@ -474,6 +478,7 @@ get "minimumIntegerDigits"(): integer
 get "roundingMode"(): $RoundingMode
 get "groupingUsed"(): boolean
 get "parseIntegerOnly"(): boolean
+get "strict"(): boolean
 set "currency"(value: $Currency$$Type)
 set "groupingUsed"(value: boolean)
 set "maximumFractionDigits"(value: integer)
@@ -482,6 +487,7 @@ set "minimumFractionDigits"(value: integer)
 set "minimumIntegerDigits"(value: integer)
 set "parseIntegerOnly"(value: boolean)
 set "roundingMode"(value: $RoundingMode$$Type)
+set "strict"(value: boolean)
 }
 }
 
@@ -498,8 +504,8 @@ public "clone"(): any
 public "format"(object0: any, stringBuffer1: $StringBuffer$$Type, fieldPosition2: $FieldPosition$$Type): $StringBuffer
 public "format"(object0: any): string
 public "formatToCharacterIterator"(object0: any): $AttributedCharacterIterator
-public "parseObject"(string0: string, parsePosition1: $ParsePosition$$Type): any
 public "parseObject"(string0: string): any
+public "parseObject"(string0: string, parsePosition1: $ParsePosition$$Type): any
 }
 }
 

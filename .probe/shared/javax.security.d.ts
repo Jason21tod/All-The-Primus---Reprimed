@@ -2,6 +2,7 @@ declare module "javax.security.auth.Subject" {
 import { $AccessControlContext$$Type } from "java.security.AccessControlContext"
 import { $Principal, $Principal$$Type } from "java.security.Principal"
 import { $Set, $Set$$Type } from "java.util.Set"
+import { $Callable$$Type } from "java.util.concurrent.Callable"
 import { $Class$$Type } from "java.lang.Class"
 import { $PrivilegedAction$$Type } from "java.security.PrivilegedAction"
 import { $PrivilegedExceptionAction$$Type } from "java.security.PrivilegedExceptionAction"
@@ -11,14 +12,18 @@ export class $Subject implements $Serializable {
 constructor()
 constructor(boolean0: boolean, set1: $Set$$Type<$Principal$$Type>, set2: $Set$$Type<any>, set3: $Set$$Type<any>)
 
+public static "callAs"<T>(subject0: $Subject$$Type, callable1: $Callable$$Type<T>): T
+public static "current"(): $Subject
+/** @deprecated */
 public static "doAs"<T>(subject0: $Subject$$Type, privilegedAction1: $PrivilegedAction$$Type<T>): T
+/** @deprecated */
 public static "doAs"<T>(subject0: $Subject$$Type, privilegedExceptionAction1: $PrivilegedExceptionAction$$Type<T>): T
 /** @deprecated */
-public static "doAsPrivileged"<T>(subject0: $Subject$$Type, privilegedExceptionAction1: $PrivilegedExceptionAction$$Type<T>, accessControlContext2: $AccessControlContext$$Type): T
-/** @deprecated */
 public static "doAsPrivileged"<T>(subject0: $Subject$$Type, privilegedAction1: $PrivilegedAction$$Type<T>, accessControlContext2: $AccessControlContext$$Type): T
-public "getPrincipals"(): $Set<$Principal>
+/** @deprecated */
+public static "doAsPrivileged"<T>(subject0: $Subject$$Type, privilegedExceptionAction1: $PrivilegedExceptionAction$$Type<T>, accessControlContext2: $AccessControlContext$$Type): T
 public "getPrincipals"<T extends $Principal>(class0: $Class$$Type<T>): $Set<T>
+public "getPrincipals"(): $Set<$Principal>
 public "getPrivateCredentials"(): $Set<any>
 public "getPrivateCredentials"<T>(class0: $Class$$Type<T>): $Set<T>
 public "getPublicCredentials"(): $Set<any>

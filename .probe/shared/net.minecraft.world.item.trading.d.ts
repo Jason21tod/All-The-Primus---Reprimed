@@ -19,19 +19,19 @@ public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public static "createFromStream"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $MerchantOffers
 public "createTag"(): $CompoundTag
 public "getRecipeFor"(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type, int2: integer): $MerchantOffer
-public "handler$hoo000$setUpTiers"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
+public "handler$ibk000$setUpTiers"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$MerchantOffer>
 public "stream"(): $Stream<$MerchantOffer>
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]

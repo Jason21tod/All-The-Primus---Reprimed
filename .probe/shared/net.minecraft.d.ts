@@ -8,8 +8,8 @@ static readonly "BYTES_PER_MEBIBYTE": long
 constructor()
 
 public "appendToCrashReportString"(stringBuilder0: $StringBuilder$$Type): void
-public "setDetail"(string0: string, supplier1: $Supplier$$Type<string>): void
 public "setDetail"(string0: string, string1: string): void
+public "setDetail"(string0: string, supplier1: $Supplier$$Type<string>): void
 public "toLineSeparatedString"(): string
 }
 }
@@ -134,14 +134,14 @@ constructor(string0: string)
 
 public "applyStackTrace"(throwable0: $Throwable$$Type): void
 public "fillInStackTrace"(int0: integer): integer
+public static "formatLocation"(levelHeightAccessor0: $LevelHeightAccessor$$Type, double1: double, double2: double, double3: double): string
 public static "formatLocation"(levelHeightAccessor0: $LevelHeightAccessor$$Type, int1: integer, int2: integer, int3: integer): string
 public static "formatLocation"(levelHeightAccessor0: $LevelHeightAccessor$$Type, blockPos1: $BlockPos$$Type): string
-public static "formatLocation"(levelHeightAccessor0: $LevelHeightAccessor$$Type, double1: double, double2: double, double3: double): string
 public "getDetails"(stringBuilder0: $StringBuilder$$Type): void
 public "getStacktrace"(): $StackTraceElement[]
 public static "populateBlockDetails"(crashReportCategory0: $CrashReportCategory$$Type, levelHeightAccessor1: $LevelHeightAccessor$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): void
-public "setDetail"(string0: string, crashReportDetail1: $CrashReportDetail$$Type<string>): $CrashReportCategory
 public "setDetail"(string0: string, object1: any): $CrashReportCategory
+public "setDetail"(string0: string, crashReportDetail1: $CrashReportDetail$$Type<string>): $CrashReportCategory
 public "setDetailError"(string0: string, throwable1: $Throwable$$Type): void
 public "trimStacktrace"(int0: integer): void
 public "validateStackTrace"(stackTraceElement0: $StackTraceElement$$Type, stackTraceElement1: $StackTraceElement$$Type): boolean
@@ -184,11 +184,11 @@ import { $File, $File$$Type } from "java.io.File"
 export class $CrashReport {
 constructor(string0: string, throwable1: $Throwable$$Type)
 
-public "addCategory"(string0: string): $CrashReportCategory
 public "addCategory"(string0: string, int1: integer): $CrashReportCategory
+public "addCategory"(string0: string): $CrashReportCategory
 public static "forThrowable"(throwable0: $Throwable$$Type, string1: string): $CrashReport
-public "getDetails"(): string
 public "getDetails"(stringBuilder0: $StringBuilder$$Type): void
+public "getDetails"(): string
 public "getException"(): $Throwable
 public "getExceptionMessage"(): string
 public "getFriendlyReport"(): string

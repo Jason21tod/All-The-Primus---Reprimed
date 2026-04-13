@@ -83,6 +83,12 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $Signature$$Type = ($Signature);
 }
 
+declare module "java.security.AsymmetricKey" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $AsymmetricKey$$Type = ($AsymmetricKey);
+}
+
 declare module "java.security.CodeSource" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -93,6 +99,12 @@ declare module "java.security.spec.AlgorithmParameterSpec" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $AlgorithmParameterSpec$$Type = ($AlgorithmParameterSpec);
+}
+
+declare module "java.security.DEREncodable" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $DEREncodable$$Type = ($DEREncodable);
 }
 
 declare module "java.security.CodeSigner" {

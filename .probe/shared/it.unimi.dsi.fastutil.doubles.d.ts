@@ -62,14 +62,14 @@ export interface $Double2ReferenceFunction<V = any> extends $Function$0<double, 
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(double0: double): V
+"getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
 "put"(double0: double, v1: V): V
 "put"(double0: double, v1: V): V
@@ -84,6 +84,36 @@ function identity<T>(): $Function<T, T>
 }
 export abstract class $Double2ReferenceFunction$$Static<V = any> implements $Double2ReferenceFunction<V> {
 static "identity"<T>(): $Function<T, T>
+}
+}
+
+declare module "it.unimi.dsi.fastutil.doubles.DoubleBidirectionalIterator" {
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $DoubleIterator } from "it.unimi.dsi.fastutil.doubles.DoubleIterator"
+import { $DoubleConsumer$$Type } from "it.unimi.dsi.fastutil.doubles.DoubleConsumer"
+import { $DoubleConsumer$$Type as $DoubleConsumer$0$$Type } from "java.util.function.DoubleConsumer"
+import { $ObjectBidirectionalIterator } from "it.unimi.dsi.fastutil.objects.ObjectBidirectionalIterator"
+
+export interface $DoubleBidirectionalIterator extends $DoubleIterator, $ObjectBidirectionalIterator<double> {
+"back"(int0: integer): integer
+/** @deprecated */
+"forEachRemaining"(consumer0: $Consumer$$Type<double>): void
+"forEachRemaining"(doubleConsumer0: $DoubleConsumer$$Type): void
+"forEachRemaining"(doubleConsumer0: $DoubleConsumer$0$$Type): void
+"hasNext"(): boolean
+"hasPrevious"(): boolean
+"nextDouble"(): double
+/** @deprecated */
+"previous"(): double
+"previousDouble"(): double
+"remove"(): void
+"skip"(int0: integer): integer
+}
+
+export namespace $DoubleBidirectionalIterator {
+const probejs$$marker: never
+}
+export abstract class $DoubleBidirectionalIterator$$Static implements $DoubleBidirectionalIterator {
 }
 }
 
@@ -232,8 +262,8 @@ export interface $Double2ShortFunction extends $Function$0<double, short>, $Doub
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(short0: short): void
 "defaultReturnValue"(): short
+"defaultReturnValue"(short0: short): void
 /** @deprecated */
 "get"(object0: any): short
 "get"(double0: double): short
@@ -244,8 +274,6 @@ export interface $Double2ShortFunction extends $Function$0<double, short>, $Doub
 /** @deprecated */
 "put"(double0: double, short1: short): short
 "remove"(double0: double): short
-/** @deprecated */
-"remove"(object0: any): short
 "size"(): integer
 }
 
@@ -262,14 +290,13 @@ import { $Predicate, $Predicate$$Type } from "java.util.function.Predicate"
 import { $DoublePredicate as $DoublePredicate$0, $DoublePredicate$$Type as $DoublePredicate$0$$Type } from "java.util.function.DoublePredicate"
 
 export interface $DoublePredicate extends $Predicate<double>, $DoublePredicate$0 {
-"and"(doublePredicate0: $DoublePredicate$0$$Type): $DoublePredicate
 "and"(doublePredicate0: $DoublePredicate$$Type): $DoublePredicate
 /** @deprecated */
 "and"(predicate0: $Predicate$$Type<double>): $Predicate<double>
-"or"(doublePredicate0: $DoublePredicate$0$$Type): $DoublePredicate
-"or"(doublePredicate0: $DoublePredicate$$Type): $DoublePredicate
 /** @deprecated */
 "or"(predicate0: $Predicate$$Type<double>): $Predicate<double>
+"or"(doublePredicate0: $DoublePredicate$0$$Type): $DoublePredicate
+"or"(doublePredicate0: $DoublePredicate$$Type): $DoublePredicate
 /** @deprecated */
 "test"(double0: double): boolean
 "test"(double0: double): boolean
@@ -349,14 +376,14 @@ export interface $Double2ObjectFunction<V = any> extends $Function$0<double, V>,
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(double0: double): V
+"getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
 "put"(double0: double, v1: V): V
 "put"(double0: double, v1: V): V
@@ -389,6 +416,7 @@ import { $DoubleStream } from "java.util.stream.DoubleStream"
 import { $DoublePredicate$$Type } from "it.unimi.dsi.fastutil.doubles.DoublePredicate"
 import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $List, $List$$Type } from "java.util.List"
+import { $DoubleListIterator } from "it.unimi.dsi.fastutil.doubles.DoubleListIterator"
 import { $Stream } from "java.util.stream.Stream"
 import { $DoubleIterator } from "it.unimi.dsi.fastutil.doubles.DoubleIterator"
 import { $Comparable } from "java.lang.Comparable"
@@ -404,13 +432,15 @@ export interface $DoubleList extends $List<double>, $Comparable<$List<double>>, 
 "add"(int0: integer, double1: double): void
 "add"(double0: double): boolean
 "addAll"(int0: integer, doubleCollection1: $DoubleCollection$$Type): boolean
-"addAll"(int0: integer, doubleList1: $DoubleList$$Type): boolean
 "addAll"(doubleList0: $DoubleList$$Type): boolean
-"addAll"(int0: integer, collection1: $Collection$$Type<double>): boolean
+"addAll"(int0: integer, doubleList1: $DoubleList$$Type): boolean
 "addAll"(collection0: $Collection$$Type<double>): boolean
+"addAll"(int0: integer, collection1: $Collection$$Type<double>): boolean
 "addAll"(doubleCollection0: $DoubleCollection$$Type): boolean
-"addElements"(int0: integer, double1s: double[]): void
 "addElements"(int0: integer, double1s: double[], int2: integer, int3: integer): void
+"addElements"(int0: integer, double1s: double[]): void
+"addFirst"(double0: double): void
+"addLast"(double0: double): void
 "clear"(): void
 "compareTo"(list0: $List$$Type<double>): integer
 /** @deprecated */
@@ -431,14 +461,17 @@ export interface $DoubleList extends $List<double>, $Comparable<$List<double>>, 
 "get"(int0: integer): double
 "getDouble"(int0: integer): double
 "getElements"(int0: integer, double1s: double[], int2: integer, int3: integer): void
+"getFirst"(): double
+"getLast"(): double
 "hashCode"(): integer
-"indexOf"(double0: double): integer
 /** @deprecated */
 "indexOf"(object0: any): integer
+"indexOf"(double0: double): integer
 "isEmpty"(): boolean
+"lastIndexOf"(double0: double): integer
 /** @deprecated */
 "lastIndexOf"(object0: any): integer
-"lastIndexOf"(double0: double): integer
+"listIterator"(int0: integer): $DoubleListIterator
 /** @deprecated */
 "parallelStream"(): $Stream<double>
 "rem"(double0: double): boolean
@@ -448,18 +481,20 @@ export interface $DoubleList extends $List<double>, $Comparable<$List<double>>, 
 "removeAll"(doubleCollection0: $DoubleCollection$$Type): boolean
 "removeDouble"(int0: integer): double
 "removeElements"(int0: integer, int1: integer): void
-"removeIf"(doublePredicate0: $DoublePredicate$$Type): boolean
+"removeFirst"(): double
+"removeIf"(doublePredicate0: $DoublePredicate$0$$Type): boolean
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<double>): boolean
-"removeIf"(doublePredicate0: $DoublePredicate$0$$Type): boolean
+"removeIf"(doublePredicate0: $DoublePredicate$$Type): boolean
+"removeLast"(): double
 /** @deprecated */
 "replaceAll"(unaryOperator0: $UnaryOperator$$Type<double>): void
 "replaceAll"(doubleUnaryOperator0: $DoubleUnaryOperator$$Type): void
 "replaceAll"(doubleUnaryOperator0: $DoubleUnaryOperator$0$$Type): void
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "retainAll"(doubleCollection0: $DoubleCollection$$Type): boolean
-"set"(int0: integer, double1: double): double
 /** @deprecated */
+"set"(int0: integer, double1: double): double
 "set"(int0: integer, double1: double): double
 "setElements"(int0: integer, double1s: double[]): void
 "setElements"(int0: integer, double1s: double[], int2: integer, int3: integer): void
@@ -472,6 +507,7 @@ export interface $DoubleList extends $List<double>, $Comparable<$List<double>>, 
 "spliterator"(): $DoubleSpliterator
 /** @deprecated */
 "stream"(): $Stream<double>
+"subList"(int0: integer, int1: integer): $DoubleList
 "toArray"(): any[]
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(double0s: double[]): double[]
@@ -479,9 +515,11 @@ export interface $DoubleList extends $List<double>, $Comparable<$List<double>>, 
 /** @deprecated */
 "toDoubleArray"(double0s: double[]): double[]
 "toDoubleArray"(): double[]
+"unstableSort"(doubleComparator0: $DoubleComparator$$Type): void
 /** @deprecated */
 "unstableSort"(comparator0: $Comparator$$Type<double>): void
-"unstableSort"(doubleComparator0: $DoubleComparator$$Type): void
+get "first"(): double
+get "last"(): double
 get "empty"(): boolean
 set "elements"(value: double[])
 }
@@ -489,40 +527,40 @@ set "elements"(value: double[])
 export namespace $DoubleList {
 function copyOf<E>(collection0: $Collection$$Type<E>): $List<E>
 function of(...double0s: double[]): $DoubleList
+function of(double0: double, double1: double): $DoubleList
 function of(): $DoubleList
 function of(double0: double): $DoubleList
-function of(double0: double, double1: double): $DoubleList
 function of(double0: double, double1: double, double2: double): $DoubleList
-function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E): $List<E>
-function of<E>(e0: E, e1: E): $List<E>
 function of<E>(e0: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-function of<E>(...e0s: E[]): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+function of<E>(...e0s: E[]): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 export abstract class $DoubleList$$Static implements $DoubleList {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 static "of"(...double0s: double[]): $DoubleList
+static "of"(double0: double, double1: double): $DoubleList
 static "of"(): $DoubleList
 static "of"(double0: double): $DoubleList
-static "of"(double0: double, double1: double): $DoubleList
 static "of"(double0: double, double1: double, double2: double): $DoubleList
-static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-static "of"<E>(e0: E, e1: E): $List<E>
 static "of"<E>(e0: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-static "of"<E>(...e0s: E[]): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+static "of"<E>(...e0s: E[]): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 }
 
@@ -666,8 +704,8 @@ export interface $Double2LongFunction extends $Function$0<double, long>, $Double
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(long0: long): void
 "defaultReturnValue"(): long
+"defaultReturnValue"(long0: long): void
 /** @deprecated */
 "get"(object0: any): long
 "get"(double0: double): long
@@ -678,8 +716,6 @@ export interface $Double2LongFunction extends $Function$0<double, long>, $Double
 /** @deprecated */
 "put"(double0: double, long1: long): long
 "remove"(double0: double): long
-/** @deprecated */
-"remove"(object0: any): long
 "size"(): integer
 }
 
@@ -756,8 +792,8 @@ export interface $Double2IntFunction extends $Function$0<double, integer>, $Doub
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(int0: integer): void
 "defaultReturnValue"(): integer
+"defaultReturnValue"(int0: integer): void
 /** @deprecated */
 "get"(object0: any): integer
 "get"(double0: double): integer
@@ -768,8 +804,6 @@ export interface $Double2IntFunction extends $Function$0<double, integer>, $Doub
 /** @deprecated */
 "put"(double0: double, integer1: integer): integer
 "remove"(double0: double): integer
-/** @deprecated */
-"remove"(object0: any): integer
 "size"(): integer
 }
 
@@ -846,8 +880,8 @@ export interface $Double2ByteFunction extends $Function$0<double, byte>, $Double
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(byte0: byte): void
 "defaultReturnValue"(): byte
+"defaultReturnValue"(byte0: byte): void
 /** @deprecated */
 "get"(object0: any): byte
 "get"(double0: double): byte
@@ -858,8 +892,6 @@ export interface $Double2ByteFunction extends $Function$0<double, byte>, $Double
 /** @deprecated */
 "put"(double0: double, byte1: byte): byte
 "remove"(double0: double): byte
-/** @deprecated */
-"remove"(object0: any): byte
 "size"(): integer
 }
 
@@ -938,8 +970,8 @@ export interface $Double2FloatFunction extends $Function$0<double, float>, $Doub
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(float0: float): void
 "defaultReturnValue"(): float
+"defaultReturnValue"(float0: float): void
 /** @deprecated */
 "get"(object0: any): float
 "get"(double0: double): float
@@ -950,8 +982,6 @@ export interface $Double2FloatFunction extends $Function$0<double, float>, $Doub
 /** @deprecated */
 "put"(double0: double, float1: float): float
 "remove"(double0: double): float
-/** @deprecated */
-"remove"(object0: any): float
 "size"(): integer
 }
 
@@ -1028,8 +1058,8 @@ export interface $Double2CharFunction extends $Function$0<double, character>, $D
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(char0: character): void
 "defaultReturnValue"(): character
+"defaultReturnValue"(char0: character): void
 /** @deprecated */
 "get"(object0: any): character
 "get"(double0: double): character
@@ -1040,8 +1070,6 @@ export interface $Double2CharFunction extends $Function$0<double, character>, $D
 /** @deprecated */
 "put"(double0: double, character1: character): character
 "remove"(double0: double): character
-/** @deprecated */
-"remove"(object0: any): character
 "size"(): integer
 }
 
@@ -1093,15 +1121,15 @@ import { $DoublePredicate$$Type as $DoublePredicate$0$$Type } from "java.util.fu
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export interface $DoubleCollection extends $Collection<double>, $DoubleIterable {
-/** @deprecated */
 "add"(double0: double): boolean
+/** @deprecated */
 "add"(double0: double): boolean
 "addAll"(doubleCollection0: $DoubleCollection$$Type): boolean
 "addAll"(collection0: $Collection$$Type<double>): boolean
 "clear"(): void
+"contains"(double0: double): boolean
 /** @deprecated */
 "contains"(object0: any): boolean
-"contains"(double0: double): boolean
 "containsAll"(doubleCollection0: $DoubleCollection$$Type): boolean
 "containsAll"(collection0: $Collection$$Type<any>): boolean
 "doubleIterator"(): $DoubleIterator
@@ -1123,20 +1151,19 @@ export interface $DoubleCollection extends $Collection<double>, $DoubleIterable 
 "remove"(object0: any): boolean
 "removeAll"(doubleCollection0: $DoubleCollection$$Type): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
-"removeIf"(doublePredicate0: $DoublePredicate$$Type): boolean
+"removeIf"(doublePredicate0: $DoublePredicate$0$$Type): boolean
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<double>): boolean
-"removeIf"(doublePredicate0: $DoublePredicate$0$$Type): boolean
+"removeIf"(doublePredicate0: $DoublePredicate$$Type): boolean
 "retainAll"(doubleCollection0: $DoubleCollection$$Type): boolean
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
-"spliterator"(): $DoubleSpliterator
 /** @deprecated */
 "stream"(): $Stream<double>
 "toArray"(double0s: double[]): double[]
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toArray"(): any[]
 /** @deprecated */
 "toDoubleArray"(double0s: double[]): double[]
 "toDoubleArray"(): double[]
@@ -1147,6 +1174,42 @@ export namespace $DoubleCollection {
 const probejs$$marker: never
 }
 export abstract class $DoubleCollection$$Static implements $DoubleCollection {
+}
+}
+
+declare module "it.unimi.dsi.fastutil.doubles.DoubleListIterator" {
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $ListIterator } from "java.util.ListIterator"
+import { $DoubleBidirectionalIterator } from "it.unimi.dsi.fastutil.doubles.DoubleBidirectionalIterator"
+import { $DoubleConsumer$$Type } from "it.unimi.dsi.fastutil.doubles.DoubleConsumer"
+import { $DoubleConsumer$$Type as $DoubleConsumer$0$$Type } from "java.util.function.DoubleConsumer"
+
+export interface $DoubleListIterator extends $DoubleBidirectionalIterator, $ListIterator<double> {
+/** @deprecated */
+"add"(double0: double): void
+"add"(double0: double): void
+"back"(int0: integer): integer
+/** @deprecated */
+"forEachRemaining"(consumer0: $Consumer$$Type<double>): void
+"forEachRemaining"(doubleConsumer0: $DoubleConsumer$$Type): void
+"forEachRemaining"(doubleConsumer0: $DoubleConsumer$0$$Type): void
+"hasNext"(): boolean
+"hasPrevious"(): boolean
+"nextDouble"(): double
+"nextIndex"(): integer
+"previousDouble"(): double
+"previousIndex"(): integer
+"remove"(): void
+/** @deprecated */
+"set"(double0: double): void
+"set"(double0: double): void
+"skip"(int0: integer): integer
+}
+
+export namespace $DoubleListIterator {
+const probejs$$marker: never
+}
+export abstract class $DoubleListIterator$$Static implements $DoubleListIterator {
 }
 }
 
@@ -1265,8 +1328,8 @@ export interface $Double2BooleanFunction extends $Function$0<double, boolean>, $
 "containsKey"(double0: double): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
+"defaultReturnValue"(boolean0: boolean): void
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(double0: double): boolean
@@ -1275,8 +1338,8 @@ export interface $Double2BooleanFunction extends $Function$0<double, boolean>, $
 "getOrDefault"(double0: double, boolean1: boolean): boolean
 "negate"(): $DoublePredicate
 "or"(doublePredicate0: $DoublePredicate$$Type): $DoublePredicate
-/** @deprecated */
 "put"(double0: double, boolean1: boolean): boolean
+/** @deprecated */
 "put"(double0: double, boolean1: boolean): boolean
 "remove"(double0: double): boolean
 "size"(): integer

@@ -192,8 +192,8 @@ public "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blo
 public static "create"(int0: integer, int1: integer): $LevelHeightAccessor
 public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference<$Trackable>>
 public "getAntiFarmingPerChunkState"(): $AntiFarmingPerChunk$State
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -211,8 +211,8 @@ public "getBlockStates"(aABB0: $AABB$$Type): $Stream<$BlockState>
 public "getCapability"<T>(capability0: $Capability$$Type<T>, direction1: $Direction$$Type): $LazyOptional<T>
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
-public "getFluidState"(int0: integer, int1: integer, int2: integer): $FluidState
 public "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
+public "getFluidState"(int0: integer, int1: integer, int2: integer): $FluidState
 public "getFullStatus"(): $FullChunkStatus
 public "getLevel"(): $Level
 public "getLightEmission"(blockPos0: $BlockPos$$Type): integer
@@ -228,17 +228,17 @@ public "getSectionYFromSectionIndex"(int0: integer): integer
 public "getSectionsCount"(): integer
 public static "getSummary"(): $Map<$Class<any>, $Map<$Class<any>, long>>
 public "getWorldForge"(): $Level
-public "handler$foh000$transferProtoChunkAttachement"(world: $ServerLevel$$Type, protoChunk: $ProtoChunk$$Type, entityLoader: $LevelChunk$PostLoadProcessor$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hbg000$dragonlib$onAddAndRegisterBlockEntity"(blockEntity: $BlockEntity$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hbg000$dragonlib$onClearAllBlockEntities"(ci: $CallbackInfo$$Type): void
+public "handler$fpl000$transferProtoChunkAttachement"(world: $ServerLevel$$Type, protoChunk: $ProtoChunk$$Type, entityLoader: $LevelChunk$PostLoadProcessor$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hck000$dragonlib$onAddAndRegisterBlockEntity"(blockEntity: $BlockEntity$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hck000$dragonlib$onClearAllBlockEntities"(ci: $CallbackInfo$$Type): void
 public "hasBiomes"(): boolean
 public "invalidateCaps"(): void
 public "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
 public "isEmpty"(): boolean
 public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 public "isOutsideBuildHeight"(int0: integer): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "postProcessGeneration"(): void
 /** @deprecated */
@@ -253,8 +253,8 @@ public "runPostLoad"(): void
 public "scheduleRandomTick"(blockPos0: $BlockPos$$Type): void
 public "setFullStatus"(supplier0: $Supplier$$Type<$FullChunkStatus>): void
 public "setLoaded"(boolean0: boolean): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "traverseBlocks"<T, C>(vec30: $Vec3$$Type, vec31: $Vec3$$Type, c2: C, biFunction3: $BiFunction$$Type<C, $BlockPos$$Type, T>, function4: $Function$$Type<C, T>): T
 public "unpackTicks"(long0: long): void
@@ -355,8 +355,8 @@ import { $PalettedContainerRO, $PalettedContainerRO$$Type } from "net.minecraft.
 import { $PalettedContainer$CountConsumer$$Type } from "net.minecraft.world.level.chunk.PalettedContainer$CountConsumer"
 
 export class $PalettedContainer<T = any> implements $PaletteResize<T>, $PalettedContainerRO<T>, $ReadableContainerExtended {
-constructor(idMap0: $IdMap$$Type<T>, t1: T, strategy2: $PalettedContainer$Strategy$$Type)
 constructor(idMap0: $IdMap$$Type<T>, strategy1: $PalettedContainer$Strategy$$Type, configuration2: $PalettedContainer$Configuration$$Type<T>, bitStorage3: $BitStorage$$Type, list4: $List$$Type<T>)
+constructor(idMap0: $IdMap$$Type<T>, t1: T, strategy2: $PalettedContainer$Strategy$$Type)
 
 public "acquire"(): void
 public static "clone"<T>(palettedContainerRO0: $PalettedContainerRO$$Type<T>): $PalettedContainerRO<T>
@@ -378,8 +378,8 @@ public "recreate"(): $PalettedContainer<T>
 public "release"(): void
 public "set"(int0: integer, int1: integer, int2: integer, t3: T): void
 public "sodium$copy"(): $PalettedContainerRO
-public "sodium$unpack"(object0s: any[], int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer): void
 public "sodium$unpack"(object0s: any[]): void
+public "sodium$unpack"(object0s: any[], int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer): void
 public "write"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 get "serializedSize"(): integer
 }
@@ -482,8 +482,8 @@ import { $Class } from "java.lang.Class"
 import { $ChunkStatus$$Type } from "net.minecraft.world.level.chunk.ChunkStatus"
 
 export class $ProtoChunk extends $ChunkAccess {
-constructor(chunkPos0: $ChunkPos$$Type, upgradeData1: $UpgradeData$$Type, levelChunkSection2s: $LevelChunkSection$$Type[], protoChunkTicks3: $ProtoChunkTicks$$Type<$Block$$Type>, protoChunkTicks4: $ProtoChunkTicks$$Type<$Fluid$$Type>, levelHeightAccessor5: $LevelHeightAccessor$$Type, registry6: $Registry$$Type<$Biome$$Type>, blendingData7: $BlendingData$$Type)
 constructor(chunkPos0: $ChunkPos$$Type, upgradeData1: $UpgradeData$$Type, levelHeightAccessor2: $LevelHeightAccessor$$Type, registry3: $Registry$$Type<$Biome$$Type>, blendingData4: $BlendingData$$Type)
+constructor(chunkPos0: $ChunkPos$$Type, upgradeData1: $UpgradeData$$Type, levelChunkSection2s: $LevelChunkSection$$Type[], protoChunkTicks3: $ProtoChunkTicks$$Type<$Block$$Type>, protoChunkTicks4: $ProtoChunkTicks$$Type<$Fluid$$Type>, levelHeightAccessor5: $LevelHeightAccessor$$Type, registry6: $Registry$$Type<$Biome$$Type>, blendingData7: $BlendingData$$Type)
 
 public "addEntity"(compoundTag0: $CompoundTag$$Type): void
 public static "clearNullReferences"(): void
@@ -491,8 +491,8 @@ public "clip"(clipContext0: $ClipContext$$Type): $BlockHitResult
 public "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 public static "create"(int0: integer, int1: integer): $LevelHeightAccessor
 public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference<$Trackable>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -527,8 +527,8 @@ public "hasBiomes"(): boolean
 public "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
 public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 public "isOutsideBuildHeight"(int0: integer): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "packOffsetCoordinates"(blockPos0: $BlockPos$$Type): short
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -536,8 +536,8 @@ public "setBelowZeroRetrogen"(belowZeroRetrogen0: $BelowZeroRetrogen$$Type): voi
 public "setCarvingMask"(carving0: $GenerationStep$Carving$$Type, carvingMask1: $CarvingMask$$Type): void
 public "setLightEngine"(levelLightEngine0: $LevelLightEngine$$Type): void
 public "setStatus"(chunkStatus0: $ChunkStatus$$Type): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "traverseBlocks"<T, C>(vec30: $Vec3$$Type, vec31: $Vec3$$Type, c2: C, biFunction3: $BiFunction$$Type<C, $BlockPos$$Type, T>, function4: $Function$$Type<C, T>): T
 public "unpackBlockTicks"(): $LevelChunkTicks<$Block>
@@ -780,8 +780,8 @@ public "findBlocks"(predicate0: $Predicate$$Type<$BlockState$$Type>, biConsumer1
 public "getAllReferences"(): $Map
 public "getAllStarts"(): $Map<$Structure, $StructureStart>
 public "getAttached"(type: $AttachmentType$$Type): any
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -790,8 +790,8 @@ public "getBelowZeroRetrogen"(): $BelowZeroRetrogen
 public "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
 public "getBlendingData"(): $BlendingData
 public "getBlockEntitiesPos"(): $Set<$BlockPos>
-public "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 public "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+public "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 public "getBlockEntityNbt"(blockPos0: $BlockPos$$Type): $CompoundTag
 public "getBlockEntityNbtForSaving"(blockPos0: $BlockPos$$Type): $CompoundTag
 public "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
@@ -803,8 +803,8 @@ public "getBlockTicks"(): $TickContainerAccess<$Block>
 public "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 public "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
 public "getFluidTicks"(): $TickContainerAccess<$Fluid>
-public "getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 public "getHeight"(): integer
+public "getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 public "getHeightAccessorForGeneration"(): $LevelHeightAccessor
 public "getHeightmaps"(): $Collection<$Map$Entry<$Heightmap$Types, $Heightmap>>
 public "getHighestFilledSectionIndex"(): integer
@@ -855,8 +855,8 @@ public "isOutsideBuildHeight"(int0: integer): boolean
 public "isUnsaved"(): boolean
 public "isUpgrading"(): boolean
 public "isYSpaceEmpty"(int0: integer, int1: integer): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "markPosForPostprocessing"(blockPos0: $BlockPos$$Type): void
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -876,8 +876,8 @@ public "setStartForStructure"(structure0: $Structure$$Type, structureStart1: $St
 public "setUnsaved"(boolean0: boolean): void
 public "smoothchunk$getNextSaveTime"(): long
 public "smoothchunk$setSaveTimePoint"(long0: long): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "traverseBlocks"<T, C>(vec30: $Vec3$$Type, vec31: $Vec3$$Type, c2: C, biFunction3: $BiFunction$$Type<C, $BlockPos$$Type, T>, function4: $Function$$Type<C, T>): T
 public "wrap"(): $WeakReference<$Trackable>
@@ -1002,8 +1002,8 @@ public "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blo
 public static "create"(int0: integer, int1: integer): $LevelHeightAccessor
 public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference<$Trackable>>
 public "getAllReferences"(): $Map<$Structure, $LongSet>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -1031,12 +1031,12 @@ public "hasBiomes"(): boolean
 public "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
 public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 public "isOutsideBuildHeight"(int0: integer): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "traverseBlocks"<T, C>(vec30: $Vec3$$Type, vec31: $Vec3$$Type, c2: C, biFunction3: $BiFunction$$Type<C, $BlockPos$$Type, T>, function4: $Function$$Type<C, T>): T
 public "wrap"(): $WeakReference<$Trackable>
@@ -1148,7 +1148,6 @@ declare module "net.minecraft.world.level.chunk.ChunkGeneratorStructureState" {
 import { $BiomeSource$$Type } from "net.minecraft.world.level.biome.BiomeSource"
 import { $HolderLookup$$Type } from "net.minecraft.core.HolderLookup"
 import { $IChunkGenerator } from "org.embeddedt.modernfix.duck.IChunkGenerator"
-import { $ServerLevel$$Type } from "net.minecraft.server.level.ServerLevel"
 import { $StructureSet, $StructureSet$$Type } from "net.minecraft.world.level.levelgen.structure.StructureSet"
 import { $ChunkPos } from "net.minecraft.world.level.ChunkPos"
 import { $Structure$$Type } from "net.minecraft.world.level.levelgen.structure.Structure"
@@ -1156,8 +1155,10 @@ import { $List } from "java.util.List"
 import { $Stream$$Type } from "java.util.stream.Stream"
 import { $Holder, $Holder$$Type } from "net.minecraft.core.Holder"
 import { $RandomState, $RandomState$$Type } from "net.minecraft.world.level.levelgen.RandomState"
+import { $RegistryAccess$Frozen$$Type } from "net.minecraft.core.RegistryAccess$Frozen"
 import { $StructurePlacement } from "net.minecraft.world.level.levelgen.structure.placement.StructurePlacement"
 import { $ConcentricRingsStructurePlacement$$Type } from "net.minecraft.world.level.levelgen.structure.placement.ConcentricRingsStructurePlacement"
+import { $Path$$Type } from "java.nio.file.Path"
 
 export class $ChunkGeneratorStructureState implements $IChunkGenerator {
 public static "createForFlat"(randomState0: $RandomState$$Type, long1: long, biomeSource2: $BiomeSource$$Type, stream3: $Stream$$Type<$Holder$$Type<$StructureSet$$Type>>): $ChunkGeneratorStructureState
@@ -1167,7 +1168,7 @@ public "getLevelSeed"(): long
 public "getPlacementsForStructure"(holder0: $Holder$$Type<$Structure$$Type>): $List<$StructurePlacement>
 public "getRingPositionsFor"(concentricRingsStructurePlacement0: $ConcentricRingsStructurePlacement$$Type): $List<$ChunkPos>
 public "hasStructureChunkInRange"(holder0: $Holder$$Type<$StructureSet$$Type>, int1: integer, int2: integer, int3: integer): boolean
-public "mfix$setAssociatedServerLevel"(serverLevel0: $ServerLevel$$Type): void
+public "mfix$setStrongholdCachePath"(path0: $Path$$Type, frozen1: $RegistryAccess$Frozen$$Type): void
 public "possibleStructureSets"(): $List<$Holder<$StructureSet>>
 public "randomState"(): $RandomState
 get "levelSeed"(): long
@@ -1202,9 +1203,9 @@ static readonly "LAYER_COUNT": integer
 static readonly "LAYER_SIZE": integer
 static readonly "SIZE": integer
 
-constructor()
 constructor(byte0s: byte[])
 constructor(int0: integer)
+constructor()
 
 public "copy"(): $DataLayer
 public "fill"(int0: integer): void
@@ -1364,8 +1365,8 @@ export interface $LightChunk extends $BlockGetter {
 "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 "findBlockLightSources"(biConsumer0: $BiConsumer$$Type<$BlockPos$$Type, $BlockState$$Type>): void
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
-"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
 "getBlockFloorHeight"(voxelShape0: $VoxelShape$$Type, supplier1: $Supplier$$Type<$VoxelShape>): double
 "getBlockFloorHeight"(blockPos0: $BlockPos$$Type): double

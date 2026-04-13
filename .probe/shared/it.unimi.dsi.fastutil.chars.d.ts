@@ -66,8 +66,8 @@ export interface $Char2ShortFunction extends $Function$0<character, short>, $Int
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(short0: short): void
 "defaultReturnValue"(): short
+"defaultReturnValue"(short0: short): void
 /** @deprecated */
 "get"(object0: any): short
 "get"(char0: character): short
@@ -78,8 +78,6 @@ export interface $Char2ShortFunction extends $Function$0<character, short>, $Int
 /** @deprecated */
 "put"(character0: character, short1: short): short
 "remove"(char0: character): short
-/** @deprecated */
-"remove"(object0: any): short
 "size"(): integer
 }
 
@@ -159,8 +157,8 @@ export interface $Char2ByteFunction extends $Function$0<character, byte>, $IntUn
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(byte0: byte): void
 "defaultReturnValue"(): byte
+"defaultReturnValue"(byte0: byte): void
 /** @deprecated */
 "get"(object0: any): byte
 "get"(char0: character): byte
@@ -171,8 +169,6 @@ export interface $Char2ByteFunction extends $Function$0<character, byte>, $IntUn
 /** @deprecated */
 "put"(character0: character, byte1: byte): byte
 "remove"(char0: character): byte
-/** @deprecated */
-"remove"(object0: any): byte
 "size"(): integer
 }
 
@@ -250,8 +246,8 @@ export interface $Char2FloatFunction extends $Function$0<character, float>, $Int
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(float0: float): void
 "defaultReturnValue"(): float
+"defaultReturnValue"(float0: float): void
 /** @deprecated */
 "get"(object0: any): float
 "get"(char0: character): float
@@ -262,8 +258,6 @@ export interface $Char2FloatFunction extends $Function$0<character, float>, $Int
 /** @deprecated */
 "put"(character0: character, float1: float): float
 "remove"(char0: character): float
-/** @deprecated */
-"remove"(object0: any): float
 "size"(): integer
 }
 
@@ -341,8 +335,8 @@ export interface $Char2DoubleFunction extends $Function$0<character, double>, $I
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(double0: double): void
 "defaultReturnValue"(): double
+"defaultReturnValue"(double0: double): void
 /** @deprecated */
 "get"(object0: any): double
 "get"(char0: character): double
@@ -353,8 +347,6 @@ export interface $Char2DoubleFunction extends $Function$0<character, double>, $I
 /** @deprecated */
 "put"(character0: character, double1: double): double
 "remove"(char0: character): double
-/** @deprecated */
-"remove"(object0: any): double
 "size"(): integer
 }
 
@@ -431,14 +423,14 @@ export interface $Char2ObjectFunction<V = any> extends $Function$0<character, V>
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(char0: character): V
+"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "put"(character0: character, v1: V): V
 "put"(char0: character, v1: V): V
@@ -597,14 +589,14 @@ export interface $Char2ReferenceFunction<V = any> extends $Function$0<character,
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(char0: character): V
+"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "put"(character0: character, v1: V): V
 "put"(char0: character, v1: V): V
@@ -690,8 +682,8 @@ export interface $Char2IntFunction extends $Function$0<character, integer>, $Int
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(int0: integer): void
 "defaultReturnValue"(): integer
+"defaultReturnValue"(int0: integer): void
 /** @deprecated */
 "get"(object0: any): integer
 "get"(char0: character): integer
@@ -702,8 +694,6 @@ export interface $Char2IntFunction extends $Function$0<character, integer>, $Int
 /** @deprecated */
 "put"(character0: character, integer1: integer): integer
 "remove"(char0: character): integer
-/** @deprecated */
-"remove"(object0: any): integer
 "size"(): integer
 }
 
@@ -781,8 +771,8 @@ export interface $Char2LongFunction extends $Function$0<character, long>, $IntTo
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(long0: long): void
 "defaultReturnValue"(): long
+"defaultReturnValue"(long0: long): void
 /** @deprecated */
 "get"(object0: any): long
 "get"(char0: character): long
@@ -793,8 +783,6 @@ export interface $Char2LongFunction extends $Function$0<character, long>, $IntTo
 /** @deprecated */
 "put"(character0: character, long1: long): long
 "remove"(char0: character): long
-/** @deprecated */
-"remove"(object0: any): long
 "size"(): integer
 }
 
@@ -874,8 +862,8 @@ export interface $Char2BooleanFunction extends $Function$0<character, boolean>, 
 "containsKey"(char0: character): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
+"defaultReturnValue"(boolean0: boolean): void
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(char0: character): boolean
@@ -884,9 +872,9 @@ export interface $Char2BooleanFunction extends $Function$0<character, boolean>, 
 "getOrDefault"(char0: character, boolean1: boolean): boolean
 "negate"(): $IntPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
+"put"(char0: character, boolean1: boolean): boolean
 /** @deprecated */
 "put"(character0: character, boolean1: boolean): boolean
-"put"(char0: character, boolean1: boolean): boolean
 "remove"(char0: character): boolean
 "size"(): integer
 /** @deprecated */

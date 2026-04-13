@@ -319,8 +319,8 @@ public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "finalTick"(): void
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -341,12 +341,12 @@ public "getXOff"(float0: float): float
 public "getYOff"(float0: float): float
 public "getZOff"(float0: float): float
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
-public "handler$hji000$onFinishedShortPulse"(ci: $CallbackInfo$$Type): void
+public "handler$hme000$onFinishedShortPulse"(ci: $CallbackInfo$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "isExtending"(): boolean
 public "isSourcePiston"(): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "onDataPacket"(connection0: $Connection$$Type, clientboundBlockEntityDataPacket1: $ClientboundBlockEntityDataPacket$$Type): void
 public "onLoad"(): void

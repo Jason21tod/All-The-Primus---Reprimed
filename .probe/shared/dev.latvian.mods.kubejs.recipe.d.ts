@@ -84,7 +84,6 @@ public "mapOut"(mappingFrom: $UnaryOperator$$Type<$JsonElement$$Type>): $Mapping
 public "newArray"(length: integer): T[]
 public "or"<O>(other: $RecipeComponent$$Type<O>): $OrRecipeComponent<T[], O>
 public "orSelf"(): $RecipeComponent<T[]>
-public "read"(recipe: $RecipeJS$$Type, from: any): T[]
 public "readFromJson"(recipe: $RecipeJS$$Type, cv: $RecipeComponentValue$$Type<T[]>, json: $JsonObject$$Type): void
 public "readFromMap"(recipe: $RecipeJS$$Type, cv: $RecipeComponentValue$$Type<T[]>, map: $Map$$Type<any, any>): void
 public "remove"(array: T[], index: integer): T[]
@@ -322,11 +321,9 @@ declare module "dev.latvian.mods.kubejs.recipe.schema.RecipeNamespace" {
 import { $ResourceLocation } from "net.minecraft.resources.ResourceLocation"
 import { $LinkedHashMap } from "java.util.LinkedHashMap"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
-import { $BiFunction$$Type } from "java.util.function.BiFunction"
 import { $Map, $Map$$Type } from "java.util.Map"
-import { $RecipeSchemaType, $RecipeSchemaType$$Type } from "dev.latvian.mods.kubejs.recipe.schema.RecipeSchemaType"
+import { $RecipeSchemaType } from "dev.latvian.mods.kubejs.recipe.schema.RecipeSchemaType"
 import { $RecipeKey$$Type } from "dev.latvian.mods.kubejs.recipe.RecipeKey"
-import { $Function$$Type } from "java.util.function.Function"
 import { $RecipeSchema$$Type } from "dev.latvian.mods.kubejs.recipe.schema.RecipeSchema"
 
 export class $RecipeNamespace extends $LinkedHashMap<string, $RecipeSchemaType> {
@@ -334,44 +331,33 @@ readonly "name": string
 
 constructor(name: string)
 
-public "compute"(string0: string, biFunction1: $BiFunction$$Type<string, $RecipeSchemaType$$Type, $RecipeSchemaType>): $RecipeSchemaType
-public "computeIfAbsent"(string0: string, function1: $Function$$Type<string, $RecipeSchemaType>): $RecipeSchemaType
-public "computeIfPresent"(string0: string, biFunction1: $BiFunction$$Type<string, $RecipeSchemaType$$Type, $RecipeSchemaType>): $RecipeSchemaType
-public "containsKey"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "equals"(object0: any): boolean
+public "firstEntry"(): $Map$Entry<string, $RecipeSchemaType>
 public static "getAll"(): $Map<string, $RecipeNamespace>
 public static "getMappedRecipes"(): $Map<string, $ResourceLocation>
 public "hashCode"(): integer
-public "isEmpty"(): boolean
-public "merge"(string0: string, recipeSchemaType1: $RecipeSchemaType$$Type, biFunction2: $BiFunction$$Type<$RecipeSchemaType$$Type, $RecipeSchemaType$$Type, $RecipeSchemaType>): $RecipeSchemaType
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
+public "lastEntry"(): $Map$Entry<string, $RecipeSchemaType>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
-public "put"(string0: string, recipeSchemaType1: $RecipeSchemaType$$Type): $RecipeSchemaType
-public "putAll"(map0: $Map$$Type<string, $RecipeSchemaType$$Type>): void
-public "putIfAbsent"(string0: string, recipeSchemaType1: $RecipeSchemaType$$Type): $RecipeSchemaType
+public "pollFirstEntry"(): $Map$Entry<string, $RecipeSchemaType>
+public "pollLastEntry"(): $Map$Entry<string, $RecipeSchemaType>
 public "register"(id: string, type: $RecipeSchema$$Type): $RecipeNamespace
 public "registerBasic"(id: string, ...keys: $RecipeKey$$Type<any>[]): $RecipeNamespace
-public "remove"(object0: any): $RecipeSchemaType
-public "remove"(object0: any, object1: any): boolean
-public "replace"(string0: string, recipeSchemaType1: $RecipeSchemaType$$Type): $RecipeSchemaType
-public "replace"(string0: string, recipeSchemaType1: $RecipeSchemaType$$Type, recipeSchemaType2: $RecipeSchemaType$$Type): boolean
 public "shaped"(id: string): $RecipeNamespace
 public "shapeless"(id: string): $RecipeNamespace
-public "size"(): integer
 public "special"(id: string): $RecipeNamespace
-get "empty"(): boolean
 }
 }
 
@@ -594,23 +580,23 @@ public "get"(key: any): any
 public "getHolder"(key: any): $RecipeComponentValue<any>
 public "getOrDefault"(key: any, defaultValue: any): any
 public "merge"(recipeKey0: $RecipeKey$$Type<any>, object1: any, biFunction2: $BiFunction$$Type<any, any, any>): any
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(key: $RecipeKey$$Type<any>, value: any): any
 public "putIfAbsent"(recipeKey0: $RecipeKey$$Type<any>, object1: any): any
 public "remove"(object0: any, object1: any): boolean
-public "replace"(recipeKey0: $RecipeKey$$Type<any>, object1: any): any
 public "replace"(recipeKey0: $RecipeKey$$Type<any>, object1: any, object2: any): boolean
+public "replace"(recipeKey0: $RecipeKey$$Type<any>, object1: any): any
 public "replaceAll"(biFunction0: $BiFunction$$Type<$RecipeKey$$Type<any>, any, any>): void
 get "hasChanged"(): boolean
 set "hasChanged"(value: boolean)
@@ -702,8 +688,8 @@ constructor(key: $RecipeKey$$Type<T>, index: integer)
 public "checkEmpty"(): string
 public static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 public static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-public static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 public static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+public static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 public "copy"(): $RecipeComponentValue<T>
 public static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 public "getIndex"(): integer
@@ -910,22 +896,20 @@ public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "getOrDefault"(object0: any, object1: any): any
 public "getValue"<T>(recipe: $RecipeJS$$Type, key: $RecipeKey$$Type<T>): T
 public "merge"(recipeKey0: $RecipeKey$$Type<any>, object1: any, biFunction2: $BiFunction$$Type<any, any, any>): any
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "putIfAbsent"(recipeKey0: $RecipeKey$$Type<any>, object1: any): any
-public "remove"(object0: any, object1: any): boolean
 public "replace"(recipeKey0: $RecipeKey$$Type<any>, object1: any): any
-public "replace"(recipeKey0: $RecipeKey$$Type<any>, object1: any, object2: any): boolean
 }
 }
 
@@ -984,7 +968,6 @@ public "mapIn"(mappingTo: $UnaryOperator$$Type<any>): $MappingRecipeComponent<$P
 public "mapOut"(mappingFrom: $UnaryOperator$$Type<$JsonElement$$Type>): $MappingRecipeComponent<$Pair<A, B>>
 public "or"<O>(other: $RecipeComponent$$Type<O>): $OrRecipeComponent<$Pair<A, B>, O>
 public "orSelf"(): $RecipeComponent<$Pair<A, B>>
-public "read"(recipe: $RecipeJS$$Type, from: any): $Pair<A, B>
 public "readFromJson"(recipe: $RecipeJS$$Type, cv: $RecipeComponentValue$$Type<$Pair$$Type<A, B>>, json: $JsonObject$$Type): void
 public "readFromMap"(recipe: $RecipeJS$$Type, cv: $RecipeComponentValue$$Type<$Pair$$Type<A, B>>, map: $Map$$Type<any, any>): void
 public "replaceInput"(recipe: $RecipeJS$$Type, original: $Pair$$Type<A, B>, match: $ReplacementMatch$$Type, with_: $InputReplacement$$Type): $Pair<A, B>
@@ -1248,7 +1231,6 @@ public "mapOut"(mappingFrom: $UnaryOperator$$Type<$JsonElement$$Type>): $Mapping
 public "or"<O>(other: $RecipeComponent$$Type<O>): $OrRecipeComponent<$RecipeComponentBuilderMap, O>
 public "orSelf"(): $RecipeComponent<$RecipeComponentBuilderMap>
 public "outputRole"(): $RecipeComponentBuilder
-public "read"(recipe: $RecipeJS$$Type, from: any): $RecipeComponentBuilderMap
 public "readFromJson"(recipe: $RecipeJS$$Type, cv: $RecipeComponentValue$$Type<$RecipeComponentBuilderMap$$Type>, json: $JsonObject$$Type): void
 public "readFromMap"(recipe: $RecipeJS$$Type, cv: $RecipeComponentValue$$Type<$RecipeComponentBuilderMap$$Type>, map: $Map$$Type<any, any>): void
 public "replaceInput"(recipe: $RecipeJS$$Type, original: $RecipeComponentBuilderMap$$Type, match: $ReplacementMatch$$Type, with_: $InputReplacement$$Type): $RecipeComponentBuilderMap
@@ -1410,8 +1392,8 @@ public static "getRemaining"(container: $CraftingContainer$$Type, index: integer
 public "getType"(): string
 public static "parseList"(json: $JsonElement$$Type): $List<$IngredientAction>
 public static "readList"(buf: $FriendlyByteBuf$$Type): $List<$IngredientAction>
-public "toJson"(): $JsonObject
 public "toJson"(json: $JsonObject$$Type): void
+public "toJson"(): $JsonObject
 public "transform"(itemStack0: $ItemStack$$Type, int1: integer, craftingContainer2: $CraftingContainer$$Type): $ItemStack
 public static "writeList"(buf: $FriendlyByteBuf$$Type, list: $List$$Type<$IngredientAction$$Type>): void
 get "type"(): string

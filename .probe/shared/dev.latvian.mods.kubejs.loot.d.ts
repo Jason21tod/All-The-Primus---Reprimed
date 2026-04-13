@@ -44,8 +44,8 @@ public "furnaceSmelt"(): $FunctionContainer
 public "killedByPlayer"(): $ConditionContainer
 public "lootTable"(table: $ResourceLocation$$Type, seed: long): $FunctionContainer
 public "lootingEnchant"(count: $NumberProvider$$Type, limit: integer): $FunctionContainer
-public "name"(name: $Component$$Type): $FunctionContainer
 public "name"(name: $Component$$Type, entity: $LootContext$EntityTarget$$Type): $FunctionContainer
+public "name"(name: $Component$$Type): $FunctionContainer
 public "nbt"(tag: $CompoundTag$$Type): $FunctionContainer
 public "quality"(quality: integer): $LootTableEntry
 public "randomChance"(chance: double): $ConditionContainer
@@ -75,7 +75,9 @@ import { $ConditionContainer } from "dev.latvian.mods.kubejs.loot.ConditionConta
 export class $LootBuilder implements $FunctionContainer, $ConditionContainer {
 constructor(prev: $JsonElement$$Type)
 
+public "addCondition"(o: $JsonObject$$Type): $LootBuilder
 public "addConditionalFunction"(func: $Consumer$$Type<$ConditionalFunction$$Type>): $FunctionContainer
+public "addFunction"(o: $JsonObject$$Type): $LootBuilder
 public "addPool"(p: $Consumer$$Type<$LootBuilderPool$$Type>): void
 public "clearConditions"(): void
 public "clearFunctions"(): void
@@ -91,8 +93,8 @@ public "furnaceSmelt"(): $FunctionContainer
 public "killedByPlayer"(): $ConditionContainer
 public "lootTable"(table: $ResourceLocation$$Type, seed: long): $FunctionContainer
 public "lootingEnchant"(count: $NumberProvider$$Type, limit: integer): $FunctionContainer
-public "name"(name: $Component$$Type): $FunctionContainer
 public "name"(name: $Component$$Type, entity: $LootContext$EntityTarget$$Type): $FunctionContainer
+public "name"(name: $Component$$Type): $FunctionContainer
 public "nbt"(tag: $CompoundTag$$Type): $FunctionContainer
 public "randomChance"(chance: double): $ConditionContainer
 public "randomChanceWithLooting"(chance: double, multiplier: double): $ConditionContainer
@@ -161,8 +163,8 @@ public "furnaceSmelt"(): $FunctionContainer
 public "killedByPlayer"(): $ConditionContainer
 public "lootTable"(table: $ResourceLocation$$Type, seed: long): $FunctionContainer
 public "lootingEnchant"(count: $NumberProvider$$Type, limit: integer): $FunctionContainer
-public "name"(name: $Component$$Type): $FunctionContainer
 public "name"(name: $Component$$Type, entity: $LootContext$EntityTarget$$Type): $FunctionContainer
+public "name"(name: $Component$$Type): $FunctionContainer
 public "nbt"(tag: $CompoundTag$$Type): $FunctionContainer
 public "randomChance"(chance: double): $ConditionContainer
 public "randomChanceWithLooting"(chance: double, multiplier: double): $ConditionContainer
@@ -201,8 +203,9 @@ constructor()
 public "addConditionalFunction"(func: $Consumer$$Type<$ConditionalFunction$$Type>): $FunctionContainer
 public "addEmpty"(weight: integer): $LootTableEntry
 public "addEntry"(json: $JsonObject$$Type): $LootTableEntry
-public "addItem"(item: $ItemStack$$Type, weight: integer, count: $NumberProvider$$Type): $LootTableEntry
+public "addFunction"(o: $JsonObject$$Type): $LootBuilderPool
 public "addItem"(item: $ItemStack$$Type, weight: integer): $LootTableEntry
+public "addItem"(item: $ItemStack$$Type, weight: integer, count: $NumberProvider$$Type): $LootTableEntry
 public "addItem"(item: $ItemStack$$Type): $LootTableEntry
 public "addLootTable"(table: $ResourceLocation$$Type): $LootTableEntry
 public "addTag"(tag: string, expand: boolean): $LootTableEntry
@@ -217,8 +220,8 @@ public "furnaceSmelt"(): $FunctionContainer
 public "killedByPlayer"(): $ConditionContainer
 public "lootTable"(table: $ResourceLocation$$Type, seed: long): $FunctionContainer
 public "lootingEnchant"(count: $NumberProvider$$Type, limit: integer): $FunctionContainer
-public "name"(name: $Component$$Type): $FunctionContainer
 public "name"(name: $Component$$Type, entity: $LootContext$EntityTarget$$Type): $FunctionContainer
+public "name"(name: $Component$$Type): $FunctionContainer
 public "nbt"(tag: $CompoundTag$$Type): $FunctionContainer
 public "randomChance"(chance: double): $ConditionContainer
 public "randomChanceWithLooting"(chance: double, multiplier: double): $ConditionContainer
@@ -361,8 +364,8 @@ export interface $FunctionContainer {
 "furnaceSmelt"(): $FunctionContainer
 "lootTable"(table: $ResourceLocation$$Type, seed: long): $FunctionContainer
 "lootingEnchant"(count: $NumberProvider$$Type, limit: integer): $FunctionContainer
-"name"(name: $Component$$Type): $FunctionContainer
 "name"(name: $Component$$Type, entity: $LootContext$EntityTarget$$Type): $FunctionContainer
+"name"(name: $Component$$Type): $FunctionContainer
 "nbt"(tag: $CompoundTag$$Type): $FunctionContainer
 }
 

@@ -181,8 +181,8 @@ import { $PistonEvent$PistonMoveType, $PistonEvent$PistonMoveType$$Type } from "
 import { $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $PistonEvent extends $BlockEvent {
-constructor(level0: $Level$$Type, blockPos1: $BlockPos$$Type, direction2: $Direction$$Type, pistonMoveType3: $PistonEvent$PistonMoveType$$Type)
 constructor()
+constructor(level0: $Level$$Type, blockPos1: $BlockPos$$Type, direction2: $Direction$$Type, pistonMoveType3: $PistonEvent$PistonMoveType$$Type)
 
 public "getDirection"(): $Direction
 public "getFaceOffsetPos"(): $BlockPos
@@ -576,8 +576,8 @@ import { $BlockState, $BlockState$$Type } from "net.minecraft.world.level.block.
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $BlockEvent extends $Event implements $EventItf {
-constructor(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type)
 constructor()
+constructor(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

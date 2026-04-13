@@ -158,19 +158,19 @@ import { $Level$$Type } from "net.minecraft.world.level.Level"
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $ShapeType<T extends $LivingEntity = $LivingEntity> {
-constructor(entity: T)
-constructor(type: $EntityType$$Type<T>)
 constructor(type: $EntityType$$Type<T>, variantData: integer)
+constructor(type: $EntityType$$Type<T>)
+constructor(entity: T)
 
-public "create"(world: $Level$$Type, player: $Player$$Type): T
 public "create"(world: $Level$$Type): T
+public "create"(world: $Level$$Type, player: $Player$$Type): T
 public static "createTooltipText"<L extends $LivingEntity>(entity: L): $Component
-public static "from"(compound: $CompoundTag$$Type): $ShapeType<any>
-public static "from"<Z extends $LivingEntity>(entityType: $EntityType$$Type<Z>): $ShapeType<Z>
 public static "from"<Z extends $LivingEntity>(entityType: $EntityType$$Type<Z>, variant: integer): $ShapeType<Z>
+public static "from"<Z extends $LivingEntity>(entityType: $EntityType$$Type<Z>): $ShapeType<Z>
 public static "from"<Z extends $LivingEntity>(entity: Z): $ShapeType<Z>
-public static "getAllTypes"<T extends $LivingEntity>(entityType: $EntityType$$Type<T>): $List<$ShapeType<T>>
+public static "from"(compound: $CompoundTag$$Type): $ShapeType<any>
 public static "getAllTypes"(world: $Level$$Type): $List<$ShapeType<any>>
+public static "getAllTypes"<T extends $LivingEntity>(entityType: $EntityType$$Type<T>): $List<$ShapeType<T>>
 public static "getDefaultVariantData"<Z extends $LivingEntity>(type: $EntityType$$Type<Z>): integer
 public "getEntityType"(): $EntityType<$LivingEntity>
 public "getVariantData"(): integer

@@ -7,8 +7,9 @@ import { $Item, $Item$$Type } from "net.minecraft.world.item.Item"
 import { $Block, $Block$$Type } from "net.minecraft.world.level.block.Block"
 import { $Record } from "java.lang.Record"
 import { $PoiType, $PoiType$$Type } from "net.minecraft.world.entity.ai.village.poi.PoiType"
+import { $MixinVillagerProfession } from "forge.net.mca.mixin.MixinVillagerProfession"
 
-export class $VillagerProfession extends $Record {
+export class $VillagerProfession extends $Record implements $MixinVillagerProfession {
 static readonly "ALL_ACQUIRABLE_JOBS": $Predicate<$Holder<$PoiType>>
 static readonly "ARMORER": $VillagerProfession
 static readonly "BUTCHER": $VillagerProfession

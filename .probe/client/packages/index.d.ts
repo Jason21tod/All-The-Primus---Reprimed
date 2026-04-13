@@ -186,6 +186,7 @@
 /// <reference path="net.minecraft.core.d.ts" />
 /// <reference path="net.minecraftforge.network.d.ts" />
 /// <reference path="javax.crypto.d.ts" />
+/// <reference path="forge.net.d.ts" />
 /// <reference path="net.lixir.d.ts" />
 /// <reference path="net.minecraft.client.tutorial.d.ts" />
 /// <reference path="java.util.d.ts" />

@@ -115,11 +115,11 @@ public "canStartSwimming"(): boolean
 public "canSwimInFluidType"(fluidType0: $FluidType$$Type): boolean
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
-public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -128,8 +128,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -187,7 +187,7 @@ public "getType"(): string
 public "getUnhappyCounter"(): integer
 public "getVillagerXp"(): integer
 public static "getWeightedVisionEntityVariants"(list0: $List$$Type<$VisionEntityVariant$$Type>): $ArrayList<$VisionEntityVariant>
-public "handler$hmd000$replaceRandom"(merchantOffers0: $MerchantOffers$$Type, itemListing1s: $VillagerTrades$ItemListing$$Type[], int2: integer, callbackInfo3: $CallbackInfo$$Type, localRef4: $LocalRef$$Type): void
+public "handler$hop000$replaceRandom"(merchantOffers0: $MerchantOffers$$Type, itemListing1s: $VillagerTrades$ItemListing$$Type[], int2: integer, callbackInfo3: $CallbackInfo$$Type, localRef4: $LocalRef$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
@@ -195,8 +195,8 @@ public "isClientSide"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -209,13 +209,13 @@ public "isTrading"(): boolean
 public "isUndead"(): boolean
 public "isWaterCreature"(): boolean
 public "isWeaponSwingInProgress"(): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "modifyAttribute"(attribute: $Attribute$$Type, identifier: string, d: double, operation: $AttributeModifier$Operation$$Type): void
-public "modifyExpressionValue$hmd000$replaceRandom"(randomSource0: $RandomSource$$Type, merchantOffers1: $MerchantOffers$$Type, localRef2: $LocalRef$$Type): $RandomSource
-public "modifyExpressionValue$hmd000$setTierForOffer"(merchantOffer0: $MerchantOffer$$Type): $MerchantOffer
+public "modifyExpressionValue$hop000$replaceRandom"(randomSource0: $RandomSource$$Type, merchantOffers1: $MerchantOffers$$Type, localRef2: $LocalRef$$Type): $RandomSource
+public "modifyExpressionValue$hop000$setTierForOffer"(merchantOffer0: $MerchantOffer$$Type): $MerchantOffer
 public "moveInFluid"(fluidState0: $FluidState$$Type, vec31: $Vec3$$Type, double2: double): boolean
 public "notifyTrade"(merchantOffer0: $MerchantOffer$$Type): void
 public "notifyTradeUpdated"(itemStack0: $ItemStack$$Type): void
@@ -229,8 +229,8 @@ public "playCelebrateSound"(): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readInventoryFromTag"(compoundTag0: $CompoundTag$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -280,8 +280,8 @@ public "sinkInFluid"(fluidType0: $FluidType$$Type): void
 public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $LevelRenderer$$Type): void
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
-public "swing"(): void
 public "swing"(hand: $InteractionHand$$Type): void
+public "swing"(): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
@@ -392,6 +392,7 @@ import { $MemoryModuleType, $MemoryModuleType$$Type } from "net.minecraft.world.
 import { $LevelRenderer$$Type } from "net.minecraft.client.renderer.LevelRenderer"
 import { $InteractionResult } from "net.minecraft.world.InteractionResult"
 import { $InventoryCarrier$$Type } from "net.minecraft.world.entity.npc.InventoryCarrier"
+import { $MixinVillagerEntityInvoker } from "forge.net.mca.mixin.MixinVillagerEntityInvoker"
 import { $PoiType } from "net.minecraft.world.entity.ai.village.poi.PoiType"
 import { $AttributeSupplier$Builder } from "net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder"
 import { $Capability$$Type } from "net.minecraftforge.common.capabilities.Capability"
@@ -408,9 +409,12 @@ import { $Optional } from "java.util.Optional"
 import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 import { $VillagerAccess } from "snownee.kiwi.mixin.VillagerAccess"
 import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
+import { $IVillagerEntity } from "forge.net.mca.ducks.IVillagerEntity"
 import { $Tag$$Type } from "net.minecraft.nbt.Tag"
 import { $EntityType$$Type } from "net.minecraft.world.entity.EntityType"
+import { $MobSpawnType } from "net.minecraft.world.entity.MobSpawnType"
 import { $AzAnimator } from "mod.azure.azurelib.animation.AzAnimator"
+import { $AgeableMob$$Type } from "net.minecraft.world.entity.AgeableMob"
 import { $WeaponAttributes$$Type } from "net.bettercombat.api.WeaponAttributes"
 import { $Supplier$$Type } from "java.util.function.Supplier"
 import { $ServerLevel$$Type } from "net.minecraft.server.level.ServerLevel"
@@ -423,7 +427,7 @@ import { $ImmutableList } from "com.google.common.collect.ImmutableList"
 import { $ReputationEventHandler } from "net.minecraft.world.entity.ReputationEventHandler"
 import { $DamageSource$$Type } from "net.minecraft.world.damagesource.DamageSource"
 import { $MobCategory } from "net.minecraft.world.entity.MobCategory"
-import { $VillagerType, $VillagerType$$Type } from "net.minecraft.world.entity.npc.VillagerType"
+import { $VillagerType$$Type } from "net.minecraft.world.entity.npc.VillagerType"
 import { $VisionEntityVariant, $VisionEntityVariant$$Type } from "net.lixir.vminus.vision.util.VisionEntityVariant"
 import { $LightningBolt$$Type } from "net.minecraft.world.entity.LightningBolt"
 import { $EntityPotionEffectsJS } from "dev.latvian.mods.kubejs.entity.EntityPotionEffectsJS"
@@ -449,7 +453,7 @@ import { $EntityDimensions$$Type } from "net.minecraft.world.entity.EntityDimens
 import { $InteractionHand$$Type } from "net.minecraft.world.InteractionHand"
 import { $Mob$$Type } from "net.minecraft.world.entity.Mob"
 
-export class $Villager extends $AbstractVillager implements $ReputationEventHandler, $VillagerDataHolder, $VillagerAccess, $VillagerEntityAccessor {
+export class $Villager extends $AbstractVillager implements $ReputationEventHandler, $VillagerDataHolder, $VillagerAccess, $VillagerEntityAccessor, $IVillagerEntity, $MixinVillagerEntityInvoker {
 static readonly "BREEDING_FOOD_THRESHOLD": integer
 static "FOOD_POINTS": $Map<$Item, integer>
 static "MEMORY_TYPES": $ImmutableList<$MemoryModuleType<any>>
@@ -476,11 +480,11 @@ public "canSwimInFluidType"(fluidType0: $FluidType$$Type): boolean
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public static "createAttributes"(): $AttributeSupplier$Builder
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
-public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "eatAndDigestFood"(): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -490,8 +494,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -500,6 +504,7 @@ public "getAttributeBaseValue"(attribute: $Attribute$$Type): double
 public "getAttributeTotalValue"(attribute: $Attribute$$Type): double
 public "getBlock"(): $BlockContainerJS
 public "getBrain"(): $Brain<$Villager>
+public "getBreedOffspring"(serverLevel0: $ServerLevel$$Type, ageableMob1: $AgeableMob$$Type): $Villager
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
@@ -541,16 +546,16 @@ public "getReachDistance"(): double
 public "getScriptType"(): $ScriptType
 public "getServer"(): $MinecraftServer
 public "getSoundFromFluidType"(fluidType0: $FluidType$$Type, soundAction1: $SoundAction$$Type): $SoundEvent
+public "getSpawnReason"(): $MobSpawnType
 public "getStepHeight"(): float
 public "getTeamId"(): string
 public "getTotalMovementSpeed"(): double
 public "getType"(): string
-public "getVariant"(): $VillagerType
 public "getVillagerData"(): $VillagerData
 public static "getWeightedVisionEntityVariants"(list0: $List$$Type<$VisionEntityVariant$$Type>): $ArrayList<$VisionEntityVariant>
 public "gossip"(serverLevel0: $ServerLevel$$Type, villager1: $Villager$$Type, long2: long): void
-public "handler$iab000$resetRestocks"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$iab000$restock"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$icn000$resetRestocks"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$icn000$restock"(callbackInfo0: $CallbackInfo$$Type): void
 public "handler$znl000$goetyThunderHit"(serverLevel0: $ServerLevel$$Type, lightningBolt1: $LightningBolt$$Type, callbackInfo2: $CallbackInfo$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hasExcessFood"(): boolean
@@ -561,8 +566,8 @@ public "isChasing"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -574,8 +579,8 @@ public "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
 public "isUndead"(): boolean
 public "isWaterCreature"(): boolean
 public "isWeaponSwingInProgress"(): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "mobInteract"(player0: $Player$$Type, interactionHand1: $InteractionHand$$Type): $InteractionResult
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
@@ -590,8 +595,8 @@ public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "playWorkSound"(): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readInventoryFromTag"(compoundTag0: $CompoundTag$$Type): void
 public "refreshBrain"(serverLevel0: $ServerLevel$$Type): void
 public "releasePoi"(memoryModuleType0: $MemoryModuleType$$Type<$GlobalPos$$Type>): void
@@ -649,8 +654,8 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "spawnGolemIfNeeded"(serverLevel0: $ServerLevel$$Type, long1: long, int2: integer): void
-public "swing"(): void
 public "swing"(hand: $InteractionHand$$Type): void
+public "swing"(): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
@@ -687,11 +692,11 @@ get "profile"(): $GameProfile
 get "reachDistance"(): double
 get "scriptType"(): $ScriptType
 get "server"(): $MinecraftServer
+get "spawnReason"(): $MobSpawnType
 get "stepHeight"(): float
 get "teamId"(): string
 get "totalMovementSpeed"(): double
 get "type"(): string
-get "variant"(): $VillagerType
 get "villagerData"(): $VillagerData
 get "ambientCreature"(): boolean
 get "animal"(): boolean
@@ -740,11 +745,9 @@ import { $VariantHolder } from "net.minecraft.world.entity.VariantHolder"
 import { $VillagerType, $VillagerType$$Type } from "net.minecraft.world.entity.npc.VillagerType"
 
 export interface $VillagerDataHolder extends $VariantHolder<$VillagerType> {
-"getVariant"(): $VillagerType
 "getVillagerData"(): $VillagerData
 "setVariant"(villagerType0: $VillagerType$$Type): void
 "setVillagerData"(villagerData0: $VillagerData$$Type): void
-get "variant"(): $VillagerType
 get "villagerData"(): $VillagerData
 set "variant"(value: $VillagerType$$Type)
 set "villagerData"(value: $VillagerData$$Type)
@@ -899,11 +902,11 @@ public "canStartSwimming"(): boolean
 public "canSwimInFluidType"(fluidType0: $FluidType$$Type): boolean
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
-public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -912,8 +915,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -973,8 +976,8 @@ public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -986,8 +989,8 @@ public "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
 public "isUndead"(): boolean
 public "isWaterCreature"(): boolean
 public "isWeaponSwingInProgress"(): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "mobInteract"(player0: $Player$$Type, interactionHand1: $InteractionHand$$Type): $InteractionResult
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
@@ -1000,8 +1003,8 @@ public static "pickUpItem"(mob0: $Mob$$Type, inventoryCarrier1: $InventoryCarrie
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readInventoryFromTag"(compoundTag0: $CompoundTag$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -1050,8 +1053,8 @@ public "sinkInFluid"(fluidType0: $FluidType$$Type): void
 public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $LevelRenderer$$Type): void
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
-public "swing"(): void
 public "swing"(hand: $InteractionHand$$Type): void
+public "swing"(): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void

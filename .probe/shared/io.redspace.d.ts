@@ -101,9 +101,9 @@ public "canWalkOnPowderedSnow"(itemStack0: $ItemStack$$Type, livingEntity1: $Liv
 public "createEntity"(level0: $Level$$Type, entity1: $Entity$$Type, itemStack2: $ItemStack$$Type): $Entity
 /** @deprecated */
 public "curioAnimate"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "curioBreak"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
 public "curioBreak"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): void
-public "curioBreak"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
 public "curioTick"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
 public "curioTick"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
@@ -179,24 +179,24 @@ public "onDestroyed"(itemEntity0: $ItemEntity$$Type, damageSource1: $DamageSourc
 public "onDroppedByPlayer"(itemStack0: $ItemStack$$Type, player1: $Player$$Type): boolean
 public "onEntityItemUpdate"(itemStack0: $ItemStack$$Type, itemEntity1: $ItemEntity$$Type): boolean
 public "onEntitySwing"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): boolean
-public "onEquip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "onEquip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "onEquip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 public "onEquipFromUse"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 public "onHorseArmorTick"(itemStack0: $ItemStack$$Type, level1: $Level$$Type, mob2: $Mob$$Type): void
 public "onInventoryTick"(itemStack0: $ItemStack$$Type, level1: $Level$$Type, player2: $Player$$Type, int3: integer, int4: integer): void
 public "onItemUseFirst"(itemStack0: $ItemStack$$Type, useOnContext1: $UseOnContext$$Type): $InteractionResult
 public "onLeftClickEntity"(itemStack0: $ItemStack$$Type, player1: $Player$$Type, entity2: $Entity$$Type): boolean
 public "onStopUsing"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type, int2: integer): void
-public "onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "onUnequip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "playRightClickEquipSound"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type): void
 public "readShareTag"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): void
-public "readSyncData"(slotContext0: $SlotContext$$Type, compoundTag1: $CompoundTag$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "readSyncData"(compoundTag0: $CompoundTag$$Type, itemStack1: $ItemStack$$Type): void
+public "readSyncData"(slotContext0: $SlotContext$$Type, compoundTag1: $CompoundTag$$Type, itemStack2: $ItemStack$$Type): void
 public "removeAttribute"(attribute: $Attribute$$Type, uuid: $UUID$$Type): void
 public "setArmorKnockbackResistance"(knockbackResistance: double): void
 public "setArmorProtection"(armorProtection: double): void
@@ -214,9 +214,9 @@ public "showAttributesTooltip"(string0: string, itemStack1: $ItemStack$$Type): b
 public "simpleTextureOverride"(itemStack0: $ItemStack$$Type): $Optional<$ResourceLocation>
 public "vMinus$update"(): void
 public "withAttribute"(holder0: $Holder$$Type<$Attribute$$Type>, double1: double): $SpellBook
+public "writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 /** @deprecated */
 public "writeSyncData"(itemStack0: $ItemStack$$Type): $CompoundTag
-public "writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 get "creativeTab"(): string
 get "digSpeed"(): float
 get "maxSpellSlots"(): integer
@@ -276,8 +276,8 @@ public "getSpellSelection"(): $SpellSelection
 public "getSpinAttackType"(): $SpinAttackType
 public "isCasting"(): boolean
 public "isSpellLearned"(abstractSpell0: $AbstractSpell$$Type): boolean
-public "learnSpell"(abstractSpell0: $AbstractSpell$$Type): void
 public "learnSpell"(abstractSpell0: $AbstractSpell$$Type, boolean1: boolean): void
+public "learnSpell"(abstractSpell0: $AbstractSpell$$Type): void
 public "loadNBTData"(compoundTag0: $CompoundTag$$Type, provider1: $HolderLookup$Provider$$Type): void
 public static "read"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $SyncedSpellData
 public "saveNBTData"(compoundTag0: $CompoundTag$$Type, provider1: $HolderLookup$Provider$$Type): void
@@ -1009,9 +1009,9 @@ public "canWalkOnPowderedSnow"(itemStack0: $ItemStack$$Type, livingEntity1: $Liv
 public "createEntity"(level0: $Level$$Type, entity1: $Entity$$Type, itemStack2: $ItemStack$$Type): $Entity
 /** @deprecated */
 public "curioAnimate"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "curioBreak"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
 public "curioBreak"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): void
-public "curioBreak"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
 public "curioTick"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
 public "curioTick"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
@@ -1085,24 +1085,24 @@ public "onDestroyed"(itemEntity0: $ItemEntity$$Type, damageSource1: $DamageSourc
 public "onDroppedByPlayer"(itemStack0: $ItemStack$$Type, player1: $Player$$Type): boolean
 public "onEntityItemUpdate"(itemStack0: $ItemStack$$Type, itemEntity1: $ItemEntity$$Type): boolean
 public "onEntitySwing"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): boolean
-public "onEquip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "onEquip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "onEquip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 public "onEquipFromUse"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 public "onHorseArmorTick"(itemStack0: $ItemStack$$Type, level1: $Level$$Type, mob2: $Mob$$Type): void
 public "onInventoryTick"(itemStack0: $ItemStack$$Type, level1: $Level$$Type, player2: $Player$$Type, int3: integer, int4: integer): void
 public "onItemUseFirst"(itemStack0: $ItemStack$$Type, useOnContext1: $UseOnContext$$Type): $InteractionResult
 public "onLeftClickEntity"(itemStack0: $ItemStack$$Type, player1: $Player$$Type, entity2: $Entity$$Type): boolean
 public "onStopUsing"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type, int2: integer): void
-public "onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "onUnequip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "playRightClickEquipSound"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type): void
 public "readShareTag"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): void
-public "readSyncData"(slotContext0: $SlotContext$$Type, compoundTag1: $CompoundTag$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "readSyncData"(compoundTag0: $CompoundTag$$Type, itemStack1: $ItemStack$$Type): void
+public "readSyncData"(slotContext0: $SlotContext$$Type, compoundTag1: $CompoundTag$$Type, itemStack2: $ItemStack$$Type): void
 public "removeAttribute"(attribute: $Attribute$$Type, uuid: $UUID$$Type): void
 public "setArmorKnockbackResistance"(knockbackResistance: double): void
 public "setArmorProtection"(armorProtection: double): void
@@ -1120,9 +1120,9 @@ public "showAttributesTooltip"(string0: string, itemStack1: $ItemStack$$Type): b
 public "vMinus$update"(): void
 public "withAttributes"(string0: string, ...attributeContainer1s: $AttributeContainer$$Type[]): $CurioBaseItem
 public "withSpellbookAttributes"(...attributeContainer0s: $AttributeContainer$$Type[]): $CurioBaseItem
+public "writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 /** @deprecated */
 public "writeSyncData"(itemStack0: $ItemStack$$Type): $CompoundTag
-public "writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 get "creativeTab"(): string
 get "digSpeed"(): float
 get "mod"(): string
@@ -1264,9 +1264,7 @@ export abstract class $ICapeDataProvider$$Static implements $ICapeDataProvider {
 }
 
 declare module "io.redspace.ironsspellbooks.entity.mobs.goals.WarlockAttackGoal" {
-import { $List$$Type } from "java.util.List"
 import { $IMagicEntity$$Type } from "io.redspace.ironsspellbooks.api.entity.IMagicEntity"
-import { $AbstractSpell$$Type } from "io.redspace.ironsspellbooks.api.spells.AbstractSpell"
 import { $WizardAttackGoal } from "io.redspace.ironsspellbooks.entity.mobs.goals.WizardAttackGoal"
 
 export class $WarlockAttackGoal extends $WizardAttackGoal {
@@ -1278,8 +1276,7 @@ public "meleeRange"(): float
 public "setMeleeAttackInverval"(int0: integer, int1: integer): $WarlockAttackGoal
 public "setMeleeBias"(float0: float, float1: float): $WarlockAttackGoal
 public "setMeleeMovespeedModifier"(float0: float): $WarlockAttackGoal
-public "setSingleUseSpell"(abstractSpell0: $AbstractSpell$$Type, int1: integer, int2: integer, int3: integer, int4: integer): $WarlockAttackGoal
-public "setSpells"(list0: $List$$Type<$AbstractSpell$$Type>, list1: $List$$Type<$AbstractSpell$$Type>, list2: $List$$Type<$AbstractSpell$$Type>, list3: $List$$Type<$AbstractSpell$$Type>): $WarlockAttackGoal
+public "setSpellQuality"(float0: float, float1: float): $WarlockAttackGoal
 set "meleeMovespeedModifier"(value: float)
 }
 }
@@ -1623,8 +1620,8 @@ import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent
 
 /** @deprecated */
 export class $SpellSummonEvent<K extends $LivingEntity = $LivingEntity> extends $LivingEvent {
-constructor(livingEntity0: $LivingEntity$$Type, k1: K, resourceLocation2: $ResourceLocation$$Type, int3: integer)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, k1: K, resourceLocation2: $ResourceLocation$$Type, int3: integer)
 
 public "getCaster"(): $LivingEntity
 public "getCreature"(): K
@@ -1689,8 +1686,8 @@ import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent"
 
 export class $SpellDamageEvent extends $LivingEvent {
-constructor()
 constructor(livingEntity0: $LivingEntity$$Type, float1: float, spellDamageSource2: $SpellDamageSource$$Type)
+constructor()
 
 public "getAmount"(): float
 public "getOriginalAmount"(): float
@@ -1718,9 +1715,9 @@ static readonly "SPELL_ID": string
 constructor()
 
 public "addCooldown"(string0: string, int1: integer): void
+public "addCooldown"(abstractSpell0: $AbstractSpell$$Type, int1: integer, int2: integer): void
 public "addCooldown"(string0: string, int1: integer, int2: integer): void
 public "addCooldown"(abstractSpell0: $AbstractSpell$$Type, int1: integer): void
-public "addCooldown"(abstractSpell0: $AbstractSpell$$Type, int1: integer, int2: integer): void
 public "clearCooldowns"(): void
 public "decrementCooldown"(cooldownInstance0: $CooldownInstance$$Type, int1: integer): boolean
 public "getCooldownPercent"(abstractSpell0: $AbstractSpell$$Type): float
@@ -1768,10 +1765,10 @@ import { $MagicData$$Type } from "io.redspace.ironsspellbooks.api.magic.MagicDat
 import { $ListTag, $ListTag$$Type } from "net.minecraft.nbt.ListTag"
 
 export class $PlayerRecasts {
-constructor()
-constructor(serverPlayer0: $ServerPlayer$$Type)
 /** Client only, do not use in server scripts */
 constructor(map0: $Map$$Type<string, $RecastInstance$$Type>)
+constructor(serverPlayer0: $ServerPlayer$$Type)
+constructor()
 
 public "addRecast"(recastInstance0: $RecastInstance$$Type, magicData1: $MagicData$$Type): boolean
 public "decrementRecastCount"(string0: string): void
@@ -1782,8 +1779,8 @@ public "getAllRecasts"(): $List<$RecastInstance>
 public "getRecastInstance"(string0: string): $RecastInstance
 public "getRemainingRecastsForSpell"(abstractSpell0: $AbstractSpell$$Type): integer
 public "getRemainingRecastsForSpell"(string0: string): integer
-public "hasRecastForSpell"(string0: string): boolean
 public "hasRecastForSpell"(abstractSpell0: $AbstractSpell$$Type): boolean
+public "hasRecastForSpell"(string0: string): boolean
 public "hasRecastsActive"(): boolean
 public "isRecastActive"(recastInstance0: $RecastInstance$$Type): boolean
 public "loadNBTData"(listTag0: $ListTag$$Type, provider1: $HolderLookup$Provider$$Type): void
@@ -2207,8 +2204,8 @@ static readonly "random": $RandomSource
 
 constructor()
 
-public static "addFreezeTicks"(livingEntity0: $LivingEntity$$Type, int1: integer, int2: integer): void
 public static "addFreezeTicks"(livingEntity0: $LivingEntity$$Type, int1: integer): void
+public static "addFreezeTicks"(livingEntity0: $LivingEntity$$Type, int1: integer, int2: integer): void
 public static "applyCooldownReduction"(int0: integer, livingEntity1: $LivingEntity$$Type): integer
 public static "canBeUpgraded"(itemStack0: $ItemStack$$Type): boolean
 public static "canHitWithRaycast"(entity0: $Entity$$Type): boolean
@@ -2220,12 +2217,12 @@ public static "createTremorBlock"(level0: $Level$$Type, blockPos1: $BlockPos$$Ty
 public static "createTremorBlockWithState"(level0: $Level$$Type, blockState1: $BlockState$$Type, blockPos2: $BlockPos$$Type, float3: float): void
 public static "deconstructRGB"(int0: integer): $Vector3f
 public static "doMeleeAttack"(mob0: $Mob$$Type, entity1: $Entity$$Type, damageSource2: $DamageSource$$Type): boolean
-public static "doMobBreakSuffocatingBlocks"(livingEntity0: $LivingEntity$$Type): void
 public static "doMobBreakSuffocatingBlocks"(livingEntity0: $LivingEntity$$Type, vec31: $Vec3$$Type): void
+public static "doMobBreakSuffocatingBlocks"(livingEntity0: $LivingEntity$$Type): void
 public static "enchantmentFromKey"(registryAccess0: $RegistryAccess$$Type, resourceKey1: $ResourceKey$$Type<$Enchantment>): $Holder<$Enchantment>
 public static "findRelativeGroundLevel"(level0: $Level$$Type, vec31: $Vec3$$Type, int2: integer): float
-public static "getAngle"(double0: double, double1: double, double2: double, double3: double): float
 public static "getAngle"(vec20: $Vec2$$Type, vec21: $Vec2$$Type): float
+public static "getAngle"(double0: double, double1: double, double2: double, double3: double): float
 public static "getEnchantmentLevel"(level0: $Level$$Type, itemStack1: $ItemStack$$Type, enchantment2: $Enchantment$$Type): integer
 public static "getPlayerSpellbookStack"(player0: $Player$$Type): $ItemStack
 public static "getPositionFromEntityLookDirection"(entity0: $Entity$$Type, float1: float): $Vec3
@@ -2240,10 +2237,10 @@ public static "getWeaponDamage"(livingEntity0: $LivingEntity$$Type): float
 public static "getWeaponDamage"(livingEntity0: $LivingEntity$$Type, mobType1: $MobType$$Type): float
 public static "handleShriving"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "handleSpellTeleport"(abstractSpell0: $AbstractSpell$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type): boolean
-public static "hasLineOfSight"(level0: $Level$$Type, entity1: $Entity$$Type, entity2: $Entity$$Type, boolean3: boolean): boolean
 public static "hasLineOfSight"(level0: $Level$$Type, vec31: $Vec3$$Type, vec32: $Vec3$$Type, boolean3: boolean): boolean
-public static "intPow"(float0: float, int1: integer): float
+public static "hasLineOfSight"(level0: $Level$$Type, entity1: $Entity$$Type, entity2: $Entity$$Type, boolean3: boolean): boolean
 public static "intPow"(double0: double, int1: integer): double
+public static "intPow"(float0: float, int1: integer): float
 public static "isSameItemSameComponentsIgnoreDurability"(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type): boolean
 public static "lerp"(float0: float, vec31: $Vec3$$Type, vec32: $Vec3$$Type): $Vec3
 public static "loadAllItems"(compoundTag0: $CompoundTag$$Type, nonNullList1: $NonNullList$$Type<$ItemStack$$Type>, string2: string): void
@@ -2251,20 +2248,20 @@ public static "moveToRelativeGroundLevel"(level0: $Level$$Type, vec31: $Vec3$$Ty
 public static "moveToRelativeGroundLevel"(level0: $Level$$Type, vec31: $Vec3$$Type, int2: integer, int3: integer): $Vec3
 public static "packRGB"(vector3f0: $Vector3f$$Type): integer
 public static "particleTrail"(level0: $Level$$Type, vec31: $Vec3$$Type, vec32: $Vec3$$Type, particleOptions3: $ParticleOptions$$Type): void
-public static "performTaunt"(livingEntity0: $LivingEntity$$Type, list1: $List$$Type<$Entity$$Type>): void
 public static "performTaunt"(livingEntity0: $LivingEntity$$Type, float1: float, predicate2: $Predicate$$Type<$Entity$$Type>): void
+public static "performTaunt"(livingEntity0: $LivingEntity$$Type, list1: $List$$Type<$Entity$$Type>): void
+public static "preCastTargetHelper"(level0: $Level$$Type, livingEntity1: $LivingEntity$$Type, magicData2: $MagicData$$Type, abstractSpell3: $AbstractSpell$$Type, int4: integer, float5: float, boolean6: boolean, predicate7: $Predicate$$Type<$LivingEntity$$Type>): boolean
 public static "preCastTargetHelper"(level0: $Level$$Type, livingEntity1: $LivingEntity$$Type, magicData2: $MagicData$$Type, abstractSpell3: $AbstractSpell$$Type, int4: integer, float5: float): boolean
 public static "preCastTargetHelper"(level0: $Level$$Type, livingEntity1: $LivingEntity$$Type, magicData2: $MagicData$$Type, abstractSpell3: $AbstractSpell$$Type, int4: integer, float5: float, boolean6: boolean): boolean
-public static "preCastTargetHelper"(level0: $Level$$Type, livingEntity1: $LivingEntity$$Type, magicData2: $MagicData$$Type, abstractSpell3: $AbstractSpell$$Type, int4: integer, float5: float, boolean6: boolean, predicate7: $Predicate$$Type<$LivingEntity$$Type>): boolean
 public static "raycastForBlock"(level0: $Level$$Type, vec31: $Vec3$$Type, vec32: $Vec3$$Type, fluid3: $ClipContext$Fluid$$Type): $BlockHitResult
-/** @deprecated */
-public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean, float5: float, predicate6: $Predicate$$Type<$Entity$$Type>): $HitResult
 /** @deprecated */
 public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, float2: float, boolean3: boolean, float4: float): $HitResult
 /** @deprecated */
-public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean): $HitResult
-/** @deprecated */
 public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, float2: float, boolean3: boolean): $HitResult
+/** @deprecated */
+public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean, float5: float, predicate6: $Predicate$$Type<$Entity$$Type>): $HitResult
+/** @deprecated */
+public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean): $HitResult
 /** @deprecated */
 public static "raycastForEntityOfClass"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean, class5: $Class$$Type<$Entity$$Type>): $HitResult
 public static "releaseUsingHelper"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type, int2: integer): void
@@ -2272,8 +2269,8 @@ public static "rotationBetweenVectors"(vector3f0: $Vector3f$$Type, vector3f1: $V
 public static "rotationFromDirection"(vec30: $Vec3$$Type): $Vec2
 public static "saveAllItems"(compoundTag0: $CompoundTag$$Type, nonNullList1: $NonNullList$$Type<$ItemStack$$Type>, string2: string): $CompoundTag
 public static "sendTargetedNotification"(serverPlayer0: $ServerPlayer$$Type, livingEntity1: $LivingEntity$$Type, abstractSpell2: $AbstractSpell$$Type): void
-public static "serverSideCancelCast"(serverPlayer0: $ServerPlayer$$Type, boolean1: boolean): void
 public static "serverSideCancelCast"(serverPlayer0: $ServerPlayer$$Type): void
+public static "serverSideCancelCast"(serverPlayer0: $ServerPlayer$$Type, boolean1: boolean): void
 public static "serverSideInitiateCast"(serverPlayer0: $ServerPlayer$$Type): boolean
 public static "serverSideInitiateQuickCast"(serverPlayer0: $ServerPlayer$$Type, int1: integer): boolean
 public static "setPlayerSpellbookStack"(player0: $Player$$Type, itemStack1: $ItemStack$$Type): void
@@ -2447,21 +2444,21 @@ import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resour
 import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $Component, $Component$$Type } from "net.minecraft.network.chat.Component"
 import { $Item, $Item$$Type } from "net.minecraft.world.item.Item"
+import { $Supplier$$Type } from "java.util.function.Supplier"
 import { $ResourceKey, $ResourceKey$$Type } from "net.minecraft.resources.ResourceKey"
 import { $DamageType } from "net.minecraft.world.damagesource.DamageType"
-import { $Supplier$$Type } from "java.util.function.Supplier"
-import { $LazyOptional$$Type } from "net.minecraftforge.common.util.LazyOptional"
 import { $Attribute, $Attribute$$Type } from "net.minecraft.world.entity.ai.attributes.Attribute"
+import { $LazyOptional$$Type } from "net.minecraftforge.common.util.LazyOptional"
 import { $TagKey, $TagKey$$Type } from "net.minecraft.tags.TagKey"
 import { $SoundEvent, $SoundEvent$$Type } from "net.minecraft.sounds.SoundEvent"
 import { $Vector3f } from "org.joml.Vector3f"
 import { $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 
 export class $SchoolType {
-/** @deprecated */
-constructor(resourceLocation0: $ResourceLocation$$Type, tagKey1: $TagKey$$Type<$Item$$Type>, component2: $Component$$Type, lazyOptional3: $LazyOptional$$Type<$Attribute$$Type>, lazyOptional4: $LazyOptional$$Type<$Attribute$$Type>, lazyOptional5: $LazyOptional$$Type<$SoundEvent$$Type>, resourceKey6: $ResourceKey$$Type<$DamageType>)
 constructor(resourceLocation0: $ResourceLocation$$Type, tagKey1: $TagKey$$Type<$Item$$Type>, component2: $Component$$Type, supplier3: $Supplier$$Type<$Attribute>, supplier4: $Supplier$$Type<$Attribute>, supplier5: $Supplier$$Type<$SoundEvent>, resourceKey6: $ResourceKey$$Type<$DamageType>)
 constructor(resourceLocation0: $ResourceLocation$$Type, tagKey1: $TagKey$$Type<$Item$$Type>, component2: $Component$$Type, supplier3: $Supplier$$Type<$Attribute>, supplier4: $Supplier$$Type<$Attribute>, supplier5: $Supplier$$Type<$SoundEvent>, resourceKey6: $ResourceKey$$Type<$DamageType>, boolean7: boolean, boolean8: boolean)
+/** @deprecated */
+constructor(resourceLocation0: $ResourceLocation$$Type, tagKey1: $TagKey$$Type<$Item$$Type>, component2: $Component$$Type, lazyOptional3: $LazyOptional$$Type<$Attribute$$Type>, lazyOptional4: $LazyOptional$$Type<$Attribute$$Type>, lazyOptional5: $LazyOptional$$Type<$SoundEvent$$Type>, resourceKey6: $ResourceKey$$Type<$DamageType>)
 
 public "getCastSound"(): $SoundEvent
 public "getDamageType"(): $ResourceKey<$DamageType>
@@ -2801,7 +2798,6 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "isEmpty"(): boolean
 public "makeSelection"(string0: string, int1: integer): void
 public "readFromBuffer"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
-public "serializeNBT"(): $CompoundTag
 public "writeToBuffer"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 get "equipmentSlot"(): string
 set "equipmentSlot"(value: string)
@@ -2884,8 +2880,8 @@ public "doRicochet"(hitResult0: $HitResult$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -2934,8 +2930,8 @@ public "isAnimal"(): boolean
 public "isCursorHoming"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -2947,8 +2943,8 @@ public "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
 public "isWaterCreature"(): boolean
 public static "majruszlibrary$getProjectileArrow"(entity0: $Entity$$Type): $ItemStack
 public static "majruszlibrary$getProjectileWeapon"(entity0: $Entity$$Type): $ItemStack
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
@@ -2956,8 +2952,8 @@ public "onAntiMagic"(magicData0: $MagicData$$Type): void
 public "pierceOrDiscard"(): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readSpawnData"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer

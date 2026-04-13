@@ -258,8 +258,8 @@ export interface $IGunModifier {
 "additionalProjectileGravity"(): double
 "criticalChance"(): float
 "isMeleeOnly"(): boolean
-"kickModifier"(itemStack0: $ItemStack$$Type): float
 "kickModifier"(): float
+"kickModifier"(itemStack0: $ItemStack$$Type): float
 "modifyAimDownSightSpeed"(double0: double): double
 "modifyAmmoCapacity"(int0: integer): integer
 "modifyDamageFalloffEnd"(float0: float): float
@@ -660,8 +660,8 @@ public "getAttachmentPosition"(type0: $IAttachment$Type$$Type): $Gun$ScaledPosit
 public "getBaseGripType"(): $GripType
 public static "getBurstCooldown"(itemStack0: $ItemStack$$Type): integer
 public static "getBurstCount"(itemStack0: $ItemStack$$Type): integer
-public "getCurrentAmmoItem"(): $Item
 public "getCurrentAmmoItem"(itemStack0: $ItemStack$$Type): $Item
+public "getCurrentAmmoItem"(): $Item
 public "getDisplay"(): $Gun$Display
 public "getEditorLabel"(): $Component
 public "getEditorWidgets"(list0: $List$$Type<$Pair$$Type<$Component$$Type, $Supplier$$Type<$IDebugWidget$$Type>>>): void
@@ -672,8 +672,8 @@ public "getIdealAttackRange"(): double
 public static "getMaxAmmo"(itemStack0: $ItemStack$$Type): integer
 public "getMinAttackRange"(): double
 public "getModules"(): $Gun$Modules
-public "getProjectile"(itemStack0: $ItemStack$$Type): $Gun$Projectile
 public "getProjectile"(): $Gun$Projectile
+public "getProjectile"(itemStack0: $ItemStack$$Type): $Gun$Projectile
 public "getReloads"(): $Gun$Reloads
 public static "getReserveAmmoCount"(player0: $Player$$Type, item1: $Item$$Type): integer
 public static "getScope"(itemStack0: $ItemStack$$Type): $Scope
@@ -696,6 +696,7 @@ public static "removeMagazineStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "removeScopeStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "removeStockStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "removeUnderBarrelStack"(itemStack0: $ItemStack$$Type): $ItemStack
+public "serializeNBT"(): $CompoundTag
 public "toJsonObject"(): $JsonObject
 get "baseGripType"(): $GripType
 get "currentAmmoItem"(): $Item
@@ -790,8 +791,8 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -843,8 +844,8 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -854,16 +855,16 @@ public "isPeacefulCreature"(): boolean
 public "isPlayer"(): boolean
 public "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
 public "isWaterCreature"(): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onHit"(hitResult0: $HitResult$$Type, vec31: $Vec3$$Type, vec32: $Vec3$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readSpawnData"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -1229,8 +1230,8 @@ public "getImpactEffect"(): $ResourceLocation
 public "getImpactEffectAmplifier"(): integer
 public "getImpactEffectChance"(): float
 public "getImpactEffectDuration"(): integer
-public "getItem"(general0: $Gun$General$$Type): $Item
 public "getItem"(): $Item
+public "getItem"(general0: $Gun$General$$Type): $Item
 public "getKnockbackStrength"(): float
 public "getLife"(): integer
 public "getPlayerKnockBackStrength"(): float
@@ -1249,6 +1250,7 @@ public "isDamageReduceOverLife"(): boolean
 public "isGravity"(): boolean
 public "isSoulFire"(): boolean
 public "isVisible"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setCasingType"(resourceLocation0: $ResourceLocation$$Type): void
 public "setDamage"(float0: float): void
 public "setEnergyUse"(int0: integer): void
@@ -1330,6 +1332,7 @@ public "getMagazine"(): $Gun$ScaledPositioned
 public "getScope"(): $Gun$ScaledPositioned
 public "getStock"(): $Gun$ScaledPositioned
 public "getUnderBarrel"(): $Gun$ScaledPositioned
+public "serializeNBT"(): $CompoundTag
 public "toJsonObject"(): $JsonObject
 get "barrel"(): $Gun$ScaledPositioned
 get "magazine"(): $Gun$ScaledPositioned
@@ -1380,7 +1383,6 @@ public "getReloadItem"(): $Item
 public "getReloadTimer"(): integer
 public "getReloadType"(): $ReloadType
 public static "hasInfiniteAmmo"(itemStack0: $ItemStack$$Type): boolean
-public "serializeNBT"(): $CompoundTag
 public "setByproductChance"(float0: float): void
 public "setReloadByproduct"(resourceLocation0: $ResourceLocation$$Type): void
 public "shouldGiveByproduct"(randomSource0: $RandomSource$$Type, itemStack1: $ItemStack$$Type): boolean

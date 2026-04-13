@@ -1229,7 +1229,7 @@ public "getSoundType"(blockState0: $BlockState$$Type, levelReader1: $LevelReader
 public "getStateAtViewpoint"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, vec33: $Vec3$$Type): $BlockState
 public "getToolModifiedState"(blockState0: $BlockState$$Type, useOnContext1: $UseOnContext$$Type, toolAction2: $ToolAction$$Type, boolean3: boolean): $BlockState
 public "getWeakChanges"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
-public "handler$bnn001$vMinus$canSurvive"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
+public "handler$bop001$vMinus$canSurvive"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
 public "hidesNeighborFace"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, direction4: $Direction$$Type): boolean
 public "isBed"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): boolean
 public "isBonemealSuccess"(level0: $Level$$Type, randomSource1: $RandomSource$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
@@ -7275,8 +7275,8 @@ public "isSlimeBlock"(blockState0: $BlockState$$Type): boolean
 public "isStickyBlock"(blockState0: $BlockState$$Type): boolean
 public "isValidSpawn"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, type3: $SpawnPlacements$Type$$Type, entityType4: $EntityType$$Type<any>): boolean
 public "makesOpenTrapdoorAboveClimbable"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
-public "modifyExpressionValue$hpm000$getCrawlLimit"(int0: integer): integer
-public "modifyExpressionValue$hpm000$getDrainLimit"(int0: integer): integer
+public "modifyExpressionValue$ici000$getCrawlLimit"(int0: integer): integer
+public "modifyExpressionValue$ici000$getDrainLimit"(int0: integer): integer
 public static "of"(block0: $Block$$Type): $BlockDefinitionDuck
 public "onBlockExploded"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, explosion3: $Explosion$$Type): void
 public "onBlockStateChange"(levelReader0: $LevelReader$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type): void
@@ -8391,7 +8391,7 @@ public "getSoundType"(blockState0: $BlockState$$Type, levelReader1: $LevelReader
 public "getStateAtViewpoint"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, vec33: $Vec3$$Type): $BlockState
 public "getToolModifiedState"(blockState0: $BlockState$$Type, useOnContext1: $UseOnContext$$Type, toolAction2: $ToolAction$$Type, boolean3: boolean): $BlockState
 public "getWeakChanges"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
-public "handler$bnm000$vMinus$canSurvive"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
+public "handler$boo000$vMinus$canSurvive"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
 public "hidesNeighborFace"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, direction4: $Direction$$Type): boolean
 public "isBed"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): boolean
 public "isBurning"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
@@ -9749,7 +9749,7 @@ public "getStateForAge"(int0: integer): $BlockState
 public "getToolModifiedState"(blockState0: $BlockState$$Type, useOnContext1: $UseOnContext$$Type, toolAction2: $ToolAction$$Type, boolean3: boolean): $BlockState
 public "getWeakChanges"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
 public "growCrops"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type): void
-public "handler$bmj000$mayPlaceOn"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
+public "handler$bnl000$mayPlaceOn"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
 public "hidesNeighborFace"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, direction4: $Direction$$Type): boolean
 public "isBed"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): boolean
 public "isBonemealSuccess"(level0: $Level$$Type, randomSource1: $RandomSource$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
@@ -16498,8 +16498,8 @@ public "getEnchantPowerBonus"(blockState0: $BlockState$$Type, levelReader1: $Lev
 public "getExpDrop"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, randomSource2: $RandomSource$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): integer
 public "getExplosionResistance"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, explosion3: $Explosion$$Type): float
 public "getFireSpreadSpeed"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, direction3: $Direction$$Type): integer
-public static "getFirst"(block0: $Block$$Type): $Block
 public static "getFirst"(blockState0: $BlockState$$Type): $BlockState
+public static "getFirst"(block0: $Block$$Type): $Block
 public "getFlammability"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, direction3: $Direction$$Type): integer
 public "getFriction"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): float
 public "getLightEmission"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): integer
@@ -20493,7 +20493,7 @@ public "getSoundType"(blockState0: $BlockState$$Type, levelReader1: $LevelReader
 public "getStateAtViewpoint"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, vec33: $Vec3$$Type): $BlockState
 public "getToolModifiedState"(blockState0: $BlockState$$Type, useOnContext1: $UseOnContext$$Type, toolAction2: $ToolAction$$Type, boolean3: boolean): $BlockState
 public "getWeakChanges"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
-public "handler$bmk001$mayPlaceOn"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
+public "handler$bnm001$mayPlaceOn"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
 public "hidesNeighborFace"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, direction4: $Direction$$Type): boolean
 public "isBed"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): boolean
 public "isBonemealSuccess"(level0: $Level$$Type, randomSource1: $RandomSource$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
@@ -23042,9 +23042,9 @@ static readonly "HALF": $EnumProperty<$Half>
 static readonly "SHAPE": $EnumProperty<$StairsShape>
 static readonly "WATERLOGGED": $BooleanProperty
 
+constructor(supplier0: $Supplier$$Type<$BlockState>, properties1: $BlockBehaviour$Properties$$Type)
 /** @deprecated */
 constructor(blockState0: $BlockState$$Type, properties1: $BlockBehaviour$Properties$$Type)
-constructor(supplier0: $Supplier$$Type<$BlockState>, properties1: $BlockBehaviour$Properties$$Type)
 
 public "addLandingEffects"(blockState0: $BlockState$$Type, serverLevel1: $ServerLevel$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type, livingEntity4: $LivingEntity$$Type, int5: integer): boolean
 public "addRunningEffects"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): boolean
@@ -24127,8 +24127,8 @@ public "getEnchantPowerBonus"(blockState0: $BlockState$$Type, levelReader1: $Lev
 public "getExpDrop"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, randomSource2: $RandomSource$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): integer
 public "getExplosionResistance"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, explosion3: $Explosion$$Type): float
 public "getFireSpreadSpeed"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, direction3: $Direction$$Type): integer
-public static "getFirst"(block0: $Block$$Type): $Block
 public static "getFirst"(blockState0: $BlockState$$Type): $BlockState
+public static "getFirst"(block0: $Block$$Type): $Block
 public "getFlammability"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, direction3: $Direction$$Type): integer
 public "getFriction"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): float
 public "getLightEmission"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): integer
@@ -24274,7 +24274,7 @@ public "getSoundType"(blockState0: $BlockState$$Type, levelReader1: $LevelReader
 public "getStateAtViewpoint"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, vec33: $Vec3$$Type): $BlockState
 public "getToolModifiedState"(blockState0: $BlockState$$Type, useOnContext1: $UseOnContext$$Type, toolAction2: $ToolAction$$Type, boolean3: boolean): $BlockState
 public "getWeakChanges"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
-public "handler$ghh000$getMobHeadCustomSoundId"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$gil000$getMobHeadCustomSoundId"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
 public "hidesNeighborFace"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, direction4: $Direction$$Type): boolean
 public "isBed"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): boolean
 public "isBurning"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
@@ -26433,7 +26433,7 @@ public "getSoundType"(blockState0: $BlockState$$Type, levelReader1: $LevelReader
 public "getStateAtViewpoint"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, vec33: $Vec3$$Type): $BlockState
 public "getToolModifiedState"(blockState0: $BlockState$$Type, useOnContext1: $UseOnContext$$Type, toolAction2: $ToolAction$$Type, boolean3: boolean): $BlockState
 public "getWeakChanges"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
-public "handler$fmn000$onLand"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, fallingBlockEntity4: $FallingBlockEntity$$Type, callbackInfo5: $CallbackInfo$$Type): void
+public "handler$fob000$onLand"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, fallingBlockEntity4: $FallingBlockEntity$$Type, callbackInfo5: $CallbackInfo$$Type): void
 public "hidesNeighborFace"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, direction4: $Direction$$Type): boolean
 public "isBed"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): boolean
 public "isBurning"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
@@ -29810,8 +29810,8 @@ get "chanceModifier"(): float
 export namespace $WeatheringCopper {
 const NEXT_BY_BLOCK: $Supplier<$BiMap<$Block, $Block>>
 const PREVIOUS_BY_BLOCK: $Supplier<$BiMap<$Block, $Block>>
-function getFirst(block0: $Block$$Type): $Block
 function getFirst(blockState0: $BlockState$$Type): $BlockState
+function getFirst(block0: $Block$$Type): $Block
 function getNext(block0: $Block$$Type): $Optional<$Block>
 function getPrevious(block0: $Block$$Type): $Optional<$Block>
 function getPrevious(blockState0: $BlockState$$Type): $Optional<$BlockState>
@@ -29820,8 +29820,8 @@ export abstract class $WeatheringCopper$$Static implements $WeatheringCopper {
 static readonly "NEXT_BY_BLOCK": $Supplier<$BiMap<$Block, $Block>>
 static readonly "PREVIOUS_BY_BLOCK": $Supplier<$BiMap<$Block, $Block>>
 
-static "getFirst"(block0: $Block$$Type): $Block
 static "getFirst"(blockState0: $BlockState$$Type): $BlockState
+static "getFirst"(block0: $Block$$Type): $Block
 static "getNext"(block0: $Block$$Type): $Optional<$Block>
 static "getPrevious"(block0: $Block$$Type): $Optional<$Block>
 static "getPrevious"(blockState0: $BlockState$$Type): $Optional<$BlockState>
@@ -33980,8 +33980,8 @@ public "isFlammable"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$
 public "isFlexibleRail"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
 public "isLadder"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, livingEntity3: $LivingEntity$$Type): boolean
 public "isPortalFrame"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
-public static "isRail"(level0: $Level$$Type, blockPos1: $BlockPos$$Type): boolean
 public static "isRail"(blockState0: $BlockState$$Type): boolean
+public static "isRail"(level0: $Level$$Type, blockPos1: $BlockPos$$Type): boolean
 public "isScaffolding"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, livingEntity3: $LivingEntity$$Type): boolean
 public "isSlimeBlock"(blockState0: $BlockState$$Type): boolean
 public "isStickyBlock"(blockState0: $BlockState$$Type): boolean
@@ -34260,8 +34260,8 @@ public "getEnchantPowerBonus"(blockState0: $BlockState$$Type, levelReader1: $Lev
 public "getExpDrop"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, randomSource2: $RandomSource$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): integer
 public "getExplosionResistance"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, explosion3: $Explosion$$Type): float
 public "getFireSpreadSpeed"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, direction3: $Direction$$Type): integer
-public static "getFirst"(block0: $Block$$Type): $Block
 public static "getFirst"(blockState0: $BlockState$$Type): $BlockState
+public static "getFirst"(block0: $Block$$Type): $Block
 public "getFlammability"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, direction3: $Direction$$Type): integer
 public "getFriction"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): float
 public "getLightEmission"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): integer

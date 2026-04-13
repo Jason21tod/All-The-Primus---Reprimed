@@ -462,8 +462,8 @@ public "read"(compoundTag0: $CompoundTag$$Type): void
 public "read"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 public "setDataManager"(synchedCapabilityData0: $SynchedCapabilityData$$Type): void
 public "setDirty"(boolean0: boolean): void
-public "write"(compoundTag0: $CompoundTag$$Type): void
 public "write"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
+public "write"(compoundTag0: $CompoundTag$$Type): void
 get "id"(): integer
 get "initValue"(): T
 get "serializer"(): $CapabilityDataSerializer<T>
@@ -602,16 +602,16 @@ public "getOriginZRot"(): double
 public "getOriginZoom"(): float
 public "getRaycastOffset"(float0: float): double
 public "getRaycastOffset0"(): $CameraValueInstance
-public "getX"(float0: float): double
 public "getX"(): $CameraValueInstance
+public "getX"(float0: float): double
 public "getXOffset"(float0: float): double
 public "getXOffset0"(): $CameraValueInstance
 public "getXRelative"(float0: float): double
 public "getXRelative0"(): $CameraValueInstance
 public "getXRot0"(): $CameraValueInstance
 public "getXRotation"(float0: float): double
-public "getY"(): $CameraValueInstance
 public "getY"(float0: float): double
+public "getY"(): $CameraValueInstance
 public "getYOffset"(float0: float): double
 public "getYOffset0"(): $CameraValueInstance
 public "getYRelative"(float0: float): double
@@ -1346,8 +1346,8 @@ import { $MultiBufferSource, $MultiBufferSource$$Type } from "net.minecraft.clie
 import { $PoseStack, $PoseStack$$Type } from "com.mojang.blaze3d.vertex.PoseStack"
 
 export class $RenderShadowEvent extends $EntityEvent {
-constructor()
 constructor(entity0: $Entity$$Type, poseStack1: $PoseStack$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float, float4: float, float5: float)
+constructor()
 
 public "getBufferSource"(): $MultiBufferSource
 public "getPartialTicks"(): float
@@ -1554,8 +1554,8 @@ import { $FriendlyByteBuf$Reader$$Type } from "net.minecraft.network.FriendlyByt
 
 export interface $CapabilityDataSerializer<T = any> {
 "copy"(t0: T): T
-"read"(compoundTag0: $CompoundTag$$Type, string1: string): T
 "read"(friendlyByteBuf0: $FriendlyByteBuf$$Type): T
+"read"(compoundTag0: $CompoundTag$$Type, string1: string): T
 "write"(friendlyByteBuf0: $FriendlyByteBuf$$Type, t1: T): void
 "write"(compoundTag0: $CompoundTag$$Type, string1: string, t2: T): void
 }
@@ -1720,8 +1720,8 @@ public "getBaseValue"(): double
 public "getKeyframeAnimation"(string0: string): $CameraKeyframeAnimation
 public "getKeyframeAnimations"(): $Collection<$CameraKeyframeAnimation>
 public "getModifier"(uUID0: $UUID$$Type): $CameraModifier
-public "getModifiers"(): $Set<$CameraModifier>
 public "getModifiers"(operation0: $CameraModifier$Operation$$Type): $Set<$CameraModifier>
+public "getModifiers"(): $Set<$CameraModifier>
 public "getValue"(): double
 public "hasModifier"(cameraModifier0: $CameraModifier$$Type): boolean
 public "isAnimDirty"(): boolean
@@ -1730,8 +1730,8 @@ public "isEmpty"(): boolean
 public "load"(compoundTag0: $CompoundTag$$Type): void
 public "packData"(): $Collection<$CameraKeyframeAnimation>
 public "removeDynamicKeyframeAnimations"(): void
-public "removeKeyframeAnimation"(cameraKeyframeAnimation0: $CameraKeyframeAnimation$$Type): void
 public "removeKeyframeAnimation"(string0: string): void
+public "removeKeyframeAnimation"(cameraKeyframeAnimation0: $CameraKeyframeAnimation$$Type): void
 public "removeKeyframeAnimations"(): void
 public "removeModifier"(uUID0: $UUID$$Type): void
 public "removeModifier"(cameraModifier0: $CameraModifier$$Type): void
@@ -1747,8 +1747,8 @@ public "save"(): $CompoundTag
 public "setAnimDirty"(boolean0: boolean): void
 public "setAnimDirty"(): void
 public "setBaseValue"(double0: double): void
-public "setDirty"(boolean0: boolean): void
 public "setDirty"(): void
+public "setDirty"(boolean0: boolean): void
 public "tickAnimations"(): void
 get "baseValue"(): double
 get "keyframeAnimations"(): $Collection<$CameraKeyframeAnimation>
@@ -2121,8 +2121,8 @@ public "getYRelative"(float0: float): double
 public "getYRelative0"(): $CameraValueInstance
 public "getYRot0"(): $CameraValueInstance
 public "getYRotation"(float0: float): double
-public "getZ"(float0: float): double
 public "getZ"(): $CameraValueInstance
+public "getZ"(float0: float): double
 public "getZOffset"(float0: float): double
 public "getZOffset0"(): $CameraValueInstance
 public "getZRelative"(float0: float): double
@@ -2209,8 +2209,8 @@ import { $CameraModifier$Operation, $CameraModifier$Operation$$Type } from "com.
 
 export class $CameraModifier {
 constructor(string0: string, double1: double, operation2: $CameraModifier$Operation$$Type)
-constructor(uUID0: $UUID$$Type, string1: string, double2: double, operation3: $CameraModifier$Operation$$Type)
 constructor(uUID0: $UUID$$Type, supplier1: $Supplier$$Type<string>, double2: double, operation3: $CameraModifier$Operation$$Type)
+constructor(uUID0: $UUID$$Type, string1: string, double2: double, operation3: $CameraModifier$Operation$$Type)
 
 public "getAmount"(): double
 public "getId"(): $UUID
@@ -2733,8 +2733,8 @@ static readonly "READER": $Function<$CompoundTag, $CameraKeyframeAnimation>
 static readonly "READER_F": $FriendlyByteBuf$Reader<$CameraKeyframeAnimation>
 static readonly "WRITER_F": $FriendlyByteBuf$Writer<$CameraKeyframeAnimation>
 
-constructor(string0: string, animType1: $CameraKeyframeAnimation$AnimType$$Type, float2: float)
 constructor(string0: string, animType1: $CameraKeyframeAnimation$AnimType$$Type)
+constructor(string0: string, animType1: $CameraKeyframeAnimation$AnimType$$Type, float2: float)
 
 public "addKeyframe"(string0: string, cameraKeyframe1: $CameraKeyframe$$Type): void
 public "addKeyframes"(string0: string, list1: $List$$Type<$CameraKeyframe$$Type>): void

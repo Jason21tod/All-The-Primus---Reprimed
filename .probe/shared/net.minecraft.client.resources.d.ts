@@ -241,7 +241,7 @@ public "getPitch"(): $SampledFloat
 public "getType"(): $Sound$Type
 public "getVolume"(): $SampledFloat
 public "getWeight"(): integer
-public "handler$cck000$detour$fixOpusPath"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$cdm000$detour$fixOpusPath"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
 public "preloadIfRequired"(soundEngine0: $SoundEngine$$Type): void
 public "shouldPreload"(): boolean
 public "shouldStream"(): boolean
@@ -488,8 +488,8 @@ export interface $BakedModel extends $IForgeBakedModel, $FabricBakedModel, $Bake
 "isGui3d"(): boolean
 "isVanillaAdapter"(): boolean
 "useAmbientOcclusion"(): boolean
-"useAmbientOcclusion"(blockState0: $BlockState$$Type, renderType1: $RenderType$$Type): boolean
 "useAmbientOcclusion"(blockState0: $BlockState$$Type): boolean
+"useAmbientOcclusion"(blockState0: $BlockState$$Type, renderType1: $RenderType$$Type): boolean
 "useAmbientOcclusionWithLightEmission"(blockState0: $BlockState$$Type, renderType1: $RenderType$$Type): boolean
 "usesBlockLight"(): boolean
 get "overrides"(): $ItemOverrides

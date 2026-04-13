@@ -170,8 +170,8 @@ public "getTags"(): $Stream<$TagKey<$Fluid>>
 public "getType"(): $Fluid
 public "holder"(): $Holder<$Fluid>
 public "is"(holderSet0: $HolderSet$$Type<$Fluid$$Type>): boolean
-public "is"(fluid0: $Fluid$$Type): boolean
 public "is"(tagKey0: $TagKey$$Type<$Fluid$$Type>): boolean
+public "is"(fluid0: $Fluid$$Type): boolean
 public "isEmpty"(): boolean
 public "isRandomlyTicking"(): boolean
 public "isSource"(): boolean
@@ -429,12 +429,12 @@ public "getAdjacentBlockPathType"(fluidState0: $FluidState$$Type, blockGetter1: 
 public "getBlockPathType"(fluidState0: $FluidState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, mob3: $Mob$$Type, boolean4: boolean): $BlockPathTypes
 public "getExplosionResistance"(fluidState0: $FluidState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, explosion3: $Explosion$$Type): float
 public "getFlow"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, fluidState2: $FluidState$$Type): $Vec3
-public "getFlowing"(int0: integer, boolean1: boolean): $FluidState
 public "getFlowing"(): $Fluid
-public "getSource"(boolean0: boolean): $FluidState
+public "getFlowing"(int0: integer, boolean1: boolean): $FluidState
 public "getSource"(): $Fluid
-public "handler$hgb000$ac_canHoldFluid"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, fluid3: $Fluid$$Type, callbackInfoReturnable4: $CallbackInfoReturnable$$Type): void
-public "handler$hgb000$ac_spreadTo"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, direction3: $Direction$$Type, fluidState4: $FluidState$$Type, callbackInfo5: $CallbackInfo$$Type): void
+public "getSource"(boolean0: boolean): $FluidState
+public "handler$hin000$ac_canHoldFluid"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, fluid3: $Fluid$$Type, callbackInfoReturnable4: $CallbackInfoReturnable$$Type): void
+public "handler$hin000$ac_spreadTo"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, direction3: $Direction$$Type, fluidState4: $FluidState$$Type, callbackInfo5: $CallbackInfo$$Type): void
 public "move"(fluidState0: $FluidState$$Type, livingEntity1: $LivingEntity$$Type, vec32: $Vec3$$Type, double3: double): boolean
 public "shouldUpdateWhileBoating"(fluidState0: $FluidState$$Type, boat1: $Boat$$Type, entity2: $Entity$$Type): boolean
 public "supportsBoating"(fluidState0: $FluidState$$Type, boat1: $Boat$$Type): boolean

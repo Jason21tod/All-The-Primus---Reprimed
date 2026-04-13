@@ -154,22 +154,22 @@ public "doesBlink"(): boolean
 public "doesBlink2"(): boolean
 public "exists"(): boolean
 public "getEmissiveIdentifierOfCurrentState"(): $ResourceLocation
-public "getEmissiveRenderLayer"(model: $Model$$Type, modeToUsePossiblyManuallyChosen: $ETFConfig$EmissiveRenderModes$$Type): $RenderType
 public "getEmissiveRenderLayer"(model: $Model$$Type): $RenderType
+public "getEmissiveRenderLayer"(model: $Model$$Type, modeToUsePossiblyManuallyChosen: $ETFConfig$EmissiveRenderModes$$Type): $RenderType
 public "getEmissiveVertexConsumer"(vertexConsumerProvider: $MultiBufferSource$$Type, model: $Model$$Type, modeToUsePossiblyManuallyChosen: $ETFConfig$EmissiveRenderModes$$Type): $VertexConsumer
 public "getEnchantIdentifierOfCurrentState"(): $ResourceLocation
 public "getPaintingSprite"(originalSprite: $TextureAtlasSprite$$Type, originalID: $ResourceLocation$$Type): $ETFSprite
 public "getTextureIdentifier"(entity: $ETFEntityRenderState$$Type): $ResourceLocation
 public "isEmissive"(): boolean
 public "isEnchanted"(): boolean
-public static "manual"(modifiedSkinIdentifier: $ResourceLocation$$Type, blinkIdentifier: $ResourceLocation$$Type, blink2Identifier: $ResourceLocation$$Type, emissiveIdentifier: $ResourceLocation$$Type, blinkEmissiveIdentifier: $ResourceLocation$$Type, blink2EmissiveIdentifier: $ResourceLocation$$Type, enchantIdentifier: $ResourceLocation$$Type, blinkenchantIdentifier: $ResourceLocation$$Type, blink2enchantIdentifier: $ResourceLocation$$Type, patchIdentifier: $ResourceLocation$$Type, blinkpatchIdentifier: $ResourceLocation$$Type, blink2patchIdentifier: $ResourceLocation$$Type): $ETFTexture
 public static "manual"(modifiedSkinIdentifier: $ResourceLocation$$Type, emissiveIdentifier: $ResourceLocation$$Type, enchantIdentifier: $ResourceLocation$$Type): $ETFTexture
+public static "manual"(modifiedSkinIdentifier: $ResourceLocation$$Type, blinkIdentifier: $ResourceLocation$$Type, blink2Identifier: $ResourceLocation$$Type, emissiveIdentifier: $ResourceLocation$$Type, blinkEmissiveIdentifier: $ResourceLocation$$Type, blink2EmissiveIdentifier: $ResourceLocation$$Type, enchantIdentifier: $ResourceLocation$$Type, blinkenchantIdentifier: $ResourceLocation$$Type, blink2enchantIdentifier: $ResourceLocation$$Type, patchIdentifier: $ResourceLocation$$Type, blinkpatchIdentifier: $ResourceLocation$$Type, blink2patchIdentifier: $ResourceLocation$$Type): $ETFTexture
 public static "ofUnmodifiable"(identifier: $ResourceLocation$$Type, emissiveIdentifier: $ResourceLocation$$Type): $ETFTexture
 public static "patchTextureToRemoveZFightingWithOtherTexture"(baseImage: $NativeImage$$Type, otherImage: $NativeImage$$Type): void
+public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, model: $Model$$Type): void
 public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, model: $Model$$Type, modeToUsePossiblyManuallyChosen: $ETFConfig$EmissiveRenderModes$$Type): void
 public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, modelPart: $ModelPart$$Type, modeToUsePossiblyManuallyChosen: $ETFConfig$EmissiveRenderModes$$Type): void
 public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, modelPart: $ModelPart$$Type): void
-public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, model: $Model$$Type): void
 public "setGUIBlink"(): void
 get "currentTextureState"(): $ETFTexture$TextureReturnState
 set "currentTextureState"(value: $ETFTexture$TextureReturnState$$Type)
@@ -394,6 +394,7 @@ import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $Reference2IntFunction } from "it.unimi.dsi.fastutil.objects.Reference2IntFunction"
 import { $Long2IntFunction } from "it.unimi.dsi.fastutil.longs.Long2IntFunction"
 import { $Short2IntFunction } from "it.unimi.dsi.fastutil.shorts.Short2IntFunction"
+import { $SequencedSet } from "java.util.SequencedSet"
 import { $Int2FloatFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2FloatFunction"
 import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
@@ -411,6 +412,8 @@ import { $Float2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2
 import { $Char2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2ObjectFunction"
 import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2ShortFunction"
 import { $Double2IntFunction } from "it.unimi.dsi.fastutil.doubles.Double2IntFunction"
+import { $SortedMap } from "java.util.SortedMap"
+import { $SequencedCollection } from "java.util.SequencedCollection"
 import { $Object2CharFunction } from "it.unimi.dsi.fastutil.objects.Object2CharFunction"
 import { $Int2CharFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2CharFunction"
 import { $Byte2IntFunction } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
@@ -455,41 +458,51 @@ public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public "defaultReturnValue"(): integer
 public "defaultReturnValue"(int0: integer): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
+public "firstEntry"(): $Map$Entry<$UUID, integer>
 public "forEach"(biConsumer0: $BiConsumer$$Type<$UUID$$Type, integer>): void
 /** @deprecated */
 public "get"(object0: any): integer
 /** @deprecated */
 public "getOrDefault"(object0: any, integer1: integer): integer
 public static "identity"<T>(): $Function<T, T>
+public "lastEntry"(): $Map$Entry<$UUID, integer>
 /** @deprecated */
 public "merge"(uUID0: $UUID$$Type, integer1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 public "mergeInt"(uUID0: $UUID$$Type, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 public "mergeInt"(uUID0: $UUID$$Type, int1: integer, intBinaryOperator2: $IntBinaryOperator$$Type): integer
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
+public "pollFirstEntry"(): $Map$Entry<$UUID, integer>
+public "pollLastEntry"(): $Map$Entry<$UUID, integer>
 public "put"(uuid: $UUID$$Type, v: integer): integer
 /** @deprecated */
 public "put"(uUID0: $UUID$$Type, integer1: integer): integer
+public "putFirst"(uUID0: $UUID$$Type, integer1: integer): integer
 /** @deprecated */
 public "putIfAbsent"(uUID0: $UUID$$Type, integer1: integer): integer
+public "putLast"(uUID0: $UUID$$Type, integer1: integer): integer
 /** @deprecated */
 public "remove"(object0: any, object1: any): boolean
 /** @deprecated */
-public "replace"(uUID0: $UUID$$Type, integer1: integer, integer2: integer): boolean
-/** @deprecated */
 public "replace"(uUID0: $UUID$$Type, integer1: integer): integer
+/** @deprecated */
+public "replace"(uUID0: $UUID$$Type, integer1: integer, integer2: integer): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<$UUID$$Type, integer, integer>): void
+public "reversed"(): $SortedMap<$UUID, integer>
+public "sequencedEntrySet"(): $SequencedSet<$Map$Entry<$UUID, integer>>
+public "sequencedKeySet"(): $SequencedSet<$UUID>
+public "sequencedValues"(): $SequencedCollection<integer>
 }
 }
 
@@ -545,8 +558,8 @@ public "changeSkinToThisForTool"(image: $NativeImage$$Type): void
 public "checkTexture"(skipSkinLoad: boolean): void
 public "getBaseHeadTextureIdentifierOrNullForVanilla"(): $ResourceLocation
 public "getBaseTextureEmissiveIdentifierOrNullForNone"(): $ResourceLocation
-public "getBaseTextureIdentifierOrNullForVanilla"(player: $Player$$Type): $ResourceLocation
 public "getBaseTextureIdentifierOrNullForVanilla"(player: $ETFEntityRenderState$$Type): $ResourceLocation
+public "getBaseTextureIdentifierOrNullForVanilla"(player: $Player$$Type): $ResourceLocation
 public "getOriginal"(): $ResourceLocation
 public static "getSkinNumberToPixelColour"(color: integer): integer
 public static "getSkinPixelColourToNumber"(color: integer): integer

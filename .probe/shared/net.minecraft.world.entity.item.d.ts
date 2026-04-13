@@ -86,8 +86,8 @@ public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAge"(): integer
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -127,23 +127,23 @@ public "getStepHeight"(): float
 public "getTeamId"(): string
 public "getTicksUntilDespawn"(): integer
 public "getType"(): string
-public "handler$chm000$celestial_core$tick$recipe"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$ddm000$fireImmuneInject"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ddm000$hurtInject"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$ddm000$playerTouchInject"(player0: $Player$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$ddm000$update"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$ddm000$updatePre"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$ggn000$Cmhurt"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$gob000$l2complements_dampensVibrations_sculkiumMinedItem"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$gob000$l2complments_hurt_itemBurnt"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$cio000$celestial_core$tick$recipe"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$deo000$fireImmuneInject"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$deo000$hurtInject"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$deo000$playerTouchInject"(player0: $Player$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$deo000$update"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$deo000$updatePre"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$gib000$Cmhurt"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$gpf000$l2complements_dampensVibrations_sculkiumMinedItem"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$gpf000$l2complments_hurt_itemBurnt"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hasPickUpDelay"(): boolean
 public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMergable"(): boolean
@@ -159,8 +159,8 @@ public "lychee$getRecipeId"(): $ResourceLocation
 public "lychee$setCount"(int0: integer): void
 public "lychee$setRecipeId"(resourceLocation0: $ResourceLocation$$Type): void
 public "lychee$update"(resourceLocation0: $ResourceLocation$$Type, recipe1: $Recipe$$Type<any>): void
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "makeFakeItem"(): void
 public static "merge"(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type, int2: integer): $ItemStack
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
@@ -169,13 +169,13 @@ public "newGelatin"(item0: $Item$$Type, itemStack1: $ItemStack$$Type, itemStack2
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readAdditionalSaveData"(compoundTag0: $CompoundTag$$Type): void
-public "redirect$ddm000$isInLavaRedirect"(itemEntity0: $ItemEntity$$Type): boolean
-public "redirect$ddm000$isInWaterRedirect"(itemEntity0: $ItemEntity$$Type): boolean
-public "redirect$ddm000$isNoGravityRedirect"(itemEntity0: $ItemEntity$$Type): boolean
-public "redirect$ddm000$setDeltaMovementRedirect"(itemEntity0: $ItemEntity$$Type, vec31: $Vec3$$Type): void
+public "redirect$deo000$isInLavaRedirect"(itemEntity0: $ItemEntity$$Type): boolean
+public "redirect$deo000$isInWaterRedirect"(itemEntity0: $ItemEntity$$Type): boolean
+public "redirect$deo000$isNoGravityRedirect"(itemEntity0: $ItemEntity$$Type): boolean
+public "redirect$deo000$setDeltaMovementRedirect"(itemEntity0: $ItemEntity$$Type, vec31: $Vec3$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -343,8 +343,8 @@ public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "fall"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type): $FallingBlockEntity
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -381,17 +381,17 @@ public "getStartPos"(): $BlockPos
 public "getStepHeight"(): float
 public "getTeamId"(): string
 public "getType"(): string
-public "handler$hbl000$handleLand"(ci: $CallbackInfo$$Type, block: $Block$$Type, blockPos2: $BlockPos$$Type, bl: boolean, bl2: boolean, d: double, blockState: $BlockState$$Type): void
-public "handler$hga002$ac_tick"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$hoa000$stopTickingIfRemoved"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$hcp000$handleLand"(ci: $CallbackInfo$$Type, block: $Block$$Type, blockPos2: $BlockPos$$Type, bl: boolean, bl2: boolean, d: double, blockState: $BlockState$$Type): void
+public "handler$him002$ac_tick"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$iam000$stopTickingIfRemoved"(callbackInfo0: $CallbackInfo$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hasFallBlocking"(): boolean
 public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -404,15 +404,15 @@ public "isWaterCreature"(): boolean
 public "lychee$anvilDamageChance"(float0: float): void
 public "lychee$cancelDrop"(): void
 public "lychee$matched"(): void
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -559,8 +559,8 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -602,8 +602,8 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -613,15 +613,15 @@ public "isPeacefulCreature"(): boolean
 public "isPlayer"(): boolean
 public "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
 public "isWaterCreature"(): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer

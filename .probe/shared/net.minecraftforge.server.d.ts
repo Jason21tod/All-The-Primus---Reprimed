@@ -26,15 +26,15 @@ set "el_isUnCancelable"(value: boolean)
 }
 
 declare module "net.minecraftforge.server.permission.nodes.PermissionNode" {
-import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $PermissionType, $PermissionType$$Type } from "net.minecraftforge.server.permission.nodes.PermissionType"
+import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $PermissionNode$PermissionResolver, $PermissionNode$PermissionResolver$$Type } from "net.minecraftforge.server.permission.nodes.PermissionNode$PermissionResolver"
 import { $Component, $Component$$Type } from "net.minecraft.network.chat.Component"
 import { $PermissionDynamicContextKey, $PermissionDynamicContextKey$$Type } from "net.minecraftforge.server.permission.nodes.PermissionDynamicContextKey"
 
 export class $PermissionNode<T = any> {
-constructor(resourceLocation0: $ResourceLocation$$Type, permissionType1: $PermissionType$$Type<T>, permissionResolver2: $PermissionNode$PermissionResolver$$Type<T>, ...permissionDynamicContextKey3s: $PermissionDynamicContextKey$$Type[])
 constructor(string0: string, string1: string, permissionType2: $PermissionType$$Type<T>, permissionResolver3: $PermissionNode$PermissionResolver$$Type<T>, ...permissionDynamicContextKey4s: $PermissionDynamicContextKey$$Type[])
+constructor(resourceLocation0: $ResourceLocation$$Type, permissionType1: $PermissionType$$Type<T>, permissionResolver2: $PermissionNode$PermissionResolver$$Type<T>, ...permissionDynamicContextKey3s: $PermissionDynamicContextKey$$Type[])
 
 public "getDefaultResolver"(): $PermissionNode$PermissionResolver<T>
 public "getDescription"(): $Component

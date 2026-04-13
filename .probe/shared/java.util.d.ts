@@ -1,14 +1,16 @@
 declare module "java.util.Currency" {
+import { $Stream } from "java.util.stream.Stream"
 import { $Locale$$Type } from "java.util.Locale"
 import { $Set } from "java.util.Set"
 import { $Serializable } from "java.io.Serializable"
 
 export class $Currency implements $Serializable {
+public static "availableCurrencies"(): $Stream<$Currency>
 public static "getAvailableCurrencies"(): $Set<$Currency>
 public "getCurrencyCode"(): string
 public "getDefaultFractionDigits"(): integer
-public "getDisplayName"(locale0: $Locale$$Type): string
 public "getDisplayName"(): string
+public "getDisplayName"(locale0: $Locale$$Type): string
 public static "getInstance"(string0: string): $Currency
 public static "getInstance"(locale0: $Locale$$Type): $Currency
 public "getNumericCode"(): integer
@@ -25,57 +27,54 @@ get "symbol"(): string
 }
 
 declare module "java.util.LinkedHashMap" {
+import { $SequencedSet } from "java.util.SequencedSet"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
+import { $SequencedMap } from "java.util.SequencedMap"
 import { $Map, $Map$$Type } from "java.util.Map"
-import { $BiFunction$$Type } from "java.util.function.BiFunction"
 import { $Collection } from "java.util.Collection"
 import { $Set } from "java.util.Set"
 import { $HashMap } from "java.util.HashMap"
-import { $Function$$Type } from "java.util.function.Function"
+import { $SequencedCollection } from "java.util.SequencedCollection"
 
-export class $LinkedHashMap<K = any, V = any> extends $HashMap<K, V> implements $Map<K, V> {
-constructor(int0: integer, float1: float, boolean2: boolean)
-constructor()
+export class $LinkedHashMap<K = any, V = any> extends $HashMap<K, V> implements $SequencedMap<K, V> {
+constructor(map0: $Map$$Type<K, V>)
 constructor(int0: integer)
 constructor(int0: integer, float1: float)
-constructor(map0: $Map$$Type<K, V>)
+constructor(int0: integer, float1: float, boolean2: boolean)
+constructor()
 
-public "compute"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
-public "computeIfAbsent"(k0: K, function1: $Function$$Type<K, V>): V
-public "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
-public "containsKey"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "entrySet"(): $Set<$Map$Entry<K, V>>
 public "equals"(object0: any): boolean
+public "firstEntry"(): $Map$Entry<K, V>
 public "get"(object0: any): V
 public "getOrDefault"(object0: any, v1: V): V
 public "hashCode"(): integer
-public "isEmpty"(): boolean
 public "keySet"(): $Set<K>
-public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
+public "lastEntry"(): $Map$Entry<K, V>
+public static "newLinkedHashMap"<K, V>(int0: integer): $LinkedHashMap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
-public "put"(k0: K, v1: V): V
-public "putAll"(map0: $Map$$Type<K, V>): void
-public "putIfAbsent"(k0: K, v1: V): V
-public "remove"(object0: any): V
-public "remove"(object0: any, object1: any): boolean
-public "replace"(k0: K, v1: V): V
-public "replace"(k0: K, v1: V, v2: V): boolean
-public "size"(): integer
+public "pollFirstEntry"(): $Map$Entry<K, V>
+public "pollLastEntry"(): $Map$Entry<K, V>
+public "putFirst"(k0: K, v1: V): V
+public "putLast"(k0: K, v1: V): V
+public "reversed"(): $SequencedMap<K, V>
+public "sequencedEntrySet"(): $SequencedSet<$Map$Entry<K, V>>
+public "sequencedKeySet"(): $SequencedSet<K>
+public "sequencedValues"(): $SequencedCollection<V>
 public "values"(): $Collection<V>
-get "empty"(): boolean
 }
 }
 
@@ -282,31 +281,37 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export class $AbstractSequentialList<E = any> extends $AbstractList<E> {
 public "addAll"(collection0: $Collection$$Type<E>): boolean
+public "addFirst"(e0: E): void
+public "addLast"(e0: E): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "get"(int0: integer): E
+public "getFirst"(): E
+public "getLast"(): E
 public "isEmpty"(): boolean
 public "iterator"(): $Iterator<E>
 public "listIterator"(int0: integer): $ListIterator<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<E>
 public "remove"(int0: integer): E
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): E
 public "removeIf"(predicate0: $Predicate$$Type<E>): boolean
+public "removeLast"(): E
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<E>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, e1: E): E
@@ -317,6 +322,8 @@ public "stream"(): $Stream<E>
 public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+get "first"(): E
+get "last"(): E
 get "empty"(): boolean
 }
 }
@@ -334,6 +341,47 @@ export namespace $Delayed {
 const probejs$$marker: never
 }
 export abstract class $Delayed$$Static implements $Delayed {
+}
+}
+
+declare module "java.util.stream.Gatherer" {
+import { $Gatherer$Integrator, $Gatherer$Integrator$$Type } from "java.util.stream.Gatherer$Integrator"
+import { $Gatherer$Downstream, $Gatherer$Downstream$$Type } from "java.util.stream.Gatherer$Downstream"
+import { $BiConsumer, $BiConsumer$$Type } from "java.util.function.BiConsumer"
+import { $Supplier, $Supplier$$Type } from "java.util.function.Supplier"
+import { $BinaryOperator, $BinaryOperator$$Type } from "java.util.function.BinaryOperator"
+
+export interface $Gatherer<T = any, A = any, R = any> {
+"andThen"<RR>(gatherer0: $Gatherer$$Type<R, any, RR>): $Gatherer<T, any, RR>
+"combiner"(): $BinaryOperator<A>
+"finisher"(): $BiConsumer<A, $Gatherer$Downstream<R>>
+"initializer"(): $Supplier<A>
+"integrator"(): $Gatherer$Integrator<A, T, R>
+}
+
+export namespace $Gatherer {
+function defaultCombiner<A>(): $BinaryOperator<A>
+function defaultFinisher<A, R>(): $BiConsumer<A, $Gatherer$Downstream<R>>
+function defaultInitializer<A>(): $Supplier<A>
+function of<T, A, R>(supplier0: $Supplier$$Type<A>, integrator1: $Gatherer$Integrator$$Type<A, T, R>, binaryOperator2: $BinaryOperator$$Type<A>, biConsumer3: $BiConsumer$$Type<A, $Gatherer$Downstream$$Type<R>>): $Gatherer<T, A, R>
+function of<T, R>(integrator0: $Gatherer$Integrator$$Type<void, T, R>, biConsumer1: $BiConsumer$$Type<void, $Gatherer$Downstream$$Type<R>>): $Gatherer<T, void, R>
+function of<T, R>(integrator0: $Gatherer$Integrator$$Type<void, T, R>): $Gatherer<T, void, R>
+function ofSequential<T, A, R>(supplier0: $Supplier$$Type<A>, integrator1: $Gatherer$Integrator$$Type<A, T, R>, biConsumer2: $BiConsumer$$Type<A, $Gatherer$Downstream$$Type<R>>): $Gatherer<T, A, R>
+function ofSequential<T, R>(integrator0: $Gatherer$Integrator$$Type<void, T, R>): $Gatherer<T, void, R>
+function ofSequential<T, R>(integrator0: $Gatherer$Integrator$$Type<void, T, R>, biConsumer1: $BiConsumer$$Type<void, $Gatherer$Downstream$$Type<R>>): $Gatherer<T, void, R>
+function ofSequential<T, A, R>(supplier0: $Supplier$$Type<A>, integrator1: $Gatherer$Integrator$$Type<A, T, R>): $Gatherer<T, A, R>
+}
+export abstract class $Gatherer$$Static<T = any, A = any, R = any> implements $Gatherer<T, A, R> {
+static "defaultCombiner"<A>(): $BinaryOperator<A>
+static "defaultFinisher"<A, R>(): $BiConsumer<A, $Gatherer$Downstream<R>>
+static "defaultInitializer"<A>(): $Supplier<A>
+static "of"<T, A, R>(supplier0: $Supplier$$Type<A>, integrator1: $Gatherer$Integrator$$Type<A, T, R>, binaryOperator2: $BinaryOperator$$Type<A>, biConsumer3: $BiConsumer$$Type<A, $Gatherer$Downstream$$Type<R>>): $Gatherer<T, A, R>
+static "of"<T, R>(integrator0: $Gatherer$Integrator$$Type<void, T, R>, biConsumer1: $BiConsumer$$Type<void, $Gatherer$Downstream$$Type<R>>): $Gatherer<T, void, R>
+static "of"<T, R>(integrator0: $Gatherer$Integrator$$Type<void, T, R>): $Gatherer<T, void, R>
+static "ofSequential"<T, A, R>(supplier0: $Supplier$$Type<A>, integrator1: $Gatherer$Integrator$$Type<A, T, R>, biConsumer2: $BiConsumer$$Type<A, $Gatherer$Downstream$$Type<R>>): $Gatherer<T, A, R>
+static "ofSequential"<T, R>(integrator0: $Gatherer$Integrator$$Type<void, T, R>): $Gatherer<T, void, R>
+static "ofSequential"<T, R>(integrator0: $Gatherer$Integrator$$Type<void, T, R>, biConsumer1: $BiConsumer$$Type<void, $Gatherer$Downstream$$Type<R>>): $Gatherer<T, void, R>
+static "ofSequential"<T, A, R>(supplier0: $Supplier$$Type<A>, integrator1: $Gatherer$Integrator$$Type<A, T, R>): $Gatherer<T, A, R>
 }
 }
 
@@ -361,8 +409,8 @@ public static "ofNullable"<T>(t0: T): $Optional<T>
 public "or"(supplier0: $Supplier$$Type<$Optional<T>>): $Optional<T>
 public "orElse"(t0: T): T
 public "orElseGet"(supplier0: $Supplier$$Type<T>): T
-public "orElseThrow"<X extends $Throwable>(supplier0: $Supplier$$Type<X>): T
 public "orElseThrow"(): T
+public "orElseThrow"<X extends $Throwable>(supplier0: $Supplier$$Type<X>): T
 public "stream"(): $Stream<T>
 get "present"(): boolean
 }
@@ -405,17 +453,17 @@ public "getOrDefault"(object0: any, v1: V): V
 public "keySet"(): $Set<K>
 public "keys"(): $Enumeration<K>
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, v1: V): V
 public "putAll"(map0: $Map$$Type<K, V>): void
@@ -509,8 +557,8 @@ static readonly "ZONE_OFFSET": integer
 public "add"(int0: integer, int1: integer): void
 public "after"(object0: any): boolean
 public "before"(object0: any): boolean
-public "clear"(): void
 public "clear"(int0: integer): void
+public "clear"(): void
 public "clone"(): any
 public "compareTo"(calendar0: $Calendar$$Type): integer
 public "get"(int0: integer): integer
@@ -524,9 +572,9 @@ public "getDisplayNames"(int0: integer, int1: integer, locale2: $Locale$$Type): 
 public "getFirstDayOfWeek"(): integer
 public "getGreatestMinimum"(int0: integer): integer
 public static "getInstance"(): $Calendar
-public static "getInstance"(timeZone0: $TimeZone$$Type, locale1: $Locale$$Type): $Calendar
-public static "getInstance"(timeZone0: $TimeZone$$Type): $Calendar
 public static "getInstance"(locale0: $Locale$$Type): $Calendar
+public static "getInstance"(timeZone0: $TimeZone$$Type): $Calendar
+public static "getInstance"(timeZone0: $TimeZone$$Type, locale1: $Locale$$Type): $Calendar
 public "getLeastMaximum"(int0: integer): integer
 public "getMaximum"(int0: integer): integer
 public "getMinimalDaysInFirstWeek"(): integer
@@ -541,9 +589,9 @@ public "isSet"(int0: integer): boolean
 public "isWeekDateSupported"(): boolean
 public "roll"(int0: integer, int1: integer): void
 public "roll"(int0: integer, boolean1: boolean): void
+public "set"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer): void
 public "set"(int0: integer, int1: integer, int2: integer): void
 public "set"(int0: integer, int1: integer): void
-public "set"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer): void
 public "set"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): void
 public "setFirstDayOfWeek"(int0: integer): void
 public "setLenient"(boolean0: boolean): void
@@ -584,9 +632,10 @@ import { $ExecutorService } from "java.util.concurrent.ExecutorService"
 
 export interface $ScheduledExecutorService extends $ExecutorService {
 "awaitTermination"(long0: long, timeUnit1: $TimeUnit$$Type): boolean
+"close"(): void
 "execute"(runnable0: $Runnable$$Type): void
-"invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>, long1: long, timeUnit2: $TimeUnit$$Type): $List<$Future<T>>
 "invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>): $List<$Future<T>>
+"invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>, long1: long, timeUnit2: $TimeUnit$$Type): $List<$Future<T>>
 "invokeAny"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>): T
 "invokeAny"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>, long1: long, timeUnit2: $TimeUnit$$Type): T
 "isShutdown"(): boolean
@@ -597,8 +646,8 @@ export interface $ScheduledExecutorService extends $ExecutorService {
 "scheduleWithFixedDelay"(runnable0: $Runnable$$Type, long1: long, long2: long, timeUnit3: $TimeUnit$$Type): $ScheduledFuture<any>
 "shutdown"(): void
 "shutdownNow"(): $List<$Runnable>
-"submit"(runnable0: $Runnable$$Type): $Future<any>
 "submit"<T>(runnable0: $Runnable$$Type, t1: T): $Future<T>
+"submit"(runnable0: $Runnable$$Type): $Future<any>
 "submit"<T>(callable0: $Callable$$Type<T>): $Future<T>
 get "terminated"(): boolean
 }
@@ -741,9 +790,9 @@ import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $Class$$Type } from "java.lang.Class"
 
 export class $EnumMap<K extends $Enum<K> = $Enum<K>, V = any> extends $AbstractMap<K, V> implements $Serializable, $Cloneable {
-constructor(class0: $Class$$Type<K>)
-constructor(map0: $Map$$Type<K, V>)
 constructor(enumMap0: $EnumMap$$Type<K, V>)
+constructor(map0: $Map$$Type<K, V>)
+constructor(class0: $Class$$Type<K>)
 
 public "compute"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
 public "computeIfAbsent"(k0: K, function1: $Function$$Type<K, V>): V
@@ -756,42 +805,47 @@ public "get"(object0: any): V
 public "getOrDefault"(object0: any, v1: V): V
 public "keySet"(): $Set<K>
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, v1: V): V
 public "putIfAbsent"(k0: K, v1: V): V
 public "remove"(object0: any): V
 public "remove"(object0: any, object1: any): boolean
-public "replace"(k0: K, v1: V): V
 public "replace"(k0: K, v1: V, v2: V): boolean
+public "replace"(k0: K, v1: V): V
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 public "values"(): $Collection<V>
 }
 }
 
 declare module "java.util.concurrent.ScheduledFuture" {
+import { $Throwable } from "java.lang.Throwable"
 import { $TimeUnit$$Type } from "java.util.concurrent.TimeUnit"
 import { $Future } from "java.util.concurrent.Future"
 import { $Delayed, $Delayed$$Type } from "java.util.concurrent.Delayed"
+import { $Future$State } from "java.util.concurrent.Future$State"
 
 export interface $ScheduledFuture<V = any> extends $Delayed, $Future<V> {
 "cancel"(boolean0: boolean): boolean
 "compareTo"(delayed0: $Delayed$$Type): integer
+"exceptionNow"(): $Throwable
 "get"(long0: long, timeUnit1: $TimeUnit$$Type): V
 "get"(): V
 "getDelay"(timeUnit0: $TimeUnit$$Type): long
 "isCancelled"(): boolean
 "isDone"(): boolean
+"resultNow"(): V
+"state"(): $Future$State
 get "cancelled"(): boolean
 get "done"(): boolean
 }
@@ -824,18 +878,18 @@ public static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "isEmpty"(): boolean
 public "iterator"(): $Iterator<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E): $Set<E>
+public static "of"<E>(e0: E): $Set<E>
 public static "of"<E>(...e0s: E[]): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 public static "of"<E>(): $Set<E>
-public static "of"<E>(e0: E, e1: E): $Set<E>
-public static "of"<E>(e0: E): $Set<E>
 public "parallelStream"(): $Stream<E>
 public "remove"(object0: any): boolean
 public "removeIf"(predicate0: $Predicate$$Type<E>): boolean
@@ -937,8 +991,8 @@ import { $Serializable } from "java.io.Serializable"
 export class $HashMap<K = any, V = any> extends $AbstractMap<K, V> implements $Map<K, V>, $Cloneable, $Serializable {
 constructor(int0: integer)
 constructor(int0: integer, float1: float)
-constructor(map0: $Map$$Type<K, V>)
 constructor()
+constructor(map0: $Map$$Type<K, V>)
 
 public "clone"(): any
 public "compute"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
@@ -954,22 +1008,23 @@ public "getOrDefault"(object0: any, v1: V): V
 public "hashCode"(): integer
 public "keySet"(): $Set<K>
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
+public static "newHashMap"<K, V>(int0: integer): $HashMap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, v1: V): V
 public "putIfAbsent"(k0: K, v1: V): V
-public "remove"(object0: any, object1: any): boolean
 public "remove"(object0: any): V
+public "remove"(object0: any, object1: any): boolean
 public "replace"(k0: K, v1: V): V
 public "replace"(k0: K, v1: V, v2: V): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
@@ -978,14 +1033,19 @@ public "values"(): $Collection<V>
 }
 
 declare module "java.util.concurrent.Future" {
+import { $Throwable } from "java.lang.Throwable"
 import { $TimeUnit$$Type } from "java.util.concurrent.TimeUnit"
+import { $Future$State } from "java.util.concurrent.Future$State"
 
 export interface $Future<V = any> {
 "cancel"(boolean0: boolean): boolean
+"exceptionNow"(): $Throwable
 "get"(long0: long, timeUnit1: $TimeUnit$$Type): V
 "get"(): V
 "isCancelled"(): boolean
 "isDone"(): boolean
+"resultNow"(): V
+"state"(): $Future$State
 get "cancelled"(): boolean
 get "done"(): boolean
 }
@@ -1032,30 +1092,36 @@ constructor(collection0: $Collection$$Type<E>)
 constructor()
 constructor(int0: integer)
 
+public "addFirst"(e0: E): void
+public "addLast"(e0: E): void
 public "clone"(): any
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "ensureCapacity"(int0: integer): void
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "get"(int0: integer): E
+public "getFirst"(): E
+public "getLast"(): E
 public "iterator"(): $Iterator<E>
-public "listIterator"(): $ListIterator<E>
 public "listIterator"(int0: integer): $ListIterator<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
+public "listIterator"(): $ListIterator<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<E>
 public "remove"(int0: integer): E
+public "removeFirst"(): E
 public "removeIf"(predicate0: $Predicate$$Type<E>): boolean
+public "removeLast"(): E
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<E>): void
 public "set"(int0: integer, e1: E): E
 public "sort"(comparator0: $Comparator$$Type<E>): void
@@ -1065,6 +1131,8 @@ public "subList"(int0: integer, int1: integer): $List<E>
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public "trimToSize"(): void
+get "first"(): E
+get "last"(): E
 }
 }
 
@@ -1079,6 +1147,24 @@ export namespace $DoubleConsumer {
 const probejs$$marker: never
 }
 export abstract class $DoubleConsumer$$Static implements $DoubleConsumer {
+}
+}
+
+declare module "java.util.stream.Gatherer$Integrator" {
+import { $Gatherer$Downstream$$Type } from "java.util.stream.Gatherer$Downstream"
+import { $Gatherer$Integrator$Greedy, $Gatherer$Integrator$Greedy$$Type } from "java.util.stream.Gatherer$Integrator$Greedy"
+
+export interface $Gatherer$Integrator<A = any, T = any, R = any> {
+"integrate"(a0: A, t1: T, downstream2: $Gatherer$Downstream$$Type<R>): boolean
+}
+
+export namespace $Gatherer$Integrator {
+function of<A, T, R>(integrator0: $Gatherer$Integrator$$Type<A, T, R>): $Gatherer$Integrator<A, T, R>
+function ofGreedy<A, T, R>(greedy0: $Gatherer$Integrator$Greedy$$Type<A, T, R>): $Gatherer$Integrator$Greedy<A, T, R>
+}
+export abstract class $Gatherer$Integrator$$Static<A = any, T = any, R = any> implements $Gatherer$Integrator<A, T, R> {
+static "of"<A, T, R>(integrator0: $Gatherer$Integrator$$Type<A, T, R>): $Gatherer$Integrator<A, T, R>
+static "ofGreedy"<A, T, R>(greedy0: $Gatherer$Integrator$Greedy$$Type<A, T, R>): $Gatherer$Integrator$Greedy<A, T, R>
 }
 }
 
@@ -1152,12 +1238,14 @@ import { $Spliterator } from "java.util.Spliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export class $Vector<E = any> extends $AbstractList<E> implements $List<E>, $RandomAccess, $Cloneable, $Serializable {
-constructor(int0: integer, int1: integer)
+constructor(collection0: $Collection$$Type<E>)
 constructor()
 constructor(int0: integer)
-constructor(collection0: $Collection$$Type<E>)
+constructor(int0: integer, int1: integer)
 
 public "addElement"(e0: E): void
+public "addFirst"(e0: E): void
+public "addLast"(e0: E): void
 public "capacity"(): integer
 public "clone"(): any
 public "copyInto"(object0s: any[]): void
@@ -1168,31 +1256,35 @@ public "ensureCapacity"(int0: integer): void
 public "firstElement"(): E
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "get"(int0: integer): E
+public "getFirst"(): E
+public "getLast"(): E
 public "indexOf"(object0: any, int1: integer): integer
 public "insertElementAt"(e0: E, int1: integer): void
 public "iterator"(): $Iterator<E>
 public "lastElement"(): E
 public "lastIndexOf"(object0: any, int1: integer): integer
-public "listIterator"(): $ListIterator<E>
 public "listIterator"(int0: integer): $ListIterator<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
+public "listIterator"(): $ListIterator<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<E>
 public "remove"(int0: integer): E
 public "removeAllElements"(): void
 public "removeElement"(object0: any): boolean
 public "removeElementAt"(int0: integer): void
+public "removeFirst"(): E
 public "removeIf"(predicate0: $Predicate$$Type<E>): boolean
+public "removeLast"(): E
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<E>): void
 public "set"(int0: integer, e1: E): E
 public "setElementAt"(e0: E, int1: integer): void
@@ -1204,6 +1296,8 @@ public "subList"(int0: integer, int1: integer): $List<E>
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public "trimToSize"(): void
+get "first"(): E
+get "last"(): E
 set "size"(value: integer)
 }
 }
@@ -1257,10 +1351,9 @@ export interface $DoubleStream extends $BaseStream<double, $DoubleStream> {
 "min"(): $OptionalDouble
 "noneMatch"(doublePredicate0: $DoublePredicate$$Type): boolean
 "onClose"(runnable0: $Runnable$$Type): $DoubleStream
-"parallel"(): $DoubleStream
 "peek"(doubleConsumer0: $DoubleConsumer$$Type): $DoubleStream
-"reduce"(doubleBinaryOperator0: $DoubleBinaryOperator$$Type): $OptionalDouble
 "reduce"(double0: double, doubleBinaryOperator1: $DoubleBinaryOperator$$Type): double
+"reduce"(doubleBinaryOperator0: $DoubleBinaryOperator$$Type): $OptionalDouble
 "sequential"(): $DoubleStream
 "skip"(long0: long): $DoubleStream
 "sorted"(): $DoubleStream
@@ -1269,6 +1362,7 @@ export interface $DoubleStream extends $BaseStream<double, $DoubleStream> {
 "takeWhile"(doublePredicate0: $DoublePredicate$$Type): $DoubleStream
 "toArray"(): double[]
 "unordered"(): $DoubleStream
+get "parallel"(): boolean
 }
 
 export namespace $DoubleStream {
@@ -1276,20 +1370,20 @@ function builder(): $DoubleStream$Builder
 function concat(doubleStream0: $DoubleStream$$Type, doubleStream1: $DoubleStream$$Type): $DoubleStream
 function empty(): $DoubleStream
 function generate(doubleSupplier0: $DoubleSupplier$$Type): $DoubleStream
-function iterate(double0: double, doubleUnaryOperator1: $DoubleUnaryOperator$$Type): $DoubleStream
 function iterate(double0: double, doublePredicate1: $DoublePredicate$$Type, doubleUnaryOperator2: $DoubleUnaryOperator$$Type): $DoubleStream
-function of(...double0s: double[]): $DoubleStream
+function iterate(double0: double, doubleUnaryOperator1: $DoubleUnaryOperator$$Type): $DoubleStream
 function of(double0: double): $DoubleStream
+function of(...double0s: double[]): $DoubleStream
 }
 export abstract class $DoubleStream$$Static implements $DoubleStream {
 static "builder"(): $DoubleStream$Builder
 static "concat"(doubleStream0: $DoubleStream$$Type, doubleStream1: $DoubleStream$$Type): $DoubleStream
 static "empty"(): $DoubleStream
 static "generate"(doubleSupplier0: $DoubleSupplier$$Type): $DoubleStream
-static "iterate"(double0: double, doubleUnaryOperator1: $DoubleUnaryOperator$$Type): $DoubleStream
 static "iterate"(double0: double, doublePredicate1: $DoublePredicate$$Type, doubleUnaryOperator2: $DoubleUnaryOperator$$Type): $DoubleStream
-static "of"(...double0s: double[]): $DoubleStream
+static "iterate"(double0: double, doubleUnaryOperator1: $DoubleUnaryOperator$$Type): $DoubleStream
 static "of"(double0: double): $DoubleStream
+static "of"(...double0s: double[]): $DoubleStream
 }
 }
 
@@ -1387,20 +1481,22 @@ import { $Executor } from "java.util.concurrent.Executor"
 import { $Collection$$Type } from "java.util.Collection"
 import { $Callable$$Type } from "java.util.concurrent.Callable"
 import { $Runnable, $Runnable$$Type } from "java.lang.Runnable"
+import { $AutoCloseable } from "java.lang.AutoCloseable"
 
-export interface $ExecutorService extends $Executor {
+export interface $ExecutorService extends $Executor, $AutoCloseable {
 "awaitTermination"(long0: long, timeUnit1: $TimeUnit$$Type): boolean
+"close"(): void
 "execute"(runnable0: $Runnable$$Type): void
-"invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>, long1: long, timeUnit2: $TimeUnit$$Type): $List<$Future<T>>
 "invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>): $List<$Future<T>>
+"invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>, long1: long, timeUnit2: $TimeUnit$$Type): $List<$Future<T>>
 "invokeAny"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>): T
 "invokeAny"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>, long1: long, timeUnit2: $TimeUnit$$Type): T
 "isShutdown"(): boolean
 "isTerminated"(): boolean
 "shutdown"(): void
 "shutdownNow"(): $List<$Runnable>
-"submit"(runnable0: $Runnable$$Type): $Future<any>
 "submit"<T>(runnable0: $Runnable$$Type, t1: T): $Future<T>
+"submit"(runnable0: $Runnable$$Type): $Future<any>
 "submit"<T>(callable0: $Callable$$Type<T>): $Future<T>
 get "terminated"(): boolean
 }
@@ -1511,6 +1607,7 @@ static "of"<T, R>(supplier0: $Supplier$$Type<R>, biConsumer1: $BiConsumer$$Type<
 
 declare module "java.util.SortedSet" {
 import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $SequencedSet } from "java.util.SequencedSet"
 import { $Stream } from "java.util.stream.Stream"
 import { $Iterator } from "java.util.Iterator"
 import { $Predicate$$Type } from "java.util.function.Predicate"
@@ -1520,9 +1617,11 @@ import { $Comparator } from "java.util.Comparator"
 import { $Spliterator } from "java.util.Spliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
-export interface $SortedSet<E = any> extends $Set<E> {
+export interface $SortedSet<E = any> extends $Set<E>, $SequencedSet<E> {
 "add"(e0: E): boolean
 "addAll"(collection0: $Collection$$Type<E>): boolean
+"addFirst"(e0: E): void
+"addLast"(e0: E): void
 "clear"(): void
 "comparator"(): $Comparator<E>
 "contains"(object0: any): boolean
@@ -1530,6 +1629,8 @@ export interface $SortedSet<E = any> extends $Set<E> {
 "equals"(object0: any): boolean
 "first"(): E
 "forEach"(consumer0: $Consumer$$Type<E>): void
+"getFirst"(): E
+"getLast"(): E
 "hashCode"(): integer
 "headSet"(e0: E): $SortedSet<E>
 "isEmpty"(): boolean
@@ -1538,7 +1639,9 @@ export interface $SortedSet<E = any> extends $Set<E> {
 "parallelStream"(): $Stream<E>
 "remove"(object0: any): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
+"removeFirst"(): E
 "removeIf"(predicate0: $Predicate$$Type<E>): boolean
+"removeLast"(): E
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
 "spliterator"(): $Spliterator<E>
@@ -1554,33 +1657,33 @@ get "empty"(): boolean
 
 export namespace $SortedSet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E): $Set<E>
+function of<E>(e0: E, e1: E): $Set<E>
+function of<E>(e0: E): $Set<E>
 function of<E>(...e0s: E[]): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 function of<E>(): $Set<E>
-function of<E>(e0: E, e1: E): $Set<E>
-function of<E>(e0: E): $Set<E>
 }
 export abstract class $SortedSet$$Static<E = any> implements $SortedSet<E> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+static "of"<E>(e0: E, e1: E): $Set<E>
+static "of"<E>(e0: E): $Set<E>
 static "of"<E>(...e0s: E[]): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 static "of"<E>(): $Set<E>
-static "of"<E>(e0: E, e1: E): $Set<E>
-static "of"<E>(e0: E): $Set<E>
 }
 }
 
@@ -1611,6 +1714,84 @@ export abstract class $LongConsumer$$Static implements $LongConsumer {
 }
 }
 
+declare module "java.util.SequencedSet" {
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $Stream } from "java.util.stream.Stream"
+import { $Iterator } from "java.util.Iterator"
+import { $Predicate$$Type } from "java.util.function.Predicate"
+import { $Collection$$Type } from "java.util.Collection"
+import { $Set } from "java.util.Set"
+import { $Spliterator } from "java.util.Spliterator"
+import { $SequencedCollection } from "java.util.SequencedCollection"
+import { $IntFunction$$Type } from "java.util.function.IntFunction"
+
+export interface $SequencedSet<E = any> extends $SequencedCollection<E>, $Set<E> {
+"add"(e0: E): boolean
+"addAll"(collection0: $Collection$$Type<E>): boolean
+"addFirst"(e0: E): void
+"addLast"(e0: E): void
+"clear"(): void
+"contains"(object0: any): boolean
+"containsAll"(collection0: $Collection$$Type<any>): boolean
+"equals"(object0: any): boolean
+"forEach"(consumer0: $Consumer$$Type<E>): void
+"getFirst"(): E
+"getLast"(): E
+"hashCode"(): integer
+"isEmpty"(): boolean
+"iterator"(): $Iterator<E>
+"parallelStream"(): $Stream<E>
+"remove"(object0: any): boolean
+"removeAll"(collection0: $Collection$$Type<any>): boolean
+"removeFirst"(): E
+"removeIf"(predicate0: $Predicate$$Type<E>): boolean
+"removeLast"(): E
+"retainAll"(collection0: $Collection$$Type<any>): boolean
+"reversed"(): $SequencedSet<E>
+"size"(): integer
+"spliterator"(): $Spliterator<E>
+"stream"(): $Stream<E>
+"toArray"<T>(t0s: T[]): T[]
+"toArray"(): any[]
+"toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+[Symbol.iterator](): IterableIterator<E>;
+get "first"(): E
+get "last"(): E
+get "empty"(): boolean
+}
+
+export namespace $SequencedSet {
+function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E): $Set<E>
+function of<E>(e0: E, e1: E): $Set<E>
+function of<E>(e0: E): $Set<E>
+function of<E>(...e0s: E[]): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
+function of<E>(): $Set<E>
+}
+export abstract class $SequencedSet$$Static<E = any> implements $SequencedSet<E> {
+static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+static "of"<E>(e0: E, e1: E): $Set<E>
+static "of"<E>(e0: E): $Set<E>
+static "of"<E>(...e0s: E[]): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
+static "of"<E>(): $Set<E>
+}
+}
+
 declare module "java.util.function.ObjLongConsumer" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 export interface $ObjLongConsumer<T = any> {
@@ -1630,35 +1811,42 @@ import { $Stream } from "java.util.stream.Stream"
 import { $Iterator } from "java.util.Iterator"
 import { $ListIterator } from "java.util.ListIterator"
 import { $Predicate$$Type } from "java.util.function.Predicate"
-import { $Collection, $Collection$$Type } from "java.util.Collection"
+import { $Collection$$Type } from "java.util.Collection"
 import { $UnaryOperator$$Type } from "java.util.function.UnaryOperator"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $Spliterator } from "java.util.Spliterator"
+import { $SequencedCollection } from "java.util.SequencedCollection"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
-export interface $List<E = any> extends $Collection<E> {
+export interface $List<E = any> extends $SequencedCollection<E> {
 "add"(int0: integer, e1: E): void
 "add"(e0: E): boolean
-"addAll"(int0: integer, collection1: $Collection$$Type<E>): boolean
 "addAll"(collection0: $Collection$$Type<E>): boolean
+"addAll"(int0: integer, collection1: $Collection$$Type<E>): boolean
+"addFirst"(e0: E): void
+"addLast"(e0: E): void
 "clear"(): void
 "contains"(object0: any): boolean
 "containsAll"(collection0: $Collection$$Type<any>): boolean
 "equals"(object0: any): boolean
 "forEach"(consumer0: $Consumer$$Type<E>): void
 "get"(int0: integer): E
+"getFirst"(): E
+"getLast"(): E
 "hashCode"(): integer
 "indexOf"(object0: any): integer
 "isEmpty"(): boolean
 "iterator"(): $Iterator<E>
 "lastIndexOf"(object0: any): integer
-"listIterator"(int0: integer): $ListIterator<E>
 "listIterator"(): $ListIterator<E>
+"listIterator"(int0: integer): $ListIterator<E>
 "parallelStream"(): $Stream<E>
-"remove"(object0: any): boolean
 "remove"(int0: integer): E
+"remove"(object0: any): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
+"removeFirst"(): E
 "removeIf"(predicate0: $Predicate$$Type<E>): boolean
+"removeLast"(): E
 "replaceAll"(unaryOperator0: $UnaryOperator$$Type<E>): void
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "set"(int0: integer, e1: E): E
@@ -1672,38 +1860,54 @@ export interface $List<E = any> extends $Collection<E> {
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 [Symbol.iterator](): IterableIterator<E>;
 [index: number]: E
+get "first"(): E
+get "last"(): E
 get "empty"(): boolean
 }
 
 export namespace $List {
 function copyOf<E>(collection0: $Collection$$Type<E>): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E): $List<E>
-function of<E>(e0: E, e1: E): $List<E>
 function of<E>(e0: E): $List<E>
-function of<E>(): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-function of<E>(...e0s: E[]): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+function of<E>(...e0s: E[]): $List<E>
+function of<E>(): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 export abstract class $List$$Static<E = any> implements $List<E> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-static "of"<E>(e0: E, e1: E): $List<E>
 static "of"<E>(e0: E): $List<E>
-static "of"<E>(): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-static "of"<E>(...e0s: E[]): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+static "of"<E>(...e0s: E[]): $List<E>
+static "of"<E>(): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
+}
+}
+
+declare module "java.util.concurrent.Future$State" {
+import { $Enum } from "java.lang.Enum"
+
+export class $Future$State extends $Enum<$Future$State> {
+static readonly "CANCELLED": $Future$State
+static readonly "FAILED": $Future$State
+static readonly "RUNNING": $Future$State
+static readonly "SUCCESS": $Future$State
+
+public static "valueOf"(string0: string): $Future$State
+public static "values"(): $Future$State[]
 }
 }
 
@@ -1789,30 +1993,32 @@ set "year"(value: integer)
 }
 
 declare module "java.util.Random" {
-import { $RandomGenerator } from "java.util.random.RandomGenerator"
+import { $RandomGenerator, $RandomGenerator$$Type } from "java.util.random.RandomGenerator"
 import { $IntStream } from "java.util.stream.IntStream"
 import { $LongStream } from "java.util.stream.LongStream"
 import { $DoubleStream } from "java.util.stream.DoubleStream"
 import { $Serializable } from "java.io.Serializable"
 
 export class $Random implements $RandomGenerator, $Serializable {
-constructor()
 constructor(long0: long)
+constructor()
 
 public "doubles"(long0: long): $DoubleStream
-public "doubles"(long0: long, double1: double, double2: double): $DoubleStream
 public "doubles"(): $DoubleStream
+public "doubles"(long0: long, double1: double, double2: double): $DoubleStream
 public "doubles"(double0: double, double1: double): $DoubleStream
+public "equiDoubles"(double0: double, double1: double, boolean2: boolean, boolean3: boolean): $DoubleStream
+public static "from"(randomGenerator0: $RandomGenerator$$Type): $Random
 public static "getDefault"(): $RandomGenerator
+public "ints"(long0: long, int1: integer, int2: integer): $IntStream
+public "ints"(int0: integer, int1: integer): $IntStream
 public "ints"(long0: long): $IntStream
 public "ints"(): $IntStream
-public "ints"(int0: integer, int1: integer): $IntStream
-public "ints"(long0: long, int1: integer, int2: integer): $IntStream
 public "isDeprecated"(): boolean
-public "longs"(long0: long, long1: long, long2: long): $LongStream
 public "longs"(long0: long): $LongStream
-public "longs"(): $LongStream
+public "longs"(long0: long, long1: long, long2: long): $LongStream
 public "longs"(long0: long, long1: long): $LongStream
+public "longs"(): $LongStream
 public "nextBoolean"(): boolean
 public "nextBytes"(byte0s: byte[]): void
 public "nextDouble"(): double
@@ -1820,16 +2026,16 @@ public "nextDouble"(double0: double): double
 public "nextDouble"(double0: double, double1: double): double
 public "nextExponential"(): double
 public "nextFloat"(): float
-public "nextFloat"(float0: float, float1: float): float
 public "nextFloat"(float0: float): float
+public "nextFloat"(float0: float, float1: float): float
 public "nextGaussian"(): double
 public "nextGaussian"(double0: double, double1: double): double
-public "nextInt"(): integer
 public "nextInt"(int0: integer): integer
+public "nextInt"(): integer
 public "nextInt"(int0: integer, int1: integer): integer
 public "nextLong"(): long
-public "nextLong"(long0: long): long
 public "nextLong"(long0: long, long1: long): long
+public "nextLong"(long0: long): long
 public static "of"(string0: string): $RandomGenerator
 public "setSeed"(long0: long): void
 get "deprecated"(): boolean
@@ -1868,15 +2074,15 @@ set "value"(value: V)
 export namespace $Map$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Map$Entry$$Static<K = any, V = any> implements $Map$Entry<K, V> {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -1919,18 +2125,18 @@ public "forEach"(consumer0: $Consumer$$Type<K>): void
 public "getMappedValue"(): V
 public "isEmpty"(): boolean
 public "iterator"(): $Iterator<K>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E): $Set<E>
+public static "of"<E>(e0: E): $Set<E>
 public static "of"<E>(...e0s: E[]): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 public static "of"<E>(): $Set<E>
-public static "of"<E>(e0: E, e1: E): $Set<E>
-public static "of"<E>(e0: E): $Set<E>
 public "parallelStream"(): $Stream<K>
 public "removeIf"(predicate0: $Predicate$$Type<K>): boolean
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
@@ -1953,6 +2159,57 @@ constructor(object0: any)
 
 public "getSource"(): any
 get "source"(): any
+}
+}
+
+declare module "java.util.SequencedCollection" {
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $Stream } from "java.util.stream.Stream"
+import { $Iterator } from "java.util.Iterator"
+import { $Predicate$$Type } from "java.util.function.Predicate"
+import { $Collection, $Collection$$Type } from "java.util.Collection"
+import { $Spliterator } from "java.util.Spliterator"
+import { $IntFunction$$Type } from "java.util.function.IntFunction"
+
+export interface $SequencedCollection<E = any> extends $Collection<E> {
+"add"(e0: E): boolean
+"addAll"(collection0: $Collection$$Type<E>): boolean
+"addFirst"(e0: E): void
+"addLast"(e0: E): void
+"clear"(): void
+"contains"(object0: any): boolean
+"containsAll"(collection0: $Collection$$Type<any>): boolean
+"equals"(object0: any): boolean
+"forEach"(consumer0: $Consumer$$Type<E>): void
+"getFirst"(): E
+"getLast"(): E
+"hashCode"(): integer
+"isEmpty"(): boolean
+"iterator"(): $Iterator<E>
+"parallelStream"(): $Stream<E>
+"remove"(object0: any): boolean
+"removeAll"(collection0: $Collection$$Type<any>): boolean
+"removeFirst"(): E
+"removeIf"(predicate0: $Predicate$$Type<E>): boolean
+"removeLast"(): E
+"retainAll"(collection0: $Collection$$Type<any>): boolean
+"reversed"(): $SequencedCollection<E>
+"size"(): integer
+"spliterator"(): $Spliterator<E>
+"stream"(): $Stream<E>
+"toArray"<T>(t0s: T[]): T[]
+"toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toArray"(): any[]
+[Symbol.iterator](): IterableIterator<E>;
+get "first"(): E
+get "last"(): E
+get "empty"(): boolean
+}
+
+export namespace $SequencedCollection {
+const probejs$$marker: never
+}
+export abstract class $SequencedCollection$$Static<E = any> implements $SequencedCollection<E> {
 }
 }
 
@@ -2043,6 +2300,7 @@ export abstract class $IntFunction$$Static<R = any> implements $IntFunction<R> {
 
 declare module "java.util.TimeZone" {
 import { $Cloneable } from "java.lang.Cloneable"
+import { $Stream } from "java.util.stream.Stream"
 import { $Locale$$Type } from "java.util.Locale"
 import { $Date$$Type } from "java.util.Date"
 import { $ZoneId, $ZoneId$$Type } from "java.time.ZoneId"
@@ -2054,21 +2312,23 @@ static readonly "SHORT": integer
 
 constructor()
 
+public static "availableIDs"(int0: integer): $Stream<string>
+public static "availableIDs"(): $Stream<string>
 public "clone"(): any
 public static "getAvailableIDs"(): string[]
 public static "getAvailableIDs"(int0: integer): string[]
 public "getDSTSavings"(): integer
 public static "getDefault"(): $TimeZone
+public "getDisplayName"(): string
 public "getDisplayName"(boolean0: boolean, int1: integer): string
 public "getDisplayName"(boolean0: boolean, int1: integer, locale2: $Locale$$Type): string
 public "getDisplayName"(locale0: $Locale$$Type): string
-public "getDisplayName"(): string
 public "getID"(): string
 public "getOffset"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): integer
 public "getOffset"(long0: long): integer
 public "getRawOffset"(): integer
-public static "getTimeZone"(zoneId0: $ZoneId$$Type): $TimeZone
 public static "getTimeZone"(string0: string): $TimeZone
+public static "getTimeZone"(zoneId0: $ZoneId$$Type): $TimeZone
 public "hasSameRules"(timeZone0: $TimeZone$$Type): boolean
 public "inDaylightTime"(date0: $Date$$Type): boolean
 public "observesDaylightTime"(): boolean
@@ -2115,8 +2375,8 @@ export interface $Collection<E = any> extends $Iterable<E> {
 "spliterator"(): $Spliterator<E>
 "stream"(): $Stream<E>
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toArray"(): any[]
 [Symbol.iterator](): IterableIterator<E>;
 get "empty"(): boolean
 }
@@ -2162,8 +2422,8 @@ export interface $Queue<E = any> extends $Collection<E> {
 "spliterator"(): $Spliterator<E>
 "stream"(): $Stream<E>
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toArray"(): any[]
 [Symbol.iterator](): IterableIterator<E>;
 get "empty"(): boolean
 }
@@ -2202,14 +2462,14 @@ constructor()
 public "and"(bitSet0: $BitSet$$Type): void
 public "andNot"(bitSet0: $BitSet$$Type): void
 public "cardinality"(): integer
-public "clear"(): void
-public "clear"(int0: integer, int1: integer): void
 public "clear"(int0: integer): void
+public "clear"(int0: integer, int1: integer): void
+public "clear"(): void
 public "clone"(): any
 public "flip"(int0: integer): void
 public "flip"(int0: integer, int1: integer): void
-public "get"(int0: integer, int1: integer): $BitSet
 public "get"(int0: integer): boolean
+public "get"(int0: integer, int1: integer): $BitSet
 public "intersects"(bitSet0: $BitSet$$Type): boolean
 public "isEmpty"(): boolean
 public "length"(): integer
@@ -2220,16 +2480,16 @@ public "previousClearBit"(int0: integer): integer
 public "previousSetBit"(int0: integer): integer
 public "set"(int0: integer, int1: integer): void
 public "set"(int0: integer, boolean1: boolean): void
-public "set"(int0: integer, int1: integer, boolean2: boolean): void
 public "set"(int0: integer): void
+public "set"(int0: integer, int1: integer, boolean2: boolean): void
 public "size"(): integer
 public "stream"(): $IntStream
 public "toByteArray"(): byte[]
 public "toLongArray"(): long[]
 public static "valueOf"(long0s: long[]): $BitSet
-public static "valueOf"(byteBuffer0: $ByteBuffer$$Type): $BitSet
 public static "valueOf"(longBuffer0: $LongBuffer$$Type): $BitSet
 public static "valueOf"(byte0s: byte[]): $BitSet
+public static "valueOf"(byteBuffer0: $ByteBuffer$$Type): $BitSet
 public "xor"(bitSet0: $BitSet$$Type): void
 get "empty"(): boolean
 }
@@ -2250,12 +2510,12 @@ public static "clearCache"(classLoader0: $ClassLoader$$Type): void
 public static "clearCache"(): void
 public "containsKey"(string0: string): boolean
 public "getBaseBundleName"(): string
-public static "getBundle"(string0: string, locale1: $Locale$$Type, classLoader2: $ClassLoader$$Type): $ResourceBundle
-public static "getBundle"(string0: string, locale1: $Locale$$Type, classLoader2: $ClassLoader$$Type, control3: $ResourceBundle$Control$$Type): $ResourceBundle
-public static "getBundle"(string0: string): $ResourceBundle
-public static "getBundle"(string0: string, control1: $ResourceBundle$Control$$Type): $ResourceBundle
 public static "getBundle"(string0: string, locale1: $Locale$$Type): $ResourceBundle
 public static "getBundle"(string0: string, module1: $Module$$Type): $ResourceBundle
+public static "getBundle"(string0: string, control1: $ResourceBundle$Control$$Type): $ResourceBundle
+public static "getBundle"(string0: string): $ResourceBundle
+public static "getBundle"(string0: string, locale1: $Locale$$Type, classLoader2: $ClassLoader$$Type): $ResourceBundle
+public static "getBundle"(string0: string, locale1: $Locale$$Type, classLoader2: $ClassLoader$$Type, control3: $ResourceBundle$Control$$Type): $ResourceBundle
 public static "getBundle"(string0: string, locale1: $Locale$$Type, control2: $ResourceBundle$Control$$Type): $ResourceBundle
 public static "getBundle"(string0: string, locale1: $Locale$$Type, module2: $Module$$Type): $ResourceBundle
 public "getKeys"(): $Enumeration<string>
@@ -2271,8 +2531,8 @@ get "locale"(): $Locale
 }
 
 declare module "java.util.Properties" {
-import { $PrintWriter$$Type } from "java.io.PrintWriter"
 import { $PrintStream$$Type } from "java.io.PrintStream"
+import { $PrintWriter$$Type } from "java.io.PrintWriter"
 import { $OutputStream$$Type } from "java.io.OutputStream"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
 import { $Enumeration } from "java.util.Enumeration"
@@ -2305,23 +2565,23 @@ public "getProperty"(string0: string): string
 public "getProperty"(string0: string, string1: string): string
 public "keySet"(): $Set<any>
 public "keys"(): $Enumeration<any>
-public "list"(printWriter0: $PrintWriter$$Type): void
 public "list"(printStream0: $PrintStream$$Type): void
+public "list"(printWriter0: $PrintWriter$$Type): void
 public "load"(reader0: $Reader$$Type): void
 public "load"(inputStream0: $InputStream$$Type): void
 public "loadFromXML"(inputStream0: $InputStream$$Type): void
 public "merge"(object0: any, object1: any, biFunction2: $BiFunction$$Type<any, any, any>): any
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "propertyNames"(): $Enumeration<any>
 public "put"(object0: any, object1: any): any
@@ -2333,9 +2593,9 @@ public "save"(outputStream0: $OutputStream$$Type, string1: string): void
 public "setProperty"(string0: string, string1: string): any
 public "store"(outputStream0: $OutputStream$$Type, string1: string): void
 public "store"(writer0: $Writer$$Type, string1: string): void
+public "storeToXML"(outputStream0: $OutputStream$$Type, string1: string, string2: string): void
 public "storeToXML"(outputStream0: $OutputStream$$Type, string1: string): void
 public "storeToXML"(outputStream0: $OutputStream$$Type, string1: string, charset2: $Charset$$Type): void
-public "storeToXML"(outputStream0: $OutputStream$$Type, string1: string, string2: string): void
 public "stringPropertyNames"(): $Set<string>
 public "values"(): $Collection<any>
 }
@@ -2358,6 +2618,8 @@ import { $OptionalLong } from "java.util.OptionalLong"
 import { $Stream } from "java.util.stream.Stream"
 import { $ObjLongConsumer$$Type } from "java.util.function.ObjLongConsumer"
 import { $LongUnaryOperator$$Type } from "java.util.function.LongUnaryOperator"
+import { $PrimitiveIterator$OfLong } from "java.util.PrimitiveIterator$OfLong"
+import { $Spliterator$OfLong } from "java.util.Spliterator$OfLong"
 import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $BaseStream } from "java.util.stream.BaseStream"
 import { $LongPredicate$$Type } from "java.util.function.LongPredicate"
@@ -2382,6 +2644,7 @@ export interface $LongStream extends $BaseStream<long, $LongStream> {
 "forEach"(longConsumer0: $LongConsumer$$Type): void
 "forEachOrdered"(longConsumer0: $LongConsumer$$Type): void
 "isParallel"(): boolean
+"iterator"(): $PrimitiveIterator$OfLong
 "limit"(long0: long): $LongStream
 "map"(longUnaryOperator0: $LongUnaryOperator$$Type): $LongStream
 "mapMulti"(longMapMultiConsumer0: $LongStream$LongMapMultiConsumer$$Type): $LongStream
@@ -2393,10 +2656,11 @@ export interface $LongStream extends $BaseStream<long, $LongStream> {
 "noneMatch"(longPredicate0: $LongPredicate$$Type): boolean
 "onClose"(runnable0: $Runnable$$Type): $LongStream
 "peek"(longConsumer0: $LongConsumer$$Type): $LongStream
-"reduce"(long0: long, longBinaryOperator1: $LongBinaryOperator$$Type): long
 "reduce"(longBinaryOperator0: $LongBinaryOperator$$Type): $OptionalLong
+"reduce"(long0: long, longBinaryOperator1: $LongBinaryOperator$$Type): long
 "skip"(long0: long): $LongStream
 "sorted"(): $LongStream
+"spliterator"(): $Spliterator$OfLong
 "sum"(): long
 "summaryStatistics"(): $LongSummaryStatistics
 "takeWhile"(longPredicate0: $LongPredicate$$Type): $LongStream
@@ -2412,8 +2676,8 @@ function empty(): $LongStream
 function generate(longSupplier0: $LongSupplier$$Type): $LongStream
 function iterate(long0: long, longPredicate1: $LongPredicate$$Type, longUnaryOperator2: $LongUnaryOperator$$Type): $LongStream
 function iterate(long0: long, longUnaryOperator1: $LongUnaryOperator$$Type): $LongStream
-function of(...long0s: long[]): $LongStream
 function of(long0: long): $LongStream
+function of(...long0s: long[]): $LongStream
 function range(long0: long, long1: long): $LongStream
 function rangeClosed(long0: long, long1: long): $LongStream
 }
@@ -2424,8 +2688,8 @@ static "empty"(): $LongStream
 static "generate"(longSupplier0: $LongSupplier$$Type): $LongStream
 static "iterate"(long0: long, longPredicate1: $LongPredicate$$Type, longUnaryOperator2: $LongUnaryOperator$$Type): $LongStream
 static "iterate"(long0: long, longUnaryOperator1: $LongUnaryOperator$$Type): $LongStream
-static "of"(...long0s: long[]): $LongStream
 static "of"(long0: long): $LongStream
+static "of"(...long0s: long[]): $LongStream
 static "range"(long0: long, long1: long): $LongStream
 static "rangeClosed"(long0: long, long1: long): $LongStream
 }
@@ -2435,36 +2699,36 @@ declare module "java.util.Formatter" {
 import { $OutputStream$$Type } from "java.io.OutputStream"
 import { $PrintStream$$Type } from "java.io.PrintStream"
 import { $Charset$$Type } from "java.nio.charset.Charset"
-import { $Locale, $Locale$$Type } from "java.util.Locale"
 import { $Appendable, $Appendable$$Type } from "java.lang.Appendable"
+import { $Locale, $Locale$$Type } from "java.util.Locale"
 import { $Closeable } from "java.io.Closeable"
 import { $IOException } from "java.io.IOException"
 import { $File$$Type } from "java.io.File"
 import { $Flushable } from "java.io.Flushable"
 
 export class $Formatter implements $Closeable, $Flushable {
+constructor(string0: string)
+constructor(appendable0: $Appendable$$Type, locale1: $Locale$$Type)
+constructor(locale0: $Locale$$Type)
+constructor(appendable0: $Appendable$$Type)
+constructor()
 constructor(file0: $File$$Type, string1: string)
 constructor(file0: $File$$Type)
 constructor(string0: string, charset1: $Charset$$Type, locale2: $Locale$$Type)
 constructor(string0: string, string1: string, locale2: $Locale$$Type)
 constructor(string0: string, string1: string)
-constructor(outputStream0: $OutputStream$$Type, string1: string)
 constructor(outputStream0: $OutputStream$$Type)
+constructor(outputStream0: $OutputStream$$Type, string1: string)
 constructor(outputStream0: $OutputStream$$Type, string1: string, locale2: $Locale$$Type)
-constructor(file0: $File$$Type, charset1: $Charset$$Type, locale2: $Locale$$Type)
-constructor(file0: $File$$Type, string1: string, locale2: $Locale$$Type)
-constructor()
 constructor(outputStream0: $OutputStream$$Type, charset1: $Charset$$Type, locale2: $Locale$$Type)
+constructor(file0: $File$$Type, string1: string, locale2: $Locale$$Type)
+constructor(file0: $File$$Type, charset1: $Charset$$Type, locale2: $Locale$$Type)
 constructor(printStream0: $PrintStream$$Type)
-constructor(string0: string)
-constructor(appendable0: $Appendable$$Type, locale1: $Locale$$Type)
-constructor(locale0: $Locale$$Type)
-constructor(appendable0: $Appendable$$Type)
 
 public "close"(): void
 public "flush"(): void
-public "format"(locale0: $Locale$$Type, string1: string, ...object2s: any[]): $Formatter
 public "format"(string0: string, ...object1s: any[]): $Formatter
+public "format"(locale0: $Locale$$Type, string1: string, ...object2s: any[]): $Formatter
 public "ioException"(): $IOException
 public "locale"(): $Locale
 public "out"(): $Appendable
@@ -2472,7 +2736,9 @@ public "out"(): $Appendable
 }
 
 declare module "java.util.SortedMap" {
+import { $SequencedSet } from "java.util.SequencedSet"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
+import { $SequencedMap } from "java.util.SequencedMap"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
 import { $Map, $Map$$Type } from "java.util.Map"
 import { $Collection } from "java.util.Collection"
@@ -2480,8 +2746,9 @@ import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $Set } from "java.util.Set"
 import { $Comparator } from "java.util.Comparator"
 import { $Function$$Type } from "java.util.function.Function"
+import { $SequencedCollection } from "java.util.SequencedCollection"
 
-export interface $SortedMap<K = any, V = any> extends $Map<K, V> {
+export interface $SortedMap<K = any, V = any> extends $SequencedMap<K, V> {
 "clear"(): void
 "comparator"(): $Comparator<K>
 "compute"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
@@ -2491,6 +2758,7 @@ export interface $SortedMap<K = any, V = any> extends $Map<K, V> {
 "containsValue"(object0: any): boolean
 "entrySet"(): $Set<$Map$Entry<K, V>>
 "equals"(object0: any): boolean
+"firstEntry"(): $Map$Entry<K, V>
 "firstKey"(): K
 "forEach"(biConsumer0: $BiConsumer$$Type<K, V>): void
 "get"(object0: any): V
@@ -2499,16 +2767,25 @@ export interface $SortedMap<K = any, V = any> extends $Map<K, V> {
 "headMap"(k0: K): $SortedMap<K, V>
 "isEmpty"(): boolean
 "keySet"(): $Set<K>
+"lastEntry"(): $Map$Entry<K, V>
 "lastKey"(): K
 "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
+"pollFirstEntry"(): $Map$Entry<K, V>
+"pollLastEntry"(): $Map$Entry<K, V>
 "put"(k0: K, v1: V): V
 "putAll"(map0: $Map$$Type<K, V>): void
+"putFirst"(k0: K, v1: V): V
 "putIfAbsent"(k0: K, v1: V): V
-"remove"(object0: any): V
+"putLast"(k0: K, v1: V): V
 "remove"(object0: any, object1: any): boolean
-"replace"(k0: K, v1: V): V
+"remove"(object0: any): V
 "replace"(k0: K, v1: V, v2: V): boolean
+"replace"(k0: K, v1: V): V
 "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
+"reversed"(): $SortedMap<K, V>
+"sequencedEntrySet"(): $SequencedSet<$Map$Entry<K, V>>
+"sequencedKeySet"(): $SequencedSet<K>
+"sequencedValues"(): $SequencedCollection<V>
 "size"(): integer
 "subMap"(k0: K, k1: K): $SortedMap<K, V>
 "tailMap"(k0: K): $SortedMap<K, V>
@@ -2520,33 +2797,33 @@ get "empty"(): boolean
 export namespace $SortedMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $SortedMap$$Static<K = any, V = any> implements $SortedMap<K, V> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -2629,18 +2906,18 @@ public static "of"<E extends $Enum<E>>(e0: E, e1: E, e2: E, e3: E): $EnumSet<E>
 public static "of"<E extends $Enum<E>>(e0: E, ...e1s: E[]): $EnumSet<E>
 public static "of"<E extends $Enum<E>>(e0: E): $EnumSet<E>
 public static "of"<E extends $Enum<E>>(e0: E, e1: E, e2: E, e3: E, e4: E): $EnumSet<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E): $Set<E>
+public static "of"<E>(e0: E): $Set<E>
 public static "of"<E>(...e0s: E[]): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 public static "of"<E>(): $Set<E>
-public static "of"<E>(e0: E, e1: E): $Set<E>
-public static "of"<E>(e0: E): $Set<E>
 public "parallelStream"(): $Stream<E>
 public static "range"<E extends $Enum<E>>(e0: E, e1: E): $EnumSet<E>
 public "remove"(object0: any): boolean
@@ -2760,9 +3037,10 @@ import { $Predicate$$Type } from "java.util.function.Predicate"
 import { $Collection$$Type } from "java.util.Collection"
 import { $Queue } from "java.util.Queue"
 import { $Spliterator } from "java.util.Spliterator"
+import { $SequencedCollection } from "java.util.SequencedCollection"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
-export interface $Deque<E = any> extends $Queue<E> {
+export interface $Deque<E = any> extends $Queue<E>, $SequencedCollection<E> {
 "add"(e0: E): boolean
 "addAll"(collection0: $Collection$$Type<E>): boolean
 "addFirst"(e0: E): void
@@ -2791,8 +3069,8 @@ export interface $Deque<E = any> extends $Queue<E> {
 "pollLast"(): E
 "pop"(): E
 "push"(e0: E): void
-"remove"(): E
 "remove"(object0: any): boolean
+"remove"(): E
 "removeAll"(collection0: $Collection$$Type<any>): boolean
 "removeFirst"(): E
 "removeFirstOccurrence"(object0: any): boolean
@@ -2800,12 +3078,13 @@ export interface $Deque<E = any> extends $Queue<E> {
 "removeLast"(): E
 "removeLastOccurrence"(object0: any): boolean
 "retainAll"(collection0: $Collection$$Type<any>): boolean
+"reversed"(): $Deque<E>
 "size"(): integer
 "spliterator"(): $Spliterator<E>
 "stream"(): $Stream<E>
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toArray"(): any[]
 [Symbol.iterator](): IterableIterator<E>;
 get "first"(): E
 get "last"(): E
@@ -2849,15 +3128,21 @@ export abstract class $ObjIntConsumer$$Static<T = any> implements $ObjIntConsume
 }
 
 declare module "java.util.regex.MatchResult" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
+import { $Map } from "java.util.Map"
+
 export interface $MatchResult {
+"end"(string0: string): integer
 "end"(int0: integer): integer
 "end"(): integer
-"group"(): string
 "group"(int0: integer): string
+"group"(string0: string): string
+"group"(): string
 "groupCount"(): integer
-"start"(int0: integer): integer
+"hasMatch"(): boolean
+"namedGroups"(): $Map<string, integer>
 "start"(): integer
+"start"(string0: string): integer
+"start"(int0: integer): integer
 }
 
 export namespace $MatchResult {
@@ -2877,6 +3162,24 @@ export namespace $ToIntBiFunction {
 const probejs$$marker: never
 }
 export abstract class $ToIntBiFunction$$Static<T = any, U = any> implements $ToIntBiFunction<T, U> {
+}
+}
+
+declare module "java.util.stream.Gatherer$Integrator$Greedy" {
+import { $Gatherer$Integrator, $Gatherer$Integrator$$Type } from "java.util.stream.Gatherer$Integrator"
+import { $Gatherer$Downstream$$Type } from "java.util.stream.Gatherer$Downstream"
+
+export interface $Gatherer$Integrator$Greedy<A = any, T = any, R = any> extends $Gatherer$Integrator<A, T, R> {
+"integrate"(a0: A, t1: T, downstream2: $Gatherer$Downstream$$Type<R>): boolean
+}
+
+export namespace $Gatherer$Integrator$Greedy {
+function of<A, T, R>(integrator0: $Gatherer$Integrator$$Type<A, T, R>): $Gatherer$Integrator<A, T, R>
+function ofGreedy<A, T, R>(greedy0: $Gatherer$Integrator$Greedy$$Type<A, T, R>): $Gatherer$Integrator$Greedy<A, T, R>
+}
+export abstract class $Gatherer$Integrator$Greedy$$Static<A = any, T = any, R = any> implements $Gatherer$Integrator$Greedy<A, T, R> {
+static "of"<A, T, R>(integrator0: $Gatherer$Integrator$$Type<A, T, R>): $Gatherer$Integrator<A, T, R>
+static "ofGreedy"<A, T, R>(greedy0: $Gatherer$Integrator$Greedy$$Type<A, T, R>): $Gatherer$Integrator$Greedy<A, T, R>
 }
 }
 
@@ -2983,27 +3286,35 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 export class $Stack<E = any> extends $Vector<E> {
 constructor()
 
+public "addFirst"(e0: E): void
+public "addLast"(e0: E): void
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "empty"(): boolean
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
+public "getFirst"(): E
+public "getLast"(): E
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<E>
 public "peek"(): E
 public "pop"(): E
 public "push"(e0: E): E
+public "removeFirst"(): E
+public "removeLast"(): E
 public "search"(object0: any): integer
 public "stream"(): $Stream<E>
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+get "first"(): E
+get "last"(): E
 }
 }
 
@@ -3049,33 +3360,33 @@ get "empty"(): boolean
 export namespace $ConcurrentMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $ConcurrentMap$$Static<K = any, V = any> implements $ConcurrentMap<K, V> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -3085,8 +3396,8 @@ import { $TimeUnit$$Type } from "java.util.concurrent.TimeUnit"
 import { $Date$$Type } from "java.util.Date"
 
 export interface $Condition {
-"await"(): void
 "await"(long0: long, timeUnit1: $TimeUnit$$Type): boolean
+"await"(): void
 "awaitNanos"(long0: long): long
 "awaitUninterruptibly"(): void
 "awaitUntil"(date0: $Date$$Type): boolean
@@ -3113,8 +3424,8 @@ export interface $Comparator<T = any> {
 "equals"(object0: any): boolean
 "reversed"(): $Comparator<T>
 "thenComparing"<U>(function0: $Function$$Type<T, U>, comparator1: $Comparator$$Type<U>): $Comparator<T>
-"thenComparing"<U extends $Comparable<U>>(function0: $Function$$Type<T, U>): $Comparator<T>
 "thenComparing"(comparator0: $Comparator$$Type<T>): $Comparator<T>
+"thenComparing"<U extends $Comparable<U>>(function0: $Function$$Type<T, U>): $Comparator<T>
 "thenComparingDouble"(toDoubleFunction0: $ToDoubleFunction$$Type<T>): $Comparator<T>
 "thenComparingInt"(toIntFunction0: $ToIntFunction$$Type<T>): $Comparator<T>
 "thenComparingLong"(toLongFunction0: $ToLongFunction$$Type<T>): $Comparator<T>
@@ -3174,35 +3485,36 @@ import { $DoubleStream } from "java.util.stream.DoubleStream"
 
 export interface $RandomGenerator {
 "doubles"(): $DoubleStream
-"doubles"(double0: double, double1: double): $DoubleStream
 "doubles"(long0: long): $DoubleStream
+"doubles"(double0: double, double1: double): $DoubleStream
 "doubles"(long0: long, double1: double, double2: double): $DoubleStream
-"ints"(long0: long): $IntStream
-"ints"(long0: long, int1: integer, int2: integer): $IntStream
+"equiDoubles"(double0: double, double1: double, boolean2: boolean, boolean3: boolean): $DoubleStream
 "ints"(): $IntStream
 "ints"(int0: integer, int1: integer): $IntStream
+"ints"(long0: long, int1: integer, int2: integer): $IntStream
+"ints"(long0: long): $IntStream
 "isDeprecated"(): boolean
-"longs"(): $LongStream
 "longs"(long0: long, long1: long, long2: long): $LongStream
-"longs"(long0: long, long1: long): $LongStream
 "longs"(long0: long): $LongStream
+"longs"(long0: long, long1: long): $LongStream
+"longs"(): $LongStream
 "nextBoolean"(): boolean
 "nextBytes"(byte0s: byte[]): void
 "nextDouble"(double0: double): double
-"nextDouble"(double0: double, double1: double): double
 "nextDouble"(): double
+"nextDouble"(double0: double, double1: double): double
 "nextExponential"(): double
 "nextFloat"(): float
-"nextFloat"(float0: float, float1: float): float
 "nextFloat"(float0: float): float
+"nextFloat"(float0: float, float1: float): float
 "nextGaussian"(double0: double, double1: double): double
 "nextGaussian"(): double
+"nextInt"(): integer
 "nextInt"(int0: integer, int1: integer): integer
 "nextInt"(int0: integer): integer
-"nextInt"(): integer
-"nextLong"(): long
-"nextLong"(long0: long): long
 "nextLong"(long0: long, long1: long): long
+"nextLong"(long0: long): long
+"nextLong"(): long
 get "deprecated"(): boolean
 }
 
@@ -3224,8 +3536,8 @@ export class $Locale$LanguageRange {
 static readonly "MAX_WEIGHT": double
 static readonly "MIN_WEIGHT": double
 
-constructor(string0: string, double1: double)
 constructor(string0: string)
+constructor(string0: string, double1: double)
 
 public "getRange"(): string
 public "getWeight"(): double
@@ -3241,6 +3553,7 @@ declare module "java.util.regex.Pattern" {
 import { $Matcher } from "java.util.regex.Matcher"
 import { $Stream } from "java.util.stream.Stream"
 import { $Predicate } from "java.util.function.Predicate"
+import { $Map } from "java.util.Map"
 import { $Serializable } from "java.io.Serializable"
 
 export class $Pattern implements $Serializable {
@@ -3261,11 +3574,13 @@ public static "compile"(string0: string, int1: integer): $Pattern
 public "flags"(): integer
 public "matcher"(charSequence0: charseq): $Matcher
 public static "matches"(string0: string, charSequence1: charseq): boolean
+public "namedGroups"(): $Map<string, integer>
 public "pattern"(): string
 public static "quote"(string0: string): string
-public "split"(charSequence0: charseq): string[]
 public "split"(charSequence0: charseq, int1: integer): string[]
+public "split"(charSequence0: charseq): string[]
 public "splitAsStream"(charSequence0: charseq): $Stream<string>
+public "splitWithDelimiters"(charSequence0: charseq, int1: integer): string[]
 }
 }
 
@@ -3277,8 +3592,8 @@ export class $LongSummaryStatistics implements $LongConsumer, $IntConsumer {
 constructor()
 constructor(long0: long, long1: long, long2: long, long3: long)
 
-public "accept"(int0: integer): void
 public "accept"(long0: long): void
+public "accept"(int0: integer): void
 public "andThen"(longConsumer0: $LongConsumer$$Type): $LongConsumer
 public "andThen"(intConsumer0: $IntConsumer$$Type): $IntConsumer
 public "combine"(longSummaryStatistics0: $LongSummaryStatistics$$Type): void
@@ -3322,10 +3637,10 @@ export interface $Map<K = any, V = any> {
 "put"(k0: K, v1: V): V
 "putAll"(map0: $Map$$Type<K, V>): void
 "putIfAbsent"(k0: K, v1: V): V
-"remove"(object0: any): V
 "remove"(object0: any, object1: any): boolean
-"replace"(k0: K, v1: V): V
+"remove"(object0: any): V
 "replace"(k0: K, v1: V, v2: V): boolean
+"replace"(k0: K, v1: V): V
 "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 "size"(): integer
 "values"(): $Collection<V>
@@ -3336,33 +3651,33 @@ get "empty"(): boolean
 export namespace $Map {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Map$$Static<K = any, V = any> implements $Map<K, V> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -3385,6 +3700,7 @@ import { $LongStream } from "java.util.stream.LongStream"
 import { $Iterator } from "java.util.Iterator"
 import { $Predicate$$Type } from "java.util.function.Predicate"
 import { $ToIntFunction$$Type } from "java.util.function.ToIntFunction"
+import { $Gatherer$$Type } from "java.util.stream.Gatherer"
 import { $BinaryOperator$$Type } from "java.util.function.BinaryOperator"
 import { $DoubleStream } from "java.util.stream.DoubleStream"
 import { $LongConsumer$$Type } from "java.util.function.LongConsumer"
@@ -3400,8 +3716,8 @@ export interface $Stream<T = any> extends $BaseStream<T, $Stream<T>> {
 "allMatch"(predicate0: $Predicate$$Type<T>): boolean
 "anyMatch"(predicate0: $Predicate$$Type<T>): boolean
 "close"(): void
-"collect"<R, A>(collector0: $Collector$$Type<T, A, R>): R
 "collect"<R>(supplier0: $Supplier$$Type<R>, biConsumer1: $BiConsumer$$Type<R, T>, biConsumer2: $BiConsumer$$Type<R, R>): R
+"collect"<R, A>(collector0: $Collector$$Type<T, A, R>): R
 "count"(): long
 "distinct"(): $Stream<T>
 "dropWhile"(predicate0: $Predicate$$Type<T>): $Stream<T>
@@ -3414,6 +3730,7 @@ export interface $Stream<T = any> extends $BaseStream<T, $Stream<T>> {
 "flatMapToLong"(function0: $Function$$Type<T, $LongStream>): $LongStream
 "forEach"(consumer0: $Consumer$$Type<T>): void
 "forEachOrdered"(consumer0: $Consumer$$Type<T>): void
+"gather"<R>(gatherer0: $Gatherer$$Type<T, any, R>): $Stream<R>
 "isParallel"(): boolean
 "iterator"(): $Iterator<T>
 "limit"(long0: long): $Stream<T>
@@ -3432,12 +3749,12 @@ export interface $Stream<T = any> extends $BaseStream<T, $Stream<T>> {
 "parallel"(): $Stream<T>
 "peek"(consumer0: $Consumer$$Type<T>): $Stream<T>
 "reduce"(binaryOperator0: $BinaryOperator$$Type<T>): $Optional<T>
-"reduce"<U>(u0: U, biFunction1: $BiFunction$$Type<U, T, U>, binaryOperator2: $BinaryOperator$$Type<U>): U
 "reduce"(t0: T, binaryOperator1: $BinaryOperator$$Type<T>): T
+"reduce"<U>(u0: U, biFunction1: $BiFunction$$Type<U, T, U>, binaryOperator2: $BinaryOperator$$Type<U>): U
 "sequential"(): $Stream<T>
 "skip"(long0: long): $Stream<T>
-"sorted"(comparator0: $Comparator$$Type<T>): $Stream<T>
 "sorted"(): $Stream<T>
+"sorted"(comparator0: $Comparator$$Type<T>): $Stream<T>
 "spliterator"(): $Spliterator<T>
 "takeWhile"(predicate0: $Predicate$$Type<T>): $Stream<T>
 "toArray"(): any[]
@@ -3453,8 +3770,8 @@ function empty<T>(): $Stream<T>
 function generate<T>(supplier0: $Supplier$$Type<T>): $Stream<T>
 function iterate<T>(t0: T, unaryOperator1: $UnaryOperator$$Type<T>): $Stream<T>
 function iterate<T>(t0: T, predicate1: $Predicate$$Type<T>, unaryOperator2: $UnaryOperator$$Type<T>): $Stream<T>
-function of<T>(t0: T): $Stream<T>
 function of<T>(...t0s: T[]): $Stream<T>
+function of<T>(t0: T): $Stream<T>
 function ofNullable<T>(t0: T): $Stream<T>
 }
 export abstract class $Stream$$Static<T = any> implements $Stream<T> {
@@ -3464,8 +3781,8 @@ static "empty"<T>(): $Stream<T>
 static "generate"<T>(supplier0: $Supplier$$Type<T>): $Stream<T>
 static "iterate"<T>(t0: T, unaryOperator1: $UnaryOperator$$Type<T>): $Stream<T>
 static "iterate"<T>(t0: T, predicate1: $Predicate$$Type<T>, unaryOperator2: $UnaryOperator$$Type<T>): $Stream<T>
-static "of"<T>(t0: T): $Stream<T>
 static "of"<T>(...t0s: T[]): $Stream<T>
+static "of"<T>(t0: T): $Stream<T>
 static "ofNullable"<T>(t0: T): $Stream<T>
 }
 }
@@ -3496,10 +3813,10 @@ import { $ToLongFunction$$Type } from "java.util.function.ToLongFunction"
 
 export class $ConcurrentHashMap<K = any, V = any> extends $AbstractMap<K, V> implements $ConcurrentMap<K, V>, $Serializable {
 constructor(int0: integer)
-constructor()
+constructor(map0: $Map$$Type<K, V>)
 constructor(int0: integer, float1: float)
 constructor(int0: integer, float1: float, int2: integer)
-constructor(map0: $Map$$Type<K, V>)
+constructor()
 
 public "compute"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
 public "computeIfAbsent"(k0: K, function1: $Function$$Type<K, V>): V
@@ -3509,59 +3826,58 @@ public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public "elements"(): $Enumeration<V>
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "entrySet"(): $Set<$Map$Entry<K, V>>
-public "forEach"(long0: long, biConsumer1: $BiConsumer$$Type<K, V>): void
 public "forEach"<U>(long0: long, biFunction1: $BiFunction$$Type<K, V, U>, consumer2: $Consumer$$Type<U>): void
+public "forEach"(long0: long, biConsumer1: $BiConsumer$$Type<K, V>): void
 public "forEach"(biConsumer0: $BiConsumer$$Type<K, V>): void
-public "forEachEntry"<U>(long0: long, function1: $Function$$Type<$Map$Entry$$Type<K, V>, U>, consumer2: $Consumer$$Type<U>): void
 public "forEachEntry"(long0: long, consumer1: $Consumer$$Type<$Map$Entry$$Type<K, V>>): void
+public "forEachEntry"<U>(long0: long, function1: $Function$$Type<$Map$Entry$$Type<K, V>, U>, consumer2: $Consumer$$Type<U>): void
 public "forEachKey"(long0: long, consumer1: $Consumer$$Type<K>): void
 public "forEachKey"<U>(long0: long, function1: $Function$$Type<K, U>, consumer2: $Consumer$$Type<U>): void
-public "forEachValue"(long0: long, consumer1: $Consumer$$Type<V>): void
 public "forEachValue"<U>(long0: long, function1: $Function$$Type<V, U>, consumer2: $Consumer$$Type<U>): void
+public "forEachValue"(long0: long, consumer1: $Consumer$$Type<V>): void
 public "get"(object0: any): V
 public "getOrDefault"(object0: any, v1: V): V
-public "keySet"(): $ConcurrentHashMap$KeySetView<K, V>
 public "keySet"(v0: V): $ConcurrentHashMap$KeySetView<K, V>
 public "keys"(): $Enumeration<K>
 public "mappingCount"(): long
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public static "newKeySet"<K>(int0: integer): $ConcurrentHashMap$KeySetView<K, boolean>
 public static "newKeySet"<K>(): $ConcurrentHashMap$KeySetView<K, boolean>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, v1: V): V
 public "putIfAbsent"(k0: K, v1: V): V
 public "reduce"<U>(long0: long, biFunction1: $BiFunction$$Type<K, V, U>, biFunction2: $BiFunction$$Type<U, U, U>): U
-public "reduceEntries"<U>(long0: long, function1: $Function$$Type<$Map$Entry$$Type<K, V>, U>, biFunction2: $BiFunction$$Type<U, U, U>): U
 public "reduceEntries"(long0: long, biFunction1: $BiFunction$$Type<$Map$Entry$$Type<K, V>, $Map$Entry$$Type<K, V>, $Map$Entry<K, V>>): $Map$Entry<K, V>
+public "reduceEntries"<U>(long0: long, function1: $Function$$Type<$Map$Entry$$Type<K, V>, U>, biFunction2: $BiFunction$$Type<U, U, U>): U
 public "reduceEntriesToDouble"(long0: long, toDoubleFunction1: $ToDoubleFunction$$Type<$Map$Entry$$Type<K, V>>, double2: double, doubleBinaryOperator3: $DoubleBinaryOperator$$Type): double
 public "reduceEntriesToInt"(long0: long, toIntFunction1: $ToIntFunction$$Type<$Map$Entry$$Type<K, V>>, int2: integer, intBinaryOperator3: $IntBinaryOperator$$Type): integer
 public "reduceEntriesToLong"(long0: long, toLongFunction1: $ToLongFunction$$Type<$Map$Entry$$Type<K, V>>, long2: long, longBinaryOperator3: $LongBinaryOperator$$Type): long
-public "reduceKeys"(long0: long, biFunction1: $BiFunction$$Type<K, K, K>): K
 public "reduceKeys"<U>(long0: long, function1: $Function$$Type<K, U>, biFunction2: $BiFunction$$Type<U, U, U>): U
+public "reduceKeys"(long0: long, biFunction1: $BiFunction$$Type<K, K, K>): K
 public "reduceKeysToDouble"(long0: long, toDoubleFunction1: $ToDoubleFunction$$Type<K>, double2: double, doubleBinaryOperator3: $DoubleBinaryOperator$$Type): double
 public "reduceKeysToInt"(long0: long, toIntFunction1: $ToIntFunction$$Type<K>, int2: integer, intBinaryOperator3: $IntBinaryOperator$$Type): integer
 public "reduceKeysToLong"(long0: long, toLongFunction1: $ToLongFunction$$Type<K>, long2: long, longBinaryOperator3: $LongBinaryOperator$$Type): long
 public "reduceToDouble"(long0: long, toDoubleBiFunction1: $ToDoubleBiFunction$$Type<K, V>, double2: double, doubleBinaryOperator3: $DoubleBinaryOperator$$Type): double
 public "reduceToInt"(long0: long, toIntBiFunction1: $ToIntBiFunction$$Type<K, V>, int2: integer, intBinaryOperator3: $IntBinaryOperator$$Type): integer
 public "reduceToLong"(long0: long, toLongBiFunction1: $ToLongBiFunction$$Type<K, V>, long2: long, longBinaryOperator3: $LongBinaryOperator$$Type): long
-public "reduceValues"(long0: long, biFunction1: $BiFunction$$Type<V, V, V>): V
 public "reduceValues"<U>(long0: long, function1: $Function$$Type<V, U>, biFunction2: $BiFunction$$Type<U, U, U>): U
+public "reduceValues"(long0: long, biFunction1: $BiFunction$$Type<V, V, V>): V
 public "reduceValuesToDouble"(long0: long, toDoubleFunction1: $ToDoubleFunction$$Type<V>, double2: double, doubleBinaryOperator3: $DoubleBinaryOperator$$Type): double
 public "reduceValuesToInt"(long0: long, toIntFunction1: $ToIntFunction$$Type<V>, int2: integer, intBinaryOperator3: $IntBinaryOperator$$Type): integer
 public "reduceValuesToLong"(long0: long, toLongFunction1: $ToLongFunction$$Type<V>, long2: long, longBinaryOperator3: $LongBinaryOperator$$Type): long
-public "remove"(object0: any, object1: any): boolean
 public "remove"(object0: any): V
+public "remove"(object0: any, object1: any): boolean
 public "replace"(k0: K, v1: V): V
 public "replace"(k0: K, v1: V, v2: V): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
@@ -3574,49 +3890,50 @@ public "values"(): $Collection<V>
 }
 
 declare module "java.util.concurrent.CompletableFuture" {
-import { $Consumer$$Type } from "java.util.function.Consumer"
-import { $Throwable$$Type } from "java.lang.Throwable"
-import { $TimeUnit$$Type } from "java.util.concurrent.TimeUnit"
-import { $Future } from "java.util.concurrent.Future"
-import { $CompletionStage, $CompletionStage$$Type } from "java.util.concurrent.CompletionStage"
+import { $Throwable, $Throwable$$Type } from "java.lang.Throwable"
 import { $Executor, $Executor$$Type } from "java.util.concurrent.Executor"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
-import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $Function$$Type } from "java.util.function.Function"
 import { $Supplier$$Type } from "java.util.function.Supplier"
 import { $Runnable$$Type } from "java.lang.Runnable"
+import { $Future$State } from "java.util.concurrent.Future$State"
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $TimeUnit$$Type } from "java.util.concurrent.TimeUnit"
+import { $Future } from "java.util.concurrent.Future"
+import { $CompletionStage, $CompletionStage$$Type } from "java.util.concurrent.CompletionStage"
+import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 
 export class $CompletableFuture<T = any> implements $Future<T>, $CompletionStage<T> {
 constructor()
 
+public "acceptEither"(completionStage0: $CompletionStage$$Type<T>, consumer1: $Consumer$$Type<T>): $CompletableFuture<void>
 public "acceptEitherAsync"(completionStage0: $CompletionStage$$Type<T>, consumer1: $Consumer$$Type<T>): $CompletableFuture<void>
 public static "allOf"(...completableFuture0s: $CompletableFuture$$Type<any>[]): $CompletableFuture<void>
 public static "anyOf"(...completableFuture0s: $CompletableFuture$$Type<any>[]): $CompletableFuture<any>
-public "applyToEitherAsync"<U>(completionStage0: $CompletionStage$$Type<T>, function1: $Function$$Type<T, U>): $CompletableFuture<U>
+public "applyToEitherAsync"<U>(completionStage0: $CompletionStage$$Type<T>, function1: $Function$$Type<T, U>, executor2: $Executor$$Type): $CompletableFuture<U>
 public "cancel"(boolean0: boolean): boolean
 public "complete"(t0: T): boolean
-public "completeAsync"(supplier0: $Supplier$$Type<T>): $CompletableFuture<T>
 public "completeAsync"(supplier0: $Supplier$$Type<T>, executor1: $Executor$$Type): $CompletableFuture<T>
+public "completeAsync"(supplier0: $Supplier$$Type<T>): $CompletableFuture<T>
 public "completeExceptionally"(throwable0: $Throwable$$Type): boolean
 public "completeOnTimeout"(t0: T, long1: long, timeUnit2: $TimeUnit$$Type): $CompletableFuture<T>
 public static "completedFuture"<U>(u0: U): $CompletableFuture<U>
 public static "completedStage"<U>(u0: U): $CompletionStage<U>
 public "copy"(): $CompletableFuture<T>
 public "defaultExecutor"(): $Executor
-public static "delayedExecutor"(long0: long, timeUnit1: $TimeUnit$$Type, executor2: $Executor$$Type): $Executor
 public static "delayedExecutor"(long0: long, timeUnit1: $TimeUnit$$Type): $Executor
-public "exceptionally"(function0: $Function$$Type<$Throwable$$Type, T>): $CompletableFuture<T>
+public static "delayedExecutor"(long0: long, timeUnit1: $TimeUnit$$Type, executor2: $Executor$$Type): $Executor
+public "exceptionNow"(): $Throwable
+public "exceptionallyAsync"(function0: $Function$$Type<$Throwable$$Type, T>): $CompletableFuture<T>
 public "exceptionallyAsync"(function0: $Function$$Type<$Throwable$$Type, T>, executor1: $Executor$$Type): $CompletableFuture<T>
 public "exceptionallyCompose"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>): $CompletableFuture<T>
-public "exceptionallyComposeAsync"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>, executor1: $Executor$$Type): $CompletableFuture<T>
+public "exceptionallyComposeAsync"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>): $CompletableFuture<T>
 public static "failedFuture"<U>(throwable0: $Throwable$$Type): $CompletableFuture<U>
 public static "failedStage"<U>(throwable0: $Throwable$$Type): $CompletionStage<U>
-public "get"(long0: long, timeUnit1: $TimeUnit$$Type): T
 public "get"(): T
+public "get"(long0: long, timeUnit1: $TimeUnit$$Type): T
 public "getNow"(t0: T): T
 public "getNumberOfDependents"(): integer
-public "handle"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>): $CompletableFuture<U>
-public "handleAsync"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>, executor1: $Executor$$Type): $CompletableFuture<U>
 public "isCancelled"(): boolean
 public "isCompletedExceptionally"(): boolean
 public "isDone"(): boolean
@@ -3626,26 +3943,24 @@ public "newIncompleteFuture"<U>(): $CompletableFuture<U>
 public "obtrudeException"(throwable0: $Throwable$$Type): void
 public "obtrudeValue"(t0: T): void
 public "orTimeout"(long0: long, timeUnit1: $TimeUnit$$Type): $CompletableFuture<T>
+public "resultNow"(): T
+public "runAfterBothAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type, executor2: $Executor$$Type): $CompletableFuture<void>
 public "runAfterEither"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletableFuture<void>
-public "runAfterEitherAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type, executor2: $Executor$$Type): $CompletableFuture<void>
-public "runAfterEitherAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletableFuture<void>
 public static "runAsync"(runnable0: $Runnable$$Type, executor1: $Executor$$Type): $CompletableFuture<void>
 public static "runAsync"(runnable0: $Runnable$$Type): $CompletableFuture<void>
+public "state"(): $Future$State
 public static "supplyAsync"<U>(supplier0: $Supplier$$Type<U>, executor1: $Executor$$Type): $CompletableFuture<U>
 public static "supplyAsync"<U>(supplier0: $Supplier$$Type<U>): $CompletableFuture<U>
 public "thenAccept"(consumer0: $Consumer$$Type<T>): $CompletableFuture<void>
-public "thenAcceptBoth"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>): $CompletableFuture<void>
-public "thenAcceptBothAsync"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>, executor2: $Executor$$Type): $CompletableFuture<void>
+public "thenAcceptAsync"(consumer0: $Consumer$$Type<T>, executor1: $Executor$$Type): $CompletableFuture<void>
 public "thenApply"<U>(function0: $Function$$Type<T, U>): $CompletableFuture<U>
-public "thenApplyAsync"<U>(function0: $Function$$Type<T, U>, executor1: $Executor$$Type): $CompletableFuture<U>
 public "thenApplyAsync"<U>(function0: $Function$$Type<T, U>): $CompletableFuture<U>
+public "thenApplyAsync"<U>(function0: $Function$$Type<T, U>, executor1: $Executor$$Type): $CompletableFuture<U>
 public "thenCombine"<U, V>(completionStage0: $CompletionStage$$Type<U>, biFunction1: $BiFunction$$Type<T, U, V>): $CompletableFuture<V>
 public "thenCompose"<U>(function0: $Function$$Type<T, $CompletionStage<U>>): $CompletableFuture<U>
-public "thenComposeAsync"<U>(function0: $Function$$Type<T, $CompletionStage<U>>, executor1: $Executor$$Type): $CompletableFuture<U>
-public "thenComposeAsync"<U>(function0: $Function$$Type<T, $CompletionStage<U>>): $CompletableFuture<U>
-public "thenRunAsync"(runnable0: $Runnable$$Type): $CompletableFuture<void>
 public "toCompletableFuture"(): $CompletableFuture<T>
 public "whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>, executor1: $Executor$$Type): $CompletableFuture<T>
+public "whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>): $CompletableFuture<T>
 get "numberOfDependents"(): integer
 get "cancelled"(): boolean
 get "completedExceptionally"(): boolean
@@ -3656,6 +3971,7 @@ get "done"(): boolean
 declare module "java.util.regex.Matcher" {
 import { $Stream } from "java.util.stream.Stream"
 import { $StringBuffer, $StringBuffer$$Type } from "java.lang.StringBuffer"
+import { $Map } from "java.util.Map"
 import { $MatchResult, $MatchResult$$Type } from "java.util.regex.MatchResult"
 import { $StringBuilder, $StringBuilder$$Type } from "java.lang.StringBuilder"
 import { $Pattern, $Pattern$$Type } from "java.util.regex.Pattern"
@@ -3666,20 +3982,22 @@ public "appendReplacement"(stringBuffer0: $StringBuffer$$Type, string1: string):
 public "appendReplacement"(stringBuilder0: $StringBuilder$$Type, string1: string): $Matcher
 public "appendTail"(stringBuffer0: $StringBuffer$$Type): $StringBuffer
 public "appendTail"(stringBuilder0: $StringBuilder$$Type): $StringBuilder
-public "end"(int0: integer): integer
 public "end"(): integer
+public "end"(int0: integer): integer
 public "end"(string0: string): integer
-public "find"(int0: integer): boolean
 public "find"(): boolean
+public "find"(int0: integer): boolean
 public "group"(int0: integer): string
-public "group"(string0: string): string
 public "group"(): string
+public "group"(string0: string): string
 public "groupCount"(): integer
 public "hasAnchoringBounds"(): boolean
+public "hasMatch"(): boolean
 public "hasTransparentBounds"(): boolean
 public "hitEnd"(): boolean
 public "lookingAt"(): boolean
 public "matches"(): boolean
+public "namedGroups"(): $Map<string, integer>
 public "pattern"(): $Pattern
 public static "quoteReplacement"(string0: string): string
 public "region"(int0: integer, int1: integer): $Matcher
@@ -3693,8 +4011,8 @@ public "requireEnd"(): boolean
 public "reset"(): $Matcher
 public "reset"(charSequence0: charseq): $Matcher
 public "results"(): $Stream<$MatchResult>
-public "start"(int0: integer): integer
 public "start"(): integer
+public "start"(int0: integer): integer
 public "start"(string0: string): integer
 public "toMatchResult"(): $MatchResult
 public "useAnchoringBounds"(boolean0: boolean): $Matcher
@@ -3716,6 +4034,91 @@ function identity(): $IntUnaryOperator
 }
 export abstract class $IntUnaryOperator$$Static implements $IntUnaryOperator {
 static "identity"(): $IntUnaryOperator
+}
+}
+
+declare module "java.util.SequencedMap" {
+import { $SequencedSet } from "java.util.SequencedSet"
+import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
+import { $BiFunction$$Type } from "java.util.function.BiFunction"
+import { $Map, $Map$$Type } from "java.util.Map"
+import { $Collection } from "java.util.Collection"
+import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
+import { $Set } from "java.util.Set"
+import { $Function$$Type } from "java.util.function.Function"
+import { $SequencedCollection } from "java.util.SequencedCollection"
+
+export interface $SequencedMap<K = any, V = any> extends $Map<K, V> {
+"clear"(): void
+"compute"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
+"computeIfAbsent"(k0: K, function1: $Function$$Type<K, V>): V
+"computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
+"containsKey"(object0: any): boolean
+"containsValue"(object0: any): boolean
+"entrySet"(): $Set<$Map$Entry<K, V>>
+"equals"(object0: any): boolean
+"firstEntry"(): $Map$Entry<K, V>
+"forEach"(biConsumer0: $BiConsumer$$Type<K, V>): void
+"get"(object0: any): V
+"getOrDefault"(object0: any, v1: V): V
+"hashCode"(): integer
+"isEmpty"(): boolean
+"keySet"(): $Set<K>
+"lastEntry"(): $Map$Entry<K, V>
+"merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
+"pollFirstEntry"(): $Map$Entry<K, V>
+"pollLastEntry"(): $Map$Entry<K, V>
+"put"(k0: K, v1: V): V
+"putAll"(map0: $Map$$Type<K, V>): void
+"putFirst"(k0: K, v1: V): V
+"putIfAbsent"(k0: K, v1: V): V
+"putLast"(k0: K, v1: V): V
+"remove"(object0: any, object1: any): boolean
+"remove"(object0: any): V
+"replace"(k0: K, v1: V, v2: V): boolean
+"replace"(k0: K, v1: V): V
+"replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
+"reversed"(): $SequencedMap<K, V>
+"sequencedEntrySet"(): $SequencedSet<$Map$Entry<K, V>>
+"sequencedKeySet"(): $SequencedSet<K>
+"sequencedValues"(): $SequencedCollection<V>
+"size"(): integer
+"values"(): $Collection<V>
+[index: string | number]: V
+get "empty"(): boolean
+}
+
+export namespace $SequencedMap {
+function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
+function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
+function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
+function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
+}
+export abstract class $SequencedMap$$Static<K = any, V = any> implements $SequencedMap<K, V> {
+static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
+static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
+static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
+static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
 
@@ -3783,6 +4186,7 @@ declare module "java.util.Locale" {
 import { $Locale$FilteringMode$$Type } from "java.util.Locale$FilteringMode"
 import { $List, $List$$Type } from "java.util.List"
 import { $Cloneable } from "java.lang.Cloneable"
+import { $Stream } from "java.util.stream.Stream"
 import { $Collection$$Type } from "java.util.Collection"
 import { $Locale$LanguageRange$$Type } from "java.util.Locale$LanguageRange"
 import { $Set } from "java.util.Set"
@@ -3816,10 +4220,15 @@ static readonly "UK": $Locale
 static readonly "UNICODE_LOCALE_EXTENSION": character
 static readonly "US": $Locale
 
-constructor(string0: string, string1: string)
-constructor(string0: string, string1: string, string2: string)
+/** @deprecated */
 constructor(string0: string)
+/** @deprecated */
+constructor(string0: string, string1: string, string2: string)
+/** @deprecated */
+constructor(string0: string, string1: string)
 
+public static "availableLocales"(): $Stream<$Locale>
+public static "caseFoldLanguageTag"(string0: string): string
 public "clone"(): any
 public static "filter"(list0: $List$$Type<$Locale$LanguageRange$$Type>, collection1: $Collection$$Type<$Locale$$Type>, filteringMode2: $Locale$FilteringMode$$Type): $List<$Locale>
 public static "filter"(list0: $List$$Type<$Locale$LanguageRange$$Type>, collection1: $Collection$$Type<$Locale$$Type>): $List<$Locale>
@@ -3828,18 +4237,18 @@ public static "filterTags"(list0: $List$$Type<$Locale$LanguageRange$$Type>, coll
 public static "forLanguageTag"(string0: string): $Locale
 public static "getAvailableLocales"(): $Locale[]
 public "getCountry"(): string
-public static "getDefault"(): $Locale
 public static "getDefault"(category0: $Locale$Category$$Type): $Locale
-public "getDisplayCountry"(): string
+public static "getDefault"(): $Locale
 public "getDisplayCountry"(locale0: $Locale$$Type): string
+public "getDisplayCountry"(): string
 public "getDisplayLanguage"(): string
 public "getDisplayLanguage"(locale0: $Locale$$Type): string
 public "getDisplayName"(): string
 public "getDisplayName"(locale0: $Locale$$Type): string
-public "getDisplayScript"(): string
 public "getDisplayScript"(locale0: $Locale$$Type): string
-public "getDisplayVariant"(): string
+public "getDisplayScript"(): string
 public "getDisplayVariant"(locale0: $Locale$$Type): string
+public "getDisplayVariant"(): string
 public "getExtension"(char0: character): string
 public "getExtensionKeys"(): $Set<character>
 public "getISO3Country"(): string
@@ -3856,6 +4265,9 @@ public "getVariant"(): string
 public "hasExtensions"(): boolean
 public static "lookup"(list0: $List$$Type<$Locale$LanguageRange$$Type>, collection1: $Collection$$Type<$Locale$$Type>): $Locale
 public static "lookupTag"(list0: $List$$Type<$Locale$LanguageRange$$Type>, collection1: $Collection$$Type<string>): string
+public static "of"(string0: string, string1: string): $Locale
+public static "of"(string0: string, string1: string, string2: string): $Locale
+public static "of"(string0: string): $Locale
 public static "setDefault"(category0: $Locale$Category$$Type, locale1: $Locale$$Type): void
 public static "setDefault"(locale0: $Locale$$Type): void
 public "stripExtensions"(): $Locale
@@ -3955,34 +4367,40 @@ export class $AbstractList<E = any> extends $AbstractCollection<E> implements $L
 public "add"(int0: integer, e1: E): void
 public "addAll"(int0: integer, collection1: $Collection$$Type<E>): boolean
 public "addAll"(collection0: $Collection$$Type<E>): boolean
+public "addFirst"(e0: E): void
+public "addLast"(e0: E): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "get"(int0: integer): E
+public "getFirst"(): E
+public "getLast"(): E
 public "indexOf"(object0: any): integer
 public "isEmpty"(): boolean
 public "iterator"(): $Iterator<E>
 public "lastIndexOf"(object0: any): integer
 public "listIterator"(): $ListIterator<E>
 public "listIterator"(int0: integer): $ListIterator<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<E>
 public "remove"(int0: integer): E
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): E
 public "removeIf"(predicate0: $Predicate$$Type<E>): boolean
+public "removeLast"(): E
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<E>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, e1: E): E
@@ -3995,7 +4413,24 @@ public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 [index: number]: E
+get "first"(): E
+get "last"(): E
 get "empty"(): boolean
+}
+}
+
+declare module "java.util.stream.Gatherer$Downstream" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+export interface $Gatherer$Downstream<T = any> {
+"isRejecting"(): boolean
+"push"(t0: T): boolean
+get "rejecting"(): boolean
+}
+
+export namespace $Gatherer$Downstream {
+const probejs$$marker: never
+}
+export abstract class $Gatherer$Downstream$$Static<T = any> implements $Gatherer$Downstream<T> {
 }
 }
 
@@ -4201,33 +4636,33 @@ get "empty"(): boolean
 
 export namespace $Set {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E): $Set<E>
+function of<E>(e0: E, e1: E): $Set<E>
+function of<E>(e0: E): $Set<E>
 function of<E>(...e0s: E[]): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 function of<E>(): $Set<E>
-function of<E>(e0: E, e1: E): $Set<E>
-function of<E>(e0: E): $Set<E>
 }
 export abstract class $Set$$Static<E = any> implements $Set<E> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+static "of"<E>(e0: E, e1: E): $Set<E>
+static "of"<E>(e0: E): $Set<E>
 static "of"<E>(...e0s: E[]): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 static "of"<E>(): $Set<E>
-static "of"<E>(e0: E, e1: E): $Set<E>
-static "of"<E>(e0: E): $Set<E>
 }
 }
 
@@ -4243,20 +4678,20 @@ import { $Runnable$$Type } from "java.lang.Runnable"
 
 export interface $CompletionStage<T = any> {
 "acceptEither"(completionStage0: $CompletionStage$$Type<T>, consumer1: $Consumer$$Type<T>): $CompletionStage<void>
-"acceptEitherAsync"(completionStage0: $CompletionStage$$Type<T>, consumer1: $Consumer$$Type<T>, executor2: $Executor$$Type): $CompletionStage<void>
 "acceptEitherAsync"(completionStage0: $CompletionStage$$Type<T>, consumer1: $Consumer$$Type<T>): $CompletionStage<void>
+"acceptEitherAsync"(completionStage0: $CompletionStage$$Type<T>, consumer1: $Consumer$$Type<T>, executor2: $Executor$$Type): $CompletionStage<void>
 "applyToEither"<U>(completionStage0: $CompletionStage$$Type<T>, function1: $Function$$Type<T, U>): $CompletionStage<U>
 "applyToEitherAsync"<U>(completionStage0: $CompletionStage$$Type<T>, function1: $Function$$Type<T, U>, executor2: $Executor$$Type): $CompletionStage<U>
 "applyToEitherAsync"<U>(completionStage0: $CompletionStage$$Type<T>, function1: $Function$$Type<T, U>): $CompletionStage<U>
 "exceptionally"(function0: $Function$$Type<$Throwable$$Type, T>): $CompletionStage<T>
-"exceptionallyAsync"(function0: $Function$$Type<$Throwable$$Type, T>, executor1: $Executor$$Type): $CompletionStage<T>
 "exceptionallyAsync"(function0: $Function$$Type<$Throwable$$Type, T>): $CompletionStage<T>
+"exceptionallyAsync"(function0: $Function$$Type<$Throwable$$Type, T>, executor1: $Executor$$Type): $CompletionStage<T>
 "exceptionallyCompose"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>): $CompletionStage<T>
 "exceptionallyComposeAsync"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>, executor1: $Executor$$Type): $CompletionStage<T>
 "exceptionallyComposeAsync"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>): $CompletionStage<T>
 "handle"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>): $CompletionStage<U>
-"handleAsync"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>, executor1: $Executor$$Type): $CompletionStage<U>
 "handleAsync"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>): $CompletionStage<U>
+"handleAsync"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>, executor1: $Executor$$Type): $CompletionStage<U>
 "runAfterBoth"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletionStage<void>
 "runAfterBothAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type, executor2: $Executor$$Type): $CompletionStage<void>
 "runAfterBothAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletionStage<void>
@@ -4264,27 +4699,27 @@ export interface $CompletionStage<T = any> {
 "runAfterEitherAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type, executor2: $Executor$$Type): $CompletionStage<void>
 "runAfterEitherAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletionStage<void>
 "thenAccept"(consumer0: $Consumer$$Type<T>): $CompletionStage<void>
-"thenAcceptAsync"(consumer0: $Consumer$$Type<T>, executor1: $Executor$$Type): $CompletionStage<void>
 "thenAcceptAsync"(consumer0: $Consumer$$Type<T>): $CompletionStage<void>
+"thenAcceptAsync"(consumer0: $Consumer$$Type<T>, executor1: $Executor$$Type): $CompletionStage<void>
 "thenAcceptBoth"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>): $CompletionStage<void>
-"thenAcceptBothAsync"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>, executor2: $Executor$$Type): $CompletionStage<void>
 "thenAcceptBothAsync"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>): $CompletionStage<void>
+"thenAcceptBothAsync"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>, executor2: $Executor$$Type): $CompletionStage<void>
 "thenApply"<U>(function0: $Function$$Type<T, U>): $CompletionStage<U>
-"thenApplyAsync"<U>(function0: $Function$$Type<T, U>): $CompletionStage<U>
 "thenApplyAsync"<U>(function0: $Function$$Type<T, U>, executor1: $Executor$$Type): $CompletionStage<U>
+"thenApplyAsync"<U>(function0: $Function$$Type<T, U>): $CompletionStage<U>
 "thenCombine"<U, V>(completionStage0: $CompletionStage$$Type<U>, biFunction1: $BiFunction$$Type<T, U, V>): $CompletionStage<V>
-"thenCombineAsync"<U, V>(completionStage0: $CompletionStage$$Type<U>, biFunction1: $BiFunction$$Type<T, U, V>): $CompletionStage<V>
 "thenCombineAsync"<U, V>(completionStage0: $CompletionStage$$Type<U>, biFunction1: $BiFunction$$Type<T, U, V>, executor2: $Executor$$Type): $CompletionStage<V>
+"thenCombineAsync"<U, V>(completionStage0: $CompletionStage$$Type<U>, biFunction1: $BiFunction$$Type<T, U, V>): $CompletionStage<V>
 "thenCompose"<U>(function0: $Function$$Type<T, $CompletionStage<U>>): $CompletionStage<U>
-"thenComposeAsync"<U>(function0: $Function$$Type<T, $CompletionStage<U>>, executor1: $Executor$$Type): $CompletionStage<U>
 "thenComposeAsync"<U>(function0: $Function$$Type<T, $CompletionStage<U>>): $CompletionStage<U>
+"thenComposeAsync"<U>(function0: $Function$$Type<T, $CompletionStage<U>>, executor1: $Executor$$Type): $CompletionStage<U>
 "thenRun"(runnable0: $Runnable$$Type): $CompletionStage<void>
 "thenRunAsync"(runnable0: $Runnable$$Type, executor1: $Executor$$Type): $CompletionStage<void>
 "thenRunAsync"(runnable0: $Runnable$$Type): $CompletionStage<void>
 "toCompletableFuture"(): $CompletableFuture<T>
 "whenComplete"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>): $CompletionStage<T>
-"whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>): $CompletionStage<T>
 "whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>, executor1: $Executor$$Type): $CompletionStage<T>
+"whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>): $CompletionStage<T>
 }
 
 export namespace $CompletionStage {
@@ -4433,9 +4868,9 @@ import { $Function$$Type } from "java.util.function.Function"
 import { $Serializable } from "java.io.Serializable"
 
 export class $IdentityHashMap<K = any, V = any> extends $AbstractMap<K, V> implements $Map<K, V>, $Serializable, $Cloneable {
-constructor(int0: integer)
-constructor()
 constructor(map0: $Map$$Type<K, V>)
+constructor()
+constructor(int0: integer)
 
 public "clone"(): any
 public "compute"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
@@ -4449,24 +4884,24 @@ public "get"(object0: any): V
 public "getOrDefault"(object0: any, v1: V): V
 public "keySet"(): $Set<K>
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, v1: V): V
 public "putIfAbsent"(k0: K, v1: V): V
-public "remove"(object0: any): V
 public "remove"(object0: any, object1: any): boolean
-public "replace"(k0: K, v1: V): V
+public "remove"(object0: any): V
 public "replace"(k0: K, v1: V, v2: V): boolean
+public "replace"(k0: K, v1: V): V
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 public "values"(): $Collection<V>
 }
@@ -4495,8 +4930,8 @@ public "isLocked"(): boolean
 public "lock"(): void
 public "lockInterruptibly"(): void
 public "newCondition"(): $Condition
-public "tryLock"(): boolean
 public "tryLock"(long0: long, timeUnit1: $TimeUnit$$Type): boolean
+public "tryLock"(): boolean
 public "unlock"(): void
 get "holdCount"(): integer
 get "queueLength"(): integer
@@ -4520,6 +4955,7 @@ export abstract class $IntToLongFunction$$Static implements $IntToLongFunction {
 }
 
 declare module "java.util.stream.IntStream" {
+import { $PrimitiveIterator$OfInt } from "java.util.PrimitiveIterator$OfInt"
 import { $LongStream } from "java.util.stream.LongStream"
 import { $IntToDoubleFunction$$Type } from "java.util.function.IntToDoubleFunction"
 import { $IntUnaryOperator$$Type } from "java.util.function.IntUnaryOperator"
@@ -4533,6 +4969,7 @@ import { $OptionalInt } from "java.util.OptionalInt"
 import { $Runnable$$Type } from "java.lang.Runnable"
 import { $DoubleStream } from "java.util.stream.DoubleStream"
 import { $IntStream$IntMapMultiConsumer$$Type } from "java.util.stream.IntStream$IntMapMultiConsumer"
+import { $Spliterator$OfInt } from "java.util.Spliterator$OfInt"
 import { $Stream } from "java.util.stream.Stream"
 import { $IntToLongFunction$$Type } from "java.util.function.IntToLongFunction"
 import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
@@ -4561,6 +4998,7 @@ export interface $IntStream extends $BaseStream<integer, $IntStream> {
 "forEach"(intConsumer0: $IntConsumer$$Type): void
 "forEachOrdered"(intConsumer0: $IntConsumer$$Type): void
 "isParallel"(): boolean
+"iterator"(): $PrimitiveIterator$OfInt
 "limit"(long0: long): $IntStream
 "map"(intUnaryOperator0: $IntUnaryOperator$$Type): $IntStream
 "mapMulti"(intMapMultiConsumer0: $IntStream$IntMapMultiConsumer$$Type): $IntStream
@@ -4572,10 +5010,12 @@ export interface $IntStream extends $BaseStream<integer, $IntStream> {
 "noneMatch"(intPredicate0: $IntPredicate$$Type): boolean
 "onClose"(runnable0: $Runnable$$Type): $IntStream
 "peek"(intConsumer0: $IntConsumer$$Type): $IntStream
-"reduce"(int0: integer, intBinaryOperator1: $IntBinaryOperator$$Type): integer
 "reduce"(intBinaryOperator0: $IntBinaryOperator$$Type): $OptionalInt
+"reduce"(int0: integer, intBinaryOperator1: $IntBinaryOperator$$Type): integer
+"sequential"(): $IntStream
 "skip"(long0: long): $IntStream
 "sorted"(): $IntStream
+"spliterator"(): $Spliterator$OfInt
 "sum"(): integer
 "summaryStatistics"(): $IntSummaryStatistics
 "takeWhile"(intPredicate0: $IntPredicate$$Type): $IntStream
@@ -4589,10 +5029,10 @@ function builder(): $IntStream$Builder
 function concat(intStream0: $IntStream$$Type, intStream1: $IntStream$$Type): $IntStream
 function empty(): $IntStream
 function generate(intSupplier0: $IntSupplier$$Type): $IntStream
-function iterate(int0: integer, intPredicate1: $IntPredicate$$Type, intUnaryOperator2: $IntUnaryOperator$$Type): $IntStream
 function iterate(int0: integer, intUnaryOperator1: $IntUnaryOperator$$Type): $IntStream
-function of(...int0s: integer[]): $IntStream
+function iterate(int0: integer, intPredicate1: $IntPredicate$$Type, intUnaryOperator2: $IntUnaryOperator$$Type): $IntStream
 function of(int0: integer): $IntStream
+function of(...int0s: integer[]): $IntStream
 function range(int0: integer, int1: integer): $IntStream
 function rangeClosed(int0: integer, int1: integer): $IntStream
 }
@@ -4601,10 +5041,10 @@ static "builder"(): $IntStream$Builder
 static "concat"(intStream0: $IntStream$$Type, intStream1: $IntStream$$Type): $IntStream
 static "empty"(): $IntStream
 static "generate"(intSupplier0: $IntSupplier$$Type): $IntStream
-static "iterate"(int0: integer, intPredicate1: $IntPredicate$$Type, intUnaryOperator2: $IntUnaryOperator$$Type): $IntStream
 static "iterate"(int0: integer, intUnaryOperator1: $IntUnaryOperator$$Type): $IntStream
-static "of"(...int0s: integer[]): $IntStream
+static "iterate"(int0: integer, intPredicate1: $IntPredicate$$Type, intUnaryOperator2: $IntUnaryOperator$$Type): $IntStream
 static "of"(int0: integer): $IntStream
+static "of"(...int0s: integer[]): $IntStream
 static "range"(int0: integer, int1: integer): $IntStream
 static "rangeClosed"(int0: integer, int1: integer): $IntStream
 }
@@ -4727,6 +5167,7 @@ export class $AbstractExecutorService implements $ExecutorService {
 constructor()
 
 public "awaitTermination"(long0: long, timeUnit1: $TimeUnit$$Type): boolean
+public "close"(): void
 public "execute"(runnable0: $Runnable$$Type): void
 public "invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>): $List<$Future<T>>
 public "invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>, long1: long, timeUnit2: $TimeUnit$$Type): $List<$Future<T>>
@@ -4736,9 +5177,9 @@ public "isShutdown"(): boolean
 public "isTerminated"(): boolean
 public "shutdown"(): void
 public "shutdownNow"(): $List<$Runnable>
-public "submit"<T>(runnable0: $Runnable$$Type, t1: T): $Future<T>
-public "submit"(runnable0: $Runnable$$Type): $Future<any>
 public "submit"<T>(callable0: $Callable$$Type<T>): $Future<T>
+public "submit"(runnable0: $Runnable$$Type): $Future<any>
+public "submit"<T>(runnable0: $Runnable$$Type, t1: T): $Future<T>
 get "terminated"(): boolean
 }
 }
@@ -4781,18 +5222,18 @@ public "isEmpty"(): boolean
 public "iterator"(): $Iterator<E>
 public "listIterator"(int0: integer): $ListIterator<E>
 public "listIterator"(): $ListIterator<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "offer"(e0: E): boolean
 public "offerFirst"(e0: E): boolean
 public "offerLast"(e0: E): boolean
@@ -4853,25 +5294,25 @@ public "getOrDefault"(object0: any, v1: V): V
 public "isEmpty"(): boolean
 public "keySet"(): $Set<K>
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, v1: V): V
 public "putAll"(map0: $Map$$Type<K, V>): void
 public "putIfAbsent"(k0: K, v1: V): V
 public "remove"(object0: any): V
 public "remove"(object0: any, object1: any): boolean
-public "replace"(k0: K, v1: V): V
 public "replace"(k0: K, v1: V, v2: V): boolean
+public "replace"(k0: K, v1: V): V
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 public "size"(): integer
 public "values"(): $Collection<V>

@@ -64,6 +64,12 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $Short2LongFunction$$Type = ($Short2LongFunction | ((arg0: short) => long));
 }
 
+declare module "it.unimi.dsi.fastutil.shorts.ShortSpliterator" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ShortSpliterator$$Type = ($ShortSpliterator);
+}
+
 declare module "it.unimi.dsi.fastutil.shorts.Short2CharFunction" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */

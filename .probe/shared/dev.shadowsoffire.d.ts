@@ -7,8 +7,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $AnvilLandEvent extends $Event implements $EventItf {
-constructor(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, fallingBlockEntity4: $FallingBlockEntity$$Type)
 constructor()
+constructor(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, fallingBlockEntity4: $FallingBlockEntity$$Type)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -38,8 +38,8 @@ import { $ItemStack } from "net.minecraft.world.item.ItemStack"
 import { $Level } from "net.minecraft.world.level.Level"
 
 export class $ItemUseEvent extends $PlayerEvent {
-constructor(useOnContext0: $UseOnContext$$Type)
 constructor()
+constructor(useOnContext0: $UseOnContext$$Type)
 
 public "getCancellationResult"(): $InteractionResult
 public "getContext"(): $UseOnContext

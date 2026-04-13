@@ -62,8 +62,8 @@ function of(in_: $ItemStack$$Type): $ItemStack
 function of(in_: $ItemStack$$Type, count: integer, nbt: $CompoundTag$$Type): $ItemStack
 function of(in_: $ItemStack$$Type, count: integer): $ItemStack
 function of(in_: $ItemStack$$Type, tag: $CompoundTag$$Type): $ItemStack
-function playerHead(uuid: $UUID$$Type, textureBase64: string): $ItemStack
 function playerHead(name: string): $ItemStack
+function playerHead(uuid: $UUID$$Type, textureBase64: string): $ItemStack
 function playerHeadFromSkinHash(hash: string): $ItemStack
 function playerHeadFromUrl(url: string): $ItemStack
 function withNBT(in_: $ItemStack$$Type, nbt: $CompoundTag$$Type): $ItemStack
@@ -102,8 +102,8 @@ static "of"(in_: $ItemStack$$Type, count: integer, nbt: $CompoundTag$$Type): $It
 static "of"(in_: $ItemStack$$Type, count: integer): $ItemStack
 /** Returns an ItemStack of the input, with the specified NBT data */
 static "of"(in_: $ItemStack$$Type, tag: $CompoundTag$$Type): $ItemStack
-static "playerHead"(uuid: $UUID$$Type, textureBase64: string): $ItemStack
 static "playerHead"(name: string): $ItemStack
+static "playerHead"(uuid: $UUID$$Type, textureBase64: string): $ItemStack
 static "playerHeadFromSkinHash"(hash: string): $ItemStack
 static "playerHeadFromUrl"(url: string): $ItemStack
 /** Returns an ItemStack of the input, with the specified NBT data */
@@ -244,8 +244,8 @@ function getServer(): $MinecraftServer
 function getSound(id: $ResourceLocation$$Type): $SoundEvent
 function getStat(id: $ResourceLocation$$Type): $Stat<$ResourceLocation>
 function getSystemTime(): long
-function id(namespace: string, path: string): $ResourceLocation
 function id(id: $ResourceLocation$$Type): $ResourceLocation
+function id(namespace: string, path: string): $ResourceLocation
 function isWrapped(o: any): boolean
 function lazy<T>(supplier: $Supplier$$Type<T>): $Lazy<T>
 function newCountingMap(): $CountingMap
@@ -299,10 +299,10 @@ static "getSound"(id: $ResourceLocation$$Type): $SoundEvent
 static "getStat"(id: $ResourceLocation$$Type): $Stat<$ResourceLocation>
 /** Gets the current system time, in milliseconds */
 static "getSystemTime"(): long
-/** Returns a ResourceLocation with the specified namepsace and path */
-static "id"(namespace: string, path: string): $ResourceLocation
 /** Typewraps the input string to a ResourceLocation. Format should be namespace:path */
 static "id"(id: $ResourceLocation$$Type): $ResourceLocation
+/** Returns a ResourceLocation with the specified namepsace and path */
+static "id"(namespace: string, path: string): $ResourceLocation
 /** Checks if the passed in object is an instance of WrappedJS */
 static "isWrapped"(o: any): boolean
 /** Returns a lazy value with the supplier function as its value factory */

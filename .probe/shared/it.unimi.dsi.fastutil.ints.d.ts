@@ -66,8 +66,8 @@ export interface $Int2BooleanFunction extends $Function$0<integer, boolean>, $In
 "containsKey"(int0: integer): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
+"defaultReturnValue"(boolean0: boolean): void
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(int0: integer): boolean
@@ -76,9 +76,9 @@ export interface $Int2BooleanFunction extends $Function$0<integer, boolean>, $In
 "getOrDefault"(int0: integer, boolean1: boolean): boolean
 "negate"(): $IntPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
+"put"(int0: integer, boolean1: boolean): boolean
 /** @deprecated */
 "put"(integer0: integer, boolean1: boolean): boolean
-"put"(int0: integer, boolean1: boolean): boolean
 "remove"(int0: integer): boolean
 "size"(): integer
 "test"(int0: integer): boolean
@@ -183,8 +183,8 @@ export interface $Int2LongFunction extends $Function$0<integer, long>, $IntToLon
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
-"defaultReturnValue"(long0: long): void
 "defaultReturnValue"(): long
+"defaultReturnValue"(long0: long): void
 /** @deprecated */
 "get"(object0: any): long
 "get"(int0: integer): long
@@ -195,8 +195,6 @@ export interface $Int2LongFunction extends $Function$0<integer, long>, $IntToLon
 /** @deprecated */
 "put"(integer0: integer, long1: long): long
 "remove"(int0: integer): long
-/** @deprecated */
-"remove"(object0: any): long
 "size"(): integer
 }
 
@@ -240,30 +238,31 @@ public "intSpliterator"(): $IntSpliterator
 public "intStream"(): $IntStream
 public "isEmpty"(): boolean
 public static "of"(int0: integer, int1: integer): $IntSet
-public static "of"(): $IntSet
 public static "of"(...int0s: integer[]): $IntSet
 public static "of"(int0: integer): $IntSet
 public static "of"(int0: integer, int1: integer, int2: integer): $IntSet
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"(): $IntSet
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E): $Set<E>
+public static "of"<E>(e0: E): $Set<E>
 public static "of"<E>(...e0s: E[]): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
-public static "of"<E>(e0: E, e1: E): $Set<E>
-public static "of"<E>(e0: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 /** @deprecated */
 public "parallelStream"(): $Stream<integer>
 public "remove"(int0: integer): boolean
 /** @deprecated */
 public "remove"(object0: any): boolean
-public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 /** @deprecated */
 public "removeIf"(predicate0: $Predicate$$Type<integer>): boolean
+public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 public "size"(): integer
+public "spliterator"(): $IntSpliterator
 /** @deprecated */
 public "stream"(): $Stream<integer>
 public "toArray"<T>(t0s: T[]): T[]
@@ -338,8 +337,8 @@ export interface $Int2DoubleFunction extends $Function$0<integer, double>, $IntT
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
-"defaultReturnValue"(double0: double): void
 "defaultReturnValue"(): double
+"defaultReturnValue"(double0: double): void
 /** @deprecated */
 "get"(object0: any): double
 "get"(int0: integer): double
@@ -350,8 +349,6 @@ export interface $Int2DoubleFunction extends $Function$0<integer, double>, $IntT
 /** @deprecated */
 "put"(integer0: integer, double1: double): double
 "remove"(int0: integer): double
-/** @deprecated */
-"remove"(object0: any): double
 "size"(): integer
 }
 
@@ -427,14 +424,14 @@ export interface $Int2ObjectFunction<V = any> extends $Function$0<integer, V>, $
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(int0: integer): V
+"getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 "put"(integer0: integer, v1: V): V
 "put"(int0: integer, v1: V): V
@@ -468,9 +465,9 @@ import { $IntSpliterator } from "it.unimi.dsi.fastutil.ints.IntSpliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export interface $IntCollection extends $Collection<integer>, $IntIterable {
+"add"(int0: integer): boolean
 /** @deprecated */
 "add"(integer0: integer): boolean
-"add"(int0: integer): boolean
 "addAll"(intCollection0: $IntCollection$$Type): boolean
 "addAll"(collection0: $Collection$$Type<integer>): boolean
 "clear"(): void
@@ -498,10 +495,10 @@ export interface $IntCollection extends $Collection<integer>, $IntIterable {
 "remove"(object0: any): boolean
 "removeAll"(intCollection0: $IntCollection$$Type): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
-"removeIf"(intPredicate0: $IntPredicate$0$$Type): boolean
-"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<integer>): boolean
+"removeIf"(intPredicate0: $IntPredicate$0$$Type): boolean
+"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 "retainAll"(intCollection0: $IntCollection$$Type): boolean
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
@@ -509,8 +506,8 @@ export interface $IntCollection extends $Collection<integer>, $IntIterable {
 "stream"(): $Stream<integer>
 "toArray"(int0s: integer[]): integer[]
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toArray"(): any[]
 /** @deprecated */
 "toIntArray"(int0s: integer[]): integer[]
 "toIntArray"(): integer[]
@@ -591,8 +588,8 @@ export interface $Int2ShortFunction extends $Function$0<integer, short>, $IntUna
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
-"defaultReturnValue"(short0: short): void
 "defaultReturnValue"(): short
+"defaultReturnValue"(short0: short): void
 /** @deprecated */
 "get"(object0: any): short
 "get"(int0: integer): short
@@ -603,8 +600,6 @@ export interface $Int2ShortFunction extends $Function$0<integer, short>, $IntUna
 /** @deprecated */
 "put"(integer0: integer, short1: short): short
 "remove"(int0: integer): short
-/** @deprecated */
-"remove"(object0: any): short
 "size"(): integer
 }
 
@@ -648,6 +643,7 @@ import { $Int2ObjectFunction, $Int2ObjectFunction$$Type } from "it.unimi.dsi.fas
 import { $Long2ObjectFunction } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $Char2IntFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2IntFunction"
 import { $ObjectSet } from "it.unimi.dsi.fastutil.objects.ObjectSet"
+import { $ObjectCollection } from "it.unimi.dsi.fastutil.objects.ObjectCollection"
 import { $Int2LongFunction } from "it.unimi.dsi.fastutil.ints.Int2LongFunction"
 import { $Object2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
 import { $Float2ObjectFunction } from "it.unimi.dsi.fastutil.floats.Float2ObjectFunction"
@@ -692,14 +688,12 @@ export interface $Int2ObjectMap<V = any> extends $Int2ObjectFunction<V>, $Map<in
 "computeIfAbsentPartial"(int0: integer, int2ObjectFunction1: $Int2ObjectFunction$$Type<V>): V
 "computeIfPresent"(int0: integer, biFunction1: $BiFunction$$Type<integer, V, V>): V
 "computeIfPresent"(integer0: integer, biFunction1: $BiFunction$$Type<integer, V, V>): V
-"containsKey"(int0: integer): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
+"containsKey"(int0: integer): boolean
 "containsValue"(object0: any): boolean
 "defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
-/** @deprecated */
-"entrySet"(): $ObjectSet<$Map$Entry<integer, V>>
 "equals"(object0: any): boolean
 "forEach"(biConsumer0: $BiConsumer$$Type<integer, V>): void
 /** @deprecated */
@@ -726,10 +720,11 @@ export interface $Int2ObjectMap<V = any> extends $Int2ObjectFunction<V>, $Map<in
 "remove"(object0: any, object1: any): boolean
 "replace"(int0: integer, v1: V, v2: V): boolean
 "replace"(int0: integer, v1: V): V
-"replace"(integer0: integer, v1: V): V
 "replace"(integer0: integer, v1: V, v2: V): boolean
+"replace"(integer0: integer, v1: V): V
 "replaceAll"(biFunction0: $BiFunction$$Type<integer, V, V>): void
 "size"(): integer
+"values"(): $ObjectCollection<V>
 [index: string | number]: V
 get "empty"(): boolean
 }
@@ -738,34 +733,34 @@ export namespace $Int2ObjectMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity<T>(): $Function<T, T>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Int2ObjectMap$$Static<V = any> implements $Int2ObjectMap<V> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"<T>(): $Function<T, T>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -835,8 +830,8 @@ export interface $Int2FloatFunction extends $Function$0<integer, float>, $IntToD
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
-"defaultReturnValue"(float0: float): void
 "defaultReturnValue"(): float
+"defaultReturnValue"(float0: float): void
 /** @deprecated */
 "get"(object0: any): float
 "get"(int0: integer): float
@@ -847,8 +842,6 @@ export interface $Int2FloatFunction extends $Function$0<integer, float>, $IntToD
 /** @deprecated */
 "put"(integer0: integer, float1: float): float
 "remove"(int0: integer): float
-/** @deprecated */
-"remove"(object0: any): float
 "size"(): integer
 }
 
@@ -885,15 +878,15 @@ set "value"(value: integer)
 export namespace $Int2IntMap$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Int2IntMap$Entry$$Static implements $Int2IntMap$Entry {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -924,15 +917,15 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 export class $IntArrayList extends $AbstractIntList implements $RandomAccess, $Cloneable, $Serializable {
 static readonly "DEFAULT_INITIAL_CAPACITY": integer
 
-constructor(intList0: $IntList$$Type)
+constructor(intIterator0: $IntIterator$$Type)
 constructor(intCollection0: $IntCollection$$Type)
-constructor(collection0: $Collection$$Type<integer>)
+constructor(intList0: $IntList$$Type)
 constructor(int0s: integer[])
 constructor(int0s: integer[], int1: integer, int2: integer)
 constructor(iterator0: $Iterator$$Type<integer>)
-constructor(intIterator0: $IntIterator$$Type)
-constructor(int0: integer)
+constructor(collection0: $Collection$$Type<integer>)
 constructor()
+constructor(int0: integer)
 
 /** @deprecated */
 public "add"(integer0: integer): boolean
@@ -940,6 +933,8 @@ public "add"(integer0: integer): boolean
 public "add"(int0: integer, integer1: integer): void
 public "addAll"(int0: integer, intList1: $IntList$$Type): boolean
 public "addAll"(intList0: $IntList$$Type): boolean
+public "addFirst"(integer0: integer): void
+public "addLast"(integer0: integer): void
 public "compareTo"(intArrayList0: $IntArrayList$$Type): integer
 /** @deprecated */
 public "contains"(object0: any): boolean
@@ -951,7 +946,9 @@ public "equals"(intArrayList0: $IntArrayList$$Type): boolean
 public "forEach"(consumer0: $Consumer$$Type<integer>): void
 /** @deprecated */
 public "get"(int0: integer): integer
+public "getFirst"(): integer
 public "getInt"(int0: integer): integer
+public "getLast"(): integer
 /** @deprecated */
 public "indexOf"(object0: any): integer
 public "intIterator"(): $IntIterator
@@ -960,31 +957,35 @@ public "intSpliterator"(): $IntSpliterator
 public "intStream"(): $IntStream
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
-public static "of"(...int0s: integer[]): $IntArrayList
 public static "of"(): $IntArrayList
-public static "of"(int0: integer): $IntList
+public static "of"(...int0s: integer[]): $IntArrayList
 public static "of"(int0: integer, int1: integer): $IntList
+public static "of"(int0: integer): $IntList
 public static "of"(int0: integer, int1: integer, int2: integer): $IntList
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 /** @deprecated */
 public "parallelStream"(): $Stream<integer>
+/** @deprecated */
+public "peek"(int0: integer): integer
 /** @deprecated */
 public "push"(integer0: integer): void
 /** @deprecated */
 public "remove"(object0: any): boolean
-public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
+public "removeFirst"(): integer
 /** @deprecated */
 public "removeIf"(predicate0: $Predicate$$Type<integer>): boolean
+public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
+public "removeLast"(): integer
 /** @deprecated */
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<integer>): void
 public "replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
@@ -995,6 +996,7 @@ public "setElements"(int0s: integer[]): void
 public "sort"(intComparator0: $IntComparator$$Type): void
 /** @deprecated */
 public "sort"(comparator0: $Comparator$$Type<integer>): void
+public "spliterator"(): $IntSpliterator
 /** @deprecated */
 public "stream"(): $Stream<integer>
 public "toArray"(): any[]
@@ -1007,8 +1009,10 @@ public "trim"(): void
 public "unstableSort"(intComparator0: $IntComparator$$Type): void
 /** @deprecated */
 public "unstableSort"(comparator0: $Comparator$$Type<integer>): void
-public static "wrap"(int0s: integer[], int1: integer): $IntArrayList
 public static "wrap"(int0s: integer[]): $IntArrayList
+public static "wrap"(int0s: integer[], int1: integer): $IntArrayList
+get "first"(): integer
+get "last"(): integer
 }
 }
 
@@ -1081,9 +1085,9 @@ public "defaultReturnValue"(): V
 /** @deprecated */
 public "get"(object0: any): V
 public "get"(int0: integer): V
+public "getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 public "getOrDefault"(object0: any, v1: V): V
-public "getOrDefault"(int0: integer, v1: V): V
 public static "identity"<T>(): $Function<T, T>
 /** @deprecated */
 public "put"(integer0: integer, v1: V): V
@@ -1132,17 +1136,17 @@ public "parallelStream"(): $Stream<integer>
 public "rem"(int0: integer): boolean
 public "removeAll"(intCollection0: $IntCollection$$Type): boolean
 public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
-public "removeIf"(intPredicate0: $IntPredicate$0$$Type): boolean
 /** @deprecated */
 public "removeIf"(predicate0: $Predicate$$Type<integer>): boolean
+public "removeIf"(intPredicate0: $IntPredicate$0$$Type): boolean
 public "retainAll"(intCollection0: $IntCollection$$Type): boolean
 /** @deprecated */
 public "stream"(): $Stream<integer>
 public "toArray"(int0s: integer[]): integer[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-public "toIntArray"(): integer[]
 /** @deprecated */
 public "toIntArray"(int0s: integer[]): integer[]
+public "toIntArray"(): integer[]
 }
 }
 
@@ -1153,7 +1157,6 @@ import { $Int2ByteFunction } from "it.unimi.dsi.fastutil.ints.Int2ByteFunction"
 import { $Int2ReferenceFunction } from "it.unimi.dsi.fastutil.ints.Int2ReferenceFunction"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
 import { $Double2ObjectFunction } from "it.unimi.dsi.fastutil.doubles.Double2ObjectFunction"
-import { $Int2ObjectMap$FastEntrySet } from "it.unimi.dsi.fastutil.ints.Int2ObjectMap$FastEntrySet"
 import { $Object2ObjectFunction, $Object2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectFunction"
 import { $Function, $Function$$Type } from "java.util.function.Function"
 import { $Int2DoubleFunction } from "it.unimi.dsi.fastutil.ints.Int2DoubleFunction"
@@ -1180,7 +1183,7 @@ import { $Int2ObjectFunction, $Int2ObjectFunction$$Type } from "it.unimi.dsi.fas
 import { $Long2ObjectFunction } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $Char2IntFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2IntFunction"
 import { $AbstractInt2ObjectMap } from "it.unimi.dsi.fastutil.ints.AbstractInt2ObjectMap"
-import { $ObjectSet } from "it.unimi.dsi.fastutil.objects.ObjectSet"
+import { $ObjectCollection } from "it.unimi.dsi.fastutil.objects.ObjectCollection"
 import { $Int2LongFunction } from "it.unimi.dsi.fastutil.ints.Int2LongFunction"
 import { $Serializable } from "java.io.Serializable"
 import { $Object2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
@@ -1217,6 +1220,7 @@ public "andThenShort"(object2ShortFunction0: $Object2ShortFunction$$Type<V>): $I
 public "apply"(int0: integer): V
 public "apply"(integer0: integer): V
 public "clear"(): void
+public "clone"(): $Int2ObjectOpenHashMap<V>
 /** @deprecated */
 public "compose"<T>(function0: $Function$$Type<T, integer>): $Function<T, V>
 public "composeByte"(byte2IntFunction0: $Byte2IntFunction$$Type): $Byte2ObjectFunction<V>
@@ -1230,8 +1234,8 @@ public "composeReference"<T>(reference2IntFunction0: $Reference2IntFunction$$Typ
 public "composeShort"(short2IntFunction0: $Short2IntFunction$$Type): $Short2ObjectFunction<V>
 public "compute"(int0: integer, biFunction1: $BiFunction$$Type<integer, V, V>): V
 public "compute"(integer0: integer, biFunction1: $BiFunction$$Type<integer, V, V>): V
-public "computeIfAbsent"(int0: integer, intFunction1: $IntFunction$$Type<V>): V
 public "computeIfAbsent"(int0: integer, int2ObjectFunction1: $Int2ObjectFunction$$Type<V>): V
+public "computeIfAbsent"(int0: integer, intFunction1: $IntFunction$$Type<V>): V
 public "computeIfAbsent"(integer0: integer, function1: $Function$$Type<integer, V>): V
 /** @deprecated */
 public "computeIfAbsentPartial"(int0: integer, int2ObjectFunction1: $Int2ObjectFunction$$Type<V>): V
@@ -1243,8 +1247,6 @@ public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public "defaultReturnValue"(v0: V): void
 public "defaultReturnValue"(): V
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-/** @deprecated */
-public "entrySet"(): $ObjectSet<$Map$Entry<integer, V>>
 public "forEach"(biConsumer0: $BiConsumer$$Type<integer, V>): void
 public "get"(int0: integer): V
 /** @deprecated */
@@ -1253,20 +1255,19 @@ public "getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 public "getOrDefault"(object0: any, v1: V): V
 public static "identity"<T>(): $Function<T, T>
-public "int2ObjectEntrySet"(): $Int2ObjectMap$FastEntrySet<V>
 public "merge"(int0: integer, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public "merge"(integer0: integer, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(int0: integer, v1: V): V
 /** @deprecated */
@@ -1278,14 +1279,15 @@ public "remove"(int0: integer): V
 /** @deprecated */
 public "remove"(object0: any): V
 public "remove"(object0: any, object1: any): boolean
-public "replace"(int0: integer, v1: V, v2: V): boolean
 public "replace"(int0: integer, v1: V): V
-public "replace"(integer0: integer, v1: V): V
+public "replace"(int0: integer, v1: V, v2: V): boolean
 public "replace"(integer0: integer, v1: V, v2: V): boolean
+public "replace"(integer0: integer, v1: V): V
 public "replaceAll"(biFunction0: $BiFunction$$Type<integer, V, V>): void
 public "size"(): integer
 public "trim"(): boolean
 public "trim"(int0: integer): boolean
+public "values"(): $ObjectCollection<V>
 }
 }
 
@@ -1294,6 +1296,7 @@ import { $Double2ShortFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Doubl
 import { $Double2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ReferenceFunction"
 import { $Int2ShortFunction } from "it.unimi.dsi.fastutil.ints.Int2ShortFunction"
 import { $Int2ByteFunction } from "it.unimi.dsi.fastutil.ints.Int2ByteFunction"
+import { $DoubleCollection } from "it.unimi.dsi.fastutil.doubles.DoubleCollection"
 import { $Int2ReferenceFunction } from "it.unimi.dsi.fastutil.ints.Int2ReferenceFunction"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
 import { $Double2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ObjectFunction"
@@ -1330,6 +1333,7 @@ import { $Double2CharFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double
 import { $Reference2DoubleFunction } from "it.unimi.dsi.fastutil.objects.Reference2DoubleFunction"
 import { $Char2DoubleFunction } from "it.unimi.dsi.fastutil.chars.Char2DoubleFunction"
 import { $Float2DoubleFunction } from "it.unimi.dsi.fastutil.floats.Float2DoubleFunction"
+import { $IntSet } from "it.unimi.dsi.fastutil.ints.IntSet"
 import { $Double2IntFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2IntFunction"
 import { $Int2CharFunction } from "it.unimi.dsi.fastutil.ints.Int2CharFunction"
 import { $Byte2IntFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
@@ -1363,16 +1367,16 @@ export interface $Int2DoubleMap extends $Int2DoubleFunction, $Map<integer, doubl
 /** @deprecated */
 "compute"(integer0: integer, biFunction1: $BiFunction$$Type<integer, double, double>): double
 "compute"(int0: integer, biFunction1: $BiFunction$$Type<integer, double, double>): double
+"computeIfAbsent"(int0: integer, intToDoubleFunction1: $IntToDoubleFunction$$Type): double
 /** @deprecated */
 "computeIfAbsent"(integer0: integer, function1: $Function$$Type<integer, double>): double
 "computeIfAbsent"(int0: integer, int2DoubleFunction1: $Int2DoubleFunction$$Type): double
-"computeIfAbsent"(int0: integer, intToDoubleFunction1: $IntToDoubleFunction$$Type): double
 "computeIfAbsentNullable"(int0: integer, intFunction1: $IntFunction$$Type<double>): double
 /** @deprecated */
 "computeIfAbsentPartial"(int0: integer, int2DoubleFunction1: $Int2DoubleFunction$$Type): double
-"computeIfPresent"(int0: integer, biFunction1: $BiFunction$$Type<integer, double, double>): double
 /** @deprecated */
 "computeIfPresent"(integer0: integer, biFunction1: $BiFunction$$Type<integer, double, double>): double
+"computeIfPresent"(int0: integer, biFunction1: $BiFunction$$Type<integer, double, double>): double
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
@@ -1394,6 +1398,7 @@ export interface $Int2DoubleMap extends $Int2DoubleFunction, $Map<integer, doubl
 "hashCode"(): integer
 "int2DoubleEntrySet"(): $ObjectSet<$Int2DoubleMap$Entry>
 "isEmpty"(): boolean
+"keySet"(): $IntSet
 "merge"(int0: integer, double1: double, biFunction2: $BiFunction$$Type<double, double, double>): double
 /** @deprecated */
 "merge"(integer0: integer, double1: double, biFunction2: $BiFunction$$Type<double, double, double>): double
@@ -1408,18 +1413,19 @@ export interface $Int2DoubleMap extends $Int2DoubleFunction, $Map<integer, doubl
 "putIfAbsent"(int0: integer, double1: double): double
 /** @deprecated */
 "remove"(object0: any): double
+"remove"(int0: integer, double1: double): boolean
 /** @deprecated */
 "remove"(object0: any, object1: any): boolean
-"remove"(int0: integer, double1: double): boolean
 "remove"(int0: integer): double
-/** @deprecated */
-"replace"(integer0: integer, double1: double): double
 "replace"(int0: integer, double1: double): double
 /** @deprecated */
-"replace"(integer0: integer, double1: double, double2: double): boolean
+"replace"(integer0: integer, double1: double): double
 "replace"(int0: integer, double1: double, double2: double): boolean
+/** @deprecated */
+"replace"(integer0: integer, double1: double, double2: double): boolean
 "replaceAll"(biFunction0: $BiFunction$$Type<integer, double, double>): void
 "size"(): integer
+"values"(): $DoubleCollection
 [index: string | number]: double
 get "empty"(): boolean
 }
@@ -1428,34 +1434,34 @@ export namespace $Int2DoubleMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity<T>(): $Function<T, T>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Int2DoubleMap$$Static implements $Int2DoubleMap {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"<T>(): $Function<T, T>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -1468,6 +1474,7 @@ import { $Int2ReferenceFunction, $Int2ReferenceFunction$$Type } from "it.unimi.d
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
 import { $IntBinaryOperator$$Type } from "java.util.function.IntBinaryOperator"
 import { $Function, $Function$$Type } from "java.util.function.Function"
+import { $IntCollection } from "it.unimi.dsi.fastutil.ints.IntCollection"
 import { $Int2DoubleFunction, $Int2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2DoubleFunction"
 import { $Int2IntFunction, $Int2IntFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2IntFunction"
 import { $Float2IntFunction, $Float2IntFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2IntFunction"
@@ -1486,6 +1493,7 @@ import { $ObjectSet } from "it.unimi.dsi.fastutil.objects.ObjectSet"
 import { $Int2LongFunction, $Int2LongFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2LongFunction"
 import { $Int2IntMap$Entry } from "it.unimi.dsi.fastutil.ints.Int2IntMap$Entry"
 import { $IntBinaryOperator$$Type as $IntBinaryOperator$0$$Type } from "it.unimi.dsi.fastutil.ints.IntBinaryOperator"
+import { $IntSet } from "it.unimi.dsi.fastutil.ints.IntSet"
 import { $Double2IntFunction, $Double2IntFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2IntFunction"
 import { $Int2CharFunction, $Int2CharFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2CharFunction"
 import { $Byte2IntFunction, $Byte2IntFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
@@ -1528,21 +1536,23 @@ export interface $Int2IntMap extends $Int2IntFunction, $Map<integer, integer> {
 "computeIfAbsentNullable"(int0: integer, intFunction1: $IntFunction$$Type<integer>): integer
 /** @deprecated */
 "computeIfAbsentPartial"(int0: integer, int2IntFunction1: $Int2IntFunction$$Type): integer
-"computeIfPresent"(int0: integer, biFunction1: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 "computeIfPresent"(integer0: integer, biFunction1: $BiFunction$$Type<integer, integer, integer>): integer
-"containsKey"(int0: integer): boolean
+"computeIfPresent"(int0: integer, biFunction1: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsValue"(int0: integer): boolean
+"containsKey"(int0: integer): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
+"containsValue"(int0: integer): boolean
 "defaultReturnValue"(int0: integer): void
 "defaultReturnValue"(): integer
 /** @deprecated */
 "entrySet"(): $ObjectSet<$Map$Entry<integer, integer>>
 "equals"(object0: any): boolean
 "forEach"(biConsumer0: $BiConsumer$$Type<integer, integer>): void
+/** @deprecated */
+"get"(object0: any): integer
 "get"(int0: integer): integer
 "getOrDefault"(int0: integer, int1: integer): integer
 /** @deprecated */
@@ -1550,6 +1560,7 @@ export interface $Int2IntMap extends $Int2IntFunction, $Map<integer, integer> {
 "hashCode"(): integer
 "int2IntEntrySet"(): $ObjectSet<$Int2IntMap$Entry>
 "isEmpty"(): boolean
+"keySet"(): $IntSet
 "merge"(int0: integer, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 "merge"(integer0: integer, integer1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
@@ -1562,18 +1573,21 @@ export interface $Int2IntMap extends $Int2IntFunction, $Map<integer, integer> {
 /** @deprecated */
 "putIfAbsent"(integer0: integer, integer1: integer): integer
 "putIfAbsent"(int0: integer, int1: integer): integer
+/** @deprecated */
+"remove"(object0: any): integer
 "remove"(int0: integer, int1: integer): boolean
 /** @deprecated */
 "remove"(object0: any, object1: any): boolean
 "remove"(int0: integer): integer
+"replace"(int0: integer, int1: integer): integer
+/** @deprecated */
+"replace"(integer0: integer, integer1: integer): integer
 "replace"(int0: integer, int1: integer, int2: integer): boolean
 /** @deprecated */
 "replace"(integer0: integer, integer1: integer, integer2: integer): boolean
-/** @deprecated */
-"replace"(integer0: integer, integer1: integer): integer
-"replace"(int0: integer, int1: integer): integer
 "replaceAll"(biFunction0: $BiFunction$$Type<integer, integer, integer>): void
 "size"(): integer
+"values"(): $IntCollection
 [index: string | number]: integer
 get "empty"(): boolean
 }
@@ -1582,34 +1596,34 @@ export namespace $Int2IntMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity(): $Int2IntFunction
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Int2IntMap$$Static implements $Int2IntMap {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"(): $Int2IntFunction
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -1702,8 +1716,6 @@ public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public "defaultReturnValue"(v0: V): void
 public "defaultReturnValue"(): V
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-/** @deprecated */
-public "entrySet"(): $ObjectSet<$Map$Entry<integer, V>>
 public "forEach"(biConsumer0: $BiConsumer$$Type<integer, V>): void
 /** @deprecated */
 public "get"(object0: any): V
@@ -1716,17 +1728,17 @@ public "int2ObjectEntrySet"(): $ObjectSet<$Int2ObjectMap$Entry<V>>
 public "isEmpty"(): boolean
 public "merge"(int0: integer, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public "merge"(integer0: integer, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 /** @deprecated */
 public "put"(integer0: integer, v1: V): V
@@ -1741,8 +1753,8 @@ public "remove"(int0: integer): V
 public "remove"(object0: any, object1: any): boolean
 public "replace"(int0: integer, v1: V, v2: V): boolean
 public "replace"(int0: integer, v1: V): V
-public "replace"(integer0: integer, v1: V): V
 public "replace"(integer0: integer, v1: V, v2: V): boolean
+public "replace"(integer0: integer, v1: V): V
 public "replaceAll"(biFunction0: $BiFunction$$Type<integer, V, V>): void
 public "size"(): integer
 public "values"(): $ObjectCollection<V>
@@ -1789,33 +1801,33 @@ get "empty"(): boolean
 
 export namespace $Int2ObjectMap$FastEntrySet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ObjectSet<K>
-function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-function of<K>(): $ObjectSet<K>
+function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K): $ObjectSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ObjectSet<K>
+function of<K>(k0: K, k1: K): $ObjectSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $Int2ObjectMap$FastEntrySet$$Static<V = any> implements $Int2ObjectMap$FastEntrySet<V> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-static "of"<K>(): $ObjectSet<K>
+static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K): $ObjectSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ObjectSet<K>
+static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -1937,14 +1949,14 @@ export interface $Int2ReferenceFunction<V = any> extends $Function$0<integer, V>
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(int0: integer): V
+"getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 "put"(integer0: integer, v1: V): V
 "put"(int0: integer, v1: V): V
@@ -2081,12 +2093,14 @@ public "add"(int0: integer, int1: integer): void
 public "add"(integer0: integer): boolean
 /** @deprecated */
 public "add"(int0: integer, integer1: integer): void
-public "addAll"(int0: integer, intCollection1: $IntCollection$$Type): boolean
 public "addAll"(int0: integer, collection1: $Collection$$Type<integer>): boolean
-public "addAll"(int0: integer, intList1: $IntList$$Type): boolean
+public "addAll"(int0: integer, intCollection1: $IntCollection$$Type): boolean
 public "addAll"(intList0: $IntList$$Type): boolean
+public "addAll"(int0: integer, intList1: $IntList$$Type): boolean
 public "addElements"(int0: integer, int1s: integer[]): void
 public "addElements"(int0: integer, int1s: integer[], int2: integer, int3: integer): void
+public "addFirst"(integer0: integer): void
+public "addLast"(integer0: integer): void
 public "compareTo"(list0: $List$$Type<integer>): integer
 /** @deprecated */
 public "contains"(object0: any): boolean
@@ -2097,7 +2111,9 @@ public "forEach"(consumer0: $Consumer$$Type<integer>): void
 /** @deprecated */
 public "get"(int0: integer): integer
 public "getElements"(int0: integer, int1s: integer[], int2: integer, int3: integer): void
+public "getFirst"(): integer
 public "getInt"(int0: integer): integer
+public "getLast"(): integer
 public "indexOf"(int0: integer): integer
 /** @deprecated */
 public "indexOf"(object0: any): integer
@@ -2109,25 +2125,27 @@ public "isEmpty"(): boolean
 public "lastIndexOf"(int0: integer): integer
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
-public "listIterator"(int0: integer): $IntListIterator
+public "listIterator"(): $IntListIterator
 public static "of"(...int0s: integer[]): $IntList
+public static "of"(int0: integer, int1: integer): $IntList
 public static "of"(): $IntList
 public static "of"(int0: integer): $IntList
-public static "of"(int0: integer, int1: integer): $IntList
 public static "of"(int0: integer, int1: integer, int2: integer): $IntList
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 /** @deprecated */
 public "parallelStream"(): $Stream<integer>
+/** @deprecated */
+public "peek"(int0: integer): integer
 public "peekInt"(int0: integer): integer
 public "popInt"(): integer
 public "push"(int0: integer): void
@@ -2136,10 +2154,12 @@ public "push"(integer0: integer): void
 /** @deprecated */
 public "remove"(object0: any): boolean
 public "removeElements"(int0: integer, int1: integer): void
-public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
+public "removeFirst"(): integer
 /** @deprecated */
 public "removeIf"(predicate0: $Predicate$$Type<integer>): boolean
+public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 public "removeInt"(int0: integer): integer
+public "removeLast"(): integer
 public "replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
 /** @deprecated */
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<integer>): void
@@ -2158,6 +2178,7 @@ public "sort"(comparator0: $Comparator$$Type<integer>): void
 public "spliterator"(): $IntSpliterator
 /** @deprecated */
 public "stream"(): $Stream<integer>
+public "subList"(int0: integer, int1: integer): $IntList
 public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
@@ -2165,6 +2186,8 @@ public "topInt"(): integer
 /** @deprecated */
 public "unstableSort"(comparator0: $Comparator$$Type<integer>): void
 public "unstableSort"(intComparator0: $IntComparator$$Type): void
+get "first"(): integer
+get "last"(): integer
 get "empty"(): boolean
 set "elements"(value: integer[])
 }
@@ -2192,15 +2215,15 @@ set "value"(value: V)
 export namespace $Int2ObjectMap$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Int2ObjectMap$Entry$$Static<V = any> implements $Int2ObjectMap$Entry<V> {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -2248,18 +2271,19 @@ export interface $IntSet extends $IntCollection, $Set<integer> {
 "parallelStream"(): $Stream<integer>
 /** @deprecated */
 "rem"(int0: integer): boolean
+"remove"(int0: integer): boolean
 /** @deprecated */
 "remove"(object0: any): boolean
-"remove"(int0: integer): boolean
 "removeAll"(intCollection0: $IntCollection$$Type): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
-"removeIf"(intPredicate0: $IntPredicate$0$$Type): boolean
-"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<integer>): boolean
+"removeIf"(intPredicate0: $IntPredicate$0$$Type): boolean
+"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 "retainAll"(intCollection0: $IntCollection$$Type): boolean
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
+"spliterator"(): $IntSpliterator
 /** @deprecated */
 "stream"(): $Stream<integer>
 "toArray"(int0s: integer[]): integer[]
@@ -2275,40 +2299,40 @@ get "empty"(): boolean
 export namespace $IntSet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
 function of(int0: integer, int1: integer): $IntSet
-function of(): $IntSet
 function of(...int0s: integer[]): $IntSet
 function of(int0: integer): $IntSet
 function of(int0: integer, int1: integer, int2: integer): $IntSet
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of(): $IntSet
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E): $Set<E>
+function of<E>(e0: E, e1: E): $Set<E>
+function of<E>(e0: E): $Set<E>
 function of<E>(...e0s: E[]): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E): $Set<E>
-function of<E>(e0: E, e1: E): $Set<E>
-function of<E>(e0: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $IntSet$$Static implements $IntSet {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
 static "of"(int0: integer, int1: integer): $IntSet
-static "of"(): $IntSet
 static "of"(...int0s: integer[]): $IntSet
 static "of"(int0: integer): $IntSet
 static "of"(int0: integer, int1: integer, int2: integer): $IntSet
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"(): $IntSet
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+static "of"<E>(e0: E, e1: E): $Set<E>
+static "of"<E>(e0: E): $Set<E>
 static "of"<E>(...e0s: E[]): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
-static "of"<E>(e0: E, e1: E): $Set<E>
-static "of"<E>(e0: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -2379,8 +2403,8 @@ export interface $Int2CharFunction extends $Function$0<integer, character>, $Int
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
-"defaultReturnValue"(char0: character): void
 "defaultReturnValue"(): character
+"defaultReturnValue"(char0: character): void
 /** @deprecated */
 "get"(object0: any): character
 "get"(int0: integer): character
@@ -2391,8 +2415,6 @@ export interface $Int2CharFunction extends $Function$0<integer, character>, $Int
 /** @deprecated */
 "put"(integer0: integer, character1: character): character
 "remove"(int0: integer): character
-/** @deprecated */
-"remove"(object0: any): character
 "size"(): integer
 }
 
@@ -2420,6 +2442,7 @@ import { $List, $List$$Type } from "java.util.List"
 import { $IntIterator } from "it.unimi.dsi.fastutil.ints.IntIterator"
 import { $Stream } from "java.util.stream.Stream"
 import { $IntConsumer$$Type as $IntConsumer$0$$Type } from "it.unimi.dsi.fastutil.ints.IntConsumer"
+import { $IntListIterator } from "it.unimi.dsi.fastutil.ints.IntListIterator"
 import { $Comparable } from "java.lang.Comparable"
 import { $IntComparator$$Type } from "it.unimi.dsi.fastutil.ints.IntComparator"
 import { $Comparator$$Type } from "java.util.Comparator"
@@ -2434,13 +2457,15 @@ export interface $IntList extends $List<integer>, $Comparable<$List<integer>>, $
 "add"(int0: integer, int1: integer): void
 "add"(int0: integer): boolean
 "addAll"(int0: integer, intCollection1: $IntCollection$$Type): boolean
-"addAll"(int0: integer, intList1: $IntList$$Type): boolean
 "addAll"(intList0: $IntList$$Type): boolean
-"addAll"(int0: integer, collection1: $Collection$$Type<integer>): boolean
+"addAll"(int0: integer, intList1: $IntList$$Type): boolean
 "addAll"(collection0: $Collection$$Type<integer>): boolean
+"addAll"(int0: integer, collection1: $Collection$$Type<integer>): boolean
 "addAll"(intCollection0: $IntCollection$$Type): boolean
 "addElements"(int0: integer, int1s: integer[]): void
 "addElements"(int0: integer, int1s: integer[], int2: integer, int3: integer): void
+"addFirst"(integer0: integer): void
+"addLast"(integer0: integer): void
 "clear"(): void
 "compareTo"(list0: $List$$Type<integer>): integer
 /** @deprecated */
@@ -2456,19 +2481,22 @@ export interface $IntList extends $List<integer>, $Comparable<$List<integer>>, $
 /** @deprecated */
 "get"(int0: integer): integer
 "getElements"(int0: integer, int1s: integer[], int2: integer, int3: integer): void
+"getFirst"(): integer
 "getInt"(int0: integer): integer
+"getLast"(): integer
 "hashCode"(): integer
-"indexOf"(int0: integer): integer
 /** @deprecated */
 "indexOf"(object0: any): integer
+"indexOf"(int0: integer): integer
 "intIterator"(): $IntIterator
 "intParallelStream"(): $IntStream
 "intSpliterator"(): $IntSpliterator
 "intStream"(): $IntStream
 "isEmpty"(): boolean
+"lastIndexOf"(int0: integer): integer
 /** @deprecated */
 "lastIndexOf"(object0: any): integer
-"lastIndexOf"(int0: integer): integer
+"listIterator"(int0: integer): $IntListIterator
 /** @deprecated */
 "parallelStream"(): $Stream<integer>
 "rem"(int0: integer): boolean
@@ -2477,20 +2505,22 @@ export interface $IntList extends $List<integer>, $Comparable<$List<integer>>, $
 "removeAll"(collection0: $Collection$$Type<any>): boolean
 "removeAll"(intCollection0: $IntCollection$$Type): boolean
 "removeElements"(int0: integer, int1: integer): void
-"removeIf"(intPredicate0: $IntPredicate$0$$Type): boolean
-"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
+"removeFirst"(): integer
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<integer>): boolean
+"removeIf"(intPredicate0: $IntPredicate$0$$Type): boolean
+"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 "removeInt"(int0: integer): integer
+"removeLast"(): integer
 /** @deprecated */
 "replaceAll"(unaryOperator0: $UnaryOperator$$Type<integer>): void
 "replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
 "replaceAll"(intUnaryOperator0: $IntUnaryOperator$0$$Type): void
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "retainAll"(intCollection0: $IntCollection$$Type): boolean
-"set"(int0: integer, int1: integer): integer
 /** @deprecated */
 "set"(int0: integer, integer1: integer): integer
+"set"(int0: integer, int1: integer): integer
 "setElements"(int0: integer, int1s: integer[]): void
 "setElements"(int0: integer, int1s: integer[], int2: integer, int3: integer): void
 "setElements"(int0s: integer[]): void
@@ -2502,6 +2532,7 @@ export interface $IntList extends $List<integer>, $Comparable<$List<integer>>, $
 "spliterator"(): $IntSpliterator
 /** @deprecated */
 "stream"(): $Stream<integer>
+"subList"(int0: integer, int1: integer): $IntList
 "toArray"(): any[]
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(int0s: integer[]): integer[]
@@ -2512,6 +2543,8 @@ export interface $IntList extends $List<integer>, $Comparable<$List<integer>>, $
 /** @deprecated */
 "unstableSort"(comparator0: $Comparator$$Type<integer>): void
 "unstableSort"(intComparator0: $IntComparator$$Type): void
+get "first"(): integer
+get "last"(): integer
 get "empty"(): boolean
 set "elements"(value: integer[])
 }
@@ -2519,40 +2552,40 @@ set "elements"(value: integer[])
 export namespace $IntList {
 function copyOf<E>(collection0: $Collection$$Type<E>): $List<E>
 function of(...int0s: integer[]): $IntList
+function of(int0: integer, int1: integer): $IntList
 function of(): $IntList
 function of(int0: integer): $IntList
-function of(int0: integer, int1: integer): $IntList
 function of(int0: integer, int1: integer, int2: integer): $IntList
-function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E): $List<E>
-function of<E>(e0: E, e1: E): $List<E>
 function of<E>(e0: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-function of<E>(...e0s: E[]): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+function of<E>(...e0s: E[]): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 export abstract class $IntList$$Static implements $IntList {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 static "of"(...int0s: integer[]): $IntList
+static "of"(int0: integer, int1: integer): $IntList
 static "of"(): $IntList
 static "of"(int0: integer): $IntList
-static "of"(int0: integer, int1: integer): $IntList
 static "of"(int0: integer, int1: integer, int2: integer): $IntList
-static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-static "of"<E>(e0: E, e1: E): $List<E>
 static "of"<E>(e0: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-static "of"<E>(...e0s: E[]): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+static "of"<E>(...e0s: E[]): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 }
 
@@ -2581,15 +2614,15 @@ set "value"(value: double)
 export namespace $Int2DoubleMap$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Int2DoubleMap$Entry$$Static implements $Int2DoubleMap$Entry {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -2599,14 +2632,13 @@ import { $Predicate, $Predicate$$Type } from "java.util.function.Predicate"
 import { $IntPredicate as $IntPredicate$0, $IntPredicate$$Type as $IntPredicate$0$$Type } from "java.util.function.IntPredicate"
 
 export interface $IntPredicate extends $Predicate<integer>, $IntPredicate$0 {
-"and"(intPredicate0: $IntPredicate$0$$Type): $IntPredicate
 "and"(intPredicate0: $IntPredicate$$Type): $IntPredicate
 /** @deprecated */
 "and"(predicate0: $Predicate$$Type<integer>): $Predicate<integer>
-"or"(intPredicate0: $IntPredicate$0$$Type): $IntPredicate
-"or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
 /** @deprecated */
 "or"(predicate0: $Predicate$$Type<integer>): $Predicate<integer>
+"or"(intPredicate0: $IntPredicate$0$$Type): $IntPredicate
+"or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
 /** @deprecated */
 "test"(integer0: integer): boolean
 "test"(int0: integer): boolean
@@ -2660,6 +2692,7 @@ constructor(collection0: $Collection$$Type<integer>)
 
 /** @deprecated */
 public "add"(integer0: integer): boolean
+public "clone"(): $IntOpenHashSet
 /** @deprecated */
 public "contains"(object0: any): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
@@ -2670,29 +2703,29 @@ public "intIterator"(): $IntIterator
 public "intParallelStream"(): $IntStream
 public "intSpliterator"(): $IntSpliterator
 public "intStream"(): $IntStream
-public static "of"(int0: integer, int1: integer, int2: integer): $IntOpenHashSet
-public static "of"(int0: integer): $IntOpenHashSet
 public static "of"(): $IntOpenHashSet
-public static "of"(...int0s: integer[]): $IntOpenHashSet
 public static "of"(int0: integer, int1: integer): $IntOpenHashSet
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"(int0: integer): $IntOpenHashSet
+public static "of"(int0: integer, int1: integer, int2: integer): $IntOpenHashSet
+public static "of"(...int0s: integer[]): $IntOpenHashSet
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E): $Set<E>
+public static "of"<E>(e0: E): $Set<E>
 public static "of"<E>(...e0s: E[]): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
-public static "of"<E>(e0: E, e1: E): $Set<E>
-public static "of"<E>(e0: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 /** @deprecated */
 public "parallelStream"(): $Stream<integer>
 /** @deprecated */
 public "remove"(object0: any): boolean
-public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 /** @deprecated */
 public "removeIf"(predicate0: $Predicate$$Type<integer>): boolean
+public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 public "spliterator"(): $IntSpliterator
 /** @deprecated */
 public "stream"(): $Stream<integer>
@@ -2793,8 +2826,8 @@ export interface $Int2ByteFunction extends $Function$0<integer, byte>, $IntUnary
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
-"defaultReturnValue"(byte0: byte): void
 "defaultReturnValue"(): byte
+"defaultReturnValue"(byte0: byte): void
 /** @deprecated */
 "get"(object0: any): byte
 "get"(int0: integer): byte
@@ -2805,8 +2838,6 @@ export interface $Int2ByteFunction extends $Function$0<integer, byte>, $IntUnary
 /** @deprecated */
 "put"(integer0: integer, byte1: byte): byte
 "remove"(int0: integer): byte
-/** @deprecated */
-"remove"(object0: any): byte
 "size"(): integer
 }
 
@@ -2850,11 +2881,13 @@ import { $Stack } from "it.unimi.dsi.fastutil.Stack"
 
 export interface $IntStack extends $Stack<integer> {
 "isEmpty"(): boolean
+/** @deprecated */
+"peek"(int0: integer): integer
 "peekInt"(int0: integer): integer
 "popInt"(): integer
+"push"(int0: integer): void
 /** @deprecated */
 "push"(integer0: integer): void
-"push"(int0: integer): void
 "topInt"(): integer
 get "empty"(): boolean
 }

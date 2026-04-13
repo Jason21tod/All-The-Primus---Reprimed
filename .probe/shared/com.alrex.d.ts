@@ -39,8 +39,8 @@ import { $AdditionalProperties } from "com.alrex.parcool.common.action.Additiona
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 import { $ParCoolConfig$Server$Integers$$Type } from "com.alrex.parcool.config.ParCoolConfig$Server$Integers"
 import { $ParCoolConfig$Client$Doubles$$Type } from "com.alrex.parcool.config.ParCoolConfig$Client$Doubles"
-import { $ParCoolConfig$Server$Booleans$$Type } from "com.alrex.parcool.config.ParCoolConfig$Server$Booleans"
 import { $ParCoolConfig$Server$Doubles$$Type } from "com.alrex.parcool.config.ParCoolConfig$Server$Doubles"
+import { $ParCoolConfig$Server$Booleans$$Type } from "com.alrex.parcool.config.ParCoolConfig$Server$Booleans"
 import { $List } from "java.util.List"
 import { $ClientSetting } from "com.alrex.parcool.common.info.ClientSetting"
 import { $ParCoolConfig$Client$Integers$$Type } from "com.alrex.parcool.config.ParCoolConfig$Client$Integers"
@@ -58,9 +58,9 @@ public "getActionInfo"(): $ActionInfo
 public "getAdditionalProperties"(): $AdditionalProperties
 public "getBehaviorEnforcer"(): $BehaviorEnforcer
 public "getClientInfo"(): $ClientSetting
-public "getLimitedValue"(booleans0: $ParCoolConfig$Client$Booleans$$Type, booleans1: $ParCoolConfig$Server$Booleans$$Type): boolean
-public "getLimitedValue"(integers0: $ParCoolConfig$Client$Integers$$Type, integers1: $ParCoolConfig$Server$Integers$$Type): integer
 public "getLimitedValue"(doubles0: $ParCoolConfig$Client$Doubles$$Type, doubles1: $ParCoolConfig$Server$Doubles$$Type): double
+public "getLimitedValue"(integers0: $ParCoolConfig$Client$Integers$$Type, integers1: $ParCoolConfig$Server$Integers$$Type): integer
+public "getLimitedValue"(booleans0: $ParCoolConfig$Client$Booleans$$Type, booleans1: $ParCoolConfig$Server$Booleans$$Type): boolean
 public "getList"(): $List<$Action>
 public "getServerLimitation"(): $ServerLimitation
 /** Client only, do not use in server scripts */
@@ -339,6 +339,7 @@ declare module "com.alrex.parcool.config.ParCoolConfig$Server$Booleans" {
 import { $ParCoolConfig$ConfigGroup } from "com.alrex.parcool.config.ParCoolConfig$ConfigGroup"
 import { $ForgeConfigSpec$Builder$$Type } from "net.minecraftforge.common.ForgeConfigSpec$Builder"
 import { $Enum } from "java.lang.Enum"
+import { $ForgeConfigSpec$BooleanValue } from "net.minecraftforge.common.ForgeConfigSpec$BooleanValue"
 import { $ParCoolConfig$Item } from "com.alrex.parcool.config.ParCoolConfig$Item"
 import { $ByteBuffer$$Type } from "java.nio.ByteBuffer"
 
@@ -352,12 +353,15 @@ static readonly "DodgeProvideInvulnerableFrame": $ParCoolConfig$Server$Booleans
 readonly "Group": $ParCoolConfig$ConfigGroup
 readonly "Path": string
 
+public "getInternalInstance"(): $ForgeConfigSpec$BooleanValue
 public "getPath"(): string
+public "readFromBuffer"(byteBuffer0: $ByteBuffer$$Type): boolean
 public "register"(builder0: $ForgeConfigSpec$Builder$$Type): void
 public "set"(boolean0: boolean): void
 public static "valueOf"(string0: string): $ParCoolConfig$Server$Booleans
 public static "values"(): $ParCoolConfig$Server$Booleans[]
 public "writeToBuffer"(byteBuffer0: $ByteBuffer$$Type): void
+get "internalInstance"(): $ForgeConfigSpec$BooleanValue
 get "path"(): string
 }
 }
@@ -440,8 +444,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $Player, $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $ParCoolActionEvent extends $Event implements $EventItf {
-constructor(player0: $Player$$Type, action1: $Action$$Type)
 constructor()
+constructor(player0: $Player$$Type, action1: $Action$$Type)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -479,6 +483,7 @@ static readonly "MinSkyDiveSpeedDecreaseRate": $ParCoolConfig$Server$Doubles
 readonly "Path": string
 
 public "getPath"(): string
+public "readFromBuffer"(byteBuffer0: $ByteBuffer$$Type): double
 public "register"(builder0: $ForgeConfigSpec$Builder$$Type): void
 public "set"(double0: double): void
 public static "valueOf"(string0: string): $ParCoolConfig$Server$Doubles
@@ -543,14 +548,14 @@ import { $ModelPart$$Type } from "net.minecraft.client.model.geom.ModelPart"
 export class $PlayerModelTransformer {
 constructor(player0: $Player$$Type, playerModel1: $PlayerModel$$Type, boolean2: boolean, float3: float, float4: float, float5: float, float6: float, float7: float)
 
-public "addRotateLeftArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "addRotateLeftArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
-public "addRotateLeftLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
+public "addRotateLeftArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "addRotateLeftLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
-public "addRotateRightArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
+public "addRotateLeftLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "addRotateRightArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
-public "addRotateRightLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
+public "addRotateRightArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "addRotateRightLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
+public "addRotateRightLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "copyFromBodyToWear"(): void
 public "end"(): void
 public "getHeadPitch"(): float
@@ -574,8 +579,8 @@ public "rotateHeadYaw"(float0: float): $PlayerModelTransformer
 public "rotateHeadYawRadian"(float0: float): $PlayerModelTransformer
 public "rotateLeftArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "rotateLeftArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
-public "rotateLeftLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "rotateLeftLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
+public "rotateLeftLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "rotateRightArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "rotateRightArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "rotateRightLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
@@ -740,6 +745,7 @@ import { $ParCoolConfig$ConfigGroup } from "com.alrex.parcool.config.ParCoolConf
 import { $ForgeConfigSpec$Builder$$Type } from "net.minecraftforge.common.ForgeConfigSpec$Builder"
 import { $Enum } from "java.lang.Enum"
 import { $ParCoolConfig$Item } from "com.alrex.parcool.config.ParCoolConfig$Item"
+import { $ForgeConfigSpec$IntValue } from "net.minecraftforge.common.ForgeConfigSpec$IntValue"
 import { $ByteBuffer$$Type } from "java.nio.ByteBuffer"
 
 export class $ParCoolConfig$Client$Integers extends $Enum<$ParCoolConfig$Client$Integers> implements $ParCoolConfig$Item<integer> {
@@ -763,12 +769,15 @@ static readonly "VerticalOffsetOfLightStaminaHUD": $ParCoolConfig$Client$Integer
 static readonly "VerticalOffsetOfStaminaHUD": $ParCoolConfig$Client$Integers
 static readonly "WallRunContinuableTick": $ParCoolConfig$Client$Integers
 
+public "getInternalInstance"(): $ForgeConfigSpec$IntValue
 public "getPath"(): string
+public "readFromBuffer"(byteBuffer0: $ByteBuffer$$Type): integer
 public "register"(builder0: $ForgeConfigSpec$Builder$$Type): void
 public "set"(integer0: integer): void
 public static "valueOf"(string0: string): $ParCoolConfig$Client$Integers
 public static "values"(): $ParCoolConfig$Client$Integers[]
 public "writeToBuffer"(byteBuffer0: $ByteBuffer$$Type): void
+get "internalInstance"(): $ForgeConfigSpec$IntValue
 get "path"(): string
 }
 }
@@ -868,6 +877,7 @@ import { $ForgeConfigSpec$Builder$$Type } from "net.minecraftforge.common.ForgeC
 import { $Enum } from "java.lang.Enum"
 import { $ParCoolConfig$Item } from "com.alrex.parcool.config.ParCoolConfig$Item"
 import { $ParCoolConfig$AdvantageousDirection } from "com.alrex.parcool.config.ParCoolConfig$AdvantageousDirection"
+import { $ForgeConfigSpec$IntValue } from "net.minecraftforge.common.ForgeConfigSpec$IntValue"
 import { $ByteBuffer$$Type } from "java.nio.ByteBuffer"
 
 export class $ParCoolConfig$Server$Integers extends $Enum<$ParCoolConfig$Server$Integers> implements $ParCoolConfig$Item<integer> {
@@ -888,12 +898,15 @@ readonly "Min": integer
 readonly "Path": string
 static readonly "SuccessiveDodgeCoolTime": $ParCoolConfig$Server$Integers
 
+public "getInternalInstance"(): $ForgeConfigSpec$IntValue
 public "getPath"(): string
+public "readFromBuffer"(byteBuffer0: $ByteBuffer$$Type): integer
 public "register"(builder0: $ForgeConfigSpec$Builder$$Type): void
 public "set"(integer0: integer): void
 public static "valueOf"(string0: string): $ParCoolConfig$Server$Integers
 public static "values"(): $ParCoolConfig$Server$Integers[]
 public "writeToBuffer"(byteBuffer0: $ByteBuffer$$Type): void
+get "internalInstance"(): $ForgeConfigSpec$IntValue
 get "path"(): string
 }
 }
@@ -910,6 +923,7 @@ declare module "com.alrex.parcool.config.ParCoolConfig$Client$Booleans" {
 import { $ParCoolConfig$ConfigGroup } from "com.alrex.parcool.config.ParCoolConfig$ConfigGroup"
 import { $ForgeConfigSpec$Builder$$Type } from "net.minecraftforge.common.ForgeConfigSpec$Builder"
 import { $Enum } from "java.lang.Enum"
+import { $ForgeConfigSpec$BooleanValue } from "net.minecraftforge.common.ForgeConfigSpec$BooleanValue"
 import { $ParCoolConfig$Item } from "com.alrex.parcool.config.ParCoolConfig$Item"
 import { $ByteBuffer$$Type } from "java.nio.ByteBuffer"
 
@@ -953,12 +967,15 @@ static readonly "SubstituteSprintForFastRun": $ParCoolConfig$Client$Booleans
 readonly "Translation": string
 static readonly "VaultKeyPressedNeeded": $ParCoolConfig$Client$Booleans
 
+public "getInternalInstance"(): $ForgeConfigSpec$BooleanValue
 public "getPath"(): string
+public "readFromBuffer"(byteBuffer0: $ByteBuffer$$Type): boolean
 public "register"(builder0: $ForgeConfigSpec$Builder$$Type): void
 public "set"(boolean0: boolean): void
 public static "valueOf"(string0: string): $ParCoolConfig$Client$Booleans
 public static "values"(): $ParCoolConfig$Client$Booleans[]
 public "writeToBuffer"(byteBuffer0: $ByteBuffer$$Type): void
+get "internalInstance"(): $ForgeConfigSpec$BooleanValue
 get "path"(): string
 }
 }

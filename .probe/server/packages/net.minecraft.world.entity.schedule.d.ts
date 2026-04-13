@@ -1,6 +1,7 @@
 declare module "net.minecraft.world.entity.schedule.Activity" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-export class $Activity {
+import { $MixinActivity } from "forge.net.mca.mixin.MixinActivity"
+
+export class $Activity implements $MixinActivity {
 static readonly "ADMIRE_ITEM": $Activity
 static readonly "AVOID": $Activity
 static readonly "CELEBRATE": $Activity

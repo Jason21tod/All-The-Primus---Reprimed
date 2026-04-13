@@ -8,7 +8,7 @@
     },
     "skill_cooldown": {
         "type": "origins:cooldown",
-        "cooldown": 200,
+        "cooldown": 400,
         "hud_render": {
                 "should_render": true,
                 "bar_index": 3

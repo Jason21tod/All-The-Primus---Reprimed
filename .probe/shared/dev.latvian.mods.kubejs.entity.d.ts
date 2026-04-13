@@ -162,8 +162,8 @@ import { $MobEffect, $MobEffect$$Type } from "net.minecraft.world.effect.MobEffe
 export class $EntityPotionEffectsJS {
 constructor(e: $LivingEntity$$Type)
 
-public "add"(mobEffect: $MobEffect$$Type, duration: integer): void
 public "add"(mobEffect: $MobEffect$$Type, duration: integer, amplifier: integer): void
+public "add"(mobEffect: $MobEffect$$Type, duration: integer): void
 public "add"(mobEffect: $MobEffect$$Type): void
 public "add"(mobEffect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, showParticles: boolean): void
 public "clear"(): void

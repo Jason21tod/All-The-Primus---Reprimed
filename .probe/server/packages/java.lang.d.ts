@@ -42,8 +42,9 @@ public "isAnnotationPresent"(class0: $Class$$Type<$Annotation$$Type>): boolean
 public "isExported"(string0: string): boolean
 public "isExported"(string0: string, module1: $Module$$Type): boolean
 public "isNamed"(): boolean
-public "isOpen"(string0: string): boolean
+public "isNativeAccessEnabled"(): boolean
 public "isOpen"(string0: string, module1: $Module$$Type): boolean
+public "isOpen"(string0: string): boolean
 get "annotations"(): $Annotation[]
 get "classLoader"(): $ClassLoader
 get "declaredAnnotations"(): $Annotation[]
@@ -52,6 +53,7 @@ get "layer"(): $ModuleLayer
 get "name"(): string
 get "packages"(): $Set<string>
 get "named"(): boolean
+get "nativeAccessEnabled"(): boolean
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $Module$$Type = ($Module);
@@ -108,6 +110,61 @@ get "nativeMethod"(): boolean
 export type $StackTraceElement$$Type = ($StackTraceElement);
 }
 
+declare module "java.lang.foreign.ValueLayout$OfFloat" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $ValueLayout } from "java.lang.foreign.ValueLayout"
+import { $ByteOrder } from "java.nio.ByteOrder"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $ValueLayout$OfFloat extends $ValueLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $ValueLayout$OfFloat {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $ValueLayout$OfFloat$$Static implements $ValueLayout$OfFloat {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ValueLayout$OfFloat$$Type = ($ValueLayout$OfFloat);
+}
+
 declare module "java.lang.module.ModuleDescriptor$Modifier" {
 import { $Enum } from "java.lang.Enum"
 
@@ -127,6 +184,29 @@ public static "values"(): $ModuleDescriptor$Modifier[]
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ModuleDescriptor$Modifier$$Type = ($ModuleDescriptor$Modifier | ("open" | "automatic" | "synthetic" | "mandated"));
+}
+
+declare module "java.lang.foreign.MemorySegment$Scope" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $MemorySegment$Scope {
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"isAlive"(): boolean
+get "alive"(): boolean
+}
+
+export namespace $MemorySegment$Scope {
+const probejs$$marker: never
+}
+export abstract class $MemorySegment$Scope$$Static implements $MemorySegment$Scope {
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $MemorySegment$Scope$$Type = ($MemorySegment$Scope);
 }
 
 declare module "java.lang.invoke.TypeDescriptor" {
@@ -195,7 +275,6 @@ export type $Record$$Type = ($Record);
 }
 
 declare module "java.lang.constant.DirectMethodHandleDesc" {
-import { $MethodHandles$Lookup$$Type } from "java.lang.invoke.MethodHandles$Lookup"
 import { $ClassDesc, $ClassDesc$$Type } from "java.lang.constant.ClassDesc"
 import { $DirectMethodHandleDesc$Kind, $DirectMethodHandleDesc$Kind$$Type } from "java.lang.constant.DirectMethodHandleDesc$Kind"
 import { $MethodTypeDesc, $MethodTypeDesc$$Type } from "java.lang.constant.MethodTypeDesc"
@@ -216,7 +295,6 @@ export interface $DirectMethodHandleDesc extends $MethodHandleDesc {
 "methodName"(): string
 "owner"(): $ClassDesc
 "refKind"(): integer
-"resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): any
 get "ownerInterface"(): boolean
 }
 
@@ -261,6 +339,157 @@ public static "values"(): $ModuleDescriptor$Exports$Modifier[]
 export type $ModuleDescriptor$Exports$Modifier$$Type = ($ModuleDescriptor$Exports$Modifier | ("synthetic" | "mandated"));
 }
 
+declare module "java.lang.foreign.MemorySegment" {
+import { $ValueLayout$OfLong$$Type } from "java.lang.foreign.ValueLayout$OfLong"
+import { $ValueLayout$OfChar$$Type } from "java.lang.foreign.ValueLayout$OfChar"
+import { $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $MemorySegment$Scope } from "java.lang.foreign.MemorySegment$Scope"
+import { $ValueLayout$OfInt$$Type } from "java.lang.foreign.ValueLayout$OfInt"
+import { $AddressLayout$$Type } from "java.lang.foreign.AddressLayout"
+import { $ValueLayout$OfFloat$$Type } from "java.lang.foreign.ValueLayout$OfFloat"
+import { $ByteBuffer } from "java.nio.ByteBuffer"
+import { $ValueLayout$$Type } from "java.lang.foreign.ValueLayout"
+import { $ValueLayout$OfByte$$Type } from "java.lang.foreign.ValueLayout$OfByte"
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $Stream } from "java.util.stream.Stream"
+import { $Arena$$Type } from "java.lang.foreign.Arena"
+import { $Charset$$Type } from "java.nio.charset.Charset"
+import { $ValueLayout$OfShort$$Type } from "java.lang.foreign.ValueLayout$OfShort"
+import { $Thread$$Type } from "java.lang.Thread"
+import { $Buffer$$Type } from "java.nio.Buffer"
+import { $Optional } from "java.util.Optional"
+import { $ValueLayout$OfDouble$$Type } from "java.lang.foreign.ValueLayout$OfDouble"
+import { $ValueLayout$OfBoolean$$Type } from "java.lang.foreign.ValueLayout$OfBoolean"
+import { $Spliterator } from "java.util.Spliterator"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $MemorySegment {
+"address"(): long
+"asByteBuffer"(): $ByteBuffer
+"asOverlappingSlice"(memorySegment0: $MemorySegment$$Type): $Optional<$MemorySegment>
+"asReadOnly"(): $MemorySegment
+"asSlice"(long0: long, long1: long): $MemorySegment
+"asSlice"(long0: long, memoryLayout1: $MemoryLayout$$Type): $MemorySegment
+"asSlice"(long0: long): $MemorySegment
+"asSlice"(long0: long, long1: long, long2: long): $MemorySegment
+"byteSize"(): long
+"copyFrom"(memorySegment0: $MemorySegment$$Type): $MemorySegment
+"elements"(memoryLayout0: $MemoryLayout$$Type): $Stream<$MemorySegment>
+"equals"(object0: any): boolean
+"fill"(byte0: byte): $MemorySegment
+"force"(): void
+"get"(ofChar0: $ValueLayout$OfChar$$Type, long1: long): character
+"get"(ofDouble0: $ValueLayout$OfDouble$$Type, long1: long): double
+"get"(ofBoolean0: $ValueLayout$OfBoolean$$Type, long1: long): boolean
+"get"(addressLayout0: $AddressLayout$$Type, long1: long): $MemorySegment
+"get"(ofShort0: $ValueLayout$OfShort$$Type, long1: long): short
+"get"(ofInt0: $ValueLayout$OfInt$$Type, long1: long): integer
+"get"(ofFloat0: $ValueLayout$OfFloat$$Type, long1: long): float
+"get"(ofLong0: $ValueLayout$OfLong$$Type, long1: long): long
+"get"(ofByte0: $ValueLayout$OfByte$$Type, long1: long): byte
+"getAtIndex"(ofByte0: $ValueLayout$OfByte$$Type, long1: long): byte
+"getAtIndex"(ofFloat0: $ValueLayout$OfFloat$$Type, long1: long): float
+"getAtIndex"(ofLong0: $ValueLayout$OfLong$$Type, long1: long): long
+"getAtIndex"(ofInt0: $ValueLayout$OfInt$$Type, long1: long): integer
+"getAtIndex"(ofChar0: $ValueLayout$OfChar$$Type, long1: long): character
+"getAtIndex"(ofShort0: $ValueLayout$OfShort$$Type, long1: long): short
+"getAtIndex"(ofDouble0: $ValueLayout$OfDouble$$Type, long1: long): double
+"getAtIndex"(ofBoolean0: $ValueLayout$OfBoolean$$Type, long1: long): boolean
+"getAtIndex"(addressLayout0: $AddressLayout$$Type, long1: long): $MemorySegment
+"getString"(long0: long, charset1: $Charset$$Type): string
+"getString"(long0: long): string
+"hashCode"(): integer
+"heapBase"(): $Optional<any>
+"isAccessibleBy"(thread0: $Thread$$Type): boolean
+"isLoaded"(): boolean
+"isMapped"(): boolean
+"isNative"(): boolean
+"isReadOnly"(): boolean
+"load"(): void
+"maxByteAlignment"(): long
+"mismatch"(memorySegment0: $MemorySegment$$Type): long
+"reinterpret"(long0: long): $MemorySegment
+"reinterpret"(arena0: $Arena$$Type, consumer1: $Consumer$$Type<$MemorySegment$$Type>): $MemorySegment
+"reinterpret"(long0: long, arena1: $Arena$$Type, consumer2: $Consumer$$Type<$MemorySegment$$Type>): $MemorySegment
+"scope"(): $MemorySegment$Scope
+"set"(ofLong0: $ValueLayout$OfLong$$Type, long1: long, long2: long): void
+"set"(ofDouble0: $ValueLayout$OfDouble$$Type, long1: long, double2: double): void
+"set"(ofByte0: $ValueLayout$OfByte$$Type, long1: long, byte2: byte): void
+"set"(addressLayout0: $AddressLayout$$Type, long1: long, memorySegment2: $MemorySegment$$Type): void
+"set"(ofBoolean0: $ValueLayout$OfBoolean$$Type, long1: long, boolean2: boolean): void
+"set"(ofChar0: $ValueLayout$OfChar$$Type, long1: long, char2: character): void
+"set"(ofShort0: $ValueLayout$OfShort$$Type, long1: long, short2: short): void
+"set"(ofFloat0: $ValueLayout$OfFloat$$Type, long1: long, float2: float): void
+"set"(ofInt0: $ValueLayout$OfInt$$Type, long1: long, int2: integer): void
+"setAtIndex"(ofByte0: $ValueLayout$OfByte$$Type, long1: long, byte2: byte): void
+"setAtIndex"(ofChar0: $ValueLayout$OfChar$$Type, long1: long, char2: character): void
+"setAtIndex"(addressLayout0: $AddressLayout$$Type, long1: long, memorySegment2: $MemorySegment$$Type): void
+"setAtIndex"(ofBoolean0: $ValueLayout$OfBoolean$$Type, long1: long, boolean2: boolean): void
+"setAtIndex"(ofShort0: $ValueLayout$OfShort$$Type, long1: long, short2: short): void
+"setAtIndex"(ofFloat0: $ValueLayout$OfFloat$$Type, long1: long, float2: float): void
+"setAtIndex"(ofInt0: $ValueLayout$OfInt$$Type, long1: long, int2: integer): void
+"setAtIndex"(ofDouble0: $ValueLayout$OfDouble$$Type, long1: long, double2: double): void
+"setAtIndex"(ofLong0: $ValueLayout$OfLong$$Type, long1: long, long2: long): void
+"setString"(long0: long, string1: string): void
+"setString"(long0: long, string1: string, charset2: $Charset$$Type): void
+"spliterator"(memoryLayout0: $MemoryLayout$$Type): $Spliterator<$MemorySegment>
+"toArray"(ofByte0: $ValueLayout$OfByte$$Type): byte[]
+"toArray"(ofDouble0: $ValueLayout$OfDouble$$Type): double[]
+"toArray"(ofLong0: $ValueLayout$OfLong$$Type): long[]
+"toArray"(ofFloat0: $ValueLayout$OfFloat$$Type): float[]
+"toArray"(ofInt0: $ValueLayout$OfInt$$Type): integer[]
+"toArray"(ofChar0: $ValueLayout$OfChar$$Type): character[]
+"toArray"(ofShort0: $ValueLayout$OfShort$$Type): short[]
+"unload"(): void
+get "loaded"(): boolean
+get "mapped"(): boolean
+get "native"(): boolean
+get "readOnly"(): boolean
+}
+
+export namespace $MemorySegment {
+const NULL: $MemorySegment
+function copy(memorySegment0: $MemorySegment$$Type, valueLayout1: $ValueLayout$$Type, long2: long, memorySegment3: $MemorySegment$$Type, valueLayout4: $ValueLayout$$Type, long5: long, long6: long): void
+function copy(memorySegment0: $MemorySegment$$Type, long1: long, memorySegment2: $MemorySegment$$Type, long3: long, long4: long): void
+function copy(object0: any, int1: integer, memorySegment2: $MemorySegment$$Type, valueLayout3: $ValueLayout$$Type, long4: long, int5: integer): void
+function copy(memorySegment0: $MemorySegment$$Type, valueLayout1: $ValueLayout$$Type, long2: long, object3: any, int4: integer, int5: integer): void
+function mismatch(memorySegment0: $MemorySegment$$Type, long1: long, long2: long, memorySegment3: $MemorySegment$$Type, long4: long, long5: long): long
+function ofAddress(long0: long): $MemorySegment
+function ofArray(byte0s: byte[]): $MemorySegment
+function ofArray(double0s: double[]): $MemorySegment
+function ofArray(long0s: long[]): $MemorySegment
+function ofArray(float0s: float[]): $MemorySegment
+function ofArray(int0s: integer[]): $MemorySegment
+function ofArray(char0s: character[]): $MemorySegment
+function ofArray(short0s: short[]): $MemorySegment
+function ofBuffer(buffer0: $Buffer$$Type): $MemorySegment
+}
+export abstract class $MemorySegment$$Static implements $MemorySegment {
+static readonly "NULL": $MemorySegment
+
+static "copy"(memorySegment0: $MemorySegment$$Type, valueLayout1: $ValueLayout$$Type, long2: long, memorySegment3: $MemorySegment$$Type, valueLayout4: $ValueLayout$$Type, long5: long, long6: long): void
+static "copy"(memorySegment0: $MemorySegment$$Type, long1: long, memorySegment2: $MemorySegment$$Type, long3: long, long4: long): void
+static "copy"(object0: any, int1: integer, memorySegment2: $MemorySegment$$Type, valueLayout3: $ValueLayout$$Type, long4: long, int5: integer): void
+static "copy"(memorySegment0: $MemorySegment$$Type, valueLayout1: $ValueLayout$$Type, long2: long, object3: any, int4: integer, int5: integer): void
+static "mismatch"(memorySegment0: $MemorySegment$$Type, long1: long, long2: long, memorySegment3: $MemorySegment$$Type, long4: long, long5: long): long
+static "ofAddress"(long0: long): $MemorySegment
+static "ofArray"(byte0s: byte[]): $MemorySegment
+static "ofArray"(double0s: double[]): $MemorySegment
+static "ofArray"(long0s: long[]): $MemorySegment
+static "ofArray"(float0s: float[]): $MemorySegment
+static "ofArray"(int0s: integer[]): $MemorySegment
+static "ofArray"(char0s: character[]): $MemorySegment
+static "ofArray"(short0s: short[]): $MemorySegment
+static "ofBuffer"(buffer0: $Buffer$$Type): $MemorySegment
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $MemorySegment$$Type = ($MemorySegment);
+}
+
 declare module "java.lang.Package" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -271,8 +500,10 @@ declare module "java.lang.reflect.Parameter" {
 import { $Type } from "java.lang.reflect.Type"
 import { $AnnotatedType } from "java.lang.reflect.AnnotatedType"
 import { $Annotation, $Annotation$$Type } from "java.lang.annotation.Annotation"
+import { $Set } from "java.util.Set"
 import { $Executable } from "java.lang.reflect.Executable"
 import { $Class, $Class$$Type } from "java.lang.Class"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
 import { $AnnotatedElement } from "java.lang.reflect.AnnotatedElement"
 
 /**
@@ -281,6 +512,7 @@ import { $AnnotatedElement } from "java.lang.reflect.AnnotatedElement"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $Parameter implements $AnnotatedElement {
+public "accessFlags"(): $Set<$AccessFlag>
 public "getAnnotatedType"(): $AnnotatedType
 public "getAnnotation"<T extends $Annotation>(class0: $Class$$Type<T>): T
 public "getAnnotations"(): $Annotation[]
@@ -367,7 +599,6 @@ export type $Thread$UncaughtExceptionHandler$$Type = ($Thread$UncaughtExceptionH
 }
 
 declare module "java.lang.constant.MethodHandleDesc" {
-import { $MethodHandles$Lookup$$Type } from "java.lang.invoke.MethodHandles$Lookup"
 import { $ConstantDesc } from "java.lang.constant.ConstantDesc"
 import { $ClassDesc$$Type } from "java.lang.constant.ClassDesc"
 import { $DirectMethodHandleDesc$Kind$$Type } from "java.lang.constant.DirectMethodHandleDesc$Kind"
@@ -383,7 +614,6 @@ export interface $MethodHandleDesc extends $ConstantDesc {
 "asType"(methodTypeDesc0: $MethodTypeDesc$$Type): $MethodHandleDesc
 "equals"(object0: any): boolean
 "invocationType"(): $MethodTypeDesc
-"resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): any
 }
 
 export namespace $MethodHandleDesc {
@@ -468,13 +698,239 @@ set "defaultAssertionStatus"(value: boolean)
 export type $ClassLoader$$Type = ($ClassLoader);
 }
 
+declare module "java.lang.foreign.ValueLayout$OfDouble" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $ValueLayout } from "java.lang.foreign.ValueLayout"
+import { $ByteOrder } from "java.nio.ByteOrder"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $ValueLayout$OfDouble extends $ValueLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $ValueLayout$OfDouble {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $ValueLayout$OfDouble$$Static implements $ValueLayout$OfDouble {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ValueLayout$OfDouble$$Type = ($ValueLayout$OfDouble);
+}
+
+declare module "java.lang.foreign.SequenceLayout" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $Optional } from "java.util.Optional"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $SequenceLayout extends $MemoryLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"elementCount"(): long
+"elementLayout"(): $MemoryLayout
+"equals"(object0: any): boolean
+"flatten"(): $SequenceLayout
+"hashCode"(): integer
+"name"(): $Optional<string>
+"reshape"(...long0s: long[]): $SequenceLayout
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"withByteAlignment"(long0: long): $SequenceLayout
+"withElementCount"(long0: long): $SequenceLayout
+"withoutName"(): $MemoryLayout
+}
+
+export namespace $SequenceLayout {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $SequenceLayout$$Static implements $SequenceLayout {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $SequenceLayout$$Type = ($SequenceLayout);
+}
+
+declare module "java.lang.foreign.AddressLayout" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $ValueLayout } from "java.lang.foreign.ValueLayout"
+import { $ByteOrder, $ByteOrder$$Type } from "java.nio.ByteOrder"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $AddressLayout extends $ValueLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"targetLayout"(): $Optional<$MemoryLayout>
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"withByteAlignment"(long0: long): $AddressLayout
+"withOrder"(byteOrder0: $ByteOrder$$Type): $AddressLayout
+"withTargetLayout"(memoryLayout0: $MemoryLayout$$Type): $AddressLayout
+"withoutTargetLayout"(): $AddressLayout
+}
+
+export namespace $AddressLayout {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $AddressLayout$$Static implements $AddressLayout {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $AddressLayout$$Type = ($AddressLayout);
+}
+
 declare module "java.lang.Number" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $Number$$Type = ($Number);
 }
 
+declare module "java.lang.foreign.ValueLayout$OfBoolean" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $ValueLayout } from "java.lang.foreign.ValueLayout"
+import { $ByteOrder } from "java.nio.ByteOrder"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $ValueLayout$OfBoolean extends $ValueLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $ValueLayout$OfBoolean {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $ValueLayout$OfBoolean$$Static implements $ValueLayout$OfBoolean {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ValueLayout$OfBoolean$$Type = ($ValueLayout$OfBoolean);
+}
+
 declare module "java.lang.StringBuffer" {
+import { $Appendable } from "java.lang.Appendable"
 import { $AbstractStringBuilder } from "java.lang.AbstractStringBuilder"
 import { $Comparable } from "java.lang.Comparable"
 import { $Serializable } from "java.io.Serializable"
@@ -484,7 +940,7 @@ import { $Serializable } from "java.io.Serializable"
  * You should not load the class, or KubeJS will throw an error.
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
-export class $StringBuffer extends $AbstractStringBuilder implements $Serializable, $Comparable<$StringBuffer>, charseq {
+export class $StringBuffer extends $AbstractStringBuilder implements $Appendable, $Serializable, $Comparable<$StringBuffer>, charseq {
 constructor(charSequence0: charseq)
 constructor(string0: string)
 constructor(int0: integer)
@@ -498,8 +954,11 @@ public "append"(boolean0: boolean): $StringBuffer
 public "append"(char0: character): $StringBuffer
 public static "compare"(charSequence0: charseq, charSequence1: charseq): integer
 public "compareTo"(stringBuffer0: $StringBuffer$$Type): integer
+public "delete"(int0: integer, int1: integer): $StringBuffer
 public "deleteCharAt"(int0: integer): $StringBuffer
+public "insert"(int0: integer, object1: any): $StringBuffer
 public "isEmpty"(): boolean
+public "replace"(int0: integer, int1: integer, string2: string): $StringBuffer
 public "reverse"(): $StringBuffer
 get "empty"(): boolean
 }
@@ -534,8 +993,8 @@ public "getDeclaredAnnotationsByType"<T extends $Annotation>(class0: $Class$$Typ
 /** @deprecated */
 public "isAccessible"(): boolean
 public "isAnnotationPresent"(class0: $Class$$Type<$Annotation$$Type>): boolean
-public "setAccessible"(boolean0: boolean): void
 public static "setAccessible"(accessibleObject0s: $AccessibleObject$$Type[], boolean1: boolean): void
+public "setAccessible"(boolean0: boolean): void
 public "trySetAccessible"(): boolean
 get "annotations"(): $Annotation[]
 get "declaredAnnotations"(): $Annotation[]
@@ -547,7 +1006,9 @@ export type $AccessibleObject$$Type = ($AccessibleObject);
 }
 
 declare module "java.lang.reflect.Member" {
+import { $Set } from "java.util.Set"
 import { $Class } from "java.lang.Class"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
 
 /**
  * This class is not allowed By KubeJS!
@@ -555,6 +1016,7 @@ import { $Class } from "java.lang.Class"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export interface $Member {
+"accessFlags"(): $Set<$AccessFlag>
 "getDeclaringClass"(): $Class<any>
 "getModifiers"(): integer
 "getName"(): string
@@ -584,7 +1046,9 @@ import { $Type } from "java.lang.reflect.Type"
 import { $Member } from "java.lang.reflect.Member"
 import { $AnnotatedType } from "java.lang.reflect.AnnotatedType"
 import { $Annotation, $Annotation$$Type } from "java.lang.annotation.Annotation"
+import { $Set } from "java.util.Set"
 import { $Class, $Class$$Type } from "java.lang.Class"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
 
 /**
  * This class is not allowed By KubeJS!
@@ -592,6 +1056,7 @@ import { $Class, $Class$$Type } from "java.lang.Class"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $Field extends $AccessibleObject implements $Member {
+public "accessFlags"(): $Set<$AccessFlag>
 public "get"(object0: any): any
 public "getAnnotatedType"(): $AnnotatedType
 public "getAnnotation"<T extends $Annotation>(class0: $Class$$Type<T>): T
@@ -665,6 +1130,75 @@ public "resolveAndBind"(moduleFinder0: $ModuleFinder$$Type, moduleFinder1: $Modu
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $Configuration$$Type = ($Configuration);
+}
+
+declare module "java.lang.foreign.Arena" {
+import { $ValueLayout$OfLong$$Type } from "java.lang.foreign.ValueLayout$OfLong"
+import { $ValueLayout$OfChar$$Type } from "java.lang.foreign.ValueLayout$OfChar"
+import { $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $MemorySegment$Scope } from "java.lang.foreign.MemorySegment$Scope"
+import { $ValueLayout$OfInt$$Type } from "java.lang.foreign.ValueLayout$OfInt"
+import { $AddressLayout$$Type } from "java.lang.foreign.AddressLayout"
+import { $ValueLayout$OfFloat$$Type } from "java.lang.foreign.ValueLayout$OfFloat"
+import { $AutoCloseable } from "java.lang.AutoCloseable"
+import { $ValueLayout$$Type } from "java.lang.foreign.ValueLayout"
+import { $ValueLayout$OfByte$$Type } from "java.lang.foreign.ValueLayout$OfByte"
+import { $Charset$$Type } from "java.nio.charset.Charset"
+import { $MemorySegment, $MemorySegment$$Type } from "java.lang.foreign.MemorySegment"
+import { $ValueLayout$OfShort$$Type } from "java.lang.foreign.ValueLayout$OfShort"
+import { $SegmentAllocator } from "java.lang.foreign.SegmentAllocator"
+import { $ValueLayout$OfDouble$$Type } from "java.lang.foreign.ValueLayout$OfDouble"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $Arena extends $SegmentAllocator, $AutoCloseable {
+"allocate"(long0: long, long1: long): $MemorySegment
+"allocate"(memoryLayout0: $MemoryLayout$$Type): $MemorySegment
+"allocate"(memoryLayout0: $MemoryLayout$$Type, long1: long): $MemorySegment
+"allocate"(long0: long): $MemorySegment
+"allocateFrom"(ofChar0: $ValueLayout$OfChar$$Type, ...char1s: character[]): $MemorySegment
+"allocateFrom"(ofInt0: $ValueLayout$OfInt$$Type, ...int1s: integer[]): $MemorySegment
+"allocateFrom"(ofShort0: $ValueLayout$OfShort$$Type, ...short1s: short[]): $MemorySegment
+"allocateFrom"(ofByte0: $ValueLayout$OfByte$$Type, ...byte1s: byte[]): $MemorySegment
+"allocateFrom"(ofFloat0: $ValueLayout$OfFloat$$Type, ...float1s: float[]): $MemorySegment
+"allocateFrom"(ofLong0: $ValueLayout$OfLong$$Type, ...long1s: long[]): $MemorySegment
+"allocateFrom"(ofDouble0: $ValueLayout$OfDouble$$Type, ...double1s: double[]): $MemorySegment
+"allocateFrom"(ofInt0: $ValueLayout$OfInt$$Type, int1: integer): $MemorySegment
+"allocateFrom"(ofShort0: $ValueLayout$OfShort$$Type, short1: short): $MemorySegment
+"allocateFrom"(ofChar0: $ValueLayout$OfChar$$Type, char1: character): $MemorySegment
+"allocateFrom"(ofByte0: $ValueLayout$OfByte$$Type, byte1: byte): $MemorySegment
+"allocateFrom"(string0: string, charset1: $Charset$$Type): $MemorySegment
+"allocateFrom"(string0: string): $MemorySegment
+"allocateFrom"(valueLayout0: $ValueLayout$$Type, memorySegment1: $MemorySegment$$Type, valueLayout2: $ValueLayout$$Type, long3: long, long4: long): $MemorySegment
+"allocateFrom"(addressLayout0: $AddressLayout$$Type, memorySegment1: $MemorySegment$$Type): $MemorySegment
+"allocateFrom"(ofDouble0: $ValueLayout$OfDouble$$Type, double1: double): $MemorySegment
+"allocateFrom"(ofLong0: $ValueLayout$OfLong$$Type, long1: long): $MemorySegment
+"allocateFrom"(ofFloat0: $ValueLayout$OfFloat$$Type, float1: float): $MemorySegment
+"close"(): void
+"scope"(): $MemorySegment$Scope
+}
+
+export namespace $Arena {
+function global(): $Arena
+function ofAuto(): $Arena
+function ofConfined(): $Arena
+function ofShared(): $Arena
+function prefixAllocator(memorySegment0: $MemorySegment$$Type): $SegmentAllocator
+function slicingAllocator(memorySegment0: $MemorySegment$$Type): $SegmentAllocator
+}
+export abstract class $Arena$$Static implements $Arena {
+static "global"(): $Arena
+static "ofAuto"(): $Arena
+static "ofConfined"(): $Arena
+static "ofShared"(): $Arena
+static "prefixAllocator"(memorySegment0: $MemorySegment$$Type): $SegmentAllocator
+static "slicingAllocator"(memorySegment0: $MemorySegment$$Type): $SegmentAllocator
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Arena$$Type = ($Arena);
 }
 
 declare module "java.lang.module.ModuleReference" {
@@ -744,6 +1278,55 @@ export abstract class $Cloneable$$Static implements $Cloneable {
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $Cloneable$$Type = ($Cloneable);
+}
+
+declare module "java.lang.reflect.ClassFileFormatVersion" {
+import { $Runtime$Version, $Runtime$Version$$Type } from "java.lang.Runtime$Version"
+import { $Enum } from "java.lang.Enum"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export class $ClassFileFormatVersion extends $Enum<$ClassFileFormatVersion> {
+static readonly "RELEASE_0": $ClassFileFormatVersion
+static readonly "RELEASE_1": $ClassFileFormatVersion
+static readonly "RELEASE_10": $ClassFileFormatVersion
+static readonly "RELEASE_11": $ClassFileFormatVersion
+static readonly "RELEASE_12": $ClassFileFormatVersion
+static readonly "RELEASE_13": $ClassFileFormatVersion
+static readonly "RELEASE_14": $ClassFileFormatVersion
+static readonly "RELEASE_15": $ClassFileFormatVersion
+static readonly "RELEASE_16": $ClassFileFormatVersion
+static readonly "RELEASE_17": $ClassFileFormatVersion
+static readonly "RELEASE_18": $ClassFileFormatVersion
+static readonly "RELEASE_19": $ClassFileFormatVersion
+static readonly "RELEASE_2": $ClassFileFormatVersion
+static readonly "RELEASE_20": $ClassFileFormatVersion
+static readonly "RELEASE_21": $ClassFileFormatVersion
+static readonly "RELEASE_22": $ClassFileFormatVersion
+static readonly "RELEASE_23": $ClassFileFormatVersion
+static readonly "RELEASE_24": $ClassFileFormatVersion
+static readonly "RELEASE_25": $ClassFileFormatVersion
+static readonly "RELEASE_3": $ClassFileFormatVersion
+static readonly "RELEASE_4": $ClassFileFormatVersion
+static readonly "RELEASE_5": $ClassFileFormatVersion
+static readonly "RELEASE_6": $ClassFileFormatVersion
+static readonly "RELEASE_7": $ClassFileFormatVersion
+static readonly "RELEASE_8": $ClassFileFormatVersion
+static readonly "RELEASE_9": $ClassFileFormatVersion
+
+public static "fromMajor"(int0: integer): $ClassFileFormatVersion
+public static "latest"(): $ClassFileFormatVersion
+public "major"(): integer
+public "runtimeVersion"(): $Runtime$Version
+public static "valueOf"(string0: string): $ClassFileFormatVersion
+public static "valueOf"(version0: $Runtime$Version$$Type): $ClassFileFormatVersion
+public static "values"(): $ClassFileFormatVersion[]
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ClassFileFormatVersion$$Type = ($ClassFileFormatVersion | ("release_0" | "release_1" | "release_2" | "release_3" | "release_4" | "release_5" | "release_6" | "release_7" | "release_8" | "release_9" | "release_10" | "release_11" | "release_12" | "release_13" | "release_14" | "release_15" | "release_16" | "release_17" | "release_18" | "release_19" | "release_20" | "release_21" | "release_22" | "release_23" | "release_24" | "release_25"));
 }
 
 declare module "java.lang.Readable" {
@@ -836,8 +1419,8 @@ import { $Serializable } from "java.io.Serializable"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $MethodType implements $Constable, $TypeDescriptor$OfMethod<$Class<any>, $MethodType>, $Serializable {
-public "appendParameterTypes"(list0: $List$$Type<$Class$$Type<any>>): $MethodType
 public "appendParameterTypes"(...class0s: $Class$$Type<any>[]): $MethodType
+public "appendParameterTypes"(list0: $List$$Type<$Class$$Type<any>>): $MethodType
 public "changeParameterType"(int0: integer, class1: $Class$$Type<any>): $MethodType
 public "changeReturnType"(class0: $Class$$Type<any>): $MethodType
 public "describeConstable"(): $Optional<$MethodTypeDesc>
@@ -845,20 +1428,19 @@ public "descriptorString"(): string
 public "erase"(): $MethodType
 public static "fromMethodDescriptorString"(string0: string, classLoader1: $ClassLoader$$Type): $MethodType
 public "generic"(): $MethodType
-public static "genericMethodType"(int0: integer): $MethodType
 public static "genericMethodType"(int0: integer, boolean1: boolean): $MethodType
+public static "genericMethodType"(int0: integer): $MethodType
 public "hasPrimitives"(): boolean
 public "hasWrappers"(): boolean
 public "insertParameterTypes"(int0: integer, ...class1s: $Class$$Type<any>[]): $MethodType
 public "insertParameterTypes"(int0: integer, list1: $List$$Type<$Class$$Type<any>>): $MethodType
 public "lastParameterType"(): $Class<any>
-public static "methodType"(class0: $Class$$Type<any>, class1s: $Class$$Type<any>[]): $MethodType
 public static "methodType"(class0: $Class$$Type<any>, list1: $List$$Type<$Class$$Type<any>>): $MethodType
-public static "methodType"(class0: $Class$$Type<any>, class1: $Class$$Type<any>): $MethodType
-public static "methodType"(class0: $Class$$Type<any>, class1: $Class$$Type<any>, ...class2s: $Class$$Type<any>[]): $MethodType
-public static "methodType"(class0: $Class$$Type<any>, methodType1: $MethodType$$Type): $MethodType
 public static "methodType"(class0: $Class$$Type<any>): $MethodType
-public "parameterArray"(): $Class<any>[]
+public static "methodType"(class0: $Class$$Type<any>, class1: $Class$$Type<any>, ...class2s: $Class$$Type<any>[]): $MethodType
+public static "methodType"(class0: $Class$$Type<any>, class1s: $Class$$Type<any>[]): $MethodType
+public static "methodType"(class0: $Class$$Type<any>, class1: $Class$$Type<any>): $MethodType
+public static "methodType"(class0: $Class$$Type<any>, methodType1: $MethodType$$Type): $MethodType
 public "parameterCount"(): integer
 public "parameterList"(): $List<$Class<any>>
 public "parameterType"(int0: integer): $Class<any>
@@ -918,6 +1500,86 @@ static "ofSystem"(): $ModuleFinder
 export type $ModuleFinder$$Type = ($ModuleFinder);
 }
 
+declare module "java.lang.foreign.GroupLayout" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $List } from "java.util.List"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $Optional } from "java.util.Optional"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $GroupLayout extends $MemoryLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"memberLayouts"(): $List<$MemoryLayout>
+"name"(): $Optional<string>
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"withByteAlignment"(long0: long): $GroupLayout
+"withoutName"(): $GroupLayout
+}
+
+export namespace $GroupLayout {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $GroupLayout$$Static implements $GroupLayout {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $GroupLayout$$Type = ($GroupLayout);
+}
+
+declare module "java.lang.Thread$Builder$OfVirtual" {
+import { $Thread } from "java.lang.Thread"
+import { $Thread$Builder } from "java.lang.Thread$Builder"
+import { $ThreadFactory } from "java.util.concurrent.ThreadFactory"
+import { $Runnable$$Type } from "java.lang.Runnable"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $Thread$Builder$OfVirtual extends $Thread$Builder {
+"factory"(): $ThreadFactory
+"inheritInheritableThreadLocals"(boolean0: boolean): $Thread$Builder$OfVirtual
+"start"(runnable0: $Runnable$$Type): $Thread
+"unstarted"(runnable0: $Runnable$$Type): $Thread
+}
+
+export namespace $Thread$Builder$OfVirtual {
+const probejs$$marker: never
+}
+export abstract class $Thread$Builder$OfVirtual$$Static implements $Thread$Builder$OfVirtual {
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Thread$Builder$OfVirtual$$Type = ($Thread$Builder$OfVirtual);
+}
+
 declare module "java.lang.ModuleLayer" {
 import { $ModuleLayer$Controller } from "java.lang.ModuleLayer$Controller"
 import { $List, $List$$Type } from "java.util.List"
@@ -936,10 +1598,10 @@ import { $Function$$Type } from "java.util.function.Function"
 export class $ModuleLayer {
 public static "boot"(): $ModuleLayer
 public "configuration"(): $Configuration
-public "defineModules"(configuration0: $Configuration$$Type, function1: $Function$$Type<string, $ClassLoader>): $ModuleLayer
 public static "defineModules"(configuration0: $Configuration$$Type, list1: $List$$Type<$ModuleLayer$$Type>, function2: $Function$$Type<string, $ClassLoader>): $ModuleLayer$Controller
-public static "defineModulesWithManyLoaders"(configuration0: $Configuration$$Type, list1: $List$$Type<$ModuleLayer$$Type>, classLoader2: $ClassLoader$$Type): $ModuleLayer$Controller
+public "defineModules"(configuration0: $Configuration$$Type, function1: $Function$$Type<string, $ClassLoader>): $ModuleLayer
 public "defineModulesWithManyLoaders"(configuration0: $Configuration$$Type, classLoader1: $ClassLoader$$Type): $ModuleLayer
+public static "defineModulesWithManyLoaders"(configuration0: $Configuration$$Type, list1: $List$$Type<$ModuleLayer$$Type>, classLoader2: $ClassLoader$$Type): $ModuleLayer$Controller
 public static "defineModulesWithOneLoader"(configuration0: $Configuration$$Type, list1: $List$$Type<$ModuleLayer$$Type>, classLoader2: $ClassLoader$$Type): $ModuleLayer$Controller
 public "defineModulesWithOneLoader"(configuration0: $Configuration$$Type, classLoader1: $ClassLoader$$Type): $ModuleLayer
 public static "empty"(): $ModuleLayer
@@ -950,6 +1612,61 @@ public "parents"(): $List<$ModuleLayer>
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ModuleLayer$$Type = ($ModuleLayer);
+}
+
+declare module "java.lang.foreign.ValueLayout$OfInt" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $ValueLayout } from "java.lang.foreign.ValueLayout"
+import { $ByteOrder } from "java.nio.ByteOrder"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $ValueLayout$OfInt extends $ValueLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $ValueLayout$OfInt {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $ValueLayout$OfInt$$Static implements $ValueLayout$OfInt {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ValueLayout$OfInt$$Type = ($ValueLayout$OfInt);
 }
 
 declare module "java.lang.reflect.GenericDeclaration" {
@@ -987,15 +1704,18 @@ export type $GenericDeclaration$$Type = ($GenericDeclaration);
 }
 
 declare module "java.lang.Class" {
+import { $URL } from "java.net.URL"
+import { $TypeDescriptor$OfField } from "java.lang.invoke.TypeDescriptor$OfField"
+import { $Constructor } from "java.lang.reflect.Constructor"
+import { $Method } from "java.lang.reflect.Method"
 import { $GenericDeclaration } from "java.lang.reflect.GenericDeclaration"
 import { $Package } from "java.lang.Package"
-import { $URL } from "java.net.URL"
 import { $TypeVariable } from "java.lang.reflect.TypeVariable"
 import { $AnnotatedType } from "java.lang.reflect.AnnotatedType"
+import { $Set } from "java.util.Set"
 import { JClass$$Type } from "zzzank.probejs.generated.JClass"
-import { $TypeDescriptor$OfField } from "java.lang.invoke.TypeDescriptor$OfField"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
 import { $Field } from "java.lang.reflect.Field"
-import { $Constructor } from "java.lang.reflect.Constructor"
 import { $Serializable } from "java.io.Serializable"
 import { $RecordComponent } from "java.lang.reflect.RecordComponent"
 import { $Constable } from "java.lang.constant.Constable"
@@ -1006,7 +1726,6 @@ import { $ProtectionDomain } from "java.security.ProtectionDomain"
 import { $Annotation, $Annotation$$Type } from "java.lang.annotation.Annotation"
 import { $Optional } from "java.util.Optional"
 import { $ClassLoader, $ClassLoader$$Type } from "java.lang.ClassLoader"
-import { $Method } from "java.lang.reflect.Method"
 import { $InputStream } from "java.io.InputStream"
 import { $AnnotatedElement } from "java.lang.reflect.AnnotatedElement"
 
@@ -1016,15 +1735,18 @@ import { $AnnotatedElement } from "java.lang.reflect.AnnotatedElement"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $Class<T = any> implements $Serializable, $GenericDeclaration, $Type, $AnnotatedElement, $TypeDescriptor$OfField<$Class<any>>, $Constable {
+public "accessFlags"(): $Set<$AccessFlag>
+public "arrayType"(): $Class<any>
 public "asSubclass"<U>(class0: $Class$$Type<U>): $Class<U>
 public "cast"(object0: any): T
 public "componentType"(): $Class<any>
 public "describeConstable"(): $Optional<$ClassDesc>
 public "descriptorString"(): string
 public "desiredAssertionStatus"(): boolean
-public static "forName"(string0: string, boolean1: boolean, classLoader2: $ClassLoader$$Type): $Class<any>
-public static "forName"(string0: string): $Class<any>
 public static "forName"(module0: $Module$$Type, string1: string): $Class<any>
+public static "forName"(string0: string): $Class<any>
+public static "forName"(string0: string, boolean1: boolean, classLoader2: $ClassLoader$$Type): $Class<any>
+public static "forPrimitiveName"(string0: string): $Class<any>
 public "getAnnotatedInterfaces"(): $AnnotatedType[]
 public "getAnnotatedSuperclass"(): $AnnotatedType
 public "getAnnotation"<A extends $Annotation>(class0: $Class$$Type<A>): A
@@ -1178,6 +1900,57 @@ import { $Iterator$$Type } from "java.util.Iterator"
 export type $Iterable$$Type<T = any> = ($Iterable<T> | T[] | (() => $Iterator$$Type<T>));
 }
 
+declare module "java.lang.foreign.MemoryLayout" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $MemoryLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"withByteAlignment"(long0: long): $MemoryLayout
+"withName"(string0: string): $MemoryLayout
+"withoutName"(): $MemoryLayout
+}
+
+export namespace $MemoryLayout {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $MemoryLayout$$Static implements $MemoryLayout {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $MemoryLayout$$Type = ($MemoryLayout);
+}
+
 declare module "java.lang.ref.Reference" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /**
@@ -1205,6 +1978,7 @@ import { $ModuleDescriptor$Modifier, $ModuleDescriptor$Modifier$$Type } from "ja
 import { $ModuleDescriptor$Version } from "java.lang.module.ModuleDescriptor$Version"
 import { $Set, $Set$$Type } from "java.util.Set"
 import { $ModuleDescriptor$Builder } from "java.lang.module.ModuleDescriptor$Builder"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
 import { $Supplier$$Type } from "java.util.function.Supplier"
 import { $ByteBuffer$$Type } from "java.nio.ByteBuffer"
 import { $Optional } from "java.util.Optional"
@@ -1220,6 +1994,7 @@ import { $InputStream$$Type } from "java.io.InputStream"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $ModuleDescriptor implements $Comparable<$ModuleDescriptor> {
+public "accessFlags"(): $Set<$AccessFlag>
 public "compareTo"(moduleDescriptor0: $ModuleDescriptor$$Type): integer
 public "exports"(): $Set<$ModuleDescriptor$Exports>
 public "isAutomatic"(): boolean
@@ -1235,10 +2010,10 @@ public "opens"(): $Set<$ModuleDescriptor$Opens>
 public "packages"(): $Set<string>
 public "provides"(): $Set<$ModuleDescriptor$Provides>
 public "rawVersion"(): $Optional<string>
-public static "read"(inputStream0: $InputStream$$Type): $ModuleDescriptor
 public static "read"(inputStream0: $InputStream$$Type, supplier1: $Supplier$$Type<$Set<string>>): $ModuleDescriptor
-public static "read"(byteBuffer0: $ByteBuffer$$Type): $ModuleDescriptor
 public static "read"(byteBuffer0: $ByteBuffer$$Type, supplier1: $Supplier$$Type<$Set<string>>): $ModuleDescriptor
+public static "read"(inputStream0: $InputStream$$Type): $ModuleDescriptor
+public static "read"(byteBuffer0: $ByteBuffer$$Type): $ModuleDescriptor
 public "requires"(): $Set<$ModuleDescriptor$Requires>
 public "toNameAndVersion"(): string
 public "uses"(): $Set<string>
@@ -1272,8 +2047,9 @@ export type $Type$$Type = ($Type);
 }
 
 declare module "java.lang.constant.MethodTypeDesc" {
-import { $List } from "java.util.List"
+import { $List, $List$$Type } from "java.util.List"
 import { $MethodHandles$Lookup$$Type } from "java.lang.invoke.MethodHandles$Lookup"
+import { $MethodType } from "java.lang.invoke.MethodType"
 import { $ConstantDesc } from "java.lang.constant.ConstantDesc"
 import { $ClassDesc, $ClassDesc$$Type } from "java.lang.constant.ClassDesc"
 import { $TypeDescriptor$OfMethod } from "java.lang.invoke.TypeDescriptor$OfMethod"
@@ -1290,18 +2066,23 @@ export interface $MethodTypeDesc extends $ConstantDesc, $TypeDescriptor$OfMethod
 "displayDescriptor"(): string
 "equals"(object0: any): boolean
 "insertParameterTypes"(int0: integer, ...classDesc1s: $ClassDesc$$Type[]): $MethodTypeDesc
+"parameterArray"(): $ClassDesc[]
 "parameterCount"(): integer
 "parameterList"(): $List<$ClassDesc>
-"resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): any
+"resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): $MethodType
 "returnType"(): $ClassDesc
 }
 
 export namespace $MethodTypeDesc {
 function of(classDesc0: $ClassDesc$$Type, ...classDesc1s: $ClassDesc$$Type[]): $MethodTypeDesc
+function of(classDesc0: $ClassDesc$$Type, list1: $List$$Type<$ClassDesc$$Type>): $MethodTypeDesc
+function of(classDesc0: $ClassDesc$$Type): $MethodTypeDesc
 function ofDescriptor(string0: string): $MethodTypeDesc
 }
 export abstract class $MethodTypeDesc$$Static implements $MethodTypeDesc {
 static "of"(classDesc0: $ClassDesc$$Type, ...classDesc1s: $ClassDesc$$Type[]): $MethodTypeDesc
+static "of"(classDesc0: $ClassDesc$$Type, list1: $List$$Type<$ClassDesc$$Type>): $MethodTypeDesc
+static "of"(classDesc0: $ClassDesc$$Type): $MethodTypeDesc
 static "ofDescriptor"(string0: string): $MethodTypeDesc
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -1402,20 +2183,18 @@ import { $Thread$$Type } from "java.lang.Thread"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $ThreadGroup implements $Thread$UncaughtExceptionHandler {
-constructor(string0: string)
 constructor(threadGroup0: $ThreadGroup$$Type, string1: string)
+constructor(string0: string)
 
 public "activeCount"(): integer
 public "activeGroupCount"(): integer
-/** @deprecated */
-public "allowThreadSuspension"(boolean0: boolean): boolean
 /** @deprecated */
 public "checkAccess"(): void
 /** @deprecated */
 public "destroy"(): void
 public "enumerate"(threadGroup0s: $ThreadGroup$$Type[], boolean1: boolean): integer
-public "enumerate"(thread0s: $Thread$$Type[], boolean1: boolean): integer
 public "enumerate"(threadGroup0s: $ThreadGroup$$Type[]): integer
+public "enumerate"(thread0s: $Thread$$Type[], boolean1: boolean): integer
 public "enumerate"(thread0s: $Thread$$Type[]): integer
 public "getMaxPriority"(): integer
 public "getName"(): string
@@ -1428,14 +2207,8 @@ public "isDestroyed"(): boolean
 public "list"(): void
 public "parentOf"(threadGroup0: $ThreadGroup$$Type): boolean
 /** @deprecated */
-public "resume"(): void
-/** @deprecated */
 public "setDaemon"(boolean0: boolean): void
 public "setMaxPriority"(int0: integer): void
-/** @deprecated */
-public "stop"(): void
-/** @deprecated */
-public "suspend"(): void
 public "uncaughtException"(thread0: $Thread$$Type, throwable1: $Throwable$$Type): void
 get "maxPriority"(): integer
 get "name"(): string
@@ -1449,9 +2222,9 @@ set "maxPriority"(value: integer)
 export type $ThreadGroup$$Type = ($ThreadGroup);
 }
 
-declare module "java.lang.module.ModuleDescriptor$Exports" {
-import { $ModuleDescriptor$Exports$Modifier } from "java.lang.module.ModuleDescriptor$Exports$Modifier"
-import { $Set } from "java.util.Set"
+declare module "java.lang.Runtime$Version" {
+import { $List } from "java.util.List"
+import { $Optional } from "java.util.Optional"
 import { $Comparable } from "java.lang.Comparable"
 
 /**
@@ -1459,7 +2232,43 @@ import { $Comparable } from "java.lang.Comparable"
  * You should not load the class, or KubeJS will throw an error.
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
+export class $Runtime$Version implements $Comparable<$Runtime$Version> {
+public "build"(): $Optional<integer>
+public "compareTo"(version0: $Runtime$Version$$Type): integer
+public "compareToIgnoreOptional"(version0: $Runtime$Version$$Type): integer
+public "equalsIgnoreOptional"(object0: any): boolean
+public "feature"(): integer
+public "interim"(): integer
+/** @deprecated */
+public "major"(): integer
+/** @deprecated */
+public "minor"(): integer
+public "optional"(): $Optional<string>
+public static "parse"(string0: string): $Runtime$Version
+public "patch"(): integer
+public "pre"(): $Optional<string>
+/** @deprecated */
+public "security"(): integer
+public "update"(): integer
+public "version"(): $List<integer>
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Runtime$Version$$Type = ($Runtime$Version);
+}
+
+declare module "java.lang.module.ModuleDescriptor$Exports" {
+import { $ModuleDescriptor$Exports$Modifier } from "java.lang.module.ModuleDescriptor$Exports$Modifier"
+import { $Set } from "java.util.Set"
+import { $Comparable } from "java.lang.Comparable"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
 export class $ModuleDescriptor$Exports implements $Comparable<$ModuleDescriptor$Exports> {
+public "accessFlags"(): $Set<$AccessFlag>
 public "compareTo"(exports0: $ModuleDescriptor$Exports$$Type): integer
 public "isQualified"(): boolean
 public "modifiers"(): $Set<$ModuleDescriptor$Exports$Modifier>
@@ -1508,25 +2317,27 @@ public "delete"(int0: integer, int1: integer): $AbstractStringBuilder
 public "deleteCharAt"(int0: integer): $AbstractStringBuilder
 public "ensureCapacity"(int0: integer): void
 public "getChars"(int0: integer, int1: integer, char2s: character[], int3: integer): void
-public "indexOf"(string0: string): integer
 public "indexOf"(string0: string, int1: integer): integer
+public "indexOf"(string0: string): integer
+public "insert"(int0: integer, boolean1: boolean): $AbstractStringBuilder
+public "insert"(int0: integer, charSequence1: charseq, int2: integer, int3: integer): $AbstractStringBuilder
 public "insert"(int0: integer, string1: string): $AbstractStringBuilder
-public "insert"(int0: integer, charSequence1: charseq): $AbstractStringBuilder
-public "insert"(int0: integer, char1s: character[]): $AbstractStringBuilder
 public "insert"(int0: integer, object1: any): $AbstractStringBuilder
 public "insert"(int0: integer, char1s: character[], int2: integer, int3: integer): $AbstractStringBuilder
-public "insert"(int0: integer, boolean1: boolean): $AbstractStringBuilder
+public "insert"(int0: integer, charSequence1: charseq): $AbstractStringBuilder
 public "insert"(int0: integer, float1: float): $AbstractStringBuilder
 public "insert"(int0: integer, double1: double): $AbstractStringBuilder
 public "insert"(int0: integer, long1: long): $AbstractStringBuilder
-public "insert"(int0: integer, charSequence1: charseq, int2: integer, int3: integer): $AbstractStringBuilder
+public "insert"(int0: integer, char1s: character[]): $AbstractStringBuilder
 public "insert"(int0: integer, int1: integer): $AbstractStringBuilder
 public "insert"(int0: integer, char1: character): $AbstractStringBuilder
 public "isEmpty"(): boolean
-public "lastIndexOf"(string0: string): integer
 public "lastIndexOf"(string0: string, int1: integer): integer
+public "lastIndexOf"(string0: string): integer
 public "length"(): integer
 public "offsetByCodePoints"(int0: integer, int1: integer): integer
+public "repeat"(int0: integer, int1: integer): $AbstractStringBuilder
+public "repeat"(charSequence0: charseq, int1: integer): $AbstractStringBuilder
 public "replace"(int0: integer, int1: integer, string2: string): $AbstractStringBuilder
 public "reverse"(): $AbstractStringBuilder
 public "setCharAt"(int0: integer, char1: character): void
@@ -1539,6 +2350,112 @@ get "empty"(): boolean
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $AbstractStringBuilder$$Type = ($AbstractStringBuilder);
+}
+
+declare module "java.lang.foreign.ValueLayout$OfLong" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $ValueLayout } from "java.lang.foreign.ValueLayout"
+import { $ByteOrder } from "java.nio.ByteOrder"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $ValueLayout$OfLong extends $ValueLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $ValueLayout$OfLong {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $ValueLayout$OfLong$$Static implements $ValueLayout$OfLong {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ValueLayout$OfLong$$Type = ($ValueLayout$OfLong);
+}
+
+declare module "java.lang.foreign.StructLayout" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $List } from "java.util.List"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $GroupLayout } from "java.lang.foreign.GroupLayout"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $Optional } from "java.util.Optional"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $StructLayout extends $GroupLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"memberLayouts"(): $List<$MemoryLayout>
+"name"(): $Optional<string>
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $StructLayout {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $StructLayout$$Static implements $StructLayout {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $StructLayout$$Type = ($StructLayout);
 }
 
 declare module "java.lang.constant.DynamicConstantDesc" {
@@ -1567,6 +2484,36 @@ public "resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): T
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $DynamicConstantDesc$$Type<T = any> = ($DynamicConstantDesc<T>);
+}
+
+declare module "java.lang.Thread$Builder" {
+import { $Thread$UncaughtExceptionHandler$$Type } from "java.lang.Thread$UncaughtExceptionHandler"
+import { $Thread } from "java.lang.Thread"
+import { $ThreadFactory } from "java.util.concurrent.ThreadFactory"
+import { $Runnable$$Type } from "java.lang.Runnable"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $Thread$Builder {
+"factory"(): $ThreadFactory
+"inheritInheritableThreadLocals"(boolean0: boolean): $Thread$Builder
+"name"(string0: string): $Thread$Builder
+"name"(string0: string, long1: long): $Thread$Builder
+"start"(runnable0: $Runnable$$Type): $Thread
+"uncaughtExceptionHandler"(uncaughtExceptionHandler0: $Thread$UncaughtExceptionHandler$$Type): $Thread$Builder
+"unstarted"(runnable0: $Runnable$$Type): $Thread
+}
+
+export namespace $Thread$Builder {
+const probejs$$marker: never
+}
+export abstract class $Thread$Builder$$Static implements $Thread$Builder {
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Thread$Builder$$Type = ($Thread$Builder);
 }
 
 declare module "java.lang.module.ModuleReader" {
@@ -1604,6 +2551,55 @@ declare module "java.lang.AutoCloseable" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $AutoCloseable$$Type = ($AutoCloseable | (() => void));
+}
+
+declare module "java.lang.reflect.AccessFlag" {
+import { $AccessFlag$Location, $AccessFlag$Location$$Type } from "java.lang.reflect.AccessFlag$Location"
+import { $Enum } from "java.lang.Enum"
+import { $ClassFileFormatVersion$$Type } from "java.lang.reflect.ClassFileFormatVersion"
+import { $Set } from "java.util.Set"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export class $AccessFlag extends $Enum<$AccessFlag> {
+static readonly "ABSTRACT": $AccessFlag
+static readonly "ANNOTATION": $AccessFlag
+static readonly "BRIDGE": $AccessFlag
+static readonly "ENUM": $AccessFlag
+static readonly "FINAL": $AccessFlag
+static readonly "INTERFACE": $AccessFlag
+static readonly "MANDATED": $AccessFlag
+static readonly "MODULE": $AccessFlag
+static readonly "NATIVE": $AccessFlag
+static readonly "OPEN": $AccessFlag
+static readonly "PRIVATE": $AccessFlag
+static readonly "PROTECTED": $AccessFlag
+static readonly "PUBLIC": $AccessFlag
+static readonly "STATIC": $AccessFlag
+static readonly "STATIC_PHASE": $AccessFlag
+static readonly "STRICT": $AccessFlag
+static readonly "SUPER": $AccessFlag
+static readonly "SYNCHRONIZED": $AccessFlag
+static readonly "SYNTHETIC": $AccessFlag
+static readonly "TRANSIENT": $AccessFlag
+static readonly "TRANSITIVE": $AccessFlag
+static readonly "VARARGS": $AccessFlag
+static readonly "VOLATILE": $AccessFlag
+
+public "locations"(classFileFormatVersion0: $ClassFileFormatVersion$$Type): $Set<$AccessFlag$Location>
+public "locations"(): $Set<$AccessFlag$Location>
+public "mask"(): integer
+public static "maskToAccessFlags"(int0: integer, location1: $AccessFlag$Location$$Type): $Set<$AccessFlag>
+public static "maskToAccessFlags"(int0: integer, location1: $AccessFlag$Location$$Type, classFileFormatVersion2: $ClassFileFormatVersion$$Type): $Set<$AccessFlag>
+public "sourceModifier"(): boolean
+public static "valueOf"(string0: string): $AccessFlag
+public static "values"(): $AccessFlag[]
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $AccessFlag$$Type = ($AccessFlag | ("public" | "private" | "protected" | "static" | "final" | "super" | "open" | "transitive" | "synchronized" | "static_phase" | "volatile" | "bridge" | "transient" | "varargs" | "native" | "interface" | "abstract" | "strict" | "synthetic" | "annotation" | "enum" | "mandated" | "module"));
 }
 
 declare module "java.lang.StringBuilder" {
@@ -1655,9 +2651,9 @@ static readonly "VIRTUAL": $DirectMethodHandleDesc$Kind
 readonly "isInterface": boolean
 readonly "refKind": integer
 
+public static "valueOf"(int0: integer): $DirectMethodHandleDesc$Kind
 public static "valueOf"(int0: integer, boolean1: boolean): $DirectMethodHandleDesc$Kind
 public static "valueOf"(string0: string): $DirectMethodHandleDesc$Kind
-public static "valueOf"(int0: integer): $DirectMethodHandleDesc$Kind
 public static "values"(): $DirectMethodHandleDesc$Kind[]
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -1680,6 +2676,61 @@ public "service"(): string
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ModuleDescriptor$Provides$$Type = ($ModuleDescriptor$Provides);
+}
+
+declare module "java.lang.foreign.ValueLayout$OfShort" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $ValueLayout } from "java.lang.foreign.ValueLayout"
+import { $ByteOrder } from "java.nio.ByteOrder"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $ValueLayout$OfShort extends $ValueLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $ValueLayout$OfShort {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $ValueLayout$OfShort$$Static implements $ValueLayout$OfShort {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ValueLayout$OfShort$$Type = ($ValueLayout$OfShort);
 }
 
 declare module "java.lang.Enum" {
@@ -1706,6 +2757,57 @@ get "declaringClass"(): $Class<E>
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $Enum$$Type<E extends $Enum<E> = $Enum<E>> = ($Enum<E>);
+}
+
+declare module "java.lang.foreign.UnionLayout" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $List } from "java.util.List"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $GroupLayout } from "java.lang.foreign.GroupLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $Optional } from "java.util.Optional"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $UnionLayout extends $GroupLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"memberLayouts"(): $List<$MemoryLayout>
+"name"(): $Optional<string>
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $UnionLayout {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $UnionLayout$$Static implements $UnionLayout {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $UnionLayout$$Type = ($UnionLayout);
 }
 
 declare module "java.lang.reflect.AnnotatedType" {
@@ -1747,6 +2849,7 @@ export type $AnnotatedType$$Type = ($AnnotatedType);
 declare module "java.lang.constant.ClassDesc" {
 import { $MethodHandles$Lookup$$Type } from "java.lang.invoke.MethodHandles$Lookup"
 import { $ConstantDesc } from "java.lang.constant.ConstantDesc"
+import { $Class } from "java.lang.Class"
 import { $TypeDescriptor$OfField } from "java.lang.invoke.TypeDescriptor$OfField"
 
 /**
@@ -1755,6 +2858,7 @@ import { $TypeDescriptor$OfField } from "java.lang.invoke.TypeDescriptor$OfField
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export interface $ClassDesc extends $ConstantDesc, $TypeDescriptor$OfField<$ClassDesc> {
+"arrayType"(): $ClassDesc
 "arrayType"(int0: integer): $ClassDesc
 "componentType"(): $ClassDesc
 "descriptorString"(): string
@@ -1766,21 +2870,23 @@ export interface $ClassDesc extends $ConstantDesc, $TypeDescriptor$OfField<$Clas
 "nested"(string0: string): $ClassDesc
 "nested"(string0: string, ...string1s: string[]): $ClassDesc
 "packageName"(): string
-"resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): any
+"resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): $Class<any>
 get "array"(): boolean
 get "classOrInterface"(): boolean
 get "primitive"(): boolean
 }
 
 export namespace $ClassDesc {
-function of(string0: string, string1: string): $ClassDesc
 function of(string0: string): $ClassDesc
+function of(string0: string, string1: string): $ClassDesc
 function ofDescriptor(string0: string): $ClassDesc
+function ofInternalName(string0: string): $ClassDesc
 }
 export abstract class $ClassDesc$$Static implements $ClassDesc {
-static "of"(string0: string, string1: string): $ClassDesc
 static "of"(string0: string): $ClassDesc
+static "of"(string0: string, string1: string): $ClassDesc
 static "ofDescriptor"(string0: string): $ClassDesc
+static "ofInternalName"(string0: string): $ClassDesc
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ClassDesc$$Type = ($ClassDesc);
@@ -1813,13 +2919,16 @@ export type $Byte$$Type = ($Byte);
 }
 
 declare module "java.lang.Thread" {
+import { $Thread$Builder$OfPlatform } from "java.lang.Thread$Builder$OfPlatform"
 import { $Thread$UncaughtExceptionHandler, $Thread$UncaughtExceptionHandler$$Type } from "java.lang.Thread$UncaughtExceptionHandler"
 import { $Thread$State } from "java.lang.Thread$State"
 import { $Map } from "java.util.Map"
+import { $Duration$$Type } from "java.time.Duration"
 import { $StackTraceElement } from "java.lang.StackTraceElement"
 import { $ThreadGroup, $ThreadGroup$$Type } from "java.lang.ThreadGroup"
 import { $ClassLoader, $ClassLoader$$Type } from "java.lang.ClassLoader"
 import { $Runnable, $Runnable$$Type } from "java.lang.Runnable"
+import { $Thread$Builder$OfVirtual } from "java.lang.Thread$Builder$OfVirtual"
 
 /**
  * This class is not allowed By KubeJS!
@@ -1831,27 +2940,26 @@ static readonly "MAX_PRIORITY": integer
 static readonly "MIN_PRIORITY": integer
 static readonly "NORM_PRIORITY": integer
 
-constructor(threadGroup0: $ThreadGroup$$Type, runnable1: $Runnable$$Type)
-constructor(string0: string)
 constructor(threadGroup0: $ThreadGroup$$Type, string1: string)
+constructor(string0: string)
+constructor(runnable0: $Runnable$$Type, string1: string)
+constructor(threadGroup0: $ThreadGroup$$Type, runnable1: $Runnable$$Type, string2: string)
 constructor()
 constructor(runnable0: $Runnable$$Type)
+constructor(threadGroup0: $ThreadGroup$$Type, runnable1: $Runnable$$Type)
 constructor(threadGroup0: $ThreadGroup$$Type, runnable1: $Runnable$$Type, string2: string, long3: long, boolean4: boolean)
 constructor(threadGroup0: $ThreadGroup$$Type, runnable1: $Runnable$$Type, string2: string, long3: long)
-constructor(threadGroup0: $ThreadGroup$$Type, runnable1: $Runnable$$Type, string2: string)
-constructor(runnable0: $Runnable$$Type, string1: string)
 
 public static "activeCount"(): integer
 /** @deprecated */
 public "checkAccess"(): void
-/** @deprecated */
-public "countStackFrames"(): integer
 public static "currentThread"(): $Thread
 public static "dumpStack"(): void
 public static "enumerate"(thread0s: $Thread$$Type[]): integer
 public static "getAllStackTraces"(): $Map<$Thread, $StackTraceElement[]>
 public "getContextClassLoader"(): $ClassLoader
 public static "getDefaultUncaughtExceptionHandler"(): $Thread$UncaughtExceptionHandler
+/** @deprecated */
 public "getId"(): long
 public "getName"(): string
 public "getPriority"(): integer
@@ -1865,12 +2973,14 @@ public static "interrupted"(): boolean
 public "isAlive"(): boolean
 public "isDaemon"(): boolean
 public "isInterrupted"(): boolean
-public "join"(long0: long): void
-public "join"(): void
+public "isVirtual"(): boolean
+public "join"(duration0: $Duration$$Type): boolean
 public "join"(long0: long, int1: integer): void
+public "join"(): void
+public "join"(long0: long): void
+public static "ofPlatform"(): $Thread$Builder$OfPlatform
+public static "ofVirtual"(): $Thread$Builder$OfVirtual
 public static "onSpinWait"(): void
-/** @deprecated */
-public "resume"(): void
 public "run"(): void
 public "setContextClassLoader"(classLoader0: $ClassLoader$$Type): void
 public "setDaemon"(boolean0: boolean): void
@@ -1880,11 +2990,12 @@ public "setPriority"(int0: integer): void
 public "setUncaughtExceptionHandler"(uncaughtExceptionHandler0: $Thread$UncaughtExceptionHandler$$Type): void
 public static "sleep"(long0: long): void
 public static "sleep"(long0: long, int1: integer): void
+public static "sleep"(duration0: $Duration$$Type): void
 public "start"(): void
+public static "startVirtualThread"(runnable0: $Runnable$$Type): $Thread
 /** @deprecated */
 public "stop"(): void
-/** @deprecated */
-public "suspend"(): void
+public "threadId"(): long
 public static "yield"(): void
 get "contextClassLoader"(): $ClassLoader
 get "id"(): long
@@ -1896,6 +3007,7 @@ get "threadGroup"(): $ThreadGroup
 get "uncaughtExceptionHandler"(): $Thread$UncaughtExceptionHandler
 get "alive"(): boolean
 get "daemon"(): boolean
+get "virtual"(): boolean
 set "contextClassLoader"(value: $ClassLoader$$Type)
 set "daemon"(value: boolean)
 set "name"(value: string)
@@ -1923,8 +3035,8 @@ export class $MethodHandle implements $Constable {
 public "asCollector"(int0: integer, class1: $Class$$Type<any>, int2: integer): $MethodHandle
 public "asCollector"(class0: $Class$$Type<any>, int1: integer): $MethodHandle
 public "asFixedArity"(): $MethodHandle
-public "asSpreader"(int0: integer, class1: $Class$$Type<any>, int2: integer): $MethodHandle
 public "asSpreader"(class0: $Class$$Type<any>, int1: integer): $MethodHandle
+public "asSpreader"(int0: integer, class1: $Class$$Type<any>, int2: integer): $MethodHandle
 public "asType"(methodType0: $MethodType$$Type): $MethodHandle
 public "asVarargsCollector"(class0: $Class$$Type<any>): $MethodHandle
 public "bindTo"(object0: any): $MethodHandle
@@ -2104,6 +3216,7 @@ export type $MethodHandleInfo$$Type = ($MethodHandleInfo);
 declare module "java.lang.module.ModuleDescriptor$Opens" {
 import { $Set } from "java.util.Set"
 import { $Comparable } from "java.lang.Comparable"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
 import { $ModuleDescriptor$Opens$Modifier } from "java.lang.module.ModuleDescriptor$Opens$Modifier"
 
 /**
@@ -2112,6 +3225,7 @@ import { $ModuleDescriptor$Opens$Modifier } from "java.lang.module.ModuleDescrip
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $ModuleDescriptor$Opens implements $Comparable<$ModuleDescriptor$Opens> {
+public "accessFlags"(): $Set<$AccessFlag>
 public "compareTo"(opens0: $ModuleDescriptor$Opens$$Type): integer
 public "isQualified"(): boolean
 public "modifiers"(): $Set<$ModuleDescriptor$Opens$Modifier>
@@ -2121,6 +3235,61 @@ get "qualified"(): boolean
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ModuleDescriptor$Opens$$Type = ($ModuleDescriptor$Opens);
+}
+
+declare module "java.lang.foreign.ValueLayout$OfChar" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $ValueLayout } from "java.lang.foreign.ValueLayout"
+import { $ByteOrder } from "java.nio.ByteOrder"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $ValueLayout$OfChar extends $ValueLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $ValueLayout$OfChar {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $ValueLayout$OfChar$$Static implements $ValueLayout$OfChar {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ValueLayout$OfChar$$Type = ($ValueLayout$OfChar);
 }
 
 declare module "java.lang.Integer" {
@@ -2149,15 +3318,15 @@ import { $ModuleDescriptor$Opens$$Type } from "java.lang.module.ModuleDescriptor
  */
 export class $ModuleDescriptor$Builder {
 public "build"(): $ModuleDescriptor
+public "exports"(set0: $Set$$Type<$ModuleDescriptor$Exports$Modifier$$Type>, string1: string): $ModuleDescriptor$Builder
+public "exports"(string0: string, set1: $Set$$Type<string>): $ModuleDescriptor$Builder
 public "exports"(string0: string): $ModuleDescriptor$Builder
 public "exports"(set0: $Set$$Type<$ModuleDescriptor$Exports$Modifier$$Type>, string1: string, set2: $Set$$Type<string>): $ModuleDescriptor$Builder
-public "exports"(string0: string, set1: $Set$$Type<string>): $ModuleDescriptor$Builder
-public "exports"(set0: $Set$$Type<$ModuleDescriptor$Exports$Modifier$$Type>, string1: string): $ModuleDescriptor$Builder
 public "exports"(exports0: $ModuleDescriptor$Exports$$Type): $ModuleDescriptor$Builder
 public "mainClass"(string0: string): $ModuleDescriptor$Builder
-public "opens"(string0: string): $ModuleDescriptor$Builder
 public "opens"(set0: $Set$$Type<$ModuleDescriptor$Opens$Modifier$$Type>, string1: string, set2: $Set$$Type<string>): $ModuleDescriptor$Builder
 public "opens"(string0: string, set1: $Set$$Type<string>): $ModuleDescriptor$Builder
+public "opens"(string0: string): $ModuleDescriptor$Builder
 public "opens"(opens0: $ModuleDescriptor$Opens$$Type): $ModuleDescriptor$Builder
 public "opens"(set0: $Set$$Type<$ModuleDescriptor$Opens$Modifier$$Type>, string1: string): $ModuleDescriptor$Builder
 public "packages"(set0: $Set$$Type<string>): $ModuleDescriptor$Builder
@@ -2265,7 +3434,9 @@ import { $TypeVariable } from "java.lang.reflect.TypeVariable"
 import { $Member } from "java.lang.reflect.Member"
 import { $AnnotatedType } from "java.lang.reflect.AnnotatedType"
 import { $Annotation, $Annotation$$Type } from "java.lang.annotation.Annotation"
+import { $Set } from "java.util.Set"
 import { $Class, $Class$$Type } from "java.lang.Class"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
 
 /**
  * This class is not allowed By KubeJS!
@@ -2273,6 +3444,7 @@ import { $Class, $Class$$Type } from "java.lang.Class"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $Executable extends $AccessibleObject implements $Member, $GenericDeclaration {
+public "accessFlags"(): $Set<$AccessFlag>
 public "getAnnotatedExceptionTypes"(): $AnnotatedType[]
 public "getAnnotatedParameterTypes"(): $AnnotatedType[]
 public "getAnnotatedReceiverType"(): $AnnotatedType
@@ -2416,6 +3588,7 @@ export class $ModuleLayer$Controller {
 public "addExports"(module0: $Module$$Type, string1: string, module2: $Module$$Type): $ModuleLayer$Controller
 public "addOpens"(module0: $Module$$Type, string1: string, module2: $Module$$Type): $ModuleLayer$Controller
 public "addReads"(module0: $Module$$Type, module1: $Module$$Type): $ModuleLayer$Controller
+public "enableNativeAccess"(module0: $Module$$Type): $ModuleLayer$Controller
 public "layer"(): $ModuleLayer
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -2452,11 +3625,12 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export class $Math {
 static readonly "E": double
 static readonly "PI": double
+static readonly "TAU": double
 
 public static "IEEEremainder"(double0: double, double1: double): double
-public static "abs"(int0: integer): integer
-public static "abs"(long0: long): long
 public static "abs"(float0: float): float
+public static "abs"(long0: long): long
+public static "abs"(int0: integer): integer
 public static "abs"(double0: double): double
 public static "absExact"(long0: long): long
 public static "absExact"(int0: integer): integer
@@ -2468,41 +3642,57 @@ public static "atan"(double0: double): double
 public static "atan2"(double0: double, double1: double): double
 public static "cbrt"(double0: double): double
 public static "ceil"(double0: double): double
-public static "copySign"(float0: float, float1: float): float
+public static "ceilDiv"(long0: long, long1: long): long
+public static "ceilDiv"(long0: long, int1: integer): long
+public static "ceilDiv"(int0: integer, int1: integer): integer
+public static "ceilDivExact"(long0: long, long1: long): long
+public static "ceilDivExact"(int0: integer, int1: integer): integer
+public static "ceilMod"(int0: integer, int1: integer): integer
+public static "ceilMod"(long0: long, long1: long): long
+public static "ceilMod"(long0: long, int1: integer): integer
+public static "clamp"(float0: float, float1: float, float2: float): float
+public static "clamp"(long0: long, int1: integer, int2: integer): integer
+public static "clamp"(double0: double, double1: double, double2: double): double
+public static "clamp"(long0: long, long1: long, long2: long): long
 public static "copySign"(double0: double, double1: double): double
+public static "copySign"(float0: float, float1: float): float
 public static "cos"(double0: double): double
 public static "cosh"(double0: double): double
-public static "decrementExact"(long0: long): long
 public static "decrementExact"(int0: integer): integer
+public static "decrementExact"(long0: long): long
+public static "divideExact"(int0: integer, int1: integer): integer
+public static "divideExact"(long0: long, long1: long): long
 public static "exp"(double0: double): double
 public static "expm1"(double0: double): double
 public static "floor"(double0: double): double
 public static "floorDiv"(long0: long, long1: long): long
 public static "floorDiv"(long0: long, int1: integer): long
 public static "floorDiv"(int0: integer, int1: integer): integer
-public static "floorMod"(long0: long, int1: integer): integer
+public static "floorDivExact"(int0: integer, int1: integer): integer
+public static "floorDivExact"(long0: long, long1: long): long
 public static "floorMod"(long0: long, long1: long): long
 public static "floorMod"(int0: integer, int1: integer): integer
+public static "floorMod"(long0: long, int1: integer): integer
 public static "fma"(double0: double, double1: double, double2: double): double
 public static "fma"(float0: float, float1: float, float2: float): float
 public static "getExponent"(float0: float): integer
 public static "getExponent"(double0: double): integer
 public static "hypot"(double0: double, double1: double): double
-public static "incrementExact"(int0: integer): integer
 public static "incrementExact"(long0: long): long
+public static "incrementExact"(int0: integer): integer
 public static "log"(double0: double): double
 public static "log10"(double0: double): double
 public static "log1p"(double0: double): double
-public static "max"(int0: integer, int1: integer): integer
-public static "max"(float0: float, float1: float): float
 public static "max"(long0: long, long1: long): long
+public static "max"(int0: integer, int1: integer): integer
 public static "max"(double0: double, double1: double): double
+public static "max"(float0: float, float1: float): float
 public static "min"(int0: integer, int1: integer): integer
-public static "min"(float0: float, float1: float): float
 public static "min"(long0: long, long1: long): long
 public static "min"(double0: double, double1: double): double
-public static "multiplyExact"(int0: integer, int1: integer): integer
+public static "min"(float0: float, float1: float): float
 public static "multiplyExact"(long0: long, long1: long): long
+public static "multiplyExact"(int0: integer, int1: integer): integer
 public static "multiplyExact"(long0: long, int1: integer): long
 public static "multiplyFull"(int0: integer, int1: integer): long
 public static "multiplyHigh"(long0: long, long1: long): long
@@ -2512,15 +3702,17 @@ public static "nextAfter"(double0: double, double1: double): double
 public static "nextAfter"(float0: float, double1: double): float
 public static "nextDown"(float0: float): float
 public static "nextDown"(double0: double): double
-public static "nextUp"(double0: double): double
 public static "nextUp"(float0: float): float
+public static "nextUp"(double0: double): double
 public static "pow"(double0: double, double1: double): double
+public static "powExact"(int0: integer, int1: integer): integer
+public static "powExact"(long0: long, int1: integer): long
 public static "random"(): double
 public static "rint"(double0: double): double
-public static "round"(float0: float): integer
 public static "round"(double0: double): long
-public static "scalb"(double0: double, int1: integer): double
+public static "round"(float0: float): integer
 public static "scalb"(float0: float, int1: integer): float
+public static "scalb"(double0: double, int1: integer): double
 public static "signum"(float0: float): float
 public static "signum"(double0: double): double
 public static "sin"(double0: double): double
@@ -2535,6 +3727,12 @@ public static "toIntExact"(long0: long): integer
 public static "toRadians"(double0: double): double
 public static "ulp"(float0: float): float
 public static "ulp"(double0: double): double
+public static "unsignedMultiplyExact"(int0: integer, int1: integer): integer
+public static "unsignedMultiplyExact"(long0: long, long1: long): long
+public static "unsignedMultiplyExact"(long0: long, int1: integer): long
+public static "unsignedMultiplyHigh"(long0: long, long1: long): long
+public static "unsignedPowExact"(long0: long, int1: integer): long
+public static "unsignedPowExact"(int0: integer, int1: integer): integer
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $Math$$Type = ($Math);
@@ -2550,6 +3748,110 @@ declare module "java.lang.Comparable" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $Comparable$$Type<T = any> = ($Comparable<T> | ((arg0: T) => integer));
+}
+
+declare module "java.lang.foreign.SegmentAllocator" {
+import { $ValueLayout$OfLong$$Type } from "java.lang.foreign.ValueLayout$OfLong"
+import { $ValueLayout$OfChar$$Type } from "java.lang.foreign.ValueLayout$OfChar"
+import { $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $ValueLayout$OfInt$$Type } from "java.lang.foreign.ValueLayout$OfInt"
+import { $AddressLayout$$Type } from "java.lang.foreign.AddressLayout"
+import { $ValueLayout$OfFloat$$Type } from "java.lang.foreign.ValueLayout$OfFloat"
+import { $ValueLayout$$Type } from "java.lang.foreign.ValueLayout"
+import { $ValueLayout$OfByte$$Type } from "java.lang.foreign.ValueLayout$OfByte"
+import { $Charset$$Type } from "java.nio.charset.Charset"
+import { $MemorySegment, $MemorySegment$$Type } from "java.lang.foreign.MemorySegment"
+import { $ValueLayout$OfShort$$Type } from "java.lang.foreign.ValueLayout$OfShort"
+import { $ValueLayout$OfDouble$$Type } from "java.lang.foreign.ValueLayout$OfDouble"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $SegmentAllocator {
+"allocate"(memoryLayout0: $MemoryLayout$$Type): $MemorySegment
+"allocate"(memoryLayout0: $MemoryLayout$$Type, long1: long): $MemorySegment
+"allocate"(long0: long): $MemorySegment
+"allocate"(long0: long, long1: long): $MemorySegment
+"allocateFrom"(ofChar0: $ValueLayout$OfChar$$Type, ...char1s: character[]): $MemorySegment
+"allocateFrom"(ofInt0: $ValueLayout$OfInt$$Type, ...int1s: integer[]): $MemorySegment
+"allocateFrom"(ofShort0: $ValueLayout$OfShort$$Type, ...short1s: short[]): $MemorySegment
+"allocateFrom"(ofByte0: $ValueLayout$OfByte$$Type, ...byte1s: byte[]): $MemorySegment
+"allocateFrom"(ofFloat0: $ValueLayout$OfFloat$$Type, ...float1s: float[]): $MemorySegment
+"allocateFrom"(ofLong0: $ValueLayout$OfLong$$Type, ...long1s: long[]): $MemorySegment
+"allocateFrom"(ofDouble0: $ValueLayout$OfDouble$$Type, ...double1s: double[]): $MemorySegment
+"allocateFrom"(ofInt0: $ValueLayout$OfInt$$Type, int1: integer): $MemorySegment
+"allocateFrom"(ofShort0: $ValueLayout$OfShort$$Type, short1: short): $MemorySegment
+"allocateFrom"(ofChar0: $ValueLayout$OfChar$$Type, char1: character): $MemorySegment
+"allocateFrom"(ofByte0: $ValueLayout$OfByte$$Type, byte1: byte): $MemorySegment
+"allocateFrom"(string0: string, charset1: $Charset$$Type): $MemorySegment
+"allocateFrom"(string0: string): $MemorySegment
+"allocateFrom"(valueLayout0: $ValueLayout$$Type, memorySegment1: $MemorySegment$$Type, valueLayout2: $ValueLayout$$Type, long3: long, long4: long): $MemorySegment
+"allocateFrom"(addressLayout0: $AddressLayout$$Type, memorySegment1: $MemorySegment$$Type): $MemorySegment
+"allocateFrom"(ofDouble0: $ValueLayout$OfDouble$$Type, double1: double): $MemorySegment
+"allocateFrom"(ofLong0: $ValueLayout$OfLong$$Type, long1: long): $MemorySegment
+"allocateFrom"(ofFloat0: $ValueLayout$OfFloat$$Type, float1: float): $MemorySegment
+}
+
+export namespace $SegmentAllocator {
+function prefixAllocator(memorySegment0: $MemorySegment$$Type): $SegmentAllocator
+function slicingAllocator(memorySegment0: $MemorySegment$$Type): $SegmentAllocator
+}
+export abstract class $SegmentAllocator$$Static implements $SegmentAllocator {
+static "prefixAllocator"(memorySegment0: $MemorySegment$$Type): $SegmentAllocator
+static "slicingAllocator"(memorySegment0: $MemorySegment$$Type): $SegmentAllocator
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $SegmentAllocator$$Type = ($SegmentAllocator | ((arg0: long, arg1: long) => $MemorySegment$$Type));
+}
+
+declare module "java.lang.foreign.PaddingLayout" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $Optional } from "java.util.Optional"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $PaddingLayout extends $MemoryLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $PaddingLayout {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $PaddingLayout$$Static implements $PaddingLayout {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $PaddingLayout$$Type = ($PaddingLayout);
 }
 
 declare module "java.lang.reflect.Constructor" {
@@ -2657,6 +3959,203 @@ export abstract class $AnnotatedTypeVariable$$Static implements $AnnotatedTypeVa
 export type $AnnotatedTypeVariable$$Type = ($AnnotatedTypeVariable);
 }
 
+declare module "java.lang.foreign.MemoryLayout$PathElement" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $MemoryLayout$PathElement {
+}
+
+export namespace $MemoryLayout$PathElement {
+function dereferenceElement(): $MemoryLayout$PathElement
+function groupElement(string0: string): $MemoryLayout$PathElement
+function groupElement(long0: long): $MemoryLayout$PathElement
+function sequenceElement(long0: long, long1: long): $MemoryLayout$PathElement
+function sequenceElement(): $MemoryLayout$PathElement
+function sequenceElement(long0: long): $MemoryLayout$PathElement
+}
+export abstract class $MemoryLayout$PathElement$$Static implements $MemoryLayout$PathElement {
+static "dereferenceElement"(): $MemoryLayout$PathElement
+static "groupElement"(string0: string): $MemoryLayout$PathElement
+static "groupElement"(long0: long): $MemoryLayout$PathElement
+static "sequenceElement"(long0: long, long1: long): $MemoryLayout$PathElement
+static "sequenceElement"(): $MemoryLayout$PathElement
+static "sequenceElement"(long0: long): $MemoryLayout$PathElement
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $MemoryLayout$PathElement$$Type = ($MemoryLayout$PathElement);
+}
+
+declare module "java.lang.reflect.AccessFlag$Location" {
+import { $Enum } from "java.lang.Enum"
+import { $ClassFileFormatVersion$$Type } from "java.lang.reflect.ClassFileFormatVersion"
+import { $Set } from "java.util.Set"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export class $AccessFlag$Location extends $Enum<$AccessFlag$Location> {
+static readonly "CLASS": $AccessFlag$Location
+static readonly "FIELD": $AccessFlag$Location
+static readonly "INNER_CLASS": $AccessFlag$Location
+static readonly "METHOD": $AccessFlag$Location
+static readonly "METHOD_PARAMETER": $AccessFlag$Location
+static readonly "MODULE": $AccessFlag$Location
+static readonly "MODULE_EXPORTS": $AccessFlag$Location
+static readonly "MODULE_OPENS": $AccessFlag$Location
+static readonly "MODULE_REQUIRES": $AccessFlag$Location
+
+public "flags"(): $Set<$AccessFlag>
+public "flags"(classFileFormatVersion0: $ClassFileFormatVersion$$Type): $Set<$AccessFlag>
+public "flagsMask"(): integer
+public "flagsMask"(classFileFormatVersion0: $ClassFileFormatVersion$$Type): integer
+public static "valueOf"(string0: string): $AccessFlag$Location
+public static "values"(): $AccessFlag$Location[]
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $AccessFlag$Location$$Type = ($AccessFlag$Location | ("class" | "field" | "method" | "inner_class" | "method_parameter" | "module" | "module_requires" | "module_exports" | "module_opens"));
+}
+
+declare module "java.lang.Thread$Builder$OfPlatform" {
+import { $Thread$UncaughtExceptionHandler$$Type } from "java.lang.Thread$UncaughtExceptionHandler"
+import { $Thread } from "java.lang.Thread"
+import { $Thread$Builder } from "java.lang.Thread$Builder"
+import { $ThreadGroup$$Type } from "java.lang.ThreadGroup"
+import { $ThreadFactory } from "java.util.concurrent.ThreadFactory"
+import { $Runnable$$Type } from "java.lang.Runnable"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $Thread$Builder$OfPlatform extends $Thread$Builder {
+"daemon"(): $Thread$Builder$OfPlatform
+"daemon"(boolean0: boolean): $Thread$Builder$OfPlatform
+"factory"(): $ThreadFactory
+"group"(threadGroup0: $ThreadGroup$$Type): $Thread$Builder$OfPlatform
+"inheritInheritableThreadLocals"(boolean0: boolean): $Thread$Builder$OfPlatform
+"priority"(int0: integer): $Thread$Builder$OfPlatform
+"stackSize"(long0: long): $Thread$Builder$OfPlatform
+"start"(runnable0: $Runnable$$Type): $Thread
+"uncaughtExceptionHandler"(uncaughtExceptionHandler0: $Thread$UncaughtExceptionHandler$$Type): $Thread$Builder$OfPlatform
+"unstarted"(runnable0: $Runnable$$Type): $Thread
+}
+
+export namespace $Thread$Builder$OfPlatform {
+const probejs$$marker: never
+}
+export abstract class $Thread$Builder$OfPlatform$$Static implements $Thread$Builder$OfPlatform {
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Thread$Builder$OfPlatform$$Type = ($Thread$Builder$OfPlatform);
+}
+
+declare module "java.lang.foreign.ValueLayout" {
+import { $ValueLayout$OfLong } from "java.lang.foreign.ValueLayout$OfLong"
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $ValueLayout$OfChar } from "java.lang.foreign.ValueLayout$OfChar"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $ValueLayout$OfInt } from "java.lang.foreign.ValueLayout$OfInt"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $AddressLayout } from "java.lang.foreign.AddressLayout"
+import { $ValueLayout$OfFloat } from "java.lang.foreign.ValueLayout$OfFloat"
+import { $ValueLayout$OfByte } from "java.lang.foreign.ValueLayout$OfByte"
+import { $ByteOrder, $ByteOrder$$Type } from "java.nio.ByteOrder"
+import { $ValueLayout$OfShort } from "java.lang.foreign.ValueLayout$OfShort"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $ValueLayout$OfDouble } from "java.lang.foreign.ValueLayout$OfDouble"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+import { $ValueLayout$OfBoolean } from "java.lang.foreign.ValueLayout$OfBoolean"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $ValueLayout extends $MemoryLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"withByteAlignment"(long0: long): $ValueLayout
+"withOrder"(byteOrder0: $ByteOrder$$Type): $ValueLayout
+"withoutName"(): $ValueLayout
+}
+
+export namespace $ValueLayout {
+const ADDRESS: $AddressLayout
+const ADDRESS_UNALIGNED: $AddressLayout
+const JAVA_BOOLEAN: $ValueLayout$OfBoolean
+const JAVA_BYTE: $ValueLayout$OfByte
+const JAVA_CHAR: $ValueLayout$OfChar
+const JAVA_CHAR_UNALIGNED: $ValueLayout$OfChar
+const JAVA_DOUBLE: $ValueLayout$OfDouble
+const JAVA_DOUBLE_UNALIGNED: $ValueLayout$OfDouble
+const JAVA_FLOAT: $ValueLayout$OfFloat
+const JAVA_FLOAT_UNALIGNED: $ValueLayout$OfFloat
+const JAVA_INT: $ValueLayout$OfInt
+const JAVA_INT_UNALIGNED: $ValueLayout$OfInt
+const JAVA_LONG: $ValueLayout$OfLong
+const JAVA_LONG_UNALIGNED: $ValueLayout$OfLong
+const JAVA_SHORT: $ValueLayout$OfShort
+const JAVA_SHORT_UNALIGNED: $ValueLayout$OfShort
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $ValueLayout$$Static implements $ValueLayout {
+static readonly "ADDRESS": $AddressLayout
+static readonly "ADDRESS_UNALIGNED": $AddressLayout
+static readonly "JAVA_BOOLEAN": $ValueLayout$OfBoolean
+static readonly "JAVA_BYTE": $ValueLayout$OfByte
+static readonly "JAVA_CHAR": $ValueLayout$OfChar
+static readonly "JAVA_CHAR_UNALIGNED": $ValueLayout$OfChar
+static readonly "JAVA_DOUBLE": $ValueLayout$OfDouble
+static readonly "JAVA_DOUBLE_UNALIGNED": $ValueLayout$OfDouble
+static readonly "JAVA_FLOAT": $ValueLayout$OfFloat
+static readonly "JAVA_FLOAT_UNALIGNED": $ValueLayout$OfFloat
+static readonly "JAVA_INT": $ValueLayout$OfInt
+static readonly "JAVA_INT_UNALIGNED": $ValueLayout$OfInt
+static readonly "JAVA_LONG": $ValueLayout$OfLong
+static readonly "JAVA_LONG_UNALIGNED": $ValueLayout$OfLong
+static readonly "JAVA_SHORT": $ValueLayout$OfShort
+static readonly "JAVA_SHORT_UNALIGNED": $ValueLayout$OfShort
+
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ValueLayout$$Type = ($ValueLayout);
+}
+
 declare module "java.lang.NamedPackage" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /**
@@ -2695,13 +4194,13 @@ static readonly "PROTECTED": integer
 static readonly "PUBLIC": integer
 static readonly "UNCONDITIONAL": integer
 
-public "accessClass"(class0: $Class$$Type<any>): $Class<any>
+public "accessClass"<T>(class0: $Class$$Type<T>): $Class<T>
 public "bind"(object0: any, string1: string, methodType2: $MethodType$$Type): $MethodHandle
 public "defineClass"(byte0s: byte[]): $Class<any>
 public "defineHiddenClass"(byte0s: byte[], boolean1: boolean, ...classOption2s: $MethodHandles$Lookup$ClassOption$$Type[]): $MethodHandles$Lookup
 public "defineHiddenClassWithClassData"(byte0s: byte[], object1: any, boolean2: boolean, ...classOption3s: $MethodHandles$Lookup$ClassOption$$Type[]): $MethodHandles$Lookup
 public "dropLookupMode"(int0: integer): $MethodHandles$Lookup
-public "ensureInitialized"(class0: $Class$$Type<any>): $Class<any>
+public "ensureInitialized"<T>(class0: $Class$$Type<T>): $Class<T>
 public "findClass"(string0: string): $Class<any>
 public "findConstructor"(class0: $Class$$Type<any>, methodType1: $MethodType$$Type): $MethodHandle
 public "findGetter"(class0: $Class$$Type<any>, string1: string, class2: $Class$$Type<any>): $MethodHandle
@@ -2732,6 +4231,61 @@ public "unreflectVarHandle"(field0: $Field$$Type): $VarHandle
 export type $MethodHandles$Lookup$$Type = ($MethodHandles$Lookup);
 }
 
+declare module "java.lang.foreign.ValueLayout$OfByte" {
+import { $VarHandle } from "java.lang.invoke.VarHandle"
+import { $MethodHandle } from "java.lang.invoke.MethodHandle"
+import { $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
+import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
+import { $SequenceLayout } from "java.lang.foreign.SequenceLayout"
+import { $ValueLayout } from "java.lang.foreign.ValueLayout"
+import { $ByteOrder } from "java.nio.ByteOrder"
+import { $UnionLayout } from "java.lang.foreign.UnionLayout"
+import { $StructLayout } from "java.lang.foreign.StructLayout"
+import { $Optional } from "java.util.Optional"
+import { $Class } from "java.lang.Class"
+import { $PaddingLayout } from "java.lang.foreign.PaddingLayout"
+
+/**
+ * This class is not allowed By KubeJS!
+ * You should not load the class, or KubeJS will throw an error.
+ * Loading the class using require() will not throw an error, but the class will be undefined.
+ */
+export interface $ValueLayout$OfByte extends $ValueLayout {
+"arrayElementVarHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+"byteAlignment"(): long
+"byteOffset"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): long
+"byteOffsetHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"byteSize"(): long
+"carrier"(): $Class<any>
+"equals"(object0: any): boolean
+"hashCode"(): integer
+"name"(): $Optional<string>
+"order"(): $ByteOrder
+"scale"(long0: long, long1: long): long
+"scaleHandle"(): $MethodHandle
+"select"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MemoryLayout
+"sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
+"toString"(): string
+"varHandle"(): $VarHandle
+"varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
+}
+
+export namespace $ValueLayout$OfByte {
+function paddingLayout(long0: long): $PaddingLayout
+function sequenceLayout(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+function structLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+function unionLayout(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+export abstract class $ValueLayout$OfByte$$Static implements $ValueLayout$OfByte {
+static "paddingLayout"(long0: long): $PaddingLayout
+static "sequenceLayout"(long0: long, memoryLayout1: $MemoryLayout$$Type): $SequenceLayout
+static "structLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $StructLayout
+static "unionLayout"(...memoryLayout0s: $MemoryLayout$$Type[]): $UnionLayout
+}
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ValueLayout$OfByte$$Type = ($ValueLayout$OfByte);
+}
+
 declare module "java.lang.module.ModuleDescriptor$Requires$Modifier" {
 import { $Enum } from "java.lang.Enum"
 
@@ -2756,9 +4310,10 @@ export type $ModuleDescriptor$Requires$Modifier$$Type = ($ModuleDescriptor$Requi
 declare module "java.lang.module.ModuleDescriptor$Requires" {
 import { $ModuleDescriptor$Requires$Modifier } from "java.lang.module.ModuleDescriptor$Requires$Modifier"
 import { $ModuleDescriptor$Version } from "java.lang.module.ModuleDescriptor$Version"
-import { $Optional } from "java.util.Optional"
 import { $Set } from "java.util.Set"
+import { $Optional } from "java.util.Optional"
 import { $Comparable } from "java.lang.Comparable"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
 
 /**
  * This class is not allowed By KubeJS!
@@ -2766,6 +4321,7 @@ import { $Comparable } from "java.lang.Comparable"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $ModuleDescriptor$Requires implements $Comparable<$ModuleDescriptor$Requires> {
+public "accessFlags"(): $Set<$AccessFlag>
 public "compareTo"(requires0: $ModuleDescriptor$Requires$$Type): integer
 public "compiledVersion"(): $Optional<$ModuleDescriptor$Version>
 public "modifiers"(): $Set<$ModuleDescriptor$Requires$Modifier>
@@ -2813,8 +4369,8 @@ export class $ReferenceQueue<T = any> {
 constructor()
 
 public "poll"(): $Reference<T>
-public "remove"(long0: long): $Reference<T>
 public "remove"(): $Reference<T>
+public "remove"(long0: long): $Reference<T>
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ReferenceQueue$$Type<T = any> = ($ReferenceQueue<T>);

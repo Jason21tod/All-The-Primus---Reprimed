@@ -42,15 +42,15 @@ import { $Option } from "me.jellysquid.mods.sodium.client.gui.options.Option"
 export class $OptionPage implements $IOptionGroupIdAccessor {
 static readonly "DEFAULT_ID": $OptionIdentifier<void>
 
+constructor(optionIdentifier0: $OptionIdentifier$$Type<void>, component1: $Component$$Type, immutableList2: $ImmutableList$$Type<$OptionGroup$$Type>)
 /** @deprecated */
 constructor(component0: $Component$$Type, immutableList1: $ImmutableList$$Type<$OptionGroup$$Type>)
-constructor(optionIdentifier0: $OptionIdentifier$$Type<void>, component1: $Component$$Type, immutableList2: $ImmutableList$$Type<$OptionGroup$$Type>)
 
 public "getGroups"(): $ImmutableList<$OptionGroup>
 public "getId"(): $OptionIdentifier<void>
 public "getName"(): $Component
 public "getOptions"(): $ImmutableList<$Option<any>>
-public "handler$fph000$onInit"(id: $OptionIdentifier$$Type, name: $Component$$Type, groups: $ImmutableList$$Type, ci: $CallbackInfo$$Type): void
+public "handler$gal000$onInit"(id: $OptionIdentifier$$Type, name: $Component$$Type, groups: $ImmutableList$$Type, ci: $CallbackInfo$$Type): void
 public "sodiumOptionsAPI$getId"(): $OptionIdentifier$0
 public "sodiumOptionsAPI$setId"(id: $OptionIdentifier$0$$Type): void
 public "sodiumOptionsAPI$setId"(id: $ResourceLocation$$Type): void
@@ -137,18 +137,18 @@ public static "of"(vertexConsumer0: $VertexConsumer$$Type): $VertexBufferWriter
 public "overlayCoords"(int0: integer, int1: integer): $VertexConsumer
 public "overlayCoords"(int0: integer): $VertexConsumer
 public "push"(memoryStack0: $MemoryStack$$Type, long1: long, int2: integer, vertexFormatDescription3: $VertexFormatDescription$$Type): void
+public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, float6: float, int7s: integer[], int8: integer, boolean9: boolean): void
 public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, int5: integer, int6: integer): void
 public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, int6s: integer[], int7: integer, boolean8: boolean): void
-public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, float6: float, int7s: integer[], int8: integer, boolean9: boolean): void
 public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, float5: float, int6: integer, int7: integer, boolean8: boolean): void
 public "reset"(): void
 public static "tryOf"(vertexConsumer0: $VertexConsumer$$Type): $VertexBufferWriter
 public "unsetDefaultColor"(): void
 public "uv"(float0: float, float1: float): $VertexConsumer
-public "uv2"(int0: integer): $VertexConsumer
 public "uv2"(int0: integer, int1: integer): $VertexConsumer
-public "vertex"(double0: double, double1: double, double2: double): $VertexConsumer
+public "uv2"(int0: integer): $VertexConsumer
 public "vertex"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, float8: float, int9: integer, int10: integer, float11: float, float12: float, float13: float): void
+public "vertex"(double0: double, double1: double, double2: double): $VertexConsumer
 public "vertex"(matrix4f0: $Matrix4f$$Type, float1: float, float2: float, float3: float): $VertexConsumer
 get "originalBufferBuilder"(): $BufferBuilder
 get "fullWriter"(): boolean
@@ -516,13 +516,13 @@ public "addConditionally"(boolean0: boolean, supplier1: $Supplier$$Type<$Option<
 public "build"(): $OptionGroup
 public static "createBuilder"(id: $ResourceLocation$$Type): $OptionGroup$Builder
 public static "createBuilder"(id: $OptionIdentifier$0$$Type<void>): $OptionGroup$Builder
-public "handler$fpg000$onBuild"(cir: $CallbackInfoReturnable$$Type): void
-public "setId"(optionIdentifier0: $OptionIdentifier$$Type<void>): $OptionGroup$Builder
+public "handler$gak000$onBuild"(cir: $CallbackInfoReturnable$$Type): void
 public "setId"(resourceLocation0: $ResourceLocation$$Type): $OptionGroup$Builder
-public "sodiumOptionsAPI$setId"(id: $OptionIdentifier$0$$Type): $OptionGroup$Builder
+public "setId"(optionIdentifier0: $OptionIdentifier$$Type<void>): $OptionGroup$Builder
 public "sodiumOptionsAPI$setId"(id: $ResourceLocation$$Type): $OptionGroup$Builder
-set "id"(value: $OptionIdentifier$$Type<void>)
+public "sodiumOptionsAPI$setId"(id: $OptionIdentifier$0$$Type): $OptionGroup$Builder
 set "id"(value: $ResourceLocation$$Type)
+set "id"(value: $OptionIdentifier$$Type<void>)
 }
 }
 
@@ -1185,8 +1185,8 @@ public static "createBuilder"(): $OptionGroup$Builder
 public "getId"(): $OptionIdentifier<void>
 public "getOptions"(): $ImmutableList<$Option<any>>
 public "sodiumOptionsAPI$getId"(): $OptionIdentifier$0
-public "sodiumOptionsAPI$setId"(id: $ResourceLocation$$Type): void
 public "sodiumOptionsAPI$setId"(id: $OptionIdentifier$0$$Type): void
+public "sodiumOptionsAPI$setId"(id: $ResourceLocation$$Type): void
 get "sodiumOptionsAPI$id"(): $OptionIdentifier$0
 set "sodiumOptionsAPI$id"(value: $OptionIdentifier$0$$Type)
 get "options"(): $ImmutableList<$Option<any>>

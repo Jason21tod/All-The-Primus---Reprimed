@@ -25,8 +25,8 @@ public "getCenterZ"(): double
 public "getCollisionShape"(): $VoxelShape
 public "getDamagePerBlock"(): double
 public "getDamageSafeZone"(): double
-public "getDistanceToBorder"(double0: double, double1: double): double
 public "getDistanceToBorder"(entity0: $Entity$$Type): double
+public "getDistanceToBorder"(double0: double, double1: double): double
 public "getLerpRemainingTime"(): long
 public "getLerpSpeed"(): double
 public "getLerpTarget"(): double
@@ -39,11 +39,11 @@ public "getStatus"(): $BorderStatus
 public "getWarningBlocks"(): integer
 public "getWarningTime"(): integer
 public "isInsideCloseToBorder"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
+public "isWithinBounds"(blockPos0: $BlockPos$$Type): boolean
 public "isWithinBounds"(aABB0: $AABB$$Type): boolean
 public "isWithinBounds"(chunkPos0: $ChunkPos$$Type): boolean
 public "isWithinBounds"(double0: double, double1: double): boolean
 public "isWithinBounds"(double0: double, double1: double, double2: double): boolean
-public "isWithinBounds"(blockPos0: $BlockPos$$Type): boolean
 public "lerpSizeBetween"(double0: double, double1: double, long2: long): void
 public "removeListener"(borderChangeListener0: $BorderChangeListener$$Type): void
 public "setAbsoluteMaxSize"(int0: integer): void

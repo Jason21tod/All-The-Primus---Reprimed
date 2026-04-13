@@ -20,10 +20,10 @@ import { $Vec3, $Vec3$$Type } from "net.minecraft.world.phys.Vec3"
 import { $Matrix3f, $Matrix3f$$Type } from "org.joml.Matrix3f"
 
 export class $OrientedBoundingBox {
-constructor(center: $Vec3$$Type, width: double, height: double, depth: double, yaw: float, pitch: float)
-constructor(center: $Vec3$$Type, size: $Vec3$$Type, yaw: float, pitch: float)
 constructor(obb: $OrientedBoundingBox$$Type)
 constructor(box: $AABB$$Type)
+constructor(center: $Vec3$$Type, size: $Vec3$$Type, yaw: float, pitch: float)
+constructor(center: $Vec3$$Type, width: double, height: double, depth: double, yaw: float, pitch: float)
 
 public static "Intersects"(a: $OrientedBoundingBox$$Type, b: $OrientedBoundingBox$$Type): boolean
 public "contains"(point: $Vec3$$Type): boolean
@@ -312,8 +312,8 @@ import { $WeaponAttributes$HitBoxShape, $WeaponAttributes$HitBoxShape$$Type } fr
 import { $WeaponAttributes$Condition, $WeaponAttributes$Condition$$Type } from "net.bettercombat.api.WeaponAttributes$Condition"
 
 export class $WeaponAttributes$Attack {
-constructor(conditions: $WeaponAttributes$Condition$$Type[], hitbox: $WeaponAttributes$HitBoxShape$$Type, damage_multiplier: double, angle: double, upswing: double, animation: string, swing_sound: $WeaponAttributes$Sound$$Type, impact_sound: $WeaponAttributes$Sound$$Type)
 constructor()
+constructor(conditions: $WeaponAttributes$Condition$$Type[], hitbox: $WeaponAttributes$HitBoxShape$$Type, damage_multiplier: double, angle: double, upswing: double, animation: string, swing_sound: $WeaponAttributes$Sound$$Type, impact_sound: $WeaponAttributes$Sound$$Type)
 
 public "angle"(): double
 public "animation"(): string

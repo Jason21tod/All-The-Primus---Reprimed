@@ -1,0 +1,47 @@
+{
+    "type": "origins:multiple",
+    "normal_blood":{
+        "type":"origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": 
+                {
+                    "effect": "minecraft:saturation",
+                    "amplifier": 5,
+                    "duration": 20
+                }
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "kubejs:blood_bottle"
+            }
+        }
+    },
+    "unholy_blood": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "puffish_skills points add @s puffish_skills:vampire 1"
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "kubejs:unholy_blood_bottle"
+            }
+        }
+    },
+    "unholy_blood_message": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "tell @s Você ganhou mais um ponto na árvore de habilidades de vampiro"
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "kubejs:unholy_blood_bottle"
+            }
+        }
+    }
+}

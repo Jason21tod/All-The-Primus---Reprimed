@@ -686,8 +686,8 @@ import { $EntityModel, $EntityModel$$Type } from "net.minecraft.client.model.Ent
 import { $PoseStack, $PoseStack$$Type } from "com.mojang.blaze3d.vertex.PoseStack"
 
 export class $EventLivingRenderer extends $Event implements $EventItf {
-constructor(livingEntity0: $LivingEntity$$Type, entityModel1: $EntityModel$$Type, poseStack2: $PoseStack$$Type, float3: float)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, entityModel1: $EntityModel$$Type, poseStack2: $PoseStack$$Type, float3: float)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

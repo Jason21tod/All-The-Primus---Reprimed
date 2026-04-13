@@ -58,19 +58,21 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export interface $ShortList extends $List<short>, $Comparable<$List<short>>, $ShortCollection {
 /** @deprecated */
-"add"(int0: integer, short1: short): void
 "add"(short0: short): boolean
-"add"(int0: integer, short1: short): void
+"add"(short0: short): boolean
 /** @deprecated */
-"add"(short0: short): boolean
-"addAll"(shortList0: $ShortList$$Type): boolean
+"add"(int0: integer, short1: short): void
+"add"(int0: integer, short1: short): void
 "addAll"(int0: integer, shortCollection1: $ShortCollection$$Type): boolean
 "addAll"(int0: integer, shortList1: $ShortList$$Type): boolean
-"addAll"(int0: integer, collection1: $Collection$$Type<short>): boolean
+"addAll"(shortList0: $ShortList$$Type): boolean
 "addAll"(collection0: $Collection$$Type<short>): boolean
+"addAll"(int0: integer, collection1: $Collection$$Type<short>): boolean
 "addAll"(shortCollection0: $ShortCollection$$Type): boolean
 "addElements"(int0: integer, short1s: short[], int2: integer, int3: integer): void
 "addElements"(int0: integer, short1s: short[]): void
+"addFirst"(short0: short): void
+"addLast"(short0: short): void
 "clear"(): void
 "compareTo"(list0: $List$$Type<short>): integer
 /** @deprecated */
@@ -84,6 +86,8 @@ export interface $ShortList extends $List<short>, $Comparable<$List<short>>, $Sh
 "forEach"(consumer0: $Consumer$$Type<short>): void
 "forEach"(intConsumer0: $IntConsumer$$Type): void
 "getElements"(int0: integer, short1s: short[], int2: integer, int3: integer): void
+"getFirst"(): short
+"getLast"(): short
 "getShort"(int0: integer): short
 "hashCode"(): integer
 "indexOf"(short0: short): integer
@@ -105,14 +109,16 @@ export interface $ShortList extends $List<short>, $Comparable<$List<short>>, $Sh
 "removeAll"(collection0: $Collection$$Type<any>): boolean
 "removeAll"(shortCollection0: $ShortCollection$$Type): boolean
 "removeElements"(int0: integer, int1: integer): void
-"removeIf"(shortPredicate0: $ShortPredicate$$Type): boolean
-"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
+"removeFirst"(): short
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<short>): boolean
+"removeIf"(shortPredicate0: $ShortPredicate$$Type): boolean
+"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
+"removeLast"(): short
 "removeShort"(int0: integer): short
-"replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
 /** @deprecated */
 "replaceAll"(unaryOperator0: $UnaryOperator$$Type<short>): void
+"replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
 "replaceAll"(shortUnaryOperator0: $ShortUnaryOperator$$Type): void
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "retainAll"(shortCollection0: $ShortCollection$$Type): boolean
@@ -120,8 +126,8 @@ export interface $ShortList extends $List<short>, $Comparable<$List<short>>, $Sh
 "set"(int0: integer, short1: short): short
 "set"(int0: integer, short1: short): short
 "setElements"(int0: integer, short1s: short[]): void
-"setElements"(int0: integer, short1s: short[], int2: integer, int3: integer): void
 "setElements"(short0s: short[]): void
+"setElements"(int0: integer, short1s: short[], int2: integer, int3: integer): void
 "size"(int0: integer): void
 "size"(): integer
 "sort"(shortComparator0: $ShortComparator$$Type): void
@@ -129,58 +135,59 @@ export interface $ShortList extends $List<short>, $Comparable<$List<short>>, $Sh
 "sort"(comparator0: $Comparator$$Type<short>): void
 /** @deprecated */
 "stream"(): $Stream<short>
-"subList"(int0: integer, int1: integer): $ShortList
 "toArray"(): any[]
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(short0s: short[]): short[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toShortArray"(): short[]
 /** @deprecated */
 "toShortArray"(short0s: short[]): short[]
+"toShortArray"(): short[]
+"unstableSort"(shortComparator0: $ShortComparator$$Type): void
 /** @deprecated */
 "unstableSort"(comparator0: $Comparator$$Type<short>): void
-"unstableSort"(shortComparator0: $ShortComparator$$Type): void
+get "first"(): short
+get "last"(): short
 get "empty"(): boolean
 set "elements"(value: short[])
 }
 
 export namespace $ShortList {
 function copyOf<E>(collection0: $Collection$$Type<E>): $List<E>
-function of(...short0s: short[]): $ShortList
-function of(short0: short): $ShortList
-function of(short0: short, short1: short): $ShortList
 function of(): $ShortList
+function of(short0: short, short1: short): $ShortList
+function of(short0: short): $ShortList
+function of(...short0s: short[]): $ShortList
 function of(short0: short, short1: short, short2: short): $ShortList
-function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E): $List<E>
-function of<E>(e0: E, e1: E): $List<E>
 function of<E>(e0: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-function of<E>(...e0s: E[]): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+function of<E>(...e0s: E[]): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 export abstract class $ShortList$$Static implements $ShortList {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
-static "of"(...short0s: short[]): $ShortList
-static "of"(short0: short): $ShortList
-static "of"(short0: short, short1: short): $ShortList
 static "of"(): $ShortList
+static "of"(short0: short, short1: short): $ShortList
+static "of"(short0: short): $ShortList
+static "of"(...short0s: short[]): $ShortList
 static "of"(short0: short, short1: short, short2: short): $ShortList
-static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-static "of"<E>(e0: E, e1: E): $List<E>
 static "of"<E>(e0: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-static "of"<E>(...e0s: E[]): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+static "of"<E>(...e0s: E[]): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 }
 
@@ -226,6 +233,7 @@ import { $IntPredicate$$Type } from "java.util.function.IntPredicate"
 import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $IntIterator } from "it.unimi.dsi.fastutil.ints.IntIterator"
 import { $Stream } from "java.util.stream.Stream"
+import { $ShortSpliterator } from "it.unimi.dsi.fastutil.shorts.ShortSpliterator"
 import { $ShortConsumer$$Type } from "it.unimi.dsi.fastutil.shorts.ShortConsumer"
 import { $IntSpliterator } from "it.unimi.dsi.fastutil.ints.IntSpliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
@@ -257,67 +265,68 @@ export interface $ShortSet extends $ShortCollection, $Set<short> {
 "parallelStream"(): $Stream<short>
 /** @deprecated */
 "rem"(short0: short): boolean
+"remove"(short0: short): boolean
 /** @deprecated */
 "remove"(object0: any): boolean
-"remove"(short0: short): boolean
 "removeAll"(shortCollection0: $ShortCollection$$Type): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
-"removeIf"(shortPredicate0: $ShortPredicate$$Type): boolean
-"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<short>): boolean
+"removeIf"(shortPredicate0: $ShortPredicate$$Type): boolean
+"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 "retainAll"(shortCollection0: $ShortCollection$$Type): boolean
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
+"spliterator"(): $ShortSpliterator
 /** @deprecated */
 "stream"(): $Stream<short>
 "toArray"(short0s: short[]): short[]
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toShortArray"(): short[]
 /** @deprecated */
 "toShortArray"(short0s: short[]): short[]
+"toShortArray"(): short[]
 get "empty"(): boolean
 }
 
 export namespace $ShortSet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
 function of(short0: short, short1: short): $ShortSet
-function of(): $ShortSet
 function of(...short0s: short[]): $ShortSet
 function of(short0: short): $ShortSet
 function of(short0: short, short1: short, short2: short): $ShortSet
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of(): $ShortSet
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E): $Set<E>
+function of<E>(e0: E, e1: E): $Set<E>
+function of<E>(e0: E): $Set<E>
 function of<E>(...e0s: E[]): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E): $Set<E>
-function of<E>(e0: E, e1: E): $Set<E>
-function of<E>(e0: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $ShortSet$$Static implements $ShortSet {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
 static "of"(short0: short, short1: short): $ShortSet
-static "of"(): $ShortSet
 static "of"(...short0s: short[]): $ShortSet
 static "of"(short0: short): $ShortSet
 static "of"(short0: short, short1: short, short2: short): $ShortSet
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"(): $ShortSet
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+static "of"<E>(e0: E, e1: E): $Set<E>
+static "of"<E>(e0: E): $Set<E>
 static "of"<E>(...e0s: E[]): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
-static "of"<E>(e0: E, e1: E): $Set<E>
-static "of"<E>(e0: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -329,7 +338,6 @@ export interface $ShortPredicate extends $Predicate<short>, $IntPredicate {
 "and"(shortPredicate0: $ShortPredicate$$Type): $ShortPredicate
 /** @deprecated */
 "and"(predicate0: $Predicate$$Type<short>): $Predicate<short>
-"negate"(): $ShortPredicate
 "or"(shortPredicate0: $ShortPredicate$$Type): $ShortPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $ShortPredicate
 /** @deprecated */
@@ -368,8 +376,8 @@ import { $IntSpliterator } from "it.unimi.dsi.fastutil.ints.IntSpliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export interface $ShortCollection extends $Collection<short>, $ShortIterable {
-/** @deprecated */
 "add"(short0: short): boolean
+/** @deprecated */
 "add"(short0: short): boolean
 "addAll"(shortCollection0: $ShortCollection$$Type): boolean
 "addAll"(collection0: $Collection$$Type<short>): boolean
@@ -398,10 +406,10 @@ export interface $ShortCollection extends $Collection<short>, $ShortIterable {
 "remove"(object0: any): boolean
 "removeAll"(shortCollection0: $ShortCollection$$Type): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
-"removeIf"(shortPredicate0: $ShortPredicate$$Type): boolean
-"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<short>): boolean
+"removeIf"(shortPredicate0: $ShortPredicate$$Type): boolean
+"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 "retainAll"(shortCollection0: $ShortCollection$$Type): boolean
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
@@ -409,11 +417,11 @@ export interface $ShortCollection extends $Collection<short>, $ShortIterable {
 "stream"(): $Stream<short>
 "toArray"(short0s: short[]): short[]
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toShortArray"(): short[]
+"toArray"(): any[]
 /** @deprecated */
 "toShortArray"(short0s: short[]): short[]
+"toShortArray"(): short[]
 get "empty"(): boolean
 }
 
@@ -492,8 +500,8 @@ export interface $Short2BooleanFunction extends $Function$0<short, boolean>, $In
 "containsKey"(short0: short): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
+"defaultReturnValue"(boolean0: boolean): void
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(short0: short): boolean
@@ -502,8 +510,8 @@ export interface $Short2BooleanFunction extends $Function$0<short, boolean>, $In
 "getOrDefault"(short0: short, boolean1: boolean): boolean
 "negate"(): $IntPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
-/** @deprecated */
 "put"(short0: short, boolean1: boolean): boolean
+/** @deprecated */
 "put"(short0: short, boolean1: boolean): boolean
 "remove"(short0: short): boolean
 "size"(): integer
@@ -587,8 +595,8 @@ export interface $Short2ByteFunction extends $Function$0<short, byte>, $IntUnary
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(short0: short): boolean
-"defaultReturnValue"(byte0: byte): void
 "defaultReturnValue"(): byte
+"defaultReturnValue"(byte0: byte): void
 /** @deprecated */
 "get"(object0: any): byte
 "get"(short0: short): byte
@@ -599,8 +607,6 @@ export interface $Short2ByteFunction extends $Function$0<short, byte>, $IntUnary
 /** @deprecated */
 "put"(short0: short, byte1: byte): byte
 "remove"(short0: short): byte
-/** @deprecated */
-"remove"(object0: any): byte
 "size"(): integer
 }
 
@@ -677,14 +683,14 @@ export interface $Short2ObjectFunction<V = any> extends $Function$0<short, V>, $
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(short0: short): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(short0: short): V
+"getOrDefault"(short0: short, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(short0: short, v1: V): V
 /** @deprecated */
 "put"(short0: short, v1: V): V
 "put"(short0: short, v1: V): V
@@ -844,8 +850,8 @@ export interface $Short2LongFunction extends $Function$0<short, long>, $IntToLon
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(short0: short): boolean
-"defaultReturnValue"(long0: long): void
 "defaultReturnValue"(): long
+"defaultReturnValue"(long0: long): void
 /** @deprecated */
 "get"(object0: any): long
 "get"(short0: short): long
@@ -856,8 +862,6 @@ export interface $Short2LongFunction extends $Function$0<short, long>, $IntToLon
 /** @deprecated */
 "put"(short0: short, long1: long): long
 "remove"(short0: short): long
-/** @deprecated */
-"remove"(object0: any): long
 "size"(): integer
 }
 
@@ -866,6 +870,33 @@ function identity<T>(): $Function<T, T>
 }
 export abstract class $Short2LongFunction$$Static implements $Short2LongFunction {
 static "identity"<T>(): $Function<T, T>
+}
+}
+
+declare module "it.unimi.dsi.fastutil.shorts.ShortSpliterator" {
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $Spliterator$OfPrimitive } from "java.util.Spliterator$OfPrimitive"
+import { $ShortConsumer, $ShortConsumer$$Type } from "it.unimi.dsi.fastutil.shorts.ShortConsumer"
+
+export interface $ShortSpliterator extends $Spliterator$OfPrimitive<short, $ShortConsumer, $ShortSpliterator> {
+"characteristics"(): integer
+"estimateSize"(): long
+/** @deprecated */
+"forEachRemaining"(consumer0: $Consumer$$Type<short>): void
+"forEachRemaining"(shortConsumer0: $ShortConsumer$$Type): void
+"getExactSizeIfKnown"(): long
+"hasCharacteristics"(int0: integer): boolean
+"skip"(long0: long): long
+/** @deprecated */
+"tryAdvance"(consumer0: $Consumer$$Type<short>): boolean
+"tryAdvance"(shortConsumer0: $ShortConsumer$$Type): boolean
+get "exactSizeIfKnown"(): long
+}
+
+export namespace $ShortSpliterator {
+const probejs$$marker: never
+}
+export abstract class $ShortSpliterator$$Static implements $ShortSpliterator {
 }
 }
 
@@ -937,8 +968,8 @@ export interface $Short2CharFunction extends $Function$0<short, character>, $Int
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(short0: short): boolean
-"defaultReturnValue"(char0: character): void
 "defaultReturnValue"(): character
+"defaultReturnValue"(char0: character): void
 /** @deprecated */
 "get"(object0: any): character
 "get"(short0: short): character
@@ -949,8 +980,6 @@ export interface $Short2CharFunction extends $Function$0<short, character>, $Int
 /** @deprecated */
 "put"(short0: short, character1: character): character
 "remove"(short0: short): character
-/** @deprecated */
-"remove"(object0: any): character
 "size"(): integer
 }
 
@@ -1052,8 +1081,8 @@ export interface $Short2DoubleFunction extends $Function$0<short, double>, $IntT
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(short0: short): boolean
-"defaultReturnValue"(double0: double): void
 "defaultReturnValue"(): double
+"defaultReturnValue"(double0: double): void
 /** @deprecated */
 "get"(object0: any): double
 "get"(short0: short): double
@@ -1064,8 +1093,6 @@ export interface $Short2DoubleFunction extends $Function$0<short, double>, $IntT
 /** @deprecated */
 "put"(short0: short, double1: double): double
 "remove"(short0: short): double
-/** @deprecated */
-"remove"(object0: any): double
 "size"(): integer
 }
 
@@ -1145,8 +1172,8 @@ export interface $Short2IntFunction extends $Function$0<short, integer>, $IntUna
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(short0: short): boolean
-"defaultReturnValue"(int0: integer): void
 "defaultReturnValue"(): integer
+"defaultReturnValue"(int0: integer): void
 /** @deprecated */
 "get"(object0: any): integer
 "get"(short0: short): integer
@@ -1157,8 +1184,6 @@ export interface $Short2IntFunction extends $Function$0<short, integer>, $IntUna
 /** @deprecated */
 "put"(short0: short, integer1: integer): integer
 "remove"(short0: short): integer
-/** @deprecated */
-"remove"(object0: any): integer
 "size"(): integer
 }
 
@@ -1236,8 +1261,8 @@ export interface $Short2FloatFunction extends $Function$0<short, float>, $IntToD
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(short0: short): boolean
-"defaultReturnValue"(float0: float): void
 "defaultReturnValue"(): float
+"defaultReturnValue"(float0: float): void
 /** @deprecated */
 "get"(object0: any): float
 "get"(short0: short): float
@@ -1248,8 +1273,6 @@ export interface $Short2FloatFunction extends $Function$0<short, float>, $IntToD
 /** @deprecated */
 "put"(short0: short, float1: float): float
 "remove"(short0: short): float
-/** @deprecated */
-"remove"(object0: any): float
 "size"(): integer
 }
 
@@ -1294,10 +1317,11 @@ import { $ToLongFunction$$Type } from "java.util.function.ToLongFunction"
 import { $Function$$Type } from "java.util.function.Function"
 
 export interface $ShortComparator extends $Comparator<short> {
-"compare"(short0: short, short1: short): integer
 /** @deprecated */
 "compare"(short0: short, short1: short): integer
+"compare"(short0: short, short1: short): integer
 "equals"(object0: any): boolean
+"reversed"(): $ShortComparator
 "thenComparing"(comparator0: $Comparator$$Type<short>): $Comparator<short>
 "thenComparing"(shortComparator0: $ShortComparator$$Type): $ShortComparator
 "thenComparing"<U>(function0: $Function$$Type<short, U>, comparator1: $Comparator$$Type<U>): $Comparator<short>
@@ -1418,14 +1442,14 @@ export interface $Short2ReferenceFunction<V = any> extends $Function$0<short, V>
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(short0: short): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(short0: short): V
+"getOrDefault"(short0: short, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(short0: short, v1: V): V
 /** @deprecated */
 "put"(short0: short, v1: V): V
 "put"(short0: short, v1: V): V

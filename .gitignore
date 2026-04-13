@@ -13,6 +13,5 @@ modernfix
 logs
 logs/latest.log
 local
-.probe
 .probe/*
 !.probe/probe-settings.json

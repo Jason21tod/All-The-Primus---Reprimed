@@ -49,9 +49,9 @@ static readonly "TEN": $BigInteger
 static readonly "TWO": $BigInteger
 static readonly "ZERO": $BigInteger
 
-constructor(int0: integer, random1: $Random$$Type)
 constructor(string0: string)
 constructor(int0: integer, int1: integer, random2: $Random$$Type)
+constructor(int0: integer, random1: $Random$$Type)
 constructor(int0: integer, byte1s: byte[], int2: integer, int3: integer)
 constructor(byte0s: byte[])
 constructor(byte0s: byte[], int1: integer, int2: integer)
@@ -85,6 +85,7 @@ public "negate"(): $BigInteger
 public "nextProbablePrime"(): $BigInteger
 public "not"(): $BigInteger
 public "or"(bigInteger0: $BigInteger$$Type): $BigInteger
+public "parallelMultiply"(bigInteger0: $BigInteger$$Type): $BigInteger
 public "pow"(int0: integer): $BigInteger
 public static "probablePrime"(int0: integer, random1: $Random$$Type): $BigInteger
 public "remainder"(bigInteger0: $BigInteger$$Type): $BigInteger
@@ -132,41 +133,42 @@ static readonly "ROUND_UNNECESSARY": integer
 /** @deprecated */
 static readonly "ROUND_UP": integer
 static readonly "TEN": $BigDecimal
+static readonly "TWO": $BigDecimal
 static readonly "ZERO": $BigDecimal
 
+constructor(bigInteger0: $BigInteger$$Type, int1: integer)
 constructor(bigInteger0: $BigInteger$$Type, mathContext1: $MathContext$$Type)
 constructor(bigInteger0: $BigInteger$$Type)
-constructor(long0: long)
+constructor(long0: long, mathContext1: $MathContext$$Type)
 constructor(double0: double, mathContext1: $MathContext$$Type)
-constructor(double0: double)
+constructor(long0: long)
 constructor(int0: integer, mathContext1: $MathContext$$Type)
 constructor(int0: integer)
 constructor(bigInteger0: $BigInteger$$Type, int1: integer, mathContext2: $MathContext$$Type)
-constructor(bigInteger0: $BigInteger$$Type, int1: integer)
-constructor(long0: long, mathContext1: $MathContext$$Type)
+constructor(char0s: character[])
 constructor(char0s: character[], int1: integer, int2: integer, mathContext3: $MathContext$$Type)
 constructor(char0s: character[], int1: integer, int2: integer)
+constructor(double0: double)
 constructor(string0: string, mathContext1: $MathContext$$Type)
 constructor(string0: string)
 constructor(char0s: character[], mathContext1: $MathContext$$Type)
-constructor(char0s: character[])
 
 public "abs"(): $BigDecimal
 public "abs"(mathContext0: $MathContext$$Type): $BigDecimal
-public "add"(bigDecimal0: $BigDecimal$$Type): $BigDecimal
 public "add"(bigDecimal0: $BigDecimal$$Type, mathContext1: $MathContext$$Type): $BigDecimal
+public "add"(bigDecimal0: $BigDecimal$$Type): $BigDecimal
 public "byteValueExact"(): byte
 public "compareTo"(bigDecimal0: $BigDecimal$$Type): integer
+public "divide"(bigDecimal0: $BigDecimal$$Type): $BigDecimal
+public "divide"(bigDecimal0: $BigDecimal$$Type, roundingMode1: $RoundingMode$$Type): $BigDecimal
 /** @deprecated */
 public "divide"(bigDecimal0: $BigDecimal$$Type, int1: integer): $BigDecimal
 public "divide"(bigDecimal0: $BigDecimal$$Type, mathContext1: $MathContext$$Type): $BigDecimal
-public "divide"(bigDecimal0: $BigDecimal$$Type): $BigDecimal
-public "divide"(bigDecimal0: $BigDecimal$$Type, roundingMode1: $RoundingMode$$Type): $BigDecimal
 public "divide"(bigDecimal0: $BigDecimal$$Type, int1: integer, roundingMode2: $RoundingMode$$Type): $BigDecimal
 /** @deprecated */
 public "divide"(bigDecimal0: $BigDecimal$$Type, int1: integer, int2: integer): $BigDecimal
-public "divideAndRemainder"(bigDecimal0: $BigDecimal$$Type): $BigDecimal[]
 public "divideAndRemainder"(bigDecimal0: $BigDecimal$$Type, mathContext1: $MathContext$$Type): $BigDecimal[]
+public "divideAndRemainder"(bigDecimal0: $BigDecimal$$Type): $BigDecimal[]
 public "divideToIntegralValue"(bigDecimal0: $BigDecimal$$Type, mathContext1: $MathContext$$Type): $BigDecimal
 public "divideToIntegralValue"(bigDecimal0: $BigDecimal$$Type): $BigDecimal
 public "intValueExact"(): integer
@@ -177,20 +179,20 @@ public "movePointLeft"(int0: integer): $BigDecimal
 public "movePointRight"(int0: integer): $BigDecimal
 public "multiply"(bigDecimal0: $BigDecimal$$Type): $BigDecimal
 public "multiply"(bigDecimal0: $BigDecimal$$Type, mathContext1: $MathContext$$Type): $BigDecimal
-public "negate"(mathContext0: $MathContext$$Type): $BigDecimal
 public "negate"(): $BigDecimal
+public "negate"(mathContext0: $MathContext$$Type): $BigDecimal
 public "plus"(mathContext0: $MathContext$$Type): $BigDecimal
 public "plus"(): $BigDecimal
-public "pow"(int0: integer, mathContext1: $MathContext$$Type): $BigDecimal
 public "pow"(int0: integer): $BigDecimal
+public "pow"(int0: integer, mathContext1: $MathContext$$Type): $BigDecimal
 public "precision"(): integer
 public "remainder"(bigDecimal0: $BigDecimal$$Type): $BigDecimal
 public "remainder"(bigDecimal0: $BigDecimal$$Type, mathContext1: $MathContext$$Type): $BigDecimal
 public "round"(mathContext0: $MathContext$$Type): $BigDecimal
 public "scale"(): integer
 public "scaleByPowerOfTen"(int0: integer): $BigDecimal
-public "setScale"(int0: integer, roundingMode1: $RoundingMode$$Type): $BigDecimal
 public "setScale"(int0: integer): $BigDecimal
+public "setScale"(int0: integer, roundingMode1: $RoundingMode$$Type): $BigDecimal
 /** @deprecated */
 public "setScale"(int0: integer, int1: integer): $BigDecimal
 public "shortValueExact"(): short

@@ -110,8 +110,8 @@ public "getSerializedName"(): string
 public "inverse"(): $OctahedralGroup
 public "inverts"(axis0: $Direction$Axis$$Type): boolean
 public static "keys"(stringRepresentable0s: $StringRepresentable$$Type[]): $Keyable
-public "rotate"(frontAndTop0: $FrontAndTop$$Type): $FrontAndTop
 public "rotate"(direction0: $Direction$$Type): $Direction
+public "rotate"(frontAndTop0: $FrontAndTop$$Type): $FrontAndTop
 public "transformation"(): $Matrix3f
 public static "valueOf"(string0: string): $OctahedralGroup
 public static "values"(): $OctahedralGroup[]

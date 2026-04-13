@@ -10,6 +10,7 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $MobEffect$$Type } from "net.minecraft.world.effect.MobEffect"
 
 export class $VisionContext {
+constructor(mobEffect0: $MobEffect$$Type)
 constructor(entityType0: $EntityType$$Type<any>)
 constructor(entity0: $Entity$$Type)
 constructor(block0: $Block$$Type)
@@ -17,7 +18,6 @@ constructor(blockStateBase0: $BlockBehaviour$BlockStateBase$$Type)
 constructor(itemEntity0: $ItemEntity$$Type)
 constructor(itemStack0: $ItemStack$$Type)
 constructor(item0: $Item$$Type)
-constructor(mobEffect0: $MobEffect$$Type)
 
 public "getBlock"(): $Block
 public "getBlockState"(): $BlockState
@@ -423,17 +423,17 @@ public "registerDirtGrassBlock"(block0: $Block$$Type, resourceLocation1: $Resour
 public "registerTemplateGrassBlock"(block0: $Block$$Type, resourceLocation1: $ResourceLocation$$Type, resourceLocation2: $ResourceLocation$$Type, resourceLocation3: $ResourceLocation$$Type, resourceLocation4: $ResourceLocation$$Type): void
 public static "saveStable"(cachedOutput0: $CachedOutput$$Type, jsonElement1: $JsonElement$$Type, path2: $Path$$Type): $CompletableFuture<any>
 public "sign"(block0: $Block$$Type, string1: string): void
-public "slab"(block0: $Block$$Type, string1: string, resourceLocation2: $ResourceLocation$$Type): void
 public "slab"(block0: $Block$$Type, string1: string, string2: string, resourceLocation3: $ResourceLocation$$Type): void
+public "slab"(block0: $Block$$Type, string1: string, resourceLocation2: $ResourceLocation$$Type): void
 public "stairs"(block0: $Block$$Type, string1: string, resourceLocation2: $ResourceLocation$$Type): void
 public "stairs"(block0: $Block$$Type, string1: string, string2: string, resourceLocation3: $ResourceLocation$$Type): void
 public "textureFromBlock"(block0: $Block$$Type, string1: string, string2: string): $ResourceLocation
-public "torch"(registryObject0: $RegistryObject$$Type<$Block$$Type>): void
 public "torch"(block0: $Block$$Type): void
+public "torch"(registryObject0: $RegistryObject$$Type<$Block$$Type>): void
 public "trapdoor"(block0: $Block$$Type): void
 public "veinBlock"(block0: $Block$$Type): void
-public "wall"(block0: $Block$$Type, string1: string, string2: string, resourceLocation3: $ResourceLocation$$Type): void
 public "wall"(block0: $Block$$Type, string1: string, resourceLocation2: $ResourceLocation$$Type): void
+public "wall"(block0: $Block$$Type, string1: string, string2: string, resourceLocation3: $ResourceLocation$$Type): void
 public "wallTorch"(block0: $Block$$Type, string1: string): void
 public "woodBlock"(block0: $Block$$Type, string1: string): void
 }
@@ -967,8 +967,8 @@ public "merge"(itemDefinition0: $ItemDefinition$$Type): $ItemDefinition
 public "modelType"(itemModelType0: $ItemModelType$$Type): $ItemDefinition
 public static "of"(item0: $Item$$Type): $ItemDefinition
 public static "of"(): $ItemDefinition
-public static "of"(block0: $Block$$Type): $ItemDefinition
 public static "of"(blockDefinition0: $BlockDefinition$$Type): $ItemDefinition
+public static "of"(block0: $Block$$Type): $ItemDefinition
 public "setDefault"(item0: $Item$$Type): $ItemDefinition
 public "tags"(...tagKey0s: $TagKey$$Type<$Item$$Type>[]): $ItemDefinition
 public "tint"(tintType0: $TintType$$Type): $ItemDefinition

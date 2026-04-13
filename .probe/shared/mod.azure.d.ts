@@ -467,7 +467,7 @@ public "hasPlayBehavior"(): boolean
 public "playBehavior"(): $AzPlayBehavior
 public "withAnimationSpeed"(double0: double): $AzAnimationStageProperties
 public "withPlayBehavior"(azPlayBehavior0: $AzPlayBehavior$$Type): $AzAnimationStageProperties
-public "withRepeatXTimes"(double0: double): $AzAnimationStageProperties
+public "withStartTickOffset"(double0: double): $AzAnimationStageProperties
 public "withTransitionLength"(float0: float): $AzAnimationStageProperties
 }
 }
@@ -758,8 +758,8 @@ const PLAY_ONCE: $AzLoopType
 const TRUE: $AzLoopType
 function fromJson(jsonElement0: $JsonElement$$Type): $AzLoopType
 function fromString(string0: string): $AzLoopType
-function register(string0: string, triFunction1: $TriFunction$$Type<any, $AzAnimationController$$Type<any>, $AzBakedAnimation$$Type, boolean>): $AzLoopType
 function register(string0: string, azLoopType1: $AzLoopType$$Type): $AzLoopType
+function register(string0: string, triFunction1: $TriFunction$$Type<any, $AzAnimationController$$Type<any>, $AzBakedAnimation$$Type, boolean>): $AzLoopType
 }
 export abstract class $AzLoopType$$Static implements $AzLoopType {
 static readonly "FALSE": $AzLoopType
@@ -771,8 +771,8 @@ static readonly "TRUE": $AzLoopType
 
 static "fromJson"(jsonElement0: $JsonElement$$Type): $AzLoopType
 static "fromString"(string0: string): $AzLoopType
-static "register"(string0: string, triFunction1: $TriFunction$$Type<any, $AzAnimationController$$Type<any>, $AzBakedAnimation$$Type, boolean>): $AzLoopType
 static "register"(string0: string, azLoopType1: $AzLoopType$$Type): $AzLoopType
+static "register"(string0: string, triFunction1: $TriFunction$$Type<any, $AzAnimationController$$Type<any>, $AzBakedAnimation$$Type, boolean>): $AzLoopType
 }
 }
 

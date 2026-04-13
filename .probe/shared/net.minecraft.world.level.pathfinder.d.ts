@@ -70,10 +70,10 @@ public static "createFromStream"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $Nod
 public static "createHash"(int0: integer, int1: integer, int2: integer): integer
 public "distanceManhattan"(node0: $Node$$Type): float
 public "distanceManhattan"(blockPos0: $BlockPos$$Type): float
-public "distanceTo"(blockPos0: $BlockPos$$Type): float
 public "distanceTo"(node0: $Node$$Type): float
-public "distanceToSqr"(blockPos0: $BlockPos$$Type): float
+public "distanceTo"(blockPos0: $BlockPos$$Type): float
 public "distanceToSqr"(node0: $Node$$Type): float
+public "distanceToSqr"(blockPos0: $BlockPos$$Type): float
 public "distanceToXZ"(node0: $Node$$Type): float
 public "inOpenSet"(): boolean
 public "writeToStream"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
@@ -164,8 +164,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 import { $Node, $Node$$Type } from "net.minecraft.world.level.pathfinder.Node"
 
 export class $Target extends $Node {
-constructor(int0: integer, int1: integer, int2: integer)
 constructor(node0: $Node$$Type)
+constructor(int0: integer, int1: integer, int2: integer)
 
 public static "createFromStream"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $Target
 public "getBestNode"(): $Node

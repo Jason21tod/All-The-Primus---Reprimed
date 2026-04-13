@@ -349,6 +349,7 @@ declare module "net.liopyu.entityjs.builders.nonliving.entityjs.ArrowEntityBuild
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ContextUtils$ArrowPlayerContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ArrowPlayerContext"
 import { $ContextUtils$ArrowLivingEntityContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ArrowLivingEntityContext"
+import { $EntityType } from "net.minecraft.world.entity.EntityType"
 import { $ContextUtils$CollidingProjectileEntityContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$CollidingProjectileEntityContext"
 import { $Function$$Type } from "java.util.function.Function"
 import { $Consumer$$Type } from "java.util.function.Consumer"
@@ -379,6 +380,7 @@ constructor(i: $ResourceLocation$$Type)
  * ```
  */
 public "canHitEntity"(function_: $Function$$Type<$Entity$$Type, any>): $ArrowEntityBuilder<T>
+public "createObject"(): $EntityType<T>
 /**
  * Sets the default sound event played when the arrow hits the ground using a string representation.
  * 
@@ -2470,6 +2472,7 @@ import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocatio
 import { $List } from "java.util.List"
 import { $Entity } from "net.minecraft.world.entity.Entity"
 import { $BaseNonAnimatableEntityBuilder } from "net.liopyu.entityjs.builders.nonliving.BaseNonAnimatableEntityBuilder"
+import { $EntityType } from "net.minecraft.world.entity.EntityType"
 import { $IProjectileEntityJS } from "net.liopyu.entityjs.entities.nonliving.entityjs.IProjectileEntityJS"
 import { $Function$$Type } from "java.util.function.Function"
 
@@ -2478,6 +2481,7 @@ static readonly "thisList": $List<$EyeOfEnderEntityBuilder<any>>
 
 constructor(i: $ResourceLocation$$Type)
 
+public "createObject"(): $EntityType<T>
 /**
  * Sets the offset for rendering the projectile entity.
  * 
@@ -2758,8 +2762,8 @@ declare module "net.liopyu.entityjs.builders.nonliving.BaseNonAnimatableEntityBu
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ContextUtils$EEntityFallDamageContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EEntityFallDamageContext"
 import { $ContextUtils$NLRenderContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$NLRenderContext"
-import { $EntityType } from "net.minecraft.world.entity.EntityType"
 import { $ContextUtils$EntitySqrDistanceContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntitySqrDistanceContext"
+import { $EntityType } from "net.minecraft.world.entity.EntityType"
 import { $ContextUtils$EThunderHitContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EThunderHitContext"
 import { $RenderType } from "net.minecraft.client.renderer.RenderType"
 import { $ContextUtils$ECollidingEntityContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ECollidingEntityContext"
@@ -2901,7 +2905,6 @@ public "canTrample"(predicate: $Function$$Type<$ContextUtils$ECanTrampleContext$
  * ```
  */
 public "clientTrackingRange"(trackingRange: integer): $BaseNonAnimatableEntityBuilder<T>
-public "createObject"(): $EntityType<T>
 /**
  * Sets a predicate to determine whether the living entity dampens vibrations.
  * 
@@ -2937,17 +2940,6 @@ public "fireImmune"(isFireImmune: boolean): $BaseNonAnimatableEntityBuilder<T>
  */
 public "immuneTo"(...blockNames: string[]): $BaseNonAnimatableEntityBuilder<T>
 /**
- * Sets whether the entity is attackable or not.
- * 
- * @param isAttackable Boolean value indicating whether the entity is attackable.
- * 
- * Example usage:
- * ```javascript
- * entityBuilder.isAttackable(true);
- * ```
- */
-public "isAttackable"(b: boolean): $BaseNonAnimatableEntityBuilder<T>
-/**
  * Sets a predicate function to determine whether the entity is attackable.
  * The provided Predicate accepts a {@link Entity} parameter,
  * representing the entity that may be checked for its attackability.
@@ -2962,6 +2954,17 @@ public "isAttackable"(b: boolean): $BaseNonAnimatableEntityBuilder<T>
  * ```
  */
 public "isAttackable"(predicate: boolean): $BaseNonAnimatableEntityBuilder<T>
+/**
+ * Sets whether the entity is attackable or not.
+ * 
+ * @param isAttackable Boolean value indicating whether the entity is attackable.
+ * 
+ * Example usage:
+ * ```javascript
+ * entityBuilder.isAttackable(true);
+ * ```
+ */
+public "isAttackable"(b: boolean): $BaseNonAnimatableEntityBuilder<T>
 /**
  * Sets a predicate function to determine whether the entity is currently glowing.
  * The provided Predicate accepts a {@link Entity} parameter,
@@ -3491,10 +3494,10 @@ import { $Heightmap$Types, $Heightmap$Types$$Type } from "net.minecraft.world.le
 import { $ContextUtils$EntityDamageContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntityDamageContext"
 import { $ContextUtils$EntityItemEntityContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntityItemEntityContext"
 import { $BaseLivingEntityBuilder$IParticleListenerJS$$Type } from "net.liopyu.entityjs.builders.living.BaseLivingEntityBuilder$IParticleListenerJS"
-import { $EntityType } from "net.minecraft.world.entity.EntityType"
 import { $ContextUtils$EntityLootContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntityLootContext"
 import { $ContextUtils$ScaleModelRenderContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ScaleModelRenderContext"
 import { $ContextUtils$EntitySqrDistanceContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntitySqrDistanceContext"
+import { $EntityType } from "net.minecraft.world.entity.EntityType"
 import { $ContextUtils$PlayerEntityContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$PlayerEntityContext"
 import { $ContextUtils$CalculateFallDamageContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$CalculateFallDamageContext"
 import { $PartBuilder$$Type } from "net.liopyu.entityjs.builders.nonliving.entityjs.PartBuilder"
@@ -3939,7 +3942,6 @@ public "canTrample"(predicate: $Function$$Type<$ContextUtils$CanTrampleContext$$
  * ```
  */
 public "clientTrackingRange"(i: integer): $BaseLivingEntityBuilder<T>
-public "createObject"(): $EntityType<T>
 /**
  * Sets a predicate to determine whether the living entity dampens vibrations.
  * 
@@ -5602,8 +5604,8 @@ declare module "net.liopyu.entityjs.builders.nonliving.BaseEntityBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ContextUtils$NLRenderContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$NLRenderContext"
 import { $IAnimatableJSNL } from "net.liopyu.entityjs.entities.nonliving.entityjs.IAnimatableJSNL"
-import { $ContextUtils$EntitySqrDistanceContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntitySqrDistanceContext"
 import { $EntityType } from "net.minecraft.world.entity.EntityType"
+import { $ContextUtils$EntitySqrDistanceContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntitySqrDistanceContext"
 import { $BaseEntityBuilder$IAnimationPredicateJS$$Type } from "net.liopyu.entityjs.builders.nonliving.BaseEntityBuilder$IAnimationPredicateJS"
 import { $Function$$Type } from "java.util.function.Function"
 import { $ContextUtils$EMayInteractContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EMayInteractContext"
@@ -5813,6 +5815,7 @@ public "canTrample"(predicate: $Function$$Type<$ContextUtils$ECanTrampleContext$
  * ```
  */
 public "clientTrackingRange"(trackingRange: integer): $BaseEntityBuilder<T>
+public "createObject"(): $EntityType<T>
 /**
  * Sets a predicate to determine whether the living entity dampens vibrations.
  * 
@@ -7553,13 +7556,15 @@ import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocatio
 import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $EyeOfEnderItemBuilder$$Type } from "net.liopyu.entityjs.item.EyeOfEnderItemBuilder"
 import { $EyeOfEnderEntityBuilder } from "net.liopyu.entityjs.builders.nonliving.vanilla.EyeOfEnderEntityBuilder"
-import { $Function$$Type } from "java.util.function.Function"
+import { $EntityType } from "net.minecraft.world.entity.EntityType"
 import { $EyeOfEnderEntityJS } from "net.liopyu.entityjs.entities.nonliving.vanilla.EyeOfEnderEntityJS"
+import { $Function$$Type } from "java.util.function.Function"
 import { $EyeOfEnder$$Type } from "net.minecraft.world.entity.projectile.EyeOfEnder"
 
 export class $EyeOfEnderJSBuilder extends $EyeOfEnderEntityBuilder<$EyeOfEnderEntityJS> {
 constructor(i: $ResourceLocation$$Type)
 
+public "createObject"(): $EntityType<$EyeOfEnderEntityJS>
 /** Disables the default ender eye break sound as well as the death particles. */
 public "disableDefaultDeathLogic"(): $EyeOfEnderJSBuilder
 /** The default trail particles will be disabled */
@@ -7661,6 +7666,8 @@ get "moving"(): boolean
 
 declare module "net.liopyu.entityjs.builders.living.vanilla.ParrotJSBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $ContextUtils$PlayerEntityContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$PlayerEntityContext"
 import { $ParrotEntityJS } from "net.liopyu.entityjs.entities.living.vanilla.ParrotEntityJS"
 import { $TameableMobBuilder } from "net.liopyu.entityjs.builders.living.entityjs.TameableMobBuilder"
 
@@ -7677,6 +7684,21 @@ constructor(i: $ResourceLocation$$Type)
  * ```
  */
 public "defaultGoals"(defaultGoals: boolean): $ParrotJSBuilder
+/**
+ * Sets a Consumer with the parameter of ContextUtils.PlayerEntityContext callback
+ * This is fired after the entity is tamed and all tame logic has already taken place.
+ * Useful if you don't want to mess with the UUID logic in the tameOverride method.
+ * 
+ * @param onTamed A Consumer that fires when the entity is tamed.
+ * 
+ * Example usage:
+ * ```javascript
+ * builder.onTamed(entity => {
+ *     // Do stuff when the entity is tamed.
+ * });
+ * ```
+ */
+public "onTamed"(onTamed: $Consumer$$Type<$ContextUtils$PlayerEntityContext$$Type>): $ParrotJSBuilder
 }
 }
 

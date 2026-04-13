@@ -350,7 +350,7 @@ constructor(p: $ScriptPack$$Type, i: $ScriptFileInfo$$Type, s: $ScriptSource$$Ty
 
 public "compareTo"(o: $ScriptFile$$Type): integer
 public "load"(): void
-public "redirect$hej000$preEvalProcess"(instance: $Context$$Type, scope: $Scriptable$$Type, source: string, sourceName: string, lineno: integer, securityDomain: any): any
+public "redirect$hfn000$preEvalProcess"(instance: $Context$$Type, scope: $Scriptable$$Type, source: string, sourceName: string, lineno: integer, securityDomain: any): any
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ScriptFile$$Type = ($ScriptFile);

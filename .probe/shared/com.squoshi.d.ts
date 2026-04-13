@@ -262,7 +262,6 @@ public "canBeCraftedBy"(predicate: $Predicate$$Type<$Player$$Type>): $CustomSpel
  *     ```
  */
 public "checkPreCastConditions"(predicate: $Predicate$$Type<$CustomSpell$PreCastConditionsContext$$Type>): $CustomSpell$Builder
-public "createObject"(): $CustomSpell
 public "getRegistryType"(): $RegistryInfo<$AbstractSpell>
 /**     Sets whether or not the spell needs to be learned before it can be casted. */
 public "needsLearning"(needs: boolean): $CustomSpell$Builder
@@ -579,11 +578,11 @@ public "canStartSwimming"(): boolean
 public "canSwimInFluidType"(fluidType0: $FluidType$$Type): boolean
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
-public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -595,8 +594,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -659,8 +658,8 @@ public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -676,8 +675,8 @@ public "jump"(): void
 public "m_5639_"(fallDistance: float, pDamageMultiplier: float): integer
 public "m_6071_"(pPlayer: $Player$$Type, pHand: $InteractionHand$$Type): $InteractionResult
 public "m_6475_"(pDamageSource: $DamageSource$$Type, pDamageAmount: float): void
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "modifyAttribute"(attribute: $Attribute$$Type, identifier: string, d: double, operation: $AttributeModifier$Operation$$Type): void
@@ -689,8 +688,8 @@ public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: floa
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -743,8 +742,8 @@ public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$
 public "spawn"(): void
 public "startAutoSpinAttack"(pAttackTicks: integer): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(): void
 public "swing"(hand: $InteractionHand$$Type): void
+public "swing"(): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
@@ -1393,8 +1392,8 @@ public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -1435,8 +1434,8 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -1450,15 +1449,15 @@ public "m_7378_"(pCompound: $CompoundTag$$Type): void
 public "m_7380_"(pCompound: $CompoundTag$$Type): void
 public static "majruszlibrary$getProjectileArrow"(entity0: $Entity$$Type): $ItemStack
 public static "majruszlibrary$getProjectileWeapon"(entity0: $Entity$$Type): $ItemStack
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -1673,7 +1672,6 @@ set "amount"(value: float)
 declare module "com.squoshi.irons_spells_js.item.CustomSpellBook$Builder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $AttributeModifier$Operation$$Type } from "net.minecraft.world.entity.ai.attributes.AttributeModifier$Operation"
-import { $SpellBook } from "io.redspace.ironsspellbooks.item.SpellBook"
 import { $ISSKJSUtils$SpellHolder$$Type } from "com.squoshi.irons_spells_js.util.ISSKJSUtils$SpellHolder"
 import { $ItemBuilder } from "dev.latvian.mods.kubejs.item.ItemBuilder"
 
@@ -1690,7 +1688,6 @@ public "addAttribute"(attribute: string, value: double, operation: $AttributeMod
  * This will turn into Unique Spellbook.
  */
 public "addSpell"(spell: $ISSKJSUtils$SpellHolder$$Type, spellLevel: integer): $CustomSpellBook$Builder
-public "createObject"(): $SpellBook
 /** Sets an affinity that will make this spell a +1 level boost. */
 public "setAffinitySpell"(affinitySpell: string): $CustomSpellBook$Builder
 /** Sets the maximum amount of spell slots the spell book can have. */

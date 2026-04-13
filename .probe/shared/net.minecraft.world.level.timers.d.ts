@@ -21,8 +21,8 @@ import { $TimerCallbacks$$Type } from "net.minecraft.world.level.timers.TimerCal
 import { $ListTag } from "net.minecraft.nbt.ListTag"
 
 export class $TimerQueue<T = any> {
-constructor(timerCallbacks0: $TimerCallbacks$$Type<T>, stream1: $Stream$$Type<$Dynamic$$Type<any>>)
 constructor(timerCallbacks0: $TimerCallbacks$$Type<T>)
+constructor(timerCallbacks0: $TimerCallbacks$$Type<T>, stream1: $Stream$$Type<$Dynamic$$Type<any>>)
 
 public "getEventsIds"(): $Set<string>
 public "remove"(string0: string): integer

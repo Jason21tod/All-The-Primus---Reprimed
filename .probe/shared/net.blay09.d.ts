@@ -320,8 +320,8 @@ import { $MultiBufferSource, $MultiBufferSource$$Type } from "net.minecraft.clie
 import { $PoseStack, $PoseStack$$Type } from "com.mojang.blaze3d.vertex.PoseStack"
 
 export class $BlockHighlightDrawEvent extends $BalmEvent {
-constructor(blockHitResult0: $BlockHitResult$$Type, poseStack1: $PoseStack$$Type, multiBufferSource2: $MultiBufferSource$$Type, camera3: $Camera$$Type)
 constructor()
+constructor(blockHitResult0: $BlockHitResult$$Type, poseStack1: $PoseStack$$Type, multiBufferSource2: $MultiBufferSource$$Type, camera3: $Camera$$Type)
 
 public "getCamera"(): $Camera
 public "getHitResult"(): $BlockHitResult
@@ -1018,8 +1018,8 @@ import { $BalmEvent } from "net.blay09.mods.balm.api.event.BalmEvent"
 import { $Screen, $Screen$$Type } from "net.minecraft.client.gui.screens.Screen"
 
 export class $ContainerScreenDrawEvent extends $BalmEvent {
-constructor(screen0: $Screen$$Type, guiGraphics1: $GuiGraphics$$Type, int2: integer, int3: integer)
 constructor()
+constructor(screen0: $Screen$$Type, guiGraphics1: $GuiGraphics$$Type, int2: integer, int3: integer)
 
 public "getGuiGraphics"(): $GuiGraphics
 public "getMouseX"(): integer
@@ -1529,6 +1529,7 @@ import { $StreamCodec } from "net.blay09.mods.balm.common.codec.StreamCodec"
 import { $MutableLoadedConfig$$Type } from "net.blay09.mods.balm.api.config.MutableLoadedConfig"
 import { $Codec } from "com.mojang.serialization.Codec"
 import { $ConfiguredProperty } from "net.blay09.mods.balm.api.config.schema.ConfiguredProperty"
+import { $ConfigSchemaImpl } from "net.blay09.mods.balm.api.config.schema.impl.ConfigSchemaImpl"
 import { $LoadedConfig$$Type } from "net.blay09.mods.balm.api.config.LoadedConfig"
 import { $Class } from "java.lang.Class"
 import { $FriendlyByteBuf } from "net.minecraft.network.FriendlyByteBuf"
@@ -1542,6 +1543,7 @@ public "comment"(): string
 public "defaultValue"(): T
 public "getRaw"(loadedConfig0: $LoadedConfig$$Type): T
 public "name"(): string
+public "parentSchema"(): $ConfigSchemaImpl
 public "setRaw"(mutableLoadedConfig0: $MutableLoadedConfig$$Type, t1: T): void
 public "streamCodec"(): $StreamCodec<$FriendlyByteBuf, T>
 public "synced"(): boolean
@@ -1734,8 +1736,8 @@ import { $BlockState, $BlockState$$Type } from "net.minecraft.world.level.block.
 import { $Player, $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $DigSpeedEvent extends $BalmEvent {
-constructor(player0: $Player$$Type, blockState1: $BlockState$$Type, float2: float)
 constructor()
+constructor(player0: $Player$$Type, blockState1: $BlockState$$Type, float2: float)
 
 public "getPlayer"(): $Player
 public "getSpeed"(): float
@@ -1956,8 +1958,8 @@ import { $BalmEvent } from "net.blay09.mods.balm.api.event.BalmEvent"
 import { $Screen, $Screen$$Type } from "net.minecraft.client.gui.screens.Screen"
 
 export class $ScreenDrawEvent extends $BalmEvent {
-constructor(screen0: $Screen$$Type, guiGraphics1: $GuiGraphics$$Type, int2: integer, int3: integer, float4: float)
 constructor()
+constructor(screen0: $Screen$$Type, guiGraphics1: $GuiGraphics$$Type, int2: integer, int3: integer, float4: float)
 
 public "getGuiGraphics"(): $GuiGraphics
 public "getMouseX"(): integer

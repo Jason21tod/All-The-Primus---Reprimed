@@ -300,8 +300,8 @@ public "agreeToTos"(): void
 public "backupsFor"(long0: long): $BackupList
 public "clientCompatible"(): $RealmsClient$CompatibleVersionResponse
 public "close"(long0: long): boolean
-public static "create"(minecraft0: $Minecraft$$Type): $RealmsClient
 public static "create"(): $RealmsClient
+public static "create"(minecraft0: $Minecraft$$Type): $RealmsClient
 public "deleteWorld"(long0: long): void
 public "deop"(long0: long, string1: string): $Ops
 public "fetchWorldTemplates"(int0: integer, int1: integer, worldType2: $RealmsServer$WorldType$$Type): $WorldTemplatePaginatedList

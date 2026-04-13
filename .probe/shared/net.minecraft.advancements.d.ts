@@ -13,8 +13,8 @@ static readonly "ANY": $ContextAwarePredicate
 public static "create"(...lootItemCondition0s: $LootItemCondition$$Type[]): $ContextAwarePredicate
 public static "fromElement"(string0: string, deserializationContext1: $DeserializationContext$$Type, jsonElement2: $JsonElement$$Type, lootContextParamSet3: $LootContextParamSet$$Type): $ContextAwarePredicate
 public "matches"(lootContext0: $LootContext$$Type): boolean
-public "toJson"(serializationContext0: $SerializationContext$$Type): $JsonElement
 public static "toJson"(contextAwarePredicate0s: $ContextAwarePredicate$$Type[], serializationContext1: $SerializationContext$$Type): $JsonElement
+public "toJson"(serializationContext0: $SerializationContext$$Type): $JsonElement
 get "compositePredicates"(): $Predicate<$LootContext>
 set "compositePredicates"(value: $Predicate$$Type<$LootContext$$Type>)
 }
@@ -291,8 +291,8 @@ constructor()
 
 public static "fromJson"(jsonElement0: $JsonElement$$Type): $EntityTypePredicate
 public "matches"(entityType0: $EntityType$$Type<any>): boolean
-public static "of"(tagKey0: $TagKey$$Type<$EntityType$$Type<any>>): $EntityTypePredicate
 public static "of"(entityType0: $EntityType$$Type<any>): $EntityTypePredicate
+public static "of"(tagKey0: $TagKey$$Type<$EntityType$$Type<any>>): $EntityTypePredicate
 public "serializeToJson"(): $JsonElement
 }
 }
@@ -324,26 +324,26 @@ export class $Advancement$Builder implements $IForgeAdvancementBuilder {
 constructor(resourceLocation0: $ResourceLocation$$Type, displayInfo1: $DisplayInfo$$Type, advancementRewards2: $AdvancementRewards$$Type, map3: $Map$$Type<string, $Criterion$$Type>, string4ss: string[][], boolean5: boolean)
 constructor(boolean0: boolean)
 
-public "addCriterion"(string0: string, criterion1: $Criterion$$Type): $Advancement$Builder
 public "addCriterion"(string0: string, criterionTriggerInstance1: $CriterionTriggerInstance$$Type): $Advancement$Builder
+public "addCriterion"(string0: string, criterion1: $Criterion$$Type): $Advancement$Builder
 public static "advancement"(): $Advancement$Builder
 public "build"(resourceLocation0: $ResourceLocation$$Type): $Advancement
 public "canBuild"(function0: $Function$$Type<$ResourceLocation$$Type, $Advancement>): boolean
 public "display"(displayInfo0: $DisplayInfo$$Type): $Advancement$Builder
-public "display"(itemLike0: $ItemLike$$Type, component1: $Component$$Type, component2: $Component$$Type, resourceLocation3: $ResourceLocation$$Type, frameType4: $FrameType$$Type, boolean5: boolean, boolean6: boolean, boolean7: boolean): $Advancement$Builder
 public "display"(itemStack0: $ItemStack$$Type, component1: $Component$$Type, component2: $Component$$Type, resourceLocation3: $ResourceLocation$$Type, frameType4: $FrameType$$Type, boolean5: boolean, boolean6: boolean, boolean7: boolean): $Advancement$Builder
+public "display"(itemLike0: $ItemLike$$Type, component1: $Component$$Type, component2: $Component$$Type, resourceLocation3: $ResourceLocation$$Type, frameType4: $FrameType$$Type, boolean5: boolean, boolean6: boolean, boolean7: boolean): $Advancement$Builder
+public static "fromJson"(jsonObject0: $JsonObject$$Type, deserializationContext1: $DeserializationContext$$Type, iContext2: $ICondition$IContext$$Type): $Advancement$Builder
 /** @deprecated */
 public static "fromJson"(jsonObject0: $JsonObject$$Type, deserializationContext1: $DeserializationContext$$Type): $Advancement$Builder
-public static "fromJson"(jsonObject0: $JsonObject$$Type, deserializationContext1: $DeserializationContext$$Type, iContext2: $ICondition$IContext$$Type): $Advancement$Builder
 public static "fromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $Advancement$Builder
 public "getCriteria"(): $Map<string, $Criterion>
-public "parent"(advancement0: $Advancement$$Type): $Advancement$Builder
 public "parent"(resourceLocation0: $ResourceLocation$$Type): $Advancement$Builder
+public "parent"(advancement0: $Advancement$$Type): $Advancement$Builder
 public static "recipeAdvancement"(): $Advancement$Builder
-public "requirements"(string0ss: string[][]): $Advancement$Builder
 public "requirements"(requirementsStrategy0: $RequirementsStrategy$$Type): $Advancement$Builder
-public "rewards"(advancementRewards0: $AdvancementRewards$$Type): $Advancement$Builder
+public "requirements"(string0ss: string[][]): $Advancement$Builder
 public "rewards"(builder0: $AdvancementRewards$Builder$$Type): $Advancement$Builder
+public "rewards"(advancementRewards0: $AdvancementRewards$$Type): $Advancement$Builder
 public "save"(consumer0: $Consumer$$Type<$Advancement$$Type>, string1: string): $Advancement
 public "save"(consumer0: $Consumer$$Type<$Advancement$$Type>, resourceLocation1: $ResourceLocation$$Type, existingFileHelper2: $ExistingFileHelper$$Type): $Advancement
 public "serializeToJson"(): $JsonObject
@@ -383,9 +383,9 @@ static readonly "ANY": $StatePropertiesPredicate
 
 public "checkState"(stateDefinition0: $StateDefinition$$Type<any, any>, consumer1: $Consumer$$Type<string>): void
 public static "fromJson"(jsonElement0: $JsonElement$$Type): $StatePropertiesPredicate
-public "matches"<S extends $StateHolder<any, S>>(stateDefinition0: $StateDefinition$$Type<any, S>, s1: S): boolean
-public "matches"(fluidState0: $FluidState$$Type): boolean
 public "matches"(blockState0: $BlockState$$Type): boolean
+public "matches"(fluidState0: $FluidState$$Type): boolean
+public "matches"<S extends $StateHolder<any, S>>(stateDefinition0: $StateDefinition$$Type<any, S>, s1: S): boolean
 public "serializeToJson"(): $JsonElement
 }
 }
@@ -628,8 +628,8 @@ export class $EntityPredicate implements $EntityPredicateAccessor {
 static readonly "ANY": $EntityPredicate
 
 public static "createContext"(serverPlayer0: $ServerPlayer$$Type, entity1: $Entity$$Type): $LootContext
-public static "fromJson"(jsonObject0: $JsonObject$$Type, string1: string, deserializationContext2: $DeserializationContext$$Type): $ContextAwarePredicate
 public static "fromJson"(jsonElement0: $JsonElement$$Type): $EntityPredicate
+public static "fromJson"(jsonObject0: $JsonObject$$Type, string1: string, deserializationContext2: $DeserializationContext$$Type): $ContextAwarePredicate
 public static "fromJsonArray"(jsonObject0: $JsonObject$$Type, string1: string, deserializationContext2: $DeserializationContext$$Type): $ContextAwarePredicate[]
 public "matches"(serverLevel0: $ServerLevel$$Type, vec31: $Vec3$$Type, entity2: $Entity$$Type): boolean
 public "matches"(serverPlayer0: $ServerPlayer$$Type, entity1: $Entity$$Type): boolean
@@ -797,9 +797,9 @@ constructor(compoundTag0: $CompoundTag$$Type)
 
 public static "fromJson"(jsonElement0: $JsonElement$$Type): $NbtPredicate
 public static "getEntityTagToCompare"(entity0: $Entity$$Type): $CompoundTag
+public "matches"(itemStack0: $ItemStack$$Type): boolean
 public "matches"(entity0: $Entity$$Type): boolean
 public "matches"(tag0: $Tag$$Type): boolean
-public "matches"(itemStack0: $ItemStack$$Type): boolean
 public "serializeToJson"(): $JsonElement
 }
 }
@@ -917,8 +917,8 @@ public "serializeToJson"(): $JsonElement
 
 declare module "net.minecraft.advancements.critereon.MobEffectsPredicate" {
 import { $JsonElement, $JsonElement$$Type } from "com.google.gson.JsonElement"
-import { $Entity$$Type } from "net.minecraft.world.entity.Entity"
 import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
+import { $Entity$$Type } from "net.minecraft.world.entity.Entity"
 import { $Map$$Type } from "java.util.Map"
 import { $MobEffectsPredicate$MobEffectInstancePredicate$$Type } from "net.minecraft.advancements.critereon.MobEffectsPredicate$MobEffectInstancePredicate"
 import { $MobEffectInstance$$Type } from "net.minecraft.world.effect.MobEffectInstance"
@@ -930,13 +930,13 @@ static readonly "ANY": $MobEffectsPredicate
 
 constructor(map0: $Map$$Type<$MobEffect$$Type, $MobEffectsPredicate$MobEffectInstancePredicate$$Type>)
 
-public "and"(mobEffect0: $MobEffect$$Type, mobEffectInstancePredicate1: $MobEffectsPredicate$MobEffectInstancePredicate$$Type): $MobEffectsPredicate
 public "and"(mobEffect0: $MobEffect$$Type): $MobEffectsPredicate
+public "and"(mobEffect0: $MobEffect$$Type, mobEffectInstancePredicate1: $MobEffectsPredicate$MobEffectInstancePredicate$$Type): $MobEffectsPredicate
 public static "effects"(): $MobEffectsPredicate
 public static "fromJson"(jsonElement0: $JsonElement$$Type): $MobEffectsPredicate
+public "matches"(livingEntity0: $LivingEntity$$Type): boolean
 public "matches"(entity0: $Entity$$Type): boolean
 public "matches"(map0: $Map$$Type<$MobEffect$$Type, $MobEffectInstance$$Type>): boolean
-public "matches"(livingEntity0: $LivingEntity$$Type): boolean
 public "serializeToJson"(): $JsonElement
 }
 }

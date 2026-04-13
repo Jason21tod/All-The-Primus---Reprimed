@@ -93,8 +93,8 @@ export interface $Byte2IntFunction extends $Function$0<byte, integer>, $IntUnary
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(byte0: byte): boolean
-"defaultReturnValue"(int0: integer): void
 "defaultReturnValue"(): integer
+"defaultReturnValue"(int0: integer): void
 /** @deprecated */
 "get"(object0: any): integer
 "get"(byte0: byte): integer
@@ -105,8 +105,6 @@ export interface $Byte2IntFunction extends $Function$0<byte, integer>, $IntUnary
 /** @deprecated */
 "put"(byte0: byte, integer1: integer): integer
 "remove"(byte0: byte): integer
-/** @deprecated */
-"remove"(object0: any): integer
 "size"(): integer
 }
 
@@ -186,8 +184,8 @@ export interface $Byte2CharFunction extends $Function$0<byte, character>, $IntUn
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(byte0: byte): boolean
-"defaultReturnValue"(char0: character): void
 "defaultReturnValue"(): character
+"defaultReturnValue"(char0: character): void
 /** @deprecated */
 "get"(object0: any): character
 "get"(byte0: byte): character
@@ -198,8 +196,6 @@ export interface $Byte2CharFunction extends $Function$0<byte, character>, $IntUn
 /** @deprecated */
 "put"(byte0: byte, character1: character): character
 "remove"(byte0: byte): character
-/** @deprecated */
-"remove"(object0: any): character
 "size"(): integer
 }
 
@@ -239,15 +235,17 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 export class $AbstractByteList extends $AbstractByteCollection implements $ByteList, $ByteStack {
 public "add"(int0: integer, byte1: byte): void
 /** @deprecated */
-public "add"(int0: integer, byte1: byte): void
-/** @deprecated */
 public "add"(byte0: byte): boolean
-public "addAll"(int0: integer, collection1: $Collection$$Type<byte>): boolean
+/** @deprecated */
+public "add"(int0: integer, byte1: byte): void
 public "addAll"(int0: integer, byteCollection1: $ByteCollection$$Type): boolean
-public "addAll"(byteList0: $ByteList$$Type): boolean
+public "addAll"(int0: integer, collection1: $Collection$$Type<byte>): boolean
 public "addAll"(int0: integer, byteList1: $ByteList$$Type): boolean
+public "addAll"(byteList0: $ByteList$$Type): boolean
 public "addElements"(int0: integer, byte1s: byte[]): void
 public "addElements"(int0: integer, byte1s: byte[], int2: integer, int3: integer): void
+public "addFirst"(byte0: byte): void
+public "addLast"(byte0: byte): void
 public "compareTo"(list0: $List$$Type<byte>): integer
 /** @deprecated */
 public "contains"(object0: any): boolean
@@ -258,6 +256,8 @@ public "forEach"(consumer0: $Consumer$$Type<byte>): void
 public "forEach"(intConsumer0: $IntConsumer$$Type): void
 public "getByte"(int0: integer): byte
 public "getElements"(int0: integer, byte1s: byte[], int2: integer, int3: integer): void
+public "getFirst"(): byte
+public "getLast"(): byte
 public "indexOf"(byte0: byte): integer
 /** @deprecated */
 public "indexOf"(object0: any): integer
@@ -266,29 +266,32 @@ public "intParallelStream"(): $IntStream
 public "intSpliterator"(): $IntSpliterator
 public "intStream"(): $IntStream
 public "isEmpty"(): boolean
+public "iterator"(): $ByteListIterator
 public "lastIndexOf"(byte0: byte): integer
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
 public "listIterator"(): $ByteListIterator
 public "listIterator"(int0: integer): $ByteListIterator
-public static "of"(...byte0s: byte[]): $ByteList
-public static "of"(byte0: byte): $ByteList
-public static "of"(byte0: byte, byte1: byte): $ByteList
 public static "of"(): $ByteList
+public static "of"(byte0: byte, byte1: byte): $ByteList
+public static "of"(byte0: byte): $ByteList
+public static "of"(...byte0s: byte[]): $ByteList
 public static "of"(byte0: byte, byte1: byte, byte2: byte): $ByteList
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 /** @deprecated */
 public "parallelStream"(): $Stream<byte>
+/** @deprecated */
+public "peek"(int0: integer): byte
 public "peekByte"(int0: integer): byte
 public "popByte"(): byte
 public "push"(byte0: byte): void
@@ -298,13 +301,15 @@ public "push"(byte0: byte): void
 public "remove"(object0: any): boolean
 public "removeByte"(int0: integer): byte
 public "removeElements"(int0: integer, int1: integer): void
-public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
-public "removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
+public "removeFirst"(): byte
 /** @deprecated */
 public "removeIf"(predicate0: $Predicate$$Type<byte>): boolean
-public "replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
+public "removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
+public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
+public "removeLast"(): byte
 /** @deprecated */
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<byte>): void
+public "replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
 public "replaceAll"(byteUnaryOperator0: $ByteUnaryOperator$$Type): void
 public "set"(int0: integer, byte1: byte): byte
 /** @deprecated */
@@ -322,12 +327,12 @@ public "stream"(): $Stream<byte>
 public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-/** @deprecated */
-public "top"(): byte
 public "topByte"(): byte
+public "unstableSort"(byteComparator0: $ByteComparator$$Type): void
 /** @deprecated */
 public "unstableSort"(comparator0: $Comparator$$Type<byte>): void
-public "unstableSort"(byteComparator0: $ByteComparator$$Type): void
+get "first"(): byte
+get "last"(): byte
 get "empty"(): boolean
 set "elements"(value: byte[])
 }
@@ -398,14 +403,14 @@ export interface $Byte2ReferenceFunction<V = any> extends $Function$0<byte, V>, 
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(byte0: byte): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(byte0: byte): V
+"getOrDefault"(byte0: byte, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(byte0: byte, v1: V): V
 /** @deprecated */
 "put"(byte0: byte, v1: V): V
 "put"(byte0: byte, v1: V): V
@@ -489,8 +494,8 @@ export interface $Byte2LongFunction extends $Function$0<byte, long>, $IntToLongF
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(byte0: byte): boolean
-"defaultReturnValue"(long0: long): void
 "defaultReturnValue"(): long
+"defaultReturnValue"(long0: long): void
 /** @deprecated */
 "get"(object0: any): long
 "get"(byte0: byte): long
@@ -501,8 +506,6 @@ export interface $Byte2LongFunction extends $Function$0<byte, long>, $IntToLongF
 /** @deprecated */
 "put"(byte0: byte, long1: long): long
 "remove"(byte0: byte): long
-/** @deprecated */
-"remove"(object0: any): long
 "size"(): integer
 }
 
@@ -531,8 +534,8 @@ import { $IntSpliterator } from "it.unimi.dsi.fastutil.ints.IntSpliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export interface $ByteCollection extends $Collection<byte>, $ByteIterable {
-/** @deprecated */
 "add"(byte0: byte): boolean
+/** @deprecated */
 "add"(byte0: byte): boolean
 "addAll"(byteCollection0: $ByteCollection$$Type): boolean
 "addAll"(collection0: $Collection$$Type<byte>): boolean
@@ -561,10 +564,10 @@ export interface $ByteCollection extends $Collection<byte>, $ByteIterable {
 "remove"(object0: any): boolean
 "removeAll"(byteCollection0: $ByteCollection$$Type): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
-"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
-"removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<byte>): boolean
+"removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
+"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 "retainAll"(byteCollection0: $ByteCollection$$Type): boolean
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
@@ -572,11 +575,11 @@ export interface $ByteCollection extends $Collection<byte>, $ByteIterable {
 "stream"(): $Stream<byte>
 "toArray"(byte0s: byte[]): byte[]
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toByteArray"(): byte[]
+"toArray"(): any[]
 /** @deprecated */
 "toByteArray"(byte0s: byte[]): byte[]
+"toByteArray"(): byte[]
 get "empty"(): boolean
 }
 
@@ -597,8 +600,8 @@ import { $IntPredicate$$Type } from "java.util.function.IntPredicate"
 import { $RandomAccess } from "java.util.RandomAccess"
 import { $ByteIterator$$Type } from "it.unimi.dsi.fastutil.bytes.ByteIterator"
 import { $IntIterator } from "it.unimi.dsi.fastutil.ints.IntIterator"
-import { $ByteList, $ByteList$$Type } from "it.unimi.dsi.fastutil.bytes.ByteList"
 import { $ByteCollection$$Type } from "it.unimi.dsi.fastutil.bytes.ByteCollection"
+import { $ByteList, $ByteList$$Type } from "it.unimi.dsi.fastutil.bytes.ByteList"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 import { $Cloneable } from "java.lang.Cloneable"
 import { $Iterator$$Type } from "java.util.Iterator"
@@ -618,23 +621,24 @@ import { $AbstractByteList } from "it.unimi.dsi.fastutil.bytes.AbstractByteList"
 export class $ByteArrayList extends $AbstractByteList implements $RandomAccess, $Cloneable, $Serializable {
 static readonly "DEFAULT_INITIAL_CAPACITY": integer
 
-constructor(byteList0: $ByteList$$Type)
+constructor(byteIterator0: $ByteIterator$$Type)
 constructor(byteCollection0: $ByteCollection$$Type)
-constructor(collection0: $Collection$$Type<byte>)
+constructor(byteList0: $ByteList$$Type)
 constructor(byte0s: byte[])
 constructor(byte0s: byte[], int1: integer, int2: integer)
 constructor(iterator0: $Iterator$$Type<byte>)
-constructor(byteIterator0: $ByteIterator$$Type)
-constructor(int0: integer)
+constructor(collection0: $Collection$$Type<byte>)
 constructor()
+constructor(int0: integer)
 
 /** @deprecated */
-public "add"(int0: integer, byte1: byte): void
-/** @deprecated */
 public "add"(byte0: byte): boolean
+/** @deprecated */
+public "add"(int0: integer, byte1: byte): void
 public "addAll"(int0: integer, byteList1: $ByteList$$Type): boolean
 public "addAll"(byteList0: $ByteList$$Type): boolean
-public "clone"(): $ByteArrayList
+public "addFirst"(byte0: byte): void
+public "addLast"(byte0: byte): void
 public "compareTo"(byteArrayList0: $ByteArrayList$$Type): integer
 /** @deprecated */
 public "contains"(object0: any): boolean
@@ -646,6 +650,8 @@ public "equals"(byteArrayList0: $ByteArrayList$$Type): boolean
 public "forEach"(consumer0: $Consumer$$Type<byte>): void
 public "forEach"(intConsumer0: $IntConsumer$$Type): void
 public "getByte"(int0: integer): byte
+public "getFirst"(): byte
+public "getLast"(): byte
 /** @deprecated */
 public "indexOf"(object0: any): integer
 public "intIterator"(): $IntIterator
@@ -654,35 +660,39 @@ public "intSpliterator"(): $IntSpliterator
 public "intStream"(): $IntStream
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
-public static "of"(...byte0s: byte[]): $ByteArrayList
 public static "of"(): $ByteArrayList
-public static "of"(byte0: byte): $ByteList
+public static "of"(...byte0s: byte[]): $ByteArrayList
 public static "of"(byte0: byte, byte1: byte): $ByteList
+public static "of"(byte0: byte): $ByteList
 public static "of"(byte0: byte, byte1: byte, byte2: byte): $ByteList
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 /** @deprecated */
 public "parallelStream"(): $Stream<byte>
+/** @deprecated */
+public "peek"(int0: integer): byte
 /** @deprecated */
 public "push"(byte0: byte): void
 /** @deprecated */
 public "remove"(object0: any): boolean
-public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
-public "removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
+public "removeFirst"(): byte
 /** @deprecated */
 public "removeIf"(predicate0: $Predicate$$Type<byte>): boolean
-public "replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
+public "removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
+public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
+public "removeLast"(): byte
 /** @deprecated */
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<byte>): void
+public "replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
 public "replaceAll"(byteUnaryOperator0: $ByteUnaryOperator$$Type): void
 /** @deprecated */
 public "set"(int0: integer, byte1: byte): byte
@@ -697,15 +707,15 @@ public "stream"(): $Stream<byte>
 public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-/** @deprecated */
-public "top"(): byte
-public "trim"(int0: integer): void
 public "trim"(): void
+public "trim"(int0: integer): void
 public "unstableSort"(byteComparator0: $ByteComparator$$Type): void
 /** @deprecated */
 public "unstableSort"(comparator0: $Comparator$$Type<byte>): void
-public static "wrap"(byte0s: byte[], int1: integer): $ByteArrayList
 public static "wrap"(byte0s: byte[]): $ByteArrayList
+public static "wrap"(byte0s: byte[], int1: integer): $ByteArrayList
+get "first"(): byte
+get "last"(): byte
 }
 }
 
@@ -797,8 +807,8 @@ export interface $Byte2FloatFunction extends $Function$0<byte, float>, $IntToDou
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(byte0: byte): boolean
-"defaultReturnValue"(float0: float): void
 "defaultReturnValue"(): float
+"defaultReturnValue"(float0: float): void
 /** @deprecated */
 "get"(object0: any): float
 "get"(byte0: byte): float
@@ -809,8 +819,6 @@ export interface $Byte2FloatFunction extends $Function$0<byte, float>, $IntToDou
 /** @deprecated */
 "put"(byte0: byte, float1: float): float
 "remove"(byte0: byte): float
-/** @deprecated */
-"remove"(object0: any): float
 "size"(): integer
 }
 
@@ -846,19 +854,21 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export interface $ByteList extends $List<byte>, $Comparable<$List<byte>>, $ByteCollection {
 /** @deprecated */
-"add"(int0: integer, byte1: byte): void
 "add"(byte0: byte): boolean
-"add"(int0: integer, byte1: byte): void
+"add"(byte0: byte): boolean
 /** @deprecated */
-"add"(byte0: byte): boolean
-"addAll"(byteList0: $ByteList$$Type): boolean
+"add"(int0: integer, byte1: byte): void
+"add"(int0: integer, byte1: byte): void
 "addAll"(int0: integer, byteCollection1: $ByteCollection$$Type): boolean
 "addAll"(int0: integer, byteList1: $ByteList$$Type): boolean
-"addAll"(int0: integer, collection1: $Collection$$Type<byte>): boolean
+"addAll"(byteList0: $ByteList$$Type): boolean
 "addAll"(collection0: $Collection$$Type<byte>): boolean
+"addAll"(int0: integer, collection1: $Collection$$Type<byte>): boolean
 "addAll"(byteCollection0: $ByteCollection$$Type): boolean
 "addElements"(int0: integer, byte1s: byte[], int2: integer, int3: integer): void
 "addElements"(int0: integer, byte1s: byte[]): void
+"addFirst"(byte0: byte): void
+"addLast"(byte0: byte): void
 "clear"(): void
 "compareTo"(list0: $List$$Type<byte>): integer
 /** @deprecated */
@@ -873,6 +883,8 @@ export interface $ByteList extends $List<byte>, $Comparable<$List<byte>>, $ByteC
 "forEach"(intConsumer0: $IntConsumer$$Type): void
 "getByte"(int0: integer): byte
 "getElements"(int0: integer, byte1s: byte[], int2: integer, int3: integer): void
+"getFirst"(): byte
+"getLast"(): byte
 "hashCode"(): integer
 "indexOf"(byte0: byte): integer
 /** @deprecated */
@@ -894,13 +906,15 @@ export interface $ByteList extends $List<byte>, $Comparable<$List<byte>>, $ByteC
 "removeAll"(byteCollection0: $ByteCollection$$Type): boolean
 "removeByte"(int0: integer): byte
 "removeElements"(int0: integer, int1: integer): void
-"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
-"removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
+"removeFirst"(): byte
 /** @deprecated */
 "removeIf"(predicate0: $Predicate$$Type<byte>): boolean
-"replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
+"removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
+"removeIf"(intPredicate0: $IntPredicate$$Type): boolean
+"removeLast"(): byte
 /** @deprecated */
 "replaceAll"(unaryOperator0: $UnaryOperator$$Type<byte>): void
+"replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
 "replaceAll"(byteUnaryOperator0: $ByteUnaryOperator$$Type): void
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "retainAll"(byteCollection0: $ByteCollection$$Type): boolean
@@ -908,8 +922,8 @@ export interface $ByteList extends $List<byte>, $Comparable<$List<byte>>, $ByteC
 "set"(int0: integer, byte1: byte): byte
 "set"(int0: integer, byte1: byte): byte
 "setElements"(int0: integer, byte1s: byte[]): void
-"setElements"(int0: integer, byte1s: byte[], int2: integer, int3: integer): void
 "setElements"(byte0s: byte[]): void
+"setElements"(int0: integer, byte1s: byte[], int2: integer, int3: integer): void
 "size"(int0: integer): void
 "size"(): integer
 "sort"(byteComparator0: $ByteComparator$$Type): void
@@ -917,58 +931,59 @@ export interface $ByteList extends $List<byte>, $Comparable<$List<byte>>, $ByteC
 "sort"(comparator0: $Comparator$$Type<byte>): void
 /** @deprecated */
 "stream"(): $Stream<byte>
-"subList"(int0: integer, int1: integer): $ByteList
 "toArray"(): any[]
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(byte0s: byte[]): byte[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toByteArray"(): byte[]
 /** @deprecated */
 "toByteArray"(byte0s: byte[]): byte[]
+"toByteArray"(): byte[]
+"unstableSort"(byteComparator0: $ByteComparator$$Type): void
 /** @deprecated */
 "unstableSort"(comparator0: $Comparator$$Type<byte>): void
-"unstableSort"(byteComparator0: $ByteComparator$$Type): void
+get "first"(): byte
+get "last"(): byte
 get "empty"(): boolean
 set "elements"(value: byte[])
 }
 
 export namespace $ByteList {
 function copyOf<E>(collection0: $Collection$$Type<E>): $List<E>
-function of(...byte0s: byte[]): $ByteList
-function of(byte0: byte): $ByteList
-function of(byte0: byte, byte1: byte): $ByteList
 function of(): $ByteList
+function of(byte0: byte, byte1: byte): $ByteList
+function of(byte0: byte): $ByteList
+function of(...byte0s: byte[]): $ByteList
 function of(byte0: byte, byte1: byte, byte2: byte): $ByteList
-function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E): $List<E>
-function of<E>(e0: E, e1: E): $List<E>
 function of<E>(e0: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-function of<E>(...e0s: E[]): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+function of<E>(...e0s: E[]): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 export abstract class $ByteList$$Static implements $ByteList {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
-static "of"(...byte0s: byte[]): $ByteList
-static "of"(byte0: byte): $ByteList
-static "of"(byte0: byte, byte1: byte): $ByteList
 static "of"(): $ByteList
+static "of"(byte0: byte, byte1: byte): $ByteList
+static "of"(byte0: byte): $ByteList
+static "of"(...byte0s: byte[]): $ByteList
 static "of"(byte0: byte, byte1: byte, byte2: byte): $ByteList
-static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-static "of"<E>(e0: E, e1: E): $List<E>
 static "of"<E>(e0: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-static "of"<E>(...e0s: E[]): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+static "of"<E>(...e0s: E[]): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 }
 
@@ -1090,14 +1105,14 @@ export interface $Byte2ObjectFunction<V = any> extends $Function$0<byte, V>, $In
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(byte0: byte): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(byte0: byte): V
+"getOrDefault"(byte0: byte, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(byte0: byte, v1: V): V
 /** @deprecated */
 "put"(byte0: byte, v1: V): V
 "put"(byte0: byte, v1: V): V
@@ -1183,8 +1198,8 @@ export interface $Byte2BooleanFunction extends $Function$0<byte, boolean>, $IntP
 "containsKey"(byte0: byte): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
+"defaultReturnValue"(boolean0: boolean): void
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(byte0: byte): boolean
@@ -1193,8 +1208,8 @@ export interface $Byte2BooleanFunction extends $Function$0<byte, boolean>, $IntP
 "getOrDefault"(byte0: byte, boolean1: boolean): boolean
 "negate"(): $IntPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
-/** @deprecated */
 "put"(byte0: byte, boolean1: boolean): boolean
+/** @deprecated */
 "put"(byte0: byte, boolean1: boolean): boolean
 "remove"(byte0: byte): boolean
 "size"(): integer
@@ -1278,8 +1293,8 @@ export interface $Byte2ShortFunction extends $Function$0<byte, short>, $IntUnary
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(byte0: byte): boolean
-"defaultReturnValue"(short0: short): void
 "defaultReturnValue"(): short
+"defaultReturnValue"(short0: short): void
 /** @deprecated */
 "get"(object0: any): short
 "get"(byte0: byte): short
@@ -1290,8 +1305,6 @@ export interface $Byte2ShortFunction extends $Function$0<byte, short>, $IntUnary
 /** @deprecated */
 "put"(byte0: byte, short1: short): short
 "remove"(byte0: byte): short
-/** @deprecated */
-"remove"(object0: any): short
 "size"(): integer
 }
 
@@ -1369,8 +1382,8 @@ export interface $Byte2DoubleFunction extends $Function$0<byte, double>, $IntToD
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(byte0: byte): boolean
-"defaultReturnValue"(double0: double): void
 "defaultReturnValue"(): double
+"defaultReturnValue"(double0: double): void
 /** @deprecated */
 "get"(object0: any): double
 "get"(byte0: byte): double
@@ -1381,8 +1394,6 @@ export interface $Byte2DoubleFunction extends $Function$0<byte, double>, $IntToD
 /** @deprecated */
 "put"(byte0: byte, double1: double): double
 "remove"(byte0: byte): double
-/** @deprecated */
-"remove"(object0: any): double
 "size"(): integer
 }
 
@@ -1537,18 +1548,18 @@ public "intStream"(): $IntStream
 public "parallelStream"(): $Stream<byte>
 public "rem"(byte0: byte): boolean
 public "removeAll"(byteCollection0: $ByteCollection$$Type): boolean
-public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
-public "removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
 /** @deprecated */
 public "removeIf"(predicate0: $Predicate$$Type<byte>): boolean
+public "removeIf"(bytePredicate0: $BytePredicate$$Type): boolean
+public "removeIf"(intPredicate0: $IntPredicate$$Type): boolean
 public "retainAll"(byteCollection0: $ByteCollection$$Type): boolean
 /** @deprecated */
 public "stream"(): $Stream<byte>
 public "toArray"(byte0s: byte[]): byte[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+public "toByteArray"(): byte[]
 /** @deprecated */
 public "toByteArray"(byte0s: byte[]): byte[]
-public "toByteArray"(): byte[]
 }
 }
 
@@ -1557,13 +1568,13 @@ import { $Stack } from "it.unimi.dsi.fastutil.Stack"
 
 export interface $ByteStack extends $Stack<byte> {
 "isEmpty"(): boolean
+/** @deprecated */
+"peek"(int0: integer): byte
 "peekByte"(int0: integer): byte
 "popByte"(): byte
-/** @deprecated */
-"push"(byte0: byte): void
 "push"(byte0: byte): void
 /** @deprecated */
-"top"(): byte
+"push"(byte0: byte): void
 "topByte"(): byte
 get "empty"(): boolean
 }
@@ -1683,7 +1694,6 @@ export interface $BytePredicate extends $Predicate<byte>, $IntPredicate {
 "and"(bytePredicate0: $BytePredicate$$Type): $BytePredicate
 /** @deprecated */
 "and"(predicate0: $Predicate$$Type<byte>): $Predicate<byte>
-"negate"(): $BytePredicate
 "or"(bytePredicate0: $BytePredicate$$Type): $BytePredicate
 "or"(intPredicate0: $IntPredicate$$Type): $BytePredicate
 /** @deprecated */

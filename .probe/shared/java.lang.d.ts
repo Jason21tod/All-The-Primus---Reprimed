@@ -5,6 +5,7 @@ export interface $CharSequence {
 "charAt"(int0: integer): character
 "chars"(): $IntStream
 "codePoints"(): $IntStream
+"getChars"(int0: integer, int1: integer, char2s: character[], int3: integer): void
 "isEmpty"(): boolean
 "length"(): integer
 "subSequence"(int0: integer, int1: integer): charseq
@@ -110,6 +111,7 @@ static readonly "MIN_VALUE": float
 static readonly "NEGATIVE_INFINITY": float
 static readonly "NaN": float
 static readonly "POSITIVE_INFINITY": float
+static readonly "PRECISION": integer
 static readonly "SIZE": integer
 static readonly "TYPE": $Class<float>
 
@@ -123,15 +125,17 @@ constructor(float0: float)
 public static "compare"(float0: float, float1: float): integer
 public "compareTo"(float0: float): integer
 public "describeConstable"(): $Optional<float>
+public static "float16ToFloat"(short0: short): float
+public static "floatToFloat16"(float0: float): short
 public static "floatToIntBits"(float0: float): integer
 public static "floatToRawIntBits"(float0: float): integer
 public static "hashCode"(float0: float): integer
 public static "intBitsToFloat"(int0: integer): float
 public static "isFinite"(float0: float): boolean
-public "isInfinite"(): boolean
 public static "isInfinite"(float0: float): boolean
-public "isNaN"(): boolean
+public "isInfinite"(): boolean
 public static "isNaN"(float0: float): boolean
+public "isNaN"(): boolean
 public static "max"(float0: float, float1: float): float
 public static "min"(float0: float, float1: float): float
 public static "parseFloat"(string0: string): float
@@ -139,8 +143,8 @@ public "resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): float
 public static "sum"(float0: float, float1: float): float
 public static "toHexString"(float0: float): string
 public static "toString"(float0: float): string
-public static "valueOf"(string0: string): float
 public static "valueOf"(float0: float): float
+public static "valueOf"(string0: string): float
 get "infinite"(): boolean
 get "naN"(): boolean
 }
@@ -263,20 +267,20 @@ constructor(char0: character)
 
 public static "charCount"(int0: integer): integer
 public "charValue"(): character
-public static "codePointAt"(char0s: character[], int1: integer): integer
-public static "codePointAt"(char0s: character[], int1: integer, int2: integer): integer
 public static "codePointAt"(charSequence0: charseq, int1: integer): integer
+public static "codePointAt"(char0s: character[], int1: integer, int2: integer): integer
+public static "codePointAt"(char0s: character[], int1: integer): integer
 public static "codePointBefore"(charSequence0: charseq, int1: integer): integer
 public static "codePointBefore"(char0s: character[], int1: integer): integer
 public static "codePointBefore"(char0s: character[], int1: integer, int2: integer): integer
-public static "codePointCount"(char0s: character[], int1: integer, int2: integer): integer
 public static "codePointCount"(charSequence0: charseq, int1: integer, int2: integer): integer
+public static "codePointCount"(char0s: character[], int1: integer, int2: integer): integer
 public static "codePointOf"(string0: string): integer
 public static "compare"(char0: character, char1: character): integer
 public "compareTo"(character0: character): integer
 public "describeConstable"(): $Optional<$DynamicConstantDesc<character>>
-public static "digit"(int0: integer, int1: integer): integer
 public static "digit"(char0: character, int1: integer): integer
+public static "digit"(int0: integer, int1: integer): integer
 public static "forDigit"(int0: integer, int1: integer): character
 public static "getDirectionality"(char0: character): byte
 public static "getDirectionality"(int0: integer): byte
@@ -289,15 +293,21 @@ public static "hashCode"(char0: character): integer
 public static "highSurrogate"(int0: integer): character
 public static "isAlphabetic"(int0: integer): boolean
 public static "isBmpCodePoint"(int0: integer): boolean
-public static "isDefined"(int0: integer): boolean
 public static "isDefined"(char0: character): boolean
-public static "isDigit"(int0: integer): boolean
+public static "isDefined"(int0: integer): boolean
 public static "isDigit"(char0: character): boolean
+public static "isDigit"(int0: integer): boolean
+public static "isEmoji"(int0: integer): boolean
+public static "isEmojiComponent"(int0: integer): boolean
+public static "isEmojiModifier"(int0: integer): boolean
+public static "isEmojiModifierBase"(int0: integer): boolean
+public static "isEmojiPresentation"(int0: integer): boolean
+public static "isExtendedPictographic"(int0: integer): boolean
 public static "isHighSurrogate"(char0: character): boolean
 public static "isISOControl"(int0: integer): boolean
 public static "isISOControl"(char0: character): boolean
-public static "isIdentifierIgnorable"(char0: character): boolean
 public static "isIdentifierIgnorable"(int0: integer): boolean
+public static "isIdentifierIgnorable"(char0: character): boolean
 public static "isIdeographic"(int0: integer): boolean
 public static "isJavaIdentifierPart"(char0: character): boolean
 public static "isJavaIdentifierPart"(int0: integer): boolean
@@ -312,10 +322,10 @@ public static "isLetter"(int0: integer): boolean
 public static "isLetterOrDigit"(int0: integer): boolean
 public static "isLetterOrDigit"(char0: character): boolean
 public static "isLowSurrogate"(char0: character): boolean
-public static "isLowerCase"(int0: integer): boolean
 public static "isLowerCase"(char0: character): boolean
-public static "isMirrored"(int0: integer): boolean
+public static "isLowerCase"(int0: integer): boolean
 public static "isMirrored"(char0: character): boolean
+public static "isMirrored"(int0: integer): boolean
 /** @deprecated */
 public static "isSpace"(char0: character): boolean
 public static "isSpaceChar"(char0: character): boolean
@@ -325,30 +335,30 @@ public static "isSurrogate"(char0: character): boolean
 public static "isSurrogatePair"(char0: character, char1: character): boolean
 public static "isTitleCase"(int0: integer): boolean
 public static "isTitleCase"(char0: character): boolean
-public static "isUnicodeIdentifierPart"(char0: character): boolean
 public static "isUnicodeIdentifierPart"(int0: integer): boolean
-public static "isUnicodeIdentifierStart"(char0: character): boolean
+public static "isUnicodeIdentifierPart"(char0: character): boolean
 public static "isUnicodeIdentifierStart"(int0: integer): boolean
-public static "isUpperCase"(char0: character): boolean
+public static "isUnicodeIdentifierStart"(char0: character): boolean
 public static "isUpperCase"(int0: integer): boolean
+public static "isUpperCase"(char0: character): boolean
 public static "isValidCodePoint"(int0: integer): boolean
-public static "isWhitespace"(int0: integer): boolean
 public static "isWhitespace"(char0: character): boolean
+public static "isWhitespace"(int0: integer): boolean
 public static "lowSurrogate"(int0: integer): character
-public static "offsetByCodePoints"(charSequence0: charseq, int1: integer, int2: integer): integer
 public static "offsetByCodePoints"(char0s: character[], int1: integer, int2: integer, int3: integer, int4: integer): integer
+public static "offsetByCodePoints"(charSequence0: charseq, int1: integer, int2: integer): integer
 public static "reverseBytes"(char0: character): character
 public static "toChars"(int0: integer): character[]
 public static "toChars"(int0: integer, char1s: character[], int2: integer): integer
 public static "toCodePoint"(char0: character, char1: character): integer
-public static "toLowerCase"(int0: integer): integer
 public static "toLowerCase"(char0: character): character
+public static "toLowerCase"(int0: integer): integer
 public static "toString"(int0: integer): string
 public static "toString"(char0: character): string
 public static "toTitleCase"(char0: character): character
 public static "toTitleCase"(int0: integer): integer
-public static "toUpperCase"(char0: character): character
 public static "toUpperCase"(int0: integer): integer
+public static "toUpperCase"(char0: character): character
 public static "valueOf"(char0: character): character
 }
 }
@@ -367,11 +377,12 @@ export abstract class $AutoCloseable$$Static implements $AutoCloseable {
 }
 
 declare module "java.lang.StringBuilder" {
+import { $Appendable } from "java.lang.Appendable"
 import { $AbstractStringBuilder } from "java.lang.AbstractStringBuilder"
 import { $Comparable } from "java.lang.Comparable"
 import { $Serializable } from "java.io.Serializable"
 
-export class $StringBuilder extends $AbstractStringBuilder implements $Serializable, $Comparable<$StringBuilder>, charseq {
+export class $StringBuilder extends $AbstractStringBuilder implements $Appendable, $Serializable, $Comparable<$StringBuilder>, charseq {
 constructor(charSequence0: charseq)
 constructor(string0: string)
 constructor(int0: integer)
@@ -381,14 +392,20 @@ public "appendCodePoint"(int0: integer): $StringBuilder
 public static "compare"(charSequence0: charseq, charSequence1: charseq): integer
 public "compareTo"(stringBuilder0: $StringBuilder$$Type): integer
 public "deleteCharAt"(int0: integer): $StringBuilder
-public "insert"(int0: integer, long1: long): $StringBuilder
-public "insert"(int0: integer, int1: integer): $StringBuilder
-public "insert"(int0: integer, charSequence1: charseq, int2: integer, int3: integer): $StringBuilder
 public "insert"(int0: integer, charSequence1: charseq): $StringBuilder
+public "insert"(int0: integer, string1: string): $StringBuilder
 public "insert"(int0: integer, char1s: character[]): $StringBuilder
-public "insert"(int0: integer, boolean1: boolean): $StringBuilder
+public "insert"(int0: integer, int1: integer): $StringBuilder
+public "insert"(int0: integer, double1: double): $StringBuilder
+public "insert"(int0: integer, float1: float): $StringBuilder
+public "insert"(int0: integer, long1: long): $StringBuilder
 public "insert"(int0: integer, char1: character): $StringBuilder
+public "insert"(int0: integer, boolean1: boolean): $StringBuilder
+public "insert"(int0: integer, charSequence1: charseq, int2: integer, int3: integer): $StringBuilder
 public "isEmpty"(): boolean
+public "repeat"(int0: integer, int1: integer): $StringBuilder
+public "replace"(int0: integer, int1: integer, string2: string): $StringBuilder
+public "reverse"(): $StringBuilder
 get "empty"(): boolean
 }
 }
@@ -425,12 +442,13 @@ public static "toString"(byte0: byte): string
 public static "toUnsignedInt"(byte0: byte): integer
 public static "toUnsignedLong"(byte0: byte): long
 public static "valueOf"(string0: string): byte
-public static "valueOf"(byte0: byte): byte
 public static "valueOf"(string0: string, int1: integer): byte
+public static "valueOf"(byte0: byte): byte
 }
 }
 
 declare module "java.lang.Integer" {
+import { $MethodHandles$Lookup$$Type } from "java.lang.invoke.MethodHandles$Lookup"
 import { $Constable } from "java.lang.constant.Constable"
 import { $ConstantDesc } from "java.lang.constant.ConstantDesc"
 import { $Optional } from "java.util.Optional"
@@ -446,17 +464,19 @@ static readonly "SIZE": integer
 static readonly "TYPE": $Class<integer>
 
 /** @deprecated */
-constructor(string0: string)
-/** @deprecated */
 constructor(int0: integer)
+/** @deprecated */
+constructor(string0: string)
 
 public static "bitCount"(int0: integer): integer
 public static "compare"(int0: integer, int1: integer): integer
 public "compareTo"(integer0: integer): integer
 public static "compareUnsigned"(int0: integer, int1: integer): integer
+public static "compress"(int0: integer, int1: integer): integer
 public static "decode"(string0: string): integer
 public "describeConstable"(): $Optional<integer>
 public static "divideUnsigned"(int0: integer, int1: integer): integer
+public static "expand"(int0: integer, int1: integer): integer
 public static "getInteger"(string0: string, integer1: integer): integer
 public static "getInteger"(string0: string): integer
 public static "getInteger"(string0: string, int1: integer): integer
@@ -467,13 +487,14 @@ public static "max"(int0: integer, int1: integer): integer
 public static "min"(int0: integer, int1: integer): integer
 public static "numberOfLeadingZeros"(int0: integer): integer
 public static "numberOfTrailingZeros"(int0: integer): integer
-public static "parseInt"(string0: string, int1: integer): integer
 public static "parseInt"(charSequence0: charseq, int1: integer, int2: integer, int3: integer): integer
 public static "parseInt"(string0: string): integer
+public static "parseInt"(string0: string, int1: integer): integer
 public static "parseUnsignedInt"(string0: string, int1: integer): integer
-public static "parseUnsignedInt"(charSequence0: charseq, int1: integer, int2: integer, int3: integer): integer
 public static "parseUnsignedInt"(string0: string): integer
+public static "parseUnsignedInt"(charSequence0: charseq, int1: integer, int2: integer, int3: integer): integer
 public static "remainderUnsigned"(int0: integer, int1: integer): integer
+public "resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): integer
 public static "reverse"(int0: integer): integer
 public static "reverseBytes"(int0: integer): integer
 public static "rotateLeft"(int0: integer, int1: integer): integer
@@ -486,11 +507,11 @@ public static "toOctalString"(int0: integer): string
 public static "toString"(int0: integer): string
 public static "toString"(int0: integer, int1: integer): string
 public static "toUnsignedLong"(int0: integer): long
-public static "toUnsignedString"(int0: integer, int1: integer): string
 public static "toUnsignedString"(int0: integer): string
+public static "toUnsignedString"(int0: integer, int1: integer): string
+public static "valueOf"(string0: string): integer
 public static "valueOf"(int0: integer): integer
 public static "valueOf"(string0: string, int1: integer): integer
-public static "valueOf"(string0: string): integer
 }
 }
 
@@ -514,13 +535,13 @@ import { $Comparator } from "java.util.Comparator"
 export class $String implements $Serializable, $Comparable<string>, charseq, $Constable, $ConstantDesc {
 static readonly "CASE_INSENSITIVE_ORDER": $Comparator<string>
 
-constructor(stringBuffer0: $StringBuffer$$Type)
 constructor(stringBuilder0: $StringBuilder$$Type)
 constructor(byte0s: byte[], int1: integer, int2: integer, charset3: $Charset$$Type)
 constructor(byte0s: byte[], string1: string)
 constructor(byte0s: byte[], charset1: $Charset$$Type)
 constructor(byte0s: byte[], int1: integer, int2: integer)
 constructor(byte0s: byte[])
+constructor(stringBuffer0: $StringBuffer$$Type)
 constructor(char0s: character[], int1: integer, int2: integer)
 constructor(char0s: character[])
 constructor(string0: string)
@@ -543,35 +564,37 @@ public "compareTo"(string0: string): integer
 public "compareToIgnoreCase"(string0: string): integer
 public "concat"(string0: string): string
 public "contains"(charSequence0: charseq): boolean
-public "contentEquals"(charSequence0: charseq): boolean
 public "contentEquals"(stringBuffer0: $StringBuffer$$Type): boolean
-public static "copyValueOf"(char0s: character[]): string
+public "contentEquals"(charSequence0: charseq): boolean
 public static "copyValueOf"(char0s: character[], int1: integer, int2: integer): string
+public static "copyValueOf"(char0s: character[]): string
 public "describeConstable"(): $Optional<string>
 public "endsWith"(string0: string): boolean
 public "equalsIgnoreCase"(string0: string): boolean
 public static "format"(locale0: $Locale$$Type, string1: string, ...object2s: any[]): string
 public static "format"(string0: string, ...object1s: any[]): string
 public "formatted"(...object0s: any[]): string
-public "getBytes"(charset0: $Charset$$Type): byte[]
+public "getBytes"(string0: string): byte[]
 /** @deprecated */
 public "getBytes"(int0: integer, int1: integer, byte2s: byte[], int3: integer): void
 public "getBytes"(): byte[]
-public "getBytes"(string0: string): byte[]
+public "getBytes"(charset0: $Charset$$Type): byte[]
 public "getChars"(int0: integer, int1: integer, char2s: character[], int3: integer): void
 public "indent"(int0: integer): string
-public "indexOf"(string0: string): integer
+public "indexOf"(string0: string, int1: integer): integer
+public "indexOf"(string0: string, int1: integer, int2: integer): integer
 public "indexOf"(int0: integer): integer
 public "indexOf"(int0: integer, int1: integer): integer
-public "indexOf"(string0: string, int1: integer): integer
+public "indexOf"(int0: integer, int1: integer, int2: integer): integer
+public "indexOf"(string0: string): integer
 public "intern"(): string
 public "isBlank"(): boolean
 public "isEmpty"(): boolean
-public static "join"(charSequence0: charseq, iterable1: $Iterable$$Type<charseq>): string
 public static "join"(charSequence0: charseq, ...charSequence1s: charseq[]): string
+public static "join"(charSequence0: charseq, iterable1: $Iterable$$Type<charseq>): string
 public "lastIndexOf"(int0: integer): integer
-public "lastIndexOf"(string0: string, int1: integer): integer
 public "lastIndexOf"(string0: string): integer
+public "lastIndexOf"(string0: string, int1: integer): integer
 public "lastIndexOf"(int0: integer, int1: integer): integer
 public "length"(): integer
 public "lines"(): $Stream<string>
@@ -585,8 +608,9 @@ public "replace"(char0: character, char1: character): string
 public "replaceAll"(string0: string, string1: string): string
 public "replaceFirst"(string0: string, string1: string): string
 public "resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): string
-public "split"(string0: string, int1: integer): string[]
 public "split"(string0: string): string[]
+public "split"(string0: string, int1: integer): string[]
+public "splitWithDelimiters"(string0: string, int1: integer): string[]
 public "startsWith"(string0: string): boolean
 public "startsWith"(string0: string, int1: integer): boolean
 public "strip"(): string
@@ -597,22 +621,22 @@ public "subSequence"(int0: integer, int1: integer): charseq
 public "substring"(int0: integer, int1: integer): string
 public "substring"(int0: integer): string
 public "toCharArray"(): character[]
-public "toLowerCase"(locale0: $Locale$$Type): string
 public "toLowerCase"(): string
+public "toLowerCase"(locale0: $Locale$$Type): string
 public "toUpperCase"(locale0: $Locale$$Type): string
 public "toUpperCase"(): string
 public "transform"<R>(function0: $Function$$Type<string, R>): R
 public "translateEscapes"(): string
 public "trim"(): string
+public static "valueOf"(object0: any): string
 public static "valueOf"(long0: long): string
 public static "valueOf"(int0: integer): string
-public static "valueOf"(char0s: character[]): string
-public static "valueOf"(object0: any): string
 public static "valueOf"(char0: character): string
+public static "valueOf"(char0s: character[], int1: integer, int2: integer): string
 public static "valueOf"(boolean0: boolean): string
 public static "valueOf"(double0: double): string
+public static "valueOf"(char0s: character[]): string
 public static "valueOf"(float0: float): string
-public static "valueOf"(char0s: character[], int1: integer, int2: integer): string
 get "bytes"(): byte[]
 get "blank"(): boolean
 get "empty"(): boolean
@@ -645,14 +669,14 @@ public static "compareUnsigned"(short0: short, short1: short): integer
 public static "decode"(string0: string): short
 public "describeConstable"(): $Optional<$DynamicConstantDesc<short>>
 public static "hashCode"(short0: short): integer
-public static "parseShort"(string0: string, int1: integer): short
 public static "parseShort"(string0: string): short
+public static "parseShort"(string0: string, int1: integer): short
 public static "reverseBytes"(short0: short): short
 public static "toString"(short0: short): string
 public static "toUnsignedInt"(short0: short): integer
 public static "toUnsignedLong"(short0: short): long
-public static "valueOf"(string0: string): short
 public static "valueOf"(string0: string, int1: integer): short
+public static "valueOf"(string0: string): short
 public static "valueOf"(short0: short): short
 }
 }
@@ -692,7 +716,6 @@ public static "valueOf"(boolean0: boolean): boolean
 }
 
 declare module "java.lang.Long" {
-import { $MethodHandles$Lookup$$Type } from "java.lang.invoke.MethodHandles$Lookup"
 import { $Constable } from "java.lang.constant.Constable"
 import { $ConstantDesc } from "java.lang.constant.ConstantDesc"
 import { $Optional } from "java.util.Optional"
@@ -716,9 +739,11 @@ public static "bitCount"(long0: long): integer
 public static "compare"(long0: long, long1: long): integer
 public "compareTo"(long0: long): integer
 public static "compareUnsigned"(long0: long, long1: long): integer
+public static "compress"(long0: long, long1: long): long
 public static "decode"(string0: string): long
 public "describeConstable"(): $Optional<long>
 public static "divideUnsigned"(long0: long, long1: long): long
+public static "expand"(long0: long, long1: long): long
 public static "getLong"(string0: string, long1: long): long
 public static "getLong"(string0: string): long
 public static "getLong"(string0: string, long1: long): long
@@ -729,14 +754,13 @@ public static "max"(long0: long, long1: long): long
 public static "min"(long0: long, long1: long): long
 public static "numberOfLeadingZeros"(long0: long): integer
 public static "numberOfTrailingZeros"(long0: long): integer
-public static "parseLong"(charSequence0: charseq, int1: integer, int2: integer, int3: integer): long
 public static "parseLong"(string0: string): long
 public static "parseLong"(string0: string, int1: integer): long
+public static "parseLong"(charSequence0: charseq, int1: integer, int2: integer, int3: integer): long
 public static "parseUnsignedLong"(string0: string): long
 public static "parseUnsignedLong"(string0: string, int1: integer): long
 public static "parseUnsignedLong"(charSequence0: charseq, int1: integer, int2: integer, int3: integer): long
 public static "remainderUnsigned"(long0: long, long1: long): long
-public "resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): long
 public static "reverse"(long0: long): long
 public static "reverseBytes"(long0: long): long
 public static "rotateLeft"(long0: long, int1: integer): long
@@ -748,11 +772,11 @@ public static "toHexString"(long0: long): string
 public static "toOctalString"(long0: long): string
 public static "toString"(long0: long): string
 public static "toString"(long0: long, int1: integer): string
-public static "toUnsignedString"(long0: long, int1: integer): string
 public static "toUnsignedString"(long0: long): string
-public static "valueOf"(string0: string, int1: integer): long
+public static "toUnsignedString"(long0: long, int1: integer): string
 public static "valueOf"(long0: long): long
 public static "valueOf"(string0: string): long
+public static "valueOf"(string0: string, int1: integer): long
 }
 }
 
@@ -770,7 +794,6 @@ export abstract class $Comparable$$Static<T = any> implements $Comparable<T> {
 }
 
 declare module "java.lang.Double" {
-import { $MethodHandles$Lookup$$Type } from "java.lang.invoke.MethodHandles$Lookup"
 import { $Constable } from "java.lang.constant.Constable"
 import { $ConstantDesc } from "java.lang.constant.ConstantDesc"
 import { $Optional } from "java.util.Optional"
@@ -788,6 +811,7 @@ static readonly "MIN_VALUE": double
 static readonly "NEGATIVE_INFINITY": double
 static readonly "NaN": double
 static readonly "POSITIVE_INFINITY": double
+static readonly "PRECISION": integer
 static readonly "SIZE": integer
 static readonly "TYPE": $Class<double>
 
@@ -803,15 +827,14 @@ public static "doubleToLongBits"(double0: double): long
 public static "doubleToRawLongBits"(double0: double): long
 public static "hashCode"(double0: double): integer
 public static "isFinite"(double0: double): boolean
-public static "isInfinite"(double0: double): boolean
 public "isInfinite"(): boolean
+public static "isInfinite"(double0: double): boolean
 public "isNaN"(): boolean
 public static "isNaN"(double0: double): boolean
 public static "longBitsToDouble"(long0: long): double
 public static "max"(double0: double, double1: double): double
 public static "min"(double0: double, double1: double): double
 public static "parseDouble"(string0: string): double
-public "resolveConstantDesc"(lookup0: $MethodHandles$Lookup$$Type): double
 public static "sum"(double0: double, double1: double): double
 public static "toHexString"(double0: double): string
 public static "toString"(double0: double): string

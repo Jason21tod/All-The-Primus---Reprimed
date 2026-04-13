@@ -10,8 +10,8 @@ import { $Multimap, $Multimap$$Type } from "com.google.common.collect.Multimap"
 import { $Attribute, $Attribute$$Type } from "net.minecraft.world.entity.ai.attributes.Attribute"
 
 export class $CurioAttributeModifierEvent extends $Event implements $EventItf {
-constructor()
 constructor(itemStack0: $ItemStack$$Type, slotContext1: $SlotContext$$Type, uUID2: $UUID$$Type, multimap3: $Multimap$$Type<$Attribute$$Type, $AttributeModifier$$Type>)
+constructor()
 
 public "addModifier"(attribute0: $Attribute$$Type, attributeModifier1: $AttributeModifier$$Type): boolean
 public "clearModifiers"(): void
@@ -67,11 +67,11 @@ export interface $ICuriosItemHandler {
 "clearCachedSlotModifiers"(): void
 "clearSlotModifiers"(): void
 "findCurio"(string0: string, int1: integer): $Optional<$SlotResult>
-"findCurios"(...string0s: string[]): $List<$SlotResult>
-"findCurios"(item0: $Item$$Type): $List<$SlotResult>
 "findCurios"(predicate0: $Predicate$$Type<$ItemStack$$Type>): $List<$SlotResult>
-"findFirstCurio"(predicate0: $Predicate$$Type<$ItemStack$$Type>): $Optional<$SlotResult>
+"findCurios"(item0: $Item$$Type): $List<$SlotResult>
+"findCurios"(...string0s: string[]): $List<$SlotResult>
 "findFirstCurio"(item0: $Item$$Type): $Optional<$SlotResult>
+"findFirstCurio"(predicate0: $Predicate$$Type<$ItemStack$$Type>): $Optional<$SlotResult>
 "getCurios"(): $Map<string, $ICurioStacksHandler>
 "getEquippedCurios"(): $IItemHandlerModifiable
 /** @deprecated */
@@ -104,8 +104,8 @@ export interface $ICuriosItemHandler {
 "removeSlotModifiers"(multimap0: $Multimap$$Type<string, $AttributeModifier$$Type>): void
 "reset"(): void
 "saveInventory"(boolean0: boolean, predicate1: $Predicate$$Type<$ItemStack$$Type>): $ListTag
-"saveInventory"(boolean0: boolean): $ListTag
 "saveInventory"(boolean0: boolean, biPredicate1: $BiPredicate$$Type<$ItemStack$$Type, $SlotContext$$Type>): $ListTag
+"saveInventory"(boolean0: boolean): $ListTag
 "setCurios"(map0: $Map$$Type<string, $ICurioStacksHandler$$Type>): void
 /** @deprecated */
 "setEnchantmentBonuses"(tuple0: $Tuple$$Type<integer, integer>): void
@@ -227,15 +227,15 @@ export interface $ICurioItem {
 "canWalkOnPowderedSnow"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
 /** @deprecated */
 "curioAnimate"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+"curioBreak"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
 "curioBreak"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): void
-"curioBreak"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
 "curioTick"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
 "curioTick"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
+"getAttributeModifiers"(slotContext0: $SlotContext$$Type, uUID1: $UUID$$Type, itemStack2: $ItemStack$$Type): $Multimap<$Attribute, $AttributeModifier>
 /** @deprecated */
 "getAttributeModifiers"(string0: string, itemStack1: $ItemStack$$Type): $Multimap<$Attribute, $AttributeModifier>
-"getAttributeModifiers"(slotContext0: $SlotContext$$Type, uUID1: $UUID$$Type, itemStack2: $ItemStack$$Type): $Multimap<$Attribute, $AttributeModifier>
 "getAttributesTooltip"(list0: $List$$Type<$Component$$Type>, itemStack1: $ItemStack$$Type): $List<$Component>
 /** @deprecated */
 "getDropRule"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type): $ICurio$DropRule
@@ -253,23 +253,23 @@ export interface $ICurioItem {
 "hasCurioCapability"(itemStack0: $ItemStack$$Type): boolean
 "isEnderMask"(slotContext0: $SlotContext$$Type, enderMan1: $EnderMan$$Type, itemStack2: $ItemStack$$Type): boolean
 "makesPiglinsNeutral"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
-"onEquip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 "onEquip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+"onEquip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 "onEquipFromUse"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
-"onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 "onUnequip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+"onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 "playRightClickEquipSound"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type): void
-"readSyncData"(slotContext0: $SlotContext$$Type, compoundTag1: $CompoundTag$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 "readSyncData"(compoundTag0: $CompoundTag$$Type, itemStack1: $ItemStack$$Type): void
+"readSyncData"(slotContext0: $SlotContext$$Type, compoundTag1: $CompoundTag$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 "showAttributesTooltip"(string0: string, itemStack1: $ItemStack$$Type): boolean
+"writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 /** @deprecated */
 "writeSyncData"(itemStack0: $ItemStack$$Type): $CompoundTag
-"writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 }
 
 export namespace $ICurioItem {
@@ -363,9 +363,9 @@ import { $ICurio$DropRule } from "top.theillusivec4.curios.api.type.capability.I
 import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 
 export interface $ICurio {
+"canEquip"(slotContext0: $SlotContext$$Type): boolean
 /** @deprecated */
 "canEquip"(string0: string, livingEntity1: $LivingEntity$$Type): boolean
-"canEquip"(slotContext0: $SlotContext$$Type): boolean
 "canEquipFromUse"(slotContext0: $SlotContext$$Type): boolean
 /** @deprecated */
 "canRightClickEquip"(): boolean
@@ -378,19 +378,19 @@ export interface $ICurio {
 "canWalkOnPowderedSnow"(slotContext0: $SlotContext$$Type): boolean
 /** @deprecated */
 "curioAnimate"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type): void
-"curioBreak"(slotContext0: $SlotContext$$Type): void
 /** @deprecated */
 "curioBreak"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): void
-"curioTick"(slotContext0: $SlotContext$$Type): void
+"curioBreak"(slotContext0: $SlotContext$$Type): void
 /** @deprecated */
 "curioTick"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type): void
+"curioTick"(slotContext0: $SlotContext$$Type): void
 "getAttributeModifiers"(slotContext0: $SlotContext$$Type, uUID1: $UUID$$Type): $Multimap<$Attribute, $AttributeModifier>
 /** @deprecated */
 "getAttributeModifiers"(string0: string): $Multimap<$Attribute, $AttributeModifier>
 "getAttributesTooltip"(list0: $List$$Type<$Component$$Type>): $List<$Component>
+"getDropRule"(slotContext0: $SlotContext$$Type, damageSource1: $DamageSource$$Type, int2: integer, boolean3: boolean): $ICurio$DropRule
 /** @deprecated */
 "getDropRule"(livingEntity0: $LivingEntity$$Type): $ICurio$DropRule
-"getDropRule"(slotContext0: $SlotContext$$Type, damageSource1: $DamageSource$$Type, int2: integer, boolean3: boolean): $ICurio$DropRule
 "getEquipSound"(slotContext0: $SlotContext$$Type): $ICurio$SoundInfo
 /** @deprecated */
 "getFortuneBonus"(string0: string, livingEntity1: $LivingEntity$$Type, itemStack2: $ItemStack$$Type, int3: integer): integer
@@ -408,9 +408,9 @@ export interface $ICurio {
 /** @deprecated */
 "onEquip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type): void
 "onEquipFromUse"(slotContext0: $SlotContext$$Type): void
+"onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
 "onUnequip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type): void
-"onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
 "playRightClickEquipSound"(livingEntity0: $LivingEntity$$Type): void
 "readSyncData"(slotContext0: $SlotContext$$Type, compoundTag1: $CompoundTag$$Type): void
@@ -544,8 +544,8 @@ import { $Tuple } from "net.minecraft.util.Tuple"
 import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 
 export class $DropRulesEvent extends $LivingEvent {
-constructor(livingEntity0: $LivingEntity$$Type, iCuriosItemHandler1: $ICuriosItemHandler$$Type, damageSource2: $DamageSource$$Type, int3: integer, boolean4: boolean)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, iCuriosItemHandler1: $ICuriosItemHandler$$Type, damageSource2: $DamageSource$$Type, int3: integer, boolean4: boolean)
 
 public "addOverride"(predicate0: $Predicate$$Type<$ItemStack$$Type>, dropRule1: $ICurio$DropRule$$Type): void
 public "getCurioHandler"(): $ICuriosItemHandler
@@ -603,35 +603,35 @@ import { $Ingredient$$Type } from "net.minecraft.world.item.crafting.Ingredient"
 
 export interface $IDynamicStackHandler extends $IItemHandlerModifiable {
 "asContainer"(): $Container
-"clear"(): void
 "clear"(ingredient: $Ingredient$$Type): void
+"clear"(): void
 "count"(ingredient: $Ingredient$$Type): integer
 "count"(): integer
 "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "countNonEmpty"(): integer
 "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
-"extractItem"(i: integer, i1: integer, b: boolean): $ItemStack
 "extractItem"(int0: integer, int1: integer, boolean2: boolean): $ItemStack
+"extractItem"(i: integer, i1: integer, b: boolean): $ItemStack
 "find"(): integer
 "find"(ingredient: $Ingredient$$Type): integer
 "getAllItems"(): $List<$ItemStack>
 "getBlock"(level: $Level$$Type): $BlockContainerJS
 "getHeight"(): integer
 "getPreviousStackInSlot"(int0: integer): $ItemStack
-"getSlotLimit"(i: integer): integer
 "getSlotLimit"(int0: integer): integer
+"getSlotLimit"(i: integer): integer
 "getSlots"(): integer
 "getSlots"(): integer
 "getStackInSlot"(int0: integer): $ItemStack
 "getStackInSlot"(i: integer): $ItemStack
 "getWidth"(): integer
 "grow"(int0: integer): void
-"insertItem"(i: integer, itemStack: $ItemStack$$Type, b: boolean): $ItemStack
 "insertItem"(int0: integer, itemStack1: $ItemStack$$Type, boolean2: boolean): $ItemStack
+"insertItem"(i: integer, itemStack: $ItemStack$$Type, b: boolean): $ItemStack
 "insertItem"(stack: $ItemStack$$Type, simulate: boolean): $ItemStack
 "isEmpty"(): boolean
-"isItemValid"(i: integer, itemStack: $ItemStack$$Type): boolean
 "isItemValid"(int0: integer, itemStack1: $ItemStack$$Type): boolean
+"isItemValid"(i: integer, itemStack: $ItemStack$$Type): boolean
 "isMutable"(): boolean
 "kjs$self"(): $IItemHandler
 "serializeNBT"(): $CompoundTag

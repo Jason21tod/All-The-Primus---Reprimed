@@ -410,8 +410,8 @@ import { $IDropItemOnDeathEvent } from "net.mehvahdjukaar.moonlight.api.events.I
 import { $Player, $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $DropItemOnDeathEvent extends $Event implements $IDropItemOnDeathEvent, $EventItf {
-constructor(itemStack: $ItemStack$$Type, player: $Player$$Type, beforeDrop: boolean)
 constructor()
+constructor(itemStack: $ItemStack$$Type, player: $Player$$Type, beforeDrop: boolean)
 
 public static "create"(itemStack: $ItemStack$$Type, player: $Player$$Type, beforeDrop: boolean): $IDropItemOnDeathEvent
 public "el_isEventUnCancelable"(): boolean

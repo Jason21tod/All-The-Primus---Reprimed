@@ -18,12 +18,16 @@
         ]
     },
     "night_vision":{
-        "type":"origins:apply_effect",
-        "effect": {
-            "effect": "minecraft:night_vision",
-            "show_particles": false,
-            "duration": 300
-        },
+        "type": "origins:action_over_time",
+        "entity_action":
+            {
+                "type":"origins:apply_effect",
+                "effect": {
+                    "effect": "minecraft:night_vision",
+                    "show_particles": false,
+                    "duration": 300
+                }
+            },
         "condition": {
                 "type": "origins:brightness",
                 "comparison": "<=",

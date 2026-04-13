@@ -368,7 +368,6 @@ declare module "dev.latvian.mods.kubejs.item.custom.SmithingTemplateItemBuilder"
 import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $List } from "java.util.List"
 import { $Component, $Component$$Type } from "net.minecraft.network.chat.Component"
-import { $SmithingTemplateItem } from "net.minecraft.world.item.SmithingTemplateItem"
 import { $ItemBuilder } from "dev.latvian.mods.kubejs.item.ItemBuilder"
 
 export class $SmithingTemplateItemBuilder extends $ItemBuilder {
@@ -404,7 +403,6 @@ public "axeIcon"(): $SmithingTemplateItemBuilder
 public "bootsIcon"(): $SmithingTemplateItemBuilder
 /** Adds a chestplate to the list of base item slot icons that the smithing table cycles through when this smithing template is put in */
 public "chestplateIcon"(): $SmithingTemplateItemBuilder
-public "createObject"(): $SmithingTemplateItem
 /** Adds a dust, diamond, emerald, quartz, lapis lazuli and amethyst shard icons to the list of ingredient slot icons that the smithing table cycles through when this smithing template is put in */
 public "crystalIcons"(): $SmithingTemplateItemBuilder
 /** Adds a diamond to the list of ingredient slot icons that the smithing table cycles through when this smithing template is put in */
@@ -505,10 +503,10 @@ public "fastToEat"(flag: boolean): $FoodBuilder
 public "fastToEat"(): $FoodBuilder
 /** Sets the hunger restored. */
 public "hunger"(h: integer): $FoodBuilder
-/** Sets the food is meat. */
-public "meat"(): $FoodBuilder
 /** Sets whether the food is meat. */
 public "meat"(flag: boolean): $FoodBuilder
+/** Sets the food is meat. */
+public "meat"(): $FoodBuilder
 /** Removes an effect from the food. */
 public "removeEffect"(mobEffect: $MobEffect$$Type): $FoodBuilder
 /** Sets the saturation modifier. Note that the saturation restored is hunger * saturation. */
@@ -751,8 +749,8 @@ public "transform"(transformer: $OutputReplacementTransformer$$Type): $OutputRep
 public "weakNBT"(): $InputItem
 public "withChance"(chance: double): $OutputItem
 public "withCount"(count: integer): $OutputItem
-public "withRolls"(rolls: $IntProvider$$Type): $OutputItem
 public "withRolls"(min: integer, max: integer): $OutputItem
+public "withRolls"(rolls: $IntProvider$$Type): $OutputItem
 get "count"(): integer
 get "nbt"(): $CompoundTag
 get "empty"(): boolean
@@ -807,8 +805,8 @@ constructor(tab: $CreativeModeTab$$Type, showRestrictedItems: boolean, callback:
 
 public "add"(items: $ItemStack$$Type[]): void
 public "add"(items: $ItemStack$$Type[], visibility: $CreativeModeTab$TabVisibility$$Type): void
-public "addAfter"(order: $ItemStack$$Type, items: $ItemStack$$Type[], visibility: $CreativeModeTab$TabVisibility$$Type): void
 public "addAfter"(order: $ItemStack$$Type, items: $ItemStack$$Type[]): void
+public "addAfter"(order: $ItemStack$$Type, items: $ItemStack$$Type[], visibility: $CreativeModeTab$TabVisibility$$Type): void
 public "addBefore"(order: $ItemStack$$Type, items: $ItemStack$$Type[], visibility: $CreativeModeTab$TabVisibility$$Type): void
 public "addBefore"(order: $ItemStack$$Type, items: $ItemStack$$Type[]): void
 public "remove"(filter: $Ingredient$$Type): void
@@ -1023,10 +1021,10 @@ public "createItemProperties"(): $Item$Properties
  * For example, when eating food, this is called when the player has finished eating the food, so hunger is restored.
  */
 public "finishUsing"(finishUsing: $ItemBuilder$FinishUsingCallback$$Type): $ItemBuilder
-/** Makes the item fire resistant like netherite tools (or not). */
-public "fireResistant"(isFireResistant: boolean): $ItemBuilder
 /** Makes the item fire resistant like netherite tools. */
 public "fireResistant"(): $ItemBuilder
+/** Makes the item fire resistant like netherite tools (or not). */
+public "fireResistant"(isFireResistant: boolean): $ItemBuilder
 /** Set the food properties of the item. */
 public "food"(b: $Consumer$$Type<$FoodBuilder$$Type>): $ItemBuilder
 /** Makes the item glow like enchanted, even if it's not enchanted. */
@@ -1196,6 +1194,7 @@ export class $CreativeTabBuilder extends $BuilderBase<$CreativeModeTab> {
 constructor(i: $ResourceLocation$$Type)
 
 public "content"(content: $CreativeTabContentSupplier$$Type): $CreativeTabBuilder
+public "createObject"(): $CreativeModeTab
 public "icon"(icon: $CreativeTabIconSupplier$$Type): $CreativeTabBuilder
 }
 }

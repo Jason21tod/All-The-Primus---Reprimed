@@ -134,13 +134,13 @@ export interface $Problem {
 }
 
 export namespace $Problem {
-function combine(...problems: $Problem$$Type[]): $Problem
 function combine(problems: $Collection$$Type<$Problem$$Type>): $Problem
+function combine(...problems: $Problem$$Type[]): $Problem
 function message(message: string): $Problem
 }
 export abstract class $Problem$$Static implements $Problem {
-static "combine"(...problems: $Problem$$Type[]): $Problem
 static "combine"(problems: $Collection$$Type<$Problem$$Type>): $Problem
+static "combine"(...problems: $Problem$$Type[]): $Problem
 static "message"(message: string): $Problem
 }
 }

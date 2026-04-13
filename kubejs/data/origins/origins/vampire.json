@@ -2,7 +2,8 @@
     "powers": [
         "origins:vampire_attributes",
         "origins:vampire_thirsty",
-        "origins:vampire_weakness"
+        "origins:vampire_weakness",
+        "origins:vampire_blood"
     ],
     "icon": "irons_spellbooks:blood_vial",
     "order": 0,

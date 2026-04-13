@@ -5,10 +5,10 @@ import { $Class, $Class$$Type } from "java.lang.Class"
 export class $OptionIdentifier<T = any> {
 static readonly "EMPTY": $OptionIdentifier<void>
 
-public static "create"<T>(resourceLocation0: $ResourceLocation$$Type, class1: $Class$$Type<T>): $OptionIdentifier<T>
 public static "create"(resourceLocation0: $ResourceLocation$$Type): $OptionIdentifier<void>
-public static "create"<T>(string0: string, string1: string, class2: $Class$$Type<T>): $OptionIdentifier<T>
+public static "create"<T>(resourceLocation0: $ResourceLocation$$Type, class1: $Class$$Type<T>): $OptionIdentifier<T>
 public static "create"(string0: string, string1: string): $OptionIdentifier<void>
+public static "create"<T>(string0: string, string1: string, class2: $Class$$Type<T>): $OptionIdentifier<T>
 public "getModId"(): string
 public "getPath"(): string
 public "getType"(): $Class<T>
@@ -95,20 +95,6 @@ get "pages"(): $List<$OptionPage>
 }
 }
 
-declare module "org.embeddedt.modernfix.duck.IServerLevel" {
-import { $StrongholdLocationCache } from "org.embeddedt.modernfix.world.StrongholdLocationCache"
-
-export interface $IServerLevel {
-"mfix$getStrongholdCache"(): $StrongholdLocationCache
-}
-
-export namespace $IServerLevel {
-const probejs$$marker: never
-}
-export abstract class $IServerLevel$$Static implements $IServerLevel {
-}
-}
-
 declare module "org.embeddedt.modernfix.forge.recipe.ExtendedIngredient" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 export interface $ExtendedIngredient {
@@ -146,6 +132,22 @@ export namespace $IProfilingServerFunctionManager {
 const probejs$$marker: never
 }
 export abstract class $IProfilingServerFunctionManager$$Static implements $IProfilingServerFunctionManager {
+}
+}
+
+declare module "org.embeddedt.modernfix.duck.suspend_integrated_server_during_load.IDeferrableIntegratedServer" {
+import { $ResourceLocation } from "net.minecraft.resources.ResourceLocation"
+
+export interface $IDeferrableIntegratedServer {
+"mfix$markClientLoadFinished"(): void
+}
+
+export namespace $IDeferrableIntegratedServer {
+const CLIENT_LOAD_SENTINEL: $ResourceLocation
+}
+export abstract class $IDeferrableIntegratedServer$$Static implements $IDeferrableIntegratedServer {
+static readonly "CLIENT_LOAD_SENTINEL": $ResourceLocation
+
 }
 }
 
@@ -221,6 +223,21 @@ public "vertexConsumerProvider"(): $Function<$RenderType, $VertexConsumer>
 }
 }
 
+declare module "org.embeddedt.modernfix.common.mixin.perf.optimize_surface_rules.BiomeManagerAccessor" {
+import { $BiomeManager$NoiseBiomeSource } from "net.minecraft.world.level.biome.BiomeManager$NoiseBiomeSource"
+
+export interface $BiomeManagerAccessor {
+"mfix$getBiomeSource"(): $BiomeManager$NoiseBiomeSource
+"mfix$getZoomSeed"(): long
+}
+
+export namespace $BiomeManagerAccessor {
+const probejs$$marker: never
+}
+export abstract class $BiomeManagerAccessor$$Static implements $BiomeManagerAccessor {
+}
+}
+
 declare module "org.embeddedt.embeddium.api.render.chunk.SectionInfoBuilder" {
 import { $Predicate$$Type } from "java.util.function.Predicate"
 import { $BlockEntity$$Type } from "net.minecraft.world.level.block.entity.BlockEntity"
@@ -264,8 +281,8 @@ import { $EmbeddiumEvent } from "org.embeddedt.embeddium.api.eventbus.EmbeddiumE
 export class $OptionPageConstructionEvent extends $EmbeddiumEvent {
 static readonly "BUS": $EventHandlerRegistrar<$OptionPageConstructionEvent>
 
-constructor()
 constructor(optionIdentifier0: $OptionIdentifier$$Type<void>, component1: $Component$$Type)
+constructor()
 
 public "addGroup"(optionGroup0: $OptionGroup$$Type): void
 public "getAdditionalGroups"(): $List<$OptionGroup>
@@ -289,23 +306,19 @@ public "post"(t0: T): boolean
 }
 }
 
-declare module "org.embeddedt.modernfix.world.StrongholdLocationCache" {
-import { $ChunkPos, $ChunkPos$$Type } from "net.minecraft.world.level.ChunkPos"
-import { $List, $List$$Type } from "java.util.List"
-import { $Holder$$Type } from "net.minecraft.core.Holder"
-import { $CompoundTag$$Type } from "net.minecraft.nbt.CompoundTag"
-import { $DimensionType$$Type } from "net.minecraft.world.level.dimension.DimensionType"
-import { $SavedData } from "net.minecraft.world.level.saveddata.SavedData"
+declare module "org.embeddedt.modernfix.duck.release_protochunks.ISuspendedHolderTrackingChunkMap" {
+import { $ChunkPos$$Type } from "net.minecraft.world.level.ChunkPos"
+import { $Executor } from "java.util.concurrent.Executor"
 
-export class $StrongholdLocationCache extends $SavedData {
-constructor()
+export interface $ISuspendedHolderTrackingChunkMap {
+"mfix$getMainThreadExecutor"(): $Executor
+"mfix$markForSuspensionCheck"(chunkPos0: $ChunkPos$$Type): void
+}
 
-public "getChunkPosList"(): $List<$ChunkPos>
-public static "getFileId"(holder0: $Holder$$Type<$DimensionType$$Type>): string
-public static "load"(compoundTag0: $CompoundTag$$Type): $StrongholdLocationCache
-public "setChunkPosList"(list0: $List$$Type<$ChunkPos$$Type>): void
-get "chunkPosList"(): $List<$ChunkPos>
-set "chunkPosList"(value: $List$$Type<$ChunkPos$$Type>)
+export namespace $ISuspendedHolderTrackingChunkMap {
+const probejs$$marker: never
+}
+export abstract class $ISuspendedHolderTrackingChunkMap$$Static implements $ISuspendedHolderTrackingChunkMap {
 }
 }
 
@@ -316,8 +329,8 @@ import { $EmbeddiumEvent } from "org.embeddedt.embeddium.api.eventbus.EmbeddiumE
 export class $ModifyCloudRenderingEvent extends $EmbeddiumEvent {
 static readonly "BUS": $EventHandlerRegistrar<$ModifyCloudRenderingEvent>
 
-constructor()
 constructor(int0: integer)
+constructor()
 
 public "getCloudRenderDistance"(): integer
 public "setCloudRenderDistance"(int0: integer): void
@@ -337,6 +350,21 @@ export namespace $EventHandlerRegistrar$Handler {
 const probejs$$marker: never
 }
 export abstract class $EventHandlerRegistrar$Handler$$Static<T extends $EmbeddiumEvent = $EmbeddiumEvent> implements $EventHandlerRegistrar$Handler<T> {
+}
+}
+
+declare module "org.embeddedt.modernfix.duck.release_protochunks.IClearableChunkHolder" {
+import { $AtomicInteger } from "java.util.concurrent.atomic.AtomicInteger"
+
+export interface $IClearableChunkHolder {
+"mfix$getGenerationRefCount"(): $AtomicInteger
+"mfix$resetProtoChunkFutures"(): void
+}
+
+export namespace $IClearableChunkHolder {
+const probejs$$marker: never
+}
+export abstract class $IClearableChunkHolder$$Static implements $IClearableChunkHolder {
 }
 }
 
@@ -390,10 +418,11 @@ public static "values"(): $TranslucentQuadAnalyzer$Level[]
 }
 
 declare module "org.embeddedt.modernfix.duck.IChunkGenerator" {
-import { $ServerLevel$$Type } from "net.minecraft.server.level.ServerLevel"
+import { $RegistryAccess$Frozen$$Type } from "net.minecraft.core.RegistryAccess$Frozen"
+import { $Path$$Type } from "java.nio.file.Path"
 
 export interface $IChunkGenerator {
-"mfix$setAssociatedServerLevel"(serverLevel0: $ServerLevel$$Type): void
+"mfix$setStrongholdCachePath"(path0: $Path$$Type, frozen1: $RegistryAccess$Frozen$$Type): void
 }
 
 export namespace $IChunkGenerator {

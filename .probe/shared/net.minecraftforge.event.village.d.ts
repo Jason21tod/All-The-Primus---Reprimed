@@ -7,8 +7,8 @@ import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 import { $Player, $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $VillageSiegeEvent extends $Event implements $EventItf {
-constructor()
 constructor(villageSiege0: $VillageSiege$$Type, level1: $Level$$Type, player2: $Player$$Type, vec33: $Vec3$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

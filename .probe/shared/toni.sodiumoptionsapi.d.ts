@@ -4,8 +4,8 @@ import { $OptionGroup$Builder } from "me.jellysquid.mods.sodium.client.gui.optio
 import { $OptionIdentifier$$Type } from "toni.sodiumoptionsapi.api.OptionIdentifier"
 
 export interface $ExtendedOptionGroup {
-"sodiumOptionsAPI$setId"(resourceLocation0: $ResourceLocation$$Type): $OptionGroup$Builder
 "sodiumOptionsAPI$setId"(optionIdentifier0: $OptionIdentifier$$Type<void>): $OptionGroup$Builder
+"sodiumOptionsAPI$setId"(resourceLocation0: $ResourceLocation$$Type): $OptionGroup$Builder
 }
 
 export namespace $ExtendedOptionGroup {
@@ -27,10 +27,10 @@ static readonly "EMPTY": $OptionIdentifier<void>
 
 constructor(modId: string, path: string, clz: $Class$$Type<T>)
 
-public static "create"<T>(location: $ResourceLocation$$Type, clz: $Class$$Type<T>): $OptionIdentifier<T>
 public static "create"(location: $ResourceLocation$$Type): $OptionIdentifier<void>
-public static "create"<T>(modId: string, path: string, clz: $Class$$Type<T>): $OptionIdentifier<T>
+public static "create"<T>(location: $ResourceLocation$$Type, clz: $Class$$Type<T>): $OptionIdentifier<T>
 public static "create"(modId: string, path: string): $OptionIdentifier<void>
+public static "create"<T>(modId: string, path: string, clz: $Class$$Type<T>): $OptionIdentifier<T>
 public "getModId"(): string
 public "getPath"(): string
 public "getType"(): $Class<T>

@@ -90,10 +90,10 @@ public static "gray"(text: any): $MutableComponent
 public static "green"(text: any): $MutableComponent
 /** Checks if the passed in component, and all its children are empty */
 public static "isEmpty"(component: $Component$$Type): boolean
-/** Joins all components */
-public static "join"(...texts: $Component$$Type[]): $MutableComponent
 /** Joins all components in the list with the separator component */
 public static "join"(separator: $MutableComponent$$Type, texts: $Iterable$$Type<$Component$$Type>): $MutableComponent
+/** Joins all components */
+public static "join"(...texts: $Component$$Type[]): $MutableComponent
 /** Returns a keybinding component of the input keybinding descriptor */
 public static "keybind"(keybind: string): $MutableComponent
 /** Returns a component of the input, colored light purple */

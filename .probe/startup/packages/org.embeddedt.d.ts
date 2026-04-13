@@ -34,13 +34,6 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $OptionGUIConstructionEvent$$Type = ($OptionGUIConstructionEvent);
 }
 
-declare module "org.embeddedt.modernfix.duck.IServerLevel" {
-import { $StrongholdLocationCache$$Type } from "org.embeddedt.modernfix.world.StrongholdLocationCache"
-
-/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $IServerLevel$$Type = ($IServerLevel | (() => $StrongholdLocationCache$$Type));
-}
-
 declare module "org.embeddedt.modernfix.forge.recipe.ExtendedIngredient" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -57,6 +50,12 @@ declare module "org.embeddedt.modernfix.duck.IProfilingServerFunctionManager" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $IProfilingServerFunctionManager$$Type = ($IProfilingServerFunctionManager | (() => string));
+}
+
+declare module "org.embeddedt.modernfix.duck.suspend_integrated_server_during_load.IDeferrableIntegratedServer" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $IDeferrableIntegratedServer$$Type = ($IDeferrableIntegratedServer | (() => void));
 }
 
 declare module "org.embeddedt.embeddium.api.eventbus.EmbeddiumEvent" {
@@ -81,6 +80,12 @@ declare module "org.embeddedt.embeddium.api.MeshAppender$Context" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $MeshAppender$Context$$Type = ($MeshAppender$Context);
+}
+
+declare module "org.embeddedt.modernfix.common.mixin.perf.optimize_surface_rules.BiomeManagerAccessor" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $BiomeManagerAccessor$$Type = ($BiomeManagerAccessor);
 }
 
 declare module "org.embeddedt.embeddium.api.render.chunk.SectionInfoBuilder" {
@@ -109,10 +114,10 @@ import { $EmbeddiumEvent, $EmbeddiumEvent$$Type } from "org.embeddedt.embeddium.
 export type $EventHandlerRegistrar$$Type<T extends $EmbeddiumEvent = $EmbeddiumEvent> = ($EventHandlerRegistrar<T>);
 }
 
-declare module "org.embeddedt.modernfix.world.StrongholdLocationCache" {
+declare module "org.embeddedt.modernfix.duck.release_protochunks.ISuspendedHolderTrackingChunkMap" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $StrongholdLocationCache$$Type = ($StrongholdLocationCache);
+export type $ISuspendedHolderTrackingChunkMap$$Type = ($ISuspendedHolderTrackingChunkMap);
 }
 
 declare module "org.embeddedt.embeddium.api.render.clouds.ModifyCloudRenderingEvent" {
@@ -126,6 +131,12 @@ import { $EmbeddiumEvent, $EmbeddiumEvent$$Type } from "org.embeddedt.embeddium.
 
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $EventHandlerRegistrar$Handler$$Type<T extends $EmbeddiumEvent = $EmbeddiumEvent> = ($EventHandlerRegistrar$Handler<T> | ((arg0: T) => void));
+}
+
+declare module "org.embeddedt.modernfix.duck.release_protochunks.IClearableChunkHolder" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $IClearableChunkHolder$$Type = ($IClearableChunkHolder);
 }
 
 declare module "org.embeddedt.embeddium.api.OptionGroupConstructionEvent" {
@@ -147,10 +158,11 @@ export type $TranslucentQuadAnalyzer$Level$$Type = ($TranslucentQuadAnalyzer$Lev
 }
 
 declare module "org.embeddedt.modernfix.duck.IChunkGenerator" {
-import { $ServerLevel } from "net.minecraft.server.level.ServerLevel"
+import { $RegistryAccess$Frozen } from "net.minecraft.core.RegistryAccess$Frozen"
+import { $Path } from "java.nio.file.Path"
 
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $IChunkGenerator$$Type = ($IChunkGenerator | ((arg0: $ServerLevel) => void));
+export type $IChunkGenerator$$Type = ($IChunkGenerator | ((arg0: $Path, arg1: $RegistryAccess$Frozen) => void));
 }
 
 declare module "org.embeddedt.embeddium.render.chunk.sorting.TranslucentQuadAnalyzer$SortState" {

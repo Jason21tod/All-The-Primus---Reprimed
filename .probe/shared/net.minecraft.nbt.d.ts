@@ -44,6 +44,8 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "add"(int0: integer, t1: T): void
 public "addAll"(collection0: $Collection$$Type<T>): boolean
+public "addFirst"(t0: T): void
+public "addLast"(t0: T): void
 public "addTag"(int0: integer, tag1: $Tag$$Type): boolean
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
@@ -52,25 +54,29 @@ public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<T>): void
 public "getAsString"(): string
 public "getElementType"(): byte
+public "getFirst"(): T
 public "getId"(): byte
+public "getLast"(): T
 public "getType"(): $TagType<any>
 public "isEmpty"(): boolean
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<T>
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): T
 public "removeIf"(predicate0: $Predicate$$Type<T>): boolean
+public "removeLast"(): T
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<T>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, t1: T): T
@@ -87,7 +93,9 @@ public "toString"(): string
 public "write"(dataOutput0: $DataOutput$$Type): void
 get "asString"(): string
 get "elementType"(): byte
+get "first"(): T
 get "id"(): byte
+get "last"(): T
 get "type"(): $TagType<any>
 get "empty"(): boolean
 }
@@ -99,16 +107,16 @@ import { $TagType$$Type } from "net.minecraft.nbt.TagType"
 import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export interface $StreamTagVisitor {
-"visit"(int0: integer): $StreamTagVisitor$ValueResult
+"visit"(string0: string): $StreamTagVisitor$ValueResult
+"visit"(byte0: byte): $StreamTagVisitor$ValueResult
+"visit"(long0: long): $StreamTagVisitor$ValueResult
+"visit"(short0: short): $StreamTagVisitor$ValueResult
+"visit"(float0: float): $StreamTagVisitor$ValueResult
+"visit"(double0: double): $StreamTagVisitor$ValueResult
 "visit"(byte0s: byte[]): $StreamTagVisitor$ValueResult
 "visit"(int0s: integer[]): $StreamTagVisitor$ValueResult
 "visit"(long0s: long[]): $StreamTagVisitor$ValueResult
-"visit"(float0: float): $StreamTagVisitor$ValueResult
-"visit"(double0: double): $StreamTagVisitor$ValueResult
-"visit"(string0: string): $StreamTagVisitor$ValueResult
-"visit"(long0: long): $StreamTagVisitor$ValueResult
-"visit"(byte0: byte): $StreamTagVisitor$ValueResult
-"visit"(short0: short): $StreamTagVisitor$ValueResult
+"visit"(int0: integer): $StreamTagVisitor$ValueResult
 "visitContainerEnd"(): $StreamTagVisitor$ValueResult
 "visitElement"(tagType0: $TagType$$Type<any>, int1: integer): $StreamTagVisitor$EntryResult
 "visitEnd"(): $StreamTagVisitor$ValueResult
@@ -169,42 +177,46 @@ public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$V
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "addAll"(collection0: $Collection$$Type<$Tag$$Type>): boolean
+public "addFirst"(tag0: $Tag$$Type): void
+public "addLast"(tag0: $Tag$$Type): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public "copy"(): $ListTag
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$Tag$$Type>): void
-public "get"(int0: integer): $Tag
 public "getAsString"(): string
 public "getCompound"(int0: integer): $CompoundTag
 public "getDouble"(int0: integer): double
+public "getFirst"(): $Tag
 public "getFloat"(int0: integer): float
 public "getId"(): byte
 public "getInt"(int0: integer): integer
 public "getIntArray"(int0: integer): integer[]
+public "getLast"(): $Tag
 public "getList"(int0: integer): $ListTag
 public "getLongArray"(int0: integer): long[]
 public "getShort"(int0: integer): short
 public "getString"(int0: integer): string
 public "getType"(): $TagType<$ListTag>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$Tag>
 public "parent"(): $IParentTag
-public "remove"(int0: integer): $Tag
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): $Tag
 public "removeIf"(predicate0: $Predicate$$Type<$Tag$$Type>): boolean
+public "removeLast"(): $Tag
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<$Tag$$Type>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, tag1: $Tag$$Type): $Tag
@@ -218,7 +230,9 @@ public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public "write"(dataOutput0: $DataOutput$$Type): void
 get "asString"(): string
+get "first"(): $Tag
 get "id"(): byte
+get "last"(): $Tag
 get "type"(): $TagType<$ListTag>
 }
 }
@@ -295,6 +309,8 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "add"(int0: integer, intTag1: $IntTag$$Type): void
 public "addAll"(collection0: $Collection$$Type<$IntTag$$Type>): boolean
+public "addFirst"(intTag0: $IntTag$$Type): void
+public "addLast"(intTag0: $IntTag$$Type): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
@@ -302,26 +318,31 @@ public "forEach"(consumer0: $Consumer$$Type<$IntTag$$Type>): void
 public "get"(int0: integer): $IntTag
 public "getAsIntArray"(): integer[]
 public "getAsString"(): string
+public "getFirst"(): $IntTag
 public "getId"(): byte
+public "getLast"(): $IntTag
 public "getType"(): $TagType<$IntArrayTag>
 public "isEmpty"(): boolean
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$IntTag>
 public "parent"(): $IParentTag
+public "remove"(int0: integer): $IntTag
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): $IntTag
 public "removeIf"(predicate0: $Predicate$$Type<$IntTag$$Type>): boolean
+public "removeLast"(): $IntTag
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<$IntTag$$Type>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, intTag1: $IntTag$$Type): $IntTag
@@ -336,7 +357,9 @@ public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public "write"(dataOutput0: $DataOutput$$Type): void
 get "asIntArray"(): integer[]
 get "asString"(): string
+get "first"(): $IntTag
 get "id"(): byte
+get "last"(): $IntTag
 get "type"(): $TagType<$IntArrayTag>
 get "empty"(): boolean
 }
@@ -443,32 +466,40 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "add"(int0: integer, longTag1: $LongTag$$Type): void
 public "addAll"(collection0: $Collection$$Type<$LongTag$$Type>): boolean
+public "addFirst"(longTag0: $LongTag$$Type): void
+public "addLast"(longTag0: $LongTag$$Type): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
+public "copy"(): $LongArrayTag
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$LongTag$$Type>): void
+public "get"(int0: integer): $LongTag
 public "getAsLongArray"(): long[]
 public "getAsString"(): string
+public "getFirst"(): $LongTag
 public "getId"(): byte
+public "getLast"(): $LongTag
 public "getType"(): $TagType<$LongArrayTag>
 public "isEmpty"(): boolean
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$LongTag>
 public "parent"(): $IParentTag
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): $LongTag
 public "removeIf"(predicate0: $Predicate$$Type<$LongTag$$Type>): boolean
+public "removeLast"(): $LongTag
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<$LongTag$$Type>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, longTag1: $LongTag$$Type): $LongTag
@@ -483,7 +514,9 @@ public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public "write"(dataOutput0: $DataOutput$$Type): void
 get "asLongArray"(): long[]
 get "asString"(): string
+get "first"(): $LongTag
 get "id"(): byte
+get "last"(): $LongTag
 get "type"(): $TagType<$LongArrayTag>
 get "empty"(): boolean
 }
@@ -506,6 +539,7 @@ public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$V
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
+public "copy"(): $StringTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$StringTag>
@@ -728,6 +762,7 @@ public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$V
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
+public "copy"(): $LongTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$LongTag>
@@ -755,6 +790,7 @@ public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$V
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
+public "copy"(): $ShortTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$ShortTag>
@@ -799,6 +835,8 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "add"(int0: integer, byteTag1: $ByteTag$$Type): void
 public "addAll"(collection0: $Collection$$Type<$ByteTag$$Type>): boolean
+public "addFirst"(byteTag0: $ByteTag$$Type): void
+public "addLast"(byteTag0: $ByteTag$$Type): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public "copy"(): $Tag
@@ -807,26 +845,31 @@ public "forEach"(consumer0: $Consumer$$Type<$ByteTag$$Type>): void
 public "get"(int0: integer): $ByteTag
 public "getAsByteArray"(): byte[]
 public "getAsString"(): string
+public "getFirst"(): $ByteTag
 public "getId"(): byte
+public "getLast"(): $ByteTag
 public "getType"(): $TagType<$ByteArrayTag>
 public "isEmpty"(): boolean
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$ByteTag>
 public "parent"(): $IParentTag
+public "remove"(int0: integer): $ByteTag
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): $ByteTag
 public "removeIf"(predicate0: $Predicate$$Type<$ByteTag$$Type>): boolean
+public "removeLast"(): $ByteTag
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<$ByteTag$$Type>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, byteTag1: $ByteTag$$Type): $ByteTag
@@ -841,7 +884,9 @@ public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public "write"(dataOutput0: $DataOutput$$Type): void
 get "asByteArray"(): byte[]
 get "asString"(): string
+get "first"(): $ByteTag
 get "id"(): byte
+get "last"(): $ByteTag
 get "type"(): $TagType<$ByteArrayTag>
 get "empty"(): boolean
 }
@@ -868,8 +913,8 @@ public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$ByteTag>
 public "sizeInBytes"(): integer
-public static "valueOf"(byte0: byte): $ByteTag
 public static "valueOf"(boolean0: boolean): $ByteTag
+public static "valueOf"(byte0: byte): $ByteTag
 public "write"(dataOutput0: $DataOutput$$Type): void
 get "asString"(): string
 get "id"(): byte
@@ -909,6 +954,7 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "contains"(string0: string, int1: integer): boolean
 public "contains"(string0: string): boolean
+public "copy"(): $CompoundTag
 public "get"(string0: string): $Tag
 public "getAllKeys"(): $Set<string>
 public "getAsString"(): string
@@ -930,13 +976,13 @@ public "getString"(string0: string): string
 public "getTagType"(string0: string): byte
 public "getType"(): $TagType<$CompoundTag>
 public "getUUID"(string0: string): $UUID
-public "handler$fkd000$afterComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$fkd000$befOreComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$fkd000$get"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$fkd000$getCompound"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$fkd000$getList"(string0: string, int1: integer, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$fkd000$put"(string0: string, tag1: $Tag$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$fkd000$remove"(string0: string, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$flh000$afterComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$flh000$befOreComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$flh000$get"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$flh000$getCompound"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$flh000$getList"(string0: string, int1: integer, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$flh000$put"(string0: string, tag1: $Tag$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$flh000$remove"(string0: string, callbackInfo1: $CallbackInfo$$Type): void
 public "hasUUID"(string0: string): boolean
 public "isEmpty"(): boolean
 public "markDirty"(): void

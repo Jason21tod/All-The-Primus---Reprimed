@@ -142,10 +142,10 @@ public "readAnySizeNbt"(): $CompoundTag
 public "readBitSet"(): $BitSet
 public "readBlockHitResult"(): $BlockHitResult
 public "readBlockPos"(): $BlockPos
-public "readById"<T>(idMap0: $IdMap$$Type<$Holder$$Type<T>>, reader1: $FriendlyByteBuf$Reader$$Type<T>): $Holder<T>
 public "readById"<T>(idMap0: $IdMap$$Type<T>): T
-public "readByteArray"(): byte[]
+public "readById"<T>(idMap0: $IdMap$$Type<$Holder$$Type<T>>, reader1: $FriendlyByteBuf$Reader$$Type<T>): $Holder<T>
 public "readByteArray"(int0: integer): byte[]
+public "readByteArray"(): byte[]
 public "readChunkPos"(): $ChunkPos
 public "readCollection"<T, C extends $Collection<T>>(intFunction0: $IntFunction$$Type<C>, reader1: $FriendlyByteBuf$Reader$$Type<T>): C
 public "readComponent"(): $Component
@@ -163,11 +163,11 @@ public "readIntIdList"(): $IntList
 public "readItem"(): $ItemStack
 public "readJsonWithCodec"<T>(codec0: $Codec$$Type<T>): T
 public "readList"<T>(reader0: $FriendlyByteBuf$Reader$$Type<T>): $List<T>
-public "readLongArray"(long0s: long[]): long[]
 public "readLongArray"(long0s: long[], int1: integer): long[]
 public "readLongArray"(): long[]
-public "readMap"<K, V, M extends $Map<K, V>>(intFunction0: $IntFunction$$Type<M>, reader1: $FriendlyByteBuf$Reader$$Type<K>, reader2: $FriendlyByteBuf$Reader$$Type<V>): M
+public "readLongArray"(long0s: long[]): long[]
 public "readMap"<K, V>(reader0: $FriendlyByteBuf$Reader$$Type<K>, reader1: $FriendlyByteBuf$Reader$$Type<V>): $Map<K, V>
+public "readMap"<K, V, M extends $Map<K, V>>(intFunction0: $IntFunction$$Type<M>, reader1: $FriendlyByteBuf$Reader$$Type<K>, reader2: $FriendlyByteBuf$Reader$$Type<V>): M
 public "readNbt"(nbtAccounter0: $NbtAccounter$$Type): $CompoundTag
 public "readNbt"(): $CompoundTag
 public "readNullable"<T>(reader0: $FriendlyByteBuf$Reader$$Type<T>): T
@@ -193,8 +193,8 @@ public "readVector3f"(): $Vector3f
 public "readWithCodec"<T>(dynamicOps0: $DynamicOps$$Type<$Tag$$Type>, codec1: $Codec$$Type<T>): T
 public "readWithCount"(consumer0: $Consumer$$Type<$FriendlyByteBuf$$Type>): void
 public "refCnt"(): integer
-public "release"(): boolean
 public "release"(int0: integer): boolean
+public "release"(): boolean
 public "writeBitSet"(bitSet0: $BitSet$$Type): void
 public "writeBlockHitResult"(blockHitResult0: $BlockHitResult$$Type): void
 public "writeBlockPos"(blockPos0: $BlockPos$$Type): $FriendlyByteBuf

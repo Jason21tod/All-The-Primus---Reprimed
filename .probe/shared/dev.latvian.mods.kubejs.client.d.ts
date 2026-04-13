@@ -248,8 +248,8 @@ readonly "tesselator": $Tesselator
 constructor(m: $Minecraft$$Type, g: $GuiGraphics$$Type, d: float, s: $Screen$$Type)
 
 public "begin"(type: $VertexFormat$Mode$$Type, format: $VertexFormat$$Type): void
-public "beginQuads"(texture: boolean): void
 public "beginQuads"(format: $VertexFormat$$Type): void
+public "beginQuads"(texture: boolean): void
 public "bindTextureForSetup"(tex: $ResourceLocation$$Type): void
 public "blend"(enabled: boolean): void
 public "end"(): void
@@ -371,8 +371,8 @@ import { $MultipartBlockStateGenerator$Part$$Type } from "dev.latvian.mods.kubej
 export class $MultipartBlockStateGenerator {
 constructor()
 
-public "part"(when: string, consumer: $Consumer$$Type<$MultipartBlockStateGenerator$Part$$Type>): void
 public "part"(when: string, model: string): void
+public "part"(when: string, consumer: $Consumer$$Type<$MultipartBlockStateGenerator$Part$$Type>): void
 public "toJson"(): $JsonObject
 }
 }

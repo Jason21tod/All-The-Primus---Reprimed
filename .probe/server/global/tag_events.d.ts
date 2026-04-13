@@ -89,8 +89,8 @@ function tags(extra: "rule_block_entity_modifier", handler: ((event: TagEventPro
 function tags(extra: "decorated_pot_patterns", handler: ((event: TagEventProbe<Special.DecoratedPotPatternsTag, Special.DecoratedPotPatterns>) => void)): void
 function tags(extra: "worldgen/multi_noise_biome_source_parameter_list", handler: ((event: TagEventProbe<Special.WorldgenMultiNoiseBiomeSourceParameterListTag, Special.WorldgenMultiNoiseBiomeSourceParameterList>) => void)): void
 function tags(extra: "corgilib:villager_trades_item_listing", handler: ((event: TagEventProbe<Special.Corgilib$VillagerTradesItemListingTag, Special.Corgilib$VillagerTradesItemListing>) => void)): void
-function tags(extra: "corgilib:condition", handler: ((event: TagEventProbe<Special.Corgilib$ConditionTag, Special.Corgilib$Condition>) => void)): void
 function tags(extra: "corgilib:blending_function", handler: ((event: TagEventProbe<Special.Corgilib$BlendingFunctionTag, Special.Corgilib$BlendingFunction>) => void)): void
+function tags(extra: "corgilib:condition", handler: ((event: TagEventProbe<Special.Corgilib$ConditionTag, Special.Corgilib$Condition>) => void)): void
 function tags(extra: "apoli:bientity_action", handler: ((event: TagEventProbe<Special.Apoli$BientityActionTag, Special.Apoli$BientityAction>) => void)): void
 function tags(extra: "apoli:bientity_condition", handler: ((event: TagEventProbe<Special.Apoli$BientityConditionTag, Special.Apoli$BientityCondition>) => void)): void
 function tags(extra: "apoli:biome_condition", handler: ((event: TagEventProbe<Special.Apoli$BiomeConditionTag, Special.Apoli$BiomeCondition>) => void)): void
@@ -125,14 +125,14 @@ function tags(extra: "lithostitched:modifier_predicate_type", handler: ((event: 
 function tags(extra: "lithostitched:modifier_type", handler: ((event: TagEventProbe<Special.Lithostitched$ModifierTypeTag, Special.Lithostitched$ModifierType>) => void)): void
 function tags(extra: "lithostitched:placement_condition_type", handler: ((event: TagEventProbe<Special.Lithostitched$PlacementConditionTypeTag, Special.Lithostitched$PlacementConditionType>) => void)): void
 function tags(extra: "lithostitched:processor_condition_type", handler: ((event: TagEventProbe<Special.Lithostitched$ProcessorConditionTypeTag, Special.Lithostitched$ProcessorConditionType>) => void)): void
-function tags(extra: "forge:structure_modifier", handler: ((event: TagEventProbe<Special.Forge$StructureModifierTag, Special.Forge$StructureModifier>) => void)): void
+function tags(extra: "lionfishapi:modded_biome_slices", handler: ((event: TagEventProbe<Special.Lionfishapi$ModdedBiomeSlicesTag, Special.Lionfishapi$ModdedBiomeSlices>) => void)): void
+function tags(extra: "lithostitched:worldgen_modifier", handler: ((event: TagEventProbe<Special.Lithostitched$WorldgenModifierTag, Special.Lithostitched$WorldgenModifier>) => void)): void
+function tags(extra: "moonlight:map_markers", handler: ((event: TagEventProbe<Special.Moonlight$MapMarkersTag, Special.Moonlight$MapMarkers>) => void)): void
 function tags(extra: "slashblade:named_blades", handler: ((event: TagEventProbe<Special.Slashblade$NamedBladesTag, Special.Slashblade$NamedBlades>) => void)): void
 function tags(extra: "slashblade:entity_drop", handler: ((event: TagEventProbe<Special.Slashblade$EntityDropTag, Special.Slashblade$EntityDrop>) => void)): void
-function tags(extra: "forge:biome_modifier", handler: ((event: TagEventProbe<Special.Forge$BiomeModifierTag, Special.Forge$BiomeModifier>) => void)): void
+function tags(extra: "forge:structure_modifier", handler: ((event: TagEventProbe<Special.Forge$StructureModifierTag, Special.Forge$StructureModifier>) => void)): void
 function tags(extra: "moonlight:soft_fluids", handler: ((event: TagEventProbe<Special.Moonlight$SoftFluidsTag, Special.Moonlight$SoftFluids>) => void)): void
-function tags(extra: "moonlight:map_markers", handler: ((event: TagEventProbe<Special.Moonlight$MapMarkersTag, Special.Moonlight$MapMarkers>) => void)): void
-function tags(extra: "lithostitched:worldgen_modifier", handler: ((event: TagEventProbe<Special.Lithostitched$WorldgenModifierTag, Special.Lithostitched$WorldgenModifier>) => void)): void
+function tags(extra: "forge:biome_modifier", handler: ((event: TagEventProbe<Special.Forge$BiomeModifierTag, Special.Forge$BiomeModifier>) => void)): void
 function tags(extra: "irons_spellbooks:upgrade_orb_type", handler: ((event: TagEventProbe<Special.IronsSpellbooks$UpgradeOrbTypeTag, Special.IronsSpellbooks$UpgradeOrbType>) => void)): void
-function tags(extra: "lionfishapi:modded_biome_slices", handler: ((event: TagEventProbe<Special.Lionfishapi$ModdedBiomeSlicesTag, Special.Lionfishapi$ModdedBiomeSlices>) => void)): void
 }
 }

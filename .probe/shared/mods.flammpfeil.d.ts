@@ -92,8 +92,8 @@ import { $MultiBufferSource, $MultiBufferSource$$Type } from "net.minecraft.clie
 import { $PoseStack, $PoseStack$$Type } from "com.mojang.blaze3d.vertex.PoseStack"
 
 export class $RenderOverrideEvent extends $Event implements $EventItf {
-constructor()
 constructor(itemStack0: $ItemStack$$Type, wavefrontObject1: $WavefrontObject$$Type, string2: string, resourceLocation3: $ResourceLocation$$Type, poseStack4: $PoseStack$$Type, multiBufferSource5: $MultiBufferSource$$Type, int6: integer, function7: $Function$$Type<$ResourceLocation$$Type, $RenderType>, boolean8: boolean)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -238,8 +238,8 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -279,8 +279,8 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -292,15 +292,15 @@ public "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
 public "isWaterCreature"(): boolean
 public static "majruszlibrary$getProjectileArrow"(entity0: $Entity$$Type): $ItemStack
 public static "majruszlibrary$getProjectileWeapon"(entity0: $Entity$$Type): $ItemStack
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -422,8 +422,8 @@ constructor(entityType0: $EntityType$$Type<$Projectile$$Type>, level1: $Level$$T
 public "affectEntity"(livingEntity0: $LivingEntity$$Type, list1: $List$$Type<$MobEffectInstance$$Type>, double2: double): void
 public "alwaysAccepts"(): boolean
 public "attack"(hp: float): void
-public "burst"(): void
 public "burst"(list0: $List$$Type<$MobEffectInstance$$Type>, entity1: $Entity$$Type): void
+public "burst"(): void
 public "canBeRiddenUnderFluidType"(fluidType0: $FluidType$$Type, entity1: $Entity$$Type): boolean
 public "canFluidExtinguish"(fluidType0: $FluidType$$Type): boolean
 public "canHydrateInFluidType"(fluidType0: $FluidType$$Type): boolean
@@ -437,8 +437,8 @@ public "doForceHitEntity"(entity0: $Entity$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -491,8 +491,8 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -507,15 +507,15 @@ public "m_7378_"(compoundTag0: $CompoundTag$$Type): void
 public "m_7380_"(compoundTag0: $CompoundTag$$Type): void
 public static "majruszlibrary$getProjectileArrow"(entity0: $Entity$$Type): $ItemStack
 public static "majruszlibrary$getProjectileWeapon"(entity0: $Entity$$Type): $ItemStack
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "resetAlreadyHits"(): void
 public "runCommand"(command: string): integer
@@ -701,8 +701,8 @@ import { $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 import { $ISlashBladeState$$Type } from "mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState"
 
 export class $RefineSettlementEvent extends $SlashBladeEvent {
-constructor()
 constructor(itemStack0: $ItemStack$$Type, iSlashBladeState1: $ISlashBladeState$$Type, int2: integer, int3: integer, int4: integer, anvilUpdateEvent5: $AnvilUpdateEvent$$Type)
+constructor()
 
 public "getCostResult"(): integer
 public "getMaterialCost"(): integer
@@ -830,8 +830,8 @@ public static "nullsLast"<T>(comparator0: $Comparator$$Type<T>): $Comparator<T>
 public static "reverseOrder"<T extends $Comparable<T>>(): $Comparator<T>
 public "reversed"(): $Comparator<$Holder$Reference<$SlashBladeDefinition>>
 public "thenComparing"<U>(function0: $Function$$Type<$Holder$Reference$$Type<$SlashBladeDefinition$$Type>, U>, comparator1: $Comparator$$Type<U>): $Comparator<$Holder$Reference<$SlashBladeDefinition>>
-public "thenComparing"<U extends $Comparable<U>>(function0: $Function$$Type<$Holder$Reference$$Type<$SlashBladeDefinition$$Type>, U>): $Comparator<$Holder$Reference<$SlashBladeDefinition>>
 public "thenComparing"(comparator0: $Comparator$$Type<$Holder$Reference$$Type<$SlashBladeDefinition$$Type>>): $Comparator<$Holder$Reference<$SlashBladeDefinition>>
+public "thenComparing"<U extends $Comparable<U>>(function0: $Function$$Type<$Holder$Reference$$Type<$SlashBladeDefinition$$Type>, U>): $Comparator<$Holder$Reference<$SlashBladeDefinition>>
 public "thenComparingDouble"(toDoubleFunction0: $ToDoubleFunction$$Type<$Holder$Reference$$Type<$SlashBladeDefinition$$Type>>): $Comparator<$Holder$Reference<$SlashBladeDefinition>>
 public "thenComparingInt"(toIntFunction0: $ToIntFunction$$Type<$Holder$Reference$$Type<$SlashBladeDefinition$$Type>>): $Comparator<$Holder$Reference<$SlashBladeDefinition>>
 public "thenComparingLong"(toLongFunction0: $ToLongFunction$$Type<$Holder$Reference$$Type<$SlashBladeDefinition$$Type>>): $Comparator<$Holder$Reference<$SlashBladeDefinition>>
@@ -920,9 +920,9 @@ static "uvOperator": $Vector4f
 constructor()
 
 /** Client only, do not use in server scripts */
-public "addFaceForRender"(vertexConsumer0: $VertexConsumer$$Type, float1: float, matrix4f2: $Matrix4f$$Type, int3: integer, int4: integer): void
-/** Client only, do not use in server scripts */
 public "addFaceForRender"(vertexConsumer0: $VertexConsumer$$Type, poseStack1: $PoseStack$$Type, int2: integer, int3: integer): void
+/** Client only, do not use in server scripts */
+public "addFaceForRender"(vertexConsumer0: $VertexConsumer$$Type, float1: float, matrix4f2: $Matrix4f$$Type, int3: integer, int4: integer): void
 public "calculateFaceNormal"(): $Vertex
 public static "resetAlphaOverride"(): void
 public static "resetUvOperator"(): void
@@ -1002,8 +1002,8 @@ get "user"(): $LivingEntity
 }
 
 declare module "mods.flammpfeil.slashblade.event.bladestand.CopySpecialAttackFromBladeEvent" {
-import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $PreCopySpecialAttackFromBladeEvent$$Type } from "mods.flammpfeil.slashblade.event.bladestand.PreCopySpecialAttackFromBladeEvent"
+import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $SlashBladeEvent$BladeStandAttackEvent, $SlashBladeEvent$BladeStandAttackEvent$$Type } from "mods.flammpfeil.slashblade.event.SlashBladeEvent$BladeStandAttackEvent"
 import { $SlashBladeEvent } from "mods.flammpfeil.slashblade.event.SlashBladeEvent"
 import { $ItemEntity, $ItemEntity$$Type } from "net.minecraft.world.entity.item.ItemEntity"
@@ -1011,9 +1011,9 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $ISlashBladeState$$Type } from "mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState"
 
 export class $CopySpecialAttackFromBladeEvent extends $SlashBladeEvent {
-constructor(itemStack0: $ItemStack$$Type, iSlashBladeState1: $ISlashBladeState$$Type, resourceLocation2: $ResourceLocation$$Type, bladeStandAttackEvent3: $SlashBladeEvent$BladeStandAttackEvent$$Type, itemStack4: $ItemStack$$Type, itemEntity5: $ItemEntity$$Type)
-constructor(preCopySpecialAttackFromBladeEvent0: $PreCopySpecialAttackFromBladeEvent$$Type, itemStack1: $ItemStack$$Type, itemEntity2: $ItemEntity$$Type)
 constructor()
+constructor(preCopySpecialAttackFromBladeEvent0: $PreCopySpecialAttackFromBladeEvent$$Type, itemStack1: $ItemStack$$Type, itemEntity2: $ItemEntity$$Type)
+constructor(itemStack0: $ItemStack$$Type, iSlashBladeState1: $ISlashBladeState$$Type, resourceLocation2: $ResourceLocation$$Type, bladeStandAttackEvent3: $SlashBladeEvent$BladeStandAttackEvent$$Type, itemStack4: $ItemStack$$Type, itemEntity5: $ItemEntity$$Type)
 
 public "getItemEntity"(): $ItemEntity
 public "getOrb"(): $ItemStack
@@ -1035,8 +1035,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $ISlashBladeState, $ISlashBladeState$$Type } from "mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState"
 
 export class $SlashBladeEvent$ChargeActionEvent extends $Event implements $EventItf {
-constructor(livingEntity0: $LivingEntity$$Type, int1: integer, iSlashBladeState2: $ISlashBladeState$$Type, resourceLocation3: $ResourceLocation$$Type, artsType4: $SlashArts$ArtsType$$Type)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, int1: integer, iSlashBladeState2: $ISlashBladeState$$Type, resourceLocation3: $ResourceLocation$$Type, artsType4: $SlashArts$ArtsType$$Type)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -1362,7 +1362,6 @@ export interface $ISlashBladeState extends $INBTSerializable<$CompoundTag> {
 "removeSpecialEffect"(resourceLocation0: $ResourceLocation$$Type): boolean
 "resolvCurrentComboState"(livingEntity0: $LivingEntity$$Type): $ResourceLocation
 "resolvCurrentComboStateTicks"(livingEntity0: $LivingEntity$$Type): $Map$Entry<integer, $ResourceLocation>
-"serializeNBT"(): $CompoundTag
 "setAdjust"(vec30: $Vec3$$Type): void
 "setAttackAmplifier"(float0: float): void
 "setBaseAttackModifier"(float0: float): void
@@ -1387,8 +1386,8 @@ export interface $ISlashBladeState extends $INBTSerializable<$CompoundTag> {
 "setSealed"(boolean0: boolean): void
 "setSlashArtsKey"(resourceLocation0: $ResourceLocation$$Type): void
 "setSpecialEffects"(listTag0: $ListTag$$Type): void
-"setTargetEntityId"(entity0: $Entity$$Type): void
 "setTargetEntityId"(int0: integer): void
+"setTargetEntityId"(entity0: $Entity$$Type): void
 "setTexture"(resourceLocation0: $ResourceLocation$$Type): void
 "setTranslationKey"(string0: string): void
 "updateComboSeq"(livingEntity0: $LivingEntity$$Type, resourceLocation1: $ResourceLocation$$Type): void
@@ -1441,8 +1440,8 @@ set "refine"(value: integer)
 set "sealed"(value: boolean)
 set "slashArtsKey"(value: $ResourceLocation$$Type)
 set "specialEffects"(value: $ListTag$$Type)
-set "targetEntityId"(value: $Entity$$Type)
 set "targetEntityId"(value: integer)
+set "targetEntityId"(value: $Entity$$Type)
 set "texture"(value: $ResourceLocation$$Type)
 set "translationKey"(value: string)
 }
@@ -1539,8 +1538,8 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -1580,8 +1579,8 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -1591,15 +1590,15 @@ public "isPeacefulCreature"(): boolean
 public "isPlayer"(): boolean
 public "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
 public "isWaterCreature"(): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readSpawnData"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -1733,9 +1732,9 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $ISlashBladeState$$Type } from "mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState"
 
 export class $CopySpecialEffectFromBladeEvent extends $SlashBladeEvent {
-constructor(itemStack0: $ItemStack$$Type, iSlashBladeState1: $ISlashBladeState$$Type, resourceLocation2: $ResourceLocation$$Type, bladeStandAttackEvent3: $SlashBladeEvent$BladeStandAttackEvent$$Type, boolean4: boolean, boolean5: boolean, itemStack6: $ItemStack$$Type, itemEntity7: $ItemEntity$$Type)
-constructor(preCopySpecialEffectFromBladeEvent0: $PreCopySpecialEffectFromBladeEvent$$Type, itemStack1: $ItemStack$$Type, itemEntity2: $ItemEntity$$Type)
 constructor()
+constructor(preCopySpecialEffectFromBladeEvent0: $PreCopySpecialEffectFromBladeEvent$$Type, itemStack1: $ItemStack$$Type, itemEntity2: $ItemEntity$$Type)
+constructor(itemStack0: $ItemStack$$Type, iSlashBladeState1: $ISlashBladeState$$Type, resourceLocation2: $ResourceLocation$$Type, bladeStandAttackEvent3: $SlashBladeEvent$BladeStandAttackEvent$$Type, boolean4: boolean, boolean5: boolean, itemStack6: $ItemStack$$Type, itemEntity7: $ItemEntity$$Type)
 
 public "getItemEntity"(): $ItemEntity
 public "getOrb"(): $ItemStack
@@ -1760,8 +1759,8 @@ import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 import { $ISlashBladeState$$Type } from "mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState"
 
 export class $SlashBladeEvent$UpdateEvent extends $SlashBladeEvent {
-constructor()
 constructor(itemStack0: $ItemStack$$Type, iSlashBladeState1: $ISlashBladeState$$Type, level2: $Level$$Type, entity3: $Entity$$Type, int4: integer, boolean5: boolean)
+constructor()
 
 public "getEntity"(): $Entity
 public "getItemSlot"(): integer
@@ -1811,8 +1810,8 @@ import { $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 import { $ISlashBladeState$$Type } from "mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState"
 
 export class $RefineProgressEvent extends $SlashBladeEvent {
-constructor()
 constructor(itemStack0: $ItemStack$$Type, iSlashBladeState1: $ISlashBladeState$$Type, int2: integer, int3: integer, int4: integer, int5: integer, anvilUpdateEvent6: $AnvilUpdateEvent$$Type)
+constructor()
 
 public "getCostResult"(): integer
 public "getLevelCost"(): integer

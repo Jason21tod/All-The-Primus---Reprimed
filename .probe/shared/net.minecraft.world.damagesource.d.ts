@@ -86,8 +86,8 @@ public "flyIntoWall"(): $DamageSource
 public "freeze"(): $DamageSource
 public "generic"(): $DamageSource
 public "genericKill"(): $DamageSource
-public "handler$gap000$l2library_modifyDamageSource_direct"(resourceKey0: $ResourceKey$$Type, entity1: $Entity$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$gap000$l2library_modifyDamageSource_indirect"(resourceKey0: $ResourceKey$$Type, entity1: $Entity$$Type, entity2: $Entity$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
+public "handler$gcd000$l2library_modifyDamageSource_direct"(resourceKey0: $ResourceKey$$Type, entity1: $Entity$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$gcd000$l2library_modifyDamageSource_indirect"(resourceKey0: $ResourceKey$$Type, entity1: $Entity$$Type, entity2: $Entity$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
 public "hotFloor"(): $DamageSource
 public "inFire"(): $DamageSource
 public "inWall"(): $DamageSource
@@ -102,9 +102,9 @@ public "onFire"(): $DamageSource
 public "outOfBorder"(): $DamageSource
 public "playerAttack"(player0: $Player$$Type): $DamageSource
 public "sonicBoom"(entity0: $Entity$$Type): $DamageSource
-public "source"(resourceKey0: $ResourceKey$$Type<$DamageType>): $DamageSource
-public "source"(resourceKey0: $ResourceKey$$Type<$DamageType>, entity1: $Entity$$Type, entity2: $Entity$$Type): $DamageSource
 public "source"(resourceKey0: $ResourceKey$$Type<$DamageType>, entity1: $Entity$$Type): $DamageSource
+public "source"(resourceKey0: $ResourceKey$$Type<$DamageType>, entity1: $Entity$$Type, entity2: $Entity$$Type): $DamageSource
+public "source"(resourceKey0: $ResourceKey$$Type<$DamageType>): $DamageSource
 public "stalagmite"(): $DamageSource
 public "starve"(): $DamageSource
 public "sting"(livingEntity0: $LivingEntity$$Type): $DamageSource
@@ -134,11 +134,11 @@ import { $AccessorDamageSource } from "com.mega.endinglib.mixin.accessor.Accesso
 import { $ExtraDamageSource } from "com.mega.endinglib.util.mixin.data_expand.ExtraDamageSource"
 
 export class $DamageSource implements $NameMutableDamageSource, $AccessorDamageSource, $ExtraDamageSource, $DamageSourceAccess {
-constructor(holder0: $Holder$$Type<$DamageType$$Type>, entity1: $Entity$$Type, entity2: $Entity$$Type)
-constructor(holder0: $Holder$$Type<$DamageType$$Type>, vec31: $Vec3$$Type)
-constructor(holder0: $Holder$$Type<$DamageType$$Type>, entity1: $Entity$$Type)
 constructor(holder0: $Holder$$Type<$DamageType$$Type>, entity1: $Entity$$Type, entity2: $Entity$$Type, vec33: $Vec3$$Type)
 constructor(holder0: $Holder$$Type<$DamageType$$Type>)
+constructor(holder0: $Holder$$Type<$DamageType$$Type>, vec31: $Vec3$$Type)
+constructor(holder0: $Holder$$Type<$DamageType$$Type>, entity1: $Entity$$Type)
+constructor(holder0: $Holder$$Type<$DamageType$$Type>, entity1: $Entity$$Type, entity2: $Entity$$Type)
 
 public "addTypeTag"(byte0: byte): void
 public "getActual"(): $Entity
@@ -150,8 +150,8 @@ public "getSourcePosition"(): $Vec3
 public "getType"(): string
 public "getWeapon"(): $Optional
 public "hasTypeTag"(byte0: byte): boolean
-public "is"(resourceKey0: $ResourceKey$$Type<$DamageType>): boolean
 public "is"(tagKey0: $TagKey$$Type<$DamageType$$Type>): boolean
+public "is"(resourceKey0: $ResourceKey$$Type<$DamageType>): boolean
 public "isCreativePlayer"(): boolean
 public "isIndirect"(): boolean
 public "removeTypeTag"(byte0: byte): void

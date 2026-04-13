@@ -26,10 +26,10 @@ export class $PotionBuilder extends $BuilderBase<$Potion> {
 constructor(i: $ResourceLocation$$Type)
 
 public "addEffect"(effect: $MobEffectInstance$$Type): $PotionBuilder
-public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean): $PotionBuilder
-public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean): $PotionBuilder
-public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean, hiddenEffect: $MobEffectInstance$$Type): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type, duration: integer): $PotionBuilder
+public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean, hiddenEffect: $MobEffectInstance$$Type): $PotionBuilder
+public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean): $PotionBuilder
+public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type): $PotionBuilder
 }
@@ -61,6 +61,7 @@ import { $BuilderBase } from "dev.latvian.mods.kubejs.registry.BuilderBase"
 export class $VillagerProfessionBuilder extends $BuilderBase<$VillagerProfession> {
 constructor(i: $ResourceLocation$$Type)
 
+public "createObject"(): $VillagerProfession
 public "poiType"(t: $ResourceLocation$$Type): $VillagerProfessionBuilder
 public "poiTypeTag"(t: $ResourceLocation$$Type): $VillagerProfessionBuilder
 public "requestedItems"(t: $Item$$Type[]): $VillagerProfessionBuilder

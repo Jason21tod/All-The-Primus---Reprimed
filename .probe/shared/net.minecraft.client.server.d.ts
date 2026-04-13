@@ -22,6 +22,7 @@ import { $UUID$$Type } from "java.util.UUID"
 import { $PlayerSelector$$Type } from "dev.latvian.mods.kubejs.core.PlayerSelector"
 import { $Exception$$Type } from "java.lang.Exception"
 import { $ScheduledEvents$ScheduledEvent } from "dev.latvian.mods.kubejs.util.ScheduledEvents$ScheduledEvent"
+import { $IDeferrableIntegratedServer } from "org.embeddedt.modernfix.duck.suspend_integrated_server_during_load.IDeferrableIntegratedServer"
 import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $EntityArrayList } from "dev.latvian.mods.kubejs.player.EntityArrayList"
 import { $ObjectOpenCustomHashSet } from "it.unimi.dsi.fastutil.objects.ObjectOpenCustomHashSet"
@@ -32,7 +33,7 @@ import { $Class } from "java.lang.Class"
 import { $WorldStem$$Type } from "net.minecraft.server.WorldStem"
 import { $Services$$Type } from "net.minecraft.server.Services"
 
-export class $IntegratedServer extends $MinecraftServer {
+export class $IntegratedServer extends $MinecraftServer implements $IDeferrableIntegratedServer {
 constructor(thread0: $Thread$$Type, minecraft1: $Minecraft$$Type, levelStorageAccess2: $LevelStorageSource$LevelStorageAccess$$Type, packRepository3: $PackRepository$$Type, worldStem4: $WorldStem$$Type, services5: $Services$$Type, chunkProgressListenerFactory6: $ChunkProgressListenerFactory$$Type)
 
 public "alwaysAccepts"(): boolean
@@ -49,6 +50,7 @@ public "getPlayer"(selector: $PlayerSelector$$Type): $ServerPlayer
 public "getPlayers"(): $EntityArrayList
 public static "getSummary"(): $Map<$Class<any>, $Map<$Class<any>, long>>
 public "initServer"(): boolean
+public "mfix$markClientLoadFinished"(): void
 public static "of"<Msg>(string0: string, consumer1: $Consumer$$Type<Msg>): $ProcessorHandle<Msg>
 public "resetGlobalTickLengthMs"(): void
 public "runCommand"(command: string): integer
@@ -62,8 +64,8 @@ public "sendData"(channel: string, data: $CompoundTag$$Type): void
 public "sendData"(channel: string): void
 public "setStatusMessage"(message: $Component$$Type): void
 public "setUUID"(uUID0: $UUID$$Type): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public "tell"(message: $Component$$Type): void
 public "wrap"(): $WeakReference<$Trackable>
 get "displayName"(): $Component

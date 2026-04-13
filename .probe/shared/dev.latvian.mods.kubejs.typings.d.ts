@@ -39,8 +39,8 @@ import { $StringBuilder$$Type } from "java.lang.StringBuilder"
 
 export interface $TypeDescJS {
 "asArray"(): $TypeDescJS
-"asMap"(): $TypeDescJS
 "asMap"(key: $TypeDescJS$$Type): $TypeDescJS
+"asMap"(): $TypeDescJS
 "build"(): string
 "build"(stringBuilder0: $StringBuilder$$Type): void
 "or"(type: $TypeDescJS$$Type): $TypeDescJS
@@ -57,8 +57,8 @@ const NUMBER: $TypeDescJS
 const STRING: $TypeDescJS
 function any(...types: $TypeDescJS$$Type[]): $TypeDescJS
 function fixedArray(...types: $TypeDescJS$$Type[]): $TypeDescJS
-function object(): $ObjectDescJS
 function object(init: integer): $ObjectDescJS
+function object(): $ObjectDescJS
 }
 export abstract class $TypeDescJS$$Static implements $TypeDescJS {
 static readonly "ANY": $TypeDescJS
@@ -71,8 +71,8 @@ static readonly "STRING": $TypeDescJS
 
 static "any"(...types: $TypeDescJS$$Type[]): $TypeDescJS
 static "fixedArray"(...types: $TypeDescJS$$Type[]): $TypeDescJS
-static "object"(): $ObjectDescJS
 static "object"(init: integer): $ObjectDescJS
+static "object"(): $ObjectDescJS
 }
 }
 
@@ -90,13 +90,13 @@ public "add"(key: string, value: $TypeDescJS$$Type, optional: boolean): $ObjectD
 public "add"(key: string, value: $TypeDescJS$$Type): $ObjectDescJS
 public static "any"(...types: $TypeDescJS$$Type[]): $TypeDescJS
 public "asArray"(): $TypeDescJS
-public "asMap"(): $TypeDescJS
 public "asMap"(key: $TypeDescJS$$Type): $TypeDescJS
+public "asMap"(): $TypeDescJS
 public "build"(builder: $StringBuilder$$Type): void
 public "build"(): string
 public static "fixedArray"(...types: $TypeDescJS$$Type[]): $TypeDescJS
-public static "object"(): $ObjectDescJS
 public static "object"(init: integer): $ObjectDescJS
+public static "object"(): $ObjectDescJS
 public "or"(type: $TypeDescJS$$Type): $TypeDescJS
 public "types"(): $List<$ObjectDescJS$Entry>
 public "withGenerics"(...types: $TypeDescJS$$Type[]): $TypeDescJS

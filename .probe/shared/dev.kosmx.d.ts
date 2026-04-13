@@ -247,8 +247,8 @@ public "getFirstPersonConfiguration"(tickDelta: float): $FirstPersonConfiguratio
 public "getFirstPersonMode"(tickDelta: float): $FirstPersonMode
 public "isActive"(): boolean
 public "removeModifier"(idx: integer): void
-public "replaceAnimationWithFade"(fadeModifier: $AbstractFadeModifier$$Type, newAnimation: T): void
 public "replaceAnimationWithFade"(fadeModifier: $AbstractFadeModifier$$Type, newAnimation: T, fadeFromNothing: boolean): void
+public "replaceAnimationWithFade"(fadeModifier: $AbstractFadeModifier$$Type, newAnimation: T): void
 public "setAnimation"(animation: T): void
 public "setupAnim"(tickDelta: float): void
 public "size"(): integer
@@ -282,8 +282,8 @@ export interface $IAnimatedPlayer extends $IPlayer {
 /** @deprecated */
 "getAnimation"(): $AnimationApplier
 "getAnimationStack"(): $AnimationStack
-"playerAnimator_getAnimation"(resourceLocation0: $ResourceLocation$$Type): $IAnimation
 "playerAnimator_getAnimation"(): $AnimationApplier
+"playerAnimator_getAnimation"(resourceLocation0: $ResourceLocation$$Type): $IAnimation
 "playerAnimator_setAnimation"(resourceLocation0: $ResourceLocation$$Type, iAnimation1: $IAnimation$$Type): $IAnimation
 get "animation"(): $AnimationApplier
 get "animationStack"(): $AnimationStack

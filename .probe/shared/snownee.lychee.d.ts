@@ -55,9 +55,9 @@ public "setItem"(int0: integer, itemStack1: $ItemStack$$Type): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "tryClear"(object0: any): void
 get "allItems"(): $List<$ItemStack>
@@ -414,8 +414,8 @@ export interface $ILycheeRecipe<C extends $LycheeContext = $LycheeContext> {
 "getBlockOutputs"(): $List<$BlockPredicate>
 "getComment"(): string
 "getContextualHolder"(): $ContextualHolder
-"getItemIndexes"(jsonPointer0: $JsonPointer$$Type): $IntList
 "getItemIndexes"(reference0: $Reference$$Type): $IntList
+"getItemIndexes"(jsonPointer0: $JsonPointer$$Type): $IntList
 "getPostActions"(): $Stream<$PostAction>
 "isActionPath"(jsonPointer0: $JsonPointer$$Type): boolean
 "lychee$getId"(): $ResourceLocation
@@ -672,9 +672,9 @@ public "setChanged"(): void
 public "setParam"(lootContextParam0: $LootContextParam$$Type<any>, object1: any): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "startOpen"(player0: $Player$$Type): void
+public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public "toLootContext"(): $LootContext
 public static "tryClear"(object0: any): void

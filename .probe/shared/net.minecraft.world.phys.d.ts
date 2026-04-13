@@ -14,8 +14,8 @@ readonly "y": float
 
 constructor(float0: float, float1: float)
 
-public "add"(vec20: $Vec2$$Type): $Vec2
 public "add"(float0: float): $Vec2
+public "add"(vec20: $Vec2$$Type): $Vec2
 public "distanceToSqr"(vec20: $Vec2$$Type): float
 public "dot"(vec20: $Vec2$$Type): float
 public "equals"(vec20: $Vec2$$Type): boolean
@@ -60,8 +60,8 @@ public "cross"(vec30: $Vec3$$Type): $Vec3
 public static "directionFromRotation"(float0: float, float1: float): $Vec3
 public static "directionFromRotation"(vec20: $Vec2$$Type): $Vec3
 public "distanceTo"(vec30: $Vec3$$Type): double
-public "distanceToSqr"(double0: double, double1: double, double2: double): double
 public "distanceToSqr"(vec30: $Vec3$$Type): double
+public "distanceToSqr"(double0: double, double1: double, double2: double): double
 public "dot"(vec30: $Vec3$$Type): double
 public static "fromRGB24"(int0: integer): $Vec3
 public "get"(axis0: $Direction$Axis$$Type): double
@@ -77,8 +77,8 @@ public "offsetRandom"(randomSource0: $RandomSource$$Type, float1: float): $Vec3
 public "relative"(direction0: $Direction$$Type, double1: double): $Vec3
 public "reverse"(): $Vec3
 public "scale"(double0: double): $Vec3
-public "subtract"(double0: double, double1: double, double2: double): $Vec3
 public "subtract"(vec30: $Vec3$$Type): $Vec3
+public "subtract"(double0: double, double1: double, double2: double): $Vec3
 public "toVector3f"(): $Vector3f
 public static "upFromBottomCenterOf"(vec3i0: $Vec3i$$Type, double1: double): $Vec3
 public "vectorTo"(vec30: $Vec3$$Type): $Vec3
@@ -249,24 +249,24 @@ constructor(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type)
 constructor(blockPos0: $BlockPos$$Type)
 constructor(double0: double, double1: double, double2: double, double3: double, double4: double, double5: double)
 
-public static "clip"(iterable0: $Iterable$$Type<$AABB$$Type>, vec31: $Vec3$$Type, vec32: $Vec3$$Type, blockPos3: $BlockPos$$Type): $BlockHitResult
 public "clip"(vec30: $Vec3$$Type, vec31: $Vec3$$Type): $Optional<$Vec3>
+public static "clip"(iterable0: $Iterable$$Type<$AABB$$Type>, vec31: $Vec3$$Type, vec32: $Vec3$$Type, blockPos3: $BlockPos$$Type): $BlockHitResult
 public "contains"(vec30: $Vec3$$Type): boolean
 public "contains"(double0: double, double1: double, double2: double): boolean
 public "contract"(double0: double, double1: double, double2: double): $AABB
 public "deflate"(double0: double, double1: double, double2: double): $AABB
 public "deflate"(double0: double): $AABB
 public "distanceToSqr"(vec30: $Vec3$$Type): double
-public "expandTowards"(double0: double, double1: double, double2: double): $AABB
 public "expandTowards"(vec30: $Vec3$$Type): $AABB
+public "expandTowards"(double0: double, double1: double, double2: double): $AABB
 public "getCenter"(): $Vec3
 public "getSize"(): double
 public "getXsize"(): double
 public "getYsize"(): double
 public "getZsize"(): double
 public "hasNaN"(): boolean
-public "inflate"(double0: double): $AABB
 public "inflate"(double0: double, double1: double, double2: double): $AABB
+public "inflate"(double0: double): $AABB
 public "intersect"(aABB0: $AABB$$Type): $AABB
 public "intersects"(double0: double, double1: double, double2: double, double3: double, double4: double, double5: double): boolean
 public "intersects"(vec30: $Vec3$$Type, vec31: $Vec3$$Type): boolean
@@ -328,8 +328,8 @@ import { $AxisCycle$$Type } from "net.minecraft.core.AxisCycle"
 
 export class $DiscreteVoxelShape implements $DiscreteVSAccess {
 public "fill"(int0: integer, int1: integer, int2: integer): void
-public "firstFull"(axis0: $Direction$Axis$$Type): integer
 public "firstFull"(axis0: $Direction$Axis$$Type, int1: integer, int2: integer): integer
+public "firstFull"(axis0: $Direction$Axis$$Type): integer
 public "forAllBoxes"(intLineConsumer0: $DiscreteVoxelShape$IntLineConsumer$$Type, boolean1: boolean): void
 public "forAllEdges"(intLineConsumer0: $DiscreteVoxelShape$IntLineConsumer$$Type, boolean1: boolean): void
 public "forAllFaces"(intFaceConsumer0: $DiscreteVoxelShape$IntFaceConsumer$$Type): void
@@ -338,12 +338,12 @@ public "getXSize"(): integer
 public "getYSize"(): integer
 public "getZSize"(): integer
 public "isEmpty"(): boolean
-public "isFull"(axisCycle0: $AxisCycle$$Type, int1: integer, int2: integer, int3: integer): boolean
 public "isFull"(int0: integer, int1: integer, int2: integer): boolean
-public "isFullWide"(axisCycle0: $AxisCycle$$Type, int1: integer, int2: integer, int3: integer): boolean
+public "isFull"(axisCycle0: $AxisCycle$$Type, int1: integer, int2: integer, int3: integer): boolean
 public "isFullWide"(int0: integer, int1: integer, int2: integer): boolean
-public "lastFull"(axis0: $Direction$Axis$$Type): integer
+public "isFullWide"(axisCycle0: $AxisCycle$$Type, int1: integer, int2: integer, int3: integer): boolean
 public "lastFull"(axis0: $Direction$Axis$$Type, int1: integer, int2: integer): integer
+public "lastFull"(axis0: $Direction$Axis$$Type): integer
 get "xSize"(): integer
 get "ySize"(): integer
 get "zSize"(): integer

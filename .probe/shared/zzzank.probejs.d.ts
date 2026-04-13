@@ -130,9 +130,9 @@ readonly "params": $List<$ParamDecl>
 constructor()
 
 public "build"(): $JSLambdaType
-public "param"(symbol: string, type: $BaseType$$Type): SELF
-public "param"(symbol: string, type: $BaseType$$Type, isOptional: boolean): SELF
 public "param"(symbol: string, type: $BaseType$$Type, isOptional: boolean, isVarArg: boolean): SELF
+public "param"(symbol: string, type: $BaseType$$Type, isOptional: boolean): SELF
+public "param"(symbol: string, type: $BaseType$$Type): SELF
 public "returnType"(type: $BaseType$$Type): SELF
 }
 }
@@ -399,9 +399,9 @@ import { $CommentableCode } from "zzzank.probejs.lang.typescript.code.Commentabl
 import { $BaseType$FormatType, $BaseType$FormatType$$Type } from "zzzank.probejs.lang.typescript.code.type.BaseType$FormatType"
 
 export class $TypeDecl extends $CommentableCode {
-constructor(name: string, type: $BaseType$$Type)
 constructor(exportDecl: boolean, name: string, symbolVariables: $List$$Type<$TSVariableType$$Type>, type: $BaseType$$Type, typeFormat: $BaseType$FormatType$$Type)
 constructor(name: string, symbolVariables: $List$$Type<$TSVariableType$$Type>, type: $BaseType$$Type)
+constructor(name: string, type: $BaseType$$Type)
 
 public "setTypeFormat"(typeFormat: $BaseType$FormatType$$Type): $TypeDecl
 get "exportDecl"(): boolean
@@ -436,8 +436,8 @@ readonly "path": $ClassPath
 constructor(self: $ClassPath$$Type)
 
 public "addCode"(code: $Code$$Type): void
-public "addCodes"(...codes: $Code$$Type[]): void
 public "addCodes"(codes: $Collection$$Type<$Code$$Type>): void
+public "addCodes"(...codes: $Code$$Type[]): void
 public "excludeSymbol"(name: string): void
 public "findCode"<T extends $Code>(type: $Class$$Type<T>): $Optional<T>
 public "findCodeNullable"<T extends $Code>(type: $Class$$Type<T>): T
@@ -463,9 +463,9 @@ readonly "variableTypes": $List<$TSVariableType>
 constructor(name: string)
 
 public "build"(): $FunctionDeclaration
-public "param"(symbol: string, type: $BaseType$$Type, isOptional: boolean, isVarArg: boolean): $FunctionDeclaration$Builder
 public "param"(symbol: string, type: $BaseType$$Type): $FunctionDeclaration$Builder
 public "param"(symbol: string, type: $BaseType$$Type, isOptional: boolean): $FunctionDeclaration$Builder
+public "param"(symbol: string, type: $BaseType$$Type, isOptional: boolean, isVarArg: boolean): $FunctionDeclaration$Builder
 public "returnType"(type: $BaseType$$Type): $FunctionDeclaration$Builder
 public "variable"(...symbols: string[]): $FunctionDeclaration$Builder
 public "variable"(...variableType: $TSVariableType$$Type[]): $FunctionDeclaration$Builder
@@ -908,8 +908,8 @@ import { $BaseType, $BaseType$$Type } from "zzzank.probejs.lang.typescript.code.
 import { $BaseType$FormatType$$Type } from "zzzank.probejs.lang.typescript.code.type.BaseType$FormatType"
 
 export class $ParamDecl {
-constructor(name: string, type: $BaseType$$Type)
 constructor(name: string, type: $BaseType$$Type, varArg: boolean, optional: boolean)
+constructor(name: string, type: $BaseType$$Type)
 
 public "format"(i: integer, declaration: $Declaration$$Type, formatType: $BaseType$FormatType$$Type): string
 public static "formatParams"(params: $List$$Type<$ParamDecl$$Type>, declaration: $Declaration$$Type): string
@@ -1001,9 +1001,9 @@ public "getPrefixes"(): $List<string>
 public "literal"(content: string): $Snippet
 public "newline"(): $Snippet
 public "prefix"(prefix: string): $Snippet
-public "tabStop"(enumeration: integer): $Snippet
-public "tabStop"(): $Snippet
 public "tabStop"(enumeration: integer, defaultValue: string): $Snippet
+public "tabStop"(): $Snippet
+public "tabStop"(enumeration: integer): $Snippet
 public "variable"(variable: $Variable$$Type): $Snippet
 get "prefixes"(): $List<string>
 }
@@ -1164,8 +1164,8 @@ import { $TSArrayAccessType } from "zzzank.probejs.lang.typescript.code.type.ts.
 export class $BaseType extends $Code {
 constructor()
 
-public "access"(index: $BaseType$$Type): $TSArrayAccessType
 public "access"(index: string): $TSArrayAccessType
+public "access"(index: $BaseType$$Type): $TSArrayAccessType
 public "and"(...types: $BaseType$$Type[]): $JSJoinedType$Intersection
 public "asArray"(): $TSArrayType
 public "comment"(comment: string): $WithFormatType
@@ -1177,9 +1177,9 @@ public "line"(declaration: $Declaration$$Type): string
 public "line"(declaration: $Declaration$$Type, formatType: $BaseType$FormatType$$Type): string
 public "optional"(): $TSOptionalType
 public "or"(...types: $BaseType$$Type[]): $JSJoinedType$Union
-public "withParams"(...params: $BaseType$$Type[]): $TSParamType
 public "withParams"(params: $Collection$$Type<$BaseType$$Type>): $TSParamType
 public "withParams"(...params: string[]): $TSParamType
+public "withParams"(...params: $BaseType$$Type[]): $TSParamType
 public "withPossibleParams"(params: $Collection$$Type<$BaseType$$Type>): $BaseType
 }
 }
@@ -1251,35 +1251,35 @@ const THIS: $JSPrimitiveType
 const UNDEFINED: $JSPrimitiveType
 const UNKNOWN: $JSPrimitiveType
 const VOID: $JSPrimitiveType
-function and(types: $Collection$$Type<$BaseType$$Type>): $BaseType
 function and(...types: $BaseType$$Type[]): $BaseType
+function and(types: $Collection$$Type<$BaseType$$Type>): $BaseType
 function array(base: $BaseType$$Type): $TSArrayType
 function contextShield<T extends $BaseType>(type: T, formatType: $BaseType$FormatType$$Type): $ContextShield<T>
 function custom(formatter: $BiFunction$$Type<$Declaration$$Type, $BaseType$FormatType$$Type, string>): $CustomType
 function custom(formatter: $BiFunction$$Type<$Declaration$$Type, $BaseType$FormatType$$Type, string>, imports: $Function$$Type<$BaseType$FormatType$$Type, $ImportInfos>): $CustomType
 function format(format: string, ...types: $BaseType$$Type[]): $WithFormatType
 function generic(symbol: string): $TSVariableType
-function generic(symbol: string, extendOn: $BaseType$$Type): $TSVariableType
 function generic(symbol: string, extendOn: $BaseType$$Type, defaultTo: $BaseType$$Type): $TSVariableType
+function generic(symbol: string, extendOn: $BaseType$$Type): $TSVariableType
 function genericAndDefault(symbol: string, extendAndDefault: $BaseType$$Type): $TSVariableType
 function importShield<T extends $BaseType>(type: T, imports: $ImportInfos$$Type): $ImportShield<T>
 function join(delimiter: charseq, prefix: charseq, suffix: charseq, types: $Collection$$Type<$BaseType$$Type>): $JSJoinedType
-function join(delimiter: charseq, ...types: $BaseType$$Type[]): $JSJoinedType
 function join(delimiter: charseq, types: $Collection$$Type<$BaseType$$Type>): $JSJoinedType
+function join(delimiter: charseq, ...types: $BaseType$$Type[]): $JSJoinedType
 function join(delimiter: charseq, prefix: charseq, suffix: charseq, ...types: $BaseType$$Type[]): $JSJoinedType
 function keyof(inner: $BaseType$$Type): $TSKeyofType
 function lambda(): $JSLambdaType$Builder
-function literal(content: character): $JSPrimitiveType
-function literal(content: boolean): $JSPrimitiveType
-function literal(content: number): $JSPrimitiveType
 function literal(content: string): $JSPrimitiveType
-function object(): $JSObjectType$Builder
+function literal(content: character): $JSPrimitiveType
+function literal(content: number): $JSPrimitiveType
+function literal(content: boolean): $JSPrimitiveType
 function object(properties: $Map$$Type<charseq, $BaseType$$Type>): $JSObjectType$Builder
+function object(): $JSObjectType$Builder
 function optional(type: $BaseType$$Type): $TSOptionalType
-function or(types: $Collection$$Type<$BaseType$$Type>): $BaseType
 function or(...types: $BaseType$$Type[]): $BaseType
-function orEnumLike(objects: $Stream$$Type<any>, lowerCase: boolean): $BaseType
+function or(types: $Collection$$Type<$BaseType$$Type>): $BaseType
 function orEnumLike(objects: $Collection$$Type<any>, lowerCase: boolean): $BaseType
+function orEnumLike(objects: $Stream$$Type<any>, lowerCase: boolean): $BaseType
 function parameterized(base: $BaseType$$Type, ...params: $BaseType$$Type[]): $TSParamType
 function parameterized(base: $BaseType$$Type, params: $Collection$$Type<$BaseType$$Type>): $TSParamType
 function primitive(type: string): $JSPrimitiveType
@@ -1287,11 +1287,11 @@ function staticType(path: $ClassPath$$Type): $StaticType
 function templateLiteral(content: string): $JSPrimitiveType
 function ternary(symbol: string, extend: $BaseType$$Type, ifTrue: $BaseType$$Type, ifFalse: $BaseType$$Type): $TSTernaryType
 function tuple(): $JSTupleType$Builder
-function type(clazz: $Class$$Type<any>): $TSClassType
 function type(classPath: $ClassPath$$Type): $TSClassType
+function type(clazz: $Class$$Type<any>): $TSClassType
 function typeOf(classPath: $ClassPath$$Type): $JSTypeOfType
-function typeOf(clazz: $Class$$Type<any>): $JSTypeOfType
 function typeOf(classType: $BaseType$$Type): $JSTypeOfType
+function typeOf(clazz: $Class$$Type<any>): $JSTypeOfType
 function withComment(type: $BaseType$$Type, comment: string): $WithFormatType
 }
 export abstract class $Types$$Static implements $Types {
@@ -1309,35 +1309,35 @@ static readonly "UNDEFINED": $JSPrimitiveType
 static readonly "UNKNOWN": $JSPrimitiveType
 static readonly "VOID": $JSPrimitiveType
 
-static "and"(types: $Collection$$Type<$BaseType$$Type>): $BaseType
 static "and"(...types: $BaseType$$Type[]): $BaseType
+static "and"(types: $Collection$$Type<$BaseType$$Type>): $BaseType
 static "array"(base: $BaseType$$Type): $TSArrayType
 static "contextShield"<T extends $BaseType>(type: T, formatType: $BaseType$FormatType$$Type): $ContextShield<T>
 static "custom"(formatter: $BiFunction$$Type<$Declaration$$Type, $BaseType$FormatType$$Type, string>): $CustomType
 static "custom"(formatter: $BiFunction$$Type<$Declaration$$Type, $BaseType$FormatType$$Type, string>, imports: $Function$$Type<$BaseType$FormatType$$Type, $ImportInfos>): $CustomType
 static "format"(format: string, ...types: $BaseType$$Type[]): $WithFormatType
 static "generic"(symbol: string): $TSVariableType
-static "generic"(symbol: string, extendOn: $BaseType$$Type): $TSVariableType
 static "generic"(symbol: string, extendOn: $BaseType$$Type, defaultTo: $BaseType$$Type): $TSVariableType
+static "generic"(symbol: string, extendOn: $BaseType$$Type): $TSVariableType
 static "genericAndDefault"(symbol: string, extendAndDefault: $BaseType$$Type): $TSVariableType
 static "importShield"<T extends $BaseType>(type: T, imports: $ImportInfos$$Type): $ImportShield<T>
 static "join"(delimiter: charseq, prefix: charseq, suffix: charseq, types: $Collection$$Type<$BaseType$$Type>): $JSJoinedType
-static "join"(delimiter: charseq, ...types: $BaseType$$Type[]): $JSJoinedType
 static "join"(delimiter: charseq, types: $Collection$$Type<$BaseType$$Type>): $JSJoinedType
+static "join"(delimiter: charseq, ...types: $BaseType$$Type[]): $JSJoinedType
 static "join"(delimiter: charseq, prefix: charseq, suffix: charseq, ...types: $BaseType$$Type[]): $JSJoinedType
 static "keyof"(inner: $BaseType$$Type): $TSKeyofType
 static "lambda"(): $JSLambdaType$Builder
-static "literal"(content: character): $JSPrimitiveType
-static "literal"(content: boolean): $JSPrimitiveType
-static "literal"(content: number): $JSPrimitiveType
 static "literal"(content: string): $JSPrimitiveType
-static "object"(): $JSObjectType$Builder
+static "literal"(content: character): $JSPrimitiveType
+static "literal"(content: number): $JSPrimitiveType
+static "literal"(content: boolean): $JSPrimitiveType
 static "object"(properties: $Map$$Type<charseq, $BaseType$$Type>): $JSObjectType$Builder
+static "object"(): $JSObjectType$Builder
 static "optional"(type: $BaseType$$Type): $TSOptionalType
-static "or"(types: $Collection$$Type<$BaseType$$Type>): $BaseType
 static "or"(...types: $BaseType$$Type[]): $BaseType
-static "orEnumLike"(objects: $Stream$$Type<any>, lowerCase: boolean): $BaseType
+static "or"(types: $Collection$$Type<$BaseType$$Type>): $BaseType
 static "orEnumLike"(objects: $Collection$$Type<any>, lowerCase: boolean): $BaseType
+static "orEnumLike"(objects: $Stream$$Type<any>, lowerCase: boolean): $BaseType
 static "parameterized"(base: $BaseType$$Type, ...params: $BaseType$$Type[]): $TSParamType
 static "parameterized"(base: $BaseType$$Type, params: $Collection$$Type<$BaseType$$Type>): $TSParamType
 static "primitive"(type: string): $JSPrimitiveType
@@ -1345,11 +1345,11 @@ static "staticType"(path: $ClassPath$$Type): $StaticType
 static "templateLiteral"(content: string): $JSPrimitiveType
 static "ternary"(symbol: string, extend: $BaseType$$Type, ifTrue: $BaseType$$Type, ifFalse: $BaseType$$Type): $TSTernaryType
 static "tuple"(): $JSTupleType$Builder
-static "type"(clazz: $Class$$Type<any>): $TSClassType
 static "type"(classPath: $ClassPath$$Type): $TSClassType
+static "type"(clazz: $Class$$Type<any>): $TSClassType
 static "typeOf"(classPath: $ClassPath$$Type): $JSTypeOfType
-static "typeOf"(clazz: $Class$$Type<any>): $JSTypeOfType
 static "typeOf"(classType: $BaseType$$Type): $JSTypeOfType
+static "typeOf"(clazz: $Class$$Type<any>): $JSTypeOfType
 static "withComment"(type: $BaseType$$Type, comment: string): $WithFormatType
 }
 }
@@ -1371,24 +1371,24 @@ import { $Spliterator } from "java.util.Spliterator"
 export class $ImportInfos implements $Iterable<$ImportInfo> {
 public "add"(info: $ImportInfo$$Type): $ImportInfos
 public "addAll"(infos: $Collection$$Type<$ImportInfo$$Type>): $ImportInfos
-public "addAll"(infos: $Stream$$Type<$ImportInfo$$Type>): $ImportInfos
 public "addAll"(other: $ImportInfos$$Type): $ImportInfos
+public "addAll"(infos: $Stream$$Type<$ImportInfo$$Type>): $ImportInfos
 public "forEach"(consumer0: $Consumer$$Type<$ImportInfo$$Type>): void
-public "fromCode"(code: $BaseType$$Type, type: $BaseType$FormatType$$Type): $ImportInfos
 public "fromCode"(code: $Code$$Type): $ImportInfos
-public "fromCodes"(codes: $Collection$$Type<$Code$$Type>): $ImportInfos
+public "fromCode"(code: $BaseType$$Type, type: $BaseType$FormatType$$Type): $ImportInfos
 public "fromCodes"(codes: $Collection$$Type<$BaseType$$Type>, type: $BaseType$FormatType$$Type): $ImportInfos
-public "fromCodes"(codes: $Stream$$Type<$BaseType$$Type>, type: $BaseType$FormatType$$Type): $ImportInfos
 public "fromCodes"(codes: $Stream$$Type<$Code$$Type>): $ImportInfos
+public "fromCodes"(codes: $Stream$$Type<$BaseType$$Type>, type: $BaseType$FormatType$$Type): $ImportInfos
+public "fromCodes"(codes: $Collection$$Type<$Code$$Type>): $ImportInfos
 public "getImports"(): $Collection<$ImportInfo>
 public "getRaw"(): $Map<$ClassPath, $ImportInfo>
 public "iterator"(): $Iterator<$ImportInfo>
+public static "of"(...initial: $ImportInfo$$Type[]): $ImportInfos
+public static "of"(infos: $Collection$$Type<$ImportInfo$$Type>): $ImportInfos
 public static "of"(infos: $Stream$$Type<$ImportInfo$$Type>): $ImportInfos
 public static "of"(toCopy: $ImportInfos$$Type): $ImportInfos
 public static "of"(): $ImportInfos
 public static "of"(info: $ImportInfo$$Type): $ImportInfos
-public static "of"(...initial: $ImportInfo$$Type[]): $ImportInfos
-public static "of"(infos: $Collection$$Type<$ImportInfo$$Type>): $ImportInfos
 public "spliterator"(): $Spliterator<$ImportInfo>
 [Symbol.iterator](): IterableIterator<$ImportInfo>;
 get "imports"(): $Collection<$ImportInfo>
@@ -1478,8 +1478,8 @@ import { $TSDump$FolderDump } from "zzzank.probejs.api.dump.TSDump$FolderDump"
 export class $TSGlobalDump extends $TSDumpBase implements $TSDump$FolderDump {
 readonly "globals": $Map<string, $TypeScriptFile>
 
-constructor(writer: $TSFileWriter$$Type, writeTo: $Path$$Type)
 constructor(writeTo: $Path$$Type)
+constructor(writer: $TSFileWriter$$Type, writeTo: $Path$$Type)
 
 public "cleanOldDumps"(): void
 public "open"(): void
@@ -1508,10 +1508,10 @@ import { $TypeDescriptor } from "zzzank.probejs.lang.java.type.TypeDescriptor"
 import { $TypeVariable, $TypeVariable$$Type } from "java.lang.reflect.TypeVariable"
 
 export class $VariableType extends $TypeDescriptor {
-constructor(typeVariable: $AnnotatedTypeVariable$$Type)
 constructor(typeVariable: $TypeVariable$$Type<any>, checkBounds: boolean)
-constructor(typeVariable: $TypeVariable$$Type<any>)
 constructor(typeVariable: $AnnotatedTypeVariable$$Type, checkBounds: boolean)
+constructor(typeVariable: $TypeVariable$$Type<any>)
+constructor(typeVariable: $AnnotatedTypeVariable$$Type)
 
 public "getDescriptors"(): $List<$TypeDescriptor>
 public "getSymbol"(): string
@@ -1562,8 +1562,8 @@ import { $Path$$Type } from "java.nio.file.Path"
 import { $TSDump$FolderDump } from "zzzank.probejs.api.dump.TSDump$FolderDump"
 
 export class $TSFilesDump extends $TSDumpBase implements $TSDump$FolderDump {
-constructor(writer: $TSFileWriter$$Type, writeTo: $Path$$Type)
 constructor(writeTo: $Path$$Type)
+constructor(writer: $TSFileWriter$$Type, writeTo: $Path$$Type)
 
 public "cleanOldDumps"(): void
 public "open"(): void
@@ -1748,11 +1748,11 @@ readonly "variableTypes": $List<$TSVariableType>
 constructor()
 
 public "buildAsConstructor"(): $ConstructorDecl
-public "param"(symbol: string, type: $BaseType$$Type, isOptional: boolean, isVarArg: boolean): SELF
 public "param"(symbol: string, type: $BaseType$$Type): SELF
 public "param"(symbol: string, type: $BaseType$$Type, isOptional: boolean): SELF
-public "typeVariables"(...variableTypes: $TSVariableType$$Type[]): SELF
+public "param"(symbol: string, type: $BaseType$$Type, isOptional: boolean, isVarArg: boolean): SELF
 public "typeVariables"(...symbols: string[]): SELF
+public "typeVariables"(...variableTypes: $TSVariableType$$Type[]): SELF
 public "typeVariables"(variableTypes: $Collection$$Type<$TSVariableType$$Type>): SELF
 }
 }
@@ -1825,9 +1825,9 @@ constructor(parent: $SharedDump$$Type, type: $ScriptType$$Type, scriptPath: $Pat
 public "acceptClasses"(classes: $Collection$$Type<$Clazz$$Type>): void
 public "addGlobal"(identifier: string, ...content: $Code$$Type[]): void
 public "addGlobal"(identifier: string, excludedNames: $Collection$$Type<string>, ...content: $Code$$Type[]): void
-public "assignType"(classPath: $ClassPath$$Type, type: $BaseType$$Type): void
 public "assignType"(classPath: $ClassPath$$Type, name: string, type: $BaseType$$Type): void
 public "assignType"(classPath: $Class$$Type<any>, type: $BaseType$$Type): void
+public "assignType"(classPath: $ClassPath$$Type, type: $BaseType$$Type): void
 public "assignType"(classPath: $Class$$Type<any>, name: string, type: $BaseType$$Type): void
 public "dump"(): void
 public "pjsDumpName"(): string
@@ -2029,9 +2029,9 @@ import { $Function$$Type } from "java.util.function.Function"
 export class $MultiDump extends $TSDumpBase {
 constructor(base: $Path$$Type)
 
+public "addChild"<T extends $TSDump>(relativePath: $Path$$Type, dump: $Function$$Type<$Path$$Type, T>): T
 public "addChild"<T extends $TSDump>(dump: T): T
 public "addChild"<T extends $TSDump>(relativePath: string, dump: $Function$$Type<$Path$$Type, T>): T
-public "addChild"<T extends $TSDump>(relativePath: $Path$$Type, dump: $Function$$Type<$Path$$Type, T>): T
 public "cleanOldDumps"(): void
 public "dumpImpl"(): void
 public "dumps"(): $List<$TSDump>

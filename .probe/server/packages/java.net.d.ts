@@ -45,7 +45,7 @@ import { $URLStreamHandler$$Type } from "java.net.URLStreamHandler"
 import { $Proxy$$Type } from "java.net.Proxy"
 import { $URLConnection } from "java.net.URLConnection"
 import { $Class$$Type } from "java.lang.Class"
-import { $URI } from "java.net.URI"
+import { $URI, $URI$$Type } from "java.net.URI"
 import { $URLStreamHandlerFactory$$Type } from "java.net.URLStreamHandlerFactory"
 import { $InputStream } from "java.io.InputStream"
 import { $Serializable } from "java.io.Serializable"
@@ -56,16 +56,22 @@ import { $Serializable } from "java.io.Serializable"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $URL implements $Serializable {
+/** @deprecated */
 constructor(uRL0: $URL$$Type, string1: string, uRLStreamHandler2: $URLStreamHandler$$Type)
+/** @deprecated */
 constructor(uRL0: $URL$$Type, string1: string)
+/** @deprecated */
 constructor(string0: string)
+/** @deprecated */
 constructor(string0: string, string1: string, int2: integer, string3: string)
+/** @deprecated */
 constructor(string0: string, string1: string, string2: string)
+/** @deprecated */
 constructor(string0: string, string1: string, int2: integer, string3: string, uRLStreamHandler4: $URLStreamHandler$$Type)
 
 public "getAuthority"(): string
-public "getContent"(): any
 public "getContent"(class0s: $Class$$Type<any>[]): any
+public "getContent"(): any
 public "getDefaultPort"(): integer
 public "getFile"(): string
 public "getHost"(): string
@@ -75,6 +81,7 @@ public "getProtocol"(): string
 public "getQuery"(): string
 public "getRef"(): string
 public "getUserInfo"(): string
+public static "of"(uRI0: $URI$$Type, uRLStreamHandler1: $URLStreamHandler$$Type): $URL
 public "openConnection"(proxy0: $Proxy$$Type): $URLConnection
 public "openConnection"(): $URLConnection
 public "openStream"(): $InputStream
@@ -137,8 +144,8 @@ public "isOpaque"(): boolean
 public "normalize"(): $URI
 public "parseServerAuthority"(): $URI
 public "relativize"(uRI0: $URI$$Type): $URI
-public "resolve"(uRI0: $URI$$Type): $URI
 public "resolve"(string0: string): $URI
+public "resolve"(uRI0: $URI$$Type): $URI
 public "toASCIIString"(): string
 public "toURL"(): $URL
 get "authority"(): string
@@ -180,9 +187,9 @@ import { $ServerSocketChannel } from "java.nio.channels.ServerSocketChannel"
  */
 export class $ServerSocket implements $Closeable {
 constructor(int0: integer, int1: integer, inetAddress2: $InetAddress$$Type)
-constructor()
-constructor(int0: integer)
 constructor(int0: integer, int1: integer)
+constructor(int0: integer)
+constructor()
 
 public "accept"(): $Socket
 public "bind"(socketAddress0: $SocketAddress$$Type): void
@@ -258,15 +265,15 @@ import { $DatagramPacket$$Type } from "java.net.DatagramPacket"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $DatagramSocket implements $Closeable {
-constructor(int0: integer, inetAddress1: $InetAddress$$Type)
-constructor(socketAddress0: $SocketAddress$$Type)
-constructor()
 constructor(int0: integer)
+constructor(socketAddress0: $SocketAddress$$Type)
+constructor(int0: integer, inetAddress1: $InetAddress$$Type)
+constructor()
 
 public "bind"(socketAddress0: $SocketAddress$$Type): void
 public "close"(): void
-public "connect"(socketAddress0: $SocketAddress$$Type): void
 public "connect"(inetAddress0: $InetAddress$$Type, int1: integer): void
+public "connect"(socketAddress0: $SocketAddress$$Type): void
 public "disconnect"(): void
 public "getBroadcast"(): boolean
 public "getChannel"(): $DatagramChannel
@@ -456,21 +463,21 @@ import { $InputStream } from "java.io.InputStream"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $Socket implements $Closeable {
-/** @deprecated */
-constructor(string0: string, int1: integer, boolean2: boolean)
-constructor(inetAddress0: $InetAddress$$Type, int1: integer, inetAddress2: $InetAddress$$Type, int3: integer)
 constructor(string0: string, int1: integer, inetAddress2: $InetAddress$$Type, int3: integer)
-/** @deprecated */
-constructor(inetAddress0: $InetAddress$$Type, int1: integer, boolean2: boolean)
 constructor()
 constructor(proxy0: $Proxy$$Type)
 constructor(string0: string, int1: integer)
 constructor(inetAddress0: $InetAddress$$Type, int1: integer)
+constructor(inetAddress0: $InetAddress$$Type, int1: integer, inetAddress2: $InetAddress$$Type, int3: integer)
+/** @deprecated */
+constructor(string0: string, int1: integer, boolean2: boolean)
+/** @deprecated */
+constructor(inetAddress0: $InetAddress$$Type, int1: integer, boolean2: boolean)
 
 public "bind"(socketAddress0: $SocketAddress$$Type): void
 public "close"(): void
-public "connect"(socketAddress0: $SocketAddress$$Type): void
 public "connect"(socketAddress0: $SocketAddress$$Type, int1: integer): void
+public "connect"(socketAddress0: $SocketAddress$$Type): void
 public "getChannel"(): $SocketChannel
 public "getInetAddress"(): $InetAddress
 public "getInputStream"(): $InputStream
@@ -614,9 +621,9 @@ import { $SocketAddress } from "java.net.SocketAddress"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $InetSocketAddress extends $SocketAddress {
-constructor(inetAddress0: $InetAddress$$Type, int1: integer)
-constructor(int0: integer)
 constructor(string0: string, int1: integer)
+constructor(int0: integer)
+constructor(inetAddress0: $InetAddress$$Type, int1: integer)
 
 public static "createUnresolved"(string0: string, int1: integer): $InetSocketAddress
 public "getAddress"(): $InetAddress
@@ -686,6 +693,7 @@ public "isMulticastAddress"(): boolean
 public "isReachable"(int0: integer): boolean
 public "isReachable"(networkInterface0: $NetworkInterface$$Type, int1: integer, int2: integer): boolean
 public "isSiteLocalAddress"(): boolean
+public static "ofLiteral"(string0: string): $InetAddress
 get "address"(): byte[]
 get "canonicalHostName"(): string
 get "hostAddress"(): string
@@ -782,8 +790,8 @@ public "addRequestProperty"(string0: string, string1: string): void
 public "connect"(): void
 public "getAllowUserInteraction"(): boolean
 public "getConnectTimeout"(): integer
-public "getContent"(): any
 public "getContent"(class0s: $Class$$Type<any>[]): any
+public "getContent"(): any
 public "getContentEncoding"(): string
 public "getContentLength"(): integer
 public "getContentLengthLong"(): long
@@ -792,14 +800,14 @@ public "getDate"(): long
 public static "getDefaultAllowUserInteraction"(): boolean
 /** @deprecated */
 public static "getDefaultRequestProperty"(string0: string): string
-public "getDefaultUseCaches"(): boolean
 public static "getDefaultUseCaches"(string0: string): boolean
+public "getDefaultUseCaches"(): boolean
 public "getDoInput"(): boolean
 public "getDoOutput"(): boolean
 public "getExpiration"(): long
 public static "getFileNameMap"(): $FileNameMap
-public "getHeaderField"(int0: integer): string
 public "getHeaderField"(string0: string): string
+public "getHeaderField"(int0: integer): string
 public "getHeaderFieldDate"(string0: string, long1: long): long
 public "getHeaderFieldInt"(string0: string, int1: integer): integer
 public "getHeaderFieldKey"(int0: integer): string
@@ -809,6 +817,7 @@ public "getIfModifiedSince"(): long
 public "getInputStream"(): $InputStream
 public "getLastModified"(): long
 public "getOutputStream"(): $OutputStream
+/** @deprecated */
 public "getPermission"(): $Permission
 public "getReadTimeout"(): integer
 public "getRequestProperties"(): $Map<string, $List<string>>
@@ -823,8 +832,8 @@ public static "setContentHandlerFactory"(contentHandlerFactory0: $ContentHandler
 public static "setDefaultAllowUserInteraction"(boolean0: boolean): void
 /** @deprecated */
 public static "setDefaultRequestProperty"(string0: string, string1: string): void
-public "setDefaultUseCaches"(boolean0: boolean): void
 public static "setDefaultUseCaches"(string0: string, boolean1: boolean): void
+public "setDefaultUseCaches"(boolean0: boolean): void
 public "setDoInput"(boolean0: boolean): void
 public "setDoOutput"(boolean0: boolean): void
 public static "setFileNameMap"(fileNameMap0: $FileNameMap$$Type): void
@@ -891,8 +900,8 @@ public "getOffset"(): integer
 public "getPort"(): integer
 public "getSocketAddress"(): $SocketAddress
 public "setAddress"(inetAddress0: $InetAddress$$Type): void
-public "setData"(byte0s: byte[], int1: integer, int2: integer): void
 public "setData"(byte0s: byte[]): void
+public "setData"(byte0s: byte[], int1: integer, int2: integer): void
 public "setLength"(int0: integer): void
 public "setPort"(int0: integer): void
 public "setSocketAddress"(socketAddress0: $SocketAddress$$Type): void

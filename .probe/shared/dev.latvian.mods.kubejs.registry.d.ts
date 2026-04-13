@@ -211,8 +211,8 @@ readonly "objects": $Map<$ResourceLocation, $BuilderBase<T>>
 readonly "types": $Map<string, $BuilderType<T>>
 
 public "addBuilder"(builder: $BuilderBase$$Type<T>): void
-public "addType"(type: string, builderType: $Class$$Type<$BuilderBase$$Type<T>>, factory: $BuilderFactory$$Type, isDefault: boolean): void
 public "addType"(type: string, builderType: $Class$$Type<$BuilderBase$$Type<T>>, factory: $BuilderFactory$$Type): void
+public "addType"(type: string, builderType: $Class$$Type<$BuilderBase$$Type<T>>, factory: $BuilderFactory$$Type, isDefault: boolean): void
 public "bypassServerOnly"(): $RegistryInfo<T>
 public "entrySet"(): $Set<$Map$Entry<$ResourceKey<T>, T>>
 public "fireRegistryEvent"(): void

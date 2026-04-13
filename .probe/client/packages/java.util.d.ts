@@ -79,6 +79,13 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $Delayed$$Type = ($Delayed);
 }
 
+declare module "java.util.stream.Gatherer" {
+import { $Gatherer$Integrator$$Type } from "java.util.stream.Gatherer$Integrator"
+
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Gatherer$$Type<T = any, A = any, R = any> = ($Gatherer<T, A, R> | (() => $Gatherer$Integrator$$Type<A, T, R>));
+}
+
 declare module "java.util.Optional" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -248,6 +255,13 @@ declare module "java.util.function.DoubleConsumer" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $DoubleConsumer$$Type = ($DoubleConsumer | ((arg0: double) => void));
+}
+
+declare module "java.util.stream.Gatherer$Integrator" {
+import { $Gatherer$Downstream } from "java.util.stream.Gatherer$Downstream"
+
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Gatherer$Integrator$$Type<A = any, T = any, R = any> = ($Gatherer$Integrator<A, T, R> | ((arg0: A, arg1: T, arg2: $Gatherer$Downstream<R>) => boolean));
 }
 
 declare module "java.util.PrimitiveIterator$OfDouble" {
@@ -464,6 +478,12 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $LongConsumer$$Type = ($LongConsumer | ((arg0: long) => void));
 }
 
+declare module "java.util.SequencedSet" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $SequencedSet$$Type<E = any> = ($SequencedSet<E>);
+}
+
 declare module "java.util.function.ObjLongConsumer" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -474,6 +494,12 @@ declare module "java.util.List" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $List$$Type<E = any> = ($List<E> | E[]);
+}
+
+declare module "java.util.concurrent.Future$State" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Future$State$$Type = ($Future$State | ("running" | "success" | "failed" | "cancelled"));
 }
 
 declare module "java.util.Date" {
@@ -629,17 +655,17 @@ public "getValue"(name0: $Attributes$Name$$Type): string
 public "isEmpty"(): boolean
 public "keySet"(): $Set<any>
 public "merge"(object0: any, object1: any, biFunction2: $BiFunction$$Type<any, any, any>): any
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(object0: any, object1: any): any
 public "putAll"(map0: $Map$$Type<any, any>): void
@@ -647,8 +673,8 @@ public "putIfAbsent"(object0: any, object1: any): any
 public "putValue"(string0: string, string1: string): string
 public "remove"(object0: any): any
 public "remove"(object0: any, object1: any): boolean
-public "replace"(object0: any, object1: any): any
 public "replace"(object0: any, object1: any, object2: any): boolean
+public "replace"(object0: any, object1: any): any
 public "replaceAll"(biFunction0: $BiFunction$$Type<any, any, any>): void
 public "size"(): integer
 public "values"(): $Collection<any>
@@ -657,6 +683,12 @@ get "empty"(): boolean
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $Attributes$$Type = ($Attributes);
+}
+
+declare module "java.util.SequencedCollection" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $SequencedCollection$$Type<E = any> = ($SequencedCollection<E>);
 }
 
 declare module "java.util.function.BooleanSupplier" {
@@ -822,6 +854,13 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $ToIntBiFunction$$Type<T = any, U = any> = ($ToIntBiFunction<T, U> | ((arg0: T, arg1: U) => integer));
 }
 
+declare module "java.util.stream.Gatherer$Integrator$Greedy" {
+import { $Gatherer$Downstream } from "java.util.stream.Gatherer$Downstream"
+
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Gatherer$Integrator$Greedy$$Type<A = any, T = any, R = any> = ($Gatherer$Integrator$Greedy<A, T, R> | ((arg0: A, arg1: T, arg2: $Gatherer$Downstream<R>) => boolean));
+}
+
 declare module "java.util.Locale$IsoCountryCode" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -936,6 +975,12 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $IntUnaryOperator$$Type = ($IntUnaryOperator | ((arg0: integer) => integer));
 }
 
+declare module "java.util.SequencedMap" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $SequencedMap$$Type<K = any, V = any> = ($SequencedMap<K, V>);
+}
+
 declare module "java.util.function.Supplier" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -1019,6 +1064,12 @@ declare module "java.util.AbstractList" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $AbstractList$$Type<E = any> = ($AbstractList<E>);
+}
+
+declare module "java.util.stream.Gatherer$Downstream" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $Gatherer$Downstream$$Type<T = any> = ($Gatherer$Downstream<T> | ((arg0: T) => boolean));
 }
 
 declare module "java.util.function.ToLongBiFunction" {

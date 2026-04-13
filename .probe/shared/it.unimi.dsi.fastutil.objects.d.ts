@@ -26,8 +26,8 @@ export interface $ObjectCollection<K = any> extends $Collection<K>, $ObjectItera
 "spliterator"(): $ObjectSpliterator<K>
 "stream"(): $Stream<K>
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toArray"(): any[]
 get "empty"(): boolean
 }
 
@@ -100,17 +100,17 @@ export interface $Object2ShortFunction<K = any> extends $Function$0<K, short>, $
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2ShortFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2ShortFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): short
 "defaultReturnValue"(short0: short): void
-"getOrDefault"(object0: any, short1: short): short
+"defaultReturnValue"(): short
 /** @deprecated */
+"get"(object0: any): short
+/** @deprecated */
+"getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(object0: any, short1: short): short
 "getShort"(object0: any): short
-"put"(k0: K, short1: short): short
 /** @deprecated */
 "put"(k0: K, short1: short): short
-/** @deprecated */
-"remove"(object0: any): short
+"put"(k0: K, short1: short): short
 "removeShort"(object0: any): short
 "size"(): integer
 }
@@ -124,16 +124,17 @@ static "identity"<T>(): $Function<T, T>
 }
 
 declare module "it.unimi.dsi.fastutil.objects.ObjectList" {
+import { $ObjectSpliterator } from "it.unimi.dsi.fastutil.objects.ObjectSpliterator"
+import { $Predicate$$Type } from "java.util.function.Predicate"
+import { $Collection$$Type } from "java.util.Collection"
+import { $UnaryOperator$$Type } from "java.util.function.UnaryOperator"
+import { $ObjectCollection } from "it.unimi.dsi.fastutil.objects.ObjectCollection"
 import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $List, $List$$Type } from "java.util.List"
 import { $ObjectListIterator } from "it.unimi.dsi.fastutil.objects.ObjectListIterator"
 import { $Stream } from "java.util.stream.Stream"
-import { $Predicate$$Type } from "java.util.function.Predicate"
-import { $Collection$$Type } from "java.util.Collection"
-import { $UnaryOperator$$Type } from "java.util.function.UnaryOperator"
 import { $Comparable } from "java.lang.Comparable"
 import { $Comparator$$Type } from "java.util.Comparator"
-import { $ObjectCollection } from "it.unimi.dsi.fastutil.objects.ObjectCollection"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export interface $ObjectList<K = any> extends $List<K>, $Comparable<$List<K>>, $ObjectCollection<K> {
@@ -141,10 +142,12 @@ export interface $ObjectList<K = any> extends $List<K>, $Comparable<$List<K>>, $
 "add"(k0: K): boolean
 "addAll"(objectList0: $ObjectList$$Type<K>): boolean
 "addAll"(int0: integer, objectList1: $ObjectList$$Type<K>): boolean
-"addAll"(int0: integer, collection1: $Collection$$Type<K>): boolean
 "addAll"(collection0: $Collection$$Type<K>): boolean
-"addElements"(int0: integer, k1s: K[]): void
+"addAll"(int0: integer, collection1: $Collection$$Type<K>): boolean
 "addElements"(int0: integer, k1s: K[], int2: integer, int3: integer): void
+"addElements"(int0: integer, k1s: K[]): void
+"addFirst"(k0: K): void
+"addLast"(k0: K): void
 "clear"(): void
 "compareTo"(list0: $List$$Type<K>): integer
 "contains"(object0: any): boolean
@@ -153,65 +156,72 @@ export interface $ObjectList<K = any> extends $List<K>, $Comparable<$List<K>>, $
 "forEach"(consumer0: $Consumer$$Type<K>): void
 "get"(int0: integer): K
 "getElements"(int0: integer, object1s: any[], int2: integer, int3: integer): void
+"getFirst"(): K
+"getLast"(): K
 "hashCode"(): integer
 "indexOf"(object0: any): integer
 "isEmpty"(): boolean
 "lastIndexOf"(object0: any): integer
+"listIterator"(): $ObjectListIterator<K>
 "listIterator"(int0: integer): $ObjectListIterator<K>
 "parallelStream"(): $Stream<K>
-"remove"(object0: any): boolean
 "remove"(int0: integer): K
+"remove"(object0: any): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
 "removeElements"(int0: integer, int1: integer): void
+"removeFirst"(): K
 "removeIf"(predicate0: $Predicate$$Type<K>): boolean
+"removeLast"(): K
 "replaceAll"(unaryOperator0: $UnaryOperator$$Type<K>): void
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "set"(int0: integer, k1: K): K
-"setElements"(int0: integer, k1s: K[], int2: integer, int3: integer): void
-"setElements"(k0s: K[]): void
 "setElements"(int0: integer, k1s: K[]): void
+"setElements"(k0s: K[]): void
+"setElements"(int0: integer, k1s: K[], int2: integer, int3: integer): void
 "size"(int0: integer): void
 "size"(): integer
 "sort"(comparator0: $Comparator$$Type<K>): void
+"spliterator"(): $ObjectSpliterator<K>
 "stream"(): $Stream<K>
-"subList"(int0: integer, int1: integer): $ObjectList<K>
 "toArray"(): any[]
 "toArray"<T>(t0s: T[]): T[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 "unstableSort"(comparator0: $Comparator$$Type<K>): void
+get "first"(): K
+get "last"(): K
 get "empty"(): boolean
 set "elements"(value: K[])
 }
 
 export namespace $ObjectList {
 function copyOf<E>(collection0: $Collection$$Type<E>): $List<E>
-function of<K>(...k0s: K[]): $ObjectList<K>
-function of<K>(k0: K, k1: K, k2: K): $ObjectList<K>
-function of<K>(k0: K): $ObjectList<K>
 function of<K>(): $ObjectList<K>
+function of<K>(k0: K, k1: K, k2: K): $ObjectList<K>
 function of<K>(k0: K, k1: K): $ObjectList<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<K>(k0: K): $ObjectList<K>
+function of<K>(...k0s: K[]): $ObjectList<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 export abstract class $ObjectList$$Static<K = any> implements $ObjectList<K> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
-static "of"<K>(...k0s: K[]): $ObjectList<K>
-static "of"<K>(k0: K, k1: K, k2: K): $ObjectList<K>
-static "of"<K>(k0: K): $ObjectList<K>
 static "of"<K>(): $ObjectList<K>
+static "of"<K>(k0: K, k1: K, k2: K): $ObjectList<K>
 static "of"<K>(k0: K, k1: K): $ObjectList<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<K>(k0: K): $ObjectList<K>
+static "of"<K>(...k0s: K[]): $ObjectList<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 }
 }
 
@@ -279,16 +289,16 @@ public "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $S
 public "containsKey"(object0: any): boolean
 public "defaultReturnValue"(byte0: byte): void
 public "defaultReturnValue"(): byte
-public "getByte"(object0: any): byte
-public "getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
+public "get"(object0: any): byte
+public "getByte"(object0: any): byte
+/** @deprecated */
+public "getOrDefault"(object0: any, byte1: byte): byte
 public "getOrDefault"(object0: any, byte1: byte): byte
 public static "identity"<T>(): $Function<T, T>
-public "put"(k0: K, byte1: byte): byte
 /** @deprecated */
 public "put"(k0: K, byte1: byte): byte
-/** @deprecated */
-public "remove"(object0: any): byte
+public "put"(k0: K, byte1: byte): byte
 public "removeByte"(object0: any): byte
 public "size"(): integer
 }
@@ -356,17 +366,17 @@ export interface $Reference2IntFunction<K = any> extends $Function$0<K, integer>
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2IntFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2IntFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): integer
 "defaultReturnValue"(int0: integer): void
+"defaultReturnValue"(): integer
+/** @deprecated */
+"get"(object0: any): integer
 "getInt"(object0: any): integer
-"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
-"put"(k0: K, int1: integer): integer
+"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "put"(k0: K, integer1: integer): integer
-/** @deprecated */
-"remove"(object0: any): integer
+"put"(k0: K, int1: integer): integer
 "removeInt"(object0: any): integer
 "size"(): integer
 }
@@ -402,6 +412,7 @@ import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $Reference2IntFunction } from "it.unimi.dsi.fastutil.objects.Reference2IntFunction"
 import { $Long2IntFunction } from "it.unimi.dsi.fastutil.longs.Long2IntFunction"
 import { $Short2IntFunction } from "it.unimi.dsi.fastutil.shorts.Short2IntFunction"
+import { $SequencedSet } from "java.util.SequencedSet"
 import { $Int2FloatFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2FloatFunction"
 import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
@@ -422,6 +433,7 @@ import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2Shor
 import { $Comparator } from "java.util.Comparator"
 import { $Double2IntFunction } from "it.unimi.dsi.fastutil.doubles.Double2IntFunction"
 import { $SortedMap } from "java.util.SortedMap"
+import { $SequencedCollection } from "java.util.SequencedCollection"
 import { $Object2CharFunction } from "it.unimi.dsi.fastutil.objects.Object2CharFunction"
 import { $Int2CharFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2CharFunction"
 import { $Byte2IntFunction } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
@@ -464,49 +476,59 @@ export interface $Object2IntSortedMap<K = any> extends $Object2IntMap<K>, $Sorte
 "computeIntIfAbsentPartial"(k0: K, object2IntFunction1: $Object2IntFunction$$Type<K>): integer
 "computeIntIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, integer, integer>): integer
 "containsKey"(object0: any): boolean
+"containsValue"(int0: integer): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"containsValue"(int0: integer): boolean
 "defaultReturnValue"(): integer
 "defaultReturnValue"(int0: integer): void
 "equals"(object0: any): boolean
+"firstEntry"(): $Map$Entry<K, integer>
 "firstKey"(): K
 "forEach"(biConsumer0: $BiConsumer$$Type<K, integer>): void
 /** @deprecated */
 "get"(object0: any): integer
 "getInt"(object0: any): integer
-"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
+"getOrDefault"(object0: any, int1: integer): integer
 "hashCode"(): integer
 "isEmpty"(): boolean
+"lastEntry"(): $Map$Entry<K, integer>
 "lastKey"(): K
-"merge"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 "merge"(k0: K, integer1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
+"merge"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 "mergeInt"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
-"mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$$Type): integer
 "mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$0$$Type): integer
+"mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$$Type): integer
 "object2IntEntrySet"(): $ObjectSortedSet<$Object2IntMap$Entry<K>>
+"pollFirstEntry"(): $Map$Entry<K, integer>
+"pollLastEntry"(): $Map$Entry<K, integer>
 /** @deprecated */
 "put"(k0: K, integer1: integer): integer
 "put"(k0: K, int1: integer): integer
 "putAll"(map0: $Map$$Type<K, integer>): void
+"putFirst"(k0: K, integer1: integer): integer
+"putIfAbsent"(k0: K, int1: integer): integer
 /** @deprecated */
 "putIfAbsent"(k0: K, integer1: integer): integer
-"putIfAbsent"(k0: K, int1: integer): integer
+"putLast"(k0: K, integer1: integer): integer
 /** @deprecated */
 "remove"(object0: any, object1: any): boolean
 "remove"(object0: any, int1: integer): boolean
 "removeInt"(object0: any): integer
-/** @deprecated */
-"replace"(k0: K, integer1: integer, integer2: integer): boolean
-"replace"(k0: K, int1: integer, int2: integer): boolean
 "replace"(k0: K, int1: integer): integer
+"replace"(k0: K, int1: integer, int2: integer): boolean
 /** @deprecated */
 "replace"(k0: K, integer1: integer): integer
+/** @deprecated */
+"replace"(k0: K, integer1: integer, integer2: integer): boolean
 "replaceAll"(biFunction0: $BiFunction$$Type<K, integer, integer>): void
+"reversed"(): $SortedMap<K, integer>
+"sequencedEntrySet"(): $SequencedSet<$Map$Entry<K, integer>>
+"sequencedKeySet"(): $SequencedSet<K>
+"sequencedValues"(): $SequencedCollection<integer>
 "size"(): integer
 [index: string | number]: integer
 get "empty"(): boolean
@@ -516,34 +538,34 @@ export namespace $Object2IntSortedMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity<T>(): $Function<T, T>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Object2IntSortedMap$$Static<K = any> implements $Object2IntSortedMap<K> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"<T>(): $Function<T, T>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -586,33 +608,33 @@ get "empty"(): boolean
 
 export namespace $Object2ObjectMap$FastEntrySet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ObjectSet<K>
-function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-function of<K>(): $ObjectSet<K>
+function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K): $ObjectSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ObjectSet<K>
+function of<K>(k0: K, k1: K): $ObjectSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $Object2ObjectMap$FastEntrySet$$Static<K = any, V = any> implements $Object2ObjectMap$FastEntrySet<K, V> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-static "of"<K>(): $ObjectSet<K>
+static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K): $ObjectSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ObjectSet<K>
+static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -650,33 +672,33 @@ get "empty"(): boolean
 
 export namespace $ObjectSet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ObjectSet<K>
-function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-function of<K>(): $ObjectSet<K>
+function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K): $ObjectSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ObjectSet<K>
+function of<K>(k0: K, k1: K): $ObjectSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $ObjectSet$$Static<K = any> implements $ObjectSet<K> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-static "of"<K>(): $ObjectSet<K>
+static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K): $ObjectSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ObjectSet<K>
+static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -747,9 +769,11 @@ export interface $Object2BooleanFunction<K = any> extends $Function$0<K, boolean
 "containsKey"(object0: any): boolean
 "defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
-"getBoolean"(object0: any): boolean
-"getOrDefault"(object0: any, boolean1: boolean): boolean
 /** @deprecated */
+"get"(object0: any): boolean
+"getBoolean"(object0: any): boolean
+/** @deprecated */
+"getOrDefault"(object0: any, boolean1: boolean): boolean
 "getOrDefault"(object0: any, boolean1: boolean): boolean
 "negate"(): $Predicate<K>
 "or"(predicate0: $Predicate$$Type<K>): $Predicate<K>
@@ -779,7 +803,6 @@ declare module "it.unimi.dsi.fastutil.objects.ObjectOpenCustomHashSet" {
 import { $Cloneable } from "java.lang.Cloneable"
 import { $AbstractObjectSet } from "it.unimi.dsi.fastutil.objects.AbstractObjectSet"
 import { $Iterator$$Type } from "java.util.Iterator"
-import { $ObjectSpliterator } from "it.unimi.dsi.fastutil.objects.ObjectSpliterator"
 import { $Hash } from "it.unimi.dsi.fastutil.Hash"
 import { $Predicate$$Type } from "java.util.function.Predicate"
 import { $Collection$$Type } from "java.util.Collection"
@@ -808,34 +831,34 @@ constructor(collection0: $Collection$$Type<K>, strategy1: $Hash$Strategy$$Type<K
 constructor(collection0: $Collection$$Type<K>, float1: float, strategy2: $Hash$Strategy$$Type<K>)
 
 public "addOrGet"(k0: K): K
+public "clone"(): $ObjectOpenCustomHashSet<K>
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
 public "forEach"(consumer0: $Consumer$$Type<K>): void
 public "get"(object0: any): K
-public static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-public static "of"<K>(...k0s: K[]): $ObjectSet<K>
 public static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-public static "of"<K>(): $ObjectSet<K>
+public static "of"<K>(...k0s: K[]): $ObjectSet<K>
 public static "of"<K>(k0: K): $ObjectSet<K>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<K>(): $ObjectSet<K>
+public static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 public "parallelStream"(): $Stream<K>
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
 public "removeIf"(predicate0: $Predicate$$Type<K>): boolean
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
-public "spliterator"(): $ObjectSpliterator<K>
 public "strategy"(): $Hash$Strategy<K>
 public "stream"(): $Stream<K>
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"(): any[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-public "trim"(): boolean
 public "trim"(int0: integer): boolean
+public "trim"(): boolean
 }
 }
 
@@ -856,6 +879,8 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 export interface $Object2ByteSortedMap$FastSortedEntrySet<K = any> extends $ObjectSortedSet<$Object2ByteMap$Entry<K>>, $Object2ByteMap$FastEntrySet<K> {
 "add"(entry0: $Object2ByteMap$Entry$$Type<K>): boolean
 "addAll"(collection0: $Collection$$Type<$Object2ByteMap$Entry$$Type<K>>): boolean
+"addFirst"(entry0: $Object2ByteMap$Entry$$Type<K>): void
+"addLast"(entry0: $Object2ByteMap$Entry$$Type<K>): void
 "clear"(): void
 "comparator"(): $Comparator<$Object2ByteMap$Entry<K>>
 "contains"(object0: any): boolean
@@ -866,6 +891,8 @@ export interface $Object2ByteSortedMap$FastSortedEntrySet<K = any> extends $Obje
 "fastIterator"(entry0: $Object2ByteMap$Entry$$Type<K>): $ObjectBidirectionalIterator<$Object2ByteMap$Entry<K>>
 "first"(): $Object2ByteMap$Entry<K>
 "forEach"(consumer0: $Consumer$$Type<$Object2ByteMap$Entry$$Type<K>>): void
+"getFirst"(): $Object2ByteMap$Entry<K>
+"getLast"(): $Object2ByteMap$Entry<K>
 "hashCode"(): integer
 "isEmpty"(): boolean
 "iterator"(entry0: $Object2ByteMap$Entry$$Type<K>): $ObjectBidirectionalIterator<$Object2ByteMap$Entry<K>>
@@ -873,7 +900,9 @@ export interface $Object2ByteSortedMap$FastSortedEntrySet<K = any> extends $Obje
 "parallelStream"(): $Stream<$Object2ByteMap$Entry<K>>
 "remove"(object0: any): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
+"removeFirst"(): $Object2ByteMap$Entry<K>
 "removeIf"(predicate0: $Predicate$$Type<$Object2ByteMap$Entry$$Type<K>>): boolean
+"removeLast"(): $Object2ByteMap$Entry<K>
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
 "stream"(): $Stream<$Object2ByteMap$Entry<K>>
@@ -886,33 +915,33 @@ get "empty"(): boolean
 
 export namespace $Object2ByteSortedMap$FastSortedEntrySet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ObjectSet<K>
-function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-function of<K>(): $ObjectSet<K>
+function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K): $ObjectSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ObjectSet<K>
+function of<K>(k0: K, k1: K): $ObjectSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $Object2ByteSortedMap$FastSortedEntrySet$$Static<K = any> implements $Object2ByteSortedMap$FastSortedEntrySet<K> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-static "of"<K>(): $ObjectSet<K>
+static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K): $ObjectSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ObjectSet<K>
+static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -941,15 +970,15 @@ set "value"(value: byte)
 export namespace $Object2ByteMap$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Object2ByteMap$Entry$$Static<K = any> implements $Object2ByteMap$Entry<K> {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -979,15 +1008,15 @@ set "value"(value: float)
 export namespace $Object2FloatMap$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Object2FloatMap$Entry$$Static<K = any> implements $Object2FloatMap$Entry<K> {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -1090,48 +1119,48 @@ public "forEach"(biConsumer0: $BiConsumer$$Type<K, byte>): void
 /** @deprecated */
 public "get"(object0: any): byte
 public "getByte"(object0: any): byte
-public "getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
+public "getOrDefault"(object0: any, byte1: byte): byte
 public "getOrDefault"(object0: any, byte1: byte): byte
 public static "identity"<T>(): $Function<T, T>
 public "isEmpty"(): boolean
-public "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
 /** @deprecated */
 public "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
-public "mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
+public "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
 /** @deprecated */
 public "mergeByte"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
+public "mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
 public "mergeByte"(k0: K, byte1: byte, byteBinaryOperator2: $ByteBinaryOperator$$Type): byte
 public "object2ByteEntrySet"(): $ObjectSet<$Object2ByteMap$Entry<K>>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 /** @deprecated */
 public "put"(k0: K, byte1: byte): byte
 public "put"(k0: K, byte1: byte): byte
 public "putAll"(map0: $Map$$Type<K, byte>): void
-/** @deprecated */
 public "putIfAbsent"(k0: K, byte1: byte): byte
+/** @deprecated */
 public "putIfAbsent"(k0: K, byte1: byte): byte
 /** @deprecated */
 public "remove"(object0: any, object1: any): boolean
 public "remove"(object0: any, byte1: byte): boolean
 public "removeByte"(object0: any): byte
-/** @deprecated */
-public "replace"(k0: K, byte1: byte, byte2: byte): boolean
-public "replace"(k0: K, byte1: byte, byte2: byte): boolean
 public "replace"(k0: K, byte1: byte): byte
+public "replace"(k0: K, byte1: byte, byte2: byte): boolean
 /** @deprecated */
 public "replace"(k0: K, byte1: byte): byte
+/** @deprecated */
+public "replace"(k0: K, byte1: byte, byte2: byte): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, byte, byte>): void
 public "size"(): integer
 public "values"(): $ByteCollection
@@ -1202,17 +1231,17 @@ export interface $Reference2ShortFunction<K = any> extends $Function$0<K, short>
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2ShortFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2ShortFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): short
 "defaultReturnValue"(short0: short): void
-"getOrDefault"(object0: any, short1: short): short
+"defaultReturnValue"(): short
 /** @deprecated */
+"get"(object0: any): short
+/** @deprecated */
+"getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(object0: any, short1: short): short
 "getShort"(object0: any): short
-"put"(k0: K, short1: short): short
 /** @deprecated */
 "put"(k0: K, short1: short): short
-/** @deprecated */
-"remove"(object0: any): short
+"put"(k0: K, short1: short): short
 "removeShort"(object0: any): short
 "size"(): integer
 }
@@ -1250,7 +1279,6 @@ import { $Long2ReferenceFunction, $Long2ReferenceFunction$$Type } from "it.unimi
 import { $Reference2DoubleFunction, $Reference2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2DoubleFunction"
 import { $Reference2CharFunction, $Reference2CharFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2CharFunction"
 import { $Float2ReferenceFunction, $Float2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2ReferenceFunction"
-import { $ReferenceCollection } from "it.unimi.dsi.fastutil.objects.ReferenceCollection"
 
 export interface $Reference2ReferenceMap<K = any, V = any> extends $Reference2ReferenceFunction<K, V>, $Map<K, V> {
 "andThen"<V>(function0: $Function$$Type<V, V>): $Function<K, V>
@@ -1299,11 +1327,10 @@ export interface $Reference2ReferenceMap<K = any, V = any> extends $Reference2Re
 "reference2ReferenceEntrySet"(): $ObjectSet<$Reference2ReferenceMap$Entry<K, V>>
 "remove"(object0: any): V
 "remove"(object0: any, object1: any): boolean
-"replace"(k0: K, v1: V, v2: V): boolean
 "replace"(k0: K, v1: V): V
+"replace"(k0: K, v1: V, v2: V): boolean
 "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 "size"(): integer
-"values"(): $ReferenceCollection<V>
 [index: string | number]: V
 get "empty"(): boolean
 }
@@ -1312,34 +1339,34 @@ export namespace $Reference2ReferenceMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity<T>(): $Function<T, T>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Reference2ReferenceMap$$Static<K = any, V = any> implements $Reference2ReferenceMap<K, V> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"<T>(): $Function<T, T>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -1364,7 +1391,6 @@ import { $Object2ByteFunction, $Object2ByteFunction$$Type } from "it.unimi.dsi.f
 import { $Int2ObjectFunction, $Int2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ObjectFunction"
 import { $Long2ObjectFunction, $Long2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $ObjectSet } from "it.unimi.dsi.fastutil.objects.ObjectSet"
-import { $ObjectCollection } from "it.unimi.dsi.fastutil.objects.ObjectCollection"
 import { $Object2ReferenceFunction, $Object2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
 import { $Float2ObjectFunction, $Float2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2ObjectFunction"
 import { $Char2ObjectFunction, $Char2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2ObjectFunction"
@@ -1418,11 +1444,10 @@ export interface $Object2ObjectMap<K = any, V = any> extends $Object2ObjectFunct
 "putIfAbsent"(k0: K, v1: V): V
 "remove"(object0: any): V
 "remove"(object0: any, object1: any): boolean
-"replace"(k0: K, v1: V, v2: V): boolean
 "replace"(k0: K, v1: V): V
+"replace"(k0: K, v1: V, v2: V): boolean
 "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 "size"(): integer
-"values"(): $ObjectCollection<V>
 [index: string | number]: V
 get "empty"(): boolean
 }
@@ -1431,34 +1456,34 @@ export namespace $Object2ObjectMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity<T>(): $Function<T, T>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Object2ObjectMap$$Static<K = any, V = any> implements $Object2ObjectMap<K, V> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"<T>(): $Function<T, T>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -1543,7 +1568,6 @@ import { $Object2FloatFunction } from "it.unimi.dsi.fastutil.objects.Object2Floa
 import { $Short2ByteFunction } from "it.unimi.dsi.fastutil.shorts.Short2ByteFunction"
 import { $Object2IntFunction } from "it.unimi.dsi.fastutil.objects.Object2IntFunction"
 import { $Map, $Map$$Type } from "java.util.Map"
-import { $ByteCollection } from "it.unimi.dsi.fastutil.bytes.ByteCollection"
 import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $ByteBinaryOperator$$Type } from "it.unimi.dsi.fastutil.bytes.ByteBinaryOperator"
 import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
@@ -1606,9 +1630,9 @@ export interface $Object2ByteMap<K = any> extends $Object2ByteFunction<K>, $Map<
 "computeIfAbsent"(k0: K, function1: $Function$$Type<K, byte>): byte
 "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, byte, byte>): byte
 "containsKey"(object0: any): boolean
+"containsValue"(byte0: byte): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"containsValue"(byte0: byte): boolean
 "defaultReturnValue"(): byte
 "defaultReturnValue"(byte0: byte): void
 /** @deprecated */
@@ -1618,39 +1642,39 @@ export interface $Object2ByteMap<K = any> extends $Object2ByteFunction<K>, $Map<
 /** @deprecated */
 "get"(object0: any): byte
 "getByte"(object0: any): byte
-"getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
+"getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(object0: any, byte1: byte): byte
 "hashCode"(): integer
 "isEmpty"(): boolean
-"merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
+"keySet"(): $ObjectSet<K>
 /** @deprecated */
 "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
-"mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
+"merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
 /** @deprecated */
 "mergeByte"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
+"mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
 "mergeByte"(k0: K, byte1: byte, byteBinaryOperator2: $ByteBinaryOperator$$Type): byte
 "object2ByteEntrySet"(): $ObjectSet<$Object2ByteMap$Entry<K>>
 /** @deprecated */
 "put"(k0: K, byte1: byte): byte
 "put"(k0: K, byte1: byte): byte
 "putAll"(map0: $Map$$Type<K, byte>): void
-/** @deprecated */
 "putIfAbsent"(k0: K, byte1: byte): byte
+/** @deprecated */
 "putIfAbsent"(k0: K, byte1: byte): byte
 /** @deprecated */
 "remove"(object0: any, object1: any): boolean
 "remove"(object0: any, byte1: byte): boolean
 "removeByte"(object0: any): byte
-/** @deprecated */
-"replace"(k0: K, byte1: byte, byte2: byte): boolean
-"replace"(k0: K, byte1: byte, byte2: byte): boolean
 "replace"(k0: K, byte1: byte): byte
+"replace"(k0: K, byte1: byte, byte2: byte): boolean
 /** @deprecated */
 "replace"(k0: K, byte1: byte): byte
+/** @deprecated */
+"replace"(k0: K, byte1: byte, byte2: byte): boolean
 "replaceAll"(biFunction0: $BiFunction$$Type<K, byte, byte>): void
 "size"(): integer
-"values"(): $ByteCollection
 [index: string | number]: byte
 get "empty"(): boolean
 }
@@ -1659,86 +1683,89 @@ export namespace $Object2ByteMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity<T>(): $Function<T, T>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Object2ByteMap$$Static<K = any> implements $Object2ByteMap<K> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"<T>(): $Function<T, T>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
 
 declare module "it.unimi.dsi.fastutil.objects.Object2ByteLinkedOpenHashMap" {
-import { $Hash } from "it.unimi.dsi.fastutil.Hash"
+import { $ObjectSortedSet } from "it.unimi.dsi.fastutil.objects.ObjectSortedSet"
 import { $Byte2FloatFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2FloatFunction"
 import { $Byte2LongFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2LongFunction"
-import { $Int2ByteFunction } from "it.unimi.dsi.fastutil.ints.Int2ByteFunction"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
-import { $Float2ByteFunction } from "it.unimi.dsi.fastutil.floats.Float2ByteFunction"
 import { $IntBinaryOperator$$Type } from "java.util.function.IntBinaryOperator"
-import { $Double2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ObjectFunction"
-import { $Object2ObjectFunction, $Object2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectFunction"
-import { $Function, $Function$$Type } from "java.util.function.Function"
-import { $Object2ByteSortedMap } from "it.unimi.dsi.fastutil.objects.Object2ByteSortedMap"
-import { $Object2LongFunction } from "it.unimi.dsi.fastutil.objects.Object2LongFunction"
 import { $Double2ByteFunction } from "it.unimi.dsi.fastutil.doubles.Double2ByteFunction"
-import { $Object2DoubleFunction } from "it.unimi.dsi.fastutil.objects.Object2DoubleFunction"
 import { $Reference2ByteFunction } from "it.unimi.dsi.fastutil.objects.Reference2ByteFunction"
-import { $Byte2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2DoubleFunction"
 import { $Object2FloatFunction } from "it.unimi.dsi.fastutil.objects.Object2FloatFunction"
 import { $Short2ByteFunction } from "it.unimi.dsi.fastutil.shorts.Short2ByteFunction"
 import { $Map, $Map$$Type } from "java.util.Map"
-import { $Object2IntFunction } from "it.unimi.dsi.fastutil.objects.Object2IntFunction"
-import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $ByteBinaryOperator$$Type } from "it.unimi.dsi.fastutil.bytes.ByteBinaryOperator"
+import { $SequencedSet } from "java.util.SequencedSet"
 import { $Object2ByteMap$$Type } from "it.unimi.dsi.fastutil.objects.Object2ByteMap"
-import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
-import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
 import { $Cloneable } from "java.lang.Cloneable"
 import { $Byte2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ObjectFunction"
 import { $Short2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2ObjectFunction"
 import { $Object2ByteFunction, $Object2ByteFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ByteFunction"
-import { $Byte2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ReferenceFunction"
 import { $Char2ByteFunction } from "it.unimi.dsi.fastutil.chars.Char2ByteFunction"
-import { $Byte2ShortFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ShortFunction"
 import { $Int2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ObjectFunction"
+import { $Serializable } from "java.io.Serializable"
+import { $Object2ReferenceFunction } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
+import { $Long2ByteFunction } from "it.unimi.dsi.fastutil.longs.Long2ByteFunction"
+import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2ShortFunction"
+import { $SortedMap } from "java.util.SortedMap"
+import { $SequencedCollection } from "java.util.SequencedCollection"
+import { $Byte2ByteFunction, $Byte2ByteFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ByteFunction"
+import { $Byte2IntFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
+import { $Hash } from "it.unimi.dsi.fastutil.Hash"
+import { $Int2ByteFunction } from "it.unimi.dsi.fastutil.ints.Int2ByteFunction"
+import { $Float2ByteFunction } from "it.unimi.dsi.fastutil.floats.Float2ByteFunction"
+import { $Double2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ObjectFunction"
+import { $Object2ObjectFunction, $Object2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectFunction"
+import { $Function, $Function$$Type } from "java.util.function.Function"
+import { $Object2LongFunction } from "it.unimi.dsi.fastutil.objects.Object2LongFunction"
+import { $Object2DoubleFunction } from "it.unimi.dsi.fastutil.objects.Object2DoubleFunction"
+import { $Byte2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2DoubleFunction"
+import { $Object2IntFunction } from "it.unimi.dsi.fastutil.objects.Object2IntFunction"
+import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
+import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
+import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
+import { $Byte2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ReferenceFunction"
+import { $Byte2ShortFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ShortFunction"
 import { $Long2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $ToIntFunction$$Type } from "java.util.function.ToIntFunction"
 import { $Byte2CharFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2CharFunction"
-import { $Serializable } from "java.io.Serializable"
-import { $Object2ReferenceFunction } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
 import { $Float2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2ObjectFunction"
-import { $Long2ByteFunction } from "it.unimi.dsi.fastutil.longs.Long2ByteFunction"
 import { $Char2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2ObjectFunction"
-import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2ShortFunction"
 import { $Comparator } from "java.util.Comparator"
 import { $AbstractObject2ByteSortedMap } from "it.unimi.dsi.fastutil.objects.AbstractObject2ByteSortedMap"
-import { $Byte2ByteFunction, $Byte2ByteFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ByteFunction"
 import { $Object2CharFunction } from "it.unimi.dsi.fastutil.objects.Object2CharFunction"
-import { $Byte2IntFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
 
 export class $Object2ByteLinkedOpenHashMap<K = any> extends $AbstractObject2ByteSortedMap<K> implements $Serializable, $Cloneable, $Hash {
 constructor(map0: $Map$$Type<K, byte>)
@@ -1766,6 +1793,7 @@ public "andThenShort"(byte2ShortFunction0: $Byte2ShortFunction$$Type): $Object2S
 public "apply"(k0: K): byte
 public "applyAsInt"(k0: K): integer
 public "clear"(): void
+public "clone"(): $Object2ByteLinkedOpenHashMap<K>
 public "comparator"(): $Comparator<K>
 public "compose"<V>(function0: $Function$$Type<V, K>): $Function<V, byte>
 public "composeByte"(byte2ObjectFunction0: $Byte2ObjectFunction$$Type<K>): $Byte2ByteFunction
@@ -1784,8 +1812,8 @@ public "computeByteIfAbsent"(k0: K, toIntFunction1: $ToIntFunction$$Type<K>): by
 /** @deprecated */
 public "computeByteIfAbsentPartial"(k0: K, object2ByteFunction1: $Object2ByteFunction$$Type<K>): byte
 public "computeByteIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, byte, byte>): byte
-public "computeIfAbsent"(k0: K, object2ByteFunction1: $Object2ByteFunction$$Type<K>): byte
 public "computeIfAbsent"(k0: K, toIntFunction1: $ToIntFunction$$Type<K>): byte
+public "computeIfAbsent"(k0: K, object2ByteFunction1: $Object2ByteFunction$$Type<K>): byte
 public "computeIfAbsent"(k0: K, function1: $Function$$Type<K, byte>): byte
 public "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, byte, byte>): byte
 /** @deprecated */
@@ -1794,6 +1822,7 @@ public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public "defaultReturnValue"(): byte
 public "defaultReturnValue"(byte0: byte): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
+public "firstEntry"(): $Map$Entry<K, byte>
 public "firstKey"(): K
 public "forEach"(biConsumer0: $BiConsumer$$Type<K, byte>): void
 /** @deprecated */
@@ -1804,36 +1833,41 @@ public "getByte"(object0: any): byte
 public "getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
 public "getOrDefault"(object0: any, byte1: byte): byte
-public "headMap"(k0: K): $Object2ByteSortedMap<K>
 public static "identity"<T>(): $Function<T, T>
+public "keySet"(): $ObjectSortedSet<K>
+public "lastEntry"(): $Map$Entry<K, byte>
 public "lastKey"(): K
 public "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
 /** @deprecated */
 public "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
-public "mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
 /** @deprecated */
 public "mergeByte"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
+public "mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
 public "mergeByte"(k0: K, byte1: byte, byteBinaryOperator2: $ByteBinaryOperator$$Type): byte
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
+public "pollFirstEntry"(): $Map$Entry<K, byte>
+public "pollLastEntry"(): $Map$Entry<K, byte>
 public "put"(k0: K, byte1: byte): byte
 /** @deprecated */
 public "put"(k0: K, byte1: byte): byte
 public "putAndMoveToFirst"(k0: K, byte1: byte): byte
 public "putAndMoveToLast"(k0: K, byte1: byte): byte
+public "putFirst"(k0: K, byte1: byte): byte
 public "putIfAbsent"(k0: K, byte1: byte): byte
 /** @deprecated */
 public "putIfAbsent"(k0: K, byte1: byte): byte
+public "putLast"(k0: K, byte1: byte): byte
 public "remove"(object0: any, byte1: byte): boolean
 /** @deprecated */
 public "remove"(object0: any, object1: any): boolean
@@ -1843,13 +1877,17 @@ public "removeLastByte"(): byte
 public "replace"(k0: K, byte1: byte, byte2: byte): boolean
 public "replace"(k0: K, byte1: byte): byte
 /** @deprecated */
-public "replace"(k0: K, byte1: byte, byte2: byte): boolean
-/** @deprecated */
 public "replace"(k0: K, byte1: byte): byte
+/** @deprecated */
+public "replace"(k0: K, byte1: byte, byte2: byte): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, byte, byte>): void
+public "reversed"(): $SortedMap<K, byte>
+public "sequencedEntrySet"(): $SequencedSet<$Map$Entry<K, byte>>
+public "sequencedKeySet"(): $SequencedSet<K>
+public "sequencedValues"(): $SequencedCollection<byte>
 public "size"(): integer
-public "trim"(int0: integer): boolean
 public "trim"(): boolean
+public "trim"(int0: integer): boolean
 }
 }
 
@@ -1892,6 +1930,7 @@ import { $Object2IntFunction } from "it.unimi.dsi.fastutil.objects.Object2IntFun
 import { $Map, $Map$$Type } from "java.util.Map"
 import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $ByteBinaryOperator$$Type } from "it.unimi.dsi.fastutil.bytes.ByteBinaryOperator"
+import { $SequencedSet } from "java.util.SequencedSet"
 import { $Object2ByteMap } from "it.unimi.dsi.fastutil.objects.Object2ByteMap"
 import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
@@ -1913,6 +1952,7 @@ import { $Char2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2Obj
 import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2ShortFunction"
 import { $Comparator } from "java.util.Comparator"
 import { $SortedMap } from "java.util.SortedMap"
+import { $SequencedCollection } from "java.util.SequencedCollection"
 import { $Byte2ByteFunction, $Byte2ByteFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ByteFunction"
 import { $Object2CharFunction } from "it.unimi.dsi.fastutil.objects.Object2CharFunction"
 import { $Byte2IntFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
@@ -1955,49 +1995,59 @@ export interface $Object2ByteSortedMap<K = any> extends $Object2ByteMap<K>, $Sor
 "computeIfAbsent"(k0: K, function1: $Function$$Type<K, byte>): byte
 "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, byte, byte>): byte
 "containsKey"(object0: any): boolean
+"containsValue"(byte0: byte): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"containsValue"(byte0: byte): boolean
 "defaultReturnValue"(): byte
 "defaultReturnValue"(byte0: byte): void
 "equals"(object0: any): boolean
+"firstEntry"(): $Map$Entry<K, byte>
 "firstKey"(): K
 "forEach"(biConsumer0: $BiConsumer$$Type<K, byte>): void
 /** @deprecated */
 "get"(object0: any): byte
 "getByte"(object0: any): byte
-"getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
+"getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(object0: any, byte1: byte): byte
 "hashCode"(): integer
 "isEmpty"(): boolean
+"lastEntry"(): $Map$Entry<K, byte>
 "lastKey"(): K
-"merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
 /** @deprecated */
 "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
-"mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
+"merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
 /** @deprecated */
 "mergeByte"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
+"mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
 "mergeByte"(k0: K, byte1: byte, byteBinaryOperator2: $ByteBinaryOperator$$Type): byte
 "object2ByteEntrySet"(): $ObjectSortedSet<$Object2ByteMap$Entry<K>>
+"pollFirstEntry"(): $Map$Entry<K, byte>
+"pollLastEntry"(): $Map$Entry<K, byte>
 /** @deprecated */
 "put"(k0: K, byte1: byte): byte
 "put"(k0: K, byte1: byte): byte
 "putAll"(map0: $Map$$Type<K, byte>): void
+"putFirst"(k0: K, byte1: byte): byte
+"putIfAbsent"(k0: K, byte1: byte): byte
 /** @deprecated */
 "putIfAbsent"(k0: K, byte1: byte): byte
-"putIfAbsent"(k0: K, byte1: byte): byte
+"putLast"(k0: K, byte1: byte): byte
 /** @deprecated */
 "remove"(object0: any, object1: any): boolean
 "remove"(object0: any, byte1: byte): boolean
 "removeByte"(object0: any): byte
-/** @deprecated */
-"replace"(k0: K, byte1: byte, byte2: byte): boolean
-"replace"(k0: K, byte1: byte, byte2: byte): boolean
 "replace"(k0: K, byte1: byte): byte
+"replace"(k0: K, byte1: byte, byte2: byte): boolean
 /** @deprecated */
 "replace"(k0: K, byte1: byte): byte
+/** @deprecated */
+"replace"(k0: K, byte1: byte, byte2: byte): boolean
 "replaceAll"(biFunction0: $BiFunction$$Type<K, byte, byte>): void
+"reversed"(): $SortedMap<K, byte>
+"sequencedEntrySet"(): $SequencedSet<$Map$Entry<K, byte>>
+"sequencedKeySet"(): $SequencedSet<K>
+"sequencedValues"(): $SequencedCollection<byte>
 "size"(): integer
 [index: string | number]: byte
 get "empty"(): boolean
@@ -2007,34 +2057,34 @@ export namespace $Object2ByteSortedMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity<T>(): $Function<T, T>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Object2ByteSortedMap$$Static<K = any> implements $Object2ByteSortedMap<K> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"<T>(): $Function<T, T>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -2064,15 +2114,15 @@ set "value"(value: long)
 export namespace $Object2LongMap$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Object2LongMap$Entry$$Static<K = any> implements $Object2LongMap$Entry<K> {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -2099,6 +2149,7 @@ import { $Object2ByteFunction, $Object2ByteFunction$$Type } from "it.unimi.dsi.f
 import { $Int2ObjectFunction, $Int2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ObjectFunction"
 import { $Long2ObjectFunction, $Long2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $ObjectSet } from "it.unimi.dsi.fastutil.objects.ObjectSet"
+import { $ObjectCollection } from "it.unimi.dsi.fastutil.objects.ObjectCollection"
 import { $Serializable } from "java.io.Serializable"
 import { $Object2ReferenceFunction, $Object2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
 import { $Float2ObjectFunction, $Float2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2ObjectFunction"
@@ -2126,6 +2177,7 @@ public "andThenReference"<T>(object2ReferenceFunction0: $Object2ReferenceFunctio
 public "andThenShort"(object2ShortFunction0: $Object2ShortFunction$$Type<V>): $Object2ShortFunction<K>
 public "apply"(k0: K): V
 public "clear"(): void
+public "clone"(): $Object2ObjectArrayMap<K, V>
 public "compose"<V>(function0: $Function$$Type<V, K>): $Function<V, V>
 public "composeByte"(byte2ObjectFunction0: $Byte2ObjectFunction$$Type<K>): $Byte2ObjectFunction<V>
 public "composeChar"(char2ObjectFunction0: $Char2ObjectFunction$$Type<K>): $Char2ObjectFunction<V>
@@ -2153,26 +2205,27 @@ public "getOrDefault"(object0: any, v1: V): V
 public static "identity"<T>(): $Function<T, T>
 public "keySet"(): $ObjectSet<K>
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, v1: V): V
 public "putIfAbsent"(k0: K, v1: V): V
 public "remove"(object0: any): V
 public "remove"(object0: any, object1: any): boolean
-public "replace"(k0: K, v1: V, v2: V): boolean
 public "replace"(k0: K, v1: V): V
+public "replace"(k0: K, v1: V, v2: V): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 public "size"(): integer
+public "values"(): $ObjectCollection<V>
 }
 }
 
@@ -2265,8 +2318,8 @@ public "containsValue"(float0: float): boolean
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(float0: float): void
 public "defaultReturnValue"(): float
+public "defaultReturnValue"(float0: float): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 /** @deprecated */
 public "entrySet"(): $ObjectSet<$Map$Entry<K, float>>
@@ -2274,48 +2327,48 @@ public "forEach"(biConsumer0: $BiConsumer$$Type<K, float>): void
 /** @deprecated */
 public "get"(object0: any): float
 public "getFloat"(object0: any): float
-public "getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
+public "getOrDefault"(object0: any, float1: float): float
 public "getOrDefault"(object0: any, float1: float): float
 public static "identity"<T>(): $Function<T, T>
 public "isEmpty"(): boolean
-public "merge"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
 /** @deprecated */
 public "merge"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
-public "mergeFloat"(k0: K, float1: float, doubleBinaryOperator2: $DoubleBinaryOperator$$Type): float
+public "merge"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
 /** @deprecated */
 public "mergeFloat"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
 public "mergeFloat"(k0: K, float1: float, floatBinaryOperator2: $FloatBinaryOperator$$Type): float
+public "mergeFloat"(k0: K, float1: float, doubleBinaryOperator2: $DoubleBinaryOperator$$Type): float
 public "object2FloatEntrySet"(): $ObjectSet<$Object2FloatMap$Entry<K>>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 /** @deprecated */
 public "put"(k0: K, float1: float): float
 public "put"(k0: K, float1: float): float
 public "putAll"(map0: $Map$$Type<K, float>): void
-/** @deprecated */
 public "putIfAbsent"(k0: K, float1: float): float
+/** @deprecated */
 public "putIfAbsent"(k0: K, float1: float): float
 /** @deprecated */
 public "remove"(object0: any, object1: any): boolean
 public "remove"(object0: any, float1: float): boolean
 public "removeFloat"(object0: any): float
-/** @deprecated */
-public "replace"(k0: K, float1: float, float2: float): boolean
-public "replace"(k0: K, float1: float, float2: float): boolean
 public "replace"(k0: K, float1: float): float
+public "replace"(k0: K, float1: float, float2: float): boolean
 /** @deprecated */
 public "replace"(k0: K, float1: float): float
+/** @deprecated */
+public "replace"(k0: K, float1: float, float2: float): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, float, float>): void
 public "size"(): integer
 public "values"(): $FloatCollection
@@ -2386,17 +2439,17 @@ export interface $Object2DoubleFunction<K = any> extends $Function$0<K, double>,
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2DoubleFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2DoubleFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): double
 "defaultReturnValue"(double0: double): void
+"defaultReturnValue"(): double
+/** @deprecated */
+"get"(object0: any): double
 "getDouble"(object0: any): double
-"getOrDefault"(object0: any, double1: double): double
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
-"put"(k0: K, double1: double): double
+"getOrDefault"(object0: any, double1: double): double
 /** @deprecated */
 "put"(k0: K, double1: double): double
-/** @deprecated */
-"remove"(object0: any): double
+"put"(k0: K, double1: double): double
 "removeDouble"(object0: any): double
 "size"(): integer
 }
@@ -2447,33 +2500,33 @@ get "empty"(): boolean
 
 export namespace $Object2FloatMap$FastEntrySet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ObjectSet<K>
-function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-function of<K>(): $ObjectSet<K>
+function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K): $ObjectSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ObjectSet<K>
+function of<K>(k0: K, k1: K): $ObjectSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $Object2FloatMap$FastEntrySet$$Static<K = any> implements $Object2FloatMap$FastEntrySet<K> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-static "of"<K>(): $ObjectSet<K>
+static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K): $ObjectSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ObjectSet<K>
+static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -2488,6 +2541,7 @@ import { $ObjectCollection$$Type } from "it.unimi.dsi.fastutil.objects.ObjectCol
 import { $Serializable } from "java.io.Serializable"
 import { $RandomAccess } from "java.util.RandomAccess"
 import { $List } from "java.util.List"
+import { $ObjectListIterator } from "it.unimi.dsi.fastutil.objects.ObjectListIterator"
 import { $Stream } from "java.util.stream.Stream"
 import { $ObjectIterator$$Type } from "it.unimi.dsi.fastutil.objects.ObjectIterator"
 import { $Collector } from "java.util.stream.Collector"
@@ -2499,18 +2553,20 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 export class $ObjectArrayList<K = any> extends $AbstractObjectList<K> implements $RandomAccess, $Cloneable, $Serializable {
 static readonly "DEFAULT_INITIAL_CAPACITY": integer
 
-constructor(k0s: K[])
-constructor(objectList0: $ObjectList$$Type<K>)
-constructor(objectCollection0: $ObjectCollection$$Type<K>)
-constructor(k0s: K[], int1: integer, int2: integer)
-constructor(iterator0: $Iterator$$Type<K>)
-constructor(objectIterator0: $ObjectIterator$$Type<K>)
-constructor(int0: integer)
 constructor()
 constructor(collection0: $Collection$$Type<K>)
+constructor(k0s: K[], int1: integer, int2: integer)
+constructor(objectList0: $ObjectList$$Type<K>)
+constructor(k0s: K[])
+constructor(objectCollection0: $ObjectCollection$$Type<K>)
+constructor(objectIterator0: $ObjectIterator$$Type<K>)
+constructor(iterator0: $Iterator$$Type<K>)
+constructor(int0: integer)
 
 public "addAll"(int0: integer, objectList1: $ObjectList$$Type<K>): boolean
 public "addAll"(objectList0: $ObjectList$$Type<K>): boolean
+public "addFirst"(k0: K): void
+public "addLast"(k0: K): void
 public "compareTo"(objectArrayList0: $ObjectArrayList$$Type<K>): integer
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
@@ -2518,39 +2574,45 @@ public "elements"(): K[]
 public "ensureCapacity"(int0: integer): void
 public "equals"(objectArrayList0: $ObjectArrayList$$Type<K>): boolean
 public "get"(int0: integer): K
+public "getFirst"(): K
+public "getLast"(): K
+public "listIterator"(int0: integer): $ObjectListIterator<K>
 public static "of"<K>(...k0s: K[]): $ObjectArrayList<K>
 public static "of"<K>(): $ObjectArrayList<K>
 public static "of"<K>(k0: K, k1: K, k2: K): $ObjectList<K>
-public static "of"<K>(k0: K): $ObjectList<K>
 public static "of"<K>(k0: K, k1: K): $ObjectList<K>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<K>(k0: K): $ObjectList<K>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<K>
 public "remove"(int0: integer): K
+public "removeFirst"(): K
 public "removeIf"(predicate0: $Predicate$$Type<K>): boolean
+public "removeLast"(): K
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<K>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, k1: K): K
-public "setElements"(k0s: K[]): void
 public "setElements"(int0: integer, k1s: K[]): void
+public "setElements"(k0s: K[]): void
 public "sort"(comparator0: $Comparator$$Type<K>): void
 public "spliterator"(): $ObjectSpliterator<K>
 public "stream"(): $Stream<K>
-public "subList"(int0: integer, int1: integer): $ObjectList<K>
 public "toArray"<K>(k0s: K[]): K[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public static "toList"<K>(): $Collector<K, any, $ObjectArrayList<K>>
 public static "toListWithExpectedSize"<K>(int0: integer): $Collector<K, any, $ObjectArrayList<K>>
-public "trim"(int0: integer): void
 public "trim"(): void
+public "trim"(int0: integer): void
 public "unstableSort"(comparator0: $Comparator$$Type<K>): void
 public static "wrap"<K>(k0s: K[], int1: integer): $ObjectArrayList<K>
 public static "wrap"<K>(k0s: K[]): $ObjectArrayList<K>
+get "first"(): K
+get "last"(): K
 }
 }
 
@@ -2595,18 +2657,18 @@ public static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
 public "forEach"(consumer0: $Consumer$$Type<K>): void
 public "isEmpty"(): boolean
 public "iterator"(): $ObjectIterator<K>
-public static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-public static "of"<K>(...k0s: K[]): $ObjectSet<K>
 public static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-public static "of"<K>(): $ObjectSet<K>
+public static "of"<K>(...k0s: K[]): $ObjectSet<K>
 public static "of"<K>(k0: K): $ObjectSet<K>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<K>(): $ObjectSet<K>
+public static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 public "parallelStream"(): $Stream<K>
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
@@ -2645,6 +2707,7 @@ import { $Reference2IntFunction } from "it.unimi.dsi.fastutil.objects.Reference2
 import { $AbstractObject2IntMap } from "it.unimi.dsi.fastutil.objects.AbstractObject2IntMap"
 import { $Long2IntFunction } from "it.unimi.dsi.fastutil.longs.Long2IntFunction"
 import { $Short2IntFunction } from "it.unimi.dsi.fastutil.shorts.Short2IntFunction"
+import { $SequencedSet } from "java.util.SequencedSet"
 import { $Int2FloatFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2FloatFunction"
 import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
@@ -2663,6 +2726,8 @@ import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2Shor
 import { $Comparator } from "java.util.Comparator"
 import { $Double2IntFunction } from "it.unimi.dsi.fastutil.doubles.Double2IntFunction"
 import { $Object2IntSortedMap } from "it.unimi.dsi.fastutil.objects.Object2IntSortedMap"
+import { $SortedMap } from "java.util.SortedMap"
+import { $SequencedCollection } from "java.util.SequencedCollection"
 import { $Object2CharFunction } from "it.unimi.dsi.fastutil.objects.Object2CharFunction"
 import { $Int2CharFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2CharFunction"
 import { $Byte2IntFunction } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
@@ -2710,52 +2775,62 @@ public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public "defaultReturnValue"(): integer
 public "defaultReturnValue"(int0: integer): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
+public "firstEntry"(): $Map$Entry<K, integer>
 public "firstKey"(): K
 public "forEach"(biConsumer0: $BiConsumer$$Type<K, integer>): void
 /** @deprecated */
 public "get"(object0: any): integer
 public "getInt"(object0: any): integer
-public "getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 public "getOrDefault"(object0: any, integer1: integer): integer
+public "getOrDefault"(object0: any, int1: integer): integer
 public static "identity"<T>(): $Function<T, T>
+public "lastEntry"(): $Map$Entry<K, integer>
 public "lastKey"(): K
-public "merge"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 public "merge"(k0: K, integer1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
+public "merge"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 public "mergeInt"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 public "mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$$Type): integer
 public "object2IntEntrySet"(): $ObjectSortedSet<$Object2IntMap$Entry<K>>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
+public "pollFirstEntry"(): $Map$Entry<K, integer>
+public "pollLastEntry"(): $Map$Entry<K, integer>
 /** @deprecated */
 public "put"(k0: K, integer1: integer): integer
 public "put"(k0: K, int1: integer): integer
+public "putFirst"(k0: K, integer1: integer): integer
+public "putIfAbsent"(k0: K, int1: integer): integer
 /** @deprecated */
 public "putIfAbsent"(k0: K, integer1: integer): integer
-public "putIfAbsent"(k0: K, int1: integer): integer
+public "putLast"(k0: K, integer1: integer): integer
 /** @deprecated */
 public "remove"(object0: any, object1: any): boolean
 public "remove"(object0: any, int1: integer): boolean
 public "removeInt"(object0: any): integer
-/** @deprecated */
-public "replace"(k0: K, integer1: integer, integer2: integer): boolean
-public "replace"(k0: K, int1: integer, int2: integer): boolean
 public "replace"(k0: K, int1: integer): integer
+public "replace"(k0: K, int1: integer, int2: integer): boolean
 /** @deprecated */
 public "replace"(k0: K, integer1: integer): integer
+/** @deprecated */
+public "replace"(k0: K, integer1: integer, integer2: integer): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, integer, integer>): void
+public "reversed"(): $SortedMap<K, integer>
+public "sequencedEntrySet"(): $SequencedSet<$Map$Entry<K, integer>>
+public "sequencedKeySet"(): $SequencedSet<K>
+public "sequencedValues"(): $SequencedCollection<integer>
 public "size"(): integer
 }
 }
@@ -2777,6 +2852,8 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 export interface $Object2IntSortedMap$FastSortedEntrySet<K = any> extends $ObjectSortedSet<$Object2IntMap$Entry<K>>, $Object2IntMap$FastEntrySet<K> {
 "add"(entry0: $Object2IntMap$Entry$$Type<K>): boolean
 "addAll"(collection0: $Collection$$Type<$Object2IntMap$Entry$$Type<K>>): boolean
+"addFirst"(entry0: $Object2IntMap$Entry$$Type<K>): void
+"addLast"(entry0: $Object2IntMap$Entry$$Type<K>): void
 "clear"(): void
 "comparator"(): $Comparator<$Object2IntMap$Entry<K>>
 "contains"(object0: any): boolean
@@ -2787,6 +2864,8 @@ export interface $Object2IntSortedMap$FastSortedEntrySet<K = any> extends $Objec
 "fastIterator"(entry0: $Object2IntMap$Entry$$Type<K>): $ObjectBidirectionalIterator<$Object2IntMap$Entry<K>>
 "first"(): $Object2IntMap$Entry<K>
 "forEach"(consumer0: $Consumer$$Type<$Object2IntMap$Entry$$Type<K>>): void
+"getFirst"(): $Object2IntMap$Entry<K>
+"getLast"(): $Object2IntMap$Entry<K>
 "hashCode"(): integer
 "isEmpty"(): boolean
 "iterator"(entry0: $Object2IntMap$Entry$$Type<K>): $ObjectBidirectionalIterator<$Object2IntMap$Entry<K>>
@@ -2794,7 +2873,9 @@ export interface $Object2IntSortedMap$FastSortedEntrySet<K = any> extends $Objec
 "parallelStream"(): $Stream<$Object2IntMap$Entry<K>>
 "remove"(object0: any): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
+"removeFirst"(): $Object2IntMap$Entry<K>
 "removeIf"(predicate0: $Predicate$$Type<$Object2IntMap$Entry$$Type<K>>): boolean
+"removeLast"(): $Object2IntMap$Entry<K>
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
 "stream"(): $Stream<$Object2IntMap$Entry<K>>
@@ -2807,33 +2888,33 @@ get "empty"(): boolean
 
 export namespace $Object2IntSortedMap$FastSortedEntrySet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ObjectSet<K>
-function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-function of<K>(): $ObjectSet<K>
+function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K): $ObjectSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ObjectSet<K>
+function of<K>(k0: K, k1: K): $ObjectSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $Object2IntSortedMap$FastSortedEntrySet$$Static<K = any> implements $Object2IntSortedMap$FastSortedEntrySet<K> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-static "of"<K>(): $ObjectSet<K>
+static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K): $ObjectSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ObjectSet<K>
+static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -2871,33 +2952,33 @@ get "empty"(): boolean
 
 export namespace $ReferenceSet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ReferenceSet<K>
-function of<K>(...k0s: K[]): $ReferenceSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ReferenceSet<K>
-function of<K>(): $ReferenceSet<K>
+function of<K>(...k0s: K[]): $ReferenceSet<K>
 function of<K>(k0: K): $ReferenceSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ReferenceSet<K>
+function of<K>(k0: K, k1: K): $ReferenceSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $ReferenceSet$$Static<K = any> implements $ReferenceSet<K> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ReferenceSet<K>
-static "of"<K>(...k0s: K[]): $ReferenceSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ReferenceSet<K>
-static "of"<K>(): $ReferenceSet<K>
+static "of"<K>(...k0s: K[]): $ReferenceSet<K>
 static "of"<K>(k0: K): $ReferenceSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ReferenceSet<K>
+static "of"<K>(k0: K, k1: K): $ReferenceSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -2929,8 +3010,8 @@ export interface $ReferenceCollection<K = any> extends $Collection<K>, $ObjectIt
 "spliterator"(): $ObjectSpliterator<K>
 "stream"(): $Stream<K>
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toArray"(): any[]
 get "empty"(): boolean
 }
 
@@ -3079,17 +3160,17 @@ export interface $Reference2DoubleFunction<K = any> extends $Function$0<K, doubl
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2DoubleFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2DoubleFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): double
 "defaultReturnValue"(double0: double): void
+"defaultReturnValue"(): double
+/** @deprecated */
+"get"(object0: any): double
 "getDouble"(object0: any): double
-"getOrDefault"(object0: any, double1: double): double
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
-"put"(k0: K, double1: double): double
+"getOrDefault"(object0: any, double1: double): double
 /** @deprecated */
 "put"(k0: K, double1: double): double
-/** @deprecated */
-"remove"(object0: any): double
+"put"(k0: K, double1: double): double
 "removeDouble"(object0: any): double
 "size"(): integer
 }
@@ -3164,17 +3245,17 @@ export interface $Object2CharFunction<K = any> extends $Function$0<K, character>
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2CharFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2CharFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): character
 "defaultReturnValue"(char0: character): void
+"defaultReturnValue"(): character
+/** @deprecated */
+"get"(object0: any): character
 "getChar"(object0: any): character
-"getOrDefault"(object0: any, char1: character): character
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
-"put"(k0: K, char1: character): character
+"getOrDefault"(object0: any, char1: character): character
 /** @deprecated */
 "put"(k0: K, character1: character): character
-/** @deprecated */
-"remove"(object0: any): character
+"put"(k0: K, char1: character): character
 "removeChar"(object0: any): character
 "size"(): integer
 }
@@ -3191,48 +3272,51 @@ declare module "it.unimi.dsi.fastutil.objects.AbstractObject2ByteSortedMap" {
 import { $ObjectSortedSet } from "it.unimi.dsi.fastutil.objects.ObjectSortedSet"
 import { $Byte2FloatFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2FloatFunction"
 import { $Byte2LongFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2LongFunction"
-import { $Int2ByteFunction } from "it.unimi.dsi.fastutil.ints.Int2ByteFunction"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
-import { $Float2ByteFunction } from "it.unimi.dsi.fastutil.floats.Float2ByteFunction"
 import { $IntBinaryOperator$$Type } from "java.util.function.IntBinaryOperator"
-import { $Double2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ObjectFunction"
-import { $Object2ObjectFunction, $Object2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectFunction"
-import { $Function, $Function$$Type } from "java.util.function.Function"
 import { $Object2ByteSortedMap } from "it.unimi.dsi.fastutil.objects.Object2ByteSortedMap"
-import { $Object2LongFunction } from "it.unimi.dsi.fastutil.objects.Object2LongFunction"
 import { $Double2ByteFunction } from "it.unimi.dsi.fastutil.doubles.Double2ByteFunction"
-import { $Object2DoubleFunction } from "it.unimi.dsi.fastutil.objects.Object2DoubleFunction"
 import { $Reference2ByteFunction } from "it.unimi.dsi.fastutil.objects.Reference2ByteFunction"
-import { $Byte2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2DoubleFunction"
 import { $Object2FloatFunction } from "it.unimi.dsi.fastutil.objects.Object2FloatFunction"
 import { $Short2ByteFunction } from "it.unimi.dsi.fastutil.shorts.Short2ByteFunction"
-import { $Object2IntFunction } from "it.unimi.dsi.fastutil.objects.Object2IntFunction"
 import { $Map, $Map$$Type } from "java.util.Map"
-import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $ByteBinaryOperator$$Type } from "it.unimi.dsi.fastutil.bytes.ByteBinaryOperator"
-import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
-import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
-import { $Object2ByteMap$Entry } from "it.unimi.dsi.fastutil.objects.Object2ByteMap$Entry"
+import { $SequencedSet } from "java.util.SequencedSet"
 import { $Byte2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ObjectFunction"
 import { $AbstractObject2ByteMap } from "it.unimi.dsi.fastutil.objects.AbstractObject2ByteMap"
 import { $Short2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2ObjectFunction"
 import { $Object2ByteFunction, $Object2ByteFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ByteFunction"
-import { $Byte2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ReferenceFunction"
 import { $Char2ByteFunction } from "it.unimi.dsi.fastutil.chars.Char2ByteFunction"
-import { $Byte2ShortFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ShortFunction"
 import { $Int2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ObjectFunction"
+import { $Object2ReferenceFunction } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
+import { $Long2ByteFunction } from "it.unimi.dsi.fastutil.longs.Long2ByteFunction"
+import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2ShortFunction"
+import { $SortedMap } from "java.util.SortedMap"
+import { $SequencedCollection } from "java.util.SequencedCollection"
+import { $Byte2ByteFunction, $Byte2ByteFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ByteFunction"
+import { $Byte2IntFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
+import { $Int2ByteFunction } from "it.unimi.dsi.fastutil.ints.Int2ByteFunction"
+import { $Float2ByteFunction } from "it.unimi.dsi.fastutil.floats.Float2ByteFunction"
+import { $Double2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ObjectFunction"
+import { $Object2ObjectFunction, $Object2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectFunction"
+import { $Function, $Function$$Type } from "java.util.function.Function"
+import { $Object2LongFunction } from "it.unimi.dsi.fastutil.objects.Object2LongFunction"
+import { $Object2DoubleFunction } from "it.unimi.dsi.fastutil.objects.Object2DoubleFunction"
+import { $Byte2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2DoubleFunction"
+import { $Object2IntFunction } from "it.unimi.dsi.fastutil.objects.Object2IntFunction"
+import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
+import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
+import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
+import { $Object2ByteMap$Entry } from "it.unimi.dsi.fastutil.objects.Object2ByteMap$Entry"
+import { $Byte2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ReferenceFunction"
+import { $Byte2ShortFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ShortFunction"
 import { $Long2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $ToIntFunction$$Type } from "java.util.function.ToIntFunction"
 import { $Byte2CharFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2CharFunction"
-import { $Object2ReferenceFunction } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
 import { $Float2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2ObjectFunction"
-import { $Long2ByteFunction } from "it.unimi.dsi.fastutil.longs.Long2ByteFunction"
 import { $Char2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2ObjectFunction"
-import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2ShortFunction"
 import { $Comparator } from "java.util.Comparator"
-import { $Byte2ByteFunction, $Byte2ByteFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ByteFunction"
 import { $Object2CharFunction } from "it.unimi.dsi.fastutil.objects.Object2CharFunction"
-import { $Byte2IntFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
 
 export class $AbstractObject2ByteSortedMap<K = any> extends $AbstractObject2ByteMap<K> implements $Object2ByteSortedMap<K> {
 /** @deprecated */
@@ -3277,53 +3361,63 @@ public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public "defaultReturnValue"(): byte
 public "defaultReturnValue"(byte0: byte): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
+public "firstEntry"(): $Map$Entry<K, byte>
 public "firstKey"(): K
 public "forEach"(biConsumer0: $BiConsumer$$Type<K, byte>): void
 /** @deprecated */
 public "get"(object0: any): byte
 public "getByte"(object0: any): byte
-public "getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
+public "getOrDefault"(object0: any, byte1: byte): byte
 public "getOrDefault"(object0: any, byte1: byte): byte
 public static "identity"<T>(): $Function<T, T>
+public "lastEntry"(): $Map$Entry<K, byte>
 public "lastKey"(): K
-public "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
 /** @deprecated */
 public "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
-public "mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
+public "merge"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
 /** @deprecated */
 public "mergeByte"(k0: K, byte1: byte, biFunction2: $BiFunction$$Type<byte, byte, byte>): byte
+public "mergeByte"(k0: K, byte1: byte, intBinaryOperator2: $IntBinaryOperator$$Type): byte
 public "mergeByte"(k0: K, byte1: byte, byteBinaryOperator2: $ByteBinaryOperator$$Type): byte
 public "object2ByteEntrySet"(): $ObjectSortedSet<$Object2ByteMap$Entry<K>>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
+public "pollFirstEntry"(): $Map$Entry<K, byte>
+public "pollLastEntry"(): $Map$Entry<K, byte>
 /** @deprecated */
 public "put"(k0: K, byte1: byte): byte
 public "put"(k0: K, byte1: byte): byte
+public "putFirst"(k0: K, byte1: byte): byte
+public "putIfAbsent"(k0: K, byte1: byte): byte
 /** @deprecated */
 public "putIfAbsent"(k0: K, byte1: byte): byte
-public "putIfAbsent"(k0: K, byte1: byte): byte
+public "putLast"(k0: K, byte1: byte): byte
 /** @deprecated */
 public "remove"(object0: any, object1: any): boolean
 public "remove"(object0: any, byte1: byte): boolean
 public "removeByte"(object0: any): byte
-/** @deprecated */
-public "replace"(k0: K, byte1: byte, byte2: byte): boolean
-public "replace"(k0: K, byte1: byte, byte2: byte): boolean
 public "replace"(k0: K, byte1: byte): byte
+public "replace"(k0: K, byte1: byte, byte2: byte): boolean
 /** @deprecated */
 public "replace"(k0: K, byte1: byte): byte
+/** @deprecated */
+public "replace"(k0: K, byte1: byte, byte2: byte): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, byte, byte>): void
+public "reversed"(): $SortedMap<K, byte>
+public "sequencedEntrySet"(): $SequencedSet<$Map$Entry<K, byte>>
+public "sequencedKeySet"(): $SequencedSet<K>
+public "sequencedValues"(): $SequencedCollection<byte>
 public "size"(): integer
 }
 }
@@ -3390,17 +3484,17 @@ export interface $Object2LongFunction<K = any> extends $Function$0<K, long>, $To
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2LongFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2LongFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): long
 "defaultReturnValue"(long0: long): void
+"defaultReturnValue"(): long
+/** @deprecated */
+"get"(object0: any): long
 "getLong"(object0: any): long
-"getOrDefault"(object0: any, long1: long): long
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
-"put"(k0: K, long1: long): long
+"getOrDefault"(object0: any, long1: long): long
 /** @deprecated */
 "put"(k0: K, long1: long): long
-/** @deprecated */
-"remove"(object0: any): long
+"put"(k0: K, long1: long): long
 "removeLong"(object0: any): long
 "size"(): integer
 }
@@ -3509,25 +3603,25 @@ public static "identity"<T>(): $Function<T, T>
 public "isEmpty"(): boolean
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public "object2ObjectEntrySet"(): $ObjectSet<$Object2ObjectMap$Entry<K, V>>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, v1: V): V
 public "putAll"(map0: $Map$$Type<K, V>): void
 public "putIfAbsent"(k0: K, v1: V): V
 public "remove"(object0: any): V
 public "remove"(object0: any, object1: any): boolean
-public "replace"(k0: K, v1: V, v2: V): boolean
 public "replace"(k0: K, v1: V): V
+public "replace"(k0: K, v1: V, v2: V): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 public "size"(): integer
 public "values"(): $ObjectCollection<V>
@@ -3611,6 +3705,7 @@ public "andThenShort"(float2ShortFunction0: $Float2ShortFunction$$Type): $Object
 public "apply"(k0: K): float
 public "applyAsDouble"(k0: K): double
 public "clear"(): void
+public "clone"(): $Object2FloatOpenHashMap<K>
 public "compose"<V>(function0: $Function$$Type<V, K>): $Function<V, float>
 public "composeByte"(byte2ObjectFunction0: $Byte2ObjectFunction$$Type<K>): $Byte2FloatFunction
 public "composeChar"(char2ObjectFunction0: $Char2ObjectFunction$$Type<K>): $Char2FloatFunction
@@ -3628,15 +3723,15 @@ public "computeFloatIfAbsent"(k0: K, toDoubleFunction1: $ToDoubleFunction$$Type<
 /** @deprecated */
 public "computeFloatIfAbsentPartial"(k0: K, object2FloatFunction1: $Object2FloatFunction$$Type<K>): float
 public "computeFloatIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, float, float>): float
-public "computeIfAbsent"(k0: K, toDoubleFunction1: $ToDoubleFunction$$Type<K>): float
 public "computeIfAbsent"(k0: K, object2FloatFunction1: $Object2FloatFunction$$Type<K>): float
+public "computeIfAbsent"(k0: K, toDoubleFunction1: $ToDoubleFunction$$Type<K>): float
 public "computeIfAbsent"(k0: K, function1: $Function$$Type<K, float>): float
 public "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, float, float>): float
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(float0: float): void
 public "defaultReturnValue"(): float
+public "defaultReturnValue"(float0: float): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 /** @deprecated */
 public "entrySet"(): $ObjectSet<$Map$Entry<K, float>>
@@ -3652,22 +3747,22 @@ public "keySet"(): $ObjectSet<K>
 public "merge"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
 /** @deprecated */
 public "merge"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
-public "mergeFloat"(k0: K, float1: float, doubleBinaryOperator2: $DoubleBinaryOperator$$Type): float
 /** @deprecated */
 public "mergeFloat"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
 public "mergeFloat"(k0: K, float1: float, floatBinaryOperator2: $FloatBinaryOperator$$Type): float
+public "mergeFloat"(k0: K, float1: float, doubleBinaryOperator2: $DoubleBinaryOperator$$Type): float
 public "object2FloatEntrySet"(): $Object2FloatMap$FastEntrySet<K>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, float1: float): float
 /** @deprecated */
@@ -3682,9 +3777,9 @@ public "removeFloat"(object0: any): float
 public "replace"(k0: K, float1: float, float2: float): boolean
 public "replace"(k0: K, float1: float): float
 /** @deprecated */
-public "replace"(k0: K, float1: float, float2: float): boolean
-/** @deprecated */
 public "replace"(k0: K, float1: float): float
+/** @deprecated */
+public "replace"(k0: K, float1: float, float2: float): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, float, float>): void
 public "size"(): integer
 public "trim"(): boolean
@@ -3905,33 +4000,33 @@ get "empty"(): boolean
 
 export namespace $Object2IntMap$FastEntrySet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ObjectSet<K>
-function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-function of<K>(): $ObjectSet<K>
+function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K): $ObjectSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ObjectSet<K>
+function of<K>(k0: K, k1: K): $ObjectSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $Object2IntMap$FastEntrySet$$Static<K = any> implements $Object2IntMap$FastEntrySet<K> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-static "of"<K>(): $ObjectSet<K>
+static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K): $ObjectSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ObjectSet<K>
+static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -3959,6 +4054,7 @@ import { $Object2ObjectMap$FastEntrySet } from "it.unimi.dsi.fastutil.objects.Ob
 import { $Int2ObjectFunction, $Int2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ObjectFunction"
 import { $Long2ObjectFunction, $Long2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $ObjectSet } from "it.unimi.dsi.fastutil.objects.ObjectSet"
+import { $ObjectCollection } from "it.unimi.dsi.fastutil.objects.ObjectCollection"
 import { $Serializable } from "java.io.Serializable"
 import { $Object2ReferenceFunction, $Object2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
 import { $Float2ObjectFunction, $Float2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2ObjectFunction"
@@ -3989,6 +4085,7 @@ public "andThenReference"<T>(object2ReferenceFunction0: $Object2ReferenceFunctio
 public "andThenShort"(object2ShortFunction0: $Object2ShortFunction$$Type<V>): $Object2ShortFunction<K>
 public "apply"(k0: K): V
 public "clear"(): void
+public "clone"(): $Object2ObjectOpenHashMap<K, V>
 public "compose"<V>(function0: $Function$$Type<V, K>): $Function<V, V>
 public "composeByte"(byte2ObjectFunction0: $Byte2ObjectFunction$$Type<K>): $Byte2ObjectFunction<V>
 public "composeChar"(char2ObjectFunction0: $Char2ObjectFunction$$Type<K>): $Char2ObjectFunction<V>
@@ -4014,31 +4111,31 @@ public "forEach"(biConsumer0: $BiConsumer$$Type<K, V>): void
 public "get"(object0: any): V
 public "getOrDefault"(object0: any, v1: V): V
 public static "identity"<T>(): $Function<T, T>
-public "keySet"(): $ObjectSet<K>
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public "object2ObjectEntrySet"(): $Object2ObjectMap$FastEntrySet<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 public "put"(k0: K, v1: V): V
 public "putIfAbsent"(k0: K, v1: V): V
 public "remove"(object0: any, object1: any): boolean
 public "remove"(object0: any): V
-public "replace"(k0: K, v1: V, v2: V): boolean
 public "replace"(k0: K, v1: V): V
+public "replace"(k0: K, v1: V, v2: V): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 public "size"(): integer
 public "trim"(): boolean
 public "trim"(int0: integer): boolean
+public "values"(): $ObjectCollection<V>
 }
 }
 
@@ -4052,7 +4149,6 @@ import { $IntBinaryOperator$$Type } from "java.util.function.IntBinaryOperator"
 import { $Double2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ObjectFunction"
 import { $Object2ObjectFunction, $Object2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectFunction"
 import { $Function, $Function$$Type } from "java.util.function.Function"
-import { $IntCollection } from "it.unimi.dsi.fastutil.ints.IntCollection"
 import { $Int2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2DoubleFunction"
 import { $Object2LongFunction } from "it.unimi.dsi.fastutil.objects.Object2LongFunction"
 import { $Object2DoubleFunction } from "it.unimi.dsi.fastutil.objects.Object2DoubleFunction"
@@ -4124,9 +4220,9 @@ export interface $Object2IntMap<K = any> extends $Object2IntFunction<K>, $Map<K,
 "computeIntIfAbsentPartial"(k0: K, object2IntFunction1: $Object2IntFunction$$Type<K>): integer
 "computeIntIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, integer, integer>): integer
 "containsKey"(object0: any): boolean
+"containsValue"(int0: integer): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"containsValue"(int0: integer): boolean
 "defaultReturnValue"(): integer
 "defaultReturnValue"(int0: integer): void
 /** @deprecated */
@@ -4136,39 +4232,39 @@ export interface $Object2IntMap<K = any> extends $Object2IntFunction<K>, $Map<K,
 /** @deprecated */
 "get"(object0: any): integer
 "getInt"(object0: any): integer
-"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
+"getOrDefault"(object0: any, int1: integer): integer
 "hashCode"(): integer
 "isEmpty"(): boolean
-"merge"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
+"keySet"(): $ObjectSet<K>
 /** @deprecated */
 "merge"(k0: K, integer1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
+"merge"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 "mergeInt"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
-"mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$$Type): integer
 "mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$0$$Type): integer
+"mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$$Type): integer
 "object2IntEntrySet"(): $ObjectSet<$Object2IntMap$Entry<K>>
 /** @deprecated */
 "put"(k0: K, integer1: integer): integer
 "put"(k0: K, int1: integer): integer
 "putAll"(map0: $Map$$Type<K, integer>): void
+"putIfAbsent"(k0: K, int1: integer): integer
 /** @deprecated */
 "putIfAbsent"(k0: K, integer1: integer): integer
-"putIfAbsent"(k0: K, int1: integer): integer
 /** @deprecated */
 "remove"(object0: any, object1: any): boolean
 "remove"(object0: any, int1: integer): boolean
 "removeInt"(object0: any): integer
-/** @deprecated */
-"replace"(k0: K, integer1: integer, integer2: integer): boolean
-"replace"(k0: K, int1: integer, int2: integer): boolean
 "replace"(k0: K, int1: integer): integer
+"replace"(k0: K, int1: integer, int2: integer): boolean
 /** @deprecated */
 "replace"(k0: K, integer1: integer): integer
+/** @deprecated */
+"replace"(k0: K, integer1: integer, integer2: integer): boolean
 "replaceAll"(biFunction0: $BiFunction$$Type<K, integer, integer>): void
 "size"(): integer
-"values"(): $IntCollection
 [index: string | number]: integer
 get "empty"(): boolean
 }
@@ -4177,85 +4273,89 @@ export namespace $Object2IntMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity<T>(): $Function<T, T>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Object2IntMap$$Static<K = any> implements $Object2IntMap<K> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"<T>(): $Function<T, T>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
 
 declare module "it.unimi.dsi.fastutil.objects.Object2IntLinkedOpenHashMap" {
+import { $ObjectSortedSet } from "it.unimi.dsi.fastutil.objects.ObjectSortedSet"
+import { $BiFunction$$Type } from "java.util.function.BiFunction"
+import { $IntBinaryOperator$$Type } from "java.util.function.IntBinaryOperator"
+import { $Object2IntSortedMap$FastSortedEntrySet } from "it.unimi.dsi.fastutil.objects.Object2IntSortedMap$FastSortedEntrySet"
+import { $Int2IntFunction, $Int2IntFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2IntFunction"
+import { $Float2IntFunction } from "it.unimi.dsi.fastutil.floats.Float2IntFunction"
+import { $Object2FloatFunction } from "it.unimi.dsi.fastutil.objects.Object2FloatFunction"
+import { $Map, $Map$$Type } from "java.util.Map"
+import { $Reference2IntFunction } from "it.unimi.dsi.fastutil.objects.Reference2IntFunction"
+import { $Long2IntFunction } from "it.unimi.dsi.fastutil.longs.Long2IntFunction"
+import { $Short2IntFunction } from "it.unimi.dsi.fastutil.shorts.Short2IntFunction"
+import { $SequencedSet } from "java.util.SequencedSet"
+import { $Cloneable } from "java.lang.Cloneable"
+import { $Byte2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ObjectFunction"
+import { $Short2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2ObjectFunction"
+import { $Object2ByteFunction } from "it.unimi.dsi.fastutil.objects.Object2ByteFunction"
+import { $Int2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ObjectFunction"
+import { $Int2LongFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2LongFunction"
+import { $Serializable } from "java.io.Serializable"
+import { $Object2ReferenceFunction } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
+import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2ShortFunction"
+import { $SortedMap } from "java.util.SortedMap"
+import { $SequencedCollection } from "java.util.SequencedCollection"
+import { $Int2CharFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2CharFunction"
+import { $Byte2IntFunction } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
 import { $Int2ShortFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ShortFunction"
 import { $Hash } from "it.unimi.dsi.fastutil.Hash"
 import { $Int2ByteFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ByteFunction"
 import { $Int2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ReferenceFunction"
-import { $BiFunction$$Type } from "java.util.function.BiFunction"
-import { $IntBinaryOperator$$Type } from "java.util.function.IntBinaryOperator"
 import { $Double2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ObjectFunction"
 import { $Object2ObjectFunction, $Object2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectFunction"
 import { $Function, $Function$$Type } from "java.util.function.Function"
 import { $Int2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2DoubleFunction"
 import { $Object2LongFunction } from "it.unimi.dsi.fastutil.objects.Object2LongFunction"
 import { $Object2DoubleFunction } from "it.unimi.dsi.fastutil.objects.Object2DoubleFunction"
-import { $Int2IntFunction, $Int2IntFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2IntFunction"
-import { $Float2IntFunction } from "it.unimi.dsi.fastutil.floats.Float2IntFunction"
-import { $Object2FloatFunction } from "it.unimi.dsi.fastutil.objects.Object2FloatFunction"
-import { $Map, $Map$$Type } from "java.util.Map"
 import { $Object2IntFunction, $Object2IntFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2IntFunction"
 import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
-import { $Reference2IntFunction } from "it.unimi.dsi.fastutil.objects.Reference2IntFunction"
-import { $Long2IntFunction } from "it.unimi.dsi.fastutil.longs.Long2IntFunction"
-import { $Short2IntFunction } from "it.unimi.dsi.fastutil.shorts.Short2IntFunction"
 import { $Int2FloatFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2FloatFunction"
 import { $Reference2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
-import { $Cloneable } from "java.lang.Cloneable"
-import { $Byte2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2ObjectFunction"
-import { $Short2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2ObjectFunction"
-import { $Object2ByteFunction } from "it.unimi.dsi.fastutil.objects.Object2ByteFunction"
-import { $Int2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ObjectFunction"
 import { $Long2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $ToIntFunction$$Type } from "java.util.function.ToIntFunction"
 import { $Char2IntFunction } from "it.unimi.dsi.fastutil.chars.Char2IntFunction"
-import { $Int2LongFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2LongFunction"
-import { $Serializable } from "java.io.Serializable"
-import { $Object2ReferenceFunction } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
 import { $Float2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2ObjectFunction"
 import { $Object2IntMap$$Type } from "it.unimi.dsi.fastutil.objects.Object2IntMap"
 import { $Char2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2ObjectFunction"
-import { $Object2ShortFunction } from "it.unimi.dsi.fastutil.objects.Object2ShortFunction"
 import { $Comparator } from "java.util.Comparator"
 import { $Double2IntFunction } from "it.unimi.dsi.fastutil.doubles.Double2IntFunction"
-import { $Object2IntSortedMap } from "it.unimi.dsi.fastutil.objects.Object2IntSortedMap"
 import { $AbstractObject2IntSortedMap } from "it.unimi.dsi.fastutil.objects.AbstractObject2IntSortedMap"
 import { $Object2CharFunction } from "it.unimi.dsi.fastutil.objects.Object2CharFunction"
-import { $Int2CharFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2CharFunction"
-import { $Byte2IntFunction } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
 
 export class $Object2IntLinkedOpenHashMap<K = any> extends $AbstractObject2IntSortedMap<K> implements $Serializable, $Cloneable, $Hash {
 constructor(map0: $Map$$Type<K, integer>)
@@ -4283,6 +4383,7 @@ public "andThenShort"(int2ShortFunction0: $Int2ShortFunction$$Type): $Object2Sho
 public "apply"(k0: K): integer
 public "applyAsInt"(k0: K): integer
 public "clear"(): void
+public "clone"(): $Object2IntLinkedOpenHashMap<K>
 public "comparator"(): $Comparator<K>
 public "compose"<V>(function0: $Function$$Type<V, K>): $Function<V, integer>
 public "composeByte"(byte2ObjectFunction0: $Byte2ObjectFunction$$Type<K>): $Byte2IntFunction
@@ -4295,8 +4396,8 @@ public "composeObject"<T>(object2ObjectFunction0: $Object2ObjectFunction$$Type<T
 public "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2IntFunction<T>
 public "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2IntFunction
 public "compute"(k0: K, biFunction1: $BiFunction$$Type<K, integer, integer>): integer
-public "computeIfAbsent"(k0: K, object2IntFunction1: $Object2IntFunction$$Type<K>): integer
 public "computeIfAbsent"(k0: K, toIntFunction1: $ToIntFunction$$Type<K>): integer
+public "computeIfAbsent"(k0: K, object2IntFunction1: $Object2IntFunction$$Type<K>): integer
 public "computeIfAbsent"(k0: K, function1: $Function$$Type<K, integer>): integer
 public "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, integer, integer>): integer
 public "computeInt"(k0: K, biFunction1: $BiFunction$$Type<K, integer, integer>): integer
@@ -4311,6 +4412,7 @@ public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 public "defaultReturnValue"(): integer
 public "defaultReturnValue"(int0: integer): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
+public "firstEntry"(): $Map$Entry<K, integer>
 public "firstKey"(): K
 public "forEach"(biConsumer0: $BiConsumer$$Type<K, integer>): void
 /** @deprecated */
@@ -4322,6 +4424,8 @@ public "getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 public "getOrDefault"(object0: any, integer1: integer): integer
 public static "identity"<T>(): $Function<T, T>
+public "keySet"(): $ObjectSortedSet<K>
+public "lastEntry"(): $Map$Entry<K, integer>
 public "lastKey"(): K
 public "merge"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
@@ -4329,26 +4433,31 @@ public "merge"(k0: K, integer1: integer, biFunction2: $BiFunction$$Type<integer,
 /** @deprecated */
 public "mergeInt"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 public "mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$$Type): integer
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
+public "object2IntEntrySet"(): $Object2IntSortedMap$FastSortedEntrySet<K>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
+public "pollFirstEntry"(): $Map$Entry<K, integer>
+public "pollLastEntry"(): $Map$Entry<K, integer>
 public "put"(k0: K, int1: integer): integer
 /** @deprecated */
 public "put"(k0: K, integer1: integer): integer
 public "putAndMoveToFirst"(k0: K, int1: integer): integer
 public "putAndMoveToLast"(k0: K, int1: integer): integer
+public "putFirst"(k0: K, integer1: integer): integer
 public "putIfAbsent"(k0: K, int1: integer): integer
 /** @deprecated */
 public "putIfAbsent"(k0: K, integer1: integer): integer
+public "putLast"(k0: K, integer1: integer): integer
 public "remove"(object0: any, int1: integer): boolean
 /** @deprecated */
 public "remove"(object0: any, object1: any): boolean
@@ -4358,14 +4467,17 @@ public "removeLastInt"(): integer
 public "replace"(k0: K, int1: integer, int2: integer): boolean
 public "replace"(k0: K, int1: integer): integer
 /** @deprecated */
-public "replace"(k0: K, integer1: integer, integer2: integer): boolean
-/** @deprecated */
 public "replace"(k0: K, integer1: integer): integer
+/** @deprecated */
+public "replace"(k0: K, integer1: integer, integer2: integer): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, integer, integer>): void
+public "reversed"(): $SortedMap<K, integer>
+public "sequencedEntrySet"(): $SequencedSet<$Map$Entry<K, integer>>
+public "sequencedKeySet"(): $SequencedSet<K>
+public "sequencedValues"(): $SequencedCollection<integer>
 public "size"(): integer
-public "tailMap"(k0: K): $Object2IntSortedMap<K>
-public "trim"(int0: integer): boolean
 public "trim"(): boolean
+public "trim"(int0: integer): boolean
 }
 }
 
@@ -4431,17 +4543,17 @@ export interface $Object2ByteFunction<K = any> extends $Function$0<K, byte>, $To
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2ByteFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2ByteFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): byte
 "defaultReturnValue"(byte0: byte): void
+"defaultReturnValue"(): byte
+/** @deprecated */
+"get"(object0: any): byte
 "getByte"(object0: any): byte
-"getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
-"put"(k0: K, byte1: byte): byte
+"getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
 "put"(k0: K, byte1: byte): byte
-/** @deprecated */
-"remove"(object0: any): byte
+"put"(k0: K, byte1: byte): byte
 "removeByte"(object0: any): byte
 "size"(): integer
 }
@@ -4543,17 +4655,17 @@ export interface $Reference2LongFunction<K = any> extends $Function$0<K, long>, 
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2LongFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2LongFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): long
 "defaultReturnValue"(long0: long): void
+"defaultReturnValue"(): long
+/** @deprecated */
+"get"(object0: any): long
 "getLong"(object0: any): long
-"getOrDefault"(object0: any, long1: long): long
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
-"put"(k0: K, long1: long): long
+"getOrDefault"(object0: any, long1: long): long
 /** @deprecated */
 "put"(k0: K, long1: long): long
-/** @deprecated */
-"remove"(object0: any): long
+"put"(k0: K, long1: long): long
 "removeLong"(object0: any): long
 "size"(): integer
 }
@@ -4628,17 +4740,17 @@ export interface $Reference2ByteFunction<K = any> extends $Function$0<K, byte>, 
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2ByteFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2ByteFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): byte
 "defaultReturnValue"(byte0: byte): void
+"defaultReturnValue"(): byte
+/** @deprecated */
+"get"(object0: any): byte
 "getByte"(object0: any): byte
-"getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
-"put"(k0: K, byte1: byte): byte
+"getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
 "put"(k0: K, byte1: byte): byte
-/** @deprecated */
-"remove"(object0: any): byte
+"put"(k0: K, byte1: byte): byte
 "removeByte"(object0: any): byte
 "size"(): integer
 }
@@ -4713,17 +4825,17 @@ export interface $Reference2FloatFunction<K = any> extends $Function$0<K, float>
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2FloatFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2FloatFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): float
 "defaultReturnValue"(float0: float): void
+"defaultReturnValue"(): float
+/** @deprecated */
+"get"(object0: any): float
 "getFloat"(object0: any): float
-"getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
-"put"(k0: K, float1: float): float
+"getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
 "put"(k0: K, float1: float): float
-/** @deprecated */
-"remove"(object0: any): float
+"put"(k0: K, float1: float): float
 "removeFloat"(object0: any): float
 "size"(): integer
 }
@@ -4771,7 +4883,6 @@ import { $Long2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2Obj
 import { $ObjectSet } from "it.unimi.dsi.fastutil.objects.ObjectSet"
 import { $Float2ShortFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2ShortFunction"
 import { $Short2FloatFunction } from "it.unimi.dsi.fastutil.shorts.Short2FloatFunction"
-import { $FloatCollection } from "it.unimi.dsi.fastutil.floats.FloatCollection"
 import { $Float2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2ObjectFunction"
 import { $Object2ReferenceFunction } from "it.unimi.dsi.fastutil.objects.Object2ReferenceFunction"
 import { $Char2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2ObjectFunction"
@@ -4818,11 +4929,11 @@ export interface $Object2FloatMap<K = any> extends $Object2FloatFunction<K>, $Ma
 "computeIfAbsent"(k0: K, function1: $Function$$Type<K, float>): float
 "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, float, float>): float
 "containsKey"(object0: any): boolean
+"containsValue"(float0: float): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"containsValue"(float0: float): boolean
-"defaultReturnValue"(float0: float): void
 "defaultReturnValue"(): float
+"defaultReturnValue"(float0: float): void
 /** @deprecated */
 "entrySet"(): $ObjectSet<$Map$Entry<K, float>>
 "equals"(object0: any): boolean
@@ -4830,39 +4941,39 @@ export interface $Object2FloatMap<K = any> extends $Object2FloatFunction<K>, $Ma
 /** @deprecated */
 "get"(object0: any): float
 "getFloat"(object0: any): float
-"getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
+"getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(object0: any, float1: float): float
 "hashCode"(): integer
 "isEmpty"(): boolean
-"merge"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
+"keySet"(): $ObjectSet<K>
 /** @deprecated */
 "merge"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
-"mergeFloat"(k0: K, float1: float, doubleBinaryOperator2: $DoubleBinaryOperator$$Type): float
+"merge"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
 /** @deprecated */
 "mergeFloat"(k0: K, float1: float, biFunction2: $BiFunction$$Type<float, float, float>): float
 "mergeFloat"(k0: K, float1: float, floatBinaryOperator2: $FloatBinaryOperator$$Type): float
+"mergeFloat"(k0: K, float1: float, doubleBinaryOperator2: $DoubleBinaryOperator$$Type): float
 "object2FloatEntrySet"(): $ObjectSet<$Object2FloatMap$Entry<K>>
 /** @deprecated */
 "put"(k0: K, float1: float): float
 "put"(k0: K, float1: float): float
 "putAll"(map0: $Map$$Type<K, float>): void
-/** @deprecated */
 "putIfAbsent"(k0: K, float1: float): float
+/** @deprecated */
 "putIfAbsent"(k0: K, float1: float): float
 /** @deprecated */
 "remove"(object0: any, object1: any): boolean
 "remove"(object0: any, float1: float): boolean
 "removeFloat"(object0: any): float
-/** @deprecated */
-"replace"(k0: K, float1: float, float2: float): boolean
-"replace"(k0: K, float1: float, float2: float): boolean
 "replace"(k0: K, float1: float): float
+"replace"(k0: K, float1: float, float2: float): boolean
 /** @deprecated */
 "replace"(k0: K, float1: float): float
+/** @deprecated */
+"replace"(k0: K, float1: float, float2: float): boolean
 "replaceAll"(biFunction0: $BiFunction$$Type<K, float, float>): void
 "size"(): integer
-"values"(): $FloatCollection
 [index: string | number]: float
 get "empty"(): boolean
 }
@@ -4871,47 +4982,49 @@ export namespace $Object2FloatMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 function identity<T>(): $Function<T, T>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $Object2FloatMap$$Static<K = any> implements $Object2FloatMap<K> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 static "identity"<T>(): $Function<T, T>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
 
 declare module "it.unimi.dsi.fastutil.objects.AbstractObjectList" {
-import { $Consumer$$Type } from "java.util.function.Consumer"
-import { $AbstractObjectCollection } from "it.unimi.dsi.fastutil.objects.AbstractObjectCollection"
-import { $List, $List$$Type } from "java.util.List"
-import { $Stream } from "java.util.stream.Stream"
+import { $ObjectSpliterator } from "it.unimi.dsi.fastutil.objects.ObjectSpliterator"
 import { $Predicate$$Type } from "java.util.function.Predicate"
 import { $Collection$$Type } from "java.util.Collection"
 import { $UnaryOperator$$Type } from "java.util.function.UnaryOperator"
 import { $Stack } from "it.unimi.dsi.fastutil.Stack"
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $AbstractObjectCollection } from "it.unimi.dsi.fastutil.objects.AbstractObjectCollection"
+import { $List, $List$$Type } from "java.util.List"
+import { $ObjectListIterator } from "it.unimi.dsi.fastutil.objects.ObjectListIterator"
+import { $Stream } from "java.util.stream.Stream"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $ObjectList, $ObjectList$$Type } from "it.unimi.dsi.fastutil.objects.ObjectList"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
@@ -4921,29 +5034,35 @@ public "add"(int0: integer, k1: K): void
 public "addAll"(int0: integer, collection1: $Collection$$Type<K>): boolean
 public "addAll"(objectList0: $ObjectList$$Type<K>): boolean
 public "addAll"(int0: integer, objectList1: $ObjectList$$Type<K>): boolean
-public "addElements"(int0: integer, k1s: K[]): void
 public "addElements"(int0: integer, k1s: K[], int2: integer, int3: integer): void
+public "addElements"(int0: integer, k1s: K[]): void
+public "addFirst"(k0: K): void
+public "addLast"(k0: K): void
 public "compareTo"(list0: $List$$Type<K>): integer
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<K>): void
 public "get"(int0: integer): K
 public "getElements"(int0: integer, object1s: any[], int2: integer, int3: integer): void
+public "getFirst"(): K
+public "getLast"(): K
 public "indexOf"(object0: any): integer
 public "isEmpty"(): boolean
 public "lastIndexOf"(object0: any): integer
-public static "of"<K>(...k0s: K[]): $ObjectList<K>
-public static "of"<K>(k0: K, k1: K, k2: K): $ObjectList<K>
-public static "of"<K>(k0: K): $ObjectList<K>
+public "listIterator"(int0: integer): $ObjectListIterator<K>
+public "listIterator"(): $ObjectListIterator<K>
 public static "of"<K>(): $ObjectList<K>
+public static "of"<K>(k0: K, k1: K, k2: K): $ObjectList<K>
 public static "of"<K>(k0: K, k1: K): $ObjectList<K>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<K>(k0: K): $ObjectList<K>
+public static "of"<K>(...k0s: K[]): $ObjectList<K>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<K>
 public "peek"(int0: integer): K
 public "pop"(): K
@@ -4952,22 +5071,27 @@ public "remove"(int0: integer): K
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
 public "removeElements"(int0: integer, int1: integer): void
+public "removeFirst"(): K
 public "removeIf"(predicate0: $Predicate$$Type<K>): boolean
+public "removeLast"(): K
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<K>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, k1: K): K
 public "setElements"(int0: integer, k1s: K[], int2: integer, int3: integer): void
-public "setElements"(k0s: K[]): void
 public "setElements"(int0: integer, k1s: K[]): void
+public "setElements"(k0s: K[]): void
 public "size"(int0: integer): void
 public "size"(): integer
 public "sort"(comparator0: $Comparator$$Type<K>): void
+public "spliterator"(): $ObjectSpliterator<K>
 public "stream"(): $Stream<K>
 public "subList"(int0: integer, int1: integer): $ObjectList<K>
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public "top"(): K
 public "unstableSort"(comparator0: $Comparator$$Type<K>): void
+get "first"(): K
+get "last"(): K
 get "empty"(): boolean
 set "elements"(value: K[])
 }
@@ -5070,48 +5194,48 @@ public "forEach"(biConsumer0: $BiConsumer$$Type<K, integer>): void
 /** @deprecated */
 public "get"(object0: any): integer
 public "getInt"(object0: any): integer
-public "getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 public "getOrDefault"(object0: any, integer1: integer): integer
+public "getOrDefault"(object0: any, int1: integer): integer
 public static "identity"<T>(): $Function<T, T>
 public "isEmpty"(): boolean
-public "merge"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 /** @deprecated */
 public "merge"(k0: K, integer1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
+public "merge"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 public "mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$0$$Type): integer
 /** @deprecated */
 public "mergeInt"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 public "mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$$Type): integer
 public "object2IntEntrySet"(): $ObjectSet<$Object2IntMap$Entry<K>>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 /** @deprecated */
 public "put"(k0: K, integer1: integer): integer
 public "put"(k0: K, int1: integer): integer
 public "putAll"(map0: $Map$$Type<K, integer>): void
+public "putIfAbsent"(k0: K, int1: integer): integer
 /** @deprecated */
 public "putIfAbsent"(k0: K, integer1: integer): integer
-public "putIfAbsent"(k0: K, int1: integer): integer
 /** @deprecated */
 public "remove"(object0: any, object1: any): boolean
 public "remove"(object0: any, int1: integer): boolean
 public "removeInt"(object0: any): integer
-/** @deprecated */
-public "replace"(k0: K, integer1: integer, integer2: integer): boolean
-public "replace"(k0: K, int1: integer, int2: integer): boolean
 public "replace"(k0: K, int1: integer): integer
+public "replace"(k0: K, int1: integer, int2: integer): boolean
 /** @deprecated */
 public "replace"(k0: K, integer1: integer): integer
+/** @deprecated */
+public "replace"(k0: K, integer1: integer, integer2: integer): boolean
 public "replaceAll"(biFunction0: $BiFunction$$Type<K, integer, integer>): void
 public "size"(): integer
 [index: string | number]: integer
@@ -5157,33 +5281,33 @@ get "empty"(): boolean
 
 export namespace $Object2ByteMap$FastEntrySet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ObjectSet<K>
-function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-function of<K>(): $ObjectSet<K>
+function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K): $ObjectSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ObjectSet<K>
+function of<K>(k0: K, k1: K): $ObjectSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $Object2ByteMap$FastEntrySet$$Static<K = any> implements $Object2ByteMap$FastEntrySet<K> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-static "of"<K>(): $ObjectSet<K>
+static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K): $ObjectSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ObjectSet<K>
+static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -5249,17 +5373,17 @@ export interface $Object2FloatFunction<K = any> extends $Function$0<K, float>, $
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2FloatFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2FloatFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): float
 "defaultReturnValue"(float0: float): void
+"defaultReturnValue"(): float
+/** @deprecated */
+"get"(object0: any): float
 "getFloat"(object0: any): float
-"getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
-"put"(k0: K, float1: float): float
+"getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
 "put"(k0: K, float1: float): float
-/** @deprecated */
-"remove"(object0: any): float
+"put"(k0: K, float1: float): float
 "removeFloat"(object0: any): float
 "size"(): integer
 }
@@ -5339,9 +5463,11 @@ export interface $Reference2BooleanFunction<K = any> extends $Function$0<K, bool
 "containsKey"(object0: any): boolean
 "defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
-"getBoolean"(object0: any): boolean
-"getOrDefault"(object0: any, boolean1: boolean): boolean
 /** @deprecated */
+"get"(object0: any): boolean
+"getBoolean"(object0: any): boolean
+/** @deprecated */
+"getOrDefault"(object0: any, boolean1: boolean): boolean
 "getOrDefault"(object0: any, boolean1: boolean): boolean
 "negate"(): $Predicate<K>
 "or"(predicate0: $Predicate$$Type<K>): $Predicate<K>
@@ -5383,6 +5509,8 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 export interface $ObjectSortedSet<K = any> extends $ObjectSet<K>, $SortedSet<K>, $ObjectBidirectionalIterable<K> {
 "add"(k0: K): boolean
 "addAll"(collection0: $Collection$$Type<K>): boolean
+"addFirst"(k0: K): void
+"addLast"(k0: K): void
 "clear"(): void
 "comparator"(): $Comparator<K>
 "contains"(object0: any): boolean
@@ -5390,6 +5518,8 @@ export interface $ObjectSortedSet<K = any> extends $ObjectSet<K>, $SortedSet<K>,
 "equals"(object0: any): boolean
 "first"(): K
 "forEach"(consumer0: $Consumer$$Type<K>): void
+"getFirst"(): K
+"getLast"(): K
 "hashCode"(): integer
 "isEmpty"(): boolean
 "iterator"(k0: K): $ObjectBidirectionalIterator<K>
@@ -5397,7 +5527,9 @@ export interface $ObjectSortedSet<K = any> extends $ObjectSet<K>, $SortedSet<K>,
 "parallelStream"(): $Stream<K>
 "remove"(object0: any): boolean
 "removeAll"(collection0: $Collection$$Type<any>): boolean
+"removeFirst"(): K
 "removeIf"(predicate0: $Predicate$$Type<K>): boolean
+"removeLast"(): K
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "size"(): integer
 "stream"(): $Stream<K>
@@ -5410,33 +5542,33 @@ get "empty"(): boolean
 
 export namespace $ObjectSortedSet {
 function copyOf<E>(collection0: $Collection$$Type<E>): $Set<E>
-function of<K>(k0: K, k1: K): $ObjectSet<K>
-function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-function of<K>(): $ObjectSet<K>
+function of<K>(...k0s: K[]): $ObjectSet<K>
 function of<K>(k0: K): $ObjectSet<K>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<K>(): $ObjectSet<K>
+function of<K>(k0: K, k1: K): $ObjectSet<K>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+function of<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 export abstract class $ObjectSortedSet$$Static<K = any> implements $ObjectSortedSet<K> {
 static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
-static "of"<K>(k0: K, k1: K): $ObjectSet<K>
-static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K, k1: K, k2: K): $ObjectSet<K>
-static "of"<K>(): $ObjectSet<K>
+static "of"<K>(...k0s: K[]): $ObjectSet<K>
 static "of"<K>(k0: K): $ObjectSet<K>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<K>(): $ObjectSet<K>
+static "of"<K>(k0: K, k1: K): $ObjectSet<K>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 }
 }
 
@@ -5465,15 +5597,15 @@ set "value"(value: integer)
 export namespace $Object2IntMap$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Object2IntMap$Entry$$Static<K = any> implements $Object2IntMap$Entry<K> {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -5497,15 +5629,15 @@ set "value"(value: V)
 export namespace $Reference2ReferenceMap$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Reference2ReferenceMap$Entry$$Static<K = any, V = any> implements $Reference2ReferenceMap$Entry<K, V> {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -5574,16 +5706,16 @@ public "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $S
 public "containsKey"(object0: any): boolean
 public "defaultReturnValue"(int0: integer): void
 public "defaultReturnValue"(): integer
+/** @deprecated */
+public "get"(object0: any): integer
 public "getInt"(object0: any): integer
-public "getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 public "getOrDefault"(object0: any, integer1: integer): integer
+public "getOrDefault"(object0: any, int1: integer): integer
 public static "identity"<T>(): $Function<T, T>
-public "put"(k0: K, int1: integer): integer
 /** @deprecated */
 public "put"(k0: K, integer1: integer): integer
-/** @deprecated */
-public "remove"(object0: any): integer
+public "put"(k0: K, int1: integer): integer
 public "removeInt"(object0: any): integer
 public "size"(): integer
 }
@@ -5651,17 +5783,17 @@ export interface $Object2IntFunction<K = any> extends $Function$0<K, integer>, $
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2IntFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2IntFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): integer
 "defaultReturnValue"(int0: integer): void
+"defaultReturnValue"(): integer
+/** @deprecated */
+"get"(object0: any): integer
 "getInt"(object0: any): integer
-"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
-"put"(k0: K, int1: integer): integer
+"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "put"(k0: K, integer1: integer): integer
-/** @deprecated */
-"remove"(object0: any): integer
+"put"(k0: K, int1: integer): integer
 "removeInt"(object0: any): integer
 "size"(): integer
 }
@@ -5736,17 +5868,17 @@ export interface $Reference2CharFunction<K = any> extends $Function$0<K, charact
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2CharFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2CharFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): character
 "defaultReturnValue"(char0: character): void
+"defaultReturnValue"(): character
+/** @deprecated */
+"get"(object0: any): character
 "getChar"(object0: any): character
-"getOrDefault"(object0: any, char1: character): character
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
-"put"(k0: K, char1: character): character
+"getOrDefault"(object0: any, char1: character): character
 /** @deprecated */
 "put"(k0: K, character1: character): character
-/** @deprecated */
-"remove"(object0: any): character
+"put"(k0: K, char1: character): character
 "removeChar"(object0: any): character
 "size"(): integer
 }
@@ -5778,15 +5910,15 @@ set "value"(value: V)
 export namespace $Object2ObjectMap$Entry {
 function comparingByKey<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 function comparingByKey<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function comparingByValue<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+function comparingByValue<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 function copyOf<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 export abstract class $Object2ObjectMap$Entry$$Static<K = any, V = any> implements $Object2ObjectMap$Entry<K, V> {
 static "comparingByKey"<K, V>(comparator0: $Comparator$$Type<K>): $Comparator<$Map$Entry<K, V>>
 static "comparingByKey"<K extends $Comparable<K>, V>(): $Comparator<$Map$Entry<K, V>>
-static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "comparingByValue"<K, V extends $Comparable<V>>(): $Comparator<$Map$Entry<K, V>>
+static "comparingByValue"<K, V>(comparator0: $Comparator$$Type<V>): $Comparator<$Map$Entry<K, V>>
 static "copyOf"<K, V>(entry0: $Map$Entry$$Type<K, V>): $Map$Entry<K, V>
 }
 }
@@ -5941,16 +6073,16 @@ public "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $S
 public "containsKey"(object0: any): boolean
 public "defaultReturnValue"(float0: float): void
 public "defaultReturnValue"(): float
-public "getFloat"(object0: any): float
-public "getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
+public "get"(object0: any): float
+public "getFloat"(object0: any): float
+/** @deprecated */
+public "getOrDefault"(object0: any, float1: float): float
 public "getOrDefault"(object0: any, float1: float): float
 public static "identity"<T>(): $Function<T, T>
-public "put"(k0: K, float1: float): float
 /** @deprecated */
 public "put"(k0: K, float1: float): float
-/** @deprecated */
-public "remove"(object0: any): float
+public "put"(k0: K, float1: float): float
 public "removeFloat"(object0: any): float
 public "size"(): integer
 }

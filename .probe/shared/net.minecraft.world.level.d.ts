@@ -124,18 +124,18 @@ export interface $WorldGenLevel extends $ServerLevelAccessor {
 "collidesWithSuffocatingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "containsAnyLiquid"(aABB0: $AABB$$Type): boolean
 "dayTime"(): long
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
 "destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
 "dimensionType"(): $DimensionType
 "enabledFeatures"(): $FeatureFlagSet
 "ensureCanWrite"(blockPos0: $BlockPos$$Type): boolean
 "findFreePosition"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type, vec32: $Vec3$$Type, double3: double, double4: double, double5: double): $Optional<$Vec3>
 "findSupportingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Optional<$BlockPos>
 "gameEvent"(gameEvent0: $GameEvent$$Type, vec31: $Vec3$$Type, context2: $GameEvent$Context$$Type): void
-"gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type): void
-"gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
 "gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, blockPos2: $BlockPos$$Type): void
+"gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
+"gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type): void
 "getBestNeighborSignal"(blockPos0: $BlockPos$$Type): integer
 "getBiome"(blockPos0: $BlockPos$$Type): $Holder<$Biome>
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
@@ -154,10 +154,10 @@ export interface $WorldGenLevel extends $ServerLevelAccessor {
 "getBlockTicks"(): $LevelTickAccess<$Block>
 "getBlockTint"(blockPos0: $BlockPos$$Type, colorResolver1: $ColorResolver$$Type): integer
 "getBrightness"(lightLayer0: $LightLayer$$Type, blockPos1: $BlockPos$$Type): integer
-"getChunk"(int0: integer, int1: integer): $ChunkAccess
+"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type): $ChunkAccess
-"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
+"getChunk"(int0: integer, int1: integer): $ChunkAccess
 "getChunkForCollisions"(int0: integer, int1: integer): $BlockGetter
 "getChunkSource"(): $ChunkSource
 "getCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
@@ -167,16 +167,16 @@ export interface $WorldGenLevel extends $ServerLevelAccessor {
 "getDirectSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): integer
 "getDirectSignalTo"(blockPos0: $BlockPos$$Type): integer
 "getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$Entity>
-"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
+"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type): $List<T>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
 "getEntityCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$VoxelShape>
 "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
 "getFluidTicks"(): $LevelTickAccess<$Fluid>
-"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeight"(): integer
+"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeightmapPos"(types0: $Heightmap$Types$$Type, blockPos1: $BlockPos$$Type): $BlockPos
 "getLevel"(): $ServerLevel
 "getLevelData"(): $LevelData
@@ -186,8 +186,8 @@ export interface $WorldGenLevel extends $ServerLevelAccessor {
 "getLightLevelDependentMagicValue"(blockPos0: $BlockPos$$Type): float
 "getMaxBuildHeight"(): integer
 "getMaxLightLevel"(): integer
-"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type, int1: integer): integer
+"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxSection"(): integer
 "getMinBuildHeight"(): integer
 "getMinSection"(): integer
@@ -196,14 +196,14 @@ export interface $WorldGenLevel extends $ServerLevelAccessor {
 "getMoonPhase"(): integer
 "getNearbyEntities"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, aABB3: $AABB$$Type): $List<T>
 "getNearbyPlayers"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, aABB2: $AABB$$Type): $List<$Player>
-"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestEntity"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double, aABB6: $AABB$$Type): T
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
-"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
 "getNoiseBiome"(int0: integer, int1: integer, int2: integer): $Holder<$Biome>
 "getPathfindingCostFromLightLevels"(blockPos0: $BlockPos$$Type): float
 "getPlayerByUUID"(uUID0: $UUID$$Type): $Player
@@ -227,15 +227,15 @@ export interface $WorldGenLevel extends $ServerLevelAccessor {
 "hasBiomes"(): boolean
 "hasChunk"(int0: integer, int1: integer): boolean
 /** @deprecated */
+"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+/** @deprecated */
 "hasChunkAt"(int0: integer, int1: integer): boolean
 /** @deprecated */
-"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 /** @deprecated */
 "hasChunksAt"(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type): boolean
 /** @deprecated */
 "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer): boolean
-/** @deprecated */
-"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 "hasNearbyAlivePlayer"(double0: double, double1: double, double2: double, double3: double): boolean
 "hasNeighborSignal"(blockPos0: $BlockPos$$Type): boolean
 "hasSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): boolean
@@ -249,25 +249,25 @@ export interface $WorldGenLevel extends $ServerLevelAccessor {
 "isOutsideBuildHeight"(int0: integer): boolean
 "isStateAtPosition"(blockPos0: $BlockPos$$Type, predicate1: $Predicate$$Type<$BlockState$$Type>): boolean
 "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
-"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isUnobstructed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): boolean
+"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isWaterAt"(blockPos0: $BlockPos$$Type): boolean
-"levelEvent"(player0: $Player$$Type, int1: integer, blockPos2: $BlockPos$$Type, int3: integer): void
 "levelEvent"(int0: integer, blockPos1: $BlockPos$$Type, int2: integer): void
+"levelEvent"(player0: $Player$$Type, int1: integer, blockPos2: $BlockPos$$Type, int3: integer): void
 "neighborShapeChanged"(direction0: $Direction$$Type, blockState1: $BlockState$$Type, blockPos2: $BlockPos$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): void
 "nextSubTickCount"(): long
 "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "noCollision"(aABB0: $AABB$$Type): boolean
 "noCollision"(entity0: $Entity$$Type): boolean
-"playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type, float4: float, float5: float): void
 "playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type): void
+"playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type, float4: float, float5: float): void
 "players"(): $List<$Player>
 "registryAccess"(): $RegistryAccess
 "removeBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+"scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer): void
 "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 "scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer): void
-"scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 "setBlock"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, int2: integer): boolean
 "setBlock"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, int2: integer, int3: integer): boolean
 "setCurrentlyGenerating"(supplier0: $Supplier$$Type<string>): void
@@ -403,17 +403,17 @@ export interface $ServerLevelAccessor extends $LevelAccessor {
 "collidesWithSuffocatingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "containsAnyLiquid"(aABB0: $AABB$$Type): boolean
 "dayTime"(): long
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
 "destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
 "dimensionType"(): $DimensionType
 "enabledFeatures"(): $FeatureFlagSet
 "findFreePosition"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type, vec32: $Vec3$$Type, double3: double, double4: double, double5: double): $Optional<$Vec3>
 "findSupportingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Optional<$BlockPos>
 "gameEvent"(gameEvent0: $GameEvent$$Type, vec31: $Vec3$$Type, context2: $GameEvent$Context$$Type): void
-"gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type): void
-"gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
 "gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, blockPos2: $BlockPos$$Type): void
+"gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
+"gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type): void
 "getBestNeighborSignal"(blockPos0: $BlockPos$$Type): integer
 "getBiome"(blockPos0: $BlockPos$$Type): $Holder<$Biome>
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
@@ -432,10 +432,10 @@ export interface $ServerLevelAccessor extends $LevelAccessor {
 "getBlockTicks"(): $LevelTickAccess<$Block>
 "getBlockTint"(blockPos0: $BlockPos$$Type, colorResolver1: $ColorResolver$$Type): integer
 "getBrightness"(lightLayer0: $LightLayer$$Type, blockPos1: $BlockPos$$Type): integer
-"getChunk"(int0: integer, int1: integer): $ChunkAccess
+"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type): $ChunkAccess
-"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
+"getChunk"(int0: integer, int1: integer): $ChunkAccess
 "getChunkForCollisions"(int0: integer, int1: integer): $BlockGetter
 "getChunkSource"(): $ChunkSource
 "getCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
@@ -445,16 +445,16 @@ export interface $ServerLevelAccessor extends $LevelAccessor {
 "getDirectSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): integer
 "getDirectSignalTo"(blockPos0: $BlockPos$$Type): integer
 "getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$Entity>
-"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
+"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type): $List<T>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
 "getEntityCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$VoxelShape>
 "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
 "getFluidTicks"(): $LevelTickAccess<$Fluid>
-"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeight"(): integer
+"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeightmapPos"(types0: $Heightmap$Types$$Type, blockPos1: $BlockPos$$Type): $BlockPos
 "getLevel"(): $ServerLevel
 "getLevelData"(): $LevelData
@@ -464,8 +464,8 @@ export interface $ServerLevelAccessor extends $LevelAccessor {
 "getLightLevelDependentMagicValue"(blockPos0: $BlockPos$$Type): float
 "getMaxBuildHeight"(): integer
 "getMaxLightLevel"(): integer
-"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type, int1: integer): integer
+"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxSection"(): integer
 "getMinBuildHeight"(): integer
 "getMinSection"(): integer
@@ -474,14 +474,14 @@ export interface $ServerLevelAccessor extends $LevelAccessor {
 "getMoonPhase"(): integer
 "getNearbyEntities"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, aABB3: $AABB$$Type): $List<T>
 "getNearbyPlayers"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, aABB2: $AABB$$Type): $List<$Player>
-"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestEntity"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double, aABB6: $AABB$$Type): T
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
-"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
 "getNoiseBiome"(int0: integer, int1: integer, int2: integer): $Holder<$Biome>
 "getPathfindingCostFromLightLevels"(blockPos0: $BlockPos$$Type): float
 "getPlayerByUUID"(uUID0: $UUID$$Type): $Player
@@ -504,15 +504,15 @@ export interface $ServerLevelAccessor extends $LevelAccessor {
 "hasBiomes"(): boolean
 "hasChunk"(int0: integer, int1: integer): boolean
 /** @deprecated */
+"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+/** @deprecated */
 "hasChunkAt"(int0: integer, int1: integer): boolean
 /** @deprecated */
-"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 /** @deprecated */
 "hasChunksAt"(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type): boolean
 /** @deprecated */
 "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer): boolean
-/** @deprecated */
-"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 "hasNearbyAlivePlayer"(double0: double, double1: double, double2: double, double3: double): boolean
 "hasNeighborSignal"(blockPos0: $BlockPos$$Type): boolean
 "hasSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): boolean
@@ -526,25 +526,25 @@ export interface $ServerLevelAccessor extends $LevelAccessor {
 "isOutsideBuildHeight"(int0: integer): boolean
 "isStateAtPosition"(blockPos0: $BlockPos$$Type, predicate1: $Predicate$$Type<$BlockState$$Type>): boolean
 "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
-"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isUnobstructed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): boolean
+"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isWaterAt"(blockPos0: $BlockPos$$Type): boolean
-"levelEvent"(player0: $Player$$Type, int1: integer, blockPos2: $BlockPos$$Type, int3: integer): void
 "levelEvent"(int0: integer, blockPos1: $BlockPos$$Type, int2: integer): void
+"levelEvent"(player0: $Player$$Type, int1: integer, blockPos2: $BlockPos$$Type, int3: integer): void
 "neighborShapeChanged"(direction0: $Direction$$Type, blockState1: $BlockState$$Type, blockPos2: $BlockPos$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): void
 "nextSubTickCount"(): long
 "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "noCollision"(aABB0: $AABB$$Type): boolean
 "noCollision"(entity0: $Entity$$Type): boolean
-"playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type, float4: float, float5: float): void
 "playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type): void
+"playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type, float4: float, float5: float): void
 "players"(): $List<$Player>
 "registryAccess"(): $RegistryAccess
 "removeBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+"scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer): void
 "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 "scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer): void
-"scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 "setBlock"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, int2: integer): boolean
 "setBlock"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, int2: integer, int3: integer): boolean
 get "biomeManager"(): $BiomeManager
@@ -774,8 +774,8 @@ export interface $BlockAndTintGetter extends $BlockGetter, $IForgeBlockAndTintGe
 "clip"(clipContext0: $ClipContext$$Type): $BlockHitResult
 "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
-"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
 "getBlockFloorHeight"(voxelShape0: $VoxelShape$$Type, supplier1: $Supplier$$Type<$VoxelShape>): double
 "getBlockFloorHeight"(blockPos0: $BlockPos$$Type): double
@@ -948,8 +948,8 @@ export interface $LevelTimeAccess extends $LevelReader {
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
 "getBiomeManager"(): $BiomeManager
 "getBlockCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
-"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 /** @deprecated */
 "getBlockEntityRenderAttachment"(pos: $BlockPos$$Type): any
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
@@ -960,10 +960,10 @@ export interface $LevelTimeAccess extends $LevelReader {
 "getBlockStatesIfLoaded"(aABB0: $AABB$$Type): $Stream<$BlockState>
 "getBlockTint"(blockPos0: $BlockPos$$Type, colorResolver1: $ColorResolver$$Type): integer
 "getBrightness"(lightLayer0: $LightLayer$$Type, blockPos1: $BlockPos$$Type): integer
-"getChunk"(int0: integer, int1: integer): $ChunkAccess
+"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type): $ChunkAccess
-"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
+"getChunk"(int0: integer, int1: integer): $ChunkAccess
 "getChunkForCollisions"(int0: integer, int1: integer): $BlockGetter
 "getCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
 "getControlInputSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type, boolean2: boolean): integer
@@ -972,8 +972,8 @@ export interface $LevelTimeAccess extends $LevelReader {
 "getEntityCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$VoxelShape>
 "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
-"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeight"(): integer
+"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeightmapPos"(types0: $Heightmap$Types$$Type, blockPos1: $BlockPos$$Type): $BlockPos
 "getLightEmission"(blockPos0: $BlockPos$$Type): integer
 "getLightEngine"(): $LevelLightEngine
@@ -981,8 +981,8 @@ export interface $LevelTimeAccess extends $LevelReader {
 "getLightLevelDependentMagicValue"(blockPos0: $BlockPos$$Type): float
 "getMaxBuildHeight"(): integer
 "getMaxLightLevel"(): integer
-"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type, int1: integer): integer
+"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxSection"(): integer
 "getMinBuildHeight"(): integer
 "getMinSection"(): integer
@@ -1009,15 +1009,15 @@ export interface $LevelTimeAccess extends $LevelReader {
 /** @deprecated */
 "hasChunk"(int0: integer, int1: integer): boolean
 /** @deprecated */
+"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+/** @deprecated */
 "hasChunkAt"(int0: integer, int1: integer): boolean
 /** @deprecated */
-"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 /** @deprecated */
 "hasChunksAt"(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type): boolean
 /** @deprecated */
 "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer): boolean
-/** @deprecated */
-"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 "hasNeighborSignal"(blockPos0: $BlockPos$$Type): boolean
 "hasSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): boolean
 "holderLookup"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>): $HolderLookup<T>
@@ -1028,8 +1028,8 @@ export interface $LevelTimeAccess extends $LevelReader {
 "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 "isOutsideBuildHeight"(int0: integer): boolean
 "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
-"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isUnobstructed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): boolean
+"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isWaterAt"(blockPos0: $BlockPos$$Type): boolean
 "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "noCollision"(aABB0: $AABB$$Type): boolean
@@ -1123,9 +1123,9 @@ import { $BlockState$$Type } from "net.minecraft.world.level.block.state.BlockSt
 
 export interface $LevelWriter {
 "addFreshEntity"(entity0: $Entity$$Type): boolean
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
 "destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
 "removeBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
 "setBlock"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, int2: integer): boolean
 "setBlock"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, int2: integer, int3: integer): boolean
@@ -1160,10 +1160,10 @@ export class $Explosion implements $IMixinExplosion {
 static "EXPLOSION_DAMAGE_CALCULATOR": $ExplosionDamageCalculator
 static "MAX_DROPS_PER_COMBINED_STACK": integer
 
-constructor(level0: $Level$$Type, entity1: $Entity$$Type, double2: double, double3: double, double4: double, float5: float, list6: $List$$Type<$BlockPos$$Type>)
 constructor(level0: $Level$$Type, entity1: $Entity$$Type, damageSource2: $DamageSource$$Type, explosionDamageCalculator3: $ExplosionDamageCalculator$$Type, double4: double, double5: double, double6: double, float7: float, boolean8: boolean, blockInteraction9: $Explosion$BlockInteraction$$Type)
-constructor(level0: $Level$$Type, entity1: $Entity$$Type, double2: double, double3: double, double4: double, float5: float, boolean6: boolean, blockInteraction7: $Explosion$BlockInteraction$$Type, list8: $List$$Type<$BlockPos$$Type>)
 constructor(level0: $Level$$Type, entity1: $Entity$$Type, double2: double, double3: double, double4: double, float5: float, boolean6: boolean, blockInteraction7: $Explosion$BlockInteraction$$Type)
+constructor(level0: $Level$$Type, entity1: $Entity$$Type, double2: double, double3: double, double4: double, float5: float, boolean6: boolean, blockInteraction7: $Explosion$BlockInteraction$$Type, list8: $List$$Type<$BlockPos$$Type>)
+constructor(level0: $Level$$Type, entity1: $Entity$$Type, double2: double, double3: double, double4: double, float5: float, list6: $List$$Type<$BlockPos$$Type>)
 
 public static "addBlockDrops"(objectArrayList0: $ObjectArrayList$$Type<$Pair$$Type<$ItemStack$$Type, $BlockPos$$Type>>, itemStack1: $ItemStack$$Type, blockPos2: $BlockPos$$Type): void
 public "clearToBlow"(): void
@@ -1252,8 +1252,8 @@ export interface $CollisionGetter extends $BlockGetter {
 "findSupportingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Optional<$BlockPos>
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
 "getBlockCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
-"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
 "getBlockFloorHeight"(voxelShape0: $VoxelShape$$Type, supplier1: $Supplier$$Type<$VoxelShape>): double
 "getBlockFloorHeight"(blockPos0: $BlockPos$$Type): double
@@ -1282,8 +1282,8 @@ export interface $CollisionGetter extends $BlockGetter {
 "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 "isOutsideBuildHeight"(int0: integer): boolean
 "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
-"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isUnobstructed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): boolean
+"isUnobstructed"(entity0: $Entity$$Type): boolean
 "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "noCollision"(aABB0: $AABB$$Type): boolean
 "noCollision"(entity0: $Entity$$Type): boolean
@@ -1385,17 +1385,17 @@ export interface $LevelAccessor extends $CommonLevelAccessor, $LevelTimeAccess {
 "collidesWithSuffocatingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "containsAnyLiquid"(aABB0: $AABB$$Type): boolean
 "dayTime"(): long
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
 "destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
 "dimensionType"(): $DimensionType
 "enabledFeatures"(): $FeatureFlagSet
 "findFreePosition"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type, vec32: $Vec3$$Type, double3: double, double4: double, double5: double): $Optional<$Vec3>
 "findSupportingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Optional<$BlockPos>
 "gameEvent"(gameEvent0: $GameEvent$$Type, vec31: $Vec3$$Type, context2: $GameEvent$Context$$Type): void
-"gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type): void
-"gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
 "gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, blockPos2: $BlockPos$$Type): void
+"gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
+"gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type): void
 "getBestNeighborSignal"(blockPos0: $BlockPos$$Type): integer
 "getBiome"(blockPos0: $BlockPos$$Type): $Holder<$Biome>
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
@@ -1414,10 +1414,10 @@ export interface $LevelAccessor extends $CommonLevelAccessor, $LevelTimeAccess {
 "getBlockTicks"(): $LevelTickAccess<$Block>
 "getBlockTint"(blockPos0: $BlockPos$$Type, colorResolver1: $ColorResolver$$Type): integer
 "getBrightness"(lightLayer0: $LightLayer$$Type, blockPos1: $BlockPos$$Type): integer
-"getChunk"(int0: integer, int1: integer): $ChunkAccess
+"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type): $ChunkAccess
-"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
+"getChunk"(int0: integer, int1: integer): $ChunkAccess
 "getChunkForCollisions"(int0: integer, int1: integer): $BlockGetter
 "getChunkSource"(): $ChunkSource
 "getCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
@@ -1427,16 +1427,16 @@ export interface $LevelAccessor extends $CommonLevelAccessor, $LevelTimeAccess {
 "getDirectSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): integer
 "getDirectSignalTo"(blockPos0: $BlockPos$$Type): integer
 "getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$Entity>
-"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
+"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type): $List<T>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
 "getEntityCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$VoxelShape>
 "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
 "getFluidTicks"(): $LevelTickAccess<$Fluid>
-"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeight"(): integer
+"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeightmapPos"(types0: $Heightmap$Types$$Type, blockPos1: $BlockPos$$Type): $BlockPos
 "getLevelData"(): $LevelData
 "getLightEmission"(blockPos0: $BlockPos$$Type): integer
@@ -1445,8 +1445,8 @@ export interface $LevelAccessor extends $CommonLevelAccessor, $LevelTimeAccess {
 "getLightLevelDependentMagicValue"(blockPos0: $BlockPos$$Type): float
 "getMaxBuildHeight"(): integer
 "getMaxLightLevel"(): integer
-"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type, int1: integer): integer
+"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxSection"(): integer
 "getMinBuildHeight"(): integer
 "getMinSection"(): integer
@@ -1455,14 +1455,14 @@ export interface $LevelAccessor extends $CommonLevelAccessor, $LevelTimeAccess {
 "getMoonPhase"(): integer
 "getNearbyEntities"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, aABB3: $AABB$$Type): $List<T>
 "getNearbyPlayers"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, aABB2: $AABB$$Type): $List<$Player>
-"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestEntity"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double, aABB6: $AABB$$Type): T
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
-"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
 "getNoiseBiome"(int0: integer, int1: integer, int2: integer): $Holder<$Biome>
 "getPathfindingCostFromLightLevels"(blockPos0: $BlockPos$$Type): float
 "getPlayerByUUID"(uUID0: $UUID$$Type): $Player
@@ -1485,15 +1485,15 @@ export interface $LevelAccessor extends $CommonLevelAccessor, $LevelTimeAccess {
 "hasBiomes"(): boolean
 "hasChunk"(int0: integer, int1: integer): boolean
 /** @deprecated */
+"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+/** @deprecated */
 "hasChunkAt"(int0: integer, int1: integer): boolean
 /** @deprecated */
-"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 /** @deprecated */
 "hasChunksAt"(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type): boolean
 /** @deprecated */
 "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer): boolean
-/** @deprecated */
-"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 "hasNearbyAlivePlayer"(double0: double, double1: double, double2: double, double3: double): boolean
 "hasNeighborSignal"(blockPos0: $BlockPos$$Type): boolean
 "hasSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): boolean
@@ -1507,25 +1507,25 @@ export interface $LevelAccessor extends $CommonLevelAccessor, $LevelTimeAccess {
 "isOutsideBuildHeight"(int0: integer): boolean
 "isStateAtPosition"(blockPos0: $BlockPos$$Type, predicate1: $Predicate$$Type<$BlockState$$Type>): boolean
 "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
-"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isUnobstructed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): boolean
+"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isWaterAt"(blockPos0: $BlockPos$$Type): boolean
-"levelEvent"(player0: $Player$$Type, int1: integer, blockPos2: $BlockPos$$Type, int3: integer): void
 "levelEvent"(int0: integer, blockPos1: $BlockPos$$Type, int2: integer): void
+"levelEvent"(player0: $Player$$Type, int1: integer, blockPos2: $BlockPos$$Type, int3: integer): void
 "neighborShapeChanged"(direction0: $Direction$$Type, blockState1: $BlockState$$Type, blockPos2: $BlockPos$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): void
 "nextSubTickCount"(): long
 "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "noCollision"(aABB0: $AABB$$Type): boolean
 "noCollision"(entity0: $Entity$$Type): boolean
-"playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type, float4: float, float5: float): void
 "playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type): void
+"playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type, float4: float, float5: float): void
 "players"(): $List<$Player>
 "registryAccess"(): $RegistryAccess
 "removeBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+"scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer): void
 "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 "scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer): void
-"scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 "setBlock"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, int2: integer): boolean
 "setBlock"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, int2: integer, int3: integer): boolean
 get "biomeManager"(): $BiomeManager
@@ -1574,8 +1574,8 @@ import { $GameRulesBooleanRuleAccessor } from "net.fabricmc.fabric.mixin.gamerul
 export class $GameRules$BooleanValue extends $GameRules$Value<$GameRules$BooleanValue> implements $GameRulesBooleanRuleAccessor, $BooleanRuleInvoker {
 constructor(type0: $GameRules$Type$$Type<$GameRules$BooleanValue$$Type>, boolean1: boolean)
 
-public static "create"(boolean0: boolean): $GameRules$Type<$GameRules$BooleanValue>
 public static "create"(boolean0: boolean, biConsumer1: $BiConsumer$$Type<$MinecraftServer$$Type, $GameRules$BooleanValue$$Type>): $GameRules$Type<$GameRules$BooleanValue>
+public static "create"(boolean0: boolean): $GameRules$Type<$GameRules$BooleanValue>
 public "get"(): boolean
 public "set"(boolean0: boolean, minecraftServer1: $MinecraftServer$$Type): void
 public "setFrom"(booleanValue0: $GameRules$BooleanValue$$Type, minecraftServer1: $MinecraftServer$$Type): void
@@ -1615,21 +1615,21 @@ import { $Player } from "net.minecraft.world.entity.player.Player"
 
 export interface $EntityGetter {
 "getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$Entity>
-"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
+"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type): $List<T>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
 "getEntityCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$VoxelShape>
 "getNearbyEntities"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, aABB3: $AABB$$Type): $List<T>
 "getNearbyPlayers"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, aABB2: $AABB$$Type): $List<$Player>
-"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestEntity"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double, aABB6: $AABB$$Type): T
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
-"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
 "getPlayerByUUID"(uUID0: $UUID$$Type): $Player
 "hasNearbyAlivePlayer"(double0: double, double1: double, double2: double, double3: double): boolean
 "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
@@ -1684,8 +1684,8 @@ export interface $SignalGetter extends $BlockGetter {
 "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 "getBestNeighborSignal"(blockPos0: $BlockPos$$Type): integer
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
-"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
 "getBlockFloorHeight"(voxelShape0: $VoxelShape$$Type, supplier1: $Supplier$$Type<$VoxelShape>): double
 "getBlockFloorHeight"(blockPos0: $BlockPos$$Type): double
@@ -1829,9 +1829,9 @@ import { $BlockEntity, $BlockEntity$$Type } from "net.minecraft.world.level.bloc
 
 export interface $LevelSimulatedRW extends $LevelSimulatedReader, $LevelWriter {
 "addFreshEntity"(entity0: $Entity$$Type): boolean
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
 "destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
 "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 "getHeightmapPos"(types0: $Heightmap$Types$$Type, blockPos1: $BlockPos$$Type): $BlockPos
 "isFluidAtPosition"(blockPos0: $BlockPos$$Type, predicate1: $Predicate$$Type<$FluidState$$Type>): boolean
@@ -1879,8 +1879,8 @@ public "getName"(): string
 public static "getNullableId"(gameType0: $GameType$$Type): integer
 public "getSerializedName"(): string
 public "getShortDisplayName"(): $Component
-public "handler$dbf000$apoth_flightAttribModifier"(abilities0: $Abilities$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$dbf000$apoth_recordOldFlyingAttribs"(abilities0: $Abilities$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$dch000$apoth_flightAttribModifier"(abilities0: $Abilities$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$dch000$apoth_recordOldFlyingAttribs"(abilities0: $Abilities$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public "isBlockPlacingRestricted"(): boolean
 public "isCreative"(): boolean
 public "isSurvival"(): boolean
@@ -2086,9 +2086,9 @@ public "forWorldGenRegion"(worldGenRegion0: $WorldGenRegion$$Type): $StructureMa
 public "getAllStructuresAt"(blockPos0: $BlockPos$$Type): $Map<$Structure, $LongSet>
 public "getStartForStructure"(sectionPos0: $SectionPos$$Type, structure1: $Structure$$Type, structureAccess2: $StructureAccess$$Type): $StructureStart
 public "getStructureAt"(blockPos0: $BlockPos$$Type, structure1: $Structure$$Type): $StructureStart
+public "getStructureWithPieceAt"(blockPos0: $BlockPos$$Type, resourceKey1: $ResourceKey$$Type<$Structure>): $StructureStart
 public "getStructureWithPieceAt"(blockPos0: $BlockPos$$Type, tagKey1: $TagKey$$Type<$Structure$$Type>): $StructureStart
 public "getStructureWithPieceAt"(blockPos0: $BlockPos$$Type, structure1: $Structure$$Type): $StructureStart
-public "getStructureWithPieceAt"(blockPos0: $BlockPos$$Type, resourceKey1: $ResourceKey$$Type<$Structure>): $StructureStart
 public "hasAnyStructureAt"(blockPos0: $BlockPos$$Type): boolean
 public "registryAccess"(): $RegistryAccess
 public "setStartForStructure"(sectionPos0: $SectionPos$$Type, structure1: $Structure$$Type, structureStart2: $StructureStart$$Type, structureAccess3: $StructureAccess$$Type): void
@@ -2172,8 +2172,8 @@ public "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $B
 public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 public "isOutsideBuildHeight"(int0: integer): boolean
 public "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
-public "isUnobstructed"(entity0: $Entity$$Type): boolean
 public "isUnobstructed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): boolean
+public "isUnobstructed"(entity0: $Entity$$Type): boolean
 public "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 public "noCollision"(aABB0: $AABB$$Type): boolean
 public "noCollision"(entity0: $Entity$$Type): boolean
@@ -2302,9 +2302,9 @@ export interface $CommonLevelAccessor extends $EntityGetter, $LevelReader, $Leve
 "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 "collidesWithSuffocatingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "containsAnyLiquid"(aABB0: $AABB$$Type): boolean
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
-"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
 "destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
+"destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type, int3: integer): boolean
 "dimensionType"(): $DimensionType
 "enabledFeatures"(): $FeatureFlagSet
 "findFreePosition"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type, vec32: $Vec3$$Type, double3: double, double4: double, double5: double): $Optional<$Vec3>
@@ -2326,25 +2326,25 @@ export interface $CommonLevelAccessor extends $EntityGetter, $LevelReader, $Leve
 "getBlockStatesIfLoaded"(aABB0: $AABB$$Type): $Stream<$BlockState>
 "getBlockTint"(blockPos0: $BlockPos$$Type, colorResolver1: $ColorResolver$$Type): integer
 "getBrightness"(lightLayer0: $LightLayer$$Type, blockPos1: $BlockPos$$Type): integer
-"getChunk"(int0: integer, int1: integer): $ChunkAccess
+"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type): $ChunkAccess
-"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
+"getChunk"(int0: integer, int1: integer): $ChunkAccess
 "getChunkForCollisions"(int0: integer, int1: integer): $BlockGetter
 "getCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
 "getControlInputSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type, boolean2: boolean): integer
 "getDirectSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): integer
 "getDirectSignalTo"(blockPos0: $BlockPos$$Type): integer
 "getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$Entity>
-"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
+"getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type): $List<T>
 "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
 "getEntityCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$VoxelShape>
 "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
-"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeight"(): integer
+"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeightmapPos"(types0: $Heightmap$Types$$Type, blockPos1: $BlockPos$$Type): $BlockPos
 "getLightEmission"(blockPos0: $BlockPos$$Type): integer
 "getLightEngine"(): $LevelLightEngine
@@ -2352,22 +2352,22 @@ export interface $CommonLevelAccessor extends $EntityGetter, $LevelReader, $Leve
 "getLightLevelDependentMagicValue"(blockPos0: $BlockPos$$Type): float
 "getMaxBuildHeight"(): integer
 "getMaxLightLevel"(): integer
-"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type, int1: integer): integer
+"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxSection"(): integer
 "getMinBuildHeight"(): integer
 "getMinSection"(): integer
 "getModelDataManager"(): $ModelDataManager
 "getNearbyEntities"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, aABB3: $AABB$$Type): $List<T>
 "getNearbyPlayers"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, aABB2: $AABB$$Type): $List<$Player>
-"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestEntity"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double, aABB6: $AABB$$Type): T
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
-"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
-"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
-"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
+"getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+"getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
+"getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
 "getNoiseBiome"(int0: integer, int1: integer, int2: integer): $Holder<$Biome>
 "getPathfindingCostFromLightLevels"(blockPos0: $BlockPos$$Type): float
 "getPlayerByUUID"(uUID0: $UUID$$Type): $Player
@@ -2388,15 +2388,15 @@ export interface $CommonLevelAccessor extends $EntityGetter, $LevelReader, $Leve
 /** @deprecated */
 "hasChunk"(int0: integer, int1: integer): boolean
 /** @deprecated */
+"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+/** @deprecated */
 "hasChunkAt"(int0: integer, int1: integer): boolean
 /** @deprecated */
-"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 /** @deprecated */
 "hasChunksAt"(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type): boolean
 /** @deprecated */
 "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer): boolean
-/** @deprecated */
-"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 "hasNearbyAlivePlayer"(double0: double, double1: double, double2: double, double3: double): boolean
 "hasNeighborSignal"(blockPos0: $BlockPos$$Type): boolean
 "hasSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): boolean
@@ -2410,8 +2410,8 @@ export interface $CommonLevelAccessor extends $EntityGetter, $LevelReader, $Leve
 "isOutsideBuildHeight"(int0: integer): boolean
 "isStateAtPosition"(blockPos0: $BlockPos$$Type, predicate1: $Predicate$$Type<$BlockState$$Type>): boolean
 "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
-"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isUnobstructed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): boolean
+"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isWaterAt"(blockPos0: $BlockPos$$Type): boolean
 "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "noCollision"(aABB0: $AABB$$Type): boolean
@@ -2509,8 +2509,8 @@ export interface $BlockGetter extends $LevelHeightAccessor, $IForgeBlockGetter, 
 "clip"(clipContext0: $ClipContext$$Type): $BlockHitResult
 "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
-"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
 "getBlockFloorHeight"(voxelShape0: $VoxelShape$$Type, supplier1: $Supplier$$Type<$VoxelShape>): double
 "getBlockFloorHeight"(blockPos0: $BlockPos$$Type): double
@@ -2638,8 +2638,8 @@ export interface $LevelReader extends $BlockAndTintGetter, $CollisionGetter, $Si
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
 "getBiomeManager"(): $BiomeManager
 "getBlockCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
-"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 /** @deprecated */
 "getBlockEntityRenderAttachment"(pos: $BlockPos$$Type): any
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
@@ -2650,10 +2650,10 @@ export interface $LevelReader extends $BlockAndTintGetter, $CollisionGetter, $Si
 "getBlockStatesIfLoaded"(aABB0: $AABB$$Type): $Stream<$BlockState>
 "getBlockTint"(blockPos0: $BlockPos$$Type, colorResolver1: $ColorResolver$$Type): integer
 "getBrightness"(lightLayer0: $LightLayer$$Type, blockPos1: $BlockPos$$Type): integer
-"getChunk"(int0: integer, int1: integer): $ChunkAccess
+"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $ChunkAccess
 "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type): $ChunkAccess
-"getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
+"getChunk"(int0: integer, int1: integer): $ChunkAccess
 "getChunkForCollisions"(int0: integer, int1: integer): $BlockGetter
 "getCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
 "getControlInputSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type, boolean2: boolean): integer
@@ -2662,8 +2662,8 @@ export interface $LevelReader extends $BlockAndTintGetter, $CollisionGetter, $Si
 "getEntityCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$VoxelShape>
 "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
-"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeight"(): integer
+"getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
 "getHeightmapPos"(types0: $Heightmap$Types$$Type, blockPos1: $BlockPos$$Type): $BlockPos
 "getLightEmission"(blockPos0: $BlockPos$$Type): integer
 "getLightEngine"(): $LevelLightEngine
@@ -2671,8 +2671,8 @@ export interface $LevelReader extends $BlockAndTintGetter, $CollisionGetter, $Si
 "getLightLevelDependentMagicValue"(blockPos0: $BlockPos$$Type): float
 "getMaxBuildHeight"(): integer
 "getMaxLightLevel"(): integer
-"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type, int1: integer): integer
+"getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 "getMaxSection"(): integer
 "getMinBuildHeight"(): integer
 "getMinSection"(): integer
@@ -2696,15 +2696,15 @@ export interface $LevelReader extends $BlockAndTintGetter, $CollisionGetter, $Si
 /** @deprecated */
 "hasChunk"(int0: integer, int1: integer): boolean
 /** @deprecated */
+"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+/** @deprecated */
 "hasChunkAt"(int0: integer, int1: integer): boolean
 /** @deprecated */
-"hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 /** @deprecated */
 "hasChunksAt"(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type): boolean
 /** @deprecated */
 "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer): boolean
-/** @deprecated */
-"hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 "hasNeighborSignal"(blockPos0: $BlockPos$$Type): boolean
 "hasSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): boolean
 "holderLookup"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>): $HolderLookup<T>
@@ -2715,8 +2715,8 @@ export interface $LevelReader extends $BlockAndTintGetter, $CollisionGetter, $Si
 "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 "isOutsideBuildHeight"(int0: integer): boolean
 "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
-"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isUnobstructed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): boolean
+"isUnobstructed"(entity0: $Entity$$Type): boolean
 "isWaterAt"(blockPos0: $BlockPos$$Type): boolean
 "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 "noCollision"(aABB0: $AABB$$Type): boolean

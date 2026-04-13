@@ -99,11 +99,11 @@ public "canDrownInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "canEntityBeSeen"(entity: $LivingEntity$$Type): boolean
 public "canFluidExtinguish"(fluidType0: $FluidType$$Type): boolean
 public "canHydrateInFluidType"(fluidType0: $FluidType$$Type): boolean
-public "canReach"(vec30: $Vec3$$Type, double1: double): boolean
-public "canReach"(entity0: $Entity$$Type, double1: double): boolean
 public "canReach"(blockPos0: $BlockPos$$Type, double1: double): boolean
-public "canReachRaw"(entity0: $Entity$$Type, double1: double): boolean
+public "canReach"(entity0: $Entity$$Type, double1: double): boolean
+public "canReach"(vec30: $Vec3$$Type, double1: double): boolean
 public "canReachRaw"(blockPos0: $BlockPos$$Type, double1: double): boolean
+public "canReachRaw"(entity0: $Entity$$Type, double1: double): boolean
 public "canRiderInteract"(): boolean
 public "canStartSwimming"(): boolean
 public "canSwimInFluidType"(fluidType0: $FluidType$$Type): boolean
@@ -111,11 +111,11 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public static "clearNullReferences"(): void
 public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference<$Trackable>>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
-public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$canBeBright"(): boolean
 public "etf$distanceTo"(entity0: $Entity$$Type): float
@@ -145,8 +145,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -232,8 +232,8 @@ public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFake"(): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLeftHanded"(): boolean
 public "isLiving"(): boolean
@@ -251,8 +251,8 @@ public "isSkinLoaded"(): boolean
 public "isUndead"(): boolean
 public "isWaterCreature"(): boolean
 public "jumpInFluid"(fluidType0: $FluidType$$Type): void
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "modifyAttribute"(attribute: $Attribute$$Type, identifier: string, d: double, operation: $AttributeModifier$Operation$$Type): void
@@ -267,8 +267,8 @@ public "playRollAnimation"(animationName: string, direction: $Vec3$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public static "registerSkinTexture"(resourceLocation0: $ResourceLocation$$Type, string1: string): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -329,11 +329,11 @@ public "sinkInFluid"(fluidType0: $FluidType$$Type): void
 public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $LevelRenderer$$Type): void
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public "stopAttackAnimation"(length: float): void
-public "swing"(): void
 public "swing"(hand: $InteractionHand$$Type): void
+public "swing"(): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
@@ -469,6 +469,8 @@ constructor()
 
 public "add"(itemStack0: $ItemStack$$Type): boolean
 public "addAll"(collection0: $Collection$$Type<$ItemStack$$Type>): boolean
+public "addFirst"(itemStack0: $ItemStack$$Type): void
+public "addLast"(itemStack0: $ItemStack$$Type): void
 public "clear"(): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
@@ -476,23 +478,27 @@ public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "createTag"(): $ListTag
 public "forEach"(consumer0: $Consumer$$Type<$ItemStack$$Type>): void
 public "fromTag"(listTag0: $ListTag$$Type): void
+public "getFirst"(): $ItemStack
+public "getLast"(): $ItemStack
 public "iterator"(): $Iterator<$ItemStack>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$ItemStack>
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): $ItemStack
 public "removeIf"(predicate0: $Predicate$$Type<$ItemStack$$Type>): boolean
+public "removeLast"(): $ItemStack
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<$ItemStack$$Type>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "size"(): integer
@@ -502,6 +508,8 @@ public "stream"(): $Stream<$ItemStack>
 public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+get "first"(): $ItemStack
+get "last"(): $ItemStack
 }
 }
 
@@ -619,11 +627,11 @@ public "canDrownInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "canEntityBeSeen"(entity: $LivingEntity$$Type): boolean
 public "canFluidExtinguish"(fluidType0: $FluidType$$Type): boolean
 public "canHydrateInFluidType"(fluidType0: $FluidType$$Type): boolean
-public "canReach"(vec30: $Vec3$$Type, double1: double): boolean
-public "canReach"(entity0: $Entity$$Type, double1: double): boolean
 public "canReach"(blockPos0: $BlockPos$$Type, double1: double): boolean
-public "canReachRaw"(entity0: $Entity$$Type, double1: double): boolean
+public "canReach"(entity0: $Entity$$Type, double1: double): boolean
+public "canReach"(vec30: $Vec3$$Type, double1: double): boolean
 public "canReachRaw"(blockPos0: $BlockPos$$Type, double1: double): boolean
+public "canReachRaw"(entity0: $Entity$$Type, double1: double): boolean
 public "canRiderInteract"(): boolean
 public "canStartSwimming"(): boolean
 public "canSwimInFluidType"(fluidType0: $FluidType$$Type): boolean
@@ -632,11 +640,11 @@ public static "clearNullReferences"(): void
 public "clientSideCloseContainer"(): void
 public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference<$Trackable>>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
-public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageEquipment"(slot: $EquipmentSlot$$Type): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "drop"(boolean0: boolean): boolean
 public "etf$canBeBright"(): boolean
@@ -667,8 +675,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -743,15 +751,15 @@ public "getXp"(): integer
 public "getXpLevel"(): integer
 public "give"(item: $ItemStack$$Type): void
 public "giveInHand"(item: $ItemStack$$Type): void
-public "handler$ddp000$drop"(boolean0: boolean, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$efn000$caelus$checkFlight"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$emk000$shouldAutoJump_HEAD"(cir: $CallbackInfoReturnable$$Type): void
-public "handler$epp000$isControlledCamera"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$gol000$l2complements_handleEntityEvent_stableBody"(byte0: byte, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$gol000$l2complements_hurtTo_stableBody"(float0: float, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$ico000$onIsShiftKeyDown"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ico000$onMove"(moverType0: $MoverType$$Type, vec31: $Vec3$$Type, callbackInfo2: $CallbackInfo$$Type): void
-public "handler$ico001$onAiStep"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$dfb000$drop"(boolean0: boolean, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$egp000$caelus$checkFlight"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$eno000$shouldAutoJump_HEAD"(cir: $CallbackInfoReturnable$$Type): void
+public "handler$fbd000$isControlledCamera"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$gpp000$l2complements_handleEntityEvent_stableBody"(byte0: byte, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$gpp000$l2complements_hurtTo_stableBody"(float0: float, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$ifk000$onIsShiftKeyDown"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ifk000$onMove"(moverType0: $MoverType$$Type, vec31: $Vec3$$Type, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$ifk001$onAiStep"(callbackInfo0: $CallbackInfo$$Type): void
 public "hasCustomName"(): boolean
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hurtTo"(float0: float): void
@@ -764,8 +772,8 @@ public "isFake"(): boolean
 public "isFrame"(): boolean
 public "isHandsBusy"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInMovementPhase"(): boolean
 public "isLiving"(): boolean
@@ -784,9 +792,9 @@ public "isUndead"(): boolean
 public "isWaterCreature"(): boolean
 public "jumpInFluid"(fluidType0: $FluidType$$Type): void
 public "jumpableVehicle"(): $PlayerRideableJumping
-public "localvar$efn000$caelus$affixEmptyStack"(itemStack0: $ItemStack$$Type): $ItemStack
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
+public "localvar$egp000$caelus$affixEmptyStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "modifyAttribute"(attribute: $Attribute$$Type, identifier: string, d: double, operation: $AttributeModifier$Operation$$Type): void
@@ -800,8 +808,8 @@ public "paint"(tag: $CompoundTag$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 public "removeRecipeHighlight"(recipe0: $Recipe$$Type<any>): void
@@ -869,10 +877,10 @@ public "sinkInFluid"(fluidType0: $FluidType$$Type): void
 public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $LevelRenderer$$Type): void
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
-public "swing"(): void
+public static "startTracking"(object0: any): void
 public "swing"(hand: $InteractionHand$$Type): void
+public "swing"(): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void

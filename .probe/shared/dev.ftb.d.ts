@@ -275,8 +275,8 @@ public "getOpposite"(): $Tristate
 public "isDefault"(): boolean
 public "isFalse"(): boolean
 public "isTrue"(): boolean
-public static "read"(nbt: $CompoundTag$$Type, key: string): $Tristate
 public static "read"(buffer: $FriendlyByteBuf$$Type): $Tristate
+public static "read"(nbt: $CompoundTag$$Type, key: string): $Tristate
 public static "valueOf"(name: string): $Tristate
 public static "values"(): $Tristate[]
 public "write"(nbt: $CompoundTag$$Type, key: string): void
@@ -300,8 +300,8 @@ export class $Icon implements $Drawable {
 constructor()
 
 public "aspectRatio"(): double
-public "combineWith"(icon: $Icon$$Type): $Icon
 public "combineWith"(...icons: $Icon$$Type[]): $Icon
+public "combineWith"(icon: $Icon$$Type): $Icon
 public "copy"(): $Icon
 public "createPixelBuffer"(): $PixelBuffer
 /** Client only, do not use in server scripts */
@@ -311,9 +311,9 @@ public "draw3D"(graphics: $GuiGraphics$$Type): void
 /** Client only, do not use in server scripts */
 public "drawStatic"(graphics: $GuiGraphics$$Type, x: integer, y: integer, w: integer, h: integer): void
 public static "empty"(): $Color4I
+public static "getIcon"(id: string): $Icon
 public static "getIcon"(json: $JsonElement$$Type): $Icon
 public static "getIcon"(id: $ResourceLocation$$Type): $Icon
-public static "getIcon"(id: string): $Icon
 public "getIngredient"(): any
 public "getJson"(): $JsonElement
 public "getPixelBufferFrameCount"(): integer
@@ -323,8 +323,8 @@ public "withBorder"(color: $Color4I$$Type, roundEdges: boolean): $Icon
 public "withColor"(color: $Color4I$$Type): $Icon
 public "withPadding"(padding: integer): $Icon
 public "withTint"(color: $Color4I$$Type): $Icon
-public "withUV"(u0: float, v0: float, u1: float, v1: float): $Icon
 public "withUV"(x: float, y: float, w: float, h: float, tw: float, th: float): $Icon
+public "withUV"(u0: float, v0: float, u1: float, v1: float): $Icon
 get "ingredient"(): any
 get "json"(): $JsonElement
 get "pixelBufferFrameCount"(): integer
@@ -411,8 +411,8 @@ export class $SNBTCompoundTag extends $CompoundTag {
 constructor()
 
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
-public "comment"(key: string, comment: string): void
 public "comment"(key: string, ...comment: string[]): void
+public "comment"(key: string, comment: string): void
 public "getAsString"(): string
 public "getComment"(key: string): string
 public "getCompound"(string: string): $SNBTCompoundTag
@@ -784,16 +784,16 @@ public "add"<T, CV extends $ConfigValue<T>>(id: string, type: CV, value: T, sett
 public "addBool"(id: string, value: boolean, setter: $Consumer$$Type<boolean>, def: boolean): $BooleanConfig
 public "addColor"(id: string, value: $Color4I$$Type, setter: $Consumer$$Type<$Color4I$$Type>, def: $Color4I$$Type): $ColorConfig
 public "addDouble"(id: string, value: double, setter: $Consumer$$Type<double>, def: double, min: double, max: double): $DoubleConfig
-public "addEnum"<E>(id: string, value: E, setter: $Consumer$$Type<E>, nameMap: $NameMap$$Type<E>, def: E): $EnumConfig<E>
 public "addEnum"<E>(id: string, value: E, setter: $Consumer$$Type<E>, nameMap: $NameMap$$Type<E>): $EnumConfig<E>
+public "addEnum"<E>(id: string, value: E, setter: $Consumer$$Type<E>, nameMap: $NameMap$$Type<E>, def: E): $EnumConfig<E>
 public "addFluidStack"(id: string, value: $FluidStack$$Type, setter: $Consumer$$Type<$FluidStack$$Type>, def: $FluidStack$$Type, fixedSize: long): $FluidConfig
 public "addFluidStack"(id: string, value: $FluidStack$$Type, setter: $Consumer$$Type<$FluidStack$$Type>, def: $FluidStack$$Type, allowEmpty: boolean): $FluidConfig
 public "addImage"(id: string, value: $ResourceLocation$$Type, setter: $Consumer$$Type<$ResourceLocation$$Type>, def: $ResourceLocation$$Type): $ImageResourceConfig
 public "addInt"(id: string, value: integer, setter: $Consumer$$Type<integer>, def: integer, min: integer, max: integer): $IntConfig
 public "addItemStack"(id: string, value: $ItemStack$$Type, setter: $Consumer$$Type<$ItemStack$$Type>, def: $ItemStack$$Type, fixedSize: integer): $ItemStackConfig
 public "addItemStack"(id: string, value: $ItemStack$$Type, setter: $Consumer$$Type<$ItemStack$$Type>, def: $ItemStack$$Type, singleItem: boolean, allowEmpty: boolean): $ItemStackConfig
-public "addList"<E, CV extends $ConfigValue<E>>(id: string, c: $List$$Type<E>, type: CV, def: E): $ListConfig<E, CV>
 public "addList"<E, CV extends $ConfigValue<E>>(id: string, value: $List$$Type<E>, type: CV, setter: $Consumer$$Type<$List$$Type<E>>, def: E): $ListConfig<E, CV>
+public "addList"<E, CV extends $ConfigValue<E>>(id: string, c: $List$$Type<E>, type: CV, def: E): $ListConfig<E, CV>
 public "addLong"(id: string, value: long, setter: $Consumer$$Type<long>, def: long, min: long, max: long): $LongConfig
 public "addString"(id: string, value: string, setter: $Consumer$$Type<string>, def: string, pattern: $Pattern$$Type): $StringConfig
 public "addString"(id: string, value: string, setter: $Consumer$$Type<string>, def: string): $StringConfig
@@ -803,8 +803,8 @@ public "compareTo"(o: $ConfigGroup$$Type): integer
 public "getId"(): string
 public "getName"(): $Component
 public "getNameKey"(): string
-public "getOrCreateSubgroup"(id: string, displayOrder: integer): $ConfigGroup
 public "getOrCreateSubgroup"(id: string): $ConfigGroup
+public "getOrCreateSubgroup"(id: string, displayOrder: integer): $ConfigGroup
 public "getParent"(): $ConfigGroup
 public "getPath"(): string
 public "getSubgroups"(): $Collection<$ConfigGroup>
@@ -843,8 +843,8 @@ public "render"(graphics: $GuiGraphics$$Type, mouseX: integer, mouseY: integer, 
 public "reset"(): void
 public "shouldRender"(): boolean
 public "string"(text: string): void
-public "styledString"(text: string, style: $Style$$Type): void
 public "styledString"(text: string, color: $ChatFormatting$$Type): void
+public "styledString"(text: string, style: $Style$$Type): void
 public "styledTranslate"(key: string, style: $Style$$Type, ...objects: any[]): void
 public "translate"(key: string, ...objects: any[]): void
 get "backgroundColor"(): integer
@@ -910,8 +910,8 @@ public "hideProgressNumbers"(): boolean
 /** Client only, do not use in server scripts */
 public "onButtonClicked"(button: $Button$$Type, canClick: boolean): void
 public "submitItemsOnInventoryChange"(): boolean
-public "submitTask"(teamData: $TeamData$$Type, player: $ServerPlayer$$Type): void
 public "submitTask"(teamData: $TeamData$$Type, player: $ServerPlayer$$Type, craftedItem: $ItemStack$$Type): void
+public "submitTask"(teamData: $TeamData$$Type, player: $ServerPlayer$$Type): void
 get "buttonText"(): $MutableComponent
 get "maxProgress"(): long
 get "quest"(): $Quest
@@ -1148,7 +1148,6 @@ public "alphaf"(): float
 public "alphai"(): integer
 public "bluef"(): float
 public "bluei"(): integer
-public "copy"(): $Color4I
 /** Client only, do not use in server scripts */
 public "draw"(graphics: $GuiGraphics$$Type, x: integer, y: integer, w: integer, h: integer): void
 /** Client only, do not use in server scripts */
@@ -1158,8 +1157,8 @@ public "drawStatic"(graphics: $GuiGraphics$$Type, x: integer, y: integer, w: int
 public static "fromJson"(element: $JsonElement$$Type): $Color4I
 public static "fromString"(s: string): $Color4I
 public static "get256"(id: integer): $Color4I
-public static "getChatFormattingColor"(id: integer): $Color4I
 public static "getChatFormattingColor"(formatting: $ChatFormatting$$Type): $Color4I
+public static "getChatFormattingColor"(id: integer): $Color4I
 public "greenf"(): float
 public "greeni"(): integer
 public static "hsb"(h: float, s: float, b: float): $Color4I
@@ -1168,17 +1167,18 @@ public "lerp"(col: $Color4I$$Type, m: float): $Color4I
 public "mutable"(): $MutableColor4I
 public "redf"(): float
 public "redi"(): integer
-public static "rgb"(col: integer): $Color4I
-public static "rgb"(color: $Vec3$$Type): $Color4I
 public "rgb"(): integer
 public static "rgb"(r: integer, g: integer, b: integer): $Color4I
-public "rgba"(): integer
+public static "rgb"(color: $Vec3$$Type): $Color4I
+public static "rgb"(col: integer): $Color4I
 public static "rgba"(r: integer, g: integer, b: integer, a: integer): $Color4I
+public "rgba"(): integer
 public static "rgba"(col: integer): $Color4I
 public "toStyle"(): $Style
 public "whiteIfEmpty"(): $Color4I
 public "withAlpha"(a: integer): $Color4I
 public "withAlphaf"(alpha: float): $Color4I
+public "withTint"(col: $Color4I$$Type): $Color4I
 }
 }
 
@@ -1278,9 +1278,9 @@ public "getID"(obj: any): long
 public "getLootCrate"(id: string): $LootCrate
 public "getLootCrateNoDrop"(): $EntityWeight
 public "getNullableTeamData"(id: $UUID$$Type): $TeamData
-public "getOrCreateTeamData"(teamId: $UUID$$Type): $TeamData
-public "getOrCreateTeamData"(team: $Team$$Type): $TeamData
 public "getOrCreateTeamData"(player: $Entity$$Type): $TeamData
+public "getOrCreateTeamData"(team: $Team$$Type): $TeamData
+public "getOrCreateTeamData"(teamId: $UUID$$Type): $TeamData
 public "getProgressionMode"(): $ProgressionMode
 public "getQuest"(id: long): $Quest
 public "getReward"(id: long): $Reward
@@ -1307,8 +1307,8 @@ public "markDirty"(): void
 public "moveChapterGroup"(id: long, movingUp: boolean): boolean
 public "newID"(): long
 public "readDataFull"(folder: $Path$$Type): void
-public "readID"(tag: $Tag$$Type): long
 public "readID"(id: long): long
+public "readID"(tag: $Tag$$Type): long
 public "readNetDataFull"(buffer: $FriendlyByteBuf$$Type): void
 public "refreshGui"(): void
 public "refreshIDMap"(): void
@@ -1416,8 +1416,8 @@ public "getMilliSecondsUntilRepeatable"(quest: $Quest$$Type): long
 public "getName"(): string
 public "getOnlineMembers"(): $Collection<$ServerPlayer>
 public "getPinnedQuestIds"(player: $Player$$Type): $LongSet
-public "getProgress"(task: $Task$$Type): long
 public "getProgress"(taskId: long): long
+public "getProgress"(task: $Task$$Type): long
 public "getRelativeProgress"(object: $QuestObject$$Type): integer
 public "getRewardClaimTime"(player: $UUID$$Type, reward: $Reward$$Type): $Optional<$Date>
 public "getStartedTime"(questId: long): $Optional<$Date>
@@ -1689,8 +1689,8 @@ export interface $QuestFile {
 "getAllTeamData"(): $Collection<$TeamData>
 "getNullableTeamData"(uUID0: $UUID$$Type): $TeamData
 "getOrCreateTeamData"(entity0: $Entity$$Type): $TeamData
-"getOrCreateTeamData"(team0: $Team$$Type): $TeamData
 "getOrCreateTeamData"(uUID0: $UUID$$Type): $TeamData
+"getOrCreateTeamData"(team0: $Team$$Type): $TeamData
 "isServerSide"(): boolean
 get "allTeamData"(): $Collection<$TeamData>
 get "serverSide"(): boolean
@@ -1962,8 +1962,8 @@ constructor(w: integer, h: integer)
 public "copy"(): $PixelBuffer
 public "fill"(startX: integer, startY: integer, w: integer, h: integer, col: integer): void
 public "fill"(col: integer): void
-public static "from"(img: $BufferedImage$$Type): $PixelBuffer
 public static "from"(stream: $InputStream$$Type): $PixelBuffer
+public static "from"(img: $BufferedImage$$Type): $PixelBuffer
 public "getHeight"(): integer
 public "getPixels"(): integer[]
 public "getRGB"(startX: integer, startY: integer, w: integer, h: integer, p: integer[]): integer[]
@@ -1971,8 +1971,8 @@ public "getRGB"(x: integer, y: integer): integer
 public "getSubimage"(x: integer, y: integer, w: integer, h: integer): $PixelBuffer
 public "getWidth"(): integer
 public "setPixels"(p: integer[]): void
-public "setRGB"(startX: integer, startY: integer, w: integer, h: integer, rgbArray: integer[]): void
 public "setRGB"(startX: integer, startY: integer, buffer: $PixelBuffer$$Type): void
+public "setRGB"(startX: integer, startY: integer, w: integer, h: integer, rgbArray: integer[]): void
 public "setRGB"(x: integer, y: integer, col: integer): void
 public "toByteBuffer"(alpha: boolean): $ByteBuffer
 public "toImage"(type: integer): $BufferedImage
@@ -2009,11 +2009,11 @@ constructor(id: long)
 public "cacheProgress"(): boolean
 public "getChildren"(): $Collection<$QuestObject>
 /** Client only, do not use in server scripts */
-public "getProgressColor"(data: $TeamData$$Type, dim: boolean): $Color4I
-/** Client only, do not use in server scripts */
 public "getProgressColor"(data: $TeamData$$Type): $Color4I
-public "getRelativeProgressFromChildren"(teamData0: $TeamData$$Type): integer
+/** Client only, do not use in server scripts */
+public "getProgressColor"(data: $TeamData$$Type, dim: boolean): $Color4I
 public static "getRelativeProgressFromChildren"(progressSum: integer, count: integer): integer
+public "getRelativeProgressFromChildren"(teamData0: $TeamData$$Type): integer
 public "hasUnclaimedRewardsRaw"(teamData: $TeamData$$Type, player: $UUID$$Type): boolean
 public "isCompletedRaw"(data: $TeamData$$Type): boolean
 public "isOptionalForProgression"(teamData: $TeamData$$Type): boolean
@@ -2249,18 +2249,18 @@ public "drawPanelBackground"(graphics: $GuiGraphics$$Type, x: integer, y: intege
 public "drawScrollBar"(graphics: $GuiGraphics$$Type, x: integer, y: integer, w: integer, h: integer, type: $WidgetType$$Type, vertical: boolean): void
 public "drawScrollBarBackground"(graphics: $GuiGraphics$$Type, x: integer, y: integer, w: integer, h: integer, type: $WidgetType$$Type): void
 public "drawSlot"(graphics: $GuiGraphics$$Type, x: integer, y: integer, w: integer, h: integer, type: $WidgetType$$Type): void
-public "drawString"(graphics: $GuiGraphics$$Type, text: any, x: integer, y: integer, color: $Color4I$$Type, flags: integer): integer
-public "drawString"(graphics: $GuiGraphics$$Type, text: any, x: integer, y: integer): integer
 public "drawString"(graphics: $GuiGraphics$$Type, text: any, x: integer, y: integer, flags: integer): integer
+public "drawString"(graphics: $GuiGraphics$$Type, text: any, x: integer, y: integer): integer
+public "drawString"(graphics: $GuiGraphics$$Type, text: any, x: integer, y: integer, color: $Color4I$$Type, flags: integer): integer
 public "drawTextBox"(graphics: $GuiGraphics$$Type, x: integer, y: integer, w: integer, h: integer): void
 public "drawWidget"(graphics: $GuiGraphics$$Type, x: integer, y: integer, w: integer, h: integer, type: $WidgetType$$Type): void
 public "getContentColor"(type: $WidgetType$$Type): $Color4I
 public "getFont"(): $Font
 public "getFontHeight"(): integer
 public "getInvertedContentColor"(): $Color4I
-public "getStringWidth"(text: string): integer
 public "getStringWidth"(text: $FormattedText$$Type): integer
 public "getStringWidth"(text: $FormattedCharSequence$$Type): integer
+public "getStringWidth"(text: string): integer
 public "listFormattedStringToWidth"(text: $FormattedText$$Type, width: integer): $List<$FormattedText>
 public "trimStringToWidth"(text: string, width: integer): string
 public "trimStringToWidth"(text: $FormattedText$$Type, width: integer): $FormattedText
@@ -2408,7 +2408,7 @@ public "draw3D"(graphics: $GuiGraphics$$Type): void
 /** Client only, do not use in server scripts */
 public "drawStatic"(graphics: $GuiGraphics$$Type, x: integer, y: integer, w: integer, h: integer): void
 public "getResourceLocation"(): $ResourceLocation
-public "withColor"(color: $Color4I$$Type): $ImageIcon
+public "withUV"(u0: float, v0: float, u1: float, v1: float): $ImageIcon
 get "color"(): $Color4I
 set "color"(value: $Color4I$$Type)
 get "maxU"(): float
@@ -2702,7 +2702,6 @@ import { $BaseQuestFile, $BaseQuestFile$$Type } from "dev.ftb.mods.ftbquests.que
 import { $QuestLink, $QuestLink$$Type } from "dev.ftb.mods.ftbquests.quest.QuestLink"
 import { $Optional } from "java.util.Optional"
 import { $ProgressionMode } from "dev.ftb.mods.ftbquests.quest.ProgressionMode"
-import { $MutableComponent } from "net.minecraft.network.chat.MutableComponent"
 import { $Movable } from "dev.ftb.mods.ftbquests.quest.Movable"
 
 export class $Chapter extends $QuestObject {
@@ -2715,8 +2714,6 @@ public "addImage"(image: $ChapterImage$$Type): void
 public "addQuest"(quest: $Quest$$Type): void
 public "addQuestLink"(link: $QuestLink$$Type): void
 public "consumeItems"(): boolean
-/** Client only, do not use in server scripts */
-public "getAltTitle"(): $MutableComponent
 public "getAutofocus"(): $Optional<$Movable>
 public "getDefaultMinWidth"(): integer
 public "getDefaultQuestShape"(): string
@@ -2743,7 +2740,6 @@ public "removeQuest"(quest: $Quest$$Type): void
 public "removeQuestLink"(link: $QuestLink$$Type): void
 public "setAutofocus"(id: long): void
 public "setDefaultQuestShape"(defaultQuestShape: string): void
-get "altTitle"(): $MutableComponent
 get "autofocus"(): $Optional<$Movable>
 get "defaultMinWidth"(): integer
 get "defaultQuestShape"(): string
@@ -3138,15 +3134,15 @@ public "getContextMenu"(): $Optional<$ModalPanel>
 public "getPrevScreen"(): $Screen
 public "getTheme"(): $Theme
 public "initGui"(): void
-public "isMouseOver"(widget: $Widget$$Type): boolean
 public "isMouseOver"(x: integer, y: integer, w: integer, h: integer): boolean
+public "isMouseOver"(widget: $Widget$$Type): boolean
 public "onBack"(): void
 public "onClosedByKey"(key: $Key$$Type): boolean
 public "onInit"(): boolean
 public "onPostInit"(): void
 public "openAfter"(runnable: $Runnable$$Type): $Runnable
-public "openContextMenu"(menuItems: $List$$Type<$ContextMenuItem$$Type>): $ContextMenu
 public "openContextMenu"(newContextMenu: $ContextMenu$$Type): void
+public "openContextMenu"(menuItems: $List$$Type<$ContextMenuItem$$Type>): $ContextMenu
 public "openGui"(): void
 public "openGuiLater"(): void
 public "openYesNo"(title: $Component$$Type, desc: $Component$$Type, callback: $Runnable$$Type): void

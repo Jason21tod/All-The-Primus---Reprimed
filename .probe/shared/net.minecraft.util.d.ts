@@ -79,8 +79,8 @@ export class $StringRepresentable$EnumCodec<E extends ($Enum<E> & $StringReprese
 constructor(e0s: E[], function1: $Function$$Type<string, E>)
 
 public "boxed"(): $Decoder$Boxed<E>
-public "byName"(string0: string, e1: E): E
 public "byName"(string0: string): E
+public "byName"(string0: string, e1: E): E
 public static "checkRange"<N extends (number & $Comparable<N>)>(n0: N, n1: N): $Function<N, $DataResult<N>>
 public "comap"<B>(function0: $Function$$Type<B, E>): $Encoder<B>
 public "comapFlatMap"<S>(function0: $Function$$Type<E, $DataResult<S>>, function1: $Function$$Type<S, E>): $Codec<S>
@@ -90,8 +90,8 @@ public "decode"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Pair<E, T>>
 public "deprecated"(int0: integer): $Codec<E>
 public "dispatch"<E>(function0: $Function$$Type<E, E>, function1: $Function$$Type<E, $Codec<E>>): $Codec<E>
 public "dispatch"<E>(string0: string, function1: $Function$$Type<E, E>, function2: $Function$$Type<E, $Codec<E>>): $Codec<E>
-public "dispatchMap"<E>(function0: $Function$$Type<E, E>, function1: $Function$$Type<E, $Codec<E>>): $MapCodec<E>
 public "dispatchMap"<E>(string0: string, function1: $Function$$Type<E, E>, function2: $Function$$Type<E, $Codec<E>>): $MapCodec<E>
+public "dispatchMap"<E>(function0: $Function$$Type<E, E>, function1: $Function$$Type<E, $Codec<E>>): $MapCodec<E>
 public "dispatchStable"<E>(function0: $Function$$Type<E, E>, function1: $Function$$Type<E, $Codec<E>>): $Codec<E>
 public static "doubleRange"(double0: double, double1: double): $Codec<double>
 public static "either"<F, S>(codec0: $Codec$$Type<F>, codec1: $Codec$$Type<S>): $Codec<$Either<F, S>>
@@ -99,7 +99,6 @@ public static "empty"<A>(): $MapEncoder<A>
 public "encode"<T>(e0: E, dynamicOps1: $DynamicOps$$Type<T>, t2: T): $DataResult<T>
 public "encodeStart"<T>(dynamicOps0: $DynamicOps$$Type<T>, e1: E): $DataResult<T>
 public static "error"<A>(string0: string): $Encoder<A>
-public "fieldOf"(string0: string): $MapCodec<E>
 public "flatComap"<B>(function0: $Function$$Type<B, $DataResult<E>>): $Encoder<B>
 public "flatComapMap"<S>(function0: $Function$$Type<E, S>, function1: $Function$$Type<S, $DataResult<E>>): $Codec<S>
 public "flatMap"<B>(function0: $Function$$Type<E, $DataResult<B>>): $Decoder<B>
@@ -120,20 +119,21 @@ public static "ofBoxed"<A>(boxed0: $Decoder$Boxed$$Type<A>): $Decoder<A>
 public static "ofSimple"<A>(simple0: $Decoder$Simple$$Type<A>): $Decoder<A>
 public static "ofTerminal"<A>(terminal0: $Decoder$Terminal$$Type<A>): $Decoder<A>
 public static "optionalField"<F>(string0: string, codec1: $Codec$$Type<F>): $MapCodec<$Optional<F>>
-public "optionalFieldOf"(string0: string): $MapCodec<$Optional<E>>
+public "optionalFieldOf"(string0: string, e1: E): $MapCodec<E>
 public "optionalFieldOf"(string0: string, e1: E, lifecycle2: $Lifecycle$$Type): $MapCodec<E>
 public "optionalFieldOf"(string0: string, lifecycle1: $Lifecycle$$Type, e2: E, lifecycle3: $Lifecycle$$Type): $MapCodec<E>
-public "optionalFieldOf"(string0: string, e1: E): $MapCodec<E>
-public "orElse"(unaryOperator0: $UnaryOperator$$Type<string>, e1: E): $Codec<E>
-public "orElse"(consumer0: $Consumer$$Type<string>, e1: E): $Codec<E>
+public "optionalFieldOf"(string0: string): $MapCodec<$Optional<E>>
 public "orElse"(e0: E): $Codec<E>
-public "orElseGet"(supplier0: $Supplier$$Type<E>): $Codec<E>
+public "orElse"(consumer0: $Consumer$$Type<string>, e1: E): $Codec<E>
+public "orElse"(unaryOperator0: $UnaryOperator$$Type<string>, e1: E): $Codec<E>
 public "orElseGet"(unaryOperator0: $UnaryOperator$$Type<string>, supplier1: $Supplier$$Type<E>): $Codec<E>
+public "orElseGet"(supplier0: $Supplier$$Type<E>): $Codec<E>
 public "orElseGet"(consumer0: $Consumer$$Type<string>, supplier1: $Supplier$$Type<E>): $Codec<E>
 public static "pair"<F, S>(codec0: $Codec$$Type<F>, codec1: $Codec$$Type<S>): $Codec<$Pair<F, S>>
-public "parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<E>
 public "parse"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<E>
+public "parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<E>
 public "partialDispatch"<E>(string0: string, function1: $Function$$Type<E, $DataResult<E>>, function2: $Function$$Type<E, $DataResult<$Codec<E>>>): $Codec<E>
+public "promotePartial"(consumer0: $Consumer$$Type<string>): $Codec<E>
 public "simple"(): $Decoder$Simple<E>
 public static "simpleMap"<K, V>(codec0: $Codec$$Type<K>, codec1: $Codec$$Type<V>, keyable2: $Keyable$$Type): $SimpleMapCodec<K, V>
 public "stable"(): $Codec<E>
@@ -263,8 +263,8 @@ import { $MetricSampler$MetricSamplerBuilder } from "net.minecraft.util.profilin
 
 export class $MetricSampler {
 public static "builder"<T>(string0: string, metricCategory1: $MetricCategory$$Type, toDoubleFunction2: $ToDoubleFunction$$Type<T>, t3: T): $MetricSampler$MetricSamplerBuilder<T>
-public static "create"<T>(string0: string, metricCategory1: $MetricCategory$$Type, t2: T, toDoubleFunction3: $ToDoubleFunction$$Type<T>): $MetricSampler
 public static "create"(string0: string, metricCategory1: $MetricCategory$$Type, doubleSupplier2: $DoubleSupplier$$Type): $MetricSampler
+public static "create"<T>(string0: string, metricCategory1: $MetricCategory$$Type, t2: T, toDoubleFunction3: $ToDoubleFunction$$Type<T>): $MetricSampler
 public "getCategory"(): $MetricCategory
 public "getName"(): string
 public "onEndTick"(int0: integer): void
@@ -348,8 +348,8 @@ static readonly "INT": $Codec<$InclusiveRange<integer>>
 
 constructor(t0: T, t1: T)
 
-public static "codec"<T extends $Comparable<T>>(codec0: $Codec$$Type<T>, t1: T, t2: T): $Codec<$InclusiveRange<T>>
 public static "codec"<T extends $Comparable<T>>(codec0: $Codec$$Type<T>): $Codec<$InclusiveRange<T>>
+public static "codec"<T extends $Comparable<T>>(codec0: $Codec$$Type<T>, t1: T, t2: T): $Codec<$InclusiveRange<T>>
 public "contains"(inclusiveRange0: $InclusiveRange$$Type<T>): boolean
 public static "create"<T extends $Comparable<T>>(t0: T, t1: T): $DataResult<$InclusiveRange<T>>
 public "isValueInRange"(t0: T): boolean
@@ -443,14 +443,14 @@ const EMPTY: $FormattedCharSequence
 function backward(string0: string, style1: $Style$$Type): $FormattedCharSequence
 function backward(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 function codepoint(int0: integer, style1: $Style$$Type): $FormattedCharSequence
-function composite(formattedCharSequence0: $FormattedCharSequence$$Type): $FormattedCharSequence
+function composite(list0: $List$$Type<$FormattedCharSequence$$Type>): $FormattedCharSequence
 function composite(): $FormattedCharSequence
 function composite(formattedCharSequence0: $FormattedCharSequence$$Type, formattedCharSequence1: $FormattedCharSequence$$Type): $FormattedCharSequence
-function composite(list0: $List$$Type<$FormattedCharSequence$$Type>): $FormattedCharSequence
+function composite(formattedCharSequence0: $FormattedCharSequence$$Type): $FormattedCharSequence
 function composite(...formattedCharSequence0s: $FormattedCharSequence$$Type[]): $FormattedCharSequence
 function decorateOutput(formattedCharSink0: $FormattedCharSink$$Type, int2IntFunction1: $Int2IntFunction$$Type): $FormattedCharSink
-function forward(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 function forward(string0: string, style1: $Style$$Type): $FormattedCharSequence
+function forward(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 function fromList(list0: $List$$Type<$FormattedCharSequence$$Type>): $FormattedCharSequence
 function fromPair(formattedCharSequence0: $FormattedCharSequence$$Type, formattedCharSequence1: $FormattedCharSequence$$Type): $FormattedCharSequence
 }
@@ -460,14 +460,14 @@ static readonly "EMPTY": $FormattedCharSequence
 static "backward"(string0: string, style1: $Style$$Type): $FormattedCharSequence
 static "backward"(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 static "codepoint"(int0: integer, style1: $Style$$Type): $FormattedCharSequence
-static "composite"(formattedCharSequence0: $FormattedCharSequence$$Type): $FormattedCharSequence
+static "composite"(list0: $List$$Type<$FormattedCharSequence$$Type>): $FormattedCharSequence
 static "composite"(): $FormattedCharSequence
 static "composite"(formattedCharSequence0: $FormattedCharSequence$$Type, formattedCharSequence1: $FormattedCharSequence$$Type): $FormattedCharSequence
-static "composite"(list0: $List$$Type<$FormattedCharSequence$$Type>): $FormattedCharSequence
+static "composite"(formattedCharSequence0: $FormattedCharSequence$$Type): $FormattedCharSequence
 static "composite"(...formattedCharSequence0s: $FormattedCharSequence$$Type[]): $FormattedCharSequence
 static "decorateOutput"(formattedCharSink0: $FormattedCharSink$$Type, int2IntFunction1: $Int2IntFunction$$Type): $FormattedCharSink
-static "forward"(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 static "forward"(string0: string, style1: $Style$$Type): $FormattedCharSequence
+static "forward"(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 static "fromList"(list0: $List$$Type<$FormattedCharSequence$$Type>): $FormattedCharSequence
 static "fromPair"(formattedCharSequence0: $FormattedCharSequence$$Type, formattedCharSequence1: $FormattedCharSequence$$Type): $FormattedCharSequence
 }
@@ -505,9 +505,9 @@ import { $WeightedEntry, $WeightedEntry$$Type } from "net.minecraft.util.random.
 
 export class $WeightedRandomList<E extends $WeightedEntry = $WeightedEntry> implements $AccessorWeightedRandomList {
 public static "codec"<E extends $WeightedEntry>(codec0: $Codec$$Type<E>): $Codec<$WeightedRandomList<E>>
-public static "create"<E extends $WeightedEntry>(list0: $List$$Type<E>): $WeightedRandomList<E>
 public static "create"<E extends $WeightedEntry>(...e0s: E[]): $WeightedRandomList<E>
 public static "create"<E extends $WeightedEntry>(): $WeightedRandomList<E>
+public static "create"<E extends $WeightedEntry>(list0: $List$$Type<E>): $WeightedRandomList<E>
 public "getRandom"(randomSource0: $RandomSource$$Type): $Optional<E>
 public "isEmpty"(): boolean
 public "unwrap"(): $List<E>
@@ -631,9 +631,9 @@ import { $Supplier$$Type } from "java.util.function.Supplier"
 export interface $ProfilerFiller {
 "endTick"(): void
 "incrementCounter"(string0: string): void
+"incrementCounter"(string0: string, int1: integer): void
 "incrementCounter"(supplier0: $Supplier$$Type<string>, int1: integer): void
 "incrementCounter"(supplier0: $Supplier$$Type<string>): void
-"incrementCounter"(string0: string, int1: integer): void
 "markForCharting"(metricCategory0: $MetricCategory$$Type): void
 "pop"(): void
 "popPush"(string0: string): void
@@ -1056,8 +1056,8 @@ import { $ServicesKeyType$$Type } from "com.mojang.authlib.yggdrasil.ServicesKey
 import { $SignatureUpdater$$Type } from "net.minecraft.util.SignatureUpdater"
 
 export interface $SignatureValidator {
-"validate"(byte0s: byte[], byte1s: byte[]): boolean
 "validate"(signatureUpdater0: $SignatureUpdater$$Type, byte1s: byte[]): boolean
+"validate"(byte0s: byte[], byte1s: byte[]): boolean
 }
 
 export namespace $SignatureValidator {

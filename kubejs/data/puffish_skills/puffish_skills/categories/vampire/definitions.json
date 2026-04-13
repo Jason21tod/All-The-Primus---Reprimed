@@ -1,59 +1,22 @@
 {
-	"health+2": {
-		"title": "+1 Heart",
+	"hunter_skill_root": {
+		"title": "O caçador",
 		"icon": {
-			"type": "effect",
+			"type": "texture",
 			"data": {
-				"effect": "health_boost"
+				"texture": "kubejs:textures/icons/example.png"
 			}
 		},
+		"size": 3,
+		"cost": 1,
+		"description": "Você torna-se uma rápida criatura que fareja o sangue derramado e destrói os fracos antes que percebam.",
+		"extra_description": "Ao atacar uma criatura, tem uma chance de 20% de aplicar sangramento. Ao ver uma criatura sangrando, ganha um aumento de velocidade de movimento e de ataque que decai ao longo de 5s.",
 		"rewards": [
 			{
-				"type": "puffish_skills:attribute",
+				"type": "puffish_skills_origins:power",
 				"data": {
-					"attribute": "generic.max_health",
-					"value": 2,
-					"operation": "addition"
-				}
+					"power": "origins:vampire_hunter_main"
 			}
-		]
-	},
-	"attack_speed+5%": {
-		"title": "+5% Attack Speed",
-		"icon": {
-			"type": "item",
-			"data": {
-				"item": "golden_sword"
-			}
-		},
-		"rewards": [
-			{
-				"type": "puffish_skills:attribute",
-				"data": {
-					"attribute": "generic.attack_speed",
-					"value": 0.05,
-					"operation": "multiply_total"
-				}
-			}
-		]
-	},
-	"movement_speed+5%": {
-		"title": "+5% Movement Speed",
-		"icon": {
-			"type": "effect",
-			"data": {
-				"effect": "speed"
-			}
-		},
-		"rewards": [
-			{
-				"type": "puffish_skills:attribute",
-				"data": {
-					"attribute": "generic.movement_speed",
-					"value": 0.05,
-					"operation": "multiply_total"
-				}
-			}
-		]
+		}]
 	}
 }

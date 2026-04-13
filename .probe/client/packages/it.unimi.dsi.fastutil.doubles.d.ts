@@ -4,6 +4,12 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $Double2ReferenceFunction$$Type<V = any> = ($Double2ReferenceFunction<V> | ((arg0: double) => V));
 }
 
+declare module "it.unimi.dsi.fastutil.doubles.DoubleBidirectionalIterator" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $DoubleBidirectionalIterator$$Type = ($DoubleBidirectionalIterator);
+}
+
 declare module "it.unimi.dsi.fastutil.doubles.DoubleIterable" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -92,6 +98,12 @@ declare module "it.unimi.dsi.fastutil.doubles.DoubleCollection" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $DoubleCollection$$Type = ($DoubleCollection);
+}
+
+declare module "it.unimi.dsi.fastutil.doubles.DoubleListIterator" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $DoubleListIterator$$Type = ($DoubleListIterator);
 }
 
 declare module "it.unimi.dsi.fastutil.doubles.DoubleComparator" {

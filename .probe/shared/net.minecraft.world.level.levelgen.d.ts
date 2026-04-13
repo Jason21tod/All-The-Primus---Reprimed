@@ -255,10 +255,10 @@ import { $RandomSource } from "net.minecraft.util.RandomSource"
 import { $StringBuilder$$Type } from "java.lang.StringBuilder"
 
 export interface $PositionalRandomFactory {
-"at"(blockPos0: $BlockPos$$Type): $RandomSource
 "at"(int0: integer, int1: integer, int2: integer): $RandomSource
-"fromHashOf"(resourceLocation0: $ResourceLocation$$Type): $RandomSource
+"at"(blockPos0: $BlockPos$$Type): $RandomSource
 "fromHashOf"(string0: string): $RandomSource
+"fromHashOf"(resourceLocation0: $ResourceLocation$$Type): $RandomSource
 "parityConfigString"(stringBuilder0: $StringBuilder$$Type): void
 }
 
@@ -311,8 +311,8 @@ static readonly "CODEC": $Codec<$WorldGenSettings>
 constructor(worldOptions0: $WorldOptions$$Type, worldDimensions1: $WorldDimensions$$Type)
 
 public "dimensions"(): $WorldDimensions
-public static "encode"<T>(dynamicOps0: $DynamicOps$$Type<T>, worldOptions1: $WorldOptions$$Type, registryAccess2: $RegistryAccess$$Type): $DataResult<T>
 public static "encode"<T>(dynamicOps0: $DynamicOps$$Type<T>, worldOptions1: $WorldOptions$$Type, worldDimensions2: $WorldDimensions$$Type): $DataResult<T>
+public static "encode"<T>(dynamicOps0: $DynamicOps$$Type<T>, worldOptions1: $WorldOptions$$Type, registryAccess2: $RegistryAccess$$Type): $DataResult<T>
 public "options"(): $WorldOptions
 }
 }

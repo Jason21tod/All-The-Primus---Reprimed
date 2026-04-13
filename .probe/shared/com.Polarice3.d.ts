@@ -53,8 +53,8 @@ import { $Level$$Type } from "net.minecraft.world.level.Level"
 
 export interface $ISpell {
 "AbyssSoulDiscount"(livingEntity0: $LivingEntity$$Type): boolean
-"CastingSound"(): $SoundEvent
 "CastingSound"(livingEntity0: $LivingEntity$$Type): $SoundEvent
+"CastingSound"(): $SoundEvent
 "FrostSoulDiscount"(livingEntity0: $LivingEntity$$Type): boolean
 "GeoSoulDiscount"(livingEntity0: $LivingEntity$$Type): boolean
 "NecroSoulDiscount"(livingEntity0: $LivingEntity$$Type): boolean
@@ -90,9 +90,9 @@ export interface $ISpell {
 "particleColors"(livingEntity0: $LivingEntity$$Type): $ColorUtil
 "rayTrace"(level0: $Level$$Type, livingEntity1: $LivingEntity$$Type, int2: integer, double3: double): $HitResult
 "soulCost"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type): integer
+"spellCooldown"(livingEntity0: $LivingEntity$$Type): integer
 /** @deprecated */
 "spellCooldown"(): integer
-"spellCooldown"(livingEntity0: $LivingEntity$$Type): integer
 "startSpell"(serverLevel0: $ServerLevel$$Type, livingEntity1: $LivingEntity$$Type, itemStack2: $ItemStack$$Type, spellStat3: $SpellStat$$Type): void
 "stopSpell"(serverLevel0: $ServerLevel$$Type, livingEntity1: $LivingEntity$$Type, itemStack2: $ItemStack$$Type, itemStack3: $ItemStack$$Type, int4: integer, spellStat5: $SpellStat$$Type): void
 "summonDownEffect"(livingEntity0: $LivingEntity$$Type): $MobEffectInstance

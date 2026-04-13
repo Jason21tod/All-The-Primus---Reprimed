@@ -15,23 +15,25 @@ public static "values"(): $ReflectionAccessFilter$FilterResult[]
 declare module "com.google.common.collect.ImmutableSetMultimap$Builder" {
 import { $ImmutableMultimap$Builder } from "com.google.common.collect.ImmutableMultimap$Builder"
 import { $Map$Entry$$Type } from "java.util.Map$Entry"
+import { $Comparator$$Type } from "java.util.Comparator"
+import { $ImmutableSetMultimap } from "com.google.common.collect.ImmutableSetMultimap"
 
 export class $ImmutableSetMultimap$Builder<K = any, V = any> extends $ImmutableMultimap$Builder<K, V> {
 constructor()
 
+public "build"(): $ImmutableSetMultimap<K, V>
+public "orderKeysBy"(comparator0: $Comparator$$Type<K>): $ImmutableSetMultimap$Builder<K, V>
 public "put"(entry0: $Map$Entry$$Type<K, V>): $ImmutableSetMultimap$Builder<K, V>
 }
 }
 
 declare module "com.google.common.collect.ImmutableMultiset" {
-import { $ImmutableSet } from "com.google.common.collect.ImmutableSet"
 import { $Iterator$$Type } from "java.util.Iterator"
 import { $Predicate$$Type } from "java.util.function.Predicate"
 import { $Multiset } from "com.google.common.collect.Multiset"
 import { $Collection$$Type } from "java.util.Collection"
 import { $ToIntFunction$$Type } from "java.util.function.ToIntFunction"
 import { $ObjIntConsumer$$Type } from "java.util.function.ObjIntConsumer"
-import { $Multiset$Entry } from "com.google.common.collect.Multiset$Entry"
 import { $Function$$Type } from "java.util.function.Function"
 import { $Iterable$$Type } from "java.lang.Iterable"
 import { $Consumer$$Type } from "java.util.function.Consumer"
@@ -52,22 +54,20 @@ public "asList"(): $ImmutableList<E>
 public static "builder"<E>(): $ImmutableMultiset$Builder<E>
 public "clear"(): void
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
-public static "copyOf"<E>(e0s: E[]): $ImmutableMultiset<E>
-public static "copyOf"<E>(iterable0: $Iterable$$Type<E>): $ImmutableMultiset<E>
 public static "copyOf"<E>(iterator0: $Iterator$$Type<E>): $ImmutableMultiset<E>
+public static "copyOf"<E>(iterable0: $Iterable$$Type<E>): $ImmutableMultiset<E>
+public static "copyOf"<E>(e0s: E[]): $ImmutableMultiset<E>
 public "count"(object0: any): integer
-public "elementSet"(): $ImmutableSet<E>
-public "entrySet"(): $ImmutableSet<$Multiset$Entry<E>>
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "forEachEntry"(objIntConsumer0: $ObjIntConsumer$$Type<E>): void
 public "isEmpty"(): boolean
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $ImmutableMultiset<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $ImmutableMultiset<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $ImmutableMultiset<E>
+public static "of"<E>(e0: E, e1: E): $ImmutableMultiset<E>
 public static "of"<E>(e0: E): $ImmutableMultiset<E>
 public static "of"<E>(): $ImmutableMultiset<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, ...e6s: E[]): $ImmutableMultiset<E>
-public static "of"<E>(e0: E, e1: E): $ImmutableMultiset<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $ImmutableMultiset<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $ImmutableMultiset<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $ImmutableMultiset<E>
 public "parallelStream"(): $Stream<E>
 /** @deprecated */
 public "remove"(object0: any, int1: integer): integer
@@ -76,17 +76,17 @@ public "removeAll"(collection0: $Collection$$Type<any>): boolean
 public "removeIf"(predicate0: $Predicate$$Type<E>): boolean
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 /** @deprecated */
-public "setCount"(e0: E, int1: integer): integer
-/** @deprecated */
 public "setCount"(e0: E, int1: integer, int2: integer): boolean
+/** @deprecated */
+public "setCount"(e0: E, int1: integer): integer
 public "size"(): integer
 public "spliterator"(): $Spliterator<E>
 public "stream"(): $Stream<E>
 public "toArray"<T>(t0s: T[]): T[]
-public "toArray"(): any[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-public static "toImmutableMultiset"<E>(): $Collector<E, any, $ImmutableMultiset<E>>
+public "toArray"(): any[]
 public static "toImmutableMultiset"<T, E>(function0: $Function$$Type<T, E>, toIntFunction1: $ToIntFunction$$Type<T>): $Collector<T, any, $ImmutableMultiset<E>>
+public static "toImmutableMultiset"<E>(): $Collector<E, any, $ImmutableMultiset<E>>
 get "empty"(): boolean
 }
 }
@@ -121,8 +121,8 @@ public static "of"<T>(class0: $Class$$Type<T>): $TypeToken<T>
 public static "of"(type0: $Type$$Type): $TypeToken<any>
 public "resolveType"(type0: $Type$$Type): $TypeToken<any>
 public "unwrap"(): $TypeToken<T>
-public "where"<X>(typeParameter0: $TypeParameter$$Type<X>, class1: $Class$$Type<X>): $TypeToken<T>
 public "where"<X>(typeParameter0: $TypeParameter$$Type<X>, typeToken1: $TypeToken$$Type<X>): $TypeToken<T>
+public "where"<X>(typeParameter0: $TypeParameter$$Type<X>, class1: $Class$$Type<X>): $TypeToken<T>
 public "wrap"(): $TypeToken<T>
 get "componentType"(): $TypeToken<any>
 get "rawType"(): $Class<T>
@@ -143,8 +143,8 @@ import { $JsonReader$$Type } from "com.google.gson.stream.JsonReader"
 export class $TypeAdapter<T = any> {
 constructor()
 
-public "fromJson"(string0: string): T
 public "fromJson"(reader0: $Reader$$Type): T
+public "fromJson"(string0: string): T
 public "fromJsonTree"(jsonElement0: $JsonElement$$Type): T
 public "nullSafe"(): $TypeAdapter<T>
 public "read"(jsonReader0: $JsonReader$$Type): T
@@ -189,18 +189,18 @@ public static "copyOf"<E>(collection0: $Collection$$Type<E>): $Set<E>
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "isEmpty"(): boolean
 public "iterator"(): $Iterator<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E): $Set<E>
+public static "of"<E>(e0: E): $Set<E>
 public static "of"<E>(...e0s: E[]): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 public static "of"<E>(): $Set<E>
-public static "of"<E>(e0: E, e1: E): $Set<E>
-public static "of"<E>(e0: E): $Set<E>
 public "parallelStream"(): $Stream<E>
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
@@ -257,7 +257,9 @@ import { $Parameter } from "com.google.common.reflect.Parameter"
 import { $TypeVariable } from "java.lang.reflect.TypeVariable"
 import { $Member } from "java.lang.reflect.Member"
 import { $AnnotatedType } from "java.lang.reflect.AnnotatedType"
+import { $Set } from "java.util.Set"
 import { $TypeToken, $TypeToken$$Type } from "com.google.common.reflect.TypeToken"
+import { $AccessFlag } from "java.lang.reflect.AccessFlag"
 import { $Constructor$$Type } from "java.lang.reflect.Constructor"
 import { $ImmutableList } from "com.google.common.collect.ImmutableList"
 import { $Annotation, $Annotation$$Type } from "java.lang.annotation.Annotation"
@@ -266,8 +268,9 @@ import { $Method$$Type } from "java.lang.reflect.Method"
 import { $AnnotatedElement } from "java.lang.reflect.AnnotatedElement"
 
 export class $Invokable<T = any, R = any> implements $AnnotatedElement, $Member {
-public static "from"(method0: $Method$$Type): $Invokable<any, any>
+public "accessFlags"(): $Set<$AccessFlag>
 public static "from"<T>(constructor0: $Constructor$$Type<T>): $Invokable<T, T>
+public static "from"(method0: $Method$$Type): $Invokable<any, any>
 public "getAnnotatedReturnType"(): $AnnotatedType
 public "getAnnotation"<A extends $Annotation>(class0: $Class$$Type<A>): A
 public "getAnnotations"(): $Annotation[]
@@ -344,8 +347,8 @@ public "hashCode"(): integer
 public "isEmpty"(): boolean
 public "keySet"(): $Set<K>
 public "keys"(): $Multiset<K>
-public "putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 public "putAll"(k0: K, iterable1: $Iterable$$Type<V>): boolean
+public "putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 public "remove"(object0: any, object1: any): boolean
 get "empty"(): boolean
 }
@@ -375,8 +378,8 @@ export interface $Multimap<K = any, V = any> {
 "keySet"(): $Set<K>
 "keys"(): $Multiset<K>
 "put"(k0: K, v1: V): boolean
-"putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 "putAll"(k0: K, iterable1: $Iterable$$Type<V>): boolean
+"putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 "remove"(object0: any, object1: any): boolean
 "removeAll"(object0: any): $Collection<V>
 "replaceValues"(k0: K, iterable1: $Iterable$$Type<V>): $Collection<V>
@@ -445,20 +448,21 @@ export class $JsonArray extends $JsonElement implements $Iterable<$JsonElement> 
 constructor()
 constructor(int0: integer)
 
-public "add"(number0: number): void
-public "add"(string0: string): void
-public "add"(jsonElement0: $JsonElement$$Type): void
 public "add"(character0: character): void
 public "add"(boolean0: boolean): void
+public "add"(jsonElement0: $JsonElement$$Type): void
+public "add"(number0: number): void
+public "add"(string0: string): void
 public "addAll"(jsonArray0: $JsonArray$$Type): void
 public "asList"(): $List<$JsonElement>
 public "contains"(jsonElement0: $JsonElement$$Type): boolean
+public "deepCopy"(): $JsonArray
 public "forEach"(consumer0: $Consumer$$Type<$JsonElement$$Type>): void
 public "get"(int0: integer): $JsonElement
 public "isEmpty"(): boolean
 public "iterator"(): $Iterator<$JsonElement>
-public "remove"(jsonElement0: $JsonElement$$Type): boolean
 public "remove"(int0: integer): $JsonElement
+public "remove"(jsonElement0: $JsonElement$$Type): boolean
 public "set"(int0: integer, jsonElement1: $JsonElement$$Type): $JsonElement
 public "size"(): integer
 public "spliterator"(): $Spliterator<$JsonElement>
@@ -486,35 +490,41 @@ public "add"(int0: integer, e1: E): void
 public "add"(e0: E): boolean
 public "addAll"(int0: integer, collection1: $Collection$$Type<E>): boolean
 public "addAll"(collection0: $Collection$$Type<E>): boolean
+public "addFirst"(e0: E): void
+public "addLast"(e0: E): void
 public "clear"(): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "get"(int0: integer): E
+public "getFirst"(): E
+public "getLast"(): E
 public "indexOf"(object0: any): integer
 public "isEmpty"(): boolean
 public "iterator"(): $Iterator<E>
 public "lastIndexOf"(object0: any): integer
 public "listIterator"(int0: integer): $ListIterator<E>
 public "listIterator"(): $ListIterator<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<E>
 public "remove"(int0: integer): E
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): E
 public "removeIf"(predicate0: $Predicate$$Type<E>): boolean
+public "removeLast"(): E
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<E>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, e1: E): E
@@ -527,6 +537,8 @@ public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 [index: number]: E
+get "first"(): E
+get "last"(): E
 get "empty"(): boolean
 }
 }
@@ -547,23 +559,24 @@ import { $HashMultimapGwtSerializationDependencies } from "com.google.common.col
 import { $Multimap$$Type } from "com.google.common.collect.Multimap"
 
 export class $HashMultimap<K = any, V = any> extends $HashMultimapGwtSerializationDependencies<K, V> {
-public static "create"<K, V>(multimap0: $Multimap$$Type<K, V>): $HashMultimap<K, V>
 public static "create"<K, V>(): $HashMultimap<K, V>
 public static "create"<K, V>(int0: integer, int1: integer): $HashMultimap<K, V>
+public static "create"<K, V>(multimap0: $Multimap$$Type<K, V>): $HashMultimap<K, V>
 }
 }
 
 declare module "com.google.common.collect.ImmutableSet" {
-import { $Consumer$$Type } from "java.util.function.Consumer"
-import { $Stream } from "java.util.stream.Stream"
 import { $Iterator$$Type } from "java.util.Iterator"
 import { $Collection$$Type } from "java.util.Collection"
 import { $ImmutableSet$Builder } from "com.google.common.collect.ImmutableSet$Builder"
 import { $Set } from "java.util.Set"
 import { $ImmutableCollection } from "com.google.common.collect.ImmutableCollection"
+import { $Iterable$$Type } from "java.lang.Iterable"
+import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $Stream } from "java.util.stream.Stream"
+import { $UnmodifiableIterator } from "com.google.common.collect.UnmodifiableIterator"
 import { $Collector } from "java.util.stream.Collector"
 import { $Spliterator } from "java.util.Spliterator"
-import { $Iterable$$Type } from "java.lang.Iterable"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export class $ImmutableSet<E = any> extends $ImmutableCollection<E> implements $Set<E> {
@@ -574,25 +587,26 @@ public static "builderWithExpectedSize"<E>(int0: integer): $ImmutableSet$Builder
 public "clear"(): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
-public static "copyOf"<E>(iterable0: $Iterable$$Type<E>): $ImmutableSet<E>
-public static "copyOf"<E>(collection0: $Collection$$Type<E>): $ImmutableSet<E>
 public static "copyOf"<E>(iterator0: $Iterator$$Type<E>): $ImmutableSet<E>
+public static "copyOf"<E>(collection0: $Collection$$Type<E>): $ImmutableSet<E>
+public static "copyOf"<E>(iterable0: $Iterable$$Type<E>): $ImmutableSet<E>
 public static "copyOf"<E>(e0s: E[]): $ImmutableSet<E>
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "isEmpty"(): boolean
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $ImmutableSet<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $ImmutableSet<E>
+public "iterator"(): $UnmodifiableIterator<E>
+public static "of"<E>(e0: E, e1: E): $ImmutableSet<E>
 public static "of"<E>(e0: E): $ImmutableSet<E>
 public static "of"<E>(): $ImmutableSet<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, ...e6s: E[]): $ImmutableSet<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $ImmutableSet<E>
-public static "of"<E>(e0: E, e1: E): $ImmutableSet<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $ImmutableSet<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $ImmutableSet<E>
 public static "of"<E>(...e0s: E[]): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 public "parallelStream"(): $Stream<E>
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
@@ -621,8 +635,8 @@ import { $Spliterator } from "java.util.Spliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 
 export interface $Multiset<E = any> extends $Collection<E> {
-"add"(e0: E, int1: integer): integer
 "add"(e0: E): boolean
+"add"(e0: E, int1: integer): integer
 "addAll"(collection0: $Collection$$Type<E>): boolean
 "clear"(): void
 "contains"(object0: any): boolean
@@ -642,14 +656,14 @@ export interface $Multiset<E = any> extends $Collection<E> {
 "removeAll"(collection0: $Collection$$Type<any>): boolean
 "removeIf"(predicate0: $Predicate$$Type<E>): boolean
 "retainAll"(collection0: $Collection$$Type<any>): boolean
-"setCount"(e0: E, int1: integer, int2: integer): boolean
 "setCount"(e0: E, int1: integer): integer
+"setCount"(e0: E, int1: integer, int2: integer): boolean
 "size"(): integer
 "spliterator"(): $Spliterator<E>
 "stream"(): $Stream<E>
 "toArray"<T>(t0s: T[]): T[]
-"toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toArray"(): any[]
 "toString"(): string
 [Symbol.iterator](): IterableIterator<E>;
 get "empty"(): boolean
@@ -748,10 +762,10 @@ export interface $BiMap<K = any, V = any> extends $Map<K, V> {
 "put"(k0: K, v1: V): V
 "putAll"(map0: $Map$$Type<K, V>): void
 "putIfAbsent"(k0: K, v1: V): V
-"remove"(object0: any): V
 "remove"(object0: any, object1: any): boolean
-"replace"(k0: K, v1: V): V
+"remove"(object0: any): V
 "replace"(k0: K, v1: V, v2: V): boolean
+"replace"(k0: K, v1: V): V
 "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 "size"(): integer
 [index: string | number]: V
@@ -761,33 +775,33 @@ get "empty"(): boolean
 export namespace $BiMap {
 function copyOf<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 function entry<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+function of<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 function ofEntries<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 export abstract class $BiMap$$Static<K = any, V = any> implements $BiMap<K, V> {
 static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
 static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -874,33 +888,31 @@ set "lenient"(value: boolean)
 }
 
 declare module "com.google.common.collect.ImmutableSetMultimap" {
-import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
-import { $ImmutableSet } from "com.google.common.collect.ImmutableSet"
+import { $Map$Entry$$Type } from "java.util.Map$Entry"
+import { $Stream } from "java.util.stream.Stream"
+import { $Map } from "java.util.Map"
 import { $Collection } from "java.util.Collection"
+import { $Collector } from "java.util.stream.Collector"
 import { $Multimap$$Type } from "com.google.common.collect.Multimap"
+import { $ImmutableMultimap } from "com.google.common.collect.ImmutableMultimap"
 import { $Function$$Type } from "java.util.function.Function"
 import { $ImmutableSetMultimap$Builder } from "com.google.common.collect.ImmutableSetMultimap$Builder"
 import { $Iterable$$Type } from "java.lang.Iterable"
 import { $SetMultimap } from "com.google.common.collect.SetMultimap"
-import { $Stream } from "java.util.stream.Stream"
-import { $Map } from "java.util.Map"
-import { $Collector } from "java.util.stream.Collector"
-import { $ImmutableMultimap } from "com.google.common.collect.ImmutableMultimap"
 
 export class $ImmutableSetMultimap<K = any, V = any> extends $ImmutableMultimap<K, V> implements $SetMultimap<K, V> {
 public "asMap"(): $Map<K, $Collection<V>>
 public static "builder"<K, V>(): $ImmutableSetMultimap$Builder<K, V>
 public static "copyOf"<K, V>(multimap0: $Multimap$$Type<K, V>): $ImmutableSetMultimap<K, V>
 public static "copyOf"<K, V>(iterable0: $Iterable$$Type<$Map$Entry$$Type<K, V>>): $ImmutableSetMultimap<K, V>
-public "entries"(): $ImmutableSet<$Map$Entry<K, V>>
 public "equals"(object0: any): boolean
 public static "flatteningToImmutableSetMultimap"<T, K, V>(function0: $Function$$Type<T, K>, function1: $Function$$Type<T, $Stream<V>>): $Collector<T, any, $ImmutableSetMultimap<K, V>>
-public static "of"<K, V>(): $ImmutableSetMultimap<K, V>
 public static "of"<K, V>(k0: K, v1: V): $ImmutableSetMultimap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $ImmutableSetMultimap<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $ImmutableSetMultimap<K, V>
+public static "of"<K, V>(): $ImmutableSetMultimap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $ImmutableSetMultimap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $ImmutableSetMultimap<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $ImmutableSetMultimap<K, V>
 public static "toImmutableSetMultimap"<T, K, V>(function0: $Function$$Type<T, K>, function1: $Function$$Type<T, V>): $Collector<T, any, $ImmutableSetMultimap<K, V>>
 }
 }
@@ -1017,8 +1029,8 @@ public "registerTypeAdapterFactory"(typeAdapterFactory0: $TypeAdapterFactory$$Ty
 public "registerTypeHierarchyAdapter"(class0: $Class$$Type<any>, object1: any): $GsonBuilder
 public "serializeNulls"(): $GsonBuilder
 public "serializeSpecialFloatingPointValues"(): $GsonBuilder
-public "setDateFormat"(int0: integer, int1: integer): $GsonBuilder
 public "setDateFormat"(int0: integer): $GsonBuilder
+public "setDateFormat"(int0: integer, int1: integer): $GsonBuilder
 public "setDateFormat"(string0: string): $GsonBuilder
 public "setExclusionStrategies"(...exclusionStrategy0s: $ExclusionStrategy$$Type[]): $GsonBuilder
 public "setFieldNamingPolicy"(fieldNamingPolicy0: $FieldNamingPolicy$$Type): $GsonBuilder
@@ -1092,15 +1104,18 @@ declare module "com.google.common.collect.ImmutableMultimap" {
 import { $ImmutableMultimap$Builder } from "com.google.common.collect.ImmutableMultimap$Builder"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
 import { $ImmutableSet } from "com.google.common.collect.ImmutableSet"
+import { $ImmutableMap } from "com.google.common.collect.ImmutableMap"
 import { $BaseImmutableMultimap } from "com.google.common.collect.BaseImmutableMultimap"
-import { $ImmutableMultiset } from "com.google.common.collect.ImmutableMultiset"
-import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
+import { $Collection } from "java.util.Collection"
 import { $ImmutableCollection } from "com.google.common.collect.ImmutableCollection"
 import { $Multimap$$Type } from "com.google.common.collect.Multimap"
 import { $Iterable$$Type } from "java.lang.Iterable"
 import { $Serializable } from "java.io.Serializable"
+import { $ImmutableMultiset } from "com.google.common.collect.ImmutableMultiset"
+import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 
 export class $ImmutableMultimap<K = any, V = any> extends $BaseImmutableMultimap<K, V> implements $Serializable {
+public "asMap"(): $ImmutableMap<K, $Collection<V>>
 public static "builder"<K, V>(): $ImmutableMultimap$Builder<K, V>
 /** @deprecated */
 public "clear"(): void
@@ -1109,28 +1124,30 @@ public static "copyOf"<K, V>(multimap0: $Multimap$$Type<K, V>): $ImmutableMultim
 public static "copyOf"<K, V>(iterable0: $Iterable$$Type<$Map$Entry$$Type<K, V>>): $ImmutableMultimap<K, V>
 public "entries"(): $ImmutableCollection<$Map$Entry<K, V>>
 public "forEach"(biConsumer0: $BiConsumer$$Type<K, V>): void
+public "get"(k0: K): $ImmutableCollection<V>
 public "inverse"(): $ImmutableMultimap<V, K>
 public "keySet"(): $ImmutableSet<K>
 public "keys"(): $ImmutableMultiset<K>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $ImmutableMultimap<K, V>
 public static "of"<K, V>(): $ImmutableMultimap<K, V>
-public static "of"<K, V>(k0: K, v1: V): $ImmutableMultimap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $ImmutableMultimap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $ImmutableMultimap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $ImmutableMultimap<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $ImmutableMultimap<K, V>
+public static "of"<K, V>(k0: K, v1: V): $ImmutableMultimap<K, V>
 public "size"(): integer
 public "values"(): $ImmutableCollection<V>
 }
 }
 
 declare module "com.google.common.collect.ImmutableSet$Builder" {
+import { $Iterable$$Type } from "java.lang.Iterable"
 import { $ImmutableCollection$Builder } from "com.google.common.collect.ImmutableCollection$Builder"
 
 export class $ImmutableSet$Builder<E = any> extends $ImmutableCollection$Builder<E> {
 constructor()
 
-public "add"(e0: E): $ImmutableSet$Builder<E>
 public "add"(...e0s: E[]): $ImmutableSet$Builder<E>
+public "addAll"(iterable0: $Iterable$$Type<E>): $ImmutableSet$Builder<E>
 }
 }
 
@@ -1160,18 +1177,18 @@ public "forEach"(consumer0: $Consumer$$Type<$TypeToken$$Type<T>>): void
 public "interfaces"(): $TypeToken$TypeSet<>
 public "isEmpty"(): boolean
 public "iterator"(): $Iterator<$TypeToken<T>>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E): $Set<E>
+public static "of"<E>(e0: E): $Set<E>
 public static "of"<E>(...e0s: E[]): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $Set<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $Set<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $Set<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 public static "of"<E>(): $Set<E>
-public static "of"<E>(e0: E, e1: E): $Set<E>
-public static "of"<E>(e0: E): $Set<E>
 public "parallelStream"(): $Stream<$TypeToken<T>>
 public "rawTypes"(): $Set<$Class<T>>
 public "remove"(object0: any): boolean
@@ -1243,8 +1260,8 @@ public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "size"(): integer
 public "spliterator"(): $Spliterator<E>
 public "stream"(): $Stream<E>
-public "toArray"<T>(t0s: T[]): T[]
 public "toArray"(): any[]
+public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 [Symbol.iterator](): IterableIterator<E>;
 get "empty"(): boolean
@@ -1331,8 +1348,8 @@ static "identity"<T>(): $Function$0<T, T>
 
 declare module "com.google.common.collect.ImmutableMap" {
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
+import { $ImmutableSet } from "com.google.common.collect.ImmutableSet"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
-import { $ImmutableCollection } from "com.google.common.collect.ImmutableCollection"
 import { $ImmutableMap$Builder } from "com.google.common.collect.ImmutableMap$Builder"
 import { $Function$$Type } from "java.util.function.Function"
 import { $Iterable$$Type } from "java.lang.Iterable"
@@ -1357,26 +1374,27 @@ public "computeIfAbsent"(k0: K, function1: $Function$$Type<K, V>): V
 public "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, V, V>): V
 public "containsKey"(object0: any): boolean
 public "containsValue"(object0: any): boolean
-public static "copyOf"<K, V>(iterable0: $Iterable$$Type<$Map$Entry$$Type<K, V>>): $ImmutableMap<K, V>
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $ImmutableMap<K, V>
+public static "copyOf"<K, V>(iterable0: $Iterable$$Type<$Map$Entry$$Type<K, V>>): $ImmutableMap<K, V>
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "forEach"(biConsumer0: $BiConsumer$$Type<K, V>): void
 public "get"(object0: any): V
 public "getOrDefault"(object0: any, v1: V): V
 public "isEmpty"(): boolean
+public "keySet"(): $ImmutableSet<K>
 /** @deprecated */
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $ImmutableMap<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $ImmutableMap<K, V>
 public static "of"<K, V>(): $ImmutableMap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $ImmutableMap<K, V>
-public static "of"<K, V>(k0: K, v1: V): $ImmutableMap<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $ImmutableMap<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $ImmutableMap<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $ImmutableMap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $ImmutableMap<K, V>
+public static "of"<K, V>(k0: K, v1: V): $ImmutableMap<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $ImmutableMap<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $ImmutableMap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $ImmutableMap<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $ImmutableMap<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $ImmutableMap<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $ImmutableMap<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $ImmutableMap<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $ImmutableMap<K, V>
 /** @deprecated */
 public "put"(k0: K, v1: V): V
@@ -1385,9 +1403,9 @@ public "putAll"(map0: $Map$$Type<K, V>): void
 /** @deprecated */
 public "putIfAbsent"(k0: K, v1: V): V
 /** @deprecated */
-public "remove"(object0: any): V
-/** @deprecated */
 public "remove"(object0: any, object1: any): boolean
+/** @deprecated */
+public "remove"(object0: any): V
 /** @deprecated */
 public "replace"(k0: K, v1: V): V
 /** @deprecated */
@@ -1397,21 +1415,18 @@ public "replaceAll"(biFunction0: $BiFunction$$Type<K, V, V>): void
 public "size"(): integer
 public static "toImmutableMap"<T, K, V>(function0: $Function$$Type<T, K>, function1: $Function$$Type<T, V>, binaryOperator2: $BinaryOperator$$Type<V>): $Collector<T, any, $ImmutableMap<K, V>>
 public static "toImmutableMap"<T, K, V>(function0: $Function$$Type<T, K>, function1: $Function$$Type<T, V>): $Collector<T, any, $ImmutableMap<K, V>>
-public "values"(): $ImmutableCollection<V>
 [index: string | number]: V
 get "empty"(): boolean
 }
 }
 
 declare module "com.google.common.collect.ImmutableMultiset$Builder" {
-import { $ImmutableMultiset } from "com.google.common.collect.ImmutableMultiset"
 import { $ImmutableCollection$Builder } from "com.google.common.collect.ImmutableCollection$Builder"
 
 export class $ImmutableMultiset$Builder<E = any> extends $ImmutableCollection$Builder<E> {
 constructor()
 
 public "addCopies"(e0: E, int1: integer): $ImmutableMultiset$Builder<E>
-public "build"(): $ImmutableMultiset<E>
 public "setCount"(e0: E, int1: integer): $ImmutableMultiset$Builder<E>
 }
 }
@@ -1504,9 +1519,7 @@ import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $RandomAccess } from "java.util.RandomAccess"
 import { $List } from "java.util.List"
 import { $Stream } from "java.util.stream.Stream"
-import { $UnmodifiableListIterator } from "com.google.common.collect.UnmodifiableListIterator"
 import { $Comparable, $Comparable$$Type } from "java.lang.Comparable"
-import { $UnmodifiableIterator } from "com.google.common.collect.UnmodifiableIterator"
 import { $Collector } from "java.util.stream.Collector"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $Spliterator } from "java.util.Spliterator"
@@ -1520,6 +1533,8 @@ public "add"(e0: E): boolean
 /** @deprecated */
 public "addAll"(int0: integer, collection1: $Collection$$Type<E>): boolean
 public "addAll"(collection0: $Collection$$Type<E>): boolean
+public "addFirst"(e0: E): void
+public "addLast"(e0: E): void
 /** @deprecated */
 public "asList"(): $ImmutableList<E>
 public static "builder"<E>(): $ImmutableList$Builder<E>
@@ -1528,34 +1543,36 @@ public "clear"(): void
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(e0s: E[]): $ImmutableList<E>
 public static "copyOf"<E>(iterator0: $Iterator$$Type<E>): $ImmutableList<E>
-public static "copyOf"<E>(iterable0: $Iterable$$Type<E>): $ImmutableList<E>
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $ImmutableList<E>
+public static "copyOf"<E>(iterable0: $Iterable$$Type<E>): $ImmutableList<E>
 public "forEach"(consumer0: $Consumer$$Type<E>): void
 public "get"(int0: integer): E
+public "getFirst"(): E
+public "getLast"(): E
 public "indexOf"(object0: any): integer
 public "isEmpty"(): boolean
-public "iterator"(): $UnmodifiableIterator<E>
 public "lastIndexOf"(object0: any): integer
-public "listIterator"(): $UnmodifiableListIterator<E>
 public static "of"<E>(e0: E, e1: E, e2: E): $ImmutableList<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $ImmutableList<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $ImmutableList<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $ImmutableList<E>
 public static "of"<E>(e0: E, e1: E): $ImmutableList<E>
 public static "of"<E>(e0: E): $ImmutableList<E>
 public static "of"<E>(): $ImmutableList<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E, e10: E, e11: E, ...e12s: E[]): $ImmutableList<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $ImmutableList<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $ImmutableList<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $ImmutableList<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $ImmutableList<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E, e10: E): $ImmutableList<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $ImmutableList<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E, e10: E, e11: E, ...e12s: E[]): $ImmutableList<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $ImmutableList<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $ImmutableList<E>
 public static "of"<E>(...e0s: E[]): $List<E>
 public "parallelStream"(): $Stream<E>
 /** @deprecated */
 public "remove"(int0: integer): E
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
+public "removeFirst"(): E
+public "removeLast"(): E
 /** @deprecated */
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<E>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
@@ -1565,16 +1582,16 @@ public "set"(int0: integer, e1: E): E
 public "size"(): integer
 /** @deprecated */
 public "sort"(comparator0: $Comparator$$Type<E>): void
-public static "sortedCopyOf"<E extends $Comparable<E>>(iterable0: $Iterable$$Type<E>): $ImmutableList<E>
 public static "sortedCopyOf"<E>(comparator0: $Comparator$$Type<E>, iterable1: $Iterable$$Type<E>): $ImmutableList<E>
+public static "sortedCopyOf"<E extends $Comparable<E>>(iterable0: $Iterable$$Type<E>): $ImmutableList<E>
 public "spliterator"(): $Spliterator<E>
 public "stream"(): $Stream<E>
-public "subList"(int0: integer, int1: integer): $ImmutableList<E>
 public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public static "toImmutableList"<E>(): $Collector<E, any, $ImmutableList<E>>
-[index: number]: E
+get "first"(): E
+get "last"(): E
 get "empty"(): boolean
 }
 }
@@ -1781,10 +1798,10 @@ export class $JsonObject extends $JsonElement {
 constructor()
 
 public "add"(string0: string, jsonElement1: $JsonElement$$Type): void
-public "addProperty"(string0: string, boolean1: boolean): void
 public "addProperty"(string0: string, string1: string): void
-public "addProperty"(string0: string, character1: character): void
 public "addProperty"(string0: string, number1: number): void
+public "addProperty"(string0: string, character1: character): void
+public "addProperty"(string0: string, boolean1: boolean): void
 public "asMap"(): $Map<string, $JsonElement>
 public "entrySet"(): $Set<$Map$Entry<string, $JsonElement>>
 public "get"(string0: string): $JsonElement
@@ -1822,8 +1839,8 @@ public "isEmpty"(): boolean
 public "keySet"(): $Set<K>
 public "keys"(): $Multiset<K>
 public "put"(k0: K, v1: V): boolean
-public "putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 public "putAll"(k0: K, iterable1: $Iterable$$Type<V>): boolean
+public "putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 public "remove"(object0: any, object1: any): boolean
 public "removeAll"(object0: any): $Collection<V>
 public "replaceValues"(k0: K, iterable1: $Iterable$$Type<V>): $Collection<V>
@@ -1856,10 +1873,11 @@ export interface $SetMultimap<K = any, V = any> extends $Multimap<K, V> {
 "keySet"(): $Set<K>
 "keys"(): $Multiset<K>
 "put"(k0: K, v1: V): boolean
-"putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 "putAll"(k0: K, iterable1: $Iterable$$Type<V>): boolean
+"putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 "remove"(object0: any, object1: any): boolean
 "removeAll"(object0: any): $Set<V>
+"replaceValues"(k0: K, iterable1: $Iterable$$Type<V>): $Set<V>
 "size"(): integer
 "values"(): $Collection<V>
 get "empty"(): boolean
@@ -1894,33 +1912,33 @@ constructor()
 /** @deprecated */
 public "excluder"(): $Excluder
 public "fieldNamingStrategy"(): $FieldNamingStrategy
-public "fromJson"<T>(string0: string, typeToken1: $TypeToken$$Type<T>): T
-public "fromJson"<T>(jsonReader0: $JsonReader$$Type, typeToken1: $TypeToken$$Type<T>): T
-public "fromJson"<T>(string0: string, type1: $Type$$Type): T
 public "fromJson"<T>(reader0: $Reader$$Type, type1: $Type$$Type): T
-public "fromJson"<T>(reader0: $Reader$$Type, typeToken1: $TypeToken$$Type<T>): T
-public "fromJson"<T>(jsonReader0: $JsonReader$$Type, type1: $Type$$Type): T
 public "fromJson"<T>(reader0: $Reader$$Type, class1: $Class$$Type<T>): T
+public "fromJson"<T>(string0: string, typeToken1: $TypeToken$$Type<T>): T
+public "fromJson"<T>(string0: string, class1: $Class$$Type<T>): T
+public "fromJson"<T>(string0: string, type1: $Type$$Type): T
 public "fromJson"<T>(jsonElement0: $JsonElement$$Type, typeToken1: $TypeToken$$Type<T>): T
 public "fromJson"<T>(jsonElement0: $JsonElement$$Type, type1: $Type$$Type): T
 public "fromJson"<T>(jsonElement0: $JsonElement$$Type, class1: $Class$$Type<T>): T
-public "fromJson"<T>(string0: string, class1: $Class$$Type<T>): T
-public "getAdapter"<T>(typeToken0: $TypeToken$$Type<T>): $TypeAdapter<T>
+public "fromJson"<T>(jsonReader0: $JsonReader$$Type, typeToken1: $TypeToken$$Type<T>): T
+public "fromJson"<T>(jsonReader0: $JsonReader$$Type, type1: $Type$$Type): T
+public "fromJson"<T>(reader0: $Reader$$Type, typeToken1: $TypeToken$$Type<T>): T
 public "getAdapter"<T>(class0: $Class$$Type<T>): $TypeAdapter<T>
+public "getAdapter"<T>(typeToken0: $TypeToken$$Type<T>): $TypeAdapter<T>
 public "getDelegateAdapter"<T>(typeAdapterFactory0: $TypeAdapterFactory$$Type, typeToken1: $TypeToken$$Type<T>): $TypeAdapter<T>
 public "htmlSafe"(): boolean
 public "newBuilder"(): $GsonBuilder
 public "newJsonReader"(reader0: $Reader$$Type): $JsonReader
 public "newJsonWriter"(writer0: $Writer$$Type): $JsonWriter
 public "serializeNulls"(): boolean
-public "toJson"(jsonElement0: $JsonElement$$Type): string
-public "toJson"(object0: any, type1: $Type$$Type, jsonWriter2: $JsonWriter$$Type): void
 public "toJson"(object0: any, appendable1: $Appendable$$Type): void
-public "toJson"(object0: any, type1: $Type$$Type, appendable2: $Appendable$$Type): void
+public "toJson"(object0: any, type1: $Type$$Type): string
+public "toJson"(object0: any): string
+public "toJson"(object0: any, type1: $Type$$Type, jsonWriter2: $JsonWriter$$Type): void
 public "toJson"(jsonElement0: $JsonElement$$Type, jsonWriter1: $JsonWriter$$Type): void
 public "toJson"(jsonElement0: $JsonElement$$Type, appendable1: $Appendable$$Type): void
-public "toJson"(object0: any): string
-public "toJson"(object0: any, type1: $Type$$Type): string
+public "toJson"(jsonElement0: $JsonElement$$Type): string
+public "toJson"(object0: any, type1: $Type$$Type, appendable2: $Appendable$$Type): void
 public "toJsonTree"(object0: any): $JsonElement
 public "toJsonTree"(object0: any, type1: $Type$$Type): $JsonElement
 }
@@ -2003,8 +2021,8 @@ public "hashCode"(): integer
 public "isEmpty"(): boolean
 public "keySet"(): $Set<K>
 public "keys"(): $Multiset<K>
-public "putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 public "putAll"(k0: K, iterable1: $Iterable$$Type<V>): boolean
+public "putAll"(multimap0: $Multimap$$Type<K, V>): boolean
 public "remove"(object0: any, object1: any): boolean
 get "empty"(): boolean
 }
@@ -2034,13 +2052,13 @@ public "setHtmlSafe"(boolean0: boolean): void
 public "setIndent"(string0: string): void
 public "setLenient"(boolean0: boolean): void
 public "setSerializeNulls"(boolean0: boolean): void
-public "value"(string0: string): $JsonWriter
-public "value"(double0: double): $JsonWriter
-public "value"(number0: number): $JsonWriter
-public "value"(long0: long): $JsonWriter
+public "value"(boolean0: boolean): $JsonWriter
 public "value"(float0: float): $JsonWriter
+public "value"(double0: double): $JsonWriter
 public "value"(boolean0: boolean): $JsonWriter
-public "value"(boolean0: boolean): $JsonWriter
+public "value"(string0: string): $JsonWriter
+public "value"(long0: long): $JsonWriter
+public "value"(number0: number): $JsonWriter
 get "serializeNulls"(): boolean
 get "htmlSafe"(): boolean
 get "lenient"(): boolean

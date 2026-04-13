@@ -53,8 +53,8 @@ export interface $ObjectInput extends $DataInput, $AutoCloseable {
 "available"(): integer
 "close"(): void
 "read"(byte0s: byte[], int1: integer, int2: integer): integer
-"read"(byte0s: byte[]): integer
 "read"(): integer
+"read"(byte0s: byte[]): integer
 "readBoolean"(): boolean
 "readByte"(): byte
 "readChar"(): character
@@ -84,6 +84,7 @@ export type $ObjectInput$$Type = ($ObjectInput);
 }
 
 declare module "java.io.Reader" {
+import { $List } from "java.util.List"
 import { $CharBuffer$$Type } from "java.nio.CharBuffer"
 import { $Closeable } from "java.io.Closeable"
 import { $Writer$$Type } from "java.io.Writer"
@@ -99,10 +100,13 @@ public "close"(): void
 public "mark"(int0: integer): void
 public "markSupported"(): boolean
 public static "nullReader"(): $Reader
-public "read"(char0s: character[]): integer
+public static "of"(charSequence0: charseq): $Reader
 public "read"(char0s: character[], int1: integer, int2: integer): integer
-public "read"(charBuffer0: $CharBuffer$$Type): integer
+public "read"(char0s: character[]): integer
 public "read"(): integer
+public "read"(charBuffer0: $CharBuffer$$Type): integer
+public "readAllAsString"(): string
+public "readAllLines"(): $List<string>
 public "ready"(): boolean
 public "reset"(): void
 public "skip"(long0: long): long
@@ -294,21 +298,19 @@ import { $File$$Type } from "java.io.File"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $PrintWriter extends $Writer {
-constructor(string0: string)
 constructor(string0: string, string1: string)
+constructor(string0: string)
 constructor(string0: string, charset1: $Charset$$Type)
 constructor(file0: $File$$Type)
-constructor(file0: $File$$Type, string1: string)
 constructor(file0: $File$$Type, charset1: $Charset$$Type)
+constructor(file0: $File$$Type, string1: string)
 constructor(writer0: $Writer$$Type)
 constructor(writer0: $Writer$$Type, boolean1: boolean)
 constructor(outputStream0: $OutputStream$$Type, boolean1: boolean, charset2: $Charset$$Type)
 constructor(outputStream0: $OutputStream$$Type, boolean1: boolean)
 constructor(outputStream0: $OutputStream$$Type)
 
-public "append"(charSequence0: charseq, int1: integer, int2: integer): $PrintWriter
 public "append"(char0: character): $PrintWriter
-public "append"(charSequence0: charseq): $PrintWriter
 public "checkError"(): boolean
 public "format"(string0: string, ...object1s: any[]): $PrintWriter
 public "format"(locale0: $Locale$$Type, string1: string, ...object2s: any[]): $PrintWriter
@@ -323,16 +325,16 @@ public "print"(char0s: character[]): void
 public "print"(double0: double): void
 public "printf"(string0: string, ...object1s: any[]): $PrintWriter
 public "printf"(locale0: $Locale$$Type, string1: string, ...object2s: any[]): $PrintWriter
-public "println"(char0s: character[]): void
-public "println"(): void
-public "println"(boolean0: boolean): void
-public "println"(string0: string): void
-public "println"(object0: any): void
 public "println"(double0: double): void
 public "println"(float0: float): void
 public "println"(long0: long): void
-public "println"(int0: integer): void
+public "println"(char0s: character[]): void
+public "println"(string0: string): void
+public "println"(object0: any): void
+public "println"(): void
+public "println"(boolean0: boolean): void
 public "println"(char0: character): void
+public "println"(int0: integer): void
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $PrintWriter$$Type = ($PrintWriter);
@@ -430,15 +432,15 @@ public "lastModified"(): long
 public "length"(): long
 public "list"(): string[]
 public "list"(filenameFilter0: $FilenameFilter$$Type): string[]
+public "listFiles"(fileFilter0: $FileFilter$$Type): $File[]
 public "listFiles"(filenameFilter0: $FilenameFilter$$Type): $File[]
 public "listFiles"(): $File[]
-public "listFiles"(fileFilter0: $FileFilter$$Type): $File[]
 public static "listRoots"(): $File[]
 public "mkdir"(): boolean
 public "mkdirs"(): boolean
 public "renameTo"(file0: $File$$Type): boolean
-public "setExecutable"(boolean0: boolean): boolean
 public "setExecutable"(boolean0: boolean, boolean1: boolean): boolean
+public "setExecutable"(boolean0: boolean): boolean
 public "setLastModified"(long0: long): boolean
 public "setReadOnly"(): boolean
 public "setReadable"(boolean0: boolean, boolean1: boolean): boolean
@@ -489,12 +491,12 @@ public "close"(): void
 public "mark"(int0: integer): void
 public "markSupported"(): boolean
 public static "nullInputStream"(): $InputStream
-public "read"(byte0s: byte[], int1: integer, int2: integer): integer
 public "read"(byte0s: byte[]): integer
+public "read"(byte0s: byte[], int1: integer, int2: integer): integer
 public "read"(): integer
 public "readAllBytes"(): byte[]
-public "readNBytes"(int0: integer): byte[]
 public "readNBytes"(byte0s: byte[], int1: integer, int2: integer): integer
+public "readNBytes"(int0: integer): byte[]
 public "reset"(): void
 public "skip"(long0: long): long
 public "skipNBytes"(long0: long): void
@@ -512,7 +514,7 @@ export type $Serializable$$Type = ($Serializable);
 
 declare module "java.io.PrintStream" {
 import { $OutputStream$$Type } from "java.io.OutputStream"
-import { $Charset$$Type } from "java.nio.charset.Charset"
+import { $Charset, $Charset$$Type } from "java.nio.charset.Charset"
 import { $Locale$$Type } from "java.util.Locale"
 import { $Appendable } from "java.lang.Appendable"
 import { $Closeable } from "java.io.Closeable"
@@ -536,20 +538,21 @@ constructor(file0: $File$$Type)
 constructor(outputStream0: $OutputStream$$Type)
 constructor(outputStream0: $OutputStream$$Type, boolean1: boolean)
 
+public "charset"(): $Charset
 public "checkError"(): boolean
 public "format"(string0: string, ...object1s: any[]): $PrintStream
 public "format"(locale0: $Locale$$Type, string1: string, ...object2s: any[]): $PrintStream
-public "print"(boolean0: boolean): void
+public "print"(object0: any): void
 public "print"(string0: string): void
 public "print"(char0s: character[]): void
-public "print"(long0: long): void
-public "print"(double0: double): void
-public "print"(float0: float): void
+public "print"(boolean0: boolean): void
 public "print"(char0: character): void
 public "print"(int0: integer): void
-public "print"(object0: any): void
-public "printf"(locale0: $Locale$$Type, string1: string, ...object2s: any[]): $PrintStream
+public "print"(double0: double): void
+public "print"(float0: float): void
+public "print"(long0: long): void
 public "printf"(string0: string, ...object1s: any[]): $PrintStream
+public "printf"(locale0: $Locale$$Type, string1: string, ...object2s: any[]): $PrintStream
 public "println"(string0: string): void
 public "println"(object0: any): void
 public "println"(float0: float): void

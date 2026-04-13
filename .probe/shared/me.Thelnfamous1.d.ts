@@ -43,8 +43,8 @@ export interface $MobAttackWindup {
 "bettermobcombat$getUpswingTicks"(): integer
 "bettermobcombat$hasDelayedUpswing"(): boolean
 "bettermobcombat$setDelayedUpswing"(runnable0: $Runnable$$Type): void
-"bettermobcombat$startUpswing"(weaponAttributes0: $WeaponAttributes$$Type): void
 "bettermobcombat$startUpswing"(weaponAttributes0: $WeaponAttributes$$Type, biConsumer1: $BiConsumer$$Type<$Mob$$Type, $Entity$$Type>): void
+"bettermobcombat$startUpswing"(weaponAttributes0: $WeaponAttributes$$Type): void
 "isWeaponSwingInProgress"(): boolean
 get "weaponSwingInProgress"(): boolean
 }

@@ -2,9 +2,10 @@ declare module "net.minecraft.world.level.biome.BiomeManager" {
 import { $Holder } from "net.minecraft.core.Holder"
 import { $BiomeManager$NoiseBiomeSource$$Type } from "net.minecraft.world.level.biome.BiomeManager$NoiseBiomeSource"
 import { $BlockPos$$Type } from "net.minecraft.core.BlockPos"
+import { $BiomeManagerAccessor } from "org.embeddedt.modernfix.common.mixin.perf.optimize_surface_rules.BiomeManagerAccessor"
 import { $Biome } from "net.minecraft.world.level.biome.Biome"
 
-export class $BiomeManager {
+export class $BiomeManager implements $BiomeManagerAccessor {
 static readonly "CHUNK_CENTER_QUART": integer
 readonly "biomeZoomSeed": long
 
@@ -12,8 +13,8 @@ constructor(noiseBiomeSource0: $BiomeManager$NoiseBiomeSource$$Type, long1: long
 
 public "getBiome"(blockPos0: $BlockPos$$Type): $Holder<$Biome>
 public static "getFiddledDistance"(long0: long, int1: integer, int2: integer, int3: integer, double4: double, double5: double, double6: double): double
-public "getNoiseBiomeAtPosition"(blockPos0: $BlockPos$$Type): $Holder<$Biome>
 public "getNoiseBiomeAtPosition"(double0: double, double1: double, double2: double): $Holder<$Biome>
+public "getNoiseBiomeAtPosition"(blockPos0: $BlockPos$$Type): $Holder<$Biome>
 public "getNoiseBiomeAtQuart"(int0: integer, int1: integer, int2: integer): $Holder<$Biome>
 public static "obfuscateSeed"(long0: long): long
 public "withDifferentSource"(noiseBiomeSource0: $BiomeManager$NoiseBiomeSource$$Type): $BiomeManager
@@ -180,8 +181,8 @@ static "CODEC": $Codec<$BiomeSource>
 public "addDebugInfo"(list0: $List$$Type<string>, blockPos1: $BlockPos$$Type, sampler2: $Climate$Sampler$$Type): void
 public "appendDeferredBiomesList"(list0: $List$$Type): void
 public "expandBiomesWith"(set0: $Set$$Type): void
-public "findBiomeHorizontal"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, predicate5: $Predicate$$Type<$Holder$$Type<$Biome$$Type>>, randomSource6: $RandomSource$$Type, boolean7: boolean, sampler8: $Climate$Sampler$$Type): $Pair<$BlockPos, $Holder<$Biome>>
 public "findBiomeHorizontal"(int0: integer, int1: integer, int2: integer, int3: integer, predicate4: $Predicate$$Type<$Holder$$Type<$Biome$$Type>>, randomSource5: $RandomSource$$Type, sampler6: $Climate$Sampler$$Type): $Pair<$BlockPos, $Holder<$Biome>>
+public "findBiomeHorizontal"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, predicate5: $Predicate$$Type<$Holder$$Type<$Biome$$Type>>, randomSource6: $RandomSource$$Type, boolean7: boolean, sampler8: $Climate$Sampler$$Type): $Pair<$BlockPos, $Holder<$Biome>>
 public "findClosestBiome3d"(blockPos0: $BlockPos$$Type, int1: integer, int2: integer, int3: integer, predicate4: $Predicate$$Type<$Holder$$Type<$Biome$$Type>>, sampler5: $Climate$Sampler$$Type, levelReader6: $LevelReader$$Type): $Pair<$BlockPos, $Holder<$Biome>>
 public "getBiomesWithin"(int0: integer, int1: integer, int2: integer, int3: integer, sampler4: $Climate$Sampler$$Type): $Set<$Holder<$Biome>>
 public "getNoiseBiome"(int0: integer, int1: integer, int2: integer, sampler3: $Climate$Sampler$$Type): $Holder<$Biome>
@@ -497,12 +498,12 @@ public "continentalness"(): $Climate$Parameter
 public "depth"(): $Climate$Parameter
 public "erosion"(): $Climate$Parameter
 public "humidity"(): $Climate$Parameter
-public "modifyExpressionValue$hnc000$giveMinimumOffsetIfDisabled"(long0: long): long
-public "modifyReturnValue$hnc000$dummyOutDisabledParameters"(list0: $List$$Type): $List
+public "modifyExpressionValue$hpo000$giveMinimumOffsetIfDisabled"(long0: long): long
+public "modifyReturnValue$hpo000$dummyOutDisabledParameters"(list0: $List$$Type): $List
 public "offset"(): long
 public "temperature"(): $Climate$Parameter
 public "weirdness"(): $Climate$Parameter
-public "wrapOperation$hnc000$giveMinimumDistanceForDisabledParameters"(parameter0: $Climate$Parameter$$Type, long1: long, operation2: $Operation$$Type): long
+public "wrapOperation$hpo000$giveMinimumDistanceForDisabledParameters"(parameter0: $Climate$Parameter$$Type, long1: long, operation2: $Operation$$Type): long
 }
 }
 
@@ -568,9 +569,9 @@ public "distance"(parameter0: $Climate$Parameter$$Type): long
 public "max"(): long
 public "min"(): long
 public static "point"(float0: float): $Climate$Parameter
-public "span"(parameter0: $Climate$Parameter$$Type): $Climate$Parameter
 public static "span"(parameter0: $Climate$Parameter$$Type, parameter1: $Climate$Parameter$$Type): $Climate$Parameter
 public static "span"(float0: float, float1: float): $Climate$Parameter
+public "span"(parameter0: $Climate$Parameter$$Type): $Climate$Parameter
 }
 }
 

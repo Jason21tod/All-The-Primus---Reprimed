@@ -277,8 +277,8 @@ public "createEntityList"(entities: $Collection$$Type<$Entity$$Type>): $EntityAr
 public "createExplosion"(x: double, y: double, z: double): $ExplosionJS
 public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference<$Trackable>>
 public "dayTime"(): long
-public "destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
 public "destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
+public "destroyBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean, entity2: $Entity$$Type): boolean
 public "doAnimateTick"(int0: integer, int1: integer, int2: integer, int3: integer, randomSource4: $RandomSource$$Type, block5: $Block$$Type, mutableBlockPos6: $BlockPos$MutableBlockPos$$Type): void
 public "effects"(): $DimensionSpecialEffects
 public "enabledFeatures"(): $FeatureFlagSet
@@ -286,12 +286,12 @@ public "entitiesForRendering"(): $Iterable<$Entity>
 public "findFreePosition"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type, vec32: $Vec3$$Type, double3: double, double4: double, double5: double): $Optional<$Vec3>
 public "findSupportingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Optional<$BlockPos>
 public "gameEvent"(gameEvent0: $GameEvent$$Type, vec31: $Vec3$$Type, context2: $GameEvent$Context$$Type): void
-public "gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type): void
-public "gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
 public "gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, blockPos2: $BlockPos$$Type): void
+public "gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
+public "gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type): void
 public static "get"(clientLevel0: $ClientLevel$$Type): $ChunkTracker
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -300,8 +300,8 @@ public "getBestNeighborSignal"(blockPos0: $BlockPos$$Type): integer
 public "getBiome"(blockPos0: $BlockPos$$Type): $Holder<$Biome>
 public "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
 public static "getBiomeSeed"(clientLevel0: $ClientLevel$$Type): long
-public "getBlock"(blockEntity: $BlockEntity$$Type): $BlockContainerJS
 public "getBlock"(x: integer, y: integer, z: integer): $BlockContainerJS
+public "getBlock"(blockEntity: $BlockEntity$$Type): $BlockContainerJS
 public "getBlock"(pos: $BlockPos$$Type): $BlockContainerJS
 public "getBlockCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
 public "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
@@ -316,8 +316,8 @@ public "getBlockTicks"(): $LevelTickAccess<$Block>
 public "getBlockTint"(blockPos0: $BlockPos$$Type, colorResolver1: $ColorResolver$$Type): integer
 public "getBrightness"(lightLayer0: $LightLayer$$Type, blockPos1: $BlockPos$$Type): integer
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
-public "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type): $ChunkAccess
 public "getChunk"(blockPos0: $BlockPos$$Type): $ChunkAccess
+public "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type): $ChunkAccess
 public "getChunkSource"(): $ClientChunkCache
 public "getCloudColor"(float0: float): $Vec3
 public "getCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
@@ -344,8 +344,8 @@ public "getLightEmission"(blockPos0: $BlockPos$$Type): integer
 public "getLightLevelDependentMagicValue"(blockPos0: $BlockPos$$Type): float
 public "getMaxBuildHeight"(): integer
 public "getMaxLightLevel"(): integer
-public "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 public "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type, int1: integer): integer
+public "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
 public "getMaxSection"(): integer
 public "getMinBuildHeight"(): integer
 public "getMinSection"(): integer
@@ -355,14 +355,14 @@ public "getMoonPhase"(): integer
 public "getName"(): $Component
 public "getNearbyEntities"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, aABB3: $AABB$$Type): $List<T>
 public "getNearbyPlayers"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, aABB2: $AABB$$Type): $List<$Player>
-public "getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 public "getNearestEntity"<T extends $LivingEntity>(class0: $Class$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double, aABB6: $AABB$$Type): T
-public "getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
-public "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
-public "getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
-public "getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
-public "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+public "getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 public "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type): $Player
+public "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
+public "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+public "getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
+public "getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
+public "getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
 public "getNoiseBiome"(int0: integer, int1: integer, int2: integer): $Holder<$Biome>
 public "getPartEntities"(): $Collection<$PartEntity<any>>
 public "getPathfindingCostFromLightLevels"(blockPos0: $BlockPos$$Type): float
@@ -386,21 +386,21 @@ public static "getSummary"(): $Map<$Class<any>, $Map<$Class<any>, long>>
 public "getTimeOfDay"(float0: float): float
 public "getUncachedNoiseBiome"(int0: integer, int1: integer, int2: integer): $Holder<$Biome>
 public "handleBlockChangedAck"(int0: integer): void
-public "handler$ffj000$tickEntity"(entity: $Entity$$Type, info: $CallbackInfo$$Type): void
-public "handler$glj000$tickWorldAfterBlockEntities"(ci: $CallbackInfo$$Type): void
-public "handler$icm000$onSetBlocksDirty"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, blockState2: $BlockState$$Type, callbackInfo3: $CallbackInfo$$Type): void
+public "handler$fgn000$tickEntity"(entity: $Entity$$Type, info: $CallbackInfo$$Type): void
+public "handler$gmn000$tickWorldAfterBlockEntities"(ci: $CallbackInfo$$Type): void
+public "handler$ifi000$onSetBlocksDirty"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, blockState2: $BlockState$$Type, callbackInfo3: $CallbackInfo$$Type): void
 public "hasBiomes"(): boolean
 public "hasChunk"(int0: integer, int1: integer): boolean
 /** @deprecated */
+public "hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+/** @deprecated */
 public "hasChunkAt"(int0: integer, int1: integer): boolean
 /** @deprecated */
-public "hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
+public "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 /** @deprecated */
 public "hasChunksAt"(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type): boolean
 /** @deprecated */
 public "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer): boolean
-/** @deprecated */
-public "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 public "hasNearbyAlivePlayer"(double0: double, double1: double, double2: double, double3: double): boolean
 public "hasNeighborSignal"(blockPos0: $BlockPos$$Type): boolean
 public "hasSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): boolean
@@ -413,14 +413,14 @@ public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 public "isOutsideBuildHeight"(int0: integer): boolean
 public "isOverworld"(): boolean
 public "isUnobstructed"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type): boolean
-public "isUnobstructed"(entity0: $Entity$$Type): boolean
 public "isUnobstructed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): boolean
+public "isUnobstructed"(entity0: $Entity$$Type): boolean
 public "isWaterAt"(blockPos0: $BlockPos$$Type): boolean
 public "levelEvent"(player0: $Player$$Type, int1: integer, blockPos2: $BlockPos$$Type, int3: integer): void
 public "levelEvent"(int0: integer, blockPos1: $BlockPos$$Type, int2: integer): void
 public "majruszlibrary$delayExecution"(int0: integer, class1: $Class$$Type, consumer2: $Consumer$$Type): void
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
 public "noCollision"(aABB0: $AABB$$Type): boolean
@@ -435,10 +435,10 @@ public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeEntity"(int0: integer, removalReason1: $Entity$RemovalReason$$Type): void
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
+public "scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 public "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer): void
 public "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 public "scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer): void
-public "scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 public "setDayTime"(long0: long): void
 public "setDefaultSpawnPos"(blockPos0: $BlockPos$$Type, float1: float): void
 public "setGameTime"(long0: long): void
@@ -451,8 +451,8 @@ public "sodium$getBiomeSeed"(): long
 public "sodium$getTracker"(): $ChunkTracker
 public "spawnFireworks"(x: double, y: double, z: double, f: $FireworksJS$$Type): void
 public "spawnParticles"(options: $ParticleOptions$$Type, overrideLimiter: boolean, x: double, y: double, z: double, vx: double, vy: double, vz: double, count: integer, speed: double): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public "syncBlockState"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, vec32: $Vec3$$Type): void
 public "tell"(message: $Component$$Type): void
 public "tick"(booleanSupplier0: $BooleanSupplier$$Type): void
@@ -602,20 +602,20 @@ public "modifyCustomCompletions"(action0: $ClientboundCustomChatCompletionsPacke
 public "registryAccess"(): $RegistryAccess
 public "sendError"(message: $Component$$Type): void
 public "sendFeedback"(message: $Component$$Type): void
-public static "suggest"(iterable0: $Iterable$$Type<string>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
-public static "suggest"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 public static "suggest"(string0s: string[], suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+public static "suggest"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
+public static "suggest"(iterable0: $Iterable$$Type<string>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 public static "suggest"(stream0: $Stream$$Type<string>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 public static "suggest2DCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 public static "suggestCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 public "suggestRegistryElements"(resourceKey0: $ResourceKey$$Type<$Registry<any>>, elementSuggestionType1: $SharedSuggestionProvider$ElementSuggestionType$$Type, suggestionsBuilder2: $SuggestionsBuilder$$Type, commandContext3: $CommandContext$$Type<any>): $CompletableFuture<$Suggestions>
 public "suggestRegistryElements"(registry0: $Registry$$Type<any>, elementSuggestionType1: $SharedSuggestionProvider$ElementSuggestionType$$Type, suggestionsBuilder2: $SuggestionsBuilder$$Type): void
+public static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+public static "suggestResource"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
+public static "suggestResource"<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 public static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 public static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 public static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
-public static "suggestResource"<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
-public static "suggestResource"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
-public static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 get "absoluteCoordinates"(): $Collection<$SharedSuggestionProvider$TextCoordinates>
 get "allTeams"(): $Collection<string>
 get "availableSounds"(): $Stream<$ResourceLocation>
@@ -652,7 +652,7 @@ readonly "progress": $Map<$Advancement, $AdvancementProgress>
 constructor(minecraft0: $Minecraft$$Type, worldSessionTelemetryManager1: $WorldSessionTelemetryManager$$Type)
 
 public "getAdvancements"(): $AdvancementList
-public "handler$ghk000$patchouli_onSync"(clientboundUpdateAdvancementsPacket0: $ClientboundUpdateAdvancementsPacket$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$gio000$patchouli_onSync"(clientboundUpdateAdvancementsPacket0: $ClientboundUpdateAdvancementsPacket$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public "setListener"(listener0: $ClientAdvancements$Listener$$Type): void
 public "setSelectedTab"(advancement0: $Advancement$$Type, boolean1: boolean): void
 public "update"(clientboundUpdateAdvancementsPacket0: $ClientboundUpdateAdvancementsPacket$$Type): void
@@ -724,6 +724,7 @@ import { $BlockGetter } from "net.minecraft.world.level.BlockGetter"
 import { $CompoundTag$$Type } from "net.minecraft.nbt.CompoundTag"
 import { $LevelLightEngine, $LevelLightEngine$$Type } from "net.minecraft.world.level.lighting.LevelLightEngine"
 import { $ClientboundLevelChunkPacketData$BlockEntityTagOutput$$Type } from "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData$BlockEntityTagOutput"
+import { $ChunkStatus$$Type } from "net.minecraft.world.level.chunk.ChunkStatus"
 import { $LightLayer$$Type } from "net.minecraft.world.level.LightLayer"
 import { $SectionPos$$Type } from "net.minecraft.core.SectionPos"
 
@@ -731,6 +732,7 @@ export class $ClientChunkCache extends $ChunkSource {
 constructor(clientLevel0: $ClientLevel$$Type, int1: integer)
 
 public "drop"(int0: integer, int1: integer): void
+public "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $LevelChunk
 public "getLevel"(): $BlockGetter
 public "onLightUpdate"(lightLayer0: $LightLayer$$Type, sectionPos1: $SectionPos$$Type): void
 public "replaceBiomes"(int0: integer, int1: integer, friendlyByteBuf2: $FriendlyByteBuf$$Type): void
@@ -896,6 +898,7 @@ import { $ClientboundSetScorePacket$$Type } from "net.minecraft.network.protocol
 import { $ClientboundOpenBookPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundOpenBookPacket"
 import { $ClientboundSetBorderLerpSizePacket$$Type } from "net.minecraft.network.protocol.game.ClientboundSetBorderLerpSizePacket"
 import { $Minecraft$$Type } from "net.minecraft.client.Minecraft"
+import { $ClientPlayNetworkAddon } from "net.fabricmc.fabric.impl.networking.client.ClientPlayNetworkAddon"
 import { $ClientboundServerDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundServerDataPacket"
 import { $ClientboundDisguisedChatPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundDisguisedChatPacket"
 import { $ClientboundSetTitlesAnimationPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundSetTitlesAnimationPacket"
@@ -925,6 +928,7 @@ constructor(minecraft0: $Minecraft$$Type, screen1: $Screen$$Type, connection2: $
 
 public "close"(): void
 public "enabledFeatures"(): $FeatureFlagSet
+public "getAddon"(): $ClientPlayNetworkAddon
 public "getAdvancements"(): $ClientAdvancements
 public "getCommands"(): $CommandDispatcher<$SharedSuggestionProvider>
 public "getConnection"(): $Connection
@@ -1045,8 +1049,8 @@ public "handleUpdateAttributes"(clientboundUpdateAttributesPacket0: $Clientbound
 public "handleUpdateMobEffect"(clientboundUpdateMobEffectPacket0: $ClientboundUpdateMobEffectPacket$$Type): void
 public "handleUpdateRecipes"(clientboundUpdateRecipesPacket0: $ClientboundUpdateRecipesPacket$$Type): void
 public "handleUpdateTags"(clientboundUpdateTagsPacket0: $ClientboundUpdateTagsPacket$$Type): void
-public "handler$dbn000$apoth_postAttrChangedEvent"(clientboundUpdateAttributesPacket0: $ClientboundUpdateAttributesPacket$$Type, callbackInfo1: $CallbackInfo$$Type, entity2: $Entity$$Type, attributeMap3: $AttributeMap$$Type, iterator4: $Iterator$$Type, attributeSnapshot5: $ClientboundUpdateAttributesPacket$AttributeSnapshot$$Type, attributeInstance6: $AttributeInstance$$Type): void
-public "handler$dbn000$apoth_recordOldAttrValue"(clientboundUpdateAttributesPacket0: $ClientboundUpdateAttributesPacket$$Type, callbackInfo1: $CallbackInfo$$Type, entity2: $Entity$$Type, attributeMap3: $AttributeMap$$Type, iterator4: $Iterator$$Type, attributeSnapshot5: $ClientboundUpdateAttributesPacket$AttributeSnapshot$$Type, attributeInstance6: $AttributeInstance$$Type): void
+public "handler$dcp000$apoth_postAttrChangedEvent"(clientboundUpdateAttributesPacket0: $ClientboundUpdateAttributesPacket$$Type, callbackInfo1: $CallbackInfo$$Type, entity2: $Entity$$Type, attributeMap3: $AttributeMap$$Type, iterator4: $Iterator$$Type, attributeSnapshot5: $ClientboundUpdateAttributesPacket$AttributeSnapshot$$Type, attributeInstance6: $AttributeInstance$$Type): void
+public "handler$dcp000$apoth_recordOldAttrValue"(clientboundUpdateAttributesPacket0: $ClientboundUpdateAttributesPacket$$Type, callbackInfo1: $CallbackInfo$$Type, entity2: $Entity$$Type, attributeMap3: $AttributeMap$$Type, iterator4: $Iterator$$Type, attributeSnapshot5: $ClientboundUpdateAttributesPacket$AttributeSnapshot$$Type, attributeInstance6: $AttributeInstance$$Type): void
 public "isAcceptingMessages"(): boolean
 public "isFeatureEnabled"(featureFlagSet0: $FeatureFlagSet$$Type): boolean
 public "levels"(): $Set<$ResourceKey<$Level>>
@@ -1066,6 +1070,7 @@ public "shouldPropagateHandlingExceptions"(): boolean
 public "tick"(): void
 get "commands"(): $CommandDispatcher<$SharedSuggestionProvider>
 set "commands"(value: $CommandDispatcher$$Type<$SharedSuggestionProvider$$Type>)
+get "addon"(): $ClientPlayNetworkAddon
 get "advancements"(): $ClientAdvancements
 get "connection"(): $Connection
 get "debugQueryHandler"(): $DebugQueryHandler
@@ -1262,7 +1267,7 @@ public "handleInventoryButtonClick"(int0: integer, int1: integer): void
 public "handleInventoryMouseClick"(int0: integer, int1: integer, int2: integer, clickType3: $ClickType$$Type, player4: $Player$$Type): void
 public "handlePickItem"(int0: integer): void
 public "handlePlaceRecipe"(int0: integer, recipe1: $Recipe$$Type<any>, boolean2: boolean): void
-public "handler$elp000$cancelBlockBreaking_FixAttackCD"(ci: $CallbackInfo$$Type): void
+public "handler$end000$cancelBlockBreaking_FixAttackCD"(ci: $CallbackInfo$$Type): void
 public "hasExperience"(): boolean
 public "hasFarPickRange"(): boolean
 public "hasInfiniteItems"(): boolean

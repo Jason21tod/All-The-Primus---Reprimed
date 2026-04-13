@@ -12,8 +12,8 @@ import { $ExistingFileHelper, $ExistingFileHelper$$Type } from "net.minecraftfor
 import { $Path } from "java.nio.file.Path"
 
 export class $GatherDataEvent extends $Event implements $IModBusEvent, $EventItf {
-constructor()
 constructor(modContainer0: $ModContainer$$Type, dataGenerator1: $DataGenerator$$Type, dataGeneratorConfig2: $GatherDataEvent$DataGeneratorConfig$$Type, existingFileHelper3: $ExistingFileHelper$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

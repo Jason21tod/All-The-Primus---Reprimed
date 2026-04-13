@@ -2,8 +2,8 @@ declare module "dev.latvian.mods.kubejs.platform.forge.IngredientForgeHelper" {
 import { $InputItem } from "dev.latvian.mods.kubejs.item.InputItem"
 import { $CreativeModeTab$$Type } from "net.minecraft.world.item.CreativeModeTab"
 import { $Predicate$$Type } from "java.util.function.Predicate"
-import { $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 import { $UUID$$Type } from "java.util.UUID"
+import { $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 import { $IngredientPlatformHelper } from "dev.latvian.mods.kubejs.platform.IngredientPlatformHelper"
 import { $Pattern$$Type } from "java.util.regex.Pattern"
 import { $Ingredient, $Ingredient$$Type } from "net.minecraft.world.item.crafting.Ingredient"
@@ -13,8 +13,8 @@ constructor()
 
 public "and"(ingredients: $Ingredient$$Type[]): $Ingredient
 public "creativeTab"(tab: $CreativeModeTab$$Type): $Ingredient
-public "custom"(parent: $Ingredient$$Type, predicate: $Predicate$$Type<$ItemStack$$Type>): $Ingredient
 public "custom"(parent: $Ingredient$$Type, uuid: $UUID$$Type): $Ingredient
+public "custom"(parent: $Ingredient$$Type, predicate: $Predicate$$Type<$ItemStack$$Type>): $Ingredient
 public static "get"(): $IngredientPlatformHelper
 public "isWildcard"(ingredient: $Ingredient$$Type): boolean
 public "mod"(mod: string): $Ingredient

@@ -1,5 +1,4 @@
-import { $JeiRuntime } from "mezz.jei.library.runtime.JeiRuntime"
-
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
 declare global {
-export type ProbeJS$$ResolvedGlobal = {"jeiRuntime": $JeiRuntime};
+export type ProbeJS$$ResolvedGlobal = {};
 }

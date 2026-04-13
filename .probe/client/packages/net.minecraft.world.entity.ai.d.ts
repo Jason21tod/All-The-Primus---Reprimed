@@ -112,8 +112,8 @@ public "setSyncable"(boolean0: boolean): $Attribute
 public "ths"(): $Attribute
 public static "toBaseComponent"(attribute0: $Attribute$$Type, double1: double, double2: double, boolean3: boolean, tooltipFlag4: $TooltipFlag$$Type): $MutableComponent
 public "toBaseComponent"(double0: double, double1: double, boolean2: boolean, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
-public static "toComponent"(attribute0: $Attribute$$Type, attributeModifier1: $AttributeModifier$$Type, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
 public "toComponent"(attributeModifier0: $AttributeModifier$$Type, tooltipFlag1: $TooltipFlag$$Type): $MutableComponent
+public static "toComponent"(attribute0: $Attribute$$Type, attributeModifier1: $AttributeModifier$$Type, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
 public "toValueComponent"(operation0: $AttributeModifier$Operation$$Type, double1: double, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
 public static "toValueComponent"(attribute0: $Attribute$$Type, operation1: $AttributeModifier$Operation$$Type, double2: double, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
 get "baseUUID"(): $UUID
@@ -266,6 +266,7 @@ export type $SleepInBed$$Type = ($SleepInBed);
 
 declare module "net.minecraft.world.entity.ai.sensing.SensorType" {
 import { $VillagerHostilesSensor } from "net.minecraft.world.entity.ai.sensing.VillagerHostilesSensor"
+import { $MixinSensorType } from "forge.net.mca.mixin.MixinSensorType"
 import { $NearestItemSensor } from "net.minecraft.world.entity.ai.sensing.NearestItemSensor"
 import { $LivingEntity } from "net.minecraft.world.entity.LivingEntity"
 import { $IsInWaterSensor } from "net.minecraft.world.entity.ai.sensing.IsInWaterSensor"
@@ -288,7 +289,7 @@ import { $NearestBedSensor } from "net.minecraft.world.entity.ai.sensing.Nearest
 import { $DummySensor } from "net.minecraft.world.entity.ai.sensing.DummySensor"
 import { $HurtBySensor } from "net.minecraft.world.entity.ai.sensing.HurtBySensor"
 
-export class $SensorType<U extends $Sensor<any> = $Sensor<any>> {
+export class $SensorType<U extends $Sensor<any> = $Sensor<any>> implements $MixinSensorType {
 static readonly "AXOLOTL_ATTACKABLES": $SensorType<$AxolotlAttackablesSensor>
 static readonly "AXOLOTL_TEMPTATIONS": $SensorType<$TemptingSensor>
 static readonly "CAMEL_TEMPTATIONS": $SensorType<$TemptingSensor>
@@ -511,18 +512,21 @@ export type $JumpControl$$Type = ($JumpControl);
 }
 
 declare module "net.minecraft.world.entity.ai.memory.MemoryModuleType" {
-import { $NearestVisibleLivingEntities } from "net.minecraft.world.entity.ai.memory.NearestVisibleLivingEntities"
 import { $LivingEntity } from "net.minecraft.world.entity.LivingEntity"
 import { $Path } from "net.minecraft.world.level.pathfinder.Path"
 import { $Unit } from "net.minecraft.util.Unit"
 import { $AgeableMob } from "net.minecraft.world.entity.AgeableMob"
+import { $MixinMemoryModuleType } from "forge.net.mca.mixin.MixinMemoryModuleType"
+import { $AbstractPiglin } from "net.minecraft.world.entity.monster.piglin.AbstractPiglin"
+import { $DamageSource } from "net.minecraft.world.damagesource.DamageSource"
+import { $PositionTracker } from "net.minecraft.world.entity.ai.behavior.PositionTracker"
+import { $NearestVisibleLivingEntities } from "net.minecraft.world.entity.ai.memory.NearestVisibleLivingEntities"
 import { $Set } from "java.util.Set"
 import { $UUID } from "java.util.UUID"
 import { $ExpirableValue } from "net.minecraft.world.entity.ai.memory.ExpirableValue"
 import { $Player } from "net.minecraft.world.entity.player.Player"
 import { $Hoglin } from "net.minecraft.world.entity.monster.hoglin.Hoglin"
 import { $GlobalPos } from "net.minecraft.core.GlobalPos"
-import { $AbstractPiglin } from "net.minecraft.world.entity.monster.piglin.AbstractPiglin"
 import { $List } from "java.util.List"
 import { $WalkTarget } from "net.minecraft.world.entity.ai.memory.WalkTarget"
 import { $Entity } from "net.minecraft.world.entity.Entity"
@@ -530,12 +534,10 @@ import { $Codec, $Codec$$Type } from "com.mojang.serialization.Codec"
 import { $BlockPos } from "net.minecraft.core.BlockPos"
 import { $ItemEntity } from "net.minecraft.world.entity.item.ItemEntity"
 import { $Vec3 } from "net.minecraft.world.phys.Vec3"
-import { $DamageSource } from "net.minecraft.world.damagesource.DamageSource"
-import { $PositionTracker } from "net.minecraft.world.entity.ai.behavior.PositionTracker"
 import { $Optional, $Optional$$Type } from "java.util.Optional"
 import { $Mob } from "net.minecraft.world.entity.Mob"
 
-export class $MemoryModuleType<U = any> {
+export class $MemoryModuleType<U = any> implements $MixinMemoryModuleType {
 static readonly "ADMIRING_DISABLED": $MemoryModuleType<boolean>
 static readonly "ADMIRING_ITEM": $MemoryModuleType<boolean>
 static readonly "ANGRY_AT": $MemoryModuleType<$UUID>

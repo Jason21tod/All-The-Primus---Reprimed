@@ -33,8 +33,8 @@ public static "of"(style0: $Style$$Type): $StyleItf
 public "withBold"(boolean0: boolean): $Style
 public "withClickEvent"(clickEvent0: $ClickEvent$$Type): $Style
 public "withColor"(textColor0: $TextColor$$Type): $Style
-public "withColor"(chatFormatting0: $ChatFormatting$$Type): $Style
 public "withColor"(int0: integer): $Style
+public "withColor"(chatFormatting0: $ChatFormatting$$Type): $Style
 public "withFont"(resourceLocation0: $ResourceLocation$$Type): $Style
 public "withHoverEvent"(hoverEvent0: $HoverEvent$$Type): $Style
 public "withInsertion"(string0: string): $Style
@@ -68,8 +68,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $LastSeenMessages$Packed extends $Record {
 static readonly "EMPTY": $LastSeenMessages$Packed
 
-constructor(list0: $List$$Type<$MessageSignature$Packed$$Type>)
 constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
+constructor(list0: $List$$Type<$MessageSignature$Packed$$Type>)
 
 public "entries"(): $List<$MessageSignature$Packed>
 public "unpack"(messageSignatureCache0: $MessageSignatureCache$$Type): $Optional<$LastSeenMessages>
@@ -191,8 +191,8 @@ import { $Style$$Type } from "net.minecraft.network.chat.Style"
 
 export interface $ComponentContents {
 "resolve"(commandSourceStack0: $CommandSourceStack$$Type, entity1: $Entity$$Type, int2: integer): $MutableComponent
-"visit"<T>(styledContentConsumer0: $FormattedText$StyledContentConsumer$$Type<T>, style1: $Style$$Type): $Optional<T>
 "visit"<T>(contentConsumer0: $FormattedText$ContentConsumer$$Type<T>): $Optional<T>
+"visit"<T>(styledContentConsumer0: $FormattedText$StyledContentConsumer$$Type<T>, style1: $Style$$Type): $Optional<T>
 }
 
 export namespace $ComponentContents {
@@ -374,8 +374,8 @@ public "noColor"(): $MutableComponent
 public static "nullToEmpty"(string0: string): $Component
 public "obfuscated"(value: boolean): $MutableComponent
 public "obfuscated"(): $MutableComponent
-public static "of"(string0: string, style1: $Style$$Type): $FormattedText
 public static "of"(string0: string): $FormattedText
+public static "of"(string0: string, style1: $Style$$Type): $FormattedText
 public "plainCopy"(): $MutableComponent
 /** @deprecated */
 public "rawComponent"(): $MutableComponent
@@ -386,8 +386,8 @@ public static "score"(string0: string, string1: string): $MutableComponent
 public static "selector"(string0: string, optional1: $Optional$$Type<$Component$$Type>): $MutableComponent
 public "self"(): $MutableComponent
 public "setStyle"(style0: $Style$$Type): $MutableComponent
-public "strikethrough"(): $MutableComponent
 public "strikethrough"(value: boolean): $MutableComponent
+public "strikethrough"(): $MutableComponent
 public "toFlatList"(style0: $Style$$Type): $List<$Component>
 public "toFlatList"(): $List<$Component>
 public "toJson"(): $JsonElement
@@ -395,15 +395,15 @@ public static "translatable"(string0: string): $MutableComponent
 public static "translatable"(string0: string, ...object1s: any[]): $MutableComponent
 public static "translatableWithFallback"(string0: string, string1: string, ...object2s: any[]): $MutableComponent
 public static "translatableWithFallback"(string0: string, string1: string): $MutableComponent
-public "underlined"(): $MutableComponent
 public "underlined"(value: boolean): $MutableComponent
+public "underlined"(): $MutableComponent
 public "visit"<T>(contentConsumer0: $FormattedText$ContentConsumer$$Type<T>): $Optional<T>
 public "visit"<T>(styledContentConsumer0: $FormattedText$StyledContentConsumer$$Type<T>, style1: $Style$$Type): $Optional<T>
 public "white"(): $MutableComponent
 public "withStyle"(...chatFormatting0s: $ChatFormatting$$Type[]): $MutableComponent
-public "withStyle"(style0: $Style$$Type): $MutableComponent
-public "withStyle"(unaryOperator0: $UnaryOperator$$Type<$Style$$Type>): $MutableComponent
 public "withStyle"(chatFormatting0: $ChatFormatting$$Type): $MutableComponent
+public "withStyle"(unaryOperator0: $UnaryOperator$$Type<$Style$$Type>): $MutableComponent
+public "withStyle"(style0: $Style$$Type): $MutableComponent
 public "yellow"(): $MutableComponent
 get "contents"(): $ComponentContents
 get "siblings"(): $List<$Component>
@@ -434,8 +434,8 @@ const EMPTY: $FormattedText
 const STOP_ITERATION: $Optional<$Unit>
 function composite(list0: $List$$Type<$FormattedText$$Type>): $FormattedText
 function composite(...formattedText0s: $FormattedText$$Type[]): $FormattedText
-function of(string0: string, style1: $Style$$Type): $FormattedText
 function of(string0: string): $FormattedText
+function of(string0: string, style1: $Style$$Type): $FormattedText
 }
 export abstract class $FormattedText$$Static implements $FormattedText {
 static readonly "EMPTY": $FormattedText
@@ -443,8 +443,8 @@ static readonly "STOP_ITERATION": $Optional<$Unit>
 
 static "composite"(list0: $List$$Type<$FormattedText$$Type>): $FormattedText
 static "composite"(...formattedText0s: $FormattedText$$Type[]): $FormattedText
-static "of"(string0: string, style1: $Style$$Type): $FormattedText
 static "of"(string0: string): $FormattedText
+static "of"(string0: string, style1: $Style$$Type): $FormattedText
 }
 }
 
@@ -696,9 +696,9 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $MessageSignature$Packed extends $Record {
 static readonly "FULL_SIGNATURE": integer
 
-constructor(messageSignature0: $MessageSignature$$Type)
 constructor(int0: integer, messageSignature1: $MessageSignature$$Type)
 constructor(int0: integer)
+constructor(messageSignature0: $MessageSignature$$Type)
 
 public "fullSignature"(): $MessageSignature
 public "id"(): integer
@@ -812,8 +812,8 @@ function keybind(string0: string): $MutableComponent
 function literal(string0: string): $MutableComponent
 function nbt(string0: string, boolean1: boolean, optional2: $Optional$$Type<$Component$$Type>, dataSource3: $DataSource$$Type): $MutableComponent
 function nullToEmpty(string0: string): $Component
-function of(string0: string, style1: $Style$$Type): $FormattedText
 function of(string0: string): $FormattedText
+function of(string0: string, style1: $Style$$Type): $FormattedText
 function score(string0: string, string1: string): $MutableComponent
 function selector(string0: string, optional1: $Optional$$Type<$Component$$Type>): $MutableComponent
 function translatable(string0: string): $MutableComponent
@@ -829,8 +829,8 @@ static "keybind"(string0: string): $MutableComponent
 static "literal"(string0: string): $MutableComponent
 static "nbt"(string0: string, boolean1: boolean, optional2: $Optional$$Type<$Component$$Type>, dataSource3: $DataSource$$Type): $MutableComponent
 static "nullToEmpty"(string0: string): $Component
-static "of"(string0: string, style1: $Style$$Type): $FormattedText
 static "of"(string0: string): $FormattedText
+static "of"(string0: string, style1: $Style$$Type): $FormattedText
 static "score"(string0: string, string1: string): $MutableComponent
 static "selector"(string0: string, optional1: $Optional$$Type<$Component$$Type>): $MutableComponent
 static "translatable"(string0: string): $MutableComponent
@@ -891,8 +891,8 @@ readonly "type": $EntityType<any>
 
 constructor(entityType0: $EntityType$$Type<any>, uUID1: $UUID$$Type, component2: $Component$$Type)
 
-public static "create"(jsonElement0: $JsonElement$$Type): $HoverEvent$EntityTooltipInfo
 public static "create"(component0: $Component$$Type): $HoverEvent$EntityTooltipInfo
+public static "create"(jsonElement0: $JsonElement$$Type): $HoverEvent$EntityTooltipInfo
 public "getTooltipLines"(): $List<$Component>
 public "serialize"(): $JsonElement
 get "tooltipLines"(): $List<$Component>

@@ -316,12 +316,12 @@ import { $IdEnumerationIterator } from "dev.latvian.mods.rhino.IdEnumerationIter
 import { $Class$$Type } from "java.lang.Class"
 
 export interface $Scriptable extends $IdEnumerationIterator {
-"delete"(context0: $Context$$Type, int1: integer): void
 "delete"(context0: $Context$$Type, string1: string): void
+"delete"(context0: $Context$$Type, int1: integer): void
 "enumerationIteratorHasNext"(cx: $Context$$Type, currentId: $Consumer$$Type<any>): boolean
 "enumerationIteratorNext"(cx: $Context$$Type, currentId: $Consumer$$Type<any>): boolean
-"get"(context0: $Context$$Type, string1: string, scriptable2: $Scriptable$$Type): any
 "get"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type): any
+"get"(context0: $Context$$Type, string1: string, scriptable2: $Scriptable$$Type): any
 "getAllIds"(cx: $Context$$Type): any[]
 "getClassName"(): string
 "getDefaultValue"(context0: $Context$$Type, class1: $Class$$Type<any>): any
@@ -332,8 +332,8 @@ export interface $Scriptable extends $IdEnumerationIterator {
 "has"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type): boolean
 "has"(context0: $Context$$Type, string1: string, scriptable2: $Scriptable$$Type): boolean
 "hasInstance"(context0: $Context$$Type, scriptable1: $Scriptable$$Type): boolean
-"put"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type, object3: any): void
 "put"(context0: $Context$$Type, string1: string, scriptable2: $Scriptable$$Type, object3: any): void
+"put"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type, object3: any): void
 "setParentScope"(scriptable0: $Scriptable$$Type): void
 "setPrototype"(scriptable0: $Scriptable$$Type): void
 get "className"(): string
@@ -380,8 +380,8 @@ import { $ScriptableObject$$Type } from "dev.latvian.mods.rhino.ScriptableObject
 import { $Symbol$$Type } from "dev.latvian.mods.rhino.Symbol"
 
 export class $NativeJavaObject implements $Scriptable, $SymbolScriptable, $Wrapper {
-constructor(scope: $Scriptable$$Type, javaObject: any, staticType: $Class$$Type<any>, cx: $Context$$Type)
 constructor(scope: $Scriptable$$Type, javaObject: any, staticType: $Class$$Type<any>, isAdapter: boolean, cx: $Context$$Type)
+constructor(scope: $Scriptable$$Type, javaObject: any, staticType: $Class$$Type<any>, cx: $Context$$Type)
 constructor()
 
 public "addCustomProperty"(name: string, getter: $CustomProperty$$Type): void
@@ -392,8 +392,8 @@ public "delete"(cx: $Context$$Type, index: integer): void
 public "delete"(cx: $Context$$Type, name: string): void
 public "enumerationIteratorHasNext"(cx: $Context$$Type, currentId: $Consumer$$Type<any>): boolean
 public "enumerationIteratorNext"(cx: $Context$$Type, currentId: $Consumer$$Type<any>): boolean
-public "get"(cx: $Context$$Type, index: integer, start: $Scriptable$$Type): any
 public "get"(cx: $Context$$Type, name: string, start: $Scriptable$$Type): any
+public "get"(cx: $Context$$Type, index: integer, start: $Scriptable$$Type): any
 public "get"(cx: $Context$$Type, key: $Symbol$$Type, start: $Scriptable$$Type): any
 public "getAllIds"(cx: $Context$$Type): any[]
 public "getClassName"(): string
@@ -402,13 +402,13 @@ public "getIds"(cx: $Context$$Type): any[]
 public "getParentScope"(): $Scriptable
 public "getPrototype"(cx: $Context$$Type): $Scriptable
 public "getTypeOf"(): $MemberType
-public "has"(cx: $Context$$Type, key: $Symbol$$Type, start: $Scriptable$$Type): boolean
 public "has"(cx: $Context$$Type, name: string, start: $Scriptable$$Type): boolean
+public "has"(cx: $Context$$Type, key: $Symbol$$Type, start: $Scriptable$$Type): boolean
 public "has"(cx: $Context$$Type, index: integer, start: $Scriptable$$Type): boolean
 public "hasInstance"(cx: $Context$$Type, value: $Scriptable$$Type): boolean
 public "put"(cx: $Context$$Type, name: string, start: $Scriptable$$Type, value: any): void
-public "put"(cx: $Context$$Type, symbol: $Symbol$$Type, start: $Scriptable$$Type, value: any): void
 public "put"(cx: $Context$$Type, index: integer, start: $Scriptable$$Type, value: any): void
+public "put"(cx: $Context$$Type, symbol: $Symbol$$Type, start: $Scriptable$$Type, value: any): void
 public "setParentScope"(m: $Scriptable$$Type): void
 public "setPrototype"(m: $Scriptable$$Type): void
 public "unwrap"(): any
@@ -471,8 +471,8 @@ import { $Symbol$$Type } from "dev.latvian.mods.rhino.Symbol"
 import { $ScriptableObject } from "dev.latvian.mods.rhino.ScriptableObject"
 
 export class $IdScriptableObject extends $ScriptableObject implements $IdFunctionCall {
-constructor(scope: $Scriptable$$Type, prototype: $Scriptable$$Type)
 constructor()
+constructor(scope: $Scriptable$$Type, prototype: $Scriptable$$Type)
 
 public "activatePrototypeMap"(maxPrototypeId: integer): void
 public "enumerationIteratorHasNext"(cx: $Context$$Type, currentId: $Consumer$$Type<any>): boolean
@@ -481,11 +481,11 @@ public "execIdCall"(f: $IdFunctionObject$$Type, cx: $Context$$Type, scope: $Scri
 public "exportAsJSClass"(maxPrototypeId: integer, scope: $Scriptable$$Type, sealed: boolean, cx: $Context$$Type): $IdFunctionObject
 public "hasPrototypeMap"(): boolean
 public "initPrototypeConstructor"(f: $IdFunctionObject$$Type, cx: $Context$$Type): void
-public "initPrototypeMethod"(tag: any, id: integer, name: string, arity: integer, cx: $Context$$Type): $IdFunctionObject
-public "initPrototypeMethod"(tag: any, id: integer, key: $Symbol$$Type, functionName: string, arity: integer, cx: $Context$$Type): $IdFunctionObject
 public "initPrototypeMethod"(tag: any, id: integer, propertyName: string, functionName: string, arity: integer, cx: $Context$$Type): $IdFunctionObject
-public "initPrototypeValue"(id: integer, name: string, value: any, attributes: integer): void
+public "initPrototypeMethod"(tag: any, id: integer, key: $Symbol$$Type, functionName: string, arity: integer, cx: $Context$$Type): $IdFunctionObject
+public "initPrototypeMethod"(tag: any, id: integer, name: string, arity: integer, cx: $Context$$Type): $IdFunctionObject
 public "initPrototypeValue"(id: integer, key: $Symbol$$Type, value: any, attributes: integer): void
+public "initPrototypeValue"(id: integer, name: string, value: any, attributes: integer): void
 }
 }
 
@@ -514,8 +514,8 @@ import { $ClassLoader, $ClassLoader$$Type } from "java.lang.ClassLoader"
 export class $Context {
 readonly "lock": any
 
-public "addCustomJavaToJsWrapper"<T>(type: $Class$$Type<T>, provider: $CustomJavaToJsWrapperProvider$$Type<T>): void
 public "addCustomJavaToJsWrapper"<T>(predicate: $Predicate$$Type<T>, provider: $CustomJavaToJsWrapperProvider$$Type<T>): void
+public "addCustomJavaToJsWrapper"<T>(type: $Class$$Type<T>, provider: $CustomJavaToJsWrapperProvider$$Type<T>): void
 public "addToScope"(scope: $Scriptable$$Type, name: string, value: any): void
 public "callSync"(callable: $Callable$$Type, scope: $Scriptable$$Type, thisObj: $Scriptable$$Type, args: any[]): any
 public "compileReader"(in_: $Reader$$Type, sourceName: string, lineno: integer, securityDomain: any): $Script
@@ -544,26 +544,26 @@ public static "getUndefinedValue"(): any
 public "getWrapFactory"(): $WrapFactory
 public "hasTopCallScope"(): boolean
 public "hasTypeWrappers"(): boolean
-public "initSafeStandardObjects"(): $ScriptableObject
 public "initSafeStandardObjects"(scope: $ScriptableObject$$Type, sealed: boolean): $ScriptableObject
+public "initSafeStandardObjects"(): $ScriptableObject
 public "initSafeStandardObjects"(scope: $ScriptableObject$$Type): $Scriptable
+public "initStandardObjects"(scope: $ScriptableObject$$Type, sealed: boolean): $ScriptableObject
 public "initStandardObjects"(): $ScriptableObject
 public "initStandardObjects"(scope: $ScriptableObject$$Type): $Scriptable
-public "initStandardObjects"(scope: $ScriptableObject$$Type, sealed: boolean): $ScriptableObject
 public "isStrictMode"(): boolean
 public static "javaToJS"(cx: $Context$$Type, value: any, scope: $Scriptable$$Type): any
 public static "jsToJava"(cx: $Context$$Type, value: any, desiredType: $Class$$Type<any>): any
 public "lastStoredScriptable"(): $Scriptable
-public "newArray"(scope: $Scriptable$$Type, length: integer): $Scriptable
 public "newArray"(scope: $Scriptable$$Type, elements: any[]): $Scriptable
+public "newArray"(scope: $Scriptable$$Type, length: integer): $Scriptable
 public "newClassSerialNumber"(): integer
-public "newObject"(scope: $Scriptable$$Type): $Scriptable
-public "newObject"(scope: $Scriptable$$Type, constructorName: string): $Scriptable
 public "newObject"(scope: $Scriptable$$Type, constructorName: string, args: any[]): $Scriptable
+public "newObject"(scope: $Scriptable$$Type, constructorName: string): $Scriptable
+public "newObject"(scope: $Scriptable$$Type): $Scriptable
 public "putThreadLocal"(key: any, value: any): void
 public "removeThreadLocal"(key: any): void
-public static "reportError"(cx: $Context$$Type, message: string, lineno: integer, lineSource: string, lineOffset: integer, sourceName: string): void
 public static "reportError"(cx: $Context$$Type, message: string): void
+public static "reportError"(cx: $Context$$Type, message: string, lineno: integer, lineSource: string, lineOffset: integer, sourceName: string): void
 public static "reportRuntimeError"(cx: $Context$$Type, message: string, sourceName: string, lineno: integer, lineSource: string, lineOffset: integer): $EvaluatorException
 public static "reportRuntimeError"(message: string, cx: $Context$$Type): $EvaluatorException
 public static "reportRuntimeError0"(messageId: string, cx: $Context$$Type): $EvaluatorException
@@ -571,8 +571,8 @@ public static "reportRuntimeError1"(messageId: string, object1: any, cx: $Contex
 public static "reportRuntimeError2"(messageId: string, object1: any, object2: any, cx: $Context$$Type): $EvaluatorException
 public static "reportRuntimeError3"(messageId: string, object1: any, object2: any, object3: any, cx: $Context$$Type): $EvaluatorException
 public static "reportRuntimeError4"(messageId: string, object1: any, object2: any, object3: any, object4: any, cx: $Context$$Type): $EvaluatorException
-public static "reportWarning"(message: string, cx: $Context$$Type): void
 public static "reportWarning"(cx: $Context$$Type, message: string, sourceName: string, lineno: integer, lineSource: string, lineOffset: integer): void
+public static "reportWarning"(message: string, cx: $Context$$Type): void
 public "setApplicationClassLoader"(loader: $ClassLoader$$Type): void
 public "setClassShutter"(shutter: $ClassShutter$$Type): void
 public "setGenerateObserverCount"(generateObserverCount: boolean): void
@@ -892,8 +892,8 @@ import { $ScriptStackElement } from "dev.latvian.mods.rhino.ScriptStackElement"
 export class $RhinoException extends $RuntimeException {
 public "columnNumber"(): integer
 public "details"(): string
-public "getScriptStack"(): $ScriptStackElement[]
 public "getScriptStack"(limit: integer, hideFunction: string): $ScriptStackElement[]
+public "getScriptStack"(): $ScriptStackElement[]
 public "getScriptStackTrace"(): string
 public "getScriptStackTrace"(limit: integer, functionName: string): string
 public "initColumnNumber"(columnNumber: integer): void
@@ -931,12 +931,12 @@ import { $Callable } from "dev.latvian.mods.rhino.Callable"
 export interface $Function extends $Scriptable, $Callable {
 "call"(context0: $Context$$Type, scriptable1: $Scriptable$$Type, scriptable2: $Scriptable$$Type, object3s: any[]): any
 "construct"(context0: $Context$$Type, scriptable1: $Scriptable$$Type, object2s: any[]): $Scriptable
-"delete"(context0: $Context$$Type, int1: integer): void
 "delete"(context0: $Context$$Type, string1: string): void
+"delete"(context0: $Context$$Type, int1: integer): void
 "enumerationIteratorHasNext"(cx: $Context$$Type, currentId: $Consumer$$Type<any>): boolean
 "enumerationIteratorNext"(cx: $Context$$Type, currentId: $Consumer$$Type<any>): boolean
-"get"(context0: $Context$$Type, string1: string, scriptable2: $Scriptable$$Type): any
 "get"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type): any
+"get"(context0: $Context$$Type, string1: string, scriptable2: $Scriptable$$Type): any
 "getAllIds"(cx: $Context$$Type): any[]
 "getClassName"(): string
 "getDefaultValue"(context0: $Context$$Type, class1: $Class$$Type<any>): any
@@ -947,8 +947,8 @@ export interface $Function extends $Scriptable, $Callable {
 "has"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type): boolean
 "has"(context0: $Context$$Type, string1: string, scriptable2: $Scriptable$$Type): boolean
 "hasInstance"(context0: $Context$$Type, scriptable1: $Scriptable$$Type): boolean
-"put"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type, object3: any): void
 "put"(context0: $Context$$Type, string1: string, scriptable2: $Scriptable$$Type, object3: any): void
+"put"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type, object3: any): void
 "setParentScope"(scriptable0: $Scriptable$$Type): void
 "setPrototype"(scriptable0: $Scriptable$$Type): void
 get "className"(): string
@@ -1087,8 +1087,8 @@ static readonly "PERMANENT": integer
 static readonly "READONLY": integer
 static readonly "UNINITIALIZED_CONST": integer
 
-constructor()
 constructor(scope: $Scriptable$$Type, prototype: $Scriptable$$Type)
+constructor()
 
 public "associateValue"(key: any, value: any): any
 public "avoidObjectDetection"(): boolean
@@ -1102,9 +1102,9 @@ public "defineOwnProperties"(cx: $Context$$Type, props: $ScriptableObject$$Type)
 public "defineOwnProperty"(cx: $Context$$Type, id: any, desc: $ScriptableObject$$Type): void
 public "defineProperty"(cx: $Context$$Type, propertyName: string, delegateTo: any, getter: $WrappedExecutable$$Type, setter: $WrappedExecutable$$Type, attributes: integer): void
 public static "defineProperty"(destination: $Scriptable$$Type, propertyName: string, value: any, attributes: integer, cx: $Context$$Type): void
-public "defineProperty"(cx: $Context$$Type, key: $Symbol$$Type, value: any, attributes: integer): void
-public "defineProperty"(cx: $Context$$Type, propertyName: string, value: any, attributes: integer): void
 public "defineProperty"(cx: $Context$$Type, propertyName: string, clazz: $Class$$Type<any>, attributes: integer): void
+public "defineProperty"(cx: $Context$$Type, propertyName: string, value: any, attributes: integer): void
+public "defineProperty"(cx: $Context$$Type, key: $Symbol$$Type, value: any, attributes: integer): void
 public "delete"(cx: $Context$$Type, key: $Symbol$$Type): void
 public "delete"(cx: $Context$$Type, index: integer): void
 public "delete"(cx: $Context$$Type, name: string): void
@@ -1112,15 +1112,15 @@ public static "deleteProperty"(obj: $Scriptable$$Type, name: string, cx: $Contex
 public static "deleteProperty"(obj: $Scriptable$$Type, index: integer, cx: $Context$$Type): boolean
 public "enumerationIteratorHasNext"(cx: $Context$$Type, currentId: $Consumer$$Type<any>): boolean
 public "enumerationIteratorNext"(cx: $Context$$Type, currentId: $Consumer$$Type<any>): boolean
+public "get"(cx: $Context$$Type, key: $Symbol$$Type, start: $Scriptable$$Type): any
+public "get"(cx: $Context$$Type, index: integer, start: $Scriptable$$Type): any
 public "get"(cx: $Context$$Type, name: string, start: $Scriptable$$Type): any
 public "get"(cx: $Context$$Type, key: any): any
-public "get"(cx: $Context$$Type, index: integer, start: $Scriptable$$Type): any
-public "get"(cx: $Context$$Type, key: $Symbol$$Type, start: $Scriptable$$Type): any
 public "getAllIds"(cx: $Context$$Type): any[]
 public static "getArrayPrototype"(scope: $Scriptable$$Type, cx: $Context$$Type): $Scriptable
 public "getAssociatedValue"(key: any): any
-public "getAttributes"(cx: $Context$$Type, sym: $Symbol$$Type): integer
 public "getAttributes"(cx: $Context$$Type, index: integer): integer
+public "getAttributes"(cx: $Context$$Type, sym: $Symbol$$Type): integer
 public "getAttributes"(cx: $Context$$Type, name: string): integer
 public "getClassName"(): string
 public static "getClassPrototype"(scope: $Scriptable$$Type, className: string, cx: $Context$$Type): $Scriptable
@@ -1147,26 +1147,26 @@ public "has"(cx: $Context$$Type, index: integer, start: $Scriptable$$Type): bool
 public "has"(cx: $Context$$Type, name: string, start: $Scriptable$$Type): boolean
 public "hasInstance"(cx: $Context$$Type, instance: $Scriptable$$Type): boolean
 public static "hasProperty"(obj: $Scriptable$$Type, key: $Symbol$$Type, cx: $Context$$Type): boolean
-public static "hasProperty"(obj: $Scriptable$$Type, name: string, cx: $Context$$Type): boolean
 public static "hasProperty"(obj: $Scriptable$$Type, index: integer, cx: $Context$$Type): boolean
+public static "hasProperty"(obj: $Scriptable$$Type, name: string, cx: $Context$$Type): boolean
 public "isConst"(name: string): boolean
 public "isEmpty"(): boolean
 public "isExtensible"(): boolean
 public "isSealed"(cx: $Context$$Type): boolean
 public "preventExtensions"(): void
-public "put"(cx: $Context$$Type, key: $Symbol$$Type, start: $Scriptable$$Type, value: any): void
 public "put"(cx: $Context$$Type, index: integer, start: $Scriptable$$Type, value: any): void
+public "put"(cx: $Context$$Type, key: $Symbol$$Type, start: $Scriptable$$Type, value: any): void
 public "put"(cx: $Context$$Type, name: string, start: $Scriptable$$Type, value: any): void
 public "putConst"(cx: $Context$$Type, name: string, start: $Scriptable$$Type, value: any): void
 public static "putConstProperty"(obj: $Scriptable$$Type, name: string, value: any, cx: $Context$$Type): void
-public static "putProperty"(obj: $Scriptable$$Type, name: string, value: any, cx: $Context$$Type): void
 public static "putProperty"(obj: $Scriptable$$Type, index: integer, value: any, cx: $Context$$Type): void
 public static "putProperty"(obj: $Scriptable$$Type, key: $Symbol$$Type, value: any, cx: $Context$$Type): void
+public static "putProperty"(obj: $Scriptable$$Type, name: string, value: any, cx: $Context$$Type): void
 public static "redefineProperty"(obj: $Scriptable$$Type, name: string, isConst: boolean, cx: $Context$$Type): void
 public "sealObject"(cx: $Context$$Type): void
-public "setAttributes"(cx: $Context$$Type, index: integer, attributes: integer): void
-public "setAttributes"(cx: $Context$$Type, key: $Symbol$$Type, attributes: integer): void
 public "setAttributes"(cx: $Context$$Type, name: string, attributes: integer): void
+public "setAttributes"(cx: $Context$$Type, key: $Symbol$$Type, attributes: integer): void
+public "setAttributes"(cx: $Context$$Type, index: integer, attributes: integer): void
 public "setExternalArrayData"(cx: $Context$$Type, array: $ExternalArrayData$$Type): void
 public "setGetterOrSetter"(cx: $Context$$Type, name: string, index: integer, getterOrSetter: $Callable$$Type, isSetter: boolean): void
 public "setParentScope"(m: $Scriptable$$Type): void
@@ -1194,8 +1194,8 @@ import { $Class$$Type } from "java.lang.Class"
 import { $RuntimeException } from "java.lang.RuntimeException"
 
 export class $IdFunctionObject extends $BaseFunction {
-constructor(idcall: $IdFunctionCall$$Type, tag: any, id: integer, arity: integer)
 constructor(idcall: $IdFunctionCall$$Type, tag: any, id: integer, name: string, arity: integer, scope: $Scriptable$$Type)
+constructor(idcall: $IdFunctionCall$$Type, tag: any, id: integer, arity: integer)
 
 public "addAsProperty"(target: $Scriptable$$Type, cx: $Context$$Type): void
 public "delete"(context0: $Context$$Type, int1: integer): void
@@ -1283,8 +1283,8 @@ function isTagCollection(o: any): boolean
 function isTagCompound(o: any): boolean
 function l(v: long): $Tag
 function la(v: long[]): $Tag
-function listTag(): $Tag
 function listTag(list: $List$$Type<any>): $Tag
+function listTag(): $Tag
 function longArrayTag(v: long[]): $Tag
 function longTag(v: long): $Tag
 function quoteAndEscapeForJS(stringBuilder: $StringBuilder$$Type, string: string): void
@@ -1325,8 +1325,8 @@ static "isTagCollection"(o: any): boolean
 static "isTagCompound"(o: any): boolean
 static "l"(v: long): $Tag
 static "la"(v: long[]): $Tag
-static "listTag"(): $Tag
 static "listTag"(list: $List$$Type<any>): $Tag
+static "listTag"(): $Tag
 static "longArrayTag"(v: long[]): $Tag
 static "longTag"(v: long): $Tag
 static "quoteAndEscapeForJS"(stringBuilder: $StringBuilder$$Type, string: string): void

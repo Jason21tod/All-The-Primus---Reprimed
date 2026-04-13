@@ -19,14 +19,14 @@ public "player"(): $LocalPlayer
 public "pos"(): $BlockPos
 public "stack"(): $ItemStack
 public "tintIndex"(): integer
+public "with"(localPlayer0: $LocalPlayer$$Type): $BlockVisualizer$Context
 public "with"(blockPos0: $BlockPos$$Type): $BlockVisualizer$Context
 public "with"(clientLevel0: $ClientLevel$$Type): $BlockVisualizer$Context
-public "with"(interactionHand0: $InteractionHand$$Type): $BlockVisualizer$Context
 public "with"(blockState0: $BlockState$$Type): $BlockVisualizer$Context
+public "with"(interactionHand0: $InteractionHand$$Type): $BlockVisualizer$Context
 public "with"(itemStack0: $ItemStack$$Type): $BlockVisualizer$Context
 public "with"(direction0: $Direction$$Type): $BlockVisualizer$Context
 public "with"(int0: integer): $BlockVisualizer$Context
-public "with"(localPlayer0: $LocalPlayer$$Type): $BlockVisualizer$Context
 }
 }
 

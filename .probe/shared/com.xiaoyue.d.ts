@@ -6,8 +6,8 @@ import { $RandomSource } from "net.minecraft.util.RandomSource"
 import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 
 export class $DamageItemEvent extends $Event implements $EventItf {
-constructor(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type, int2: integer)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type, int2: integer)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -47,8 +47,8 @@ import { $LivingEvent$LivingJumpEvent } from "net.minecraftforge.event.entity.li
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $LivingJumpEvent extends $Event implements $EventItf {
-constructor()
 constructor(livingEntity0: $LivingEntity$$Type, float1: float)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

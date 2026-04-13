@@ -1,0 +1,108 @@
+{
+    "type": "origins:multiple",
+    "on_hit": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:chance",
+                "chance": 0.3,
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "majruszsdifficulty:bleeding",
+                        "duration": 300,
+                        "amplifier": 3
+                    }
+                }
+            }
+        }
+    },
+    "cooldown": {
+        "type":"origins:cooldown",
+        "cooldown": 400,
+        "hud_render": {
+                "should_render": true,
+                "bar_index": 1
+            }
+    },
+    "ferocity":{
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.attack_speed",
+            "value": 0.3,
+            "operation": "multiply_base"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource":"*:*_cooldown",
+            "comparison": ">=",
+            "compare_to": 290
+        }
+    },
+    "see_bleed": {
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 26,
+            "block": false,
+            "entity": true,
+            "shape_type": "visual",
+            "fluid_handling": "any",
+            "bientity_action": {
+                "type":"origins:and",
+                "actions":[    
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effect": {
+                                "effect":"minecraft:glowing",
+                                "duration":300
+                            }
+                        }
+                    },
+                    {
+                        "type":"origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:actor_action",
+                                "action": {
+                                    "type":"origins:apply_effect",
+                                    "effects": [
+                                        {
+                                            "effect": "minecraft:speed",
+                                            "duration": 60,
+                                            "amplifier": 4
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "origins:actor_action",
+                                "action": {
+                                    "type": "origins:trigger_cooldown",
+                                    "power": "*:*_cooldown"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:status_effect",
+                    "effect":"majruszsdifficulty:bleeding"
+                }
+            }
+        },
+        "condition":{
+            "type": "origins:resource",
+            "resource":"*:*_cooldown",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    }
+}

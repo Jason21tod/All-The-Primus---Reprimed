@@ -50,17 +50,17 @@ public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "equals"(object0: any): boolean
 public "hashCode"(): integer
 public "keySet"(): $Set<string>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 }
 }
@@ -229,18 +229,18 @@ public "getIds"(context0: $Context$$Type): any[]
 public "getParentScope"(): $Scriptable
 public "getPrototype"(context0: $Context$$Type): $Scriptable
 public "has"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type): boolean
-public "hasListeners"(): boolean
 public "hasListeners"(extraId: any): boolean
+public "hasListeners"(): boolean
 public "hasResult"(): $EventHandler
 public "listen"(type: $ScriptType$$Type, extraId: any, handler: $IEventHandler$$Type): void
-public "post"(type: $ScriptTypeHolder$$Type, extraId: any, event: $EventJS$$Type, exh: $EventExceptionHandler$$Type): $EventResult
-public "post"(event: $EventJS$$Type, extraId: any, exh: $EventExceptionHandler$$Type): $EventResult
 public "post"(type: $ScriptTypeHolder$$Type, extraId: any, event: $EventJS$$Type): $EventResult
+public "post"(event: $EventJS$$Type, extraId: any, exh: $EventExceptionHandler$$Type): $EventResult
+public "post"(event: $EventJS$$Type, extraId: any): $EventResult
+public "post"(scriptType: $ScriptTypeHolder$$Type, event: $EventJS$$Type, exh: $EventExceptionHandler$$Type): $EventResult
+public "post"(type: $ScriptTypeHolder$$Type, extraId: any, event: $EventJS$$Type, exh: $EventExceptionHandler$$Type): $EventResult
 public "post"(event: $EventJS$$Type): boolean
 public "post"(extraId: any, event: $EventJS$$Type): boolean
 public "post"(scriptType: $ScriptTypeHolder$$Type, event: $EventJS$$Type): $EventResult
-public "post"(scriptType: $ScriptTypeHolder$$Type, event: $EventJS$$Type, exh: $EventExceptionHandler$$Type): $EventResult
-public "post"(event: $EventJS$$Type, extraId: any): $EventResult
 public "put"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type, object3: any): void
 public "setParentScope"(scriptable0: $Scriptable$$Type): void
 public "setPrototype"(scriptable0: $Scriptable$$Type): void

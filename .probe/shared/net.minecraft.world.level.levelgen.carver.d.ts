@@ -11,9 +11,9 @@ public "getBarrierState"(): $BlockState
 public "getLavaState"(): $BlockState
 public "getWaterState"(): $BlockState
 public "isDebugMode"(): boolean
-public static "of"(boolean0: boolean, blockState1: $BlockState$$Type): $CarverDebugSettings
-public static "of"(blockState0: $BlockState$$Type, blockState1: $BlockState$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type): $CarverDebugSettings
 public static "of"(boolean0: boolean, blockState1: $BlockState$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, blockState4: $BlockState$$Type): $CarverDebugSettings
+public static "of"(blockState0: $BlockState$$Type, blockState1: $BlockState$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type): $CarverDebugSettings
+public static "of"(boolean0: boolean, blockState1: $BlockState$$Type): $CarverDebugSettings
 get "airState"(): $BlockState
 get "barrierState"(): $BlockState
 get "lavaState"(): $BlockState

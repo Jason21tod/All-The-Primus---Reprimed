@@ -73,7 +73,7 @@ import { $VoxelShape, $VoxelShape$$Type } from "net.minecraft.world.phys.shapes.
 import { $VisionDuck } from "net.lixir.vminus.vision.VisionDuck"
 import { $EntityType$$Type } from "net.minecraft.world.entity.EntityType"
 import { $BlockState, $BlockState$$Type } from "net.minecraft.world.level.block.state.BlockState"
-import { $BlockDefinition$$Type } from "net.lixir.vminus.api.registry.definition.BlockDefinition"
+import { $BlockDefinition, $BlockDefinition$$Type } from "net.lixir.vminus.api.registry.definition.BlockDefinition"
 import { $ServerLevel$$Type } from "net.minecraft.server.level.ServerLevel"
 import { $MutableComponent } from "net.minecraft.network.chat.MutableComponent"
 import { $PushReaction } from "net.minecraft.world.level.material.PushReaction"
@@ -157,8 +157,8 @@ public "getBlockStates"(): $List<$BlockState>
 public "getCloneItemStack"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type): $ItemStack
 public "getCloneItemStack"(blockState0: $BlockState$$Type, hitResult1: $HitResult$$Type, blockGetter2: $BlockGetter$$Type, blockPos3: $BlockPos$$Type, player4: $Player$$Type): $ItemStack
 public "getDescriptionId"(): string
-public static "getDrops"(blockState0: $BlockState$$Type, serverLevel1: $ServerLevel$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type, entity4: $Entity$$Type, itemStack5: $ItemStack$$Type): $List<$ItemStack>
 public static "getDrops"(blockState0: $BlockState$$Type, serverLevel1: $ServerLevel$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type): $List<$ItemStack>
+public static "getDrops"(blockState0: $BlockState$$Type, serverLevel1: $ServerLevel$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type, entity4: $Entity$$Type, itemStack5: $ItemStack$$Type): $List<$ItemStack>
 public "getEnchantPowerBonus"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): float
 public "getExpDrop"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, randomSource2: $RandomSource$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): integer
 /** @deprecated */
@@ -187,8 +187,8 @@ public "getStateForPlacement"(blockPlaceContext0: $BlockPlaceContext$$Type): $Bl
 public "getToolModifiedState"(blockState0: $BlockState$$Type, useOnContext1: $UseOnContext$$Type, toolAction2: $ToolAction$$Type, boolean3: boolean): $BlockState
 public "getWeakChanges"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
 public "handlePrecipitation"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, precipitation3: $Biome$Precipitation$$Type): void
-public "handler$gnp000$l2complements$spawnDestroyParticles$cancelParticle"(level0: $Level$$Type, player1: $Player$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type, callbackInfo4: $CallbackInfo$$Type): void
-public "handler$gpo000$spawnParticles"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, randomSource3: $RandomSource$$Type, callbackInfo4: $CallbackInfo$$Type): void
+public "handler$gpd000$l2complements$spawnDestroyParticles$cancelParticle"(level0: $Level$$Type, player1: $Player$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type, callbackInfo4: $CallbackInfo$$Type): void
+public "handler$hbc000$spawnParticles"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, randomSource3: $RandomSource$$Type, callbackInfo4: $CallbackInfo$$Type): void
 public "handler$zck000$additionalEntityAttributes$saveBreakingPlayer"(level0: $Level$$Type, player1: $Player$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type, blockEntity4: $BlockEntity$$Type, itemStack5: $ItemStack$$Type, callbackInfo6: $CallbackInfo$$Type): void
 public "hasDynamicShape"(): boolean
 public "hidesNeighborFace"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, direction4: $Direction$$Type): boolean
@@ -245,8 +245,9 @@ public "stepOn"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $
 public "supportsExternalFaceHiding"(blockState0: $BlockState$$Type): boolean
 public "updateEntityAfterFallOn"(blockGetter0: $BlockGetter$$Type, entity1: $Entity$$Type): void
 public static "updateFromNeighbourShapes"(blockState0: $BlockState$$Type, levelAccessor1: $LevelAccessor$$Type, blockPos2: $BlockPos$$Type): $BlockState
-public static "updateOrDestroy"(blockState0: $BlockState$$Type, blockState1: $BlockState$$Type, levelAccessor2: $LevelAccessor$$Type, blockPos3: $BlockPos$$Type, int4: integer): void
 public static "updateOrDestroy"(blockState0: $BlockState$$Type, blockState1: $BlockState$$Type, levelAccessor2: $LevelAccessor$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): void
+public static "updateOrDestroy"(blockState0: $BlockState$$Type, blockState1: $BlockState$$Type, levelAccessor2: $LevelAccessor$$Type, blockPos3: $BlockPos$$Type, int4: integer): void
+public "vMinus$getDefinition"(): $BlockDefinition
 public "vMinus$setDefinition"(blockDefinition0: $BlockDefinition$$Type): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void

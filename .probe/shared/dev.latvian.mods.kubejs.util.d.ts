@@ -12,17 +12,17 @@ public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "equals"(object0: any): boolean
 public "getParent"(): T
 public "hashCode"(): integer
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V, k18: K, v19: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V, k16: K, v17: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V, k14: K, v15: V): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V, k12: K, v13: V): $Map<K, V>
-public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
+public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V): $Map<K, V>
 public static "ofEntries"<K, V>(...entry0s: $Map$Entry$$Type<K, V>[]): $Map<K, V>
 get "parent"(): T
 }
@@ -266,14 +266,14 @@ constructor(m: $ScriptType$$Type, log: $Logger$$Type)
 
 public "debug"(message: any): $ConsoleLine
 public "debugf"(message: string, ...args: any[]): $ConsoleLine
+public "error"(message: any): $ConsoleLine
 public "error"(message: string, throwable: $Throwable$$Type): $ConsoleLine
 public "error"(message: string, error: $Throwable$$Type, exitPattern: $Pattern$$Type): $ConsoleLine
-public "error"(message: any): $ConsoleLine
 public "errorf"(message: string, ...args: any[]): $ConsoleLine
 public "errorsComponent"(command: string): $Component
 public "flush"(sync: boolean): void
-public static "getCurrent"(cx: $Context$$Type): $ConsoleJS
 public static "getCurrent"(def: $ConsoleJS$$Type): $ConsoleJS
+public static "getCurrent"(cx: $Context$$Type): $ConsoleJS
 public "getDebugEnabled"(): boolean
 public "getLogger"(): $Logger
 public "getMuted"(): boolean
@@ -285,8 +285,8 @@ public "handleError"(line: $ConsoleLine$$Type, error: $Throwable$$Type, exitPatt
 public "info"(message: any): $ConsoleLine
 public "infof"(message: string, ...args: any[]): $ConsoleLine
 public "log"(...message: any[]): void
-public "printClass"(className: string, tree: boolean): void
 public "printClass"(className: string): void
+public "printClass"(className: string, tree: boolean): void
 public "printObject"(o: any, tree: boolean): void
 public "printObject"(o: any): void
 public "resetFile"(): void
@@ -296,8 +296,8 @@ public "setMuted"(m: boolean): void
 public "setWriteToFile"(m: boolean): void
 public "shouldPrintDebug"(): boolean
 public "trace"(): void
-public "warn"(message: string, error: $Throwable$$Type, exitPattern: $Pattern$$Type): $ConsoleLine
 public "warn"(message: string, error: $Throwable$$Type): $ConsoleLine
+public "warn"(message: string, error: $Throwable$$Type, exitPattern: $Pattern$$Type): $ConsoleLine
 public "warn"(message: any): $ConsoleLine
 public "warnf"(message: string, ...args: any[]): $ConsoleLine
 public "writeToFile"(type: $LogType$$Type, line: string): void

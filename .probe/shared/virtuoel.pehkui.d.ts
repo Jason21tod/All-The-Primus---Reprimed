@@ -70,8 +70,8 @@ import { $ScaleType } from "virtuoel.pehkui.api.ScaleType"
 export class $ScaleData {
 public "averagedFromScales"(scaleData: $ScaleData$$Type, ...scales: $ScaleData$$Type[]): $ScaleData
 public "equals"(other: $ScaleData$$Type): boolean
-public "fromScale"(scaleData: $ScaleData$$Type): $ScaleData
 public "fromScale"(scaleData: $ScaleData$$Type, notifyListener: boolean): $ScaleData
+public "fromScale"(scaleData: $ScaleData$$Type): $ScaleData
 public "getBaseScale"(delta: float): float
 public "getBaseScale"(): float
 public "getBaseValueModifiers"(): $SortedSet<$ScaleModifier>
@@ -81,8 +81,8 @@ public "getInitialScale"(): float
 public "getPersistence"(): boolean
 public "getPrevBaseScale"(): float
 public "getPrevScale"(): float
-public "getScale"(delta: float): float
 public "getScale"(): float
+public "getScale"(delta: float): float
 public "getScaleTickDelay"(): integer
 public "getScaleType"(): $ScaleType
 public "getTargetScale"(): float

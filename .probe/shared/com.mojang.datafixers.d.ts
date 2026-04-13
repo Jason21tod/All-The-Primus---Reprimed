@@ -406,8 +406,8 @@ public "getType"(typeReference0: $DSL$TypeReference$$Type): $Type<any>
 public "getTypeRaw"(typeReference0: $DSL$TypeReference$$Type): $Type<any>
 public "getVersionKey"(): integer
 public "id"(string0: string): $TypeTemplate
-public "register"(map0: $Map$$Type<string, $Supplier$$Type<$TypeTemplate$$Type>>, string1: string, function2: $Function$$Type<string, $TypeTemplate>): void
 public "register"(map0: $Map$$Type<string, $Supplier$$Type<$TypeTemplate$$Type>>, string1: string, supplier2: $Supplier$$Type<$TypeTemplate>): void
+public "register"(map0: $Map$$Type<string, $Supplier$$Type<$TypeTemplate$$Type>>, string1: string, function2: $Function$$Type<string, $TypeTemplate>): void
 public "registerBlockEntities"(schema0: $Schema$$Type): $Map<string, $Supplier<$TypeTemplate>>
 public "registerEntities"(schema0: $Schema$$Type): $Map<string, $Supplier<$TypeTemplate>>
 public "registerSimple"(map0: $Map$$Type<string, $Supplier$$Type<$TypeTemplate$$Type>>, string1: string): void
@@ -488,9 +488,9 @@ function once(typeRewriteRule0: $TypeRewriteRule$$Type): $TypeRewriteRule
 function one(typeRewriteRule0: $TypeRewriteRule$$Type): $TypeRewriteRule
 function orElse(typeRewriteRule0: $TypeRewriteRule$$Type, typeRewriteRule1: $TypeRewriteRule$$Type): $TypeRewriteRule
 function orElse(typeRewriteRule0: $TypeRewriteRule$$Type, supplier1: $Supplier$$Type<$TypeRewriteRule>): $TypeRewriteRule
-function seq(list0: $List$$Type<$TypeRewriteRule$$Type>): $TypeRewriteRule
 function seq(typeRewriteRule0: $TypeRewriteRule$$Type, typeRewriteRule1: $TypeRewriteRule$$Type): $TypeRewriteRule
 function seq(typeRewriteRule0: $TypeRewriteRule$$Type, ...typeRewriteRule1s: $TypeRewriteRule$$Type[]): $TypeRewriteRule
+function seq(list0: $List$$Type<$TypeRewriteRule$$Type>): $TypeRewriteRule
 }
 export abstract class $TypeRewriteRule$$Static implements $TypeRewriteRule {
 static "all"(typeRewriteRule0: $TypeRewriteRule$$Type, boolean1: boolean, boolean2: boolean): $TypeRewriteRule
@@ -502,9 +502,9 @@ static "once"(typeRewriteRule0: $TypeRewriteRule$$Type): $TypeRewriteRule
 static "one"(typeRewriteRule0: $TypeRewriteRule$$Type): $TypeRewriteRule
 static "orElse"(typeRewriteRule0: $TypeRewriteRule$$Type, typeRewriteRule1: $TypeRewriteRule$$Type): $TypeRewriteRule
 static "orElse"(typeRewriteRule0: $TypeRewriteRule$$Type, supplier1: $Supplier$$Type<$TypeRewriteRule>): $TypeRewriteRule
-static "seq"(list0: $List$$Type<$TypeRewriteRule$$Type>): $TypeRewriteRule
 static "seq"(typeRewriteRule0: $TypeRewriteRule$$Type, typeRewriteRule1: $TypeRewriteRule$$Type): $TypeRewriteRule
 static "seq"(typeRewriteRule0: $TypeRewriteRule$$Type, ...typeRewriteRule1s: $TypeRewriteRule$$Type[]): $TypeRewriteRule
+static "seq"(list0: $List$$Type<$TypeRewriteRule$$Type>): $TypeRewriteRule
 }
 }
 
@@ -586,15 +586,15 @@ public "inj1"<B>(type0: $Type$$Type<B>): $Typed<$Either<A, B>>
 public "inj2"<B>(type0: $Type$$Type<B>): $Typed<$Either<B, A>>
 public "out"(): $Typed<A>
 public static "pair"<A, B>(typed0: $Typed$$Type<A>, typed1: $Typed$$Type<B>): $Typed<$Pair<A, B>>
-public "set"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, typed1: $Typed$$Type<FR>): $Typed<any>
 public "set"<FT>(opticFinder0: $OpticFinder$$Type<FT>, ft1: FT): $Typed<any>
 public "set"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, fr2: FR): $Typed<any>
-public "update"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<FT, FT>): $Typed<any>
+public "set"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, typed1: $Typed$$Type<FR>): $Typed<any>
 public "update"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<FT, FR>): $Typed<any>
-public "updateRecursive"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<FT, FT>): $Typed<any>
+public "update"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<FT, FT>): $Typed<any>
 public "updateRecursive"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<FT, FR>): $Typed<any>
-public "updateRecursiveTyped"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
+public "updateRecursive"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<FT, FT>): $Typed<any>
 public "updateRecursiveTyped"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
+public "updateRecursiveTyped"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
 public "updateTyped"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
 public "updateTyped"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
 public "write"(): $DataResult<$Dynamic<any>>
@@ -619,8 +619,8 @@ export class $View<A = any, B = any> extends $Record implements $App2<$View$Mu, 
 constructor(function_: $PointFree$$Type<$Function$$Type<A, B>>)
 
 public "compose"<C>(view0: $View$$Type<C, A>): $View<C, B>
-public static "create"<A, B>(string0: string, type1: $Type$$Type<A>, type2: $Type$$Type<B>, function3: $Function$$Type<$DynamicOps$$Type<any>, $Function<A, B>>): $View<A, B>
 public static "create"<A, B>(pointFree0: $PointFree$$Type<$Function$$Type<A, B>>): $View<A, B>
+public static "create"<A, B>(string0: string, type1: $Type$$Type<A>, type2: $Type$$Type<B>, function3: $Function$$Type<$DynamicOps$$Type<any>, $Function<A, B>>): $View<A, B>
 public "flatMap"<C>(function0: $Function$$Type<$Type$$Type<B>, $View<B, C>>): $View<A, C>
 public "funcType"(): $Type<$Function<A, B>>
 public "function"(): $PointFree<$Function<A, B>>
@@ -1042,8 +1042,8 @@ public "getKeyType"(): $Type<K>
 public "getName"(): string
 public "hasType"(k0: K): boolean
 public "one"(typeRewriteRule0: $TypeRewriteRule$$Type): $Optional<$RewriteResult<$Pair<K, any>, any>>
-public "point"(dynamicOps0: $DynamicOps$$Type<any>): $Optional<$Pair<K, any>>
 public "point"(dynamicOps0: $DynamicOps$$Type<any>, k1: K, object2: any): $Optional<$Typed<$Pair<K, any>>>
+public "point"(dynamicOps0: $DynamicOps$$Type<any>): $Optional<$Pair<K, any>>
 public "types"(): $Map<K, $Type<any>>
 get "keyType"(): $Type<K>
 get "name"(): string
@@ -1069,9 +1069,9 @@ import { $TaggedChoice$TaggedChoiceType$$Type } from "com.mojang.datafixers.type
 import { $Optional } from "java.util.Optional"
 
 export class $TypedOptic<S = any, T = any, A = any, B = any> extends $Record {
-constructor(typeToken0: $TypeToken$$Type<$K1$$Type>, type1: $Type$$Type<S>, type2: $Type$$Type<T>, type3: $Type$$Type<A>, type4: $Type$$Type<B>, optic5: $Optic$$Type<any, S, T, A, B>)
-constructor(set0: $Set$$Type<$TypeToken$$Type<$K1$$Type>>, type1: $Type$$Type<S>, type2: $Type$$Type<T>, type3: $Type$$Type<A>, type4: $Type$$Type<B>, optic5: $Optic$$Type<any, S, T, A, B>)
 constructor(bounds: $Set$$Type<$TypeToken$$Type<$K1$$Type>>, elements: $List$$Type<$TypedOptic$Element$$Type<any, any, any, any>>)
+constructor(set0: $Set$$Type<$TypeToken$$Type<$K1$$Type>>, type1: $Type$$Type<S>, type2: $Type$$Type<T>, type3: $Type$$Type<A>, type4: $Type$$Type<B>, optic5: $Optic$$Type<any, S, T, A, B>)
+constructor(typeToken0: $TypeToken$$Type<$K1$$Type>, type1: $Type$$Type<S>, type2: $Type$$Type<T>, type3: $Type$$Type<A>, type4: $Type$$Type<B>, optic5: $Optic$$Type<any, S, T, A, B>)
 
 public "aType"(): $Type<A>
 public static "adapter"<S, T>(type0: $Type$$Type<S>, type1: $Type$$Type<T>): $TypedOptic<S, T, S, T>
@@ -1148,9 +1148,9 @@ public "findTypeCached"<FT, FR>(type0: $Type$$Type<FT>, type1: $Type$$Type<FR>, 
 public "findTypeInChildren"<FT, FR>(type0: $Type$$Type<FT>, type1: $Type$$Type<FR>, typeMatcher2: $Type$TypeMatcher$$Type<FT, FR>, boolean3: boolean): $Either<$TypedOptic<A, any, FT, FR>, $Type$FieldNotFoundException>
 public "finder"(): $OpticFinder<A>
 public "getSetType"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>): $Type<any>
+public "ifSame"<B>(typed0: $Typed$$Type<B>): $Optional<A>
 public "ifSame"<B>(type0: $Type$$Type<B>, b1: B): $Optional<A>
 public "ifSame"<B>(type0: $Type$$Type<B>, rewriteResult1: $RewriteResult$$Type<B, any>): $Optional<$RewriteResult<A, any>>
-public "ifSame"<B>(typed0: $Typed$$Type<B>): $Optional<A>
 public "one"(typeRewriteRule0: $TypeRewriteRule$$Type): $Optional<$RewriteResult<A, any>>
 public static "opticView"<S, T, A, B>(type0: $Type$$Type<S>, rewriteResult1: $RewriteResult$$Type<A, B>, typedOptic2: $TypedOptic$$Type<S, T, A, B>): $RewriteResult<S, T>
 public "point"(dynamicOps0: $DynamicOps$$Type<any>): $Optional<A>
@@ -1158,8 +1158,8 @@ public "pointTyped"(dynamicOps0: $DynamicOps$$Type<any>): $Optional<$Typed<A>>
 public "read"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Pair<A, $Dynamic<T>>>
 public "read"<T>(dynamicOps0: $DynamicOps$$Type<T>, typeRewriteRule1: $TypeRewriteRule$$Type, pointFreeRule2: $PointFreeRule$$Type, t3: T): $DataResult<$Pair<$Optional<any>, T>>
 public "readAndWrite"<T>(dynamicOps0: $DynamicOps$$Type<T>, type1: $Type$$Type<any>, typeRewriteRule2: $TypeRewriteRule$$Type, pointFreeRule3: $PointFreeRule$$Type, t4: T): $DataResult<T>
-public "readTyped"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Pair<$Typed<A>, T>>
 public "readTyped"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<$Pair<$Typed<A>, T>>
+public "readTyped"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Pair<$Typed<A>, T>>
 public "rewrite"(typeRewriteRule0: $TypeRewriteRule$$Type, pointFreeRule1: $PointFreeRule$$Type): $Optional<$RewriteResult<A, any>>
 public "rewriteOrNop"(typeRewriteRule0: $TypeRewriteRule$$Type): $RewriteResult<A, any>
 public "template"(): $TypeTemplate
@@ -1403,13 +1403,13 @@ import { $Applicative$$Type } from "com.mojang.datafixers.kinds.Applicative"
 export class $Products$P1<F extends $K1 = $K1, T1 = any> {
 constructor(app0: $App$$Type<F, T1>)
 
-public "and"<T2, T3, T4, T5, T6>(p50: $Products$P5$$Type<F, T2, T3, T4, T5, T6>): $Products$P6<F, T1, T2, T3, T4, T5, T6>
 public "and"<T2, T3, T4, T5, T6, T7>(p60: $Products$P6$$Type<F, T2, T3, T4, T5, T6, T7>): $Products$P7<F, T1, T2, T3, T4, T5, T6, T7>
 public "and"<T2, T3, T4, T5, T6, T7, T8>(p70: $Products$P7$$Type<F, T2, T3, T4, T5, T6, T7, T8>): $Products$P8<F, T1, T2, T3, T4, T5, T6, T7, T8>
 public "and"<T2, T3, T4, T5>(p40: $Products$P4$$Type<F, T2, T3, T4, T5>): $Products$P5<F, T1, T2, T3, T4, T5>
 public "and"<T2, T3>(p20: $Products$P2$$Type<F, T2, T3>): $Products$P3<F, T1, T2, T3>
 public "and"<T2, T3, T4>(p30: $Products$P3$$Type<F, T2, T3, T4>): $Products$P4<F, T1, T2, T3, T4>
 public "and"<T2>(app0: $App$$Type<F, T2>): $Products$P2<F, T1, T2>
+public "and"<T2, T3, T4, T5, T6>(p50: $Products$P5$$Type<F, T2, T3, T4, T5, T6>): $Products$P6<F, T1, T2, T3, T4, T5, T6>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, function1: $Function$$Type<T1, R>): $App<F, R>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, app1: $App$$Type<F, $Function$$Type<T1, R>>): $App<F, R>
 public "t1"(): $App<F, T1>
@@ -1433,9 +1433,9 @@ constructor(app0: $App$$Type<F, T1>, app1: $App$$Type<F, T2>, app2: $App$$Type<F
 
 public "and"<T4, T5, T6, T7, T8>(p50: $Products$P5$$Type<F, T4, T5, T6, T7, T8>): $Products$P8<F, T1, T2, T3, T4, T5, T6, T7, T8>
 public "and"<T4, T5>(p20: $Products$P2$$Type<F, T4, T5>): $Products$P5<F, T1, T2, T3, T4, T5>
-public "and"<T4, T5, T6>(p30: $Products$P3$$Type<F, T4, T5, T6>): $Products$P6<F, T1, T2, T3, T4, T5, T6>
 public "and"<T4, T5, T6, T7>(p40: $Products$P4$$Type<F, T4, T5, T6, T7>): $Products$P7<F, T1, T2, T3, T4, T5, T6, T7>
 public "and"<T4>(app0: $App$$Type<F, T4>): $Products$P4<F, T1, T2, T3, T4>
+public "and"<T4, T5, T6>(p30: $Products$P3$$Type<F, T4, T5, T6>): $Products$P6<F, T1, T2, T3, T4, T5, T6>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, function31: $Function3$$Type<T1, T2, T3, R>): $App<F, R>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, app1: $App$$Type<F, $Function3$$Type<T1, T2, T3, R>>): $App<F, R>
 public "t1"(): $App<F, T1>
@@ -1459,12 +1459,12 @@ import { $Applicative$$Type } from "com.mojang.datafixers.kinds.Applicative"
 export class $Products$P2<F extends $K1 = $K1, T1 = any, T2 = any> {
 constructor(app0: $App$$Type<F, T1>, app1: $App$$Type<F, T2>)
 
-public "and"<T3, T4, T5, T6>(p40: $Products$P4$$Type<F, T3, T4, T5, T6>): $Products$P6<F, T1, T2, T3, T4, T5, T6>
-public "and"<T3, T4, T5, T6, T7>(p50: $Products$P5$$Type<F, T3, T4, T5, T6, T7>): $Products$P7<F, T1, T2, T3, T4, T5, T6, T7>
 public "and"<T3, T4, T5, T6, T7, T8>(p60: $Products$P6$$Type<F, T3, T4, T5, T6, T7, T8>): $Products$P8<F, T1, T2, T3, T4, T5, T6, T7, T8>
+public "and"<T3, T4, T5, T6, T7>(p50: $Products$P5$$Type<F, T3, T4, T5, T6, T7>): $Products$P7<F, T1, T2, T3, T4, T5, T6, T7>
 public "and"<T3, T4, T5>(p30: $Products$P3$$Type<F, T3, T4, T5>): $Products$P5<F, T1, T2, T3, T4, T5>
-public "and"<T3>(app0: $App$$Type<F, T3>): $Products$P3<F, T1, T2, T3>
+public "and"<T3, T4, T5, T6>(p40: $Products$P4$$Type<F, T3, T4, T5, T6>): $Products$P6<F, T1, T2, T3, T4, T5, T6>
 public "and"<T3, T4>(p20: $Products$P2$$Type<F, T3, T4>): $Products$P4<F, T1, T2, T3, T4>
+public "and"<T3>(app0: $App$$Type<F, T3>): $Products$P3<F, T1, T2, T3>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, biFunction1: $BiFunction$$Type<T1, T2, R>): $App<F, R>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, app1: $App$$Type<F, $BiFunction$$Type<T1, T2, R>>): $App<F, R>
 public "t1"(): $App<F, T1>
@@ -1552,8 +1552,8 @@ constructor(app0: $App$$Type<F, T1>, app1: $App$$Type<F, T2>, app2: $App$$Type<F
 
 public "and"<T5, T6, T7, T8>(p40: $Products$P4$$Type<F, T5, T6, T7, T8>): $Products$P8<F, T1, T2, T3, T4, T5, T6, T7, T8>
 public "and"<T5>(app0: $App$$Type<F, T5>): $Products$P5<F, T1, T2, T3, T4, T5>
-public "and"<T5, T6>(p20: $Products$P2$$Type<F, T5, T6>): $Products$P6<F, T1, T2, T3, T4, T5, T6>
 public "and"<T5, T6, T7>(p30: $Products$P3$$Type<F, T5, T6, T7>): $Products$P7<F, T1, T2, T3, T4, T5, T6, T7>
+public "and"<T5, T6>(p20: $Products$P2$$Type<F, T5, T6>): $Products$P6<F, T1, T2, T3, T4, T5, T6>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, function41: $Function4$$Type<T1, T2, T3, T4, R>): $App<F, R>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, app1: $App$$Type<F, $Function4$$Type<T1, T2, T3, T4, R>>): $App<F, R>
 public "t1"(): $App<F, T1>
@@ -1598,8 +1598,8 @@ import { $Applicative$$Type } from "com.mojang.datafixers.kinds.Applicative"
 export class $Products$P6<F extends $K1 = $K1, T1 = any, T2 = any, T3 = any, T4 = any, T5 = any, T6 = any> {
 constructor(app0: $App$$Type<F, T1>, app1: $App$$Type<F, T2>, app2: $App$$Type<F, T3>, app3: $App$$Type<F, T4>, app4: $App$$Type<F, T5>, app5: $App$$Type<F, T6>)
 
-public "and"<T7>(app0: $App$$Type<F, T7>): $Products$P7<F, T1, T2, T3, T4, T5, T6, T7>
 public "and"<T7, T8>(p20: $Products$P2$$Type<F, T7, T8>): $Products$P8<F, T1, T2, T3, T4, T5, T6, T7, T8>
+public "and"<T7>(app0: $App$$Type<F, T7>): $Products$P7<F, T1, T2, T3, T4, T5, T6, T7>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, function61: $Function6$$Type<T1, T2, T3, T4, T5, T6, R>): $App<F, R>
 public "apply"<R>(applicative0: $Applicative$$Type<F, any>, app1: $App$$Type<F, $Function6$$Type<T1, T2, T3, T4, T5, T6, R>>): $App<F, R>
 public "t1"(): $App<F, T1>
@@ -1635,8 +1635,8 @@ export class $Either<L = any, R = any> implements $App<$Either$Mu<R>, L> {
 public "flatMap"<L2>(function0: $Function$$Type<L, $Either<L2, R>>): $Either<L2, R>
 public "ifLeft"(consumer0: $Consumer$$Type<L>): $Either<L, R>
 public "ifRight"(consumer0: $Consumer$$Type<R>): $Either<L, R>
-public static "left"<L, R>(l0: L): $Either<L, R>
 public "left"(): $Optional<L>
+public static "left"<L, R>(l0: L): $Either<L, R>
 public "map"<T>(function0: $Function$$Type<L, T>, function1: $Function$$Type<R, T>): T
 public "mapBoth"<C, D>(function0: $Function$$Type<L, C>, function1: $Function$$Type<R, D>): $Either<C, D>
 public "mapLeft"<T>(function0: $Function$$Type<L, T>): $Either<T, R>

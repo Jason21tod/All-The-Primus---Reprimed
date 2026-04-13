@@ -349,18 +349,18 @@ public "hashCode"(): integer
 public "isEmpty"(): boolean
 public "iterator"(): $Iterator<$AnimationPoint>
 public "listIterator"(): $ListIterator<$AnimationPoint>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
-public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E): $List<E>
-public static "of"<E>(): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
-public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E): $List<E>
-public static "of"<E>(...e0s: E[]): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E, e8: E, e9: E): $List<E>
+public static "of"<E>(...e0s: E[]): $List<E>
+public static "of"<E>(): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E, e7: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
+public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$AnimationPoint>
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
 public "removeIf"(predicate0: $Predicate$$Type<$AnimationPoint$$Type>): boolean
@@ -446,7 +446,7 @@ declare module "software.bernie.geckolib.event.GeoRenderEvent$Object" {
 import { $EventItf } from "com.mega.endinglib.api.event.EventItf"
 import { $GeoRenderEvent } from "software.bernie.geckolib.event.GeoRenderEvent"
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
-import { $GeoObjectRenderer$$Type } from "software.bernie.geckolib.renderer.GeoObjectRenderer"
+import { $GeoObjectRenderer, $GeoObjectRenderer$$Type } from "software.bernie.geckolib.renderer.GeoObjectRenderer"
 
 export class $GeoRenderEvent$Object extends $Event implements $GeoRenderEvent, $EventItf {
 constructor()
@@ -454,8 +454,10 @@ constructor(geoObjectRenderer0: $GeoObjectRenderer$$Type<any>)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
+public "getRenderer"(): $GeoObjectRenderer<any>
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
+get "renderer"(): $GeoObjectRenderer<any>
 }
 }
 
@@ -645,7 +647,7 @@ get "keyframeData"(): $CustomInstructionKeyframeData
 
 declare module "software.bernie.geckolib.event.GeoRenderEvent$Armor" {
 import { $EventItf } from "com.mega.endinglib.api.event.EventItf"
-import { $GeoArmorRenderer, $GeoArmorRenderer$$Type } from "software.bernie.geckolib.renderer.GeoArmorRenderer"
+import { $GeoArmorRenderer$$Type } from "software.bernie.geckolib.renderer.GeoArmorRenderer"
 import { $GeoRenderEvent } from "software.bernie.geckolib.event.GeoRenderEvent"
 import { $Entity } from "net.minecraft.world.entity.Entity"
 import { $EquipmentSlot } from "net.minecraft.world.entity.EquipmentSlot"
@@ -661,13 +663,11 @@ public "el_setEventUnCancelable"(boolean0: boolean): void
 public "getEntity"(): $Entity
 public "getEquipmentSlot"(): $EquipmentSlot
 public "getItemStack"(): $ItemStack
-public "getRenderer"(): $GeoArmorRenderer<any>
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
 get "entity"(): $Entity
 get "equipmentSlot"(): $EquipmentSlot
 get "itemStack"(): $ItemStack
-get "renderer"(): $GeoArmorRenderer<any>
 }
 }
 
@@ -812,8 +812,8 @@ public "getRed"(): integer
 public "getRedFloat"(): float
 public static "ofHSB"(float0: float, float1: float, float2: float): $Color
 public static "ofOpaque"(int0: integer): $Color
-public static "ofRGB"(int0: integer, int1: integer, int2: integer): $Color
 public static "ofRGB"(float0: float, float1: float, float2: float): $Color
+public static "ofRGB"(int0: integer, int1: integer, int2: integer): $Color
 public static "ofRGBA"(int0: integer, int1: integer, int2: integer, int3: integer): $Color
 public static "ofRGBA"(float0: float, float1: float, float2: float, float3: float): $Color
 get "alpha"(): integer
@@ -868,8 +868,8 @@ export interface $GeoItem extends $SingletonGeoAnimatable {
 "stopTriggeredAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
 "stopTriggeredArmorAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
 "syncAnimData"<D>(long0: long, serializableDataTicket1: $SerializableDataTicket$$Type<D>, d2: D, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
-"triggerAnim"<D>(long0: long, string1: string, string2: string, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
 "triggerAnim"<D>(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
+"triggerAnim"<D>(long0: long, string1: string, string2: string, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
 "triggerArmorAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
 get "boneResetTime"(): double
@@ -927,10 +927,10 @@ import { $CoreGeoModel$$Type } from "software.bernie.geckolib.core.animatable.mo
 import { $AnimationController$State } from "software.bernie.geckolib.core.animation.AnimationController$State"
 
 export class $AnimationController<T extends $GeoAnimatable = $GeoAnimatable> implements $IAnimationControllerJS {
-constructor(t0: T, animationStateHandler1: $AnimationController$AnimationStateHandler$$Type<T>)
 constructor(t0: T, string1: string, int2: integer, animationStateHandler3: $AnimationController$AnimationStateHandler$$Type<T>)
 constructor(t0: T, int1: integer, animationStateHandler2: $AnimationController$AnimationStateHandler$$Type<T>)
 constructor(t0: T, string1: string, animationStateHandler2: $AnimationController$AnimationStateHandler$$Type<T>)
+constructor(t0: T, animationStateHandler1: $AnimationController$AnimationStateHandler$$Type<T>)
 
 public "forceAnimationReset"(): void
 public "getAnimationSpeed"(): double
@@ -1045,7 +1045,6 @@ public "doPostRenderCleanup"(): void
 public "fireCompileRenderLayersEvent"(): void
 public "firePostRenderEvent"(poseStack0: $PoseStack$$Type, bakedGeoModel1: $BakedGeoModel$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float, int4: integer): void
 public "firePreRenderEvent"(poseStack0: $PoseStack$$Type, bakedGeoModel1: $BakedGeoModel$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float, int4: integer): boolean
-public "getAnimatable"(): T
 public "getGeoModel"(): $GeoModel<T>
 public "getInstanceId"(t0: T): long
 public "getMotionAnimThreshold"(t0: T): float
@@ -1071,9 +1070,8 @@ public "scaleModelForRender"(float0: float, float1: float, poseStack2: $PoseStac
 public "shouldRender"(t0: T, vec31: $Vec3$$Type): boolean
 public "shouldRenderOffScreen"(t0: T): boolean
 public "updateAnimatedTextureFrame"(t0: T): void
-public "withScale"(float0: float): $GeoBlockRenderer<T>
 public "withScale"(float0: float, float1: float): $GeoBlockRenderer<T>
-get "animatable"(): T
+public "withScale"(float0: float): $GeoBlockRenderer<T>
 get "geoModel"(): $GeoModel<T>
 get "renderLayers"(): $List<$GeoRenderLayer<T>>
 get "viewDistance"(): integer
@@ -1090,12 +1088,12 @@ import { $Record } from "java.lang.Record"
 export class $GeoQuad extends $Record {
 constructor(vertices: $GeoVertex$$Type[], normal: $Vector3f$$Type, direction: $Direction$$Type)
 
+public static "build"(geoVertex0s: $GeoVertex$$Type[], double1s: double[], double2s: double[], rotation3: $FaceUV$Rotation$$Type, float4: float, float5: float, boolean6: boolean, direction7: $Direction$$Type): $GeoQuad
 /** @deprecated */
 public static "build"(geoVertex0s: $GeoVertex$$Type[], double1s: double[], double2s: double[], float3: float, float4: float, boolean5: boolean, direction6: $Direction$$Type): $GeoQuad
+public static "build"(geoVertex0s: $GeoVertex$$Type[], float1: float, float2: float, float3: float, float4: float, rotation5: $FaceUV$Rotation$$Type, float6: float, float7: float, boolean8: boolean, direction9: $Direction$$Type): $GeoQuad
 /** @deprecated */
 public static "build"(geoVertex0s: $GeoVertex$$Type[], float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, boolean7: boolean, direction8: $Direction$$Type): $GeoQuad
-public static "build"(geoVertex0s: $GeoVertex$$Type[], float1: float, float2: float, float3: float, float4: float, rotation5: $FaceUV$Rotation$$Type, float6: float, float7: float, boolean8: boolean, direction9: $Direction$$Type): $GeoQuad
-public static "build"(geoVertex0s: $GeoVertex$$Type[], double1s: double[], double2s: double[], rotation3: $FaceUV$Rotation$$Type, float4: float, float5: float, boolean6: boolean, direction7: $Direction$$Type): $GeoQuad
 public "direction"(): $Direction
 public "normal"(): $Vector3f
 public "vertices"(): $GeoVertex[]
@@ -1145,7 +1143,7 @@ import { $EventItf } from "com.mega.endinglib.api.event.EventItf"
 import { $GeoRenderEvent } from "software.bernie.geckolib.event.GeoRenderEvent"
 import { $Entity } from "net.minecraft.world.entity.Entity"
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
-import { $GeoEntityRenderer$$Type } from "software.bernie.geckolib.renderer.GeoEntityRenderer"
+import { $GeoEntityRenderer, $GeoEntityRenderer$$Type } from "software.bernie.geckolib.renderer.GeoEntityRenderer"
 
 export class $GeoRenderEvent$Entity extends $Event implements $GeoRenderEvent, $EventItf {
 constructor()
@@ -1154,9 +1152,11 @@ constructor(geoEntityRenderer0: $GeoEntityRenderer$$Type<any>)
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
 public "getEntity"(): $Entity
+public "getRenderer"(): $GeoEntityRenderer<any>
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
 get "entity"(): $Entity
+get "renderer"(): $GeoEntityRenderer<any>
 }
 }
 
@@ -1181,8 +1181,8 @@ export interface $SingletonGeoAnimatable extends $GeoAnimatable {
 "stopTriggeredAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
 "stopTriggeredArmorAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
 "syncAnimData"<D>(long0: long, serializableDataTicket1: $SerializableDataTicket$$Type<D>, d2: D, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
-"triggerAnim"<D>(long0: long, string1: string, string2: string, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
 "triggerAnim"<D>(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
+"triggerAnim"<D>(long0: long, string1: string, string2: string, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
 "triggerArmorAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
 get "boneResetTime"(): double
@@ -1590,7 +1590,7 @@ public static "values"(): $PlayState[]
 }
 
 declare module "software.bernie.geckolib.event.GeoRenderEvent$Item" {
-import { $GeoItemRenderer$$Type } from "software.bernie.geckolib.renderer.GeoItemRenderer"
+import { $GeoItemRenderer, $GeoItemRenderer$$Type } from "software.bernie.geckolib.renderer.GeoItemRenderer"
 import { $EventItf } from "com.mega.endinglib.api.event.EventItf"
 import { $GeoRenderEvent } from "software.bernie.geckolib.event.GeoRenderEvent"
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
@@ -1603,9 +1603,11 @@ constructor(geoItemRenderer0: $GeoItemRenderer$$Type<any>)
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
 public "getItemStack"(): $ItemStack
+public "getRenderer"(): $GeoItemRenderer<any>
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
 get "itemStack"(): $ItemStack
+get "renderer"(): $GeoItemRenderer<any>
 }
 }
 
@@ -1637,8 +1639,8 @@ import { $MultiBufferSource$$Type } from "net.minecraft.client.renderer.MultiBuf
 import { $VertexConsumer$$Type } from "com.mojang.blaze3d.vertex.VertexConsumer"
 
 export class $GeoArmorRenderer<T extends ($Item & $GeoItem) = ($Item & $GeoItem)> extends $HumanoidModel implements $GeoRenderer<T>, $UpdateableLevel {
-constructor(geoModel0: $GeoModel$$Type<T>)
 constructor<I extends T>(i0: I)
+constructor(geoModel0: $GeoModel$$Type<T>)
 
 public "actuallyRender"(poseStack0: $PoseStack$$Type, t1: T, bakedGeoModel2: $BakedGeoModel$$Type, renderType3: $RenderType$$Type, multiBufferSource4: $MultiBufferSource$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, float7: float, int8: integer, int9: integer, float10: float, float11: float, float12: float, float13: float): void
 public "addRenderLayer"(geoRenderLayer0: $GeoRenderLayer$$Type<T>): $GeoArmorRenderer<T>
@@ -1757,14 +1759,13 @@ public "getAnimation"(t0: T, string1: string): $Animation
 public "getAnimationProcessor"(): $AnimationProcessor<T>
 public "getAnimationResource"(t0: T): $ResourceLocation
 public "getAnimationResourceFallbacks"(t0: T): $ResourceLocation[]
-public "getBakedGeoModel"(string0: string): $BakedGeoModel
 public "getBakedModel"(resourceLocation0: $ResourceLocation$$Type): $BakedGeoModel
 public "getBone"(string0: string): $Optional<$GeoBone>
 public "getModelResource"(t0: T): $ResourceLocation
 public "getModelResource"(t0: T, geoRenderer1: $GeoRenderer$$Type<T>): $ResourceLocation
 public "getRenderType"(t0: T, resourceLocation1: $ResourceLocation$$Type): $RenderType
-public "getTextureResource"(t0: T, geoRenderer1: $GeoRenderer$$Type<T>): $ResourceLocation
 public "getTextureResource"(t0: T): $ResourceLocation
+public "getTextureResource"(t0: T, geoRenderer1: $GeoRenderer$$Type<T>): $ResourceLocation
 public "handleAnimations"(t0: T, long1: long, animationState2: $AnimationState$$Type<T>): void
 public "setCustomAnimations"(t0: T, long1: long, animationState2: $AnimationState$$Type<T>): void
 get "animationProcessor"(): $AnimationProcessor<T>
@@ -2325,8 +2326,8 @@ public "getGeoModel"(): $GeoModel<T>
 public "getInstanceId"(t0: T): long
 public "getMotionAnimThreshold"(t0: T): float
 public "getNameRenderCutoffDistance"(e0: E, t1: T): double
-public "getPackedOverlay"(t0: T, float1: float): integer
 public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
+public "getPackedOverlay"(t0: T, float1: float): integer
 public "getRenderColor"(t0: T, float1: float, int2: integer): $Color
 public "getRenderLayers"(): $List<$GeoRenderLayer<T>>
 public "getRenderType"(t0: T, resourceLocation1: $ResourceLocation$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float): $RenderType
@@ -2345,8 +2346,8 @@ public "renderLeash"<H extends $Entity, M extends $Mob>(m0: M, float1: float, po
 public "renderRecursively"(poseStack0: $PoseStack$$Type, t1: T, geoBone2: $GeoBone$$Type, renderType3: $RenderType$$Type, multiBufferSource4: $MultiBufferSource$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, float7: float, int8: integer, int9: integer, float10: float, float11: float, float12: float, float13: float): void
 public "scaleModelForRender"(float0: float, float1: float, poseStack2: $PoseStack$$Type, t3: T, bakedGeoModel4: $BakedGeoModel$$Type, boolean5: boolean, float6: float, int7: integer, int8: integer): void
 public "updateAnimatedTextureFrame"(t0: T): void
-public "withScale"(float0: float, float1: float): $GeoReplacedEntityRenderer<E, T>
 public "withScale"(float0: float): $GeoReplacedEntityRenderer<E, T>
+public "withScale"(float0: float, float1: float): $GeoReplacedEntityRenderer<E, T>
 get "animatable"(): T
 get "currentEntity"(): E
 get "geoModel"(): $GeoModel<T>
@@ -2439,8 +2440,8 @@ public "getGeoModel"(): $GeoModel<T>
 public "getInstanceId"(t0: T): long
 public "getMotionAnimThreshold"(t0: T): float
 public "getNameRenderCutoffDistance"(t0: T): double
-public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 public "getPackedOverlay"(t0: T, float1: float): integer
+public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 public "getRenderColor"(t0: T, float1: float, int2: integer): $Color
 public "getRenderLayers"(): $List<$GeoRenderLayer<T>>
 public "getRenderType"(t0: T, resourceLocation1: $ResourceLocation$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float): $RenderType

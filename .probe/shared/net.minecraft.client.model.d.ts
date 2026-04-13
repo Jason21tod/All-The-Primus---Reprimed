@@ -35,9 +35,9 @@ public "copyPropertiesTo"(humanoidModel0: $HumanoidModel$$Type<T>): void
 public static "createMesh"(cubeDeformation0: $CubeDeformation$$Type, float1: float): $MeshDefinition
 public "getEmoteSupplier"(): $SetableSupplier
 public "getHead"(): $ModelPart
-public "handler$hkl000$poseLeftArm"(entity: $LivingEntity$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hkl000$poseRightArm"(entity: $LivingEntity$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hkl002$setupAnim"(entity: $LivingEntity$$Type, limbSwing: float, limbSwingAmount: float, ageInTicks: float, netHeadYaw: float, headPitch: float, ci: $CallbackInfo$$Type): void
+public "handler$hnh000$poseLeftArm"(entity: $LivingEntity$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hnh000$poseRightArm"(entity: $LivingEntity$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hnh002$setupAnim"(entity: $LivingEntity$$Type, limbSwing: float, limbSwingAmount: float, ageInTicks: float, netHeadYaw: float, headPitch: float, ci: $CallbackInfo$$Type): void
 public "mobplayeranimator$getBody"(): $ModelPart
 public "mobplayeranimator$getHat"(): $ModelPart
 public "mobplayeranimator$getHead"(): $ModelPart
@@ -129,7 +129,7 @@ public "isHidden"(): boolean
 public "isUpperPart"(): boolean
 public "isVisible"(): boolean
 public "loadPose"(partPose0: $PartPose$$Type): void
-public "localvar$eop002$render"(float0: float): float
+public "localvar$fad002$render"(float0: float): float
 public "offsetPos"(vector3f0: $Vector3f$$Type): void
 public "offsetRotation"(vector3f0: $Vector3f$$Type): void
 public "offsetScale"(vector3f0: $Vector3f$$Type): void
@@ -334,8 +334,8 @@ static readonly "NONE": $CubeDeformation
 constructor(float0: float, float1: float, float2: float)
 constructor(float0: float)
 
-public "extend"(float0: float): $CubeDeformation
 public "extend"(float0: float, float1: float, float2: float): $CubeDeformation
+public "extend"(float0: float): $CubeDeformation
 }
 }
 
@@ -386,7 +386,7 @@ public "embeddium$getSimpleCuboid"(): $ModelCuboid
 public "emf$getSizeAdd"(): float[]
 public "emf$getTextureUV"(): integer[]
 public "emf$getTextureXY"(): integer[]
-public "localvar$epa000$compile"(float0: float): float
+public "localvar$fae000$compile"(float0: float): float
 public "sodium$copy"(): $ModelCuboid
 get "maxX"(): float
 set "maxX"(value: float)
@@ -424,9 +424,9 @@ constructor(modelPart0: $ModelPart$$Type, boolean1: boolean)
 
 public static "createMesh"(cubeDeformation0: $CubeDeformation$$Type, boolean1: boolean): $MeshDefinition
 public "getRandomModelPart"(randomSource0: $RandomSource$$Type): $ModelPart
-public "handler$fcj000$setupAnimEnd"(livingEntity: $LivingEntity$$Type, limbSwing: float, limbSwingAmount: float, ageInTicks: float, netHeadYaw: float, headPitch: float, info: $CallbackInfo$$Type): void
-public "handler$fcj000$setupAnimHEAD"(livingEntity: $LivingEntity$$Type, limbSwing: float, limbSwingAmount: float, ageInTicks: float, netHeadYaw: float, headPitch: float, info: $CallbackInfo$$Type): void
-public "handler$fcj001$setupAnim"(livingEntity: $LivingEntity$$Type, limbSwing: float, limbSwingAmount: float, ageInTicks: float, netHeadYaw: float, headPitch: float, info: $CallbackInfo$$Type): void
+public "handler$fdn000$setupAnimEnd"(livingEntity: $LivingEntity$$Type, limbSwing: float, limbSwingAmount: float, ageInTicks: float, netHeadYaw: float, headPitch: float, info: $CallbackInfo$$Type): void
+public "handler$fdn000$setupAnimHEAD"(livingEntity: $LivingEntity$$Type, limbSwing: float, limbSwingAmount: float, ageInTicks: float, netHeadYaw: float, headPitch: float, info: $CallbackInfo$$Type): void
+public "handler$fdn001$setupAnim"(livingEntity: $LivingEntity$$Type, limbSwing: float, limbSwingAmount: float, ageInTicks: float, netHeadYaw: float, headPitch: float, info: $CallbackInfo$$Type): void
 public "renderCloak"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, int2: integer, int3: integer): void
 public "renderEars"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, int2: integer, int3: integer): void
 get "cloak"(): $ModelPart
@@ -561,19 +561,19 @@ import { $CubeDeformation$$Type } from "net.minecraft.client.model.geom.builders
 export class $CubeListBuilder {
 constructor()
 
-public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, cubeDeformation6: $CubeDeformation$$Type): $CubeListBuilder
-public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float): $CubeListBuilder
-public "addBox"(string0: string, float1: float, float2: float, float3: float, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer): $CubeListBuilder
-public "addBox"(string0: string, float1: float, float2: float, float3: float, int4: integer, int5: integer, int6: integer, cubeDeformation7: $CubeDeformation$$Type, int8: integer, int9: integer): $CubeListBuilder
-public "addBox"(string0: string, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float): $CubeListBuilder
 public "addBox"(string0: string, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, cubeDeformation7: $CubeDeformation$$Type): $CubeListBuilder
 public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, set6: $Set$$Type<$Direction$$Type>): $CubeListBuilder
+public "addBox"(string0: string, float1: float, float2: float, float3: float, int4: integer, int5: integer, int6: integer, cubeDeformation7: $CubeDeformation$$Type, int8: integer, int9: integer): $CubeListBuilder
+public "addBox"(string0: string, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float): $CubeListBuilder
+public "addBox"(string0: string, float1: float, float2: float, float3: float, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer): $CubeListBuilder
 public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, boolean6: boolean): $CubeListBuilder
+public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, cubeDeformation6: $CubeDeformation$$Type): $CubeListBuilder
+public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float): $CubeListBuilder
 public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, cubeDeformation6: $CubeDeformation$$Type, float7: float, float8: float): $CubeListBuilder
 public static "create"(): $CubeListBuilder
 public "getCubes"(): $List<$CubeDefinition>
-public "mirror"(boolean0: boolean): $CubeListBuilder
 public "mirror"(): $CubeListBuilder
+public "mirror"(boolean0: boolean): $CubeListBuilder
 public "texOffs"(int0: integer, int1: integer): $CubeListBuilder
 get "cubes"(): $List<$CubeDefinition>
 }

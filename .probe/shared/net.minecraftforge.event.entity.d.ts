@@ -107,8 +107,8 @@ import { $PlayerInteractEvent } from "net.minecraftforge.event.entity.player.Pla
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $PlayerInteractEvent$RightClickBlock extends $PlayerInteractEvent {
-constructor(player0: $Player$$Type, interactionHand1: $InteractionHand$$Type, blockPos2: $BlockPos$$Type, blockHitResult3: $BlockHitResult$$Type)
 constructor()
+constructor(player0: $Player$$Type, interactionHand1: $InteractionHand$$Type, blockPos2: $BlockPos$$Type, blockHitResult3: $BlockHitResult$$Type)
 
 public "getHitVec"(): $BlockHitResult
 public "getUseBlock"(): $Event$Result
@@ -267,8 +267,8 @@ import { $ProjectileImpactEvent$ImpactResult, $ProjectileImpactEvent$ImpactResul
 import { $EntityEvent } from "net.minecraftforge.event.entity.EntityEvent"
 
 export class $ProjectileImpactEvent extends $EntityEvent {
-constructor()
 constructor(projectile0: $Projectile$$Type, hitResult1: $HitResult$$Type)
+constructor()
 
 public "getImpactResult"(): $ProjectileImpactEvent$ImpactResult
 public "getProjectile"(): $Projectile
@@ -310,8 +310,8 @@ import { $Optional, $Optional$$Type } from "java.util.Optional"
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $PlayerSleepInBedEvent extends $PlayerEvent {
-constructor()
 constructor(player0: $Player$$Type, optional1: $Optional$$Type<$BlockPos$$Type>)
+constructor()
 
 public "getOptionalPos"(): $Optional<$BlockPos>
 public "getPos"(): $BlockPos
@@ -389,8 +389,8 @@ import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent"
 
 export class $LivingKnockBackEvent extends $LivingEvent {
-constructor(livingEntity0: $LivingEntity$$Type, float1: float, double2: double, double3: double)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, float1: float, double2: double, double3: double)
 
 public "getOriginalRatioX"(): double
 public "getOriginalRatioZ"(): double
@@ -439,8 +439,8 @@ import { $BlockState, $BlockState$$Type } from "net.minecraft.world.level.block.
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $PlayerEvent$HarvestCheck extends $PlayerEvent {
-constructor(player0: $Player$$Type, blockState1: $BlockState$$Type, boolean2: boolean)
 constructor()
+constructor(player0: $Player$$Type, blockState1: $BlockState$$Type, boolean2: boolean)
 
 public "canHarvest"(): boolean
 public "getTargetBlock"(): $BlockState
@@ -751,8 +751,8 @@ import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent
 import { $DamageSource, $DamageSource$$Type } from "net.minecraft.world.damagesource.DamageSource"
 
 export class $LivingDamageEvent extends $LivingEvent {
-constructor()
 constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float)
+constructor()
 
 public "getAmount"(): float
 public "getSource"(): $DamageSource
@@ -794,8 +794,8 @@ import { $Entity, $Entity$$Type } from "net.minecraft.world.entity.Entity"
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $CriticalHitEvent extends $PlayerEvent {
-constructor(player0: $Player$$Type, entity1: $Entity$$Type, float2: float, boolean3: boolean)
 constructor()
+constructor(player0: $Player$$Type, entity1: $Entity$$Type, float2: float, boolean3: boolean)
 
 public "getDamageModifier"(): float
 public "getOldDamageModifier"(): float
@@ -853,8 +853,8 @@ public "getOldSize"(): $EntityDimensions
 public "getOriginalSize"(): $EntityDimensions
 public "getPose"(): $Pose
 public "setNewEyeHeight"(float0: float): void
-public "setNewSize"(entityDimensions0: $EntityDimensions$$Type): void
 public "setNewSize"(entityDimensions0: $EntityDimensions$$Type, boolean1: boolean): void
+public "setNewSize"(entityDimensions0: $EntityDimensions$$Type): void
 get "newEyeHeight"(): float
 get "newSize"(): $EntityDimensions
 get "oldEyeHeight"(): float
@@ -872,8 +872,8 @@ import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent
 import { $DamageSource, $DamageSource$$Type } from "net.minecraft.world.damagesource.DamageSource"
 
 export class $LivingHurtEvent extends $LivingEvent {
-constructor()
 constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float)
+constructor()
 
 public "getAmount"(): float
 public "getSource"(): $DamageSource
@@ -932,8 +932,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $RandomSource, $RandomSource$$Type } from "net.minecraft.util.RandomSource"
 
 export class $MobSpawnEvent$SpawnPlacementCheck extends $Event implements $EventItf {
-constructor()
 constructor(entityType0: $EntityType$$Type<any>, serverLevelAccessor1: $ServerLevelAccessor$$Type, mobSpawnType2: $MobSpawnType$$Type, blockPos3: $BlockPos$$Type, randomSource4: $RandomSource$$Type, boolean5: boolean)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -1699,8 +1699,8 @@ import { $Optional } from "java.util.Optional"
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $PlayerEvent$BreakSpeed extends $PlayerEvent {
-constructor()
 constructor(player0: $Player$$Type, blockState1: $BlockState$$Type, float2: float, blockPos3: $BlockPos$$Type)
+constructor()
 
 public "getNewSpeed"(): float
 public "getOriginalSpeed"(): float
@@ -1734,9 +1734,9 @@ import { $MobEffectInstance$$Type } from "net.minecraft.world.effect.MobEffectIn
 import { $MobEffect, $MobEffect$$Type } from "net.minecraft.world.effect.MobEffect"
 
 export class $MobEffectEvent$Remove extends $MobEffectEvent {
-constructor()
-constructor(livingEntity0: $LivingEntity$$Type, mobEffectInstance1: $MobEffectInstance$$Type)
 constructor(livingEntity0: $LivingEntity$$Type, mobEffect1: $MobEffect$$Type)
+constructor(livingEntity0: $LivingEntity$$Type, mobEffectInstance1: $MobEffectInstance$$Type)
+constructor()
 
 public "getEffect"(): $MobEffect
 get "effect"(): $MobEffect
@@ -1822,8 +1822,8 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $InteractionHand, $InteractionHand$$Type } from "net.minecraft.world.InteractionHand"
 
 export class $LivingUseTotemEvent extends $LivingEvent {
-constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, itemStack2: $ItemStack$$Type, interactionHand3: $InteractionHand$$Type)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, itemStack2: $ItemStack$$Type, interactionHand3: $InteractionHand$$Type)
 
 public "getHandHolding"(): $InteractionHand
 public "getSource"(): $DamageSource
@@ -1841,8 +1841,8 @@ import { $ZombieEvent } from "net.minecraftforge.event.entity.living.ZombieEvent
 import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $ZombieEvent$SummonAidEvent extends $ZombieEvent {
-constructor(zombie0: $Zombie$$Type, level1: $Level$$Type, int2: integer, int3: integer, int4: integer, livingEntity5: $LivingEntity$$Type, double6: double)
 constructor()
+constructor(zombie0: $Zombie$$Type, level1: $Level$$Type, int2: integer, int3: integer, int4: integer, livingEntity5: $LivingEntity$$Type, double6: double)
 
 public "getAttacker"(): $LivingEntity
 public "getCustomSummonedAid"(): $Zombie
@@ -2035,8 +2035,8 @@ import { $EntityEvent } from "net.minecraftforge.event.entity.EntityEvent"
 
 /** @deprecated */
 export class $EntityEvent$EyeHeight extends $EntityEvent {
-constructor()
 constructor(entity0: $Entity$$Type, pose1: $Pose$$Type, entityDimensions2: $EntityDimensions$$Type, float3: float)
+constructor()
 
 public "getNewEyeHeight"(): float
 public "getOriginalEyeHeight"(): float
@@ -2070,8 +2070,8 @@ import { $Collection, $Collection$$Type } from "java.util.Collection"
 import { $MobEffectInstance, $MobEffectInstance$$Type } from "net.minecraft.world.effect.MobEffectInstance"
 
 export class $PotionColorCalculationEvent extends $LivingEvent {
-constructor(livingEntity0: $LivingEntity$$Type, int1: integer, boolean2: boolean, collection3: $Collection$$Type<$MobEffectInstance$$Type>)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, int1: integer, boolean2: boolean, collection3: $Collection$$Type<$MobEffectInstance$$Type>)
 
 public "areParticlesHidden"(): boolean
 public "getColor"(): integer

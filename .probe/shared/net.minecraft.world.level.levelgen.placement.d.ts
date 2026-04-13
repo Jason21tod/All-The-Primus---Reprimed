@@ -7,8 +7,8 @@ import { $BlockPredicate$$Type } from "net.minecraft.world.level.levelgen.blockp
 export class $EnvironmentScanPlacement extends $PlacementModifier {
 static readonly "CODEC": $Codec<$EnvironmentScanPlacement>
 
-public static "scanningFor"(direction0: $Direction$$Type, blockPredicate1: $BlockPredicate$$Type, blockPredicate2: $BlockPredicate$$Type, int3: integer): $EnvironmentScanPlacement
 public static "scanningFor"(direction0: $Direction$$Type, blockPredicate1: $BlockPredicate$$Type, int2: integer): $EnvironmentScanPlacement
+public static "scanningFor"(direction0: $Direction$$Type, blockPredicate1: $BlockPredicate$$Type, blockPredicate2: $BlockPredicate$$Type, int3: integer): $EnvironmentScanPlacement
 }
 }
 
@@ -101,8 +101,8 @@ import { $RepeatingPlacement } from "net.minecraft.world.level.levelgen.placemen
 export class $CountPlacement extends $RepeatingPlacement implements $CountPlacementAccessor {
 static readonly "CODEC": $Codec<$CountPlacement>
 
-public static "of"(intProvider0: $IntProvider$$Type): $CountPlacement
 public static "of"(int0: integer): $CountPlacement
+public static "of"(intProvider0: $IntProvider$$Type): $CountPlacement
 }
 }
 
@@ -275,8 +275,8 @@ import { $PlacementModifier } from "net.minecraft.world.level.levelgen.placement
 export class $CountOnEveryLayerPlacement extends $PlacementModifier {
 static readonly "CODEC": $Codec<$CountOnEveryLayerPlacement>
 
-public static "of"(int0: integer): $CountOnEveryLayerPlacement
 public static "of"(intProvider0: $IntProvider$$Type): $CountOnEveryLayerPlacement
+public static "of"(int0: integer): $CountOnEveryLayerPlacement
 }
 }
 

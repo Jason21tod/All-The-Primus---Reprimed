@@ -4,8 +4,8 @@ export class $Device$Stats {
 constructor()
 
 public "incImageCreates"(): void
-public "incNumDraws"(): void
 public "incNumDraws"(increment: integer): void
+public "incNumDraws"(): void
 public "incNumFailedDraws"(): void
 public "incNumScratchMSAAAttachmentsReused"(): void
 public "incNumScratchRenderTargetsReused"(): void
@@ -435,8 +435,8 @@ public "getMappedBuffer"(): long
 public "getSize"(): long
 public "getUsage"(): integer
 public "isMapped"(): boolean
-public "map"(): long
 public "map"(offset: long, size: long): long
+public "map"(): long
 public "unmap"(): void
 public "unmap"(size: long): void
 public "updateData"(offset: integer, size: integer, data: long): boolean
@@ -577,12 +577,12 @@ static readonly "kNone_TypeModifier": byte
 static readonly "kOut_TypeModifier": byte
 static readonly "kUniform_TypeModifier": byte
 
-constructor()
-constructor(name: string, type: byte, typeModifier: byte, arraySize: integer, layoutQualifier: string, extraModifier: string)
-constructor(name: string, type: byte, typeModifier: byte)
-constructor(name: string, type: byte, arraySize: integer)
-constructor(name: string, type: byte)
 constructor(name: string, type: byte, typeModifier: byte, arraySize: integer)
+constructor(name: string, type: byte, typeModifier: byte, arraySize: integer, layoutQualifier: string, extraModifier: string)
+constructor()
+constructor(name: string, type: byte)
+constructor(name: string, type: byte, arraySize: integer)
+constructor(name: string, type: byte, typeModifier: byte)
 
 public "addLayoutQualifier"(layoutQualifier: string): void
 public "addLayoutQualifier"(qualifier: string, value: integer): void
@@ -801,8 +801,8 @@ public "getBackendRenderTarget"(): $BackendRenderTarget
 public "getColorAttachment"(int0: integer): $Image
 public "getColorAttachment"(): $Image
 public "getDepthStencilAttachment"(): $Image
-public "getResolveAttachment"(): $Image
 public "getResolveAttachment"(int0: integer): $Image
+public "getResolveAttachment"(): $Image
 public "numColorTargets"(): integer
 get "backendRenderTarget"(): $BackendRenderTarget
 get "colorAttachment"(): $Image
@@ -905,9 +905,9 @@ import { $BackendFormat$$Type } from "icyllis.arc3d.engine.BackendFormat"
 
 /** @deprecated */
 export class $RenderTargetProxy extends $SurfaceProxy {
-constructor(format: $BackendFormat$$Type, width: integer, height: integer, sampleCount: integer, surfaceFlags: integer)
 constructor(renderTarget: $GpuRenderTarget$$Type, surfaceFlags: integer)
 constructor(format: $BackendFormat$$Type, width: integer, height: integer, sampleCount: integer, surfaceFlags: integer, callback: $SurfaceProxy$LazyInstantiateCallback$$Type)
+constructor(format: $BackendFormat$$Type, width: integer, height: integer, sampleCount: integer, surfaceFlags: integer)
 
 public "getResolveRect"(): $Rect2ic
 public "needsResolve"(): boolean
@@ -948,8 +948,8 @@ public "endRenderPass"(): void
 public "setScissor"(int0: integer, int1: integer, int2: integer, int3: integer): void
 public "setViewport"(int0: integer, int1: integer, int2: integer, int3: integer): void
 public "trackCommandBufferResource"(resource: $Resource$$Type): void
-public "trackResource"(resource: $Resource$$Type): void
 public "trackResource"(resource: $ManagedResource$$Type): void
+public "trackResource"(resource: $Resource$$Type): void
 }
 }
 
@@ -1052,7 +1052,6 @@ static readonly "MIPMAP_MODE_NEAREST": integer
 static readonly "MIPMAP_MODE_NONE": integer
 static readonly "NEAREST": $SamplerDesc
 
-public "copy"(): $SamplerDesc
 public "getAddressModeX"(): integer
 public "getAddressModeY"(): integer
 public "getAddressModeZ"(): integer
@@ -1067,9 +1066,9 @@ public "isRepeatedX"(): boolean
 public "isRepeatedY"(): boolean
 public "isRepeatedZ"(): boolean
 public static "make"(filter: integer): $SamplerDesc
-public static "make"(magFilter: integer, minFilter: integer, mipmapMode: integer, addressModeX: integer, addressModeY: integer, addressModeZ: integer): $SamplerDesc
-public static "make"(filter: integer, mipmap: integer, address: integer): $SamplerDesc
 public static "make"(filter: integer, mipmap: integer): $SamplerDesc
+public static "make"(filter: integer, mipmap: integer, address: integer): $SamplerDesc
+public static "make"(magFilter: integer, minFilter: integer, mipmapMode: integer, addressModeX: integer, addressModeY: integer, addressModeZ: integer): $SamplerDesc
 public static "makeAnisotropy"(addressModeX: integer, addressModeY: integer, addressModeZ: integer, maxAnisotropy: integer, isMipmapped: boolean): $SamplerDesc
 public "resetMipmapMode"(): $SamplerDesc
 get "addressModeX"(): integer
@@ -1339,8 +1338,8 @@ import { $Rect2fc$$Type } from "icyllis.arc3d.core.Rect2fc"
 
 /** @deprecated */
 export class $OpsRenderPass {
-constructor(fs: $GpuRenderTarget$$Type, origin: integer)
 constructor()
+constructor(fs: $GpuRenderTarget$$Type, origin: integer)
 
 public "begin"(): void
 public "bindBuffers"(indexBuffer: $Buffer$$Type, indexType: integer, vertexBuffer: $Buffer$$Type, vertexStreamOffset: integer, instanceBuffer: $Buffer$$Type, instanceStreamOffset: integer): void
@@ -1398,8 +1397,8 @@ get "deferredProvider"(): boolean
 
 declare module "icyllis.arc3d.engine.UniformDataManager" {
 import { $Matrix4$$Type } from "icyllis.arc3d.core.Matrix4"
-import { $Matrix3$$Type } from "icyllis.arc3d.core.Matrix3"
 import { $Matrixc$$Type } from "icyllis.arc3d.sketch.Matrixc"
+import { $Matrix3$$Type } from "icyllis.arc3d.core.Matrix3"
 import { $RefCnt } from "icyllis.arc3d.core.RefCnt"
 
 export class $UniformDataManager extends $RefCnt {
@@ -1415,8 +1414,8 @@ public "set2f"(u: integer, v0: float, v1: float): void
 public "set2fv"(u: integer, count: integer, value: long): void
 public "set2fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "set2i"(u: integer, v0: integer, v1: integer): void
-public "set2iv"(u: integer, offset: integer, count: integer, value: integer[]): void
 public "set2iv"(u: integer, count: integer, value: long): void
+public "set2iv"(u: integer, offset: integer, count: integer, value: integer[]): void
 public "set3f"(u: integer, v0: float, v1: float, v2: float): void
 public "set3fv"(u: integer, count: integer, value: long): void
 public "set3fv"(u: integer, offset: integer, count: integer, value: float[]): void
@@ -1424,15 +1423,15 @@ public "set3i"(u: integer, v0: integer, v1: integer, v2: integer): void
 public "set3iv"(u: integer, count: integer, value: long): void
 public "set3iv"(u: integer, offset: integer, count: integer, value: integer[]): void
 public "set4f"(u: integer, v0: float, v1: float, v2: float, v3: float): void
-public "set4fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "set4fv"(u: integer, count: integer, value: long): void
+public "set4fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "set4i"(u: integer, v0: integer, v1: integer, v2: integer, v3: integer): void
 public "set4iv"(u: integer, count: integer, value: long): void
 public "set4iv"(u: integer, offset: integer, count: integer, value: integer[]): void
-public "setMatrix2fv"(u: integer, count: integer, value: long): void
 public "setMatrix2fv"(u: integer, offset: integer, count: integer, value: float[]): void
-public "setMatrix3f"(u: integer, matrix: $Matrix3$$Type): void
+public "setMatrix2fv"(u: integer, count: integer, value: long): void
 public "setMatrix3f"(u: integer, matrix: $Matrixc$$Type): void
+public "setMatrix3f"(u: integer, matrix: $Matrix3$$Type): void
 public "setMatrix3fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "setMatrix3fv"(u: integer, count: integer, value: long): void
 public "setMatrix4f"(u: integer, matrix: $Matrix4$$Type): void
@@ -1579,11 +1578,11 @@ public "createImage"(width: integer, height: integer, format: $BackendFormat$$Ty
 public "createNewBuffer"(size: long, usage: integer): $Buffer
 public "createNewImage"(desc: $ImageDesc$$Type, label: string): $Image
 /** @deprecated */
+public "createRenderTarget"(width: integer, height: integer, colorFormat: $BackendFormat$$Type, colorFlags: integer, resolveFormat: $BackendFormat$$Type, resolveFlags: integer, depthStencilFormat: $BackendFormat$$Type, depthStencilFlags: integer, sampleCount: integer, surfaceFlags: integer, label: string): $GpuRenderTarget
+/** @deprecated */
 public "createRenderTarget"(numColorTargets: integer, colorTargets: $Image$$Type[], resolveTargets: $Image$$Type[], mipLevels: integer[], depthStencilTarget: $Image$$Type, surfaceFlags: integer): $GpuRenderTarget
 /** @deprecated */
 public "createRenderTarget"(width: integer, height: integer, sampleCount: integer): $GpuRenderTarget
-/** @deprecated */
-public "createRenderTarget"(width: integer, height: integer, colorFormat: $BackendFormat$$Type, colorFlags: integer, resolveFormat: $BackendFormat$$Type, resolveFlags: integer, depthStencilFormat: $BackendFormat$$Type, depthStencilFlags: integer, sampleCount: integer, surfaceFlags: integer, label: string): $GpuRenderTarget
 /** @deprecated */
 public "createTexture"(width: integer, height: integer, format: $BackendFormat$$Type, sampleCount: integer, surfaceFlags: integer, label: string): $Image
 public "findAndRefScratchImage"(key: $IResourceKey$$Type, budgeted: boolean, shareable: boolean, label: string): $Image

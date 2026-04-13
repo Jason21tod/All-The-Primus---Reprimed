@@ -26,14 +26,12 @@ declare module "dev.latvian.mods.kubejs.block.custom.FenceGateBlockBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ShapedBlockBuilder } from "dev.latvian.mods.kubejs.block.custom.ShapedBlockBuilder"
 import { $WoodType$$Type } from "net.minecraft.world.level.block.state.properties.WoodType"
-import { $Block } from "net.minecraft.world.level.block.Block"
 
 export class $FenceGateBlockBuilder extends $ShapedBlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
 public "behaviour"(wt: string): $FenceGateBlockBuilder
 public "behaviour"(wt: $WoodType$$Type): $FenceGateBlockBuilder
-public "createObject"(): $Block
 }
 }
 
@@ -176,9 +174,9 @@ public "redstoneConductor"(b: boolean): $BlockBuilder
 /** Sets the render type of the block. Can be `cutout`, `cutout_mipped`, `translucent`, or `basic`. */
 public "renderType"(l: string): $BlockBuilder
 /** Makes the block require a tool to have drops when broken. */
-public "requiresTool"(): $BlockBuilder
-/** Makes the block require a tool to have drops when broken. */
 public "requiresTool"(f: boolean): $BlockBuilder
+/** Makes the block require a tool to have drops when broken. */
+public "requiresTool"(): $BlockBuilder
 /** Sets the blast resistance of the block. Defaults to 3. */
 public "resistance"(r: float): $BlockBuilder
 /** Set the callback used for right-clicking on the block */
@@ -248,8 +246,8 @@ import { $Direction$$Type } from "net.minecraft.core.Direction"
 import { $Collection } from "java.util.Collection"
 import { $BlockState, $BlockState$$Type } from "net.minecraft.world.level.block.state.BlockState"
 import { $Property, $Property$$Type } from "net.minecraft.world.level.block.state.properties.Property"
-import { $IntegerProperty$$Type } from "net.minecraft.world.level.block.state.properties.IntegerProperty"
 import { $BooleanProperty$$Type } from "net.minecraft.world.level.block.state.properties.BooleanProperty"
+import { $IntegerProperty$$Type } from "net.minecraft.world.level.block.state.properties.IntegerProperty"
 import { $Rotation$$Type } from "net.minecraft.world.level.block.Rotation"
 import { $Enum, $Enum$$Type } from "java.lang.Enum"
 import { $Mirror$$Type } from "net.minecraft.world.level.block.Mirror"
@@ -284,10 +282,10 @@ public "mirror"(mirror: $Mirror$$Type): $BlockStateModifyCallbackJS
 public "populateNeighbours"(map: $Map$$Type<$Map$$Type<$Property$$Type<any>, $Comparable$$Type<any>>, $BlockState$$Type>): $BlockStateModifyCallbackJS
 /** Rotate the block using the specified Rotation */
 public "rotate"(rotation: $Rotation$$Type): $BlockStateModifyCallbackJS
-/** Sets the value of the specified integer property */
-public "set"(property: $IntegerProperty$$Type, value: integer): $BlockStateModifyCallbackJS
 /** Sets the value of the specified boolean property */
 public "set"(property: $BooleanProperty$$Type, value: boolean): $BlockStateModifyCallbackJS
+/** Sets the value of the specified integer property */
+public "set"(property: $IntegerProperty$$Type, value: integer): $BlockStateModifyCallbackJS
 /** Sets the value of the specified enum property */
 public "set"<T extends ($Enum<T> & $StringRepresentable)>(property: $EnumProperty$$Type<T>, value: string): $BlockStateModifyCallbackJS
 /** Sets the value of the specified property */
@@ -358,7 +356,6 @@ export class $HorizontalDirectionalBlockBuilder extends $BlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
 public "createObject"(): $Block
-public "textureAll"(tex: string): $HorizontalDirectionalBlockBuilder
 }
 }
 
@@ -374,6 +371,11 @@ export class $EntityFallenOnBlockCallbackJS extends $EntitySteppedOnBlockCallbac
 constructor(level: $Level$$Type, entity: $Entity$$Type, pos: $BlockPos$$Type, state: $BlockState$$Type, fallHeight: float)
 
 /**
+ * Applies fall damage to the entity, multiplier by the multiplier.
+ * Note this does not force it, so entities that do not take fall damage are not affected.
+ */
+public "applyFallDamage"(multiplier: float): boolean
+/**
  * Applies fall damage to the entity as if they had fallen from the provided height, and multiplies it by the provided multiplier.
  * Note this does not force it, so entities that do not take fall damage are not affected.
  */
@@ -383,11 +385,6 @@ public "applyFallDamage"(fallHeight: float, multiplier: float): boolean
  * Note this does not force the damage, so entities that do not take fall damage are not affected.
  */
 public "applyFallDamage"(fallHeight: float, multiplier: float, damageSource: $DamageSource$$Type): boolean
-/**
- * Applies fall damage to the entity, multiplier by the multiplier.
- * Note this does not force it, so entities that do not take fall damage are not affected.
- */
-public "applyFallDamage"(multiplier: float): boolean
 /**
  * Applies default fall damage to the entity.
  * Note this does not force it, so entities that do not take fall damage are not affected.
@@ -456,14 +453,16 @@ public "modify"(predicate: $BlockStatePredicate$$Type, c: $Consumer$$Type<$Block
 declare module "dev.latvian.mods.kubejs.block.custom.ButtonBlockBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ShapedBlockBuilder } from "dev.latvian.mods.kubejs.block.custom.ShapedBlockBuilder"
+import { $Block } from "net.minecraft.world.level.block.Block"
 import { $BlockSetType$$Type } from "net.minecraft.world.level.block.state.properties.BlockSetType"
 
 export class $ButtonBlockBuilder extends $ShapedBlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
 public "arrowsCanPress"(b: boolean): $ButtonBlockBuilder
-public "behaviour"(wt: string): $ButtonBlockBuilder
 public "behaviour"(wt: $BlockSetType$$Type): $ButtonBlockBuilder
+public "behaviour"(wt: string): $ButtonBlockBuilder
+public "createObject"(): $Block
 public "ticksToStayPressed"(t: integer): $ButtonBlockBuilder
 }
 }
@@ -520,15 +519,13 @@ constructor(i: $ResourceLocation$$Type)
 declare module "dev.latvian.mods.kubejs.block.custom.PressurePlateBlockBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ShapedBlockBuilder } from "dev.latvian.mods.kubejs.block.custom.ShapedBlockBuilder"
-import { $Block } from "net.minecraft.world.level.block.Block"
 import { $BlockSetType$$Type } from "net.minecraft.world.level.block.state.properties.BlockSetType"
 
 export class $PressurePlateBlockBuilder extends $ShapedBlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
-public "behaviour"(wt: string): $PressurePlateBlockBuilder
 public "behaviour"(wt: $BlockSetType$$Type): $PressurePlateBlockBuilder
-public "createObject"(): $Block
+public "behaviour"(wt: string): $PressurePlateBlockBuilder
 }
 }
 
@@ -545,12 +542,10 @@ constructor(i: $ResourceLocation$$Type)
 declare module "dev.latvian.mods.kubejs.block.DetectorBlock$Builder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $BlockBuilder } from "dev.latvian.mods.kubejs.block.BlockBuilder"
-import { $Block } from "net.minecraft.world.level.block.Block"
 
 export class $DetectorBlock$Builder extends $BlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
-public "createObject"(): $Block
 public "detectorId"(id: string): $DetectorBlock$Builder
 }
 }
@@ -567,8 +562,8 @@ export class $BlockEntityInfo {
 constructor(blockBuilder: $BlockBuilder$$Type)
 
 public "attach"(type: string, args: $Map$$Type<string, any>): void
-public "clientTick"(frequency: integer, offset: integer, callback: $BlockEntityCallback$$Type): void
 public "clientTick"(callback: $BlockEntityCallback$$Type): void
+public "clientTick"(frequency: integer, offset: integer, callback: $BlockEntityCallback$$Type): void
 public "enableSync"(): void
 public "eventHandler"(eventId: integer, callback: $BlockEntityEventCallback$$Type): void
 public "initialData"(data: $CompoundTag$$Type): void
@@ -577,8 +572,8 @@ public "inventory"(width: integer, height: integer): void
 public "rightClickOpensInventory"(): void
 public "serverTick"(callback: $BlockEntityCallback$$Type): void
 public "serverTick"(frequency: integer, offset: integer, callback: $BlockEntityCallback$$Type): void
-public "tick"(callback: $BlockEntityCallback$$Type): void
 public "tick"(frequency: integer, offset: integer, callback: $BlockEntityCallback$$Type): void
+public "tick"(callback: $BlockEntityCallback$$Type): void
 }
 }
 
@@ -599,9 +594,9 @@ public "bounce"(bounciness: float): void
 /** Returns the Vec3 of the entity's velocity. Use .x, .y and .z to get the respective components of that */
 public "getVelocity"(): $Vec3
 /** Sets the entity's velocity */
-public "setVelocity"(x: float, y: float, z: float): void
-/** Sets the entity's velocity */
 public "setVelocity"(vec: $Vec3$$Type): void
+/** Sets the entity's velocity */
+public "setVelocity"(x: float, y: float, z: float): void
 get "velocity"(): $Vec3
 set "velocity"(value: $Vec3$$Type)
 }
@@ -934,10 +929,10 @@ public "age"(age: integer, builder: $Consumer$$Type<$CropBlockBuilder$ShapeBuild
 public "age"(age: integer): $CropBlockBuilder
 public "bonemeal"(bonemealCallback: $ToIntFunction$$Type<$RandomTickCallbackJS$$Type>): $CropBlockBuilder
 public "createObject"(): $Block
-/** Add a crop output with a specific chance. */
-public "crop"(output: any, chance: double): $CropBlockBuilder
 /** Add a crop output with a 100% chance. */
 public "crop"(output: any): $CropBlockBuilder
+/** Add a crop output with a specific chance. */
+public "crop"(output: any, chance: double): $CropBlockBuilder
 /** Set if the crop should drop seeds when harvested. */
 public "dropSeed"(dropSeed: boolean): $CropBlockBuilder
 public "growTick"(growSpeedCallback: $ToDoubleFunction$$Type<$RandomTickCallbackJS$$Type>): $CropBlockBuilder
@@ -1273,8 +1268,8 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -1286,8 +1281,8 @@ public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public "getRenderBoundingBox"(): $AABB
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
-public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
+public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "onDataPacket"(connection0: $Connection$$Type, clientboundBlockEntityDataPacket1: $ClientboundBlockEntityDataPacket$$Type): void
 public "onLoad"(): void

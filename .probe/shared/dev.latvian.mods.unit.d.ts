@@ -183,8 +183,8 @@ constructor()
 public "addConstant"(s: string, u: $Unit$$Type): void
 public "addFunction"(factory: $FunctionFactory$$Type): void
 public "createStream"(input: string): $UnitTokenStream
-public "debugInfo"(s: string): void
 public "debugInfo"(s: string, values: $Collection$$Type<any>): void
+public "debugInfo"(s: string): void
 public "getFunctionFactory"(name: string): $FunctionFactory
 public "isDebug"(): boolean
 public "parse"(input: string): $Unit
@@ -220,8 +220,8 @@ public "ceil"(): $Unit
 public "clamp"(a: $Unit$$Type, b: $Unit$$Type): $Unit
 public "cos"(): $Unit
 public "deg"(): $Unit
-public "div"(value: double): $Unit
 public "div"(other: $Unit$$Type): $Unit
+public "div"(value: double): $Unit
 public "divSet"(unit: $Unit$$Type): $Unit
 public "eq"(other: $Unit$$Type): $Unit
 public "floor"(): $Unit

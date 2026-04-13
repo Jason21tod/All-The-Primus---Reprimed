@@ -10,7 +10,7 @@ static readonly "TEMPTATION_RANGE": integer
 
 constructor(ingredient0: $Ingredient$$Type)
 
-public "modifyExpressionValue$hpp000$quark$findTroughs"(object0: any, serverLevel1: $ServerLevel$$Type, pathfinderMob2: $PathfinderMob$$Type): any
+public "modifyExpressionValue$icl000$quark$findTroughs"(object0: any, serverLevel1: $ServerLevel$$Type, pathfinderMob2: $PathfinderMob$$Type): any
 }
 }
 
@@ -40,12 +40,12 @@ public "getBaseValue"(attribute0: $Attribute$$Type): double
 public "getDirtyAttributes"(): $Set<$AttributeInstance>
 public "getInstance"(attribute0: $Attribute$$Type): $AttributeInstance
 public "getInstance"(holder0: $Holder$$Type<$Attribute$$Type>): $AttributeInstance
-public "getModifierValue"(attribute0: $Attribute$$Type, uUID1: $UUID$$Type): double
 public "getModifierValue"(holder0: $Holder$$Type<$Attribute$$Type>, uUID1: $UUID$$Type): double
+public "getModifierValue"(attribute0: $Attribute$$Type, uUID1: $UUID$$Type): double
 public "getOwner"(): $LivingEntity
 public "getSyncableAttributes"(): $Collection<$AttributeInstance>
 public "getValue"(attribute0: $Attribute$$Type): double
-public "handler$dbd000$apoth_attrModifiedEvent"(attributeInstance0: $AttributeInstance$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$dcf000$apoth_attrModifiedEvent"(attributeInstance0: $AttributeInstance$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public "hasAttribute"(attribute0: $Attribute$$Type): boolean
 public "hasAttribute"(holder0: $Holder$$Type<$Attribute$$Type>): boolean
 public "hasModifier"(holder0: $Holder$$Type<$Attribute$$Type>, uUID1: $UUID$$Type): boolean
@@ -444,9 +444,9 @@ public "decay"(): void
 public "getCountForType"(gossipType0: $GossipType$$Type, doublePredicate1: $DoublePredicate$$Type): long
 public "getGossipEntries"(): $Map<$UUID, $Object2IntMap<$GossipType>>
 public "getReputation"(uUID0: $UUID$$Type, predicate1: $Predicate$$Type<$GossipType$$Type>): integer
-public "remove"(gossipType0: $GossipType$$Type): void
-public "remove"(uUID0: $UUID$$Type, gossipType1: $GossipType$$Type, int2: integer): void
 public "remove"(uUID0: $UUID$$Type, gossipType1: $GossipType$$Type): void
+public "remove"(uUID0: $UUID$$Type, gossipType1: $GossipType$$Type, int2: integer): void
+public "remove"(gossipType0: $GossipType$$Type): void
 public "store"<T>(dynamicOps0: $DynamicOps$$Type<T>): T
 public "transferFrom"(gossipContainer0: $GossipContainer$$Type, randomSource1: $RandomSource$$Type, int2: integer): void
 public "update"(dynamic0: $Dynamic$$Type<any>): void
@@ -464,8 +464,8 @@ import { $Mob, $Mob$$Type } from "net.minecraft.world.entity.Mob"
 import { $Function$$Type } from "java.util.function.Function"
 
 export class $LongJumpToRandomPos<E extends $Mob = $Mob> extends $Behavior<E> {
-constructor(uniformInt0: $UniformInt$$Type, int1: integer, int2: integer, float3: float, function4: $Function$$Type<E, $SoundEvent>, biPredicate5: $BiPredicate$$Type<E, $BlockPos$$Type>)
 constructor(uniformInt0: $UniformInt$$Type, int1: integer, int2: integer, float3: float, function4: $Function$$Type<E, $SoundEvent>)
+constructor(uniformInt0: $UniformInt$$Type, int1: integer, int2: integer, float3: float, function4: $Function$$Type<E, $SoundEvent>, biPredicate5: $BiPredicate$$Type<E, $BlockPos$$Type>)
 
 public static "defaultAcceptableLandingSpot"<E extends $Mob>(e0: E, blockPos1: $BlockPos$$Type): boolean
 }
@@ -666,8 +666,8 @@ import { $Behavior } from "net.minecraft.world.entity.ai.behavior.Behavior"
 import { $Mob } from "net.minecraft.world.entity.Mob"
 
 export class $MoveToTargetSink extends $Behavior<$Mob> {
-constructor(int0: integer, int1: integer)
 constructor()
+constructor(int0: integer, int1: integer)
 
 }
 }
@@ -703,10 +703,10 @@ public "getWantedY"(): double
 public "getWantedZ"(): double
 public "isLookingAtTarget"(): boolean
 public "setLookAt"(entity0: $Entity$$Type, float1: float, float2: float): void
-public "setLookAt"(entity0: $Entity$$Type): void
-public "setLookAt"(double0: double, double1: double, double2: double, float3: float, float4: float): void
 public "setLookAt"(vec30: $Vec3$$Type): void
+public "setLookAt"(double0: double, double1: double, double2: double, float3: float, float4: float): void
 public "setLookAt"(double0: double, double1: double, double2: double): void
+public "setLookAt"(entity0: $Entity$$Type): void
 public "tick"(): void
 get "lookAtCooldown"(): integer
 set "lookAtCooldown"(value: integer)
@@ -718,8 +718,8 @@ get "wantedX"(): double
 get "wantedY"(): double
 get "wantedZ"(): double
 get "lookingAtTarget"(): boolean
-set "lookAt"(value: $Entity$$Type)
 set "lookAt"(value: $Vec3$$Type)
+set "lookAt"(value: $Entity$$Type)
 }
 }
 
@@ -836,8 +836,8 @@ constructor()
 declare module "net.minecraft.world.entity.ai.navigation.PathNavigation" {
 import { $CallbackInfo$$Type } from "org.spongepowered.asm.mixin.injection.callback.CallbackInfo"
 import { $Path, $Path$$Type } from "net.minecraft.world.level.pathfinder.Path"
-import { $Entity$$Type } from "net.minecraft.world.entity.Entity"
 import { $Stream$$Type } from "java.util.stream.Stream"
+import { $Entity$$Type } from "net.minecraft.world.entity.Entity"
 import { $BlockPos, $BlockPos$$Type } from "net.minecraft.core.BlockPos"
 import { $BlockPathTypes$$Type } from "net.minecraft.world.level.pathfinder.BlockPathTypes"
 import { $NodeEvaluator } from "net.minecraft.world.level.pathfinder.NodeEvaluator"
@@ -851,18 +851,18 @@ constructor(mob0: $Mob$$Type, level1: $Level$$Type)
 
 public "canCutCorner"(blockPathTypes0: $BlockPathTypes$$Type): boolean
 public "canFloat"(): boolean
-public "createPath"(entity0: $Entity$$Type, int1: integer): $Path
-public "createPath"(double0: double, double1: double, double2: double, int3: integer): $Path
 public "createPath"(set0: $Set$$Type<$BlockPos$$Type>, int1: integer): $Path
+public "createPath"(double0: double, double1: double, double2: double, int3: integer): $Path
 public "createPath"(stream0: $Stream$$Type<$BlockPos$$Type>, int1: integer): $Path
 public "createPath"(blockPos0: $BlockPos$$Type, int1: integer, int2: integer): $Path
+public "createPath"(entity0: $Entity$$Type, int1: integer): $Path
 public "createPath"(blockPos0: $BlockPos$$Type, int1: integer): $Path
 public "getMaxDistanceToWaypoint"(): float
 public "getNodeEvaluator"(): $NodeEvaluator
 public "getPath"(): $Path
 public "getTargetPos"(): $BlockPos
-public "handler$dgl000$shouldRecomputePath"(blockPos0: $BlockPos$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$dgm000$recomputePath"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$dhn000$shouldRecomputePath"(blockPos0: $BlockPos$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$dho000$recomputePath"(callbackInfo0: $CallbackInfo$$Type): void
 public "isDone"(): boolean
 public "isInProgress"(): boolean
 public "isStableDestination"(blockPos0: $BlockPos$$Type): boolean
@@ -926,8 +926,8 @@ public static "isNullOrAddition"(operation0: $AttributeModifier$Operation$$Type)
 public "ths"(): $Attribute
 public static "toBaseComponent"(attribute0: $Attribute$$Type, double1: double, double2: double, boolean3: boolean, tooltipFlag4: $TooltipFlag$$Type): $MutableComponent
 public "toBaseComponent"(double0: double, double1: double, boolean2: boolean, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
-public static "toComponent"(attribute0: $Attribute$$Type, attributeModifier1: $AttributeModifier$$Type, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
 public "toComponent"(attributeModifier0: $AttributeModifier$$Type, tooltipFlag1: $TooltipFlag$$Type): $MutableComponent
+public static "toComponent"(attribute0: $Attribute$$Type, attributeModifier1: $AttributeModifier$$Type, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
 public "toValueComponent"(operation0: $AttributeModifier$Operation$$Type, double1: double, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
 public static "toValueComponent"(attribute0: $Attribute$$Type, operation1: $AttributeModifier$Operation$$Type, double2: double, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
 get "baseUUID"(): $UUID
@@ -1004,8 +1004,8 @@ import { $MemoryStatus$$Type } from "net.minecraft.world.entity.ai.memory.Memory
 import { $BrainAccessor } from "net.mehvahdjukaar.moonlight.core.mixins.accessor.BrainAccessor"
 import { $ExpirableValue } from "net.minecraft.world.entity.ai.memory.ExpirableValue"
 import { $Sensor$$Type } from "net.minecraft.world.entity.ai.sensing.Sensor"
-import { $Pair$$Type } from "com.mojang.datafixers.util.Pair"
 import { $BehaviorControl, $BehaviorControl$$Type } from "net.minecraft.world.entity.ai.behavior.BehaviorControl"
+import { $Pair$$Type } from "com.mojang.datafixers.util.Pair"
 import { $Schedule, $Schedule$$Type } from "net.minecraft.world.entity.schedule.Schedule"
 import { $List, $List$$Type } from "java.util.List"
 import { $Codec } from "com.mojang.serialization.Codec"
@@ -1015,8 +1015,8 @@ import { $Optional, $Optional$$Type } from "java.util.Optional"
 export class $Brain<E extends $LivingEntity = $LivingEntity> implements $BrainAccess, $BrainAccessor {
 constructor(collection0: $Collection$$Type<$MemoryModuleType$$Type<any>>, collection1: $Collection$$Type<$SensorType$$Type<$Sensor$$Type<E>>>, immutableList2: $ImmutableList$$Type<$Brain$MemoryValue$$Type<any>>, supplier3: $Supplier$$Type<$Codec<$Brain<E>>>)
 
-public "addActivity"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>): void
 public "addActivity"(activity0: $Activity$$Type, int1: integer, immutableList2: $ImmutableList$$Type<$BehaviorControl$$Type<E>>): void
+public "addActivity"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>): void
 public "addActivityAndRemoveMemoriesWhenStopped"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>, set2: $Set$$Type<$Pair$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>>, set3: $Set$$Type<$MemoryModuleType$$Type<any>>): void
 public "addActivityAndRemoveMemoryWhenStopped"(activity0: $Activity$$Type, int1: integer, immutableList2: $ImmutableList$$Type<$BehaviorControl$$Type<E>>, memoryModuleType3: $MemoryModuleType$$Type<any>): void
 public "addActivityWithConditions"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>, set2: $Set$$Type<$Pair$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>>): void
@@ -1173,9 +1173,9 @@ import { $BehaviorControl } from "net.minecraft.world.entity.ai.behavior.Behavio
 export class $Behavior<E extends $LivingEntity = $LivingEntity> implements $BehaviorControl<E> {
 static readonly "DEFAULT_DURATION": integer
 
-constructor(map0: $Map$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>)
 constructor(map0: $Map$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>, int1: integer, int2: integer)
 constructor(map0: $Map$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>, int1: integer)
+constructor(map0: $Map$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>)
 
 public "debugString"(): string
 public "doStop"(serverLevel0: $ServerLevel$$Type, e1: E, long2: long): void
@@ -1505,15 +1505,15 @@ public "test"(livingEntity0: $LivingEntity$$Type, livingEntity1: $LivingEntity$$
 
 declare module "net.minecraft.world.entity.ai.memory.WalkTarget" {
 import { $Entity$$Type } from "net.minecraft.world.entity.Entity"
-import { $BlockPos$$Type } from "net.minecraft.core.BlockPos"
 import { $Vec3$$Type } from "net.minecraft.world.phys.Vec3"
+import { $BlockPos$$Type } from "net.minecraft.core.BlockPos"
 import { $PositionTracker, $PositionTracker$$Type } from "net.minecraft.world.entity.ai.behavior.PositionTracker"
 
 export class $WalkTarget {
-constructor(blockPos0: $BlockPos$$Type, float1: float, int2: integer)
 constructor(positionTracker0: $PositionTracker$$Type, float1: float, int2: integer)
 constructor(entity0: $Entity$$Type, float1: float, int2: integer)
 constructor(vec30: $Vec3$$Type, float1: float, int2: integer)
+constructor(blockPos0: $BlockPos$$Type, float1: float, int2: integer)
 
 public "getCloseEnoughDist"(): integer
 public "getSpeedModifier"(): float
@@ -1570,8 +1570,8 @@ export class $FollowTemptation extends $Behavior<$PathfinderMob> {
 static readonly "CLOSE_ENOUGH_DIST": double
 static readonly "TEMPTATION_COOLDOWN": integer
 
-constructor(function0: $Function$$Type<$LivingEntity$$Type, float>, function1: $Function$$Type<$LivingEntity$$Type, double>)
 constructor(function0: $Function$$Type<$LivingEntity$$Type, float>)
+constructor(function0: $Function$$Type<$LivingEntity$$Type, float>, function1: $Function$$Type<$LivingEntity$$Type, double>)
 
 }
 }
