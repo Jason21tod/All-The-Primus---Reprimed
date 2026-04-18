@@ -282,10 +282,10 @@ public "createObject"(): T
  * This will be overridden by a lang file if it exists.
  */
 public "displayName"(name: $Component$$Type): $BuilderBase<T>
-/** Combined method of formattedDisplayName().displayName(name). */
-public "formattedDisplayName"(name: $Component$$Type): $BuilderBase<T>
 /** Makes displayName() override language files. */
 public "formattedDisplayName"(): $BuilderBase<T>
+/** Combined method of formattedDisplayName().displayName(name). */
+public "formattedDisplayName"(name: $Component$$Type): $BuilderBase<T>
 public "generateAssetJsons"(generator: $AssetJsonGenerator$$Type): void
 public "generateDataJsons"(generator: $DataJsonGenerator$$Type): void
 public "generateLang"(lang: $LangEventJS$$Type): void

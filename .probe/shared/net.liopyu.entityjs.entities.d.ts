@@ -95,9 +95,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -110,8 +110,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -126,8 +126,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -206,12 +206,12 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playerDied"(player0: $Player$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readPersistentAngerSaveData"(level0: $Level$$Type, compoundTag1: $CompoundTag$$Type): void
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -226,6 +226,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -267,14 +268,14 @@ public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$
 public "spawn"(): void
 public "stopBeingAngry"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "updatePersistentAnger"(serverLevel0: $ServerLevel$$Type, boolean1: boolean): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
@@ -453,9 +454,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -467,8 +468,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -483,8 +484,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -562,11 +563,11 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
 public static "pickUpItem"(mob0: $Mob$$Type, inventoryCarrier1: $InventoryCarrier$$Type, itemEntity2: $ItemEntity$$Type): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readInventoryFromTag"(compoundTag0: $CompoundTag$$Type): void
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -581,6 +582,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -619,14 +621,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 public "writeInventoryToTag"(compoundTag0: $CompoundTag$$Type): void
@@ -784,9 +786,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -795,8 +797,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>): D
 public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -811,8 +813,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -880,11 +882,11 @@ public "modifyAttribute"(attribute: $Attribute$$Type, identifier: string, d: dou
 public "moveInFluid"(fluidState0: $FluidState$$Type, vec31: $Vec3$$Type, double2: double): boolean
 public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -899,6 +901,7 @@ public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -935,13 +938,13 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -1078,8 +1081,8 @@ public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -1088,8 +1091,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -1136,16 +1139,17 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
@@ -1301,9 +1305,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -1315,8 +1319,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -1331,8 +1335,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -1409,11 +1413,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -1427,6 +1431,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -1465,14 +1470,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -1662,9 +1667,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -1676,8 +1681,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -1692,8 +1697,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -1766,11 +1771,11 @@ public "moveInFluid"(fluidState0: $FluidState$$Type, vec31: $Vec3$$Type, double2
 public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -1784,6 +1789,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -1822,14 +1828,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -2001,9 +2007,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -2015,8 +2021,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -2032,8 +2038,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -2109,11 +2115,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -2129,6 +2135,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -2167,14 +2174,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -2271,8 +2278,8 @@ export interface $IAnimatableJSNL extends $GeoAnimatable, $GeoEntity {
 "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 "shouldPlayAnimsWhileGamePaused"(): boolean
 "stopTriggeredAnimation"(string0: string, string1: string): void
-"triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 "triggerAnim"(controllerName: string, animName: string): void
+"triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
 get "boneResetTime"(): double
 get "builder"(): $BaseEntityBuilder<any>
@@ -2379,9 +2386,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -2393,8 +2400,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -2409,8 +2416,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -2485,11 +2492,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -2503,6 +2510,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -2541,16 +2549,16 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "tamableFood"(pStack: $ItemStack$$Type): boolean
 public "tamableFoodPredicate"(pStack: $ItemStack$$Type): boolean
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -2713,9 +2721,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -2725,8 +2733,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>): D
 public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -2741,8 +2749,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -2812,11 +2820,11 @@ public "moveInFluid"(fluidState0: $FluidState$$Type, vec31: $Vec3$$Type, double2
 public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -2831,6 +2839,7 @@ public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -2869,14 +2878,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -3043,9 +3052,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -3057,8 +3066,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -3073,8 +3082,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -3147,11 +3156,11 @@ public "moveInFluid"(fluidState0: $FluidState$$Type, vec31: $Vec3$$Type, double2
 public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -3165,6 +3174,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -3203,14 +3213,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -3378,9 +3388,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -3392,8 +3402,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -3408,8 +3418,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -3483,11 +3493,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -3501,6 +3511,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -3539,14 +3550,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -3715,9 +3726,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -3729,8 +3740,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -3745,8 +3756,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -3820,11 +3831,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -3838,6 +3849,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -3876,14 +3888,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -4052,9 +4064,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -4066,8 +4078,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -4082,8 +4094,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -4157,11 +4169,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -4175,6 +4187,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -4213,14 +4226,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -4392,9 +4405,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -4406,8 +4419,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -4422,8 +4435,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -4499,11 +4512,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -4519,6 +4532,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -4557,14 +4571,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -4733,9 +4747,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -4747,8 +4761,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -4763,8 +4777,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -4838,11 +4852,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -4856,6 +4870,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -4894,14 +4909,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -5070,9 +5085,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -5084,8 +5099,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -5100,8 +5115,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -5175,11 +5190,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -5193,6 +5208,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -5231,14 +5247,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -5407,9 +5423,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -5421,8 +5437,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -5437,8 +5453,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -5513,11 +5529,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -5532,6 +5548,7 @@ public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -5570,14 +5587,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -5717,8 +5734,8 @@ public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -5727,8 +5744,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -5777,16 +5794,17 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
@@ -5906,8 +5924,8 @@ public "alwaysAccepts"(): boolean
 public "animatableCacheOverride"(): $AnimatableInstanceCache
 public "attack"(hp: float): void
 public "canBeRiddenUnderFluidType"(fluidType0: $FluidType$$Type, entity1: $Entity$$Type): boolean
-public "canBoatInFluid"(fluidType0: $FluidType$$Type): boolean
 public "canBoatInFluid"(fluidState0: $FluidState$$Type): boolean
+public "canBoatInFluid"(fluidType0: $FluidType$$Type): boolean
 public "canFluidExtinguish"(fluidType0: $FluidType$$Type): boolean
 public "canHydrateInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "canRiderInteract"(): boolean
@@ -5921,8 +5939,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>): D
 public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -5933,8 +5951,8 @@ public "getBuilder"(): $BaseEntityBuilder<any>
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 /** @deprecated */
@@ -5984,10 +6002,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -5995,6 +6013,7 @@ public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
@@ -6017,8 +6036,8 @@ public "stopTriggeredAnimation"(string0: string, string1: string): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -6131,8 +6150,8 @@ public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -6141,8 +6160,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -6157,6 +6176,7 @@ public "getMotionZ"(): double
 public "getName"(): $Component
 public "getNbt"(): $CompoundTag
 public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
+public "getParent"(): T
 public "getParts"(): $PartEntity<any>[]
 public "getPassengers"(): $EntityArrayList
 public "getPickedResult"(hitResult0: $HitResult$$Type): $ItemStack
@@ -6189,16 +6209,17 @@ public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "movePart"(pX: double, pY: double, pZ: double, pYRot: float, pXRot: float): void
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
@@ -6233,6 +6254,7 @@ get "motionX"(): double
 get "motionY"(): double
 get "motionZ"(): double
 get "nbt"(): $CompoundTag
+get "parent"(): T
 get "parts"(): $PartEntity<any>[]
 get "passengers"(): $EntityArrayList
 get "profile"(): $GameProfile
@@ -6357,9 +6379,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "equipSaddle"(soundSource0: $SoundSource$$Type): void
@@ -6372,8 +6394,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -6388,8 +6410,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -6466,11 +6488,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -6484,6 +6506,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -6522,14 +6545,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -6705,9 +6728,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -6719,8 +6742,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -6735,8 +6758,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -6812,11 +6835,11 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performCrossbowAttack"(livingEntity0: $LivingEntity$$Type, float1: float): void
 public static "pickUpItem"(mob0: $Mob$$Type, inventoryCarrier1: $InventoryCarrier$$Type, itemEntity2: $ItemEntity$$Type): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readInventoryFromTag"(compoundTag0: $CompoundTag$$Type): void
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -6831,6 +6854,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -6870,14 +6894,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 public "writeInventoryToTag"(compoundTag0: $CompoundTag$$Type): void
@@ -7048,9 +7072,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -7062,8 +7086,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -7078,8 +7102,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -7153,11 +7177,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -7172,6 +7196,7 @@ public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -7210,14 +7235,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -7386,9 +7411,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -7400,8 +7425,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -7416,8 +7441,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -7490,11 +7515,11 @@ public "moveInFluid"(fluidState0: $FluidState$$Type, vec31: $Vec3$$Type, double2
 public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -7508,6 +7533,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -7546,14 +7572,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -7717,9 +7743,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -7731,8 +7757,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -7747,8 +7773,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -7825,11 +7851,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -7843,6 +7869,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -7881,14 +7908,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -8062,9 +8089,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -8077,8 +8104,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -8093,8 +8120,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -8173,12 +8200,12 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playerDied"(player0: $Player$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readPersistentAngerSaveData"(level0: $Level$$Type, compoundTag1: $CompoundTag$$Type): void
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -8193,6 +8220,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -8234,14 +8262,14 @@ public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$
 public "spawn"(): void
 public "stopBeingAngry"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "updatePersistentAnger"(serverLevel0: $ServerLevel$$Type, boolean1: boolean): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
@@ -8415,9 +8443,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -8429,8 +8457,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -8445,8 +8473,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -8520,11 +8548,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -8538,6 +8566,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -8576,14 +8605,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -8748,9 +8777,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -8762,8 +8791,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -8778,8 +8807,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -8854,11 +8883,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -8872,6 +8901,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -8910,16 +8940,16 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "tamableFood"(pStack: $ItemStack$$Type): boolean
 public "tamableFoodPredicate"(pStack: $ItemStack$$Type): boolean
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -9016,8 +9046,8 @@ export interface $IAnimatableJS extends $GeoAnimatable, $GeoEntity {
 "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 "shouldPlayAnimsWhileGamePaused"(): boolean
 "stopTriggeredAnimation"(string0: string, string1: string): void
-"triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 "triggerAnim"(controllerName: string, animName: string): void
+"triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
 get "boneResetTime"(): double
 get "builder"(): $BaseLivingEntityBuilder<any>
@@ -9126,9 +9156,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -9140,8 +9170,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -9156,8 +9186,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -9231,11 +9261,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -9249,6 +9279,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -9287,14 +9318,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -9463,9 +9494,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -9477,8 +9508,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -9493,8 +9524,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -9568,11 +9599,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -9586,6 +9617,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -9624,14 +9656,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -9802,9 +9834,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -9817,8 +9849,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -9833,8 +9865,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -9917,12 +9949,12 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playerDied"(player0: $Player$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readPersistentAngerSaveData"(level0: $Level$$Type, compoundTag1: $CompoundTag$$Type): void
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -9937,6 +9969,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -9981,16 +10014,16 @@ public "spawn"(): void
 public "startPersistentAngerTimer"(): void
 public "stopBeingAngry"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "tamableFood"(pStack: $ItemStack$$Type): boolean
 public "tamableFoodPredicate"(pStack: $ItemStack$$Type): boolean
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "updatePersistentAnger"(serverLevel0: $ServerLevel$$Type, boolean1: boolean): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
@@ -10171,9 +10204,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -10185,8 +10218,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -10201,8 +10234,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -10276,11 +10309,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -10295,6 +10328,7 @@ public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -10333,14 +10367,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -10509,9 +10543,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -10523,8 +10557,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -10539,8 +10573,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -10614,11 +10648,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -10632,6 +10666,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -10670,14 +10705,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -10845,9 +10880,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -10859,8 +10894,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -10875,8 +10910,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -10950,11 +10985,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -10968,6 +11003,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -11006,14 +11042,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -11158,8 +11194,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>): D
 public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -11170,8 +11206,8 @@ public "getBuilder"(): $BaseEntityBuilder<any>
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 /** @deprecated */
@@ -11223,10 +11259,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -11234,6 +11270,7 @@ public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
@@ -11256,8 +11293,8 @@ public "stopTriggeredAnimation"(string0: string, string1: string): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "builder"(): $TridentJSBuilder
@@ -11404,9 +11441,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -11418,8 +11455,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -11434,8 +11471,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -11509,11 +11546,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -11527,6 +11564,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -11565,14 +11603,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -11743,9 +11781,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -11758,8 +11796,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -11774,8 +11812,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -11854,12 +11892,12 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playerDied"(player0: $Player$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readPersistentAngerSaveData"(level0: $Level$$Type, compoundTag1: $CompoundTag$$Type): void
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -11874,6 +11912,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -11915,14 +11954,14 @@ public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$
 public "spawn"(): void
 public "stopBeingAngry"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "updatePersistentAnger"(serverLevel0: $ServerLevel$$Type, boolean1: boolean): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
@@ -12113,9 +12152,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -12127,8 +12166,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -12143,8 +12182,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -12218,11 +12257,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -12236,6 +12275,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -12274,14 +12314,14 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -12452,9 +12492,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -12467,8 +12507,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -12483,8 +12523,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -12567,12 +12607,12 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playerDied"(player0: $Player$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readPersistentAngerSaveData"(level0: $Level$$Type, compoundTag1: $CompoundTag$$Type): void
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -12587,6 +12627,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -12631,16 +12672,16 @@ public "spawn"(): void
 public "startPersistentAngerTimer"(): void
 public "stopBeingAngry"(): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "tamableFood"(pStack: $ItemStack$$Type): boolean
 public "tamableFoodPredicate"(pStack: $ItemStack$$Type): boolean
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "updatePersistentAnger"(serverLevel0: $ServerLevel$$Type, boolean1: boolean): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
@@ -12798,8 +12839,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>): D
 public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -12810,8 +12851,8 @@ public "getBuilder"(): $BaseEntityBuilder<any>
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 /** @deprecated */
@@ -12862,10 +12903,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -12873,6 +12914,7 @@ public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
@@ -12894,8 +12936,8 @@ public "stopTriggeredAnimation"(string0: string, string1: string): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "builder"(): $ProjectileAnimatableJSBuilder
@@ -13013,8 +13055,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>): D
 public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -13025,8 +13067,8 @@ public "getBuilder"(): $BaseEntityBuilder<any>
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 /** @deprecated */
@@ -13075,10 +13117,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -13086,6 +13128,7 @@ public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
@@ -13107,8 +13150,8 @@ public "stopTriggeredAnimation"(string0: string, string1: string): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
@@ -13223,8 +13266,8 @@ public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -13233,8 +13276,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -13282,16 +13325,17 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setDamageFunction"(): double
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
@@ -13380,8 +13424,8 @@ export interface $IAnimatableJSCustom extends $GeoAnimatable, $GeoEntity {
 "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 "shouldPlayAnimsWhileGamePaused"(): boolean
 "stopTriggeredAnimation"(string0: string, string1: string): void
-"triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 "triggerAnim"(controllerName: string, animName: string): void
+"triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 get "animatableInstanceCache"(): $AnimatableInstanceCache
 get "boneResetTime"(): double
 get "builder"(): $CustomEntityJSBuilder

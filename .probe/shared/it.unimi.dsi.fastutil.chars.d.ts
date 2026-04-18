@@ -74,9 +74,9 @@ export interface $Char2ShortFunction extends $Function$0<character, short>, $Int
 /** @deprecated */
 "getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(char0: character, short1: short): short
-"put"(char0: character, short1: short): short
 /** @deprecated */
 "put"(character0: character, short1: short): short
+"put"(char0: character, short1: short): short
 "remove"(char0: character): short
 "size"(): integer
 }
@@ -165,9 +165,9 @@ export interface $Char2ByteFunction extends $Function$0<character, byte>, $IntUn
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(char0: character, byte1: byte): byte
-"put"(char0: character, byte1: byte): byte
 /** @deprecated */
 "put"(character0: character, byte1: byte): byte
+"put"(char0: character, byte1: byte): byte
 "remove"(char0: character): byte
 "size"(): integer
 }
@@ -254,9 +254,9 @@ export interface $Char2FloatFunction extends $Function$0<character, float>, $Int
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(char0: character, float1: float): float
-"put"(char0: character, float1: float): float
 /** @deprecated */
 "put"(character0: character, float1: float): float
+"put"(char0: character, float1: float): float
 "remove"(char0: character): float
 "size"(): integer
 }
@@ -343,9 +343,9 @@ export interface $Char2DoubleFunction extends $Function$0<character, double>, $I
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
 "getOrDefault"(char0: character, double1: double): double
-"put"(char0: character, double1: double): double
 /** @deprecated */
 "put"(character0: character, double1: double): double
+"put"(char0: character, double1: double): double
 "remove"(char0: character): double
 "size"(): integer
 }
@@ -428,9 +428,9 @@ export interface $Char2ObjectFunction<V = any> extends $Function$0<character, V>
 /** @deprecated */
 "get"(object0: any): V
 "get"(char0: character): V
-"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "put"(character0: character, v1: V): V
 "put"(char0: character, v1: V): V
@@ -594,9 +594,9 @@ export interface $Char2ReferenceFunction<V = any> extends $Function$0<character,
 /** @deprecated */
 "get"(object0: any): V
 "get"(char0: character): V
-"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "put"(character0: character, v1: V): V
 "put"(char0: character, v1: V): V
@@ -690,9 +690,9 @@ export interface $Char2IntFunction extends $Function$0<character, integer>, $Int
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
 "getOrDefault"(char0: character, int1: integer): integer
-"put"(char0: character, int1: integer): integer
 /** @deprecated */
 "put"(character0: character, integer1: integer): integer
+"put"(char0: character, int1: integer): integer
 "remove"(char0: character): integer
 "size"(): integer
 }
@@ -779,9 +779,9 @@ export interface $Char2LongFunction extends $Function$0<character, long>, $IntTo
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
 "getOrDefault"(char0: character, long1: long): long
-"put"(char0: character, long1: long): long
 /** @deprecated */
 "put"(character0: character, long1: long): long
+"put"(char0: character, long1: long): long
 "remove"(char0: character): long
 "size"(): integer
 }
@@ -867,14 +867,14 @@ export interface $Char2BooleanFunction extends $Function$0<character, boolean>, 
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(char0: character): boolean
+"getOrDefault"(char0: character, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
-"getOrDefault"(char0: character, boolean1: boolean): boolean
 "negate"(): $IntPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
-"put"(char0: character, boolean1: boolean): boolean
 /** @deprecated */
 "put"(character0: character, boolean1: boolean): boolean
+"put"(char0: character, boolean1: boolean): boolean
 "remove"(char0: character): boolean
 "size"(): integer
 /** @deprecated */

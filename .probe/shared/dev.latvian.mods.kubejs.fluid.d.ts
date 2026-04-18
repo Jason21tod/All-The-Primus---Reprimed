@@ -17,7 +17,6 @@ public "bucketColor"(c: $Color$$Type): $FluidBuilder
 public "builtinTextures"(): $FluidBuilder
 public "color"(c: $Color$$Type): $FluidBuilder
 public "createAttributes"(): $ArchitecturyFluidAttributes
-public "createObject"(): $FlowingFluid
 public "density"(density: integer): $FluidBuilder
 public "displayName"(name: $Component$$Type): $BuilderBase<$FlowingFluid>
 public "flowingTexture"(id: $ResourceLocation$$Type): $FluidBuilder
@@ -63,14 +62,14 @@ public static "getEmpty"(): $FluidStackJS
 public static "getId"(fluid: $Fluid$$Type): $ResourceLocation
 public static "getType"(id: $ResourceLocation$$Type): $Fluid
 public static "getTypes"(): $List<string>
-public static "lava"(amount: integer): $FluidStackJS
 public static "lava"(): $FluidStackJS
+public static "lava"(amount: integer): $FluidStackJS
 public static "of"(o: $FluidStackJS$$Type): $FluidStackJS
 public static "of"(o: $FluidStackJS$$Type, amount: integer, nbt: $CompoundTag$$Type): $FluidStackJS
 public static "of"(o: $FluidStackJS$$Type, nbt: $CompoundTag$$Type): $FluidStackJS
 public static "of"(o: $FluidStackJS$$Type, amount: integer): $FluidStackJS
-public static "water"(amount: integer): $FluidStackJS
 public static "water"(): $FluidStackJS
+public static "water"(amount: integer): $FluidStackJS
 }
 }
 

@@ -281,8 +281,8 @@ import { $EmbeddiumEvent } from "org.embeddedt.embeddium.api.eventbus.EmbeddiumE
 export class $OptionPageConstructionEvent extends $EmbeddiumEvent {
 static readonly "BUS": $EventHandlerRegistrar<$OptionPageConstructionEvent>
 
-constructor(optionIdentifier0: $OptionIdentifier$$Type<void>, component1: $Component$$Type)
 constructor()
+constructor(optionIdentifier0: $OptionIdentifier$$Type<void>, component1: $Component$$Type)
 
 public "addGroup"(optionGroup0: $OptionGroup$$Type): void
 public "getAdditionalGroups"(): $List<$OptionGroup>

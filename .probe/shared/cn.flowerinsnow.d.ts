@@ -112,8 +112,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $AbstractContainerScreen, $AbstractContainerScreen$$Type } from "net.minecraft.client.gui.screens.inventory.AbstractContainerScreen"
 
 export class $PreScreenMouseScrollEvent extends $Event implements $EventItf {
-constructor(abstractContainerScreen0: $AbstractContainerScreen$$Type<any>, double1: double, double2: double, double3: double)
 constructor()
+constructor(abstractContainerScreen0: $AbstractContainerScreen$$Type<any>, double1: double, double2: double, double3: double)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

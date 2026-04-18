@@ -120,10 +120,10 @@ public static "string"(text: string): $MutableComponent
 public static "translatable"(key: string): $MutableComponent
 /** Returns a translatable component of the input key, with args of the objects */
 public static "translatable"(key: string, ...objects: any[]): $MutableComponent
-/** Returns a translatable component of the input key, with args of the objects */
-public static "translate"(key: string, ...objects: any[]): $MutableComponent
 /** Returns a translatable component of the input key */
 public static "translate"(key: string): $MutableComponent
+/** Returns a translatable component of the input key, with args of the objects */
+public static "translate"(key: string, ...objects: any[]): $MutableComponent
 /** Returns a component of the input, colored white */
 public static "white"(text: any): $MutableComponent
 /** Returns a component of the input, colored yellow */

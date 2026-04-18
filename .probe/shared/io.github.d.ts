@@ -310,8 +310,8 @@ import { $Map$$Type } from "java.util.Map"
 import { $PowerFactory, $PowerFactory$$Type } from "io.github.edwinmindcraft.apoli.api.power.factory.PowerFactory"
 
 export interface $IPowerContainer {
-"addPower"(resourceKey0: $ResourceKey$$Type<$ConfiguredPower<any, any>>, resourceLocation1: $ResourceLocation$$Type): boolean
 "addPower"(resourceLocation0: $ResourceLocation$$Type, resourceLocation1: $ResourceLocation$$Type): boolean
+"addPower"(resourceKey0: $ResourceKey$$Type<$ConfiguredPower<any, any>>, resourceLocation1: $ResourceLocation$$Type): boolean
 "getOwner"(): $Entity
 "getPower"<C extends $IDynamicFeatureConfiguration, F extends $PowerFactory<C>>(resourceLocation0: $ResourceLocation$$Type): $Holder<$ConfiguredPower<C, F>>
 "getPower"<C extends $IDynamicFeatureConfiguration, F extends $PowerFactory<C>>(resourceKey0: $ResourceKey$$Type<$ConfiguredPower<any, any>>): $Holder<$ConfiguredPower<C, F>>
@@ -321,15 +321,15 @@ export interface $IPowerContainer {
 "getPowerTypes"(boolean0: boolean): $Set<$ResourceKey<$ConfiguredPower<any, any>>>
 "getPowers"<C extends $IDynamicFeatureConfiguration, F extends $PowerFactory<C>>(f0: F, predicate1: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<C, F>>>): $List<$Holder<$ConfiguredPower<C, F>>>
 "getPowers"<C extends $IDynamicFeatureConfiguration, F extends $PowerFactory<C>>(f0: F): $List<$Holder<$ConfiguredPower<C, F>>>
-"getPowers"(): $List<$Holder<$ConfiguredPower<any, any>>>
 "getPowers"<C extends $IDynamicFeatureConfiguration, F extends $PowerFactory<C>>(f0: F, boolean1: boolean): $List<$Holder<$ConfiguredPower<C, F>>>
+"getPowers"(): $List<$Holder<$ConfiguredPower<any, any>>>
 "getPowersFromSource"(resourceLocation0: $ResourceLocation$$Type): $List<$ResourceKey<$ConfiguredPower<any, any>>>
 "getSources"(resourceKey0: $ResourceKey$$Type<$ConfiguredPower<any, any>>): $List<$ResourceLocation>
 "getSources"(resourceLocation0: $ResourceLocation$$Type): $List<$ResourceLocation>
 "handle"(multimap0: $Multimap$$Type<$ResourceLocation$$Type, $ResourceLocation$$Type>, map1: $Map$$Type<$ResourceLocation$$Type, $CompoundTag$$Type>): void
-"hasPower"(resourceLocation0: $ResourceLocation$$Type, resourceLocation1: $ResourceLocation$$Type): boolean
 "hasPower"(resourceKey0: $ResourceKey$$Type<$ConfiguredPower<any, any>>): boolean
 "hasPower"(powerFactory0: $PowerFactory$$Type<any>): boolean
+"hasPower"(resourceLocation0: $ResourceLocation$$Type, resourceLocation1: $ResourceLocation$$Type): boolean
 "hasPower"(resourceKey0: $ResourceKey$$Type<$ConfiguredPower<any, any>>, resourceLocation1: $ResourceLocation$$Type): boolean
 "hasPower"(resourceLocation0: $ResourceLocation$$Type): boolean
 "readFromNbt"(compoundTag0: $CompoundTag$$Type): void
@@ -352,11 +352,11 @@ function get(entity0: $Entity$$Type): $LazyOptional<$IPowerContainer>
 function getPowers<T extends $IDynamicFeatureConfiguration, F extends $PowerFactory<T>>(entity0: $Entity$$Type, f1: F, predicate2: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): $List<$Holder<$ConfiguredPower<T, F>>>
 function getPowers<T extends $IDynamicFeatureConfiguration, F extends $PowerFactory<T>>(entity0: $Entity$$Type, f1: F): $List<$Holder<$ConfiguredPower<T, F>>>
 function hasPower<T extends $IDynamicFeatureConfiguration, F extends $PowerFactory<T>>(entity0: $Entity$$Type, f1: F): boolean
+function modify<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float, predicate3: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): float
+function modify<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float): float
+function modify<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, iterable2: $Iterable$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>, double3: double, consumer4: $Consumer$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): double
 function modify<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, double2: double, predicate3: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>, consumer4: $Consumer$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): double
 function modify<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, double2: double): double
-function modify<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, iterable2: $Iterable$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>, double3: double, consumer4: $Consumer$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): double
-function modify<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float): float
-function modify<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float, predicate3: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): float
 function modify<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float, predicate3: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>, consumer4: $Consumer$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): float
 function sync(entity0: $Entity$$Type): void
 function sync(entity0: $Entity$$Type, serverPlayer1: $ServerPlayer$$Type): void
@@ -369,11 +369,11 @@ static "get"(entity0: $Entity$$Type): $LazyOptional<$IPowerContainer>
 static "getPowers"<T extends $IDynamicFeatureConfiguration, F extends $PowerFactory<T>>(entity0: $Entity$$Type, f1: F, predicate2: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): $List<$Holder<$ConfiguredPower<T, F>>>
 static "getPowers"<T extends $IDynamicFeatureConfiguration, F extends $PowerFactory<T>>(entity0: $Entity$$Type, f1: F): $List<$Holder<$ConfiguredPower<T, F>>>
 static "hasPower"<T extends $IDynamicFeatureConfiguration, F extends $PowerFactory<T>>(entity0: $Entity$$Type, f1: F): boolean
+static "modify"<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float, predicate3: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): float
+static "modify"<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float): float
+static "modify"<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, iterable2: $Iterable$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>, double3: double, consumer4: $Consumer$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): double
 static "modify"<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, double2: double, predicate3: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>, consumer4: $Consumer$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): double
 static "modify"<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, double2: double): double
-static "modify"<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, iterable2: $Iterable$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>, double3: double, consumer4: $Consumer$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): double
-static "modify"<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float): float
-static "modify"<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float, predicate3: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): float
 static "modify"<T extends $IDynamicFeatureConfiguration, F extends ($PowerFactory<T> & $IValueModifyingPower<T>)>(entity0: $Entity$$Type, f1: F, float2: float, predicate3: $Predicate$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>, consumer4: $Consumer$$Type<$Holder$$Type<$ConfiguredPower$$Type<T, F>>>): float
 static "sync"(entity0: $Entity$$Type): void
 static "sync"(entity0: $Entity$$Type, serverPlayer1: $ServerPlayer$$Type): void
@@ -1338,8 +1338,8 @@ public "getFieldNames"(): $Iterable<string>
 public "keys"<T>(dynamicOps0: $DynamicOps$$Type<T>): $Stream<T>
 public static "makeCompressedBuilder"<T>(dynamicOps0: $DynamicOps$$Type<T>, keyCompressor1: $KeyCompressor$$Type<T>): $RecordBuilder<T>
 public "map"<B>(function0: $Function$$Type<$SerializableData$Instance$$Type, B>): $MapDecoder<B>
-public "read"(jsonObject0: $JsonObject$$Type): $SerializableData$Instance
 public "read"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $SerializableData$Instance
+public "read"(jsonObject0: $JsonObject$$Type): $SerializableData$Instance
 public "write"(friendlyByteBuf0: $FriendlyByteBuf$$Type, instance1: $SerializableData$Instance$$Type): void
 get "fieldNames"(): $Iterable<string>
 }
@@ -1778,8 +1778,8 @@ public "copy"(): $FilterableWeightedList<U>
 public "entryStream"(): $Stream<$ShufflingList$WeightedEntry<U>>
 public "forEach"(consumer0: $Consumer$$Type<U>): void
 public "hasFilter"(): boolean
-public "pickRandom"(random0: $Random$$Type): U
 public "pickRandom"(): U
+public "pickRandom"(random0: $Random$$Type): U
 public "removeFilter"(): void
 public "setFilter"(predicate0: $Predicate$$Type<U>): void
 public "size"(): integer
@@ -2058,8 +2058,8 @@ public "decode"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Pair<T, T>>
 public "deprecated"(int0: integer): $Codec<T>
 public "dispatch"<E>(function0: $Function$$Type<E, T>, function1: $Function$$Type<T, $Codec<E>>): $Codec<E>
 public "dispatch"<E>(string0: string, function1: $Function$$Type<E, T>, function2: $Function$$Type<T, $Codec<E>>): $Codec<E>
-public "dispatchMap"<E>(string0: string, function1: $Function$$Type<E, T>, function2: $Function$$Type<T, $Codec<E>>): $MapCodec<E>
 public "dispatchMap"<E>(function0: $Function$$Type<E, T>, function1: $Function$$Type<T, $Codec<E>>): $MapCodec<E>
+public "dispatchMap"<E>(string0: string, function1: $Function$$Type<E, T>, function2: $Function$$Type<T, $Codec<E>>): $MapCodec<E>
 public "dispatchStable"<E>(function0: $Function$$Type<E, T>, function1: $Function$$Type<T, $Codec<E>>): $Codec<E>
 public static "doubleRange"(double0: double, double1: double): $Codec<double>
 public static "either"<F, S>(codec0: $Codec$$Type<F>, codec1: $Codec$$Type<S>): $Codec<$Either<F, S>>
@@ -2071,6 +2071,7 @@ public static "enumValue"<T extends $Enum<T>>(class0: $Class$$Type<T>): $Seriali
 public static "enumValue"<T extends $Enum<T>>(class0: $Class$$Type<T>, hashMap1: $HashMap$$Type<string, T>): $SerializableDataType<T>
 public static "enumValue"<T extends $Enum<T>>(class0: $Class$$Type<T>, function1: $Function$$Type<T, string>): $SerializableDataType<T>
 public static "error"<A>(string0: string): $Encoder<A>
+public "fieldOf"(string0: string): $MapCodec<T>
 public "flatComap"<B>(function0: $Function$$Type<B, $DataResult<T>>): $Encoder<B>
 public "flatComapMap"<S>(function0: $Function$$Type<T, S>, function1: $Function$$Type<S, $DataResult<T>>): $Codec<S>
 public "flatMap"<B>(function0: $Function$$Type<T, $DataResult<B>>): $Decoder<B>
@@ -2094,10 +2095,10 @@ public static "ofBoxed"<A>(boxed0: $Decoder$Boxed$$Type<A>): $Decoder<A>
 public static "ofSimple"<A>(simple0: $Decoder$Simple$$Type<A>): $Decoder<A>
 public static "ofTerminal"<A>(terminal0: $Decoder$Terminal$$Type<A>): $Decoder<A>
 public static "optionalField"<F>(string0: string, codec1: $Codec$$Type<F>): $MapCodec<$Optional<F>>
-public "optionalFieldOf"(string0: string, t1: T): $MapCodec<T>
-public "optionalFieldOf"(string0: string, t1: T, lifecycle2: $Lifecycle$$Type): $MapCodec<T>
-public "optionalFieldOf"(string0: string, lifecycle1: $Lifecycle$$Type, t2: T, lifecycle3: $Lifecycle$$Type): $MapCodec<T>
 public "optionalFieldOf"(string0: string): $MapCodec<$Optional<T>>
+public "optionalFieldOf"(string0: string, t1: T, lifecycle2: $Lifecycle$$Type): $MapCodec<T>
+public "optionalFieldOf"(string0: string, t1: T): $MapCodec<T>
+public "optionalFieldOf"(string0: string, lifecycle1: $Lifecycle$$Type, t2: T, lifecycle3: $Lifecycle$$Type): $MapCodec<T>
 public "orElse"(t0: T): $Codec<T>
 public "orElse"(consumer0: $Consumer$$Type<string>, t1: T): $Codec<T>
 public "orElse"(unaryOperator0: $UnaryOperator$$Type<string>, t1: T): $Codec<T>
@@ -2108,11 +2109,10 @@ public static "pair"<F, S>(codec0: $Codec$$Type<F>, codec1: $Codec$$Type<S>): $C
 public "parse"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<T>
 public "parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<T>
 public "partialDispatch"<E>(string0: string, function1: $Function$$Type<E, $DataResult<T>>, function2: $Function$$Type<T, $DataResult<$Codec<E>>>): $Codec<E>
-public "promotePartial"(consumer0: $Consumer$$Type<string>): $Codec<T>
 public "read"(jsonElement0: $JsonElement$$Type): T
 public "receive"(friendlyByteBuf0: $FriendlyByteBuf$$Type): T
-public static "registry"<T>(class0: $Class$$Type<T>, iForgeRegistry1: $IForgeRegistry$$Type<T>): $SerializableDataType<T>
 public static "registry"<T>(class0: $Class$$Type<T>, registry1: $Registry$$Type<T>): $SerializableDataType<T>
+public static "registry"<T>(class0: $Class$$Type<T>, iForgeRegistry1: $IForgeRegistry$$Type<T>): $SerializableDataType<T>
 public static "registryKey"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>): $SerializableDataType<$ResourceKey<T>>
 public "send"(friendlyByteBuf0: $FriendlyByteBuf$$Type, object1: any): void
 public "simple"(): $Decoder$Simple<T>
@@ -2240,10 +2240,10 @@ constructor()
 
 public static "apply"(list0: $List$$Type<$ConfiguredPower$$Type<$ModifyFoodConfiguration$$Type, $ModifyFoodPower$$Type>>, level1: $Level$$Type, itemStack2: $ItemStack$$Type, double3: double, function4: $Function$$Type<$ModifyFoodConfiguration$$Type, $ListConfiguration<$AttributeModifier>>): double
 public "check"(configuredPower0: $ConfiguredPower$$Type<$ModifyFoodConfiguration$$Type, any>, level1: $Level$$Type, itemStack2: $ItemStack$$Type): boolean
-public static "execute"(list0: $List$$Type<$ConfiguredPower$$Type<$ModifyFoodConfiguration$$Type, $ModifyFoodPower$$Type>>, entity1: $Entity$$Type, level2: $Level$$Type, itemStack3: $ItemStack$$Type): void
 public "execute"(configuredPower0: $ConfiguredPower$$Type<$ModifyFoodConfiguration$$Type, any>, entity1: $Entity$$Type): void
-public static "getValidPowers"(entity0: $Entity$$Type, level1: $Level$$Type, itemStack2: $ItemStack$$Type): $List<$ConfiguredPower<$ModifyFoodConfiguration, $ModifyFoodPower>>
+public static "execute"(list0: $List$$Type<$ConfiguredPower$$Type<$ModifyFoodConfiguration$$Type, $ModifyFoodPower$$Type>>, entity1: $Entity$$Type, level2: $Level$$Type, itemStack3: $ItemStack$$Type): void
 public static "getValidPowers"(entity0: $Entity$$Type, itemStack1: $ItemStack$$Type): $List<$ConfiguredPower<$ModifyFoodConfiguration, $ModifyFoodPower>>
+public static "getValidPowers"(entity0: $Entity$$Type, level1: $Level$$Type, itemStack2: $ItemStack$$Type): $List<$ConfiguredPower<$ModifyFoodConfiguration, $ModifyFoodPower>>
 public static "isAlwaysEdible"(entity0: $Entity$$Type, level1: $Level$$Type, itemStack2: $ItemStack$$Type): boolean
 public static "modifyStack"(iterable0: $Iterable$$Type<$ConfiguredPower$$Type<$ModifyFoodConfiguration$$Type, $ModifyFoodPower$$Type>>, level1: $Level$$Type, mutable2: $Mutable$$Type<$ItemStack$$Type>): void
 }
@@ -2551,8 +2551,8 @@ public "getKey"(entity0: $Entity$$Type): $Optional<$IActivePower$Key>
 public "getMaximum"(entity0: $Entity$$Type): $OptionalInt
 public "getMinimum"(entity0: $Entity$$Type): $OptionalInt
 public "getMissingBinds"(): $List<string>
-public "getPowerData"<T>(entity0: $Entity$$Type, nonNullSupplier1: $NonNullSupplier$$Type<T>): T
 public "getPowerData"<T>(iPowerContainer0: $IPowerContainer$$Type, nonNullSupplier1: $NonNullSupplier$$Type<T>): T
+public "getPowerData"<T>(entity0: $Entity$$Type, nonNullSupplier1: $NonNullSupplier$$Type<T>): T
 public "getPowerType"(): $PowerType<any>
 public "getRegistryName"(): $ResourceLocation
 public "getRenderSettings"(entity0: $Entity$$Type): $Optional<$HudRender>

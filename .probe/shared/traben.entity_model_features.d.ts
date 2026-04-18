@@ -536,9 +536,9 @@ export class $EMFModel_ID implements $Comparable<$EMFModel_ID> {
 constructor(both: string, mapId: string)
 constructor(both: string)
 
-public "addFallbackModel"(namespace: string, fileName: string, first: boolean): $EMFModel_ID
 public "addFallbackModel"(fileName: string): $EMFModel_ID
 public "addFallbackModel"(namespace: string, fileName: string): $EMFModel_ID
+public "addFallbackModel"(namespace: string, fileName: string, first: boolean): $EMFModel_ID
 public "areBothSame"(): boolean
 public "compareTo"(o: $EMFModel_ID$$Type): integer
 public "finishAndPrepAutomatedFallbacks"(): void
@@ -552,8 +552,8 @@ public "hasFallbackModels"(): boolean
 public "pushNewMainModelAddingOldAsFallback"(fileName: string): $EMFModel_ID
 public "pushNewMainModelAndMapIdAddingOldAsFallback"(fileName: string, mapId: string): $EMFModel_ID
 public "pushNewMainModelAndMapIdAddingOldAsFallback"(both: string): $EMFModel_ID
-public "setBoth"(both: string): $EMFModel_ID
 public "setBoth"(fileName: string, mapId: string): $EMFModel_ID
+public "setBoth"(both: string): $EMFModel_ID
 public "setFileName"(fileName: string): $EMFModel_ID
 public "setMapIdAndAddFallbackModel"(mapId: string, fileName: string): $EMFModel_ID
 public "setMapIdAndAddFallbackModel"(both: string): $EMFModel_ID

@@ -258,8 +258,8 @@ export interface $IGunModifier {
 "additionalProjectileGravity"(): double
 "criticalChance"(): float
 "isMeleeOnly"(): boolean
-"kickModifier"(): float
 "kickModifier"(itemStack0: $ItemStack$$Type): float
+"kickModifier"(): float
 "modifyAimDownSightSpeed"(double0: double): double
 "modifyAmmoCapacity"(int0: integer): integer
 "modifyDamageFalloffEnd"(float0: float): float
@@ -277,8 +277,8 @@ export interface $IGunModifier {
 "modifyProjectileSpread"(float0: float): float
 "modifyReloadSpeed"(double0: double): double
 "modifySensitivity"(double0: double): double
-"recoilModifier"(): float
 "recoilModifier"(itemStack0: $ItemStack$$Type): float
+"recoilModifier"(): float
 "silencedFire"(): boolean
 get "meleeOnly"(): boolean
 }
@@ -607,6 +607,7 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "getBeamOrigin"(): $Gun$Display$BeamOrigin
 public "getFlash"(): $Gun$Display$Flash
 public "getMuzzleFlashType"(): string
+public "serializeNBT"(): $CompoundTag
 public "setMuzzleFlashType"(string0: string): void
 public "toJsonObject"(): $JsonObject
 get "beamOrigin"(): $Gun$Display$BeamOrigin
@@ -680,8 +681,8 @@ public static "getScope"(itemStack0: $ItemStack$$Type): $Scope
 public static "getScopeStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public "getSounds"(): $Gun$Sounds
 public static "hasAmmo"(itemStack0: $ItemStack$$Type): boolean
-public static "hasAttachmentEquipped"(itemStack0: $ItemStack$$Type, gun1: $Gun$$Type, type2: $IAttachment$Type$$Type): boolean
 public static "hasAttachmentEquipped"(itemStack0: $ItemStack$$Type, type1: $IAttachment$Type$$Type): boolean
+public static "hasAttachmentEquipped"(itemStack0: $ItemStack$$Type, gun1: $Gun$$Type, type2: $IAttachment$Type$$Type): boolean
 public static "hasBurstFire"(itemStack0: $ItemStack$$Type): boolean
 public static "hasCustomAttachment"(itemStack0: $ItemStack$$Type, type1: $IAttachment$Type$$Type, item2: $Item$$Type): boolean
 public static "hasExtendedBarrel"(itemStack0: $ItemStack$$Type): boolean
@@ -791,8 +792,8 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -803,8 +804,8 @@ public "getClassification"(boolean0: boolean): $MobCategory
 public "getCriticalDamage"(itemStack0: $ItemStack$$Type, randomSource1: $RandomSource$$Type, float2: float): float
 public "getDamage"(): float
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -861,10 +862,10 @@ public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onHit"(hitResult0: $HitResult$$Type, vec31: $Vec3$$Type, vec32: $Vec3$$Type): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readSpawnData"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -872,6 +873,7 @@ public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setAdditionalDamage"(float0: float): void
 public "setArmorBypassAmount"(float0: float): void
 public "setItem"(itemStack0: $ItemStack$$Type): void
@@ -1230,8 +1232,8 @@ public "getImpactEffect"(): $ResourceLocation
 public "getImpactEffectAmplifier"(): integer
 public "getImpactEffectChance"(): float
 public "getImpactEffectDuration"(): integer
-public "getItem"(): $Item
 public "getItem"(general0: $Gun$General$$Type): $Item
+public "getItem"(): $Item
 public "getKnockbackStrength"(): float
 public "getLife"(): integer
 public "getPlayerKnockBackStrength"(): float

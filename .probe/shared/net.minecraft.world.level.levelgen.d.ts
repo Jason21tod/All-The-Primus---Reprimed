@@ -152,6 +152,7 @@ public "blockY"(): integer
 public "blockZ"(): integer
 public "fillAllDirectly"(double0s: double[], densityFunction1: $DensityFunction$$Type): void
 public static "forChunk"(chunkAccess0: $ChunkAccess$$Type, randomState1: $RandomState$$Type, beardifierOrMarker2: $DensityFunctions$BeardifierOrMarker$$Type, noiseGeneratorSettings3: $NoiseGeneratorSettings$$Type, fluidPicker4: $Aquifer$FluidPicker$$Type, blender5: $Blender$$Type): $NoiseChunk
+public "forIndex"(int0: integer): $NoiseChunk
 public "getBlender"(): $Blender
 public "initializeForFirstCellX"(): void
 public "irons_spellbooks$getAquifierStatus"(): $IExtendedNoiseChunk$AquifierNuke
@@ -255,8 +256,8 @@ import { $RandomSource } from "net.minecraft.util.RandomSource"
 import { $StringBuilder$$Type } from "java.lang.StringBuilder"
 
 export interface $PositionalRandomFactory {
-"at"(int0: integer, int1: integer, int2: integer): $RandomSource
 "at"(blockPos0: $BlockPos$$Type): $RandomSource
+"at"(int0: integer, int1: integer, int2: integer): $RandomSource
 "fromHashOf"(string0: string): $RandomSource
 "fromHashOf"(resourceLocation0: $ResourceLocation$$Type): $RandomSource
 "parityConfigString"(stringBuilder0: $StringBuilder$$Type): void

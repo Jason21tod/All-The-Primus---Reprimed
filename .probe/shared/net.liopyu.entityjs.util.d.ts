@@ -546,8 +546,8 @@ import { $WrappedAnimatableEntity } from "net.liopyu.entityjs.entities.living.en
 import { $EntitySerializerType$$Type } from "net.liopyu.entityjs.util.EntitySerializerType"
 
 export interface $ILivingEntityJS {
-"addSyncedData"(type: $EntitySerializerType$$Type, key: string, value: any): void
 "addSyncedData"(identifier: string, value: any): void
+"addSyncedData"(type: $EntitySerializerType$$Type, key: string, value: any): void
 "getAnimatableEntity"(): $WrappedAnimatableEntity
 "getSyncedData"<T>(identifier: string): T
 "setSyncedData"(key: string, value: any): void

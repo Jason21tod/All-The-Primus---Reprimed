@@ -266,9 +266,9 @@ constructor(m: $ScriptType$$Type, log: $Logger$$Type)
 
 public "debug"(message: any): $ConsoleLine
 public "debugf"(message: string, ...args: any[]): $ConsoleLine
-public "error"(message: any): $ConsoleLine
-public "error"(message: string, throwable: $Throwable$$Type): $ConsoleLine
 public "error"(message: string, error: $Throwable$$Type, exitPattern: $Pattern$$Type): $ConsoleLine
+public "error"(message: string, throwable: $Throwable$$Type): $ConsoleLine
+public "error"(message: any): $ConsoleLine
 public "errorf"(message: string, ...args: any[]): $ConsoleLine
 public "errorsComponent"(command: string): $Component
 public "flush"(sync: boolean): void
@@ -285,10 +285,10 @@ public "handleError"(line: $ConsoleLine$$Type, error: $Throwable$$Type, exitPatt
 public "info"(message: any): $ConsoleLine
 public "infof"(message: string, ...args: any[]): $ConsoleLine
 public "log"(...message: any[]): void
-public "printClass"(className: string): void
 public "printClass"(className: string, tree: boolean): void
-public "printObject"(o: any, tree: boolean): void
+public "printClass"(className: string): void
 public "printObject"(o: any): void
+public "printObject"(o: any, tree: boolean): void
 public "resetFile"(): void
 public "setCapturingErrors"(enabled: boolean): void
 public "setDebugEnabled"(m: boolean): void
@@ -297,8 +297,8 @@ public "setWriteToFile"(m: boolean): void
 public "shouldPrintDebug"(): boolean
 public "trace"(): void
 public "warn"(message: string, error: $Throwable$$Type): $ConsoleLine
-public "warn"(message: string, error: $Throwable$$Type, exitPattern: $Pattern$$Type): $ConsoleLine
 public "warn"(message: any): $ConsoleLine
+public "warn"(message: string, error: $Throwable$$Type, exitPattern: $Pattern$$Type): $ConsoleLine
 public "warnf"(message: string, ...args: any[]): $ConsoleLine
 public "writeToFile"(type: $LogType$$Type, line: string): void
 public "writeToFile"(type: $LogType$$Type, timestamp: long, line: string): void

@@ -349,6 +349,14 @@
     "curseForgeHash": 2126964318,
     "modrinthHash": "986597ae06f01c9209c111ba6276a171e8977a2c"
   },
+  "ConfigurableKeepInventory-1.20.1-1.11.jar": {
+    "jarName": "ConfigurableKeepInventory-1.20.1-1.11.jar",
+    "modId": "keepinventory",
+    "name": "ConfigurableKeepInventory",
+    "version": "1.11",
+    "curseForgeHash": 2193118280,
+    "modrinthHash": "f66304aec8672eaaa982aed2784386a6a89da969"
+  },
   "connectivity-1.20.1-7.6.jar": {
     "jarName": "connectivity-1.20.1-7.6.jar",
     "modId": "connectivity",
@@ -597,6 +605,14 @@
     "curseForgeHash": 3504336343,
     "modrinthHash": "0328a8350cf0a6d1c44265367a077649088b354b"
   },
+  "endermanoverhaul-forge-1.20.1-1.0.4.jar": {
+    "jarName": "endermanoverhaul-forge-1.20.1-1.0.4.jar",
+    "modId": "endermanoverhaul",
+    "name": "Enderman Overhaul",
+    "version": "1.0.4",
+    "curseForgeHash": 3681337800,
+    "modrinthHash": "636a2b20a5973fcb80016370865cb4251e029b6a"
+  },
   "EndingLibrary-1.20.1-2.1.9-all.jar": {
     "jarName": "EndingLibrary-1.20.1-2.1.9-all.jar",
     "modId": "ending_library",
@@ -812,14 +828,6 @@
     "version": "1.3",
     "curseForgeHash": 1567719769,
     "modrinthHash": "70a4d8acaedc4dfb066974726d21916b78edd7af"
-  },
-  "ghastscrash-backport-forge-1.20.1.jar": {
-    "jarName": "ghastscrash-backport-forge-1.20.1.jar",
-    "modId": "ghastscrashforge",
-    "name": "GhastsCrashForge",
-    "version": "1.0.0",
-    "curseForgeHash": 881755651,
-    "modrinthHash": "f7929276f3dcea8b2de35c5fafe3d1a1d72a9324"
   },
   "goety-2.5.50.2.jar": {
     "jarName": "goety-2.5.50.2.jar",
@@ -1170,6 +1178,14 @@
     "curseForgeHash": 3530868180,
     "modrinthHash": "3146950f631a45f73772d73f5ba4b3bcde07344b"
   },
+  "mebahels-skeleton-revival-1.0.4-fabric-1.20.1.jar": {
+    "jarName": "mebahels-skeleton-revival-1.0.4-fabric-1.20.1.jar",
+    "modId": "mebahels-skeleton-revival",
+    "name": "Mebahel\u0027s skeleton Revival",
+    "version": "1.0.4-fabric-1.20.1",
+    "curseForgeHash": 3907488789,
+    "modrinthHash": "a692aeed1ff928cd49a2425c0d00b17f4f50e21b"
+  },
   "midnightlib-forge-1.9.2+1.20.1.jar": {
     "jarName": "midnightlib-forge-1.9.2+1.20.1.jar",
     "modId": "midnightlib",
@@ -1289,14 +1305,6 @@
     "version": "0.4.1",
     "curseForgeHash": 1367373369,
     "modrinthHash": "c0806369f4257149664904db44efc60bd1785c17"
-  },
-  "notenoughanimations-forge-1.12.0-mc1.20.1.jar": {
-    "jarName": "notenoughanimations-forge-1.12.0-mc1.20.1.jar",
-    "modId": "notenoughanimations",
-    "name": "NotEnoughAnimations",
-    "version": "1.12.0",
-    "curseForgeHash": 4287025205,
-    "modrinthHash": "bbf826c31cb40e495e88b8679463955afd944566"
   },
   "OctoLib-FORGE-0.5.0.1+1.20.1.jar": {
     "jarName": "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
@@ -1562,6 +1570,14 @@
     "curseForgeHash": 1406323683,
     "modrinthHash": "e3d2a2d616ed7cc77362fa5b56569a9f6d859237"
   },
+  "SkeletonAIFix-v20.1.1-1.20.1-Forge.jar": {
+    "jarName": "SkeletonAIFix-v20.1.1-1.20.1-Forge.jar",
+    "modId": "skeletonaifix",
+    "name": "Skeleton AI Fix",
+    "version": "20.1.1",
+    "curseForgeHash": 2981548841,
+    "modrinthHash": "52bbfbb6fba6f2d591d0e130bf69df0fec02f78c"
+  },
   "SlashBladeResharped-1.20.1-1.8.62.jar": {
     "jarName": "SlashBladeResharped-1.20.1-1.8.62.jar",
     "modId": "slashblade",
@@ -1674,6 +1690,22 @@
     "curseForgeHash": 1205222699,
     "modrinthHash": "a1e16b7d61f0f16a162d429ee1eab9b4e3eeb9ef"
   },
+  "UndeadUnleashed-1.2.2-forge-1.20.1.jar": {
+    "jarName": "UndeadUnleashed-1.2.2-forge-1.20.1.jar",
+    "modId": "undead_unleashed",
+    "name": "Undead Unleashed!",
+    "version": "1.2.2",
+    "curseForgeHash": 226664148,
+    "modrinthHash": "dbdb04493c45cf84c56c1b8d4cf594f555128ca1"
+  },
+  "villagergolemhealer 1.20.1.jar": {
+    "jarName": "villagergolemhealer 1.20.1.jar",
+    "modId": "villagergolemhealer",
+    "name": "villagergolemhealer",
+    "version": "1.0.0",
+    "curseForgeHash": 2240970068,
+    "modrinthHash": "e398dd5804af0d0c3b55a0ff7ab10c604fa85ae1"
+  },
   "vminus-3.3.2.jar": {
     "jarName": "vminus-3.3.2.jar",
     "modId": "vminus",
@@ -1682,14 +1714,6 @@
     "curseForgeHash": 1798731720,
     "modrinthHash": "2fcc79a165f88621bd6aa27827422ea36f07b3cc"
   },
-  "voicechat-forge-1.20.1-2.6.15.jar": {
-    "jarName": "voicechat-forge-1.20.1-2.6.15.jar",
-    "modId": "voicechat",
-    "name": "Simple Voice Chat",
-    "version": "1.20.1-2.6.15",
-    "curseForgeHash": 4117931016,
-    "modrinthHash": "295b2745fe22603b127cb9fa262e896824a6a530"
-  },
   "walkers-5.8.1.jar": {
     "jarName": "walkers-5.8.1.jar",
     "modId": "walkers",
@@ -1697,6 +1721,14 @@
     "version": "5.8.1",
     "curseForgeHash": 1537441769,
     "modrinthHash": "115e7140d518d2f9a4f97f2d60934f8448a52c00"
+  },
+  "WitherSkeletonTweaks-1.20.1-9.1.0.jar": {
+    "jarName": "WitherSkeletonTweaks-1.20.1-9.1.0.jar",
+    "modId": "wstweaks",
+    "name": "Wither Skeleton Tweaks",
+    "version": "9.1.0",
+    "curseForgeHash": 2736596712,
+    "modrinthHash": "e5c31395e10d9e858ca1fde42d35113945bfb658"
   },
   "yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar": {
     "jarName": "yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar",

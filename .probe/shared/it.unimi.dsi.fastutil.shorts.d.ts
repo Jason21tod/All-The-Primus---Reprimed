@@ -505,13 +505,13 @@ export interface $Short2BooleanFunction extends $Function$0<short, boolean>, $In
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(short0: short): boolean
+"getOrDefault"(short0: short, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
-"getOrDefault"(short0: short, boolean1: boolean): boolean
 "negate"(): $IntPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
-"put"(short0: short, boolean1: boolean): boolean
 /** @deprecated */
+"put"(short0: short, boolean1: boolean): boolean
 "put"(short0: short, boolean1: boolean): boolean
 "remove"(short0: short): boolean
 "size"(): integer
@@ -603,8 +603,8 @@ export interface $Short2ByteFunction extends $Function$0<short, byte>, $IntUnary
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(short0: short, byte1: byte): byte
-"put"(short0: short, byte1: byte): byte
 /** @deprecated */
+"put"(short0: short, byte1: byte): byte
 "put"(short0: short, byte1: byte): byte
 "remove"(short0: short): byte
 "size"(): integer
@@ -688,9 +688,9 @@ export interface $Short2ObjectFunction<V = any> extends $Function$0<short, V>, $
 /** @deprecated */
 "get"(object0: any): V
 "get"(short0: short): V
-"getOrDefault"(short0: short, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(short0: short, v1: V): V
 /** @deprecated */
 "put"(short0: short, v1: V): V
 "put"(short0: short, v1: V): V
@@ -858,8 +858,8 @@ export interface $Short2LongFunction extends $Function$0<short, long>, $IntToLon
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
 "getOrDefault"(short0: short, long1: long): long
-"put"(short0: short, long1: long): long
 /** @deprecated */
+"put"(short0: short, long1: long): long
 "put"(short0: short, long1: long): long
 "remove"(short0: short): long
 "size"(): integer
@@ -976,9 +976,9 @@ export interface $Short2CharFunction extends $Function$0<short, character>, $Int
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
 "getOrDefault"(short0: short, char1: character): character
-"put"(short0: short, char1: character): character
 /** @deprecated */
 "put"(short0: short, character1: character): character
+"put"(short0: short, char1: character): character
 "remove"(short0: short): character
 "size"(): integer
 }
@@ -1089,8 +1089,8 @@ export interface $Short2DoubleFunction extends $Function$0<short, double>, $IntT
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
 "getOrDefault"(short0: short, double1: double): double
-"put"(short0: short, double1: double): double
 /** @deprecated */
+"put"(short0: short, double1: double): double
 "put"(short0: short, double1: double): double
 "remove"(short0: short): double
 "size"(): integer
@@ -1180,9 +1180,9 @@ export interface $Short2IntFunction extends $Function$0<short, integer>, $IntUna
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
 "getOrDefault"(short0: short, int1: integer): integer
-"put"(short0: short, int1: integer): integer
 /** @deprecated */
 "put"(short0: short, integer1: integer): integer
+"put"(short0: short, int1: integer): integer
 "remove"(short0: short): integer
 "size"(): integer
 }
@@ -1269,8 +1269,8 @@ export interface $Short2FloatFunction extends $Function$0<short, float>, $IntToD
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(short0: short, float1: float): float
-"put"(short0: short, float1: float): float
 /** @deprecated */
+"put"(short0: short, float1: float): float
 "put"(short0: short, float1: float): float
 "remove"(short0: short): float
 "size"(): integer
@@ -1447,9 +1447,9 @@ export interface $Short2ReferenceFunction<V = any> extends $Function$0<short, V>
 /** @deprecated */
 "get"(object0: any): V
 "get"(short0: short): V
-"getOrDefault"(short0: short, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(short0: short, v1: V): V
 /** @deprecated */
 "put"(short0: short, v1: V): V
 "put"(short0: short, v1: V): V

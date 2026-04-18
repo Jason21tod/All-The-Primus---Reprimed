@@ -1599,10 +1599,6 @@ dev.architectury.core.fluid.ArchitecturyFluidAttributes
 .tr7zw.entityculling.access.EntityRendererInter
 ...mixin.DisplayAccessor
 ...versionless.access.Cullable
-..notenoughanimations.access.PlayerData
-...mixins.EntityRenderDispatcherAccessor
-....PlayerModelAccessor
-...versionless.animations.DataHolder
 ..transition.mc.extending.ExtensionHolder
 ...mixin.EntityAccessor
 ..trender.gui.impl.mixin.client.DrawContextAccessor
@@ -5385,6 +5381,7 @@ net.bettercombat.api.AttackHand
 .....goal.Goal
 ......Goal$Flag
 ......GoalSelector
+......RangedBowAttackGoal
 ......WrappedGoal
 .....gossip.GossipContainer
 ......GossipContainer$EntityGossips

@@ -26,10 +26,10 @@ static readonly "kVoid_TypeKind": byte
 public "canCoerceTo"(other: $Type$$Type, allowNarrowing: boolean): boolean
 public "checkLiteralOutOfRange"(context: $Context$$Type, pos: integer, value: double): boolean
 public "coerceExpression"(context: $Context$$Type, expr: $Expression$$Type): $Expression
-public "convertArraySize"(context: $Context$$Type, position: integer, size: $Expression$$Type): integer
 public "convertArraySize"(context: $Context$$Type, position: integer, sizePosition: integer, size: long): integer
-public static "getArrayName"(baseName: string, size: integer): string
+public "convertArraySize"(context: $Context$$Type, position: integer, size: $Expression$$Type): integer
 public "getArrayName"(size: integer): string
+public static "getArrayName"(baseName: string, size: integer): string
 public "getArraySize"(): integer
 public "getCoercibleTypes"(): $List<$Type>
 public "getCoercionCost"(other: $Type$$Type): long
@@ -79,8 +79,8 @@ public "isUnsizedArray"(): boolean
 public "isUsableInArray"(context: $Context$$Type, position: integer): boolean
 public "isVector"(): boolean
 public "isVoid"(): boolean
-public static "makeAliasType"(name: string, type: $Type$$Type): $Type
 public static "makeAliasType"(position: integer, name: string, type: $Type$$Type): $Type
+public static "makeAliasType"(name: string, type: $Type$$Type): $Type
 public static "makeArrayType"(name: string, type: $Type$$Type, size: integer): $Type
 public static "makeCombinedType"(name: string, abbr: string, component: $Type$$Type, dimensions: integer, isShadow: boolean, isArrayed: boolean, isMultiSampled: boolean): $Type
 public static "makeGenericType"(name: string, ...types: $Type$$Type[]): $Type
@@ -640,16 +640,16 @@ static readonly "POISON_TAG": string
 
 constructor()
 
-public "compileIntoSPIRV"(source: string, kind: $ShaderKind$$Type, shaderCaps: $ShaderCaps$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $ByteBuffer
 public "compileIntoSPIRV"(source: charseq, kind: $ShaderKind$$Type, shaderCaps: $ShaderCaps$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $ByteBuffer
+public "compileIntoSPIRV"(source: string, kind: $ShaderKind$$Type, shaderCaps: $ShaderCaps$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $ByteBuffer
 public "endContext"(): void
 public "errorCount"(): integer
 public "generateGLSL"(translationUnit: $TranslationUnit$$Type, shaderCaps: $ShaderCaps$$Type): $ByteBuffer
 public "generateSPIRV"(translationUnit: $TranslationUnit$$Type, shaderCaps: $ShaderCaps$$Type): $ByteBuffer
 public "getContext"(): $Context
 public "getErrorHandler"(): $ErrorHandler
-public "getErrorMessage"(): string
 public "getErrorMessage"(showCount: boolean): string
+public "getErrorMessage"(): string
 public "parse"(source: charseq, kind: $ShaderKind$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $TranslationUnit
 public "parse"(source: string, kind: $ShaderKind$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $TranslationUnit
 public "parseModule"(source: charseq, kind: $ShaderKind$$Type, parent: $ModuleUnit$$Type, builtin: boolean): $ModuleUnit

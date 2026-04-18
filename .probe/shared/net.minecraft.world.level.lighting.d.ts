@@ -84,8 +84,8 @@ export interface $LayerLightEventListener extends $LightEventListener {
 "propagateLightSources"(chunkPos0: $ChunkPos$$Type): void
 "runLightUpdates"(): integer
 "setLightEnabled"(chunkPos0: $ChunkPos$$Type, boolean1: boolean): void
-"updateSectionStatus"(sectionPos0: $SectionPos$$Type, boolean1: boolean): void
 "updateSectionStatus"(blockPos0: $BlockPos$$Type, boolean1: boolean): void
+"updateSectionStatus"(sectionPos0: $SectionPos$$Type, boolean1: boolean): void
 }
 
 export namespace $LayerLightEventListener {
@@ -106,8 +106,8 @@ export interface $LightEventListener {
 "propagateLightSources"(chunkPos0: $ChunkPos$$Type): void
 "runLightUpdates"(): integer
 "setLightEnabled"(chunkPos0: $ChunkPos$$Type, boolean1: boolean): void
-"updateSectionStatus"(sectionPos0: $SectionPos$$Type, boolean1: boolean): void
 "updateSectionStatus"(blockPos0: $BlockPos$$Type, boolean1: boolean): void
+"updateSectionStatus"(sectionPos0: $SectionPos$$Type, boolean1: boolean): void
 }
 
 export namespace $LightEventListener {

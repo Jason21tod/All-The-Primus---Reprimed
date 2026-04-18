@@ -323,16 +323,16 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $CapabilityDataSerializer$$Type<T = any> = ($CapabilityDataSerializer<T>);
 }
 
-declare module "com.mega.endinglib.api.client.camera.CameraKeyframeAnimation$AnimType" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $CameraKeyframeAnimation$AnimType$$Type = ($CameraKeyframeAnimation$AnimType | ("stop" | "loop" | "forever" | "stop_back_to_zero"));
-}
-
 declare module "com.mega.endinglib.mixin.accessor.AccessorSynchedEntityData" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $AccessorSynchedEntityData$$Type = ($AccessorSynchedEntityData);
+}
+
+declare module "com.mega.endinglib.api.client.camera.CameraKeyframeAnimation$AnimType" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $CameraKeyframeAnimation$AnimType$$Type = ($CameraKeyframeAnimation$AnimType | ("stop" | "loop" | "forever" | "stop_back_to_zero"));
 }
 
 declare module "com.mega.endinglib.mixin.accessor.AccessorItemCooldowns" {

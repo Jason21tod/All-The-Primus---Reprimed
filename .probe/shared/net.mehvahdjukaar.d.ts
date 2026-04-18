@@ -294,8 +294,8 @@ import { $LevelAccessor } from "net.minecraft.world.level.LevelAccessor"
 import { $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $FireConsumeBlockEvent extends $BlockEvent implements $IFireConsumeBlockEvent {
-constructor(world: $Level$$Type, pos: $BlockPos$$Type, state: $BlockState$$Type, chance: integer, age: integer, face: $Direction$$Type)
 constructor()
+constructor(world: $Level$$Type, pos: $BlockPos$$Type, state: $BlockState$$Type, chance: integer, age: integer, face: $Direction$$Type)
 
 public static "create"(pos: $BlockPos$$Type, level: $Level$$Type, state: $BlockState$$Type, chance: integer, age: integer, face: $Direction$$Type): $IFireConsumeBlockEvent
 public "getAge"(): integer
@@ -410,8 +410,8 @@ import { $IDropItemOnDeathEvent } from "net.mehvahdjukaar.moonlight.api.events.I
 import { $Player, $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $DropItemOnDeathEvent extends $Event implements $IDropItemOnDeathEvent, $EventItf {
-constructor()
 constructor(itemStack: $ItemStack$$Type, player: $Player$$Type, beforeDrop: boolean)
+constructor()
 
 public static "create"(itemStack: $ItemStack$$Type, player: $Player$$Type, beforeDrop: boolean): $IDropItemOnDeathEvent
 public "el_isEventUnCancelable"(): boolean
@@ -811,10 +811,10 @@ declare module "net.mehvahdjukaar.moonlight.api.block.IBlockHolder" {
 import { $BlockState, $BlockState$$Type } from "net.minecraft.world.level.block.state.BlockState"
 
 export interface $IBlockHolder {
-"getHeldBlock"(int0: integer): $BlockState
 "getHeldBlock"(): $BlockState
-"setHeldBlock"(state: $BlockState$$Type): boolean
+"getHeldBlock"(int0: integer): $BlockState
 "setHeldBlock"(blockState0: $BlockState$$Type, int1: integer): boolean
+"setHeldBlock"(state: $BlockState$$Type): boolean
 get "heldBlock"(): $BlockState
 set "heldBlock"(value: $BlockState$$Type)
 }

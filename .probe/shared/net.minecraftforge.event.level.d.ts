@@ -158,8 +158,8 @@ import { $LevelAccessor$$Type } from "net.minecraft.world.level.LevelAccessor"
 import { $BlockState, $BlockState$$Type } from "net.minecraft.world.level.block.state.BlockState"
 
 export class $BlockEvent$FluidPlaceBlockEvent extends $BlockEvent {
-constructor()
 constructor(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type)
+constructor()
 
 public "getLiquidPos"(): $BlockPos
 public "getNewState"(): $BlockState
@@ -181,8 +181,8 @@ import { $PistonEvent$PistonMoveType, $PistonEvent$PistonMoveType$$Type } from "
 import { $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $PistonEvent extends $BlockEvent {
-constructor()
 constructor(level0: $Level$$Type, blockPos1: $BlockPos$$Type, direction2: $Direction$$Type, pistonMoveType3: $PistonEvent$PistonMoveType$$Type)
+constructor()
 
 public "getDirection"(): $Direction
 public "getFaceOffsetPos"(): $BlockPos

@@ -13,80 +13,6 @@ export abstract class $ScreenAccessor$$Static implements $ScreenAccessor {
 }
 }
 
-declare module "dev.tr7zw.notenoughanimations.mixins.PlayerModelAccessor" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-export interface $PlayerModelAccessor {
-"getSlim"(): boolean
-get "slim"(): boolean
-}
-
-export namespace $PlayerModelAccessor {
-const probejs$$marker: never
-}
-export abstract class $PlayerModelAccessor$$Static implements $PlayerModelAccessor {
-}
-}
-
-declare module "dev.tr7zw.notenoughanimations.access.PlayerData" {
-import { $DataHolder$$Type } from "dev.tr7zw.notenoughanimations.versionless.animations.DataHolder"
-import { $Pose, $Pose$$Type } from "net.minecraft.world.entity.Pose"
-import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
-import { $Supplier$$Type } from "java.util.function.Supplier"
-
-export interface $PlayerData {
-"getData"<T>(dataHolder0: $DataHolder$$Type<T>, supplier1: $Supplier$$Type<T>): T
-"getItemSwapAnimationTimer"(): integer
-"getLastAnimationSwapTick"(): integer
-"getLastHeldItems"(): $ItemStack[]
-"getLastRotations"(): float[]
-"getPoseOverwrite"(): $Pose
-"getSideSword"(): $ItemStack
-"isDisableBodyRotation"(): boolean
-"isRotateBodyToHead"(): boolean
-"isUpdated"(int0: integer): integer
-"setDisableBodyRotation"(boolean0: boolean): void
-"setItemSwapAnimationTimer"(int0: integer): void
-"setLastAnimationSwapTick"(int0: integer): void
-"setPoseOverwrite"(pose0: $Pose$$Type): void
-"setRotateBodyToHead"(boolean0: boolean): void
-"setSideSword"(itemStack0: $ItemStack$$Type): void
-"setUpdated"(int0: integer): void
-get "itemSwapAnimationTimer"(): integer
-get "lastAnimationSwapTick"(): integer
-get "lastHeldItems"(): $ItemStack[]
-get "lastRotations"(): float[]
-get "poseOverwrite"(): $Pose
-get "sideSword"(): $ItemStack
-get "disableBodyRotation"(): boolean
-get "rotateBodyToHead"(): boolean
-set "disableBodyRotation"(value: boolean)
-set "itemSwapAnimationTimer"(value: integer)
-set "lastAnimationSwapTick"(value: integer)
-set "poseOverwrite"(value: $Pose$$Type)
-set "rotateBodyToHead"(value: boolean)
-set "sideSword"(value: $ItemStack$$Type)
-set "updated"(value: integer)
-}
-
-export namespace $PlayerData {
-const probejs$$marker: never
-}
-export abstract class $PlayerData$$Static implements $PlayerData {
-}
-}
-
-declare module "dev.tr7zw.notenoughanimations.mixins.EntityRenderDispatcherAccessor" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-export interface $EntityRenderDispatcherAccessor {
-}
-
-export namespace $EntityRenderDispatcherAccessor {
-const probejs$$marker: never
-}
-export abstract class $EntityRenderDispatcherAccessor$$Static implements $EntityRenderDispatcherAccessor {
-}
-}
-
 declare module "dev.tr7zw.entityculling.versionless.access.Cullable" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 export interface $Cullable {
@@ -107,18 +33,6 @@ export namespace $Cullable {
 const probejs$$marker: never
 }
 export abstract class $Cullable$$Static implements $Cullable {
-}
-}
-
-declare module "dev.tr7zw.notenoughanimations.versionless.animations.DataHolder" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-export interface $DataHolder<T = any> {
-}
-
-export namespace $DataHolder {
-const probejs$$marker: never
-}
-export abstract class $DataHolder$$Static<T = any> implements $DataHolder<T> {
 }
 }
 

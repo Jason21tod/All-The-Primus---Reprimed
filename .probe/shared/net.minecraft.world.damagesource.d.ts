@@ -86,8 +86,8 @@ public "flyIntoWall"(): $DamageSource
 public "freeze"(): $DamageSource
 public "generic"(): $DamageSource
 public "genericKill"(): $DamageSource
-public "handler$gcd000$l2library_modifyDamageSource_direct"(resourceKey0: $ResourceKey$$Type, entity1: $Entity$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$gcd000$l2library_modifyDamageSource_indirect"(resourceKey0: $ResourceKey$$Type, entity1: $Entity$$Type, entity2: $Entity$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
+public "handler$gbn000$l2library_modifyDamageSource_direct"(resourceKey0: $ResourceKey$$Type, entity1: $Entity$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$gbn000$l2library_modifyDamageSource_indirect"(resourceKey0: $ResourceKey$$Type, entity1: $Entity$$Type, entity2: $Entity$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
 public "hotFloor"(): $DamageSource
 public "inFire"(): $DamageSource
 public "inWall"(): $DamageSource

@@ -180,8 +180,8 @@ public "addProvider"<T extends $DataProvider>(boolean0: boolean, t1: T): T
 public "createBuiltinResourcePack"(shouldRun: boolean, packName: $ResourceLocation$$Type, modInfo: $IModInfo$$Type, strictValidation: boolean): $Pair
 public "createPack"(name: string, output: $PackOutput$$Type): $DataGenerator$PackGenerator
 public "getBuiltinDatapack"(boolean0: boolean, string1: string): $DataGenerator$PackGenerator
-public "getPackOutput"(): $PackOutput
 public "getPackOutput"(string0: string): $PackOutput
+public "getPackOutput"(): $PackOutput
 public "getProvidersView"(): $Map<string, $DataProvider>
 public "getVanillaPack"(boolean0: boolean): $DataGenerator$PackGenerator
 public "run"(): void
@@ -224,8 +224,8 @@ static readonly "NORMAL_LEAVES_SAPLING_CHANCES": float[]
 static readonly "NORMAL_LEAVES_STICK_CHANCES": float[]
 readonly "map": $Map<$ResourceLocation, $LootTable$Builder>
 
-public "add"(block0: $Block$$Type, builder1: $LootTable$Builder$$Type): void
 public "add"(block0: $Block$$Type, function1: $Function$$Type<$Block$$Type, $LootTable$Builder>): void
+public "add"(block0: $Block$$Type, builder1: $LootTable$Builder$$Type): void
 public "addNetherVinesDropTable"(block0: $Block$$Type, block1: $Block$$Type): void
 public "applyExplosionCondition"<T extends $ConditionUserBuilder<T>>(itemLike0: $ItemLike$$Type, conditionUserBuilder1: $ConditionUserBuilder$$Type<T>): T
 public "applyExplosionDecay"<T extends $FunctionUserBuilder<T>>(itemLike0: $ItemLike$$Type, functionUserBuilder1: $FunctionUserBuilder$$Type<T>): T
@@ -271,8 +271,8 @@ public "dropOther"(block0: $Block$$Type, itemLike1: $ItemLike$$Type): void
 public "dropPottedContents"(block0: $Block$$Type): void
 public "dropSelf"(block0: $Block$$Type): void
 public "dropWhenSilkTouch"(block0: $Block$$Type): void
-public "generate"(): void
 public "generate"(biConsumer0: $BiConsumer$$Type<$ResourceLocation$$Type, $LootTable$Builder$$Type>): void
+public "generate"(): void
 public "getKnownBlocks"(): $Iterable<$Block>
 public static "noDrop"(): $LootTable$Builder
 public "otherWhenSilkTouch"(block0: $Block$$Type, block1: $Block$$Type): void

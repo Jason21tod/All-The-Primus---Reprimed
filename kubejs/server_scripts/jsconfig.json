@@ -1,5 +1,10 @@
 {
     "compilerOptions": {
+        "skipDefaultLibCheck": true,
+        "module": "commonjs",
+        "allowJs": true,
+        "rootDir": ".",
+        "skipLibCheck": true,
         "target": "ES2015",
         "incremental": true,
         "types": [
@@ -13,12 +18,7 @@
         ],
         "isolatedModules": true,
         "composite": true,
-        "moduleResolution": "classic",
-        "skipDefaultLibCheck": true,
-        "module": "commonjs",
-        "allowJs": true,
-        "rootDir": ".",
-        "skipLibCheck": true
+        "moduleResolution": "classic"
     },
     "include": [
         "./**/*.js"

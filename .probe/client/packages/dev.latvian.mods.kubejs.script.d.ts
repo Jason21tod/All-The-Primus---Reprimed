@@ -49,8 +49,8 @@ declare module "dev.latvian.mods.kubejs.script.data.GeneratedData" {
 import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ZipFile$$Type } from "java.util.zip.ZipFile"
 import { $Record } from "java.lang.Record"
-import { $ZipEntry$$Type } from "java.util.zip.ZipEntry"
 import { $Path$$Type } from "java.nio.file.Path"
+import { $ZipEntry$$Type } from "java.util.zip.ZipEntry"
 import { $Lazy, $Lazy$$Type } from "dev.latvian.mods.kubejs.util.Lazy"
 import { $IoSupplier } from "net.minecraft.server.packs.resources.IoSupplier"
 import { $InputStream } from "java.io.InputStream"
@@ -68,8 +68,8 @@ static readonly "PACK_META": $GeneratedData
 constructor(id: $ResourceLocation$$Type, data: $Lazy$$Type<byte[]>, alwaysForget: boolean)
 
 public "alwaysForget"(): boolean
-public static "create"(zipFile0: $ZipFile$$Type, zipEntry1: $ZipEntry$$Type): $IoSupplier<$InputStream>
 public static "create"(path0: $Path$$Type): $IoSupplier<$InputStream>
+public static "create"(zipFile0: $ZipFile$$Type, zipEntry1: $ZipEntry$$Type): $IoSupplier<$InputStream>
 public "data"(): $Lazy<byte[]>
 public "get"(): $InputStream
 public "id"(): $ResourceLocation
@@ -350,7 +350,7 @@ constructor(p: $ScriptPack$$Type, i: $ScriptFileInfo$$Type, s: $ScriptSource$$Ty
 
 public "compareTo"(o: $ScriptFile$$Type): integer
 public "load"(): void
-public "redirect$hfn000$preEvalProcess"(instance: $Context$$Type, scope: $Scriptable$$Type, source: string, sourceName: string, lineno: integer, securityDomain: any): any
+public "redirect$hfh000$preEvalProcess"(instance: $Context$$Type, scope: $Scriptable$$Type, source: string, sourceName: string, lineno: integer, securityDomain: any): any
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ScriptFile$$Type = ($ScriptFile);
@@ -446,7 +446,6 @@ public static "isEqual"<T>(object0: any): $Predicate<T>
 public "isServer"(): boolean
 public "isStartup"(): boolean
 public "kjs$getScriptType"(): $ScriptType
-public "negate"(): $ScriptTypePredicate
 public static "not"<T>(predicate0: $Predicate$$Type<T>): $Predicate<T>
 public "or"(predicate0: $Predicate$$Type<$ScriptType$$Type>): $Predicate<$ScriptType>
 public "test"(type: $ScriptType$$Type): boolean

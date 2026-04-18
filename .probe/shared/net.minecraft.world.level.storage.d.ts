@@ -379,13 +379,13 @@ public "getLevelId"(): string
 public "getLevelPath"(levelResource0: $LevelResource$$Type): $Path
 public "getSummary"(): $LevelSummary
 public "getWorldDir"(): $Path
-public "handler$fha000$readWorldProperties"(callbackInfo: $CallbackInfoReturnable$$Type): void
-public "handler$fha000$saveWorld"(registryTracker: $RegistryAccess$$Type, saveProperties: $WorldData$$Type, compoundTag: $CompoundTag$$Type, info: $CallbackInfo$$Type): void
+public "handler$fgk000$readWorldProperties"(callbackInfo: $CallbackInfoReturnable$$Type): void
+public "handler$fgk000$saveWorld"(registryTracker: $RegistryAccess$$Type, saveProperties: $WorldData$$Type, compoundTag: $CompoundTag$$Type, info: $CallbackInfo$$Type): void
 public "makeWorldBackup"(): long
 public "readAdditionalLevelSaveData"(): void
 public "renameLevel"(string0: string): void
-public "saveDataTag"(registryAccess0: $RegistryAccess$$Type, worldData1: $WorldData$$Type, compoundTag2: $CompoundTag$$Type): void
 public "saveDataTag"(registryAccess0: $RegistryAccess$$Type, worldData1: $WorldData$$Type): void
+public "saveDataTag"(registryAccess0: $RegistryAccess$$Type, worldData1: $WorldData$$Type, compoundTag2: $CompoundTag$$Type): void
 get "dataConfiguration"(): $WorldDataConfiguration
 get "iconFile"(): $Optional<$Path>
 get "levelId"(): string
@@ -585,7 +585,7 @@ import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $FunctionUserBuilder } from "net.minecraft.world.level.storage.loot.functions.FunctionUserBuilder"
 import { $LootItemFunction$$Type } from "net.minecraft.world.level.storage.loot.functions.LootItemFunction"
 import { $LootPool$Builder$$Type } from "net.minecraft.world.level.storage.loot.LootPool$Builder"
-import { $LootItemFunction$Builder } from "net.minecraft.world.level.storage.loot.functions.LootItemFunction$Builder"
+import { $LootItemFunction$Builder, $LootItemFunction$Builder$$Type } from "net.minecraft.world.level.storage.loot.functions.LootItemFunction$Builder"
 import { $LootTable, $LootTable$$Type } from "net.minecraft.world.level.storage.loot.LootTable"
 import { $LootContextParamSet$$Type } from "net.minecraft.world.level.storage.loot.parameters.LootContextParamSet"
 import { $FabricLootTableBuilder } from "net.fabricmc.fabric.api.loot.v2.FabricLootTableBuilder"
@@ -593,8 +593,9 @@ import { $FabricLootTableBuilder } from "net.fabricmc.fabric.api.loot.v2.FabricL
 export class $LootTable$Builder implements $FunctionUserBuilder<$LootTable$Builder>, $FabricLootTableBuilder {
 constructor()
 
-public "apply"(functions: $Collection$$Type): $LootTable$Builder
 public "apply"(function_: $LootItemFunction$$Type): $LootTable$Builder
+public "apply"(functions: $Collection$$Type): $LootTable$Builder
+public "apply"(builder0: $LootItemFunction$Builder$$Type): $LootTable$Builder
 public "apply"<E>(iterable0: $Iterable$$Type<E>, function1: $Function$$Type<E, $LootItemFunction$Builder>): $LootTable$Builder
 public "apply"<E>(e0s: E[], function1: $Function$$Type<E, $LootItemFunction$Builder>): $LootTable$Builder
 public "build"(): $LootTable
@@ -604,7 +605,6 @@ public "pool"(pool: $LootPool$$Type): $LootTable$Builder
 public "pools"(pools: $Collection$$Type): $LootTable$Builder
 public "setParamSet"(lootContextParamSet0: $LootContextParamSet$$Type): $LootTable$Builder
 public "setRandomSequence"(resourceLocation0: $ResourceLocation$$Type): $LootTable$Builder
-public "unwrap"(): $LootTable$Builder
 public "withPool"(builder0: $LootPool$Builder$$Type): $LootTable$Builder
 set "paramSet"(value: $LootContextParamSet$$Type)
 set "randomSequence"(value: $ResourceLocation$$Type)
@@ -862,12 +862,12 @@ public "freeze"(): void
 public "getLootTableId"(): $ResourceLocation
 public "getParamSet"(): $LootContextParamSet
 public "getPool"(string0: string): $LootPool
-public "getRandomItems"(lootParams0: $LootParams$$Type): $ObjectArrayList<$ItemStack>
 public "getRandomItems"(lootParams0: $LootParams$$Type, long1: long, consumer2: $Consumer$$Type<$ItemStack$$Type>): void
-public "getRandomItems"(lootContext0: $LootContext$$Type, consumer1: $Consumer$$Type<$ItemStack$$Type>): void
-public "getRandomItems"(lootParams0: $LootParams$$Type, consumer1: $Consumer$$Type<$ItemStack$$Type>): void
-public "getRandomItems"(lootContext0: $LootContext$$Type): $ObjectArrayList<$ItemStack>
+public "getRandomItems"(lootParams0: $LootParams$$Type): $ObjectArrayList<$ItemStack>
 public "getRandomItems"(lootParams0: $LootParams$$Type, long1: long): $ObjectArrayList<$ItemStack>
+public "getRandomItems"(lootParams0: $LootParams$$Type, consumer1: $Consumer$$Type<$ItemStack$$Type>): void
+public "getRandomItems"(lootContext0: $LootContext$$Type, consumer1: $Consumer$$Type<$ItemStack$$Type>): void
+public "getRandomItems"(lootContext0: $LootContext$$Type): $ObjectArrayList<$ItemStack>
 /** @deprecated */
 public "getRandomItemsRaw"(lootContext0: $LootContext$$Type, consumer1: $Consumer$$Type<$ItemStack$$Type>): void
 /** @deprecated */
@@ -902,6 +902,7 @@ public "append"(builder0: $LootPoolEntryContainer$Builder$$Type<any>): $EntryGro
 public "build"(): $LootPoolEntryContainer
 public "otherwise"(builder0: $LootPoolEntryContainer$Builder$$Type<any>): $AlternativesEntry$Builder
 public "then"(builder0: $LootPoolEntryContainer$Builder$$Type<any>): $SequentialEntry$Builder
+public "unwrap"(): T
 public "when"<E>(iterable0: $Iterable$$Type<E>, function1: $Function$$Type<E, $LootItemCondition$Builder>): T
 }
 }
@@ -1109,7 +1110,7 @@ public "create"(lootContextParamSet0: $LootContextParamSet$$Type): $LootParams
 public "getLevel"(): $ServerLevel
 public "getOptionalParameter"<T>(lootContextParam0: $LootContextParam$$Type<T>): T
 public "getParameter"<T>(lootContextParam0: $LootContextParam$$Type<T>): T
-public "handler$gjh000$addTypeOnCreate"(paramSet: $LootContextParamSet$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$gjb000$addTypeOnCreate"(paramSet: $LootContextParamSet$$Type, cir: $CallbackInfoReturnable$$Type): void
 public "withDynamicDrop"(resourceLocation0: $ResourceLocation$$Type, dynamicDrop1: $LootParams$DynamicDrop$$Type): $LootParams$Builder
 public "withLuck"(float0: float): $LootParams$Builder
 public "withOptionalParameter"<T>(lootContextParam0: $LootContextParam$$Type<T>, t1: T): $LootParams$Builder
@@ -1177,7 +1178,7 @@ import { $NumberProvider$$Type } from "net.minecraft.world.level.storage.loot.pr
 import { $LootItemFunction, $LootItemFunction$$Type } from "net.minecraft.world.level.storage.loot.functions.LootItemFunction"
 import { $LootItemFunction$Builder } from "net.minecraft.world.level.storage.loot.functions.LootItemFunction$Builder"
 import { $LootPoolEntryContainer$Builder$$Type } from "net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder"
-import { $LootItemCondition$Builder } from "net.minecraft.world.level.storage.loot.predicates.LootItemCondition$Builder"
+import { $LootItemCondition$Builder, $LootItemCondition$Builder$$Type } from "net.minecraft.world.level.storage.loot.predicates.LootItemCondition$Builder"
 import { $ConditionUserBuilder } from "net.minecraft.world.level.storage.loot.predicates.ConditionUserBuilder"
 
 export class $LootPool$Builder implements $FunctionUserBuilder<$LootPool$Builder>, $ConditionUserBuilder<$LootPool$Builder>, $FabricLootPoolBuilder {
@@ -1193,13 +1194,13 @@ public "apply"(functions: $Collection$$Type): $LootPool$Builder
 public "apply"<E>(iterable0: $Iterable$$Type<E>, function1: $Function$$Type<E, $LootItemFunction$Builder>): $LootPool$Builder
 public "apply"<E>(e0s: E[], function1: $Function$$Type<E, $LootItemFunction$Builder>): $LootPool$Builder
 public "build"(): $LootPool
-public "conditionally"(condition: $LootItemCondition$$Type): $LootPool$Builder
 public "conditionally"(conditions: $Collection$$Type): $LootPool$Builder
+public "conditionally"(condition: $LootItemCondition$$Type): $LootPool$Builder
 public static "copyOf"(pool: $LootPool$$Type): $LootPool$Builder
 public "name"(string0: string): $LootPool$Builder
 public "setBonusRolls"(numberProvider0: $NumberProvider$$Type): $LootPool$Builder
 public "setRolls"(numberProvider0: $NumberProvider$$Type): $LootPool$Builder
-public "unwrap"(): $LootPool$Builder
+public "when"(builder0: $LootItemCondition$Builder$$Type): $LootPool$Builder
 public "when"<E>(iterable0: $Iterable$$Type<E>, function1: $Function$$Type<E, $LootItemCondition$Builder>): $LootPool$Builder
 public "with"(entry: $LootPoolEntryContainer$$Type): $LootPool$Builder
 public "with"(entries: $Collection$$Type): $LootPool$Builder
@@ -1304,8 +1305,8 @@ import { $Function$$Type } from "java.util.function.Function"
 import { $Iterable$$Type } from "java.lang.Iterable"
 
 export interface $FunctionUserBuilder<T extends $FunctionUserBuilder<T> = $FunctionUserBuilder<T>> {
-"apply"(builder0: $LootItemFunction$Builder$$Type): T
 "apply"<E>(iterable0: $Iterable$$Type<E>, function1: $Function$$Type<E, $LootItemFunction$Builder>): T
+"apply"(builder0: $LootItemFunction$Builder$$Type): T
 "apply"<E>(e0s: E[], function1: $Function$$Type<E, $LootItemFunction$Builder>): T
 "unwrap"(): T
 }
@@ -1418,8 +1419,8 @@ import { $LootContextParamSet, $LootContextParamSet$$Type } from "net.minecraft.
 export class $LootContext implements $ReplacingLootContext {
 public "addDynamicDrops"(resourceLocation0: $ResourceLocation$$Type, consumer1: $Consumer$$Type<$ItemStack$$Type>): void
 public static "createVisitedEntry"(lootItemCondition0: $LootItemCondition$$Type): $LootContext$VisitedEntry<$LootItemCondition>
-public static "createVisitedEntry"(lootItemFunction0: $LootItemFunction$$Type): $LootContext$VisitedEntry<$LootItemFunction>
 public static "createVisitedEntry"(lootTable0: $LootTable$$Type): $LootContext$VisitedEntry<$LootTable>
+public static "createVisitedEntry"(lootItemFunction0: $LootItemFunction$$Type): $LootContext$VisitedEntry<$LootItemFunction>
 public "getLevel"(): $ServerLevel
 public "getLootingModifier"(): integer
 public "getLuck"(): float

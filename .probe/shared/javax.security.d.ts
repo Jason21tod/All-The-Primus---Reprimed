@@ -4,8 +4,8 @@ import { $Principal, $Principal$$Type } from "java.security.Principal"
 import { $Set, $Set$$Type } from "java.util.Set"
 import { $Callable$$Type } from "java.util.concurrent.Callable"
 import { $Class$$Type } from "java.lang.Class"
-import { $PrivilegedAction$$Type } from "java.security.PrivilegedAction"
 import { $PrivilegedExceptionAction$$Type } from "java.security.PrivilegedExceptionAction"
+import { $PrivilegedAction$$Type } from "java.security.PrivilegedAction"
 import { $Serializable } from "java.io.Serializable"
 
 export class $Subject implements $Serializable {
@@ -15,19 +15,19 @@ constructor(boolean0: boolean, set1: $Set$$Type<$Principal$$Type>, set2: $Set$$T
 public static "callAs"<T>(subject0: $Subject$$Type, callable1: $Callable$$Type<T>): T
 public static "current"(): $Subject
 /** @deprecated */
-public static "doAs"<T>(subject0: $Subject$$Type, privilegedAction1: $PrivilegedAction$$Type<T>): T
-/** @deprecated */
 public static "doAs"<T>(subject0: $Subject$$Type, privilegedExceptionAction1: $PrivilegedExceptionAction$$Type<T>): T
 /** @deprecated */
-public static "doAsPrivileged"<T>(subject0: $Subject$$Type, privilegedAction1: $PrivilegedAction$$Type<T>, accessControlContext2: $AccessControlContext$$Type): T
+public static "doAs"<T>(subject0: $Subject$$Type, privilegedAction1: $PrivilegedAction$$Type<T>): T
 /** @deprecated */
 public static "doAsPrivileged"<T>(subject0: $Subject$$Type, privilegedExceptionAction1: $PrivilegedExceptionAction$$Type<T>, accessControlContext2: $AccessControlContext$$Type): T
+/** @deprecated */
+public static "doAsPrivileged"<T>(subject0: $Subject$$Type, privilegedAction1: $PrivilegedAction$$Type<T>, accessControlContext2: $AccessControlContext$$Type): T
 public "getPrincipals"<T extends $Principal>(class0: $Class$$Type<T>): $Set<T>
 public "getPrincipals"(): $Set<$Principal>
-public "getPrivateCredentials"(): $Set<any>
 public "getPrivateCredentials"<T>(class0: $Class$$Type<T>): $Set<T>
-public "getPublicCredentials"(): $Set<any>
+public "getPrivateCredentials"(): $Set<any>
 public "getPublicCredentials"<T>(class0: $Class$$Type<T>): $Set<T>
+public "getPublicCredentials"(): $Set<any>
 /** @deprecated */
 public static "getSubject"(accessControlContext0: $AccessControlContext$$Type): $Subject
 public "isReadOnly"(): boolean

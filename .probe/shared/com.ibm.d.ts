@@ -159,22 +159,22 @@ constructor(string0: string, string1: string, string2: string)
 constructor(string0: string)
 constructor(string0: string, string1: string)
 
-public static "acceptLanguage"(string0: string, uLocale1s: $ULocale$$Type[], boolean2s: boolean[]): $ULocale
 public static "acceptLanguage"(uLocale0s: $ULocale$$Type[], uLocale1s: $ULocale$$Type[], boolean2s: boolean[]): $ULocale
 public static "acceptLanguage"(uLocale0s: $ULocale$$Type[], boolean1s: boolean[]): $ULocale
 public static "acceptLanguage"(string0: string, boolean1s: boolean[]): $ULocale
+public static "acceptLanguage"(string0: string, uLocale1s: $ULocale$$Type[], boolean2s: boolean[]): $ULocale
 public static "addLikelySubtags"(uLocale0: $ULocale$$Type): $ULocale
 public static "canonicalize"(string0: string): string
 public "clone"(): any
 public "compareTo"(uLocale0: $ULocale$$Type): integer
-public static "createCanonical"(string0: string): $ULocale
 public static "createCanonical"(uLocale0: $ULocale$$Type): $ULocale
+public static "createCanonical"(string0: string): $ULocale
 public static "forLanguageTag"(string0: string): $ULocale
 public static "forLocale"(locale0: $Locale$$Type): $ULocale
 public static "getAvailableLocales"(): $ULocale[]
 public static "getAvailableLocalesByType"(availableType0: $ULocale$AvailableType$$Type): $Collection<$ULocale>
-public "getBaseName"(): string
 public static "getBaseName"(string0: string): string
+public "getBaseName"(): string
 public "getCharacterOrientation"(): string
 public static "getCountry"(string0: string): string
 public "getCountry"(): string
@@ -185,28 +185,28 @@ public "getDisplayCountry"(): string
 public static "getDisplayCountry"(string0: string, string1: string): string
 public "getDisplayCountry"(uLocale0: $ULocale$$Type): string
 public static "getDisplayKeyword"(string0: string, uLocale1: $ULocale$$Type): string
-public static "getDisplayKeyword"(string0: string, string1: string): string
 public static "getDisplayKeyword"(string0: string): string
-public "getDisplayKeywordValue"(string0: string): string
+public static "getDisplayKeyword"(string0: string, string1: string): string
+public "getDisplayKeywordValue"(string0: string, uLocale1: $ULocale$$Type): string
 public static "getDisplayKeywordValue"(string0: string, string1: string, uLocale2: $ULocale$$Type): string
 public static "getDisplayKeywordValue"(string0: string, string1: string, string2: string): string
-public "getDisplayKeywordValue"(string0: string, uLocale1: $ULocale$$Type): string
+public "getDisplayKeywordValue"(string0: string): string
 public static "getDisplayLanguage"(string0: string, string1: string): string
 public static "getDisplayLanguage"(string0: string, uLocale1: $ULocale$$Type): string
 public "getDisplayLanguage"(uLocale0: $ULocale$$Type): string
 public "getDisplayLanguage"(): string
-public "getDisplayLanguageWithDialect"(uLocale0: $ULocale$$Type): string
 public static "getDisplayLanguageWithDialect"(string0: string, uLocale1: $ULocale$$Type): string
-public static "getDisplayLanguageWithDialect"(string0: string, string1: string): string
+public "getDisplayLanguageWithDialect"(uLocale0: $ULocale$$Type): string
 public "getDisplayLanguageWithDialect"(): string
+public static "getDisplayLanguageWithDialect"(string0: string, string1: string): string
 public "getDisplayName"(uLocale0: $ULocale$$Type): string
 public static "getDisplayName"(string0: string, uLocale1: $ULocale$$Type): string
 public static "getDisplayName"(string0: string, string1: string): string
 public "getDisplayName"(): string
-public static "getDisplayNameWithDialect"(string0: string, string1: string): string
-public static "getDisplayNameWithDialect"(string0: string, uLocale1: $ULocale$$Type): string
-public "getDisplayNameWithDialect"(): string
 public "getDisplayNameWithDialect"(uLocale0: $ULocale$$Type): string
+public "getDisplayNameWithDialect"(): string
+public static "getDisplayNameWithDialect"(string0: string, uLocale1: $ULocale$$Type): string
+public static "getDisplayNameWithDialect"(string0: string, string1: string): string
 public "getDisplayScript"(): string
 public "getDisplayScript"(uLocale0: $ULocale$$Type): string
 public static "getDisplayScript"(string0: string, string1: string): string
@@ -214,14 +214,14 @@ public static "getDisplayScript"(string0: string, uLocale1: $ULocale$$Type): str
 /** @deprecated */
 public static "getDisplayScriptInContext"(string0: string, uLocale1: $ULocale$$Type): string
 /** @deprecated */
-public "getDisplayScriptInContext"(uLocale0: $ULocale$$Type): string
-/** @deprecated */
 public "getDisplayScriptInContext"(): string
 /** @deprecated */
 public static "getDisplayScriptInContext"(string0: string, string1: string): string
-public "getDisplayVariant"(uLocale0: $ULocale$$Type): string
-public static "getDisplayVariant"(string0: string, string1: string): string
+/** @deprecated */
+public "getDisplayScriptInContext"(uLocale0: $ULocale$$Type): string
 public static "getDisplayVariant"(string0: string, uLocale1: $ULocale$$Type): string
+public static "getDisplayVariant"(string0: string, string1: string): string
+public "getDisplayVariant"(uLocale0: $ULocale$$Type): string
 public "getDisplayVariant"(): string
 public "getExtension"(char0: character): string
 public "getExtensionKeys"(): $Set<character>
@@ -229,8 +229,8 @@ public static "getFallback"(string0: string): string
 public "getFallback"(): $ULocale
 public "getISO3Country"(): string
 public static "getISO3Country"(string0: string): string
-public "getISO3Language"(): string
 public static "getISO3Language"(string0: string): string
+public "getISO3Language"(): string
 public static "getISOCountries"(): string[]
 public static "getISOLanguages"(): string[]
 public static "getKeywordValue"(string0: string, string1: string): string
@@ -723,11 +723,11 @@ public static "forLocaleOrDefault"(locale0: $Locale$$Type): $TimeZone
 public static "forULocaleOrDefault"(uLocale0: $ULocale$$Type): $TimeZone
 public "freeze"(): $TimeZone
 public static "getAvailableIDs"(systemTimeZoneType0: $TimeZone$SystemTimeZoneType$$Type, string1: string, integer2: integer): $Set<string>
+public static "getAvailableIDs"(): string[]
 public static "getAvailableIDs"(string0: string): string[]
 public static "getAvailableIDs"(int0: integer): string[]
-public static "getAvailableIDs"(): string[]
-public static "getCanonicalID"(string0: string): string
 public static "getCanonicalID"(string0: string, boolean1s: boolean[]): string
+public static "getCanonicalID"(string0: string): string
 public "getDSTSavings"(): integer
 public static "getDefault"(): $TimeZone
 public static "getDefaultTimeZoneType"(): integer
@@ -924,23 +924,22 @@ public "addAll"(iterable0: $Iterable$$Type<any>): $UnicodeSet
 public "addAll"(charSequence0: charseq): $UnicodeSet
 public "addAllTo"<T extends $Collection<string>>(t0: T): T
 public static "addAllTo"<T, U extends $Collection<T>>(iterable0: $Iterable$$Type<T>, u1: U): U
-public "addAllTo"(string0s: string[]): string[]
 public static "addAllTo"<T>(iterable0: $Iterable$$Type<T>, t1s: T[]): T[]
+public "addAllTo"(string0s: string[]): string[]
 /** @deprecated */
 public "addBridges"(unicodeSet0: $UnicodeSet$$Type): $UnicodeSet
 public "addMatchSetTo"(unicodeSet0: $UnicodeSet$$Type): void
 public "applyIntPropertyValue"(int0: integer, int1: integer): $UnicodeSet
-public "applyPattern"(string0: string, int1: integer): $UnicodeSet
-public "applyPattern"(string0: string, boolean1: boolean): $UnicodeSet
 public "applyPattern"(string0: string): $UnicodeSet
+public "applyPattern"(string0: string, boolean1: boolean): $UnicodeSet
 /** @deprecated */
 public "applyPattern"(string0: string, parsePosition1: $ParsePosition$$Type, symbolTable2: $SymbolTable$$Type, int3: integer): $UnicodeSet
+public "applyPattern"(string0: string, int1: integer): $UnicodeSet
 public "applyPropertyAlias"(string0: string, string1: string, symbolTable2: $SymbolTable$$Type): $UnicodeSet
 public "applyPropertyAlias"(string0: string, string1: string): $UnicodeSet
 public "charAt"(int0: integer): integer
 public "clear"(): $UnicodeSet
 public "clone"(): any
-public "cloneAsThawed"(): $UnicodeSet
 public "closeOver"(int0: integer): $UnicodeSet
 public "compact"(): $UnicodeSet
 public static "compare"<T extends $Comparable<T>>(collection0: $Collection$$Type<T>, collection1: $Collection$$Type<T>, comparisonStyle2: $UnicodeSet$ComparisonStyle$$Type): integer
@@ -956,21 +955,21 @@ public "complement"(charSequence0: charseq): $UnicodeSet
 public "complement"(int0: integer, int1: integer): $UnicodeSet
 public "complement"(int0: integer): $UnicodeSet
 public "complement"(): $UnicodeSet
-public "complementAll"(charSequence0: charseq): $UnicodeSet
 public "complementAll"(unicodeSet0: $UnicodeSet$$Type): $UnicodeSet
+public "complementAll"(charSequence0: charseq): $UnicodeSet
 public "contains"(charSequence0: charseq): boolean
 public "contains"(int0: integer, int1: integer): boolean
 public "containsAll"(string0: string): boolean
 public "containsAll"<T extends charseq>(iterable0: $Iterable$$Type<T>): boolean
 public "containsAll"(unicodeSet0: $UnicodeSet$$Type): boolean
+public "containsNone"(unicodeSet0: $UnicodeSet$$Type): boolean
 public "containsNone"(charSequence0: charseq): boolean
 public "containsNone"(int0: integer, int1: integer): boolean
 public "containsNone"<T extends charseq>(iterable0: $Iterable$$Type<T>): boolean
-public "containsNone"(unicodeSet0: $UnicodeSet$$Type): boolean
 public "containsSome"<T extends charseq>(iterable0: $Iterable$$Type<T>): boolean
+public "containsSome"(unicodeSet0: $UnicodeSet$$Type): boolean
 public "containsSome"(charSequence0: charseq): boolean
 public "containsSome"(int0: integer, int1: integer): boolean
-public "containsSome"(unicodeSet0: $UnicodeSet$$Type): boolean
 /** @deprecated */
 public "findIn"(charSequence0: charseq, int1: integer, boolean2: boolean): integer
 /** @deprecated */
@@ -1005,9 +1004,9 @@ public "removeAll"<T extends charseq>(iterable0: $Iterable$$Type<T>): $UnicodeSe
 public "removeAll"(charSequence0: charseq): $UnicodeSet
 public "removeAllStrings"(): $UnicodeSet
 public static "resemblesPattern"(string0: string, int1: integer): boolean
-public "retain"(charSequence0: charseq): $UnicodeSet
 public "retain"(int0: integer): $UnicodeSet
 public "retain"(int0: integer, int1: integer): $UnicodeSet
+public "retain"(charSequence0: charseq): $UnicodeSet
 public "retainAll"<T extends charseq>(iterable0: $Iterable$$Type<T>): $UnicodeSet
 public "retainAll"(charSequence0: charseq): $UnicodeSet
 public "retainAll"(unicodeSet0: $UnicodeSet$$Type): $UnicodeSet
@@ -1020,8 +1019,8 @@ public "span"(charSequence0: charseq, int1: integer, spanCondition2: $UnicodeSet
 public "span"(charSequence0: charseq, spanCondition1: $UnicodeSet$SpanCondition$$Type): integer
 /** @deprecated */
 public "spanAndCount"(charSequence0: charseq, int1: integer, spanCondition2: $UnicodeSet$SpanCondition$$Type, outputInt3: $OutputInt$$Type): integer
-public "spanBack"(charSequence0: charseq, int1: integer, spanCondition2: $UnicodeSet$SpanCondition$$Type): integer
 public "spanBack"(charSequence0: charseq, spanCondition1: $UnicodeSet$SpanCondition$$Type): integer
+public "spanBack"(charSequence0: charseq, int1: integer, spanCondition2: $UnicodeSet$SpanCondition$$Type): integer
 public "spliterator"(): $Spliterator<string>
 public "strings"(): $Collection<string>
 /** @deprecated */
@@ -1162,8 +1161,8 @@ static readonly "ZONE_OFFSET": integer
 public "add"(int0: integer, int1: integer): void
 public "after"(object0: any): boolean
 public "before"(object0: any): boolean
-public "clear"(): void
 public "clear"(int0: integer): void
+public "clear"(): void
 public "clone"(): any
 public "compareTo"(calendar0: $Calendar$$Type): integer
 public "fieldDifference"(date0: $Date$$Type, int1: integer): integer
@@ -1178,16 +1177,16 @@ public "getDateTimeFormat"(int0: integer, int1: integer, locale2: $Locale$$Type)
 public static "getDateTimePattern"(calendar0: $Calendar$$Type, uLocale1: $ULocale$$Type, int2: integer): string
 /** @deprecated */
 public "getDayOfWeekType"(int0: integer): integer
-public "getDisplayName"(uLocale0: $ULocale$$Type): string
 public "getDisplayName"(locale0: $Locale$$Type): string
+public "getDisplayName"(uLocale0: $ULocale$$Type): string
 public "getFieldCount"(): integer
 public "getFirstDayOfWeek"(): integer
 public "getGreatestMinimum"(int0: integer): integer
-public static "getInstance"(timeZone0: $TimeZone$$Type, uLocale1: $ULocale$$Type): $Calendar
 public static "getInstance"(timeZone0: $TimeZone$$Type): $Calendar
 public static "getInstance"(): $Calendar
-public static "getInstance"(timeZone0: $TimeZone$$Type, locale1: $Locale$$Type): $Calendar
 public static "getInstance"(locale0: $Locale$$Type): $Calendar
+public static "getInstance"(timeZone0: $TimeZone$$Type, uLocale1: $ULocale$$Type): $Calendar
+public static "getInstance"(timeZone0: $TimeZone$$Type, locale1: $Locale$$Type): $Calendar
 public static "getInstance"(uLocale0: $ULocale$$Type): $Calendar
 public static "getKeywordValuesForLocale"(string0: string, uLocale1: $ULocale$$Type, boolean2: boolean): string[]
 public "getLeastMaximum"(int0: integer): integer
@@ -1212,13 +1211,13 @@ public "haveDefaultCentury"(): boolean
 public "isEquivalentTo"(calendar0: $Calendar$$Type): boolean
 public "isLenient"(): boolean
 public "isSet"(int0: integer): boolean
-public "isWeekend"(date0: $Date$$Type): boolean
 public "isWeekend"(): boolean
+public "isWeekend"(date0: $Date$$Type): boolean
 public "roll"(int0: integer, boolean1: boolean): void
 public "roll"(int0: integer, int1: integer): void
+public "set"(int0: integer, int1: integer, int2: integer): void
 public "set"(int0: integer, int1: integer): void
 public "set"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer): void
-public "set"(int0: integer, int1: integer, int2: integer): void
 public "set"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): void
 public "setFirstDayOfWeek"(int0: integer): void
 public "setLenient"(boolean0: boolean): void
@@ -1420,13 +1419,13 @@ public static "getInstance"(calendar0: $Calendar$$Type): $DateFormat
 public static "getInstance"(calendar0: $Calendar$$Type, locale1: $Locale$$Type): $DateFormat
 public static "getInstance"(calendar0: $Calendar$$Type, uLocale1: $ULocale$$Type): $DateFormat
 public static "getInstanceForSkeleton"(calendar0: $Calendar$$Type, string1: string, locale2: $Locale$$Type): $DateFormat
-public static "getInstanceForSkeleton"(string0: string, uLocale1: $ULocale$$Type): $DateFormat
 public static "getInstanceForSkeleton"(calendar0: $Calendar$$Type, string1: string, uLocale2: $ULocale$$Type): $DateFormat
-public static "getInstanceForSkeleton"(string0: string, locale1: $Locale$$Type): $DateFormat
 public static "getInstanceForSkeleton"(string0: string): $DateFormat
+public static "getInstanceForSkeleton"(string0: string, locale1: $Locale$$Type): $DateFormat
+public static "getInstanceForSkeleton"(string0: string, uLocale1: $ULocale$$Type): $DateFormat
 public "getNumberFormat"(): $NumberFormat
-public static "getPatternInstance"(string0: string, uLocale1: $ULocale$$Type): $DateFormat
 public static "getPatternInstance"(calendar0: $Calendar$$Type, string1: string, locale2: $Locale$$Type): $DateFormat
+public static "getPatternInstance"(string0: string, uLocale1: $ULocale$$Type): $DateFormat
 public static "getPatternInstance"(calendar0: $Calendar$$Type, string1: string, uLocale2: $ULocale$$Type): $DateFormat
 public static "getPatternInstance"(string0: string, locale1: $Locale$$Type): $DateFormat
 public static "getPatternInstance"(string0: string): $DateFormat
@@ -1466,8 +1465,8 @@ set "timeZone"(value: $TimeZone$$Type)
 
 declare module "com.ibm.icu.util.Currency" {
 import { $ULocale, $ULocale$$Type } from "com.ibm.icu.util.ULocale"
-import { $Locale, $Locale$$Type } from "java.util.Locale"
 import { $Date$$Type } from "java.util.Date"
+import { $Locale, $Locale$$Type } from "java.util.Locale"
 import { $ParsePosition$$Type } from "java.text.ParsePosition"
 import { $MeasureUnit } from "com.ibm.icu.util.MeasureUnit"
 import { $Set } from "java.util.Set"
@@ -1486,18 +1485,18 @@ static readonly "VARIANT_SYMBOL_NAME": integer
 
 public static "fromJavaCurrency"(currency0: $Currency$0$$Type): $Currency
 public static "getAvailableCurrencies"(): $Set<$Currency>
-public static "getAvailableCurrencyCodes"(locale0: $Locale$$Type, date1: $Date$$Type): string[]
 public static "getAvailableCurrencyCodes"(uLocale0: $ULocale$$Type, date1: $Date$$Type): string[]
+public static "getAvailableCurrencyCodes"(locale0: $Locale$$Type, date1: $Date$$Type): string[]
 public static "getAvailableLocales"(): $Locale[]
 public static "getAvailableULocales"(): $ULocale[]
 public "getCurrencyCode"(): string
 public "getDefaultFractionDigits"(currencyUsage0: $Currency$CurrencyUsage$$Type): integer
 public "getDefaultFractionDigits"(): integer
-public "getDisplayName"(): string
 public "getDisplayName"(locale0: $Locale$$Type): string
-public static "getInstance"(uLocale0: $ULocale$$Type): $Currency
+public "getDisplayName"(): string
 public static "getInstance"(locale0: $Locale$$Type): $Currency
 public static "getInstance"(string0: string): $Currency
+public static "getInstance"(uLocale0: $ULocale$$Type): $Currency
 public static "getKeywordValuesForLocale"(string0: string, uLocale1: $ULocale$$Type, boolean2: boolean): string[]
 public "getName"(locale0: $Locale$$Type, int1: integer, boolean2s: boolean[]): string
 public "getName"(locale0: $Locale$$Type, int1: integer, string2: string, boolean3s: boolean[]): string
@@ -1508,8 +1507,8 @@ public "getNumericCode"(): integer
 public static "getParsingTrie"(uLocale0: $ULocale$$Type, int1: integer): $TextTrieMap<$Currency$CurrencyStringInfo>
 public "getRoundingIncrement"(): double
 public "getRoundingIncrement"(currencyUsage0: $Currency$CurrencyUsage$$Type): double
-public "getSymbol"(): string
 public "getSymbol"(locale0: $Locale$$Type): string
+public "getSymbol"(): string
 public "getSymbol"(uLocale0: $ULocale$$Type): string
 public static "isAvailable"(string0: string, date1: $Date$$Type, date2: $Date$$Type): boolean
 /** @deprecated */
@@ -1610,8 +1609,8 @@ public "pow"(bigDecimal0: $BigDecimal$$Type): $BigDecimal
 public "remainder"(bigDecimal0: $BigDecimal$$Type): $BigDecimal
 public "remainder"(bigDecimal0: $BigDecimal$$Type, mathContext1: $MathContext$$Type): $BigDecimal
 public "scale"(): integer
-public "setScale"(int0: integer): $BigDecimal
 public "setScale"(int0: integer, int1: integer): $BigDecimal
+public "setScale"(int0: integer): $BigDecimal
 public "shortValueExact"(): short
 public "signum"(): integer
 public "subtract"(bigDecimal0: $BigDecimal$$Type, mathContext1: $MathContext$$Type): $BigDecimal
@@ -1824,27 +1823,27 @@ public static "getInstance"(): $NumberFormat
 public static "getInstance"(int0: integer): $NumberFormat
 public static "getInstance"(locale0: $Locale$$Type): $NumberFormat
 public static "getInstance"(uLocale0: $ULocale$$Type, int1: integer): $NumberFormat
-public static "getIntegerInstance"(locale0: $Locale$$Type): $NumberFormat
 public static "getIntegerInstance"(uLocale0: $ULocale$$Type): $NumberFormat
 public static "getIntegerInstance"(): $NumberFormat
+public static "getIntegerInstance"(locale0: $Locale$$Type): $NumberFormat
 public "getMaximumFractionDigits"(): integer
 public "getMaximumIntegerDigits"(): integer
 public "getMinimumFractionDigits"(): integer
 public "getMinimumIntegerDigits"(): integer
-public static "getNumberInstance"(): $NumberFormat
 public static "getNumberInstance"(uLocale0: $ULocale$$Type): $NumberFormat
 public static "getNumberInstance"(locale0: $Locale$$Type): $NumberFormat
+public static "getNumberInstance"(): $NumberFormat
 /** @deprecated */
 public static "getPatternForStyle"(uLocale0: $ULocale$$Type, int1: integer): string
 /** @deprecated */
 public static "getPatternForStyleAndNumberingSystem"(uLocale0: $ULocale$$Type, string1: string, int2: integer): string
-public static "getPercentInstance"(): $NumberFormat
-public static "getPercentInstance"(locale0: $Locale$$Type): $NumberFormat
 public static "getPercentInstance"(uLocale0: $ULocale$$Type): $NumberFormat
+public static "getPercentInstance"(locale0: $Locale$$Type): $NumberFormat
+public static "getPercentInstance"(): $NumberFormat
 public "getRoundingMode"(): integer
-public static "getScientificInstance"(uLocale0: $ULocale$$Type): $NumberFormat
-public static "getScientificInstance"(locale0: $Locale$$Type): $NumberFormat
 public static "getScientificInstance"(): $NumberFormat
+public static "getScientificInstance"(locale0: $Locale$$Type): $NumberFormat
+public static "getScientificInstance"(uLocale0: $ULocale$$Type): $NumberFormat
 public "isGroupingUsed"(): boolean
 public "isParseIntegerOnly"(): boolean
 public "isParseStrict"(): boolean

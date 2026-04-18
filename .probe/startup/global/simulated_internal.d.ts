@@ -9,8 +9,8 @@ import { $FriendlyByteBuf$Reader, $FriendlyByteBuf$Reader$$Type } from "net.mine
 import { $SculkPatchFeature, $SculkPatchFeature$$Type } from "net.minecraft.world.level.levelgen.feature.SculkPatchFeature"
 import { $MobBuilder, $MobBuilder$$Type } from "net.liopyu.entityjs.builders.living.entityjs.MobBuilder"
 import { $RemoveOresProperties, $RemoveOresProperties$$Type } from "dev.latvian.mods.kubejs.level.gen.properties.RemoveOresProperties"
-import { $BalmEntity, $BalmEntity$$Type } from "net.blay09.mods.balm.api.entity.BalmEntity"
 import { $CurioAttributeModifierEvent, $CurioAttributeModifierEvent$$Type } from "top.theillusivec4.curios.api.event.CurioAttributeModifierEvent"
+import { $BalmEntity, $BalmEntity$$Type } from "net.blay09.mods.balm.api.entity.BalmEntity"
 import { $BufferSourceAccessor, $BufferSourceAccessor$$Type } from "net.irisshaders.batchedentityrendering.mixin.BufferSourceAccessor"
 import { $Int2BooleanFunction, $Int2BooleanFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2BooleanFunction"
 import { $LootContext$VisitedEntry, $LootContext$VisitedEntry$$Type } from "net.minecraft.world.level.storage.loot.LootContext$VisitedEntry"
@@ -37,8 +37,8 @@ import { $ClientboundPlayerLookAtPacket, $ClientboundPlayerLookAtPacket$$Type } 
 import { $ResourceLocationAccess, $ResourceLocationAccess$$Type } from "malte0811.ferritecore.mixin.mrl.ResourceLocationAccess"
 import { $EventRenderSplashText, $EventRenderSplashText$$Type } from "com.github.alexthe666.citadel.client.event.EventRenderSplashText"
 import { $Shader, $Shader$$Type } from "com.mojang.blaze3d.shaders.Shader"
-import { $IGuiOverlay, $IGuiOverlay$$Type } from "net.minecraftforge.client.gui.overlay.IGuiOverlay"
 import { $ModConfigEvent$Loading, $ModConfigEvent$Loading$$Type } from "net.minecraftforge.fml.event.config.ModConfigEvent$Loading"
+import { $IGuiOverlay, $IGuiOverlay$$Type } from "net.minecraftforge.client.gui.overlay.IGuiOverlay"
 import { $Currency, $Currency$$Type } from "java.util.Currency"
 import { $ClientboundSetActionBarTextPacket, $ClientboundSetActionBarTextPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundSetActionBarTextPacket"
 import { $LinkedHashMap, $LinkedHashMap$$Type } from "java.util.LinkedHashMap"
@@ -92,8 +92,8 @@ import { $ServerScoreboard$Method, $ServerScoreboard$Method$$Type } from "net.mi
 import { $CriterionTriggerInstance, $CriterionTriggerInstance$$Type } from "net.minecraft.advancements.CriterionTriggerInstance"
 import { $ETFEntity, $ETFEntity$$Type } from "traben.entity_texture_features.utils.ETFEntity"
 import { $CriterionTrigger$Listener, $CriterionTrigger$Listener$$Type } from "net.minecraft.advancements.CriterionTrigger$Listener"
-import { $DownloadedPackSource, $DownloadedPackSource$$Type } from "net.minecraft.client.resources.DownloadedPackSource"
 import { $CompostableRecipesEventJS, $CompostableRecipesEventJS$$Type } from "dev.latvian.mods.kubejs.recipe.CompostableRecipesEventJS"
+import { $DownloadedPackSource, $DownloadedPackSource$$Type } from "net.minecraft.client.resources.DownloadedPackSource"
 import { $BowItem, $BowItem$$Type } from "net.minecraft.world.item.BowItem"
 import { $WaterFluid$Source, $WaterFluid$Source$$Type } from "net.minecraft.world.level.material.WaterFluid$Source"
 import { $JigsawBlock, $JigsawBlock$$Type } from "net.minecraft.world.level.block.JigsawBlock"
@@ -203,8 +203,8 @@ import { $FTBQuestsKubeJSTeamData, $FTBQuestsKubeJSTeamData$$Type } from "dev.ft
 import { $LightPredicateAccess, $LightPredicateAccess$$Type } from "snownee.lychee.mixin.LightPredicateAccess"
 import { $CombatTrackerClone, $CombatTrackerClone$$Type } from "team.creative.playerrevive.api.CombatTrackerClone"
 import { $MemoryTrackingBuffer, $MemoryTrackingBuffer$$Type } from "net.irisshaders.batchedentityrendering.impl.MemoryTrackingBuffer"
-import { $Rotation, $Rotation$$Type } from "net.minecraft.world.level.block.Rotation"
 import { $PlayerContainerEvent$Open, $PlayerContainerEvent$Open$$Type } from "net.minecraftforge.event.entity.player.PlayerContainerEvent$Open"
+import { $Rotation, $Rotation$$Type } from "net.minecraft.world.level.block.Rotation"
 import { $ResourceArgument, $ResourceArgument$$Type } from "net.minecraft.commands.arguments.ResourceArgument"
 import { $PlayMessages$SpawnEntity, $PlayMessages$SpawnEntity$$Type } from "net.minecraftforge.network.PlayMessages$SpawnEntity"
 import { $CachedLightPreparer, $CachedLightPreparer$$Type } from "me.fzzyhmstrs.particle_core.interfaces.CachedLightPreparer"
@@ -230,16 +230,16 @@ import { $PitcherCropBlock, $PitcherCropBlock$$Type } from "net.minecraft.world.
 import { $ImageProducer, $ImageProducer$$Type } from "java.awt.image.ImageProducer"
 import { $PickaxeItemBuilder, $PickaxeItemBuilder$$Type } from "dev.latvian.mods.kubejs.item.custom.PickaxeItemBuilder"
 import { $TickEvent$Type, $TickEvent$Type$$Type } from "net.minecraftforge.event.TickEvent$Type"
-import { $MenuItem$OnActionExpandListener, $MenuItem$OnActionExpandListener$$Type } from "icyllis.modernui.view.MenuItem$OnActionExpandListener"
 import { $ByteBuf, $ByteBuf$$Type } from "io.netty.buffer.ByteBuf"
+import { $MenuItem$OnActionExpandListener, $MenuItem$OnActionExpandListener$$Type } from "icyllis.modernui.view.MenuItem$OnActionExpandListener"
 import { $WorldGenLevel, $WorldGenLevel$$Type } from "net.minecraft.world.level.WorldGenLevel"
 import { $CarverDebugSettings, $CarverDebugSettings$$Type } from "net.minecraft.world.level.levelgen.carver.CarverDebugSettings"
 import { $PaintingVariant, $PaintingVariant$$Type } from "net.minecraft.world.entity.decoration.PaintingVariant"
 import { $ArtifactRepository, $ArtifactRepository$$Type } from "org.apache.maven.artifact.repository.ArtifactRepository"
 import { $JobAttributes$SidesType, $JobAttributes$SidesType$$Type } from "java.awt.JobAttributes$SidesType"
 import { $PatrollingMonster, $PatrollingMonster$$Type } from "net.minecraft.world.entity.monster.PatrollingMonster"
-import { $ItemComponentParser, $ItemComponentParser$$Type } from "com.mega.endinglib.api.item.component.parser.ItemComponentParser"
 import { $CustomizeGuiOverlayEvent, $CustomizeGuiOverlayEvent$$Type } from "net.minecraftforge.client.event.CustomizeGuiOverlayEvent"
+import { $ItemComponentParser, $ItemComponentParser$$Type } from "com.mega.endinglib.api.item.component.parser.ItemComponentParser"
 import { $ChestType, $ChestType$$Type } from "net.minecraft.world.level.block.state.properties.ChestType"
 import { $BaseLivingEntityBuilder$ISoundListenerJS, $BaseLivingEntityBuilder$ISoundListenerJS$$Type } from "net.liopyu.entityjs.builders.living.BaseLivingEntityBuilder$ISoundListenerJS"
 import { $AttachedData, $AttachedData$$Type } from "dev.latvian.mods.kubejs.util.AttachedData"
@@ -254,16 +254,16 @@ import { $Passthrough, $Passthrough$$Type } from "net.minecraft.world.level.leve
 import { $AccessorLevelRenderer, $AccessorLevelRenderer$$Type } from "com.mega.endinglib.mixin.accessor.AccessorLevelRenderer"
 import { $Animation$LoopType, $Animation$LoopType$$Type } from "software.bernie.geckolib.core.animation.Animation$LoopType"
 import { $AnimationEvent$Start as $AnimationEvent$Start$0, $AnimationEvent$Start$$Type as $AnimationEvent$Start$0$$Type } from "com.ilexiconn.llibrary.server.event.AnimationEvent$Start"
-import { $FireworkRocketEntityKJS, $FireworkRocketEntityKJS$$Type } from "dev.latvian.mods.kubejs.core.FireworkRocketEntityKJS"
 import { $Monitor, $Monitor$$Type } from "com.mojang.blaze3d.platform.Monitor"
+import { $FireworkRocketEntityKJS, $FireworkRocketEntityKJS$$Type } from "dev.latvian.mods.kubejs.core.FireworkRocketEntityKJS"
 import { $DatagramChannel, $DatagramChannel$$Type } from "java.nio.channels.DatagramChannel"
 import { $NoiseGeneratorSettingsAccessor, $NoiseGeneratorSettingsAccessor$$Type } from "dev.worldgen.lithostitched.mixin.common.NoiseGeneratorSettingsAccessor"
 import { $StackedContentsCompatible, $StackedContentsCompatible$$Type } from "net.minecraft.world.inventory.StackedContentsCompatible"
 import { $PresetEditor, $PresetEditor$$Type } from "net.minecraft.client.gui.screens.worldselection.PresetEditor"
 import { $PlaceOnWaterBlockItem, $PlaceOnWaterBlockItem$$Type } from "net.minecraft.world.item.PlaceOnWaterBlockItem"
 import { $Reference2IntFunction, $Reference2IntFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2IntFunction"
-import { $UnmodifiableConfig$Entry, $UnmodifiableConfig$Entry$$Type } from "com.electronwill.nightconfig.core.UnmodifiableConfig$Entry"
 import { $SaplingGrowTreeEvent, $SaplingGrowTreeEvent$$Type } from "net.minecraftforge.event.level.SaplingGrowTreeEvent"
+import { $UnmodifiableConfig$Entry, $UnmodifiableConfig$Entry$$Type } from "com.electronwill.nightconfig.core.UnmodifiableConfig$Entry"
 import { $PlayerChatDecorateEventJS, $PlayerChatDecorateEventJS$$Type } from "dev.latvian.mods.kubejs.player.PlayerChatDecorateEventJS"
 import { $FTBQuestsKubeJSTeamDataWrapper, $FTBQuestsKubeJSTeamDataWrapper$$Type } from "dev.ftb.mods.ftbxmodcompat.ftbquests.kubejs.FTBQuestsKubeJSTeamDataWrapper"
 import { $SpriteFinderImpl, $SpriteFinderImpl$$Type } from "net.fabricmc.fabric.impl.renderer.SpriteFinderImpl"
@@ -400,8 +400,8 @@ import { $ConfiguredDamageCondition, $ConfiguredDamageCondition$$Type } from "io
 import { $Guard, $Guard$$Type } from "java.security.Guard"
 import { $GameEventListener, $GameEventListener$$Type } from "net.minecraft.world.level.gameevent.GameEventListener"
 import { $WoodType, $WoodType$$Type } from "net.minecraft.world.level.block.state.properties.WoodType"
-import { $Double2ReferenceFunction, $Double2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ReferenceFunction"
 import { $ForgeZRecipeCrawl$Visit$Shapeless, $ForgeZRecipeCrawl$Visit$Shapeless$$Type } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Visit$Shapeless"
+import { $Double2ReferenceFunction, $Double2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2ReferenceFunction"
 import { $ImageViewProxy$LazyCallbackResult, $ImageViewProxy$LazyCallbackResult$$Type } from "icyllis.arc3d.engine.ImageViewProxy$LazyCallbackResult"
 import { $Shearable, $Shearable$$Type } from "net.minecraft.world.entity.Shearable"
 import { $ChunkHolder, $ChunkHolder$$Type } from "net.minecraft.server.level.ChunkHolder"
@@ -472,8 +472,8 @@ import { $EntityTeleportEvent$EnderPearl, $EntityTeleportEvent$EnderPearl$$Type 
 import { $Trigger, $Trigger$$Type } from "net.minecraft.world.entity.ai.behavior.declarative.Trigger"
 import { $SpecialKeyType, $SpecialKeyType$$Type } from "com.dinzeer.legendreliclib.lib.key.SpecialKeyType"
 import { $AccessorEntitySelector, $AccessorEntitySelector$$Type } from "com.mega.endinglib.mixin.accessor.AccessorEntitySelector"
-import { $IrisExtendedBufferBuilder, $IrisExtendedBufferBuilder$$Type } from "net.irisshaders.iris.vertices.IrisExtendedBufferBuilder"
 import { $ServerLifecycleEvent, $ServerLifecycleEvent$$Type } from "net.minecraftforge.event.server.ServerLifecycleEvent"
+import { $IrisExtendedBufferBuilder, $IrisExtendedBufferBuilder$$Type } from "net.irisshaders.iris.vertices.IrisExtendedBufferBuilder"
 import { $DateFormat$BooleanAttribute, $DateFormat$BooleanAttribute$$Type } from "com.ibm.icu.text.DateFormat$BooleanAttribute"
 import { $ItemComponentType, $ItemComponentType$$Type } from "com.mega.endinglib.api.item.component.ItemComponentType"
 import { $ForgeZRecipeCrawl$Visit$Cooking, $ForgeZRecipeCrawl$Visit$Cooking$$Type } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Visit$Cooking"
@@ -495,8 +495,8 @@ import { $ShapelessRecipeSchema$ShapelessRecipeJS, $ShapelessRecipeSchema$Shapel
 import { $Task as $Task$0, $Task$$Type as $Task$0$$Type } from "icyllis.arc3d.engine.Task"
 import { $ScreenEvent$MouseButtonPressed$Pre, $ScreenEvent$MouseButtonPressed$Pre$$Type } from "net.minecraftforge.client.event.ScreenEvent$MouseButtonPressed$Pre"
 import { $LivingDamageCache, $LivingDamageCache$$Type } from "io.github.edwinmindcraft.apoli.common.util.LivingDamageCache"
-import { $TeamMessage, $TeamMessage$$Type } from "dev.ftb.mods.ftbteams.api.TeamMessage"
 import { $ScreenMouseEvent$Drag, $ScreenMouseEvent$Drag$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenMouseEvent$Drag"
+import { $TeamMessage, $TeamMessage$$Type } from "dev.ftb.mods.ftbteams.api.TeamMessage"
 import { $FileDescriptor, $FileDescriptor$$Type } from "java.io.FileDescriptor"
 import { $AxisCycle, $AxisCycle$$Type } from "net.minecraft.core.AxisCycle"
 import { $AbstractChestBlock, $AbstractChestBlock$$Type } from "net.minecraft.world.level.block.AbstractChestBlock"
@@ -541,8 +541,8 @@ import { $RenderMaterial, $RenderMaterial$$Type } from "net.fabricmc.fabric.api.
 import { $UserPrincipal, $UserPrincipal$$Type } from "java.nio.file.attribute.UserPrincipal"
 import { $RedstoneWallTorchBlock, $RedstoneWallTorchBlock$$Type } from "net.minecraft.world.level.block.RedstoneWallTorchBlock"
 import { $ContextUtils$ArrowEntityHitContext, $ContextUtils$ArrowEntityHitContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ArrowEntityHitContext"
-import { $Turtle, $Turtle$$Type } from "net.minecraft.world.entity.animal.Turtle"
 import { $ScreenEvent$MouseButtonReleased$Post, $ScreenEvent$MouseButtonReleased$Post$$Type } from "net.minecraftforge.client.event.ScreenEvent$MouseButtonReleased$Post"
+import { $Turtle, $Turtle$$Type } from "net.minecraft.world.entity.animal.Turtle"
 import { $ArrayRecipeComponent, $ArrayRecipeComponent$$Type } from "dev.latvian.mods.kubejs.recipe.component.ArrayRecipeComponent"
 import { $SerializableTickContainer, $SerializableTickContainer$$Type } from "net.minecraft.world.ticks.SerializableTickContainer"
 import { $AbstractIntSet, $AbstractIntSet$$Type } from "it.unimi.dsi.fastutil.ints.AbstractIntSet"
@@ -555,8 +555,8 @@ import { $IForgeAbstractMinecart, $IForgeAbstractMinecart$$Type } from "net.mine
 import { $DimensionType$MonsterSettings, $DimensionType$MonsterSettings$$Type } from "net.minecraft.world.level.dimension.DimensionType$MonsterSettings"
 import { $CachedOutput, $CachedOutput$$Type } from "net.minecraft.data.CachedOutput"
 import { $ImprovedNoise, $ImprovedNoise$$Type } from "net.minecraft.world.level.levelgen.synth.ImprovedNoise"
-import { $IForgeShearable, $IForgeShearable$$Type } from "net.minecraftforge.common.IForgeShearable"
 import { $ChunkEvent$Load, $ChunkEvent$Load$$Type } from "net.minecraftforge.event.level.ChunkEvent$Load"
+import { $IForgeShearable, $IForgeShearable$$Type } from "net.minecraftforge.common.IForgeShearable"
 import { $ServerLevelKJS, $ServerLevelKJS$$Type } from "dev.latvian.mods.kubejs.core.ServerLevelKJS"
 import { $FontRenderContext, $FontRenderContext$$Type } from "java.awt.font.FontRenderContext"
 import { $ByteSpliterator, $ByteSpliterator$$Type } from "it.unimi.dsi.fastutil.bytes.ByteSpliterator"
@@ -566,8 +566,8 @@ import { $AudioStream, $AudioStream$$Type } from "net.minecraft.client.sounds.Au
 import { $FungusBlock, $FungusBlock$$Type } from "net.minecraft.world.level.block.FungusBlock"
 import { $WoodlandMansionStructure, $WoodlandMansionStructure$$Type } from "net.minecraft.world.level.levelgen.structure.structures.WoodlandMansionStructure"
 import { $RenderTooltipExtEvent$Color, $RenderTooltipExtEvent$Color$$Type } from "com.anthonyhilyard.iceberg.events.RenderTooltipExtEvent$Color"
-import { $SpikeConfiguration, $SpikeConfiguration$$Type } from "net.minecraft.world.level.levelgen.feature.configurations.SpikeConfiguration"
 import { $ExplosionEvent$Start, $ExplosionEvent$Start$$Type } from "net.minecraftforge.event.level.ExplosionEvent$Start"
+import { $SpikeConfiguration, $SpikeConfiguration$$Type } from "net.minecraft.world.level.levelgen.feature.configurations.SpikeConfiguration"
 import { $ClientboundPlaceGhostRecipePacket, $ClientboundPlaceGhostRecipePacket$$Type } from "net.minecraft.network.protocol.game.ClientboundPlaceGhostRecipePacket"
 import { $ThrownExperienceBottle, $ThrownExperienceBottle$$Type } from "net.minecraft.world.entity.projectile.ThrownExperienceBottle"
 import { $AlphaCutoffParameter, $AlphaCutoffParameter$$Type } from "me.jellysquid.mods.sodium.client.render.chunk.terrain.material.parameters.AlphaCutoffParameter"
@@ -587,8 +587,8 @@ import { $BlockColor, $BlockColor$$Type } from "net.minecraft.client.color.block
 import { $LevelEntityGetter, $LevelEntityGetter$$Type } from "net.minecraft.world.level.entity.LevelEntityGetter"
 import { $JSJoinedType, $JSJoinedType$$Type } from "zzzank.probejs.lang.typescript.code.type.js.JSJoinedType"
 import { $RealmsServerList, $RealmsServerList$$Type } from "com.mojang.realmsclient.dto.RealmsServerList"
-import { $ChunkProgressListener, $ChunkProgressListener$$Type } from "net.minecraft.server.level.progress.ChunkProgressListener"
 import { $ScreenEvent$CharacterTyped$Post, $ScreenEvent$CharacterTyped$Post$$Type } from "net.minecraftforge.client.event.ScreenEvent$CharacterTyped$Post"
+import { $ChunkProgressListener, $ChunkProgressListener$$Type } from "net.minecraft.server.level.progress.ChunkProgressListener"
 import { $StructureCheckResult, $StructureCheckResult$$Type } from "net.minecraft.world.level.levelgen.structure.StructureCheckResult"
 import { $MultiPartBlockStateBuilder$PartBuilder$ConditionGroup, $MultiPartBlockStateBuilder$PartBuilder$ConditionGroup$$Type } from "net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder$PartBuilder$ConditionGroup"
 import { $PehkuiEntityExtensions, $PehkuiEntityExtensions$$Type } from "virtuoel.pehkui.util.PehkuiEntityExtensions"
@@ -605,7 +605,6 @@ import { $PlayerStatsJS, $PlayerStatsJS$$Type } from "dev.latvian.mods.kubejs.pl
 import { $VaryingHandler, $VaryingHandler$$Type } from "icyllis.arc3d.granite.shading.VaryingHandler"
 import { $CollectionTag, $CollectionTag$$Type } from "net.minecraft.nbt.CollectionTag"
 import { $Object2BooleanFunction, $Object2BooleanFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2BooleanFunction"
-import { $PlayerModelAccessor, $PlayerModelAccessor$$Type } from "dev.tr7zw.notenoughanimations.mixins.PlayerModelAccessor"
 import { $TemporalUnit, $TemporalUnit$$Type } from "java.time.temporal.TemporalUnit"
 import { $Button$Builder, $Button$Builder$$Type } from "net.minecraft.client.gui.components.Button$Builder"
 import { $BrushItem, $BrushItem$$Type } from "net.minecraft.world.item.BrushItem"
@@ -627,8 +626,8 @@ import { $Period, $Period$$Type } from "java.time.Period"
 import { $PointedDripstoneBlockAccess, $PointedDripstoneBlockAccess$$Type } from "snownee.lychee.mixin.PointedDripstoneBlockAccess"
 import { $ActionProvider$SubUiVisibilityListener, $ActionProvider$SubUiVisibilityListener$$Type } from "icyllis.modernui.view.ActionProvider$SubUiVisibilityListener"
 import { $GeoObjectRenderer, $GeoObjectRenderer$$Type } from "software.bernie.geckolib.renderer.GeoObjectRenderer"
-import { $EntityArrayList, $EntityArrayList$$Type } from "dev.latvian.mods.kubejs.player.EntityArrayList"
 import { $PlayerInteractEvent$RightClickEmpty, $PlayerInteractEvent$RightClickEmpty$$Type } from "net.minecraftforge.event.entity.player.PlayerInteractEvent$RightClickEmpty"
+import { $EntityArrayList, $EntityArrayList$$Type } from "dev.latvian.mods.kubejs.player.EntityArrayList"
 import { $SpritePreparationContext, $SpritePreparationContext$$Type } from "com.supermartijn642.fusion.api.texture.SpritePreparationContext"
 import { $Vec2, $Vec2$$Type } from "net.minecraft.world.phys.Vec2"
 import { $Vec3, $Vec3$$Type } from "net.minecraft.world.phys.Vec3"
@@ -650,8 +649,8 @@ import { $SpecialTypeKeyEvent$SpecialTypeKey4PressedEvent, $SpecialTypeKeyEvent$
 import { $TypeDescriptor, $TypeDescriptor$$Type } from "java.lang.invoke.TypeDescriptor"
 import { $ClientboundCommandsPacket, $ClientboundCommandsPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundCommandsPacket"
 import { $Function, $Function$$Type } from "it.unimi.dsi.fastutil.Function"
-import { $ChronoLocalDateTime, $ChronoLocalDateTime$$Type } from "java.time.chrono.ChronoLocalDateTime"
 import { $ModifyDamageDealtConfiguration, $ModifyDamageDealtConfiguration$$Type } from "io.github.edwinmindcraft.apoli.common.power.configuration.ModifyDamageDealtConfiguration"
+import { $ChronoLocalDateTime, $ChronoLocalDateTime$$Type } from "java.time.chrono.ChronoLocalDateTime"
 import { $TaskList, $TaskList$$Type } from "icyllis.arc3d.granite.task.TaskList"
 import { $TransactionContext, $TransactionContext$$Type } from "net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext"
 import { $BowlFoodItem, $BowlFoodItem$$Type } from "net.minecraft.world.item.BowlFoodItem"
@@ -771,10 +770,10 @@ import { $ItemTooltipEvent, $ItemTooltipEvent$$Type } from "net.minecraftforge.e
 import { $EntityInLevelCallback, $EntityInLevelCallback$$Type } from "net.minecraft.world.level.entity.EntityInLevelCallback"
 import { $Packet, $Packet$$Type } from "net.minecraft.network.protocol.Packet"
 import { $BaseEntityBuilder$ISoundListenerJS, $BaseEntityBuilder$ISoundListenerJS$$Type } from "net.liopyu.entityjs.builders.nonliving.BaseEntityBuilder$ISoundListenerJS"
+import { $ModConfigEvent$Reloading, $ModConfigEvent$Reloading$$Type } from "net.minecraftforge.fml.event.config.ModConfigEvent$Reloading"
 import { $Shader as $Shader$0, $Shader$$Type as $Shader$0$$Type } from "icyllis.modernui.graphics.Shader"
 import { $ClientboundLevelChunkWithLightPacket, $ClientboundLevelChunkWithLightPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundLevelChunkWithLightPacket"
 import { $BaseCommandBlock, $BaseCommandBlock$$Type } from "net.minecraft.world.level.BaseCommandBlock"
-import { $ModConfigEvent$Reloading, $ModConfigEvent$Reloading$$Type } from "net.minecraftforge.fml.event.config.ModConfigEvent$Reloading"
 import { $Byte2IntFunction, $Byte2IntFunction$$Type } from "it.unimi.dsi.fastutil.bytes.Byte2IntFunction"
 import { $StreamTagVisitor, $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
 import { $ServerboundSetCarriedItemPacket, $ServerboundSetCarriedItemPacket$$Type } from "net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket"
@@ -887,10 +886,10 @@ import { $ModuleDescriptor$Exports$Modifier, $ModuleDescriptor$Exports$Modifier$
 import { $Item, $Item$$Type } from "net.minecraft.world.item.Item"
 import { $ScoreboardNameProvider, $ScoreboardNameProvider$$Type } from "net.minecraft.world.level.storage.loot.providers.score.ScoreboardNameProvider"
 import { $ItemSupplier, $ItemSupplier$$Type } from "net.minecraft.world.entity.projectile.ItemSupplier"
-import { $IPowerContainer, $IPowerContainer$$Type } from "io.github.edwinmindcraft.apoli.api.component.IPowerContainer"
 import { $BufferViewInfo, $BufferViewInfo$$Type } from "icyllis.arc3d.engine.BufferViewInfo"
-import { $ExtraDisplayEntity, $ExtraDisplayEntity$$Type } from "com.mega.endinglib.util.mixin.data_expand.ExtraDisplayEntity"
+import { $IPowerContainer, $IPowerContainer$$Type } from "io.github.edwinmindcraft.apoli.api.component.IPowerContainer"
 import { $GameShuttingDownEvent, $GameShuttingDownEvent$$Type } from "net.minecraftforge.event.GameShuttingDownEvent"
+import { $ExtraDisplayEntity, $ExtraDisplayEntity$$Type } from "com.mega.endinglib.util.mixin.data_expand.ExtraDisplayEntity"
 import { $ChestMenuInventoryClickEvent$Callback, $ChestMenuInventoryClickEvent$Callback$$Type } from "dev.latvian.mods.kubejs.gui.chest.ChestMenuInventoryClickEvent$Callback"
 import { $Boolean2ObjectFunction, $Boolean2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.booleans.Boolean2ObjectFunction"
 import { $HoeItemBuilder, $HoeItemBuilder$$Type } from "dev.latvian.mods.kubejs.item.custom.HoeItemBuilder"
@@ -904,9 +903,9 @@ import { $CustomMagicSwordItem$TierBuilder, $CustomMagicSwordItem$TierBuilder$$T
 import { $GoalSelectorDebugRenderer$DebugGoal, $GoalSelectorDebugRenderer$DebugGoal$$Type } from "net.minecraft.client.renderer.debug.GoalSelectorDebugRenderer$DebugGoal"
 import { $HangingEntity, $HangingEntity$$Type } from "net.minecraft.world.entity.decoration.HangingEntity"
 import { $BundleDelimiterPacket, $BundleDelimiterPacket$$Type } from "net.minecraft.network.protocol.BundleDelimiterPacket"
+import { $ItemFishedEvent, $ItemFishedEvent$$Type } from "net.minecraftforge.event.entity.player.ItemFishedEvent"
 import { $IChunkTimeSave, $IChunkTimeSave$$Type } from "com.smoothchunk.world.IChunkTimeSave"
 import { $ItemExtensions, $ItemExtensions$$Type } from "net.fabricmc.fabric.impl.item.ItemExtensions"
-import { $ItemFishedEvent, $ItemFishedEvent$$Type } from "net.minecraftforge.event.entity.player.ItemFishedEvent"
 import { $CustomEntityBuilder, $CustomEntityBuilder$$Type } from "net.liopyu.entityjs.builders.misc.CustomEntityBuilder"
 import { $GiftLootEventJS, $GiftLootEventJS$$Type } from "dev.latvian.mods.kubejs.loot.GiftLootEventJS"
 import { $BlockDefinitionDuck, $BlockDefinitionDuck$$Type } from "net.lixir.vminus.api.registry.definition.duck.BlockDefinitionDuck"
@@ -992,8 +991,8 @@ import { $ZAddReloadListener, $ZAddReloadListener$$Type } from "org.violetmoon.z
 import { $BoatEntityBuilder, $BoatEntityBuilder$$Type } from "net.liopyu.entityjs.builders.nonliving.vanilla.BoatEntityBuilder"
 import { $ParticleVertexer, $ParticleVertexer$$Type } from "me.fzzyhmstrs.particle_core.interfaces.ParticleVertexer"
 import { $CloudStatus, $CloudStatus$$Type } from "net.minecraft.client.CloudStatus"
-import { $Ease, $Ease$$Type } from "dev.kosmx.playerAnim.core.util.Ease"
 import { $HUDOverlayEvent$HungerRestored, $HUDOverlayEvent$HungerRestored$$Type } from "squeek.appleskin.api.event.HUDOverlayEvent$HungerRestored"
+import { $Ease, $Ease$$Type } from "dev.kosmx.playerAnim.core.util.Ease"
 import { $Option, $Option$$Type } from "me.jellysquid.mods.sodium.client.gui.options.Option"
 import { $StructureModifier$Phase, $StructureModifier$Phase$$Type } from "net.minecraftforge.common.world.StructureModifier$Phase"
 import { $ChestMenuClickHandler, $ChestMenuClickHandler$$Type } from "dev.latvian.mods.kubejs.gui.chest.ChestMenuClickHandler"
@@ -1161,8 +1160,8 @@ import { $BooleanProperty, $BooleanProperty$$Type } from "net.minecraft.world.le
 import { $ForkingTrunkPlacer, $ForkingTrunkPlacer$$Type } from "net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer"
 import { $CustomPayloadC2SPacketAccessor, $CustomPayloadC2SPacketAccessor$$Type } from "net.fabricmc.fabric.mixin.networking.accessor.CustomPayloadC2SPacketAccessor"
 import { $BiomeWeatherAccess, $BiomeWeatherAccess$$Type } from "io.github.apace100.apoli.access.BiomeWeatherAccess"
-import { $View$OnAttachStateChangeListener, $View$OnAttachStateChangeListener$$Type } from "icyllis.modernui.view.View$OnAttachStateChangeListener"
 import { $RenderHandEvent, $RenderHandEvent$$Type } from "net.minecraftforge.client.event.RenderHandEvent"
+import { $View$OnAttachStateChangeListener, $View$OnAttachStateChangeListener$$Type } from "icyllis.modernui.view.View$OnAttachStateChangeListener"
 import { $IScrollGridWidget, $IScrollGridWidget$$Type } from "mezz.jei.api.gui.widgets.IScrollGridWidget"
 import { $SpellDataRegistryHolder, $SpellDataRegistryHolder$$Type } from "io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder"
 import { $Biome$Precipitation, $Biome$Precipitation$$Type } from "net.minecraft.world.level.biome.Biome$Precipitation"
@@ -1191,8 +1190,8 @@ import { $IntCollection, $IntCollection$$Type } from "it.unimi.dsi.fastutil.ints
 import { $AddLakeProperties, $AddLakeProperties$$Type } from "dev.latvian.mods.kubejs.level.gen.properties.AddLakeProperties"
 import { $BlastFurnaceBlockEntity, $BlastFurnaceBlockEntity$$Type } from "net.minecraft.world.level.block.entity.BlastFurnaceBlockEntity"
 import { $InputEvent$Key, $InputEvent$Key$$Type } from "net.minecraftforge.client.event.InputEvent$Key"
-import { $Parameter, $Parameter$$Type } from "java.lang.reflect.Parameter"
 import { $TypeWrappers, $TypeWrappers$$Type } from "dev.latvian.mods.rhino.util.wrap.TypeWrappers"
+import { $Parameter, $Parameter$$Type } from "java.lang.reflect.Parameter"
 import { $DataResult, $DataResult$$Type } from "com.mojang.serialization.DataResult"
 import { $FileConfig, $FileConfig$$Type } from "com.electronwill.nightconfig.core.file.FileConfig"
 import { $ScreenEvents$BeforeTick, $ScreenEvents$BeforeTick$$Type } from "net.fabricmc.fabric.api.client.screen.v1.ScreenEvents$BeforeTick"
@@ -1214,9 +1213,9 @@ import { $ScheduledFuture, $ScheduledFuture$$Type } from "java.util.concurrent.S
 import { $Matrix4x3d, $Matrix4x3d$$Type } from "org.joml.Matrix4x3d"
 import { $BeaconBlock, $BeaconBlock$$Type } from "net.minecraft.world.level.block.BeaconBlock"
 import { $Matrix4x3f, $Matrix4x3f$$Type } from "org.joml.Matrix4x3f"
+import { $TooltipOverlayEvent, $TooltipOverlayEvent$$Type } from "squeek.appleskin.api.event.TooltipOverlayEvent"
 import { $IntValue, $IntValue$$Type } from "dev.architectury.utils.value.IntValue"
 import { $GenerateClientAssetsEventJS, $GenerateClientAssetsEventJS$$Type } from "dev.latvian.mods.kubejs.client.GenerateClientAssetsEventJS"
-import { $TooltipOverlayEvent, $TooltipOverlayEvent$$Type } from "squeek.appleskin.api.event.TooltipOverlayEvent"
 import { $Inventory, $Inventory$$Type } from "net.minecraft.world.entity.player.Inventory"
 import { $ContainerScreenDrawEvent$Background, $ContainerScreenDrawEvent$Background$$Type } from "net.blay09.mods.balm.api.event.client.screen.ContainerScreenDrawEvent$Background"
 import { $ChorusFruitItem, $ChorusFruitItem$$Type } from "net.minecraft.world.item.ChorusFruitItem"
@@ -1324,7 +1323,6 @@ import { $ModelBuilder$TransformsBuilder, $ModelBuilder$TransformsBuilder$$Type 
 import { $LootEntry$Generator, $LootEntry$Generator$$Type } from "com.almostreliable.lootjs.core.LootEntry$Generator"
 import { $ItemTransform, $ItemTransform$$Type } from "net.minecraft.client.renderer.block.model.ItemTransform"
 import { $RenderHighlightEvent, $RenderHighlightEvent$$Type } from "net.minecraftforge.client.event.RenderHighlightEvent"
-import { $PlayerData, $PlayerData$$Type } from "dev.tr7zw.notenoughanimations.access.PlayerData"
 import { $AzBoneAnimation, $AzBoneAnimation$$Type } from "mod.azure.azurelib.animation.controller.keyframe.AzBoneAnimation"
 import { $WallHangingSignBlock, $WallHangingSignBlock$$Type } from "net.minecraft.world.level.block.WallHangingSignBlock"
 import { $BuiltSectionInfo$Builder, $BuiltSectionInfo$Builder$$Type } from "me.jellysquid.mods.sodium.client.render.chunk.data.BuiltSectionInfo$Builder"
@@ -1481,8 +1479,8 @@ import { $IBlockState, $IBlockState$$Type } from "org.embeddedt.modernfix.duck.I
 import { $WeepingVinesPlantBlock, $WeepingVinesPlantBlock$$Type } from "net.minecraft.world.level.block.WeepingVinesPlantBlock"
 import { $CustomInstructionKeyframeData, $CustomInstructionKeyframeData$$Type } from "mod.azure.azurelib.core.keyframe.event.data.CustomInstructionKeyframeData"
 import { $RegistryAccess$Frozen, $RegistryAccess$Frozen$$Type } from "net.minecraft.core.RegistryAccess$Frozen"
-import { $ContextUtils$IsWalkableContext, $ContextUtils$IsWalkableContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$IsWalkableContext"
 import { $RegisterPresetEditorsEvent, $RegisterPresetEditorsEvent$$Type } from "net.minecraftforge.client.event.RegisterPresetEditorsEvent"
+import { $ContextUtils$IsWalkableContext, $ContextUtils$IsWalkableContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$IsWalkableContext"
 import { $GameProfileCache, $GameProfileCache$$Type } from "net.minecraft.server.players.GameProfileCache"
 import { $ZetaModuleManager, $ZetaModuleManager$$Type } from "org.violetmoon.zeta.module.ZetaModuleManager"
 import { $FontFamily, $FontFamily$$Type } from "icyllis.modernui.graphics.text.FontFamily"
@@ -1493,8 +1491,8 @@ import { $BlockPosStorer, $BlockPosStorer$$Type } from "me.fzzyhmstrs.particle_c
 import { $RenderStateShard$OutputStateShard, $RenderStateShard$OutputStateShard$$Type } from "net.minecraft.client.renderer.RenderStateShard$OutputStateShard"
 import { $ServerPlayerConnection, $ServerPlayerConnection$$Type } from "net.minecraft.server.network.ServerPlayerConnection"
 import { $ArrowDamageEnchantment, $ArrowDamageEnchantment$$Type } from "net.minecraft.world.item.enchantment.ArrowDamageEnchantment"
-import { $CoralTreeFeature, $CoralTreeFeature$$Type } from "net.minecraft.world.level.levelgen.feature.CoralTreeFeature"
 import { $FMLClientSetupEvent, $FMLClientSetupEvent$$Type } from "net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent"
+import { $CoralTreeFeature, $CoralTreeFeature$$Type } from "net.minecraft.world.level.levelgen.feature.CoralTreeFeature"
 import { $GeoRenderEvent$Object$Pre, $GeoRenderEvent$Object$Pre$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Object$Pre"
 import { $Pair$Mu, $Pair$Mu$$Type } from "com.mojang.datafixers.util.Pair$Mu"
 import { $ELCameraManager, $ELCameraManager$$Type } from "com.mega.endinglib.client.advanced.ELCameraManager"
@@ -1696,8 +1694,8 @@ import { $FluidType$Properties, $FluidType$Properties$$Type } from "net.minecraf
 import { $Salmon, $Salmon$$Type } from "net.minecraft.world.entity.animal.Salmon"
 import { $SimpleMappingRecipeComponent, $SimpleMappingRecipeComponent$$Type } from "dev.latvian.mods.kubejs.recipe.component.SimpleMappingRecipeComponent"
 import { $IModInfo$DependencySide, $IModInfo$DependencySide$$Type } from "net.minecraftforge.forgespi.language.IModInfo$DependencySide"
-import { $WorldTemplatePaginatedList, $WorldTemplatePaginatedList$$Type } from "com.mojang.realmsclient.dto.WorldTemplatePaginatedList"
 import { $LocalRef, $LocalRef$$Type } from "com.llamalad7.mixinextras.sugar.ref.LocalRef"
+import { $WorldTemplatePaginatedList, $WorldTemplatePaginatedList$$Type } from "com.mojang.realmsclient.dto.WorldTemplatePaginatedList"
 import { $ThrowablePotionItem, $ThrowablePotionItem$$Type } from "net.minecraft.world.item.ThrowablePotionItem"
 import { $WeightedEntry$Wrapper, $WeightedEntry$Wrapper$$Type } from "net.minecraft.util.random.WeightedEntry$Wrapper"
 import { $JsonObject, $JsonObject$$Type } from "net.puffish.skillsmod.api.json.JsonObject"
@@ -1714,8 +1712,8 @@ import { $Scriptable, $Scriptable$$Type } from "dev.latvian.mods.rhino.Scriptabl
 import { $IGenericEvent, $IGenericEvent$$Type } from "net.minecraftforge.eventbus.api.IGenericEvent"
 import { $NarrationThunk, $NarrationThunk$$Type } from "net.minecraft.client.gui.narration.NarrationThunk"
 import { $JsonArray, $JsonArray$$Type } from "com.google.gson.JsonArray"
-import { $DeadBushBlock, $DeadBushBlock$$Type } from "net.minecraft.world.level.block.DeadBushBlock"
 import { $CommandPerformEvent, $CommandPerformEvent$$Type } from "dev.architectury.event.events.common.CommandPerformEvent"
+import { $DeadBushBlock, $DeadBushBlock$$Type } from "net.minecraft.world.level.block.DeadBushBlock"
 import { $CustomGlowingGeoLayerJS, $CustomGlowingGeoLayerJS$$Type } from "net.liopyu.entityjs.client.living.model.CustomGlowingGeoLayerJS"
 import { $MenuProvider, $MenuProvider$$Type } from "net.minecraft.world.MenuProvider"
 import { $ShapedRecipe, $ShapedRecipe$$Type } from "net.minecraft.world.item.crafting.ShapedRecipe"
@@ -1781,8 +1779,8 @@ import { $ClientboundRemoveMobEffectPacket, $ClientboundRemoveMobEffectPacket$$T
 import { $ScheduledEvents$Callback, $ScheduledEvents$Callback$$Type } from "dev.latvian.mods.kubejs.util.ScheduledEvents$Callback"
 import { $IForgeKeyMapping, $IForgeKeyMapping$$Type } from "net.minecraftforge.client.extensions.IForgeKeyMapping"
 import { $Display$BillboardConstraints, $Display$BillboardConstraints$$Type } from "net.minecraft.world.entity.Display$BillboardConstraints"
-import { $ISlottedRecipeWidget, $ISlottedRecipeWidget$$Type } from "mezz.jei.api.gui.widgets.ISlottedRecipeWidget"
 import { $SleepFinishedTimeEvent, $SleepFinishedTimeEvent$$Type } from "net.minecraftforge.event.level.SleepFinishedTimeEvent"
+import { $ISlottedRecipeWidget, $ISlottedRecipeWidget$$Type } from "mezz.jei.api.gui.widgets.ISlottedRecipeWidget"
 import { $ChatReportBuilder$ChatReport, $ChatReportBuilder$ChatReport$$Type } from "net.minecraft.client.multiplayer.chat.report.ChatReportBuilder$ChatReport"
 import { $Message, $Message$$Type } from "icyllis.modernui.core.Message"
 import { $PlayerEntityAccessor, $PlayerEntityAccessor$$Type } from "net.combatroll.mixin.PlayerEntityAccessor"
@@ -1803,8 +1801,8 @@ import { $ClientboundPlayerInfoUpdatePacket$Entry, $ClientboundPlayerInfoUpdateP
 import { $Object2ObjectMap, $Object2ObjectMap$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectMap"
 import { $IsInsideStructureTracker, $IsInsideStructureTracker$$Type } from "corgitaco.corgilib.entity.IsInsideStructureTracker"
 import { $Goat, $Goat$$Type } from "net.minecraft.world.entity.animal.goat.Goat"
-import { $LavaSubmergedBlockProcessor, $LavaSubmergedBlockProcessor$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.LavaSubmergedBlockProcessor"
 import { $PlayerEvent$HarvestCheck, $PlayerEvent$HarvestCheck$$Type } from "net.minecraftforge.event.entity.player.PlayerEvent$HarvestCheck"
+import { $LavaSubmergedBlockProcessor, $LavaSubmergedBlockProcessor$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.LavaSubmergedBlockProcessor"
 import { $DoubleConsumer, $DoubleConsumer$$Type } from "java.util.function.DoubleConsumer"
 import { $ConfigLoadedEvent, $ConfigLoadedEvent$$Type } from "net.blay09.mods.balm.api.event.ConfigLoadedEvent"
 import { $TooltipAccessor as $TooltipAccessor$0, $TooltipAccessor$$Type as $TooltipAccessor$0$$Type } from "fuzs.puzzleslib.mixin.client.accessor.TooltipAccessor"
@@ -1841,8 +1839,8 @@ import { $Aquifer$FluidPicker, $Aquifer$FluidPicker$$Type } from "net.minecraft.
 import { $ModifyDefaultConfigValuesEvent, $ModifyDefaultConfigValuesEvent$$Type } from "io.redspace.ironsspellbooks.api.config.ModifyDefaultConfigValuesEvent"
 import { $ZRecipeCrawl$Visit$Custom, $ZRecipeCrawl$Visit$Custom$$Type } from "org.violetmoon.zeta.event.play.ZRecipeCrawl$Visit$Custom"
 import { $IceBlock, $IceBlock$$Type } from "net.minecraft.world.level.block.IceBlock"
-import { $ClickType, $ClickType$$Type } from "net.minecraft.world.inventory.ClickType"
 import { $CommandContext, $CommandContext$$Type } from "com.mojang.brigadier.context.CommandContext"
+import { $ClickType, $ClickType$$Type } from "net.minecraft.world.inventory.ClickType"
 import { $RandomizedIntStateProvider, $RandomizedIntStateProvider$$Type } from "net.minecraft.world.level.levelgen.feature.stateproviders.RandomizedIntStateProvider"
 import { $YggdrasilAuthenticationService, $YggdrasilAuthenticationService$$Type } from "com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService"
 import { $CappedProcessor, $CappedProcessor$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.CappedProcessor"
@@ -1897,9 +1895,9 @@ import { $IntSupplier, $IntSupplier$$Type } from "java.util.function.IntSupplier
 import { $ShortSet, $ShortSet$$Type } from "it.unimi.dsi.fastutil.shorts.ShortSet"
 import { $ItemAccessor, $ItemAccessor$$Type } from "net.lixir.vminus.mixins.items.ItemAccessor"
 import { $OpenMenuEvent, $OpenMenuEvent$$Type } from "icyllis.modernui.mc.forge.OpenMenuEvent"
+import { $CurioChangeEvent, $CurioChangeEvent$$Type } from "top.theillusivec4.curios.api.event.CurioChangeEvent"
 import { $BlockApiLookup$BlockEntityApiProvider, $BlockApiLookup$BlockEntityApiProvider$$Type } from "net.fabricmc.fabric.api.lookup.v1.block.BlockApiLookup$BlockEntityApiProvider"
 import { $RecipeSerializer, $RecipeSerializer$$Type } from "net.minecraft.world.item.crafting.RecipeSerializer"
-import { $CurioChangeEvent, $CurioChangeEvent$$Type } from "top.theillusivec4.curios.api.event.CurioChangeEvent"
 import { $FeatureSize, $FeatureSize$$Type } from "net.minecraft.world.level.levelgen.feature.featuresize.FeatureSize"
 import { $SpecialTypeKeyEvent$SpecialTypeKey3ReleasedEvent, $SpecialTypeKeyEvent$SpecialTypeKey3ReleasedEvent$$Type } from "com.dinzeer.legendreliclib.lib.key.SpecialTypeKeyEvent$SpecialTypeKey3ReleasedEvent"
 import { $ContextUtils$ThunderHitContext, $ContextUtils$ThunderHitContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ThunderHitContext"
@@ -1935,10 +1933,10 @@ import { $SpriteContentsExtension as $SpriteContentsExtension$0, $SpriteContents
 import { $PositionalRandomFactory, $PositionalRandomFactory$$Type } from "net.minecraft.world.level.levelgen.PositionalRandomFactory"
 import { $SpecialTypeKeyEvent$SpecialTypeKey2PressedEvent, $SpecialTypeKeyEvent$SpecialTypeKey2PressedEvent$$Type } from "com.dinzeer.legendreliclib.lib.key.SpecialTypeKeyEvent$SpecialTypeKey2PressedEvent"
 import { $Rect, $Rect$$Type } from "icyllis.modernui.graphics.Rect"
+import { $GeoRenderEvent$Object, $GeoRenderEvent$Object$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Object"
 import { $RenderType$CompositeRenderType, $RenderType$CompositeRenderType$$Type } from "net.minecraft.client.renderer.RenderType$CompositeRenderType"
 import { $LinearPosTest, $LinearPosTest$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.LinearPosTest"
 import { $AppendLoot, $AppendLoot$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.rule.blockentity.AppendLoot"
-import { $GeoRenderEvent$Object, $GeoRenderEvent$Object$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Object"
 import { $Type$TypeError, $Type$TypeError$$Type } from "com.mojang.datafixers.types.Type$TypeError"
 import { $Reader, $Reader$$Type } from "java.io.Reader"
 import { $ParrotEntityAccessor, $ParrotEntityAccessor$$Type } from "tocraft.walkers.mixin.accessor.ParrotEntityAccessor"
@@ -1948,12 +1946,12 @@ import { $PrivateKey, $PrivateKey$$Type } from "java.security.PrivateKey"
 import { $EntityRendererProvider$Context, $EntityRendererProvider$Context$$Type } from "net.minecraft.client.renderer.entity.EntityRendererProvider$Context"
 import { $ModConfig, $ModConfig$$Type } from "net.minecraftforge.fml.config.ModConfig"
 import { $TransitionListener, $TransitionListener$$Type } from "icyllis.modernui.transition.TransitionListener"
+import { $RegisterEvent, $RegisterEvent$$Type } from "net.minecraftforge.registries.RegisterEvent"
 import { $IllusionerEntityJS, $IllusionerEntityJS$$Type } from "net.liopyu.entityjs.entities.living.vanilla.IllusionerEntityJS"
 import { $Message as $Message$0, $Message$$Type as $Message$0$$Type } from "net.minecraftforge.fml.loading.progress.Message"
-import { $RegisterEvent, $RegisterEvent$$Type } from "net.minecraftforge.registries.RegisterEvent"
 import { $DataObject, $DataObject$$Type } from "io.github.apace100.calio.registry.DataObject"
-import { $BlockBehaviour$OffsetType, $BlockBehaviour$OffsetType$$Type } from "net.minecraft.world.level.block.state.BlockBehaviour$OffsetType"
 import { $RegisterItemDecorationsEvent, $RegisterItemDecorationsEvent$$Type } from "net.minecraftforge.client.event.RegisterItemDecorationsEvent"
+import { $BlockBehaviour$OffsetType, $BlockBehaviour$OffsetType$$Type } from "net.minecraft.world.level.block.state.BlockBehaviour$OffsetType"
 import { $LivingDeathEvent, $LivingDeathEvent$$Type } from "net.blay09.mods.balm.api.event.LivingDeathEvent"
 import { $ChestBlockEntity, $ChestBlockEntity$$Type } from "net.minecraft.world.level.block.entity.ChestBlockEntity"
 import { $ClientboundBlockChangedAckPacket, $ClientboundBlockChangedAckPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockChangedAckPacket"
@@ -2054,11 +2052,11 @@ import { $HoglinSpecificSensor, $HoglinSpecificSensor$$Type } from "net.minecraf
 import { $RefineSettlementEvent, $RefineSettlementEvent$$Type } from "mods.flammpfeil.slashblade.event.RefineSettlementEvent"
 import { $PipelineDesc$UniformBlockInfo, $PipelineDesc$UniformBlockInfo$$Type } from "icyllis.arc3d.engine.PipelineDesc$UniformBlockInfo"
 import { $PlayerModelRotator, $PlayerModelRotator$$Type } from "com.alrex.parcool.client.animation.PlayerModelRotator"
+import { $PlayerBrewedPotionEvent, $PlayerBrewedPotionEvent$$Type } from "net.minecraftforge.event.brewing.PlayerBrewedPotionEvent"
 import { $ITypedIngredient, $ITypedIngredient$$Type } from "mezz.jei.api.ingredients.ITypedIngredient"
 import { $RegistryIdRemapCallback, $RegistryIdRemapCallback$$Type } from "net.fabricmc.fabric.api.event.registry.RegistryIdRemapCallback"
 import { $ItemOverrides$BakedOverride, $ItemOverrides$BakedOverride$$Type } from "net.minecraft.client.renderer.block.model.ItemOverrides$BakedOverride"
 import { $AnimalMakeLove, $AnimalMakeLove$$Type } from "net.minecraft.world.entity.ai.behavior.AnimalMakeLove"
-import { $PlayerBrewedPotionEvent, $PlayerBrewedPotionEvent$$Type } from "net.minecraftforge.event.brewing.PlayerBrewedPotionEvent"
 import { $NameMap$Builder, $NameMap$Builder$$Type } from "dev.ftb.mods.ftblibrary.config.NameMap$Builder"
 import { $JSJoinedType$Intersection, $JSJoinedType$Intersection$$Type } from "zzzank.probejs.lang.typescript.code.type.js.JSJoinedType$Intersection"
 import { $CustomEntityJSBuilder$SoundKeyFrameEventJS, $CustomEntityJSBuilder$SoundKeyFrameEventJS$$Type } from "net.liopyu.entityjs.builders.misc.CustomEntityJSBuilder$SoundKeyFrameEventJS"
@@ -2079,8 +2077,8 @@ import { $MovingEntity, $MovingEntity$$Type } from "io.github.apace100.apoli.acc
 import { $DaylightDetectorBlockEntity, $DaylightDetectorBlockEntity$$Type } from "net.minecraft.world.level.block.entity.DaylightDetectorBlockEntity"
 import { $TallSeagrassBlock, $TallSeagrassBlock$$Type } from "net.minecraft.world.level.block.TallSeagrassBlock"
 import { $ConstantHeight, $ConstantHeight$$Type } from "net.minecraft.world.level.levelgen.heightproviders.ConstantHeight"
-import { $ScreenMouseEvent, $ScreenMouseEvent$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenMouseEvent"
 import { $PlayLevelSoundEvent$AtPosition, $PlayLevelSoundEvent$AtPosition$$Type } from "net.minecraftforge.event.PlayLevelSoundEvent$AtPosition"
+import { $ScreenMouseEvent, $ScreenMouseEvent$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenMouseEvent"
 import { $AccessorScreen, $AccessorScreen$$Type } from "vazkii.patchouli.mixin.client.AccessorScreen"
 import { $TextureType, $TextureType$$Type } from "com.supermartijn642.fusion.api.texture.TextureType"
 import { $Char2ByteFunction, $Char2ByteFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2ByteFunction"
@@ -2181,14 +2179,14 @@ import { $LivingEntityUseItemEvent, $LivingEntityUseItemEvent$$Type } from "net.
 import { $Camel, $Camel$$Type } from "net.minecraft.world.entity.animal.camel.Camel"
 import { $FluidPredicateAccessor, $FluidPredicateAccessor$$Type } from "fzzyhmstrs.emi_loot.mixins.FluidPredicateAccessor"
 import { $BlockEntityPredicateDataCheck, $BlockEntityPredicateDataCheck$$Type } from "dev.latvian.mods.kubejs.block.predicate.BlockEntityPredicateDataCheck"
-import { $AccessorSmithingTransformRecipe as $AccessorSmithingTransformRecipe$0, $AccessorSmithingTransformRecipe$$Type as $AccessorSmithingTransformRecipe$0$$Type } from "com.illusivesoulworks.polymorph.mixin.core.AccessorSmithingTransformRecipe"
 import { $ScreenMouseEvent$Drag$Post, $ScreenMouseEvent$Drag$Post$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenMouseEvent$Drag$Post"
+import { $AccessorSmithingTransformRecipe as $AccessorSmithingTransformRecipe$0, $AccessorSmithingTransformRecipe$$Type as $AccessorSmithingTransformRecipe$0$$Type } from "com.illusivesoulworks.polymorph.mixin.core.AccessorSmithingTransformRecipe"
 import { $ContextualCondition, $ContextualCondition$$Type } from "snownee.lychee.core.contextual.ContextualCondition"
 import { $ContextUtils$EntityFluidStateContext, $ContextUtils$EntityFluidStateContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntityFluidStateContext"
 import { $CustomMapData$Type, $CustomMapData$Type$$Type } from "net.mehvahdjukaar.moonlight.api.map.CustomMapData$Type"
 import { $CastingItem, $CastingItem$$Type } from "io.redspace.ironsspellbooks.item.CastingItem"
-import { $ItemStackSet, $ItemStackSet$$Type } from "dev.latvian.mods.kubejs.item.ItemStackSet"
 import { $PowerLoadEvent$Post, $PowerLoadEvent$Post$$Type } from "io.github.apace100.apoli.integration.PowerLoadEvent$Post"
+import { $ItemStackSet, $ItemStackSet$$Type } from "dev.latvian.mods.kubejs.item.ItemStackSet"
 import { $ForwardingList, $ForwardingList$$Type } from "com.google.common.collect.ForwardingList"
 import { $ShortPredicate, $ShortPredicate$$Type } from "it.unimi.dsi.fastutil.shorts.ShortPredicate"
 import { $ExpirableValue, $ExpirableValue$$Type } from "net.minecraft.world.entity.ai.memory.ExpirableValue"
@@ -2199,8 +2197,8 @@ import { $Stages, $Stages$$Type } from "dev.latvian.mods.kubejs.stages.Stages"
 import { $SynchedEntityData$DataItem, $SynchedEntityData$DataItem$$Type } from "net.minecraft.network.syncher.SynchedEntityData$DataItem"
 import { $GlassBlock, $GlassBlock$$Type } from "net.minecraft.world.level.block.GlassBlock"
 import { $SelectableChannel, $SelectableChannel$$Type } from "java.nio.channels.SelectableChannel"
-import { $FloatListIterator, $FloatListIterator$$Type } from "it.unimi.dsi.fastutil.floats.FloatListIterator"
 import { $ModuleLoadedEvent, $ModuleLoadedEvent$$Type } from "org.violetmoon.quark.api.event.ModuleLoadedEvent"
+import { $FloatListIterator, $FloatListIterator$$Type } from "it.unimi.dsi.fastutil.floats.FloatListIterator"
 import { $BatchRenderElement, $BatchRenderElement$$Type } from "mezz.jei.api.ingredients.rendering.BatchRenderElement"
 import { $ScreenKeyEvent, $ScreenKeyEvent$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenKeyEvent"
 import { $ContainerObjectSelectionList$Entry, $ContainerObjectSelectionList$Entry$$Type } from "net.minecraft.client.gui.components.ContainerObjectSelectionList$Entry"
@@ -2220,8 +2218,8 @@ import { $SimpleJsonResourceReloadListener, $SimpleJsonResourceReloadListener$$T
 import { $BufferImageCopyData, $BufferImageCopyData$$Type } from "icyllis.arc3d.engine.BufferImageCopyData"
 import { $FragmentStage$Uniform, $FragmentStage$Uniform$$Type } from "icyllis.arc3d.granite.FragmentStage$Uniform"
 import { $GeoRenderEvent$Armor, $GeoRenderEvent$Armor$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Armor"
-import { $ExtendedEntityFlagsPredicate$IBuilder, $ExtendedEntityFlagsPredicate$IBuilder$$Type } from "com.almostreliable.lootjs.predicate.ExtendedEntityFlagsPredicate$IBuilder"
 import { $PowerLoadEvent, $PowerLoadEvent$$Type } from "io.github.apace100.apoli.integration.PowerLoadEvent"
+import { $ExtendedEntityFlagsPredicate$IBuilder, $ExtendedEntityFlagsPredicate$IBuilder$$Type } from "com.almostreliable.lootjs.predicate.ExtendedEntityFlagsPredicate$IBuilder"
 import { $MemoryStatus, $MemoryStatus$$Type } from "net.minecraft.world.entity.ai.memory.MemoryStatus"
 import { $WardenEntitySensor, $WardenEntitySensor$$Type } from "net.minecraft.world.entity.ai.sensing.WardenEntitySensor"
 import { $AnimationStackAccessor, $AnimationStackAccessor$$Type } from "me.Thelnfamous1.mobplayeranimator.mixin.AnimationStackAccessor"
@@ -2244,12 +2242,12 @@ import { $AzAnimationControllerBuilder, $AzAnimationControllerBuilder$$Type } fr
 import { $AgeableMob, $AgeableMob$$Type } from "net.minecraft.world.entity.AgeableMob"
 import { $ClientLevel, $ClientLevel$$Type } from "net.minecraft.client.multiplayer.ClientLevel"
 import { $MixinMemoryModuleType, $MixinMemoryModuleType$$Type } from "forge.net.mca.mixin.MixinMemoryModuleType"
-import { $ZombieJSBuilder, $ZombieJSBuilder$$Type } from "net.liopyu.entityjs.builders.living.vanilla.ZombieJSBuilder"
 import { $ScreenMouseEvent$Release$Pre, $ScreenMouseEvent$Release$Pre$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenMouseEvent$Release$Pre"
+import { $ZombieJSBuilder, $ZombieJSBuilder$$Type } from "net.liopyu.entityjs.builders.living.vanilla.ZombieJSBuilder"
 import { $PermissionNode, $PermissionNode$$Type } from "net.minecraftforge.server.permission.nodes.PermissionNode"
 import { $DeserializationContext, $DeserializationContext$$Type } from "net.minecraft.advancements.critereon.DeserializationContext"
-import { $JarMetadata, $JarMetadata$$Type } from "cpw.mods.jarhandling.JarMetadata"
 import { $ClientChatEvent, $ClientChatEvent$$Type } from "net.minecraftforge.client.event.ClientChatEvent"
+import { $JarMetadata, $JarMetadata$$Type } from "cpw.mods.jarhandling.JarMetadata"
 import { $ForbiddenSymlinkInfo, $ForbiddenSymlinkInfo$$Type } from "net.minecraft.world.level.validation.ForbiddenSymlinkInfo"
 import { $MutableHashedLinkedMap$MergeFunction, $MutableHashedLinkedMap$MergeFunction$$Type } from "net.minecraftforge.common.util.MutableHashedLinkedMap$MergeFunction"
 import { $SmithingRecipe, $SmithingRecipe$$Type } from "net.minecraft.world.item.crafting.SmithingRecipe"
@@ -2266,8 +2264,8 @@ import { $VillagerProfessionBuilder, $VillagerProfessionBuilder$$Type } from "de
 import { $DoubleStream$DoubleMapMultiConsumer, $DoubleStream$DoubleMapMultiConsumer$$Type } from "java.util.stream.DoubleStream$DoubleMapMultiConsumer"
 import { $Pixmap, $Pixmap$$Type } from "icyllis.arc3d.core.Pixmap"
 import { $SingleThreadEventExecutor, $SingleThreadEventExecutor$$Type } from "io.netty.util.concurrent.SingleThreadEventExecutor"
-import { $AbstractGolem, $AbstractGolem$$Type } from "net.minecraft.world.entity.animal.AbstractGolem"
 import { $PlayerSetSpawnEvent, $PlayerSetSpawnEvent$$Type } from "net.minecraftforge.event.entity.player.PlayerSetSpawnEvent"
+import { $AbstractGolem, $AbstractGolem$$Type } from "net.minecraft.world.entity.animal.AbstractGolem"
 import { $Tadpole, $Tadpole$$Type } from "net.minecraft.world.entity.animal.frog.Tadpole"
 import { $QuickPlayLog$Type, $QuickPlayLog$Type$$Type } from "net.minecraft.client.quickplay.QuickPlayLog$Type"
 import { $ForgeEventWrapper, $ForgeEventWrapper$$Type } from "dev.latvian.mods.kubejs.forge.ForgeEventWrapper"
@@ -2278,8 +2276,8 @@ import { $Lock, $Lock$$Type } from "java.util.concurrent.locks.Lock"
 import { $DoubleToLongFunction, $DoubleToLongFunction$$Type } from "java.util.function.DoubleToLongFunction"
 import { $AzAnimationStage, $AzAnimationStage$$Type } from "mod.azure.azurelib.animation.dispatch.command.stage.AzAnimationStage"
 import { $AccessorServerLevel, $AccessorServerLevel$$Type } from "com.mega.endinglib.mixin.accessor.AccessorServerLevel"
-import { $RuleBasedBlockStateProvider$Rule, $RuleBasedBlockStateProvider$Rule$$Type } from "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider$Rule"
 import { $TooltipOverlayEvent$Pre, $TooltipOverlayEvent$Pre$$Type } from "squeek.appleskin.api.event.TooltipOverlayEvent$Pre"
+import { $RuleBasedBlockStateProvider$Rule, $RuleBasedBlockStateProvider$Rule$$Type } from "net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider$Rule"
 import { $LevelTimeAccess, $LevelTimeAccess$$Type } from "net.minecraft.world.level.LevelTimeAccess"
 import { $DyeablesRegistry, $DyeablesRegistry$$Type } from "org.violetmoon.zeta.registry.DyeablesRegistry"
 import { $DecimalFormatSymbols, $DecimalFormatSymbols$$Type } from "java.text.DecimalFormatSymbols"
@@ -2328,10 +2326,9 @@ import { $UniqueID, $UniqueID$$Type } from "icyllis.arc3d.engine.UniqueID"
 import { $Ingredient, $Ingredient$$Type } from "net.minecraft.world.item.crafting.Ingredient"
 import { $ItemBuilder$HurtEnemyContext, $ItemBuilder$HurtEnemyContext$$Type } from "dev.latvian.mods.kubejs.item.ItemBuilder$HurtEnemyContext"
 import { $AccessMode, $AccessMode$$Type } from "java.nio.file.AccessMode"
-import { $EntityRenderDispatcherAccessor, $EntityRenderDispatcherAccessor$$Type } from "dev.tr7zw.notenoughanimations.mixins.EntityRenderDispatcherAccessor"
 import { $AxeItemAccessor, $AxeItemAccessor$$Type } from "dev.emi.emi.mixin.accessor.AxeItemAccessor"
-import { $LongIterable, $LongIterable$$Type } from "it.unimi.dsi.fastutil.longs.LongIterable"
 import { $FMLCommonSetupEvent, $FMLCommonSetupEvent$$Type } from "net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent"
+import { $LongIterable, $LongIterable$$Type } from "it.unimi.dsi.fastutil.longs.LongIterable"
 import { $IntSupplier as $IntSupplier$0, $IntSupplier$$Type as $IntSupplier$0$$Type } from "io.netty.util.IntSupplier"
 import { $ItemLike, $ItemLike$$Type } from "net.minecraft.world.level.ItemLike"
 import { $BiomeGenerationSettingsBuilder, $BiomeGenerationSettingsBuilder$$Type } from "net.minecraftforge.common.world.BiomeGenerationSettingsBuilder"
@@ -2341,8 +2338,8 @@ import { $ConfiguredCondition, $ConfiguredCondition$$Type } from "io.github.edwi
 import { $RealmsServer$State, $RealmsServer$State$$Type } from "com.mojang.realmsclient.dto.RealmsServer$State"
 import { $SoundEvent, $SoundEvent$$Type } from "net.minecraftforge.client.event.sound.SoundEvent"
 import { $CustomSpell$Builder, $CustomSpell$Builder$$Type } from "com.squoshi.irons_spells_js.spell.CustomSpell$Builder"
-import { $AccessibleObject, $AccessibleObject$$Type } from "java.lang.reflect.AccessibleObject"
 import { $ScreenEvent$KeyPressed, $ScreenEvent$KeyPressed$$Type } from "net.minecraftforge.client.event.ScreenEvent$KeyPressed"
+import { $AccessibleObject, $AccessibleObject$$Type } from "java.lang.reflect.AccessibleObject"
 import { $CustomTask$Check, $CustomTask$Check$$Type } from "dev.ftb.mods.ftbquests.quest.task.CustomTask$Check"
 import { $EntityFallenOnBlockCallbackJS, $EntityFallenOnBlockCallbackJS$$Type } from "dev.latvian.mods.kubejs.block.callbacks.EntityFallenOnBlockCallbackJS"
 import { $IDeferrableIntegratedServer, $IDeferrableIntegratedServer$$Type } from "org.embeddedt.modernfix.duck.suspend_integrated_server_during_load.IDeferrableIntegratedServer"
@@ -2406,9 +2403,9 @@ import { $RootedDirtBlock, $RootedDirtBlock$$Type } from "net.minecraft.world.le
 import { $IEventBusInvokeDispatcher, $IEventBusInvokeDispatcher$$Type } from "net.minecraftforge.eventbus.api.IEventBusInvokeDispatcher"
 import { $ChunkHolder$LevelChangeListener, $ChunkHolder$LevelChangeListener$$Type } from "net.minecraft.server.level.ChunkHolder$LevelChangeListener"
 import { $GrindstoneEvent$OnTakeItem, $GrindstoneEvent$OnTakeItem$$Type } from "net.minecraftforge.event.GrindstoneEvent$OnTakeItem"
+import { $RegisterColorHandlersEvent, $RegisterColorHandlersEvent$$Type } from "net.minecraftforge.client.event.RegisterColorHandlersEvent"
 import { $AlterGroundDecorator, $AlterGroundDecorator$$Type } from "net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator"
 import { $NoiseBasedCountPlacement, $NoiseBasedCountPlacement$$Type } from "net.minecraft.world.level.levelgen.placement.NoiseBasedCountPlacement"
-import { $RegisterColorHandlersEvent, $RegisterColorHandlersEvent$$Type } from "net.minecraftforge.client.event.RegisterColorHandlersEvent"
 import { $CustomSpell$PreCastConditionsContext, $CustomSpell$PreCastConditionsContext$$Type } from "com.squoshi.irons_spells_js.spell.CustomSpell$PreCastConditionsContext"
 import { $LootItemConditionMixin, $LootItemConditionMixin$$Type } from "com.almostreliable.lootjs.mixin.LootItemConditionMixin"
 import { $BooleanConfig, $BooleanConfig$$Type } from "dev.ftb.mods.ftblibrary.config.BooleanConfig"
@@ -2502,8 +2499,8 @@ import { $RegistryAccess, $RegistryAccess$$Type } from "net.minecraft.core.Regis
 import { $DensityFunctions$Constant, $DensityFunctions$Constant$$Type } from "net.minecraft.world.level.levelgen.DensityFunctions$Constant"
 import { $LifecycleObserver, $LifecycleObserver$$Type } from "icyllis.modernui.lifecycle.LifecycleObserver"
 import { $BlockExplodedCallbackJS, $BlockExplodedCallbackJS$$Type } from "dev.latvian.mods.kubejs.block.callbacks.BlockExplodedCallbackJS"
-import { $Evoker, $Evoker$$Type } from "net.minecraft.world.entity.monster.Evoker"
 import { $MobEffectEvent$Applicable, $MobEffectEvent$Applicable$$Type } from "net.minecraftforge.event.entity.living.MobEffectEvent$Applicable"
+import { $Evoker, $Evoker$$Type } from "net.minecraft.world.entity.monster.Evoker"
 import { $AccessorCraftingMenu as $AccessorCraftingMenu$0, $AccessorCraftingMenu$$Type as $AccessorCraftingMenu$0$$Type } from "com.illusivesoulworks.polymorph.mixin.core.AccessorCraftingMenu"
 import { $PlayerAttackAnimatable, $PlayerAttackAnimatable$$Type } from "net.bettercombat.client.animation.PlayerAttackAnimatable"
 import { $CustomEntityJSBuilder$ISoundListenerJS, $CustomEntityJSBuilder$ISoundListenerJS$$Type } from "net.liopyu.entityjs.builders.misc.CustomEntityJSBuilder$ISoundListenerJS"
@@ -2522,9 +2519,9 @@ import { $ServerboundPlayerAbilitiesPacket, $ServerboundPlayerAbilitiesPacket$$T
 import { $Encoder, $Encoder$$Type } from "com.mojang.serialization.Encoder"
 import { $Direction$Axis, $Direction$Axis$$Type } from "net.minecraft.core.Direction$Axis"
 import { $Container, $Container$$Type } from "net.minecraft.world.Container"
+import { $ComputeFovModifierEvent, $ComputeFovModifierEvent$$Type } from "net.minecraftforge.client.event.ComputeFovModifierEvent"
 import { $CookingBookCategory, $CookingBookCategory$$Type } from "net.minecraft.world.item.crafting.CookingBookCategory"
 import { $SimpleCookingSerializer, $SimpleCookingSerializer$$Type } from "net.minecraft.world.item.crafting.SimpleCookingSerializer"
-import { $ComputeFovModifierEvent, $ComputeFovModifierEvent$$Type } from "net.minecraftforge.client.event.ComputeFovModifierEvent"
 import { $ResourceBundle$Control, $ResourceBundle$Control$$Type } from "java.util.ResourceBundle$Control"
 import { $BiConsumer, $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $BakedModelMixin, $BakedModelMixin$$Type } from "me.jellysquid.mods.sodium.mixin.core.model.BakedModelMixin"
@@ -2533,8 +2530,8 @@ import { $MapCodec$ResultFunction, $MapCodec$ResultFunction$$Type } from "com.mo
 import { $SwordItemBuilder, $SwordItemBuilder$$Type } from "dev.latvian.mods.kubejs.item.custom.SwordItemBuilder"
 import { $DiodeBlock, $DiodeBlock$$Type } from "net.minecraft.world.level.block.DiodeBlock"
 import { $AnimalEntityJS, $AnimalEntityJS$$Type } from "net.liopyu.entityjs.entities.living.entityjs.AnimalEntityJS"
-import { $BehaviorEnforcer, $BehaviorEnforcer$$Type } from "com.alrex.parcool.common.action.BehaviorEnforcer"
 import { $ScreenEvent$Opening, $ScreenEvent$Opening$$Type } from "net.minecraftforge.client.event.ScreenEvent$Opening"
+import { $BehaviorEnforcer, $BehaviorEnforcer$$Type } from "com.alrex.parcool.common.action.BehaviorEnforcer"
 import { $Animal, $Animal$$Type } from "net.minecraft.world.entity.animal.Animal"
 import { $AddJEIEventJS, $AddJEIEventJS$$Type } from "dev.latvian.mods.kubejs.integration.forge.jei.AddJEIEventJS"
 import { $MinecraftClientAccessor as $MinecraftClientAccessor$0, $MinecraftClientAccessor$$Type as $MinecraftClientAccessor$0$$Type } from "traben.entity_model_features.mixin.mixins.accessor.MinecraftClientAccessor"
@@ -2708,8 +2705,8 @@ import { $Message as $Message$2, $Message$$Type as $Message$2$$Type } from "com.
 import { $Graphics2D, $Graphics2D$$Type } from "java.awt.Graphics2D"
 import { $PointerIcon, $PointerIcon$$Type } from "icyllis.modernui.view.PointerIcon"
 import { $VBlockLootProvider, $VBlockLootProvider$$Type } from "net.lixir.vminus.api.datagen.block.loottable.provider.VBlockLootProvider"
-import { $EventLoopGroup, $EventLoopGroup$$Type } from "io.netty.channel.EventLoopGroup"
 import { $PreCopySpecialEffectFromBladeEvent, $PreCopySpecialEffectFromBladeEvent$$Type } from "mods.flammpfeil.slashblade.event.bladestand.PreCopySpecialEffectFromBladeEvent"
+import { $EventLoopGroup, $EventLoopGroup$$Type } from "io.netty.channel.EventLoopGroup"
 import { $TargetEntityCastData, $TargetEntityCastData$$Type } from "io.redspace.ironsspellbooks.capabilities.magic.TargetEntityCastData"
 import { $Task as $Task$1, $Task$$Type as $Task$1$$Type } from "dev.ftb.mods.ftbquests.quest.task.Task"
 import { $PiglinBruteSpecificSensor, $PiglinBruteSpecificSensor$$Type } from "net.minecraft.world.entity.ai.sensing.PiglinBruteSpecificSensor"
@@ -2748,9 +2745,9 @@ import { $DirectoryStream$Filter, $DirectoryStream$Filter$$Type } from "java.nio
 import { $Screen, $Screen$$Type } from "net.minecraft.client.gui.screens.Screen"
 import { $Signature, $Signature$$Type } from "java.security.Signature"
 import { $LocatorValue, $LocatorValue$$Type } from "mod.azure.azurelib.loading.json.raw.LocatorValue"
+import { $RegisterStructureConversionsEvent, $RegisterStructureConversionsEvent$$Type } from "net.minecraftforge.event.RegisterStructureConversionsEvent"
 import { $RecvByteBufAllocator, $RecvByteBufAllocator$$Type } from "io.netty.channel.RecvByteBufAllocator"
 import { $ForgeConfigSpec$Range, $ForgeConfigSpec$Range$$Type } from "net.minecraftforge.common.ForgeConfigSpec$Range"
-import { $RegisterStructureConversionsEvent, $RegisterStructureConversionsEvent$$Type } from "net.minecraftforge.event.RegisterStructureConversionsEvent"
 import { $AffineTransform, $AffineTransform$$Type } from "java.awt.geom.AffineTransform"
 import { $RecipeBook, $RecipeBook$$Type } from "net.minecraft.stats.RecipeBook"
 import { $WithFormatType, $WithFormatType$$Type } from "zzzank.probejs.lang.typescript.code.type.utility.WithFormatType"
@@ -2789,8 +2786,8 @@ import { $VariantEntity, $VariantEntity$$Type } from "net.lixir.vminus.world.ent
 import { $SpellDamageSource, $SpellDamageSource$$Type } from "io.redspace.ironsspellbooks.damage.SpellDamageSource"
 import { $NbtPredicateAccessor, $NbtPredicateAccessor$$Type } from "fzzyhmstrs.emi_loot.mixins.NbtPredicateAccessor"
 import { $ScreenEvents$BeforeRender, $ScreenEvents$BeforeRender$$Type } from "net.fabricmc.fabric.api.client.screen.v1.ScreenEvents$BeforeRender"
-import { $PistonStructureResolver, $PistonStructureResolver$$Type } from "net.minecraft.world.level.block.piston.PistonStructureResolver"
 import { $EntityEvent$Size, $EntityEvent$Size$$Type } from "net.minecraftforge.event.entity.EntityEvent$Size"
+import { $PistonStructureResolver, $PistonStructureResolver$$Type } from "net.minecraft.world.level.block.piston.PistonStructureResolver"
 import { $UnicodeFilter, $UnicodeFilter$$Type } from "com.ibm.icu.text.UnicodeFilter"
 import { $ConfigCategoryImpl, $ConfigCategoryImpl$$Type } from "net.blay09.mods.balm.api.config.schema.impl.ConfigCategoryImpl"
 import { $GenerationStep$Carving, $GenerationStep$Carving$$Type } from "net.minecraft.world.level.levelgen.GenerationStep$Carving"
@@ -2799,8 +2796,8 @@ import { $RenderStateShard$DepthTestStateShard, $RenderStateShard$DepthTestState
 import { $Variant, $Variant$$Type } from "net.minecraft.world.entity.animal.horse.Variant"
 import { $PalettedContainerRO, $PalettedContainerRO$$Type } from "net.minecraft.world.level.chunk.PalettedContainerRO"
 import { $MeshAppender$Context, $MeshAppender$Context$$Type } from "org.embeddedt.embeddium.api.MeshAppender$Context"
-import { $HandledScreenAccessor, $HandledScreenAccessor$$Type } from "dev.utherhel.itemcoating.mixin.HandledScreenAccessor"
 import { $Movable, $Movable$$Type } from "dev.ftb.mods.ftbquests.quest.Movable"
+import { $HandledScreenAccessor, $HandledScreenAccessor$$Type } from "dev.utherhel.itemcoating.mixin.HandledScreenAccessor"
 import { $LevelChunk$EntityCreationType, $LevelChunk$EntityCreationType$$Type } from "net.minecraft.world.level.chunk.LevelChunk$EntityCreationType"
 import { $LiteralCommandNode, $LiteralCommandNode$$Type } from "com.mojang.brigadier.tree.LiteralCommandNode"
 import { $SingleItemRecipe$Serializer, $SingleItemRecipe$Serializer$$Type } from "net.minecraft.world.item.crafting.SingleItemRecipe$Serializer"
@@ -2865,8 +2862,8 @@ import { $VerticalAlignment, $VerticalAlignment$$Type } from "mezz.jei.api.gui.p
 import { $ReportingContext, $ReportingContext$$Type } from "net.minecraft.client.multiplayer.chat.report.ReportingContext"
 import { $IGeometryBakingContext, $IGeometryBakingContext$$Type } from "net.minecraftforge.client.model.geometry.IGeometryBakingContext"
 import { $Long2BooleanFunction, $Long2BooleanFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2BooleanFunction"
-import { $BlockSnapshot, $BlockSnapshot$$Type } from "net.minecraftforge.common.util.BlockSnapshot"
 import { $FMLConstructModEvent, $FMLConstructModEvent$$Type } from "net.minecraftforge.fml.event.lifecycle.FMLConstructModEvent"
+import { $BlockSnapshot, $BlockSnapshot$$Type } from "net.minecraftforge.common.util.BlockSnapshot"
 import { $ModifyEntityBuilder, $ModifyEntityBuilder$$Type } from "net.liopyu.entityjs.builders.modification.ModifyEntityBuilder"
 import { $ElementType, $ElementType$$Type } from "java.lang.annotation.ElementType"
 import { $SleepInBed, $SleepInBed$$Type } from "net.minecraft.world.entity.ai.behavior.SleepInBed"
@@ -2884,8 +2881,8 @@ import { $BushFoliagePlacer, $BushFoliagePlacer$$Type } from "net.minecraft.worl
 import { $BossEvent$BossBarColor, $BossEvent$BossBarColor$$Type } from "net.minecraft.world.BossEvent$BossBarColor"
 import { $CryingObsidianBlock, $CryingObsidianBlock$$Type } from "net.minecraft.world.level.block.CryingObsidianBlock"
 import { $IClientItemExtensions$FontContext, $IClientItemExtensions$FontContext$$Type } from "net.minecraftforge.client.extensions.common.IClientItemExtensions$FontContext"
-import { $VertexInputLayout, $VertexInputLayout$$Type } from "icyllis.arc3d.engine.VertexInputLayout"
 import { $InjectedItemExtension, $InjectedItemExtension$$Type } from "dev.architectury.extensions.injected.InjectedItemExtension"
+import { $VertexInputLayout, $VertexInputLayout$$Type } from "icyllis.arc3d.engine.VertexInputLayout"
 import { $StoredUserList, $StoredUserList$$Type } from "net.minecraft.server.players.StoredUserList"
 import { $BeaconBlockEntity, $BeaconBlockEntity$$Type } from "net.minecraft.world.level.block.entity.BeaconBlockEntity"
 import { $IForgeBlockGetter, $IForgeBlockGetter$$Type } from "net.minecraftforge.common.extensions.IForgeBlockGetter"
@@ -2947,8 +2944,8 @@ import { $CompoundEventResult, $CompoundEventResult$$Type } from "dev.architectu
 import { $ConditionalFunction, $ConditionalFunction$$Type } from "dev.latvian.mods.kubejs.loot.ConditionalFunction"
 import { $WaterWalkerEnchantment, $WaterWalkerEnchantment$$Type } from "net.minecraft.world.item.enchantment.WaterWalkerEnchantment"
 import { $DarknessIncarnateUserAccessor, $DarknessIncarnateUserAccessor$$Type } from "com.github.alexmodguy.alexscaves.server.entity.util.DarknessIncarnateUserAccessor"
-import { $ServerActivity, $ServerActivity$$Type } from "com.mojang.realmsclient.dto.ServerActivity"
 import { $ScreenEvent$MouseInput, $ScreenEvent$MouseInput$$Type } from "net.minecraftforge.client.event.ScreenEvent$MouseInput"
+import { $ServerActivity, $ServerActivity$$Type } from "com.mojang.realmsclient.dto.ServerActivity"
 import { $SwampHutStructure, $SwampHutStructure$$Type } from "net.minecraft.world.level.levelgen.structure.structures.SwampHutStructure"
 import { $SlashArts$ArtsType, $SlashArts$ArtsType$$Type } from "mods.flammpfeil.slashblade.slasharts.SlashArts$ArtsType"
 import { $MinecartCommandBlock, $MinecartCommandBlock$$Type } from "net.minecraft.world.entity.vehicle.MinecartCommandBlock"
@@ -2981,15 +2978,15 @@ import { $ImmutableMultimap$Builder, $ImmutableMultimap$Builder$$Type } from "co
 import { $GameEventListenerRegistry, $GameEventListenerRegistry$$Type } from "net.minecraft.world.level.gameevent.GameEventListenerRegistry"
 import { $BlockRightClickedEventJS, $BlockRightClickedEventJS$$Type } from "dev.latvian.mods.kubejs.block.BlockRightClickedEventJS"
 import { $AzKeyframeStack, $AzKeyframeStack$$Type } from "mod.azure.azurelib.animation.controller.keyframe.AzKeyframeStack"
-import { $InputReplacement, $InputReplacement$$Type } from "dev.latvian.mods.kubejs.recipe.InputReplacement"
 import { $LivingChangeTargetEvent, $LivingChangeTargetEvent$$Type } from "net.minecraftforge.event.entity.living.LivingChangeTargetEvent"
+import { $InputReplacement, $InputReplacement$$Type } from "dev.latvian.mods.kubejs.recipe.InputReplacement"
 import { $LongConfigProperty, $LongConfigProperty$$Type } from "net.blay09.mods.balm.api.config.schema.builder.LongConfigProperty"
 import { $Component, $Component$$Type } from "com.mega.endinglib.api.item.component.Component"
 import { $ButtonBlock, $ButtonBlock$$Type } from "net.minecraft.world.level.block.ButtonBlock"
 import { $ContextUtils$FinalRenderContext, $ContextUtils$FinalRenderContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$FinalRenderContext"
 import { $AbstractBlockAccessor, $AbstractBlockAccessor$$Type } from "net.fabricmc.fabric.mixin.object.builder.AbstractBlockAccessor"
-import { $RandomBlockMatchTest, $RandomBlockMatchTest$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.RandomBlockMatchTest"
 import { $BlockVisualizerEvent$ModifyContext, $BlockVisualizerEvent$ModifyContext$$Type } from "xyz.apex.forge.apexcore.lib.event.client.BlockVisualizerEvent$ModifyContext"
+import { $RandomBlockMatchTest, $RandomBlockMatchTest$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.RandomBlockMatchTest"
 import { $ForgeZRecipeCrawl$Visit$Custom, $ForgeZRecipeCrawl$Visit$Custom$$Type } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Visit$Custom"
 import { $ProfilePublicKey, $ProfilePublicKey$$Type } from "net.minecraft.world.entity.player.ProfilePublicKey"
 import { $LoomBlock, $LoomBlock$$Type } from "net.minecraft.world.level.block.LoomBlock"
@@ -3045,8 +3042,8 @@ import { $ContextUtils$ItemBoneRenderContext, $ContextUtils$ItemBoneRenderContex
 import { $RenderShadowEvent, $RenderShadowEvent$$Type } from "com.mega.endinglib.api.event.client.RenderShadowEvent"
 import { $AttachFace, $AttachFace$$Type } from "net.minecraft.world.level.block.state.properties.AttachFace"
 import { $GroupLayout, $GroupLayout$$Type } from "java.lang.foreign.GroupLayout"
-import { $IronBarsBlock, $IronBarsBlock$$Type } from "net.minecraft.world.level.block.IronBarsBlock"
 import { $ModelEvent$RegisterGeometryLoaders, $ModelEvent$RegisterGeometryLoaders$$Type } from "net.minecraftforge.client.event.ModelEvent$RegisterGeometryLoaders"
+import { $IronBarsBlock, $IronBarsBlock$$Type } from "net.minecraft.world.level.block.IronBarsBlock"
 import { $IIngredientType, $IIngredientType$$Type } from "mezz.jei.api.ingredients.IIngredientType"
 import { $Boat, $Boat$$Type } from "net.minecraft.world.entity.vehicle.Boat"
 import { $TerrainRenderContext, $TerrainRenderContext$$Type } from "net.fabricmc.fabric.impl.client.indigo.renderer.render.TerrainRenderContext"
@@ -3112,8 +3109,8 @@ import { $HoneyBlock, $HoneyBlock$$Type } from "net.minecraft.world.level.block.
 import { $MessageSupplier, $MessageSupplier$$Type } from "org.apache.logging.log4j.util.MessageSupplier"
 import { $AccessorPlayerModel, $AccessorPlayerModel$$Type } from "com.mega.endinglib.mixin.accessor.AccessorPlayerModel"
 import { $BlazeEntityJS, $BlazeEntityJS$$Type } from "net.liopyu.entityjs.entities.living.vanilla.BlazeEntityJS"
-import { $ItemOverride$Predicate, $ItemOverride$Predicate$$Type } from "net.minecraft.client.renderer.block.model.ItemOverride$Predicate"
 import { $TickEvent$ClientTickEvent, $TickEvent$ClientTickEvent$$Type } from "net.minecraftforge.event.TickEvent$ClientTickEvent"
+import { $ItemOverride$Predicate, $ItemOverride$Predicate$$Type } from "net.minecraft.client.renderer.block.model.ItemOverride$Predicate"
 import { $GhastEntityJS, $GhastEntityJS$$Type } from "net.liopyu.entityjs.entities.living.vanilla.GhastEntityJS"
 import { $AccessorAbstractArrow as $AccessorAbstractArrow$0, $AccessorAbstractArrow$$Type as $AccessorAbstractArrow$0$$Type } from "com.mega.endinglib.mixin.accessor.AccessorAbstractArrow"
 import { $WeepingVinesFeature, $WeepingVinesFeature$$Type } from "net.minecraft.world.level.levelgen.feature.WeepingVinesFeature"
@@ -3124,8 +3121,8 @@ import { $ChestMenuSlot, $ChestMenuSlot$$Type } from "dev.latvian.mods.kubejs.gu
 import { $KeyFrameEvent, $KeyFrameEvent$$Type } from "software.bernie.geckolib.core.keyframe.event.KeyFrameEvent"
 import { $ChannelInboundInvoker, $ChannelInboundInvoker$$Type } from "io.netty.channel.ChannelInboundInvoker"
 import { $Font$DisplayMode, $Font$DisplayMode$$Type } from "net.minecraft.client.gui.Font$DisplayMode"
-import { $Raids, $Raids$$Type } from "net.minecraft.world.entity.raid.Raids"
 import { $RenderTooltipEvent$GatherComponents, $RenderTooltipEvent$GatherComponents$$Type } from "net.minecraftforge.client.event.RenderTooltipEvent$GatherComponents"
+import { $Raids, $Raids$$Type } from "net.minecraft.world.entity.raid.Raids"
 import { $StructureSet, $StructureSet$$Type } from "net.minecraft.world.level.levelgen.structure.StructureSet"
 import { $PrioritizeChunkUpdates, $PrioritizeChunkUpdates$$Type } from "net.minecraft.client.PrioritizeChunkUpdates"
 import { $JSLambdaType, $JSLambdaType$$Type } from "zzzank.probejs.lang.typescript.code.type.js.JSLambdaType"
@@ -3167,8 +3164,8 @@ import { $FunctionFactory, $FunctionFactory$$Type } from "dev.latvian.mods.unit.
 import { $TextAttribute, $TextAttribute$$Type } from "java.awt.font.TextAttribute"
 import { $NBTSerializable, $NBTSerializable$$Type } from "dev.latvian.mods.rhino.mod.util.NBTSerializable"
 import { $Matrix3dc, $Matrix3dc$$Type } from "org.joml.Matrix3dc"
-import { $WebBlock, $WebBlock$$Type } from "net.minecraft.world.level.block.WebBlock"
 import { $IdMappingEvent, $IdMappingEvent$$Type } from "net.minecraftforge.registries.IdMappingEvent"
+import { $WebBlock, $WebBlock$$Type } from "net.minecraft.world.level.block.WebBlock"
 import { $AbstractPiglin, $AbstractPiglin$$Type } from "net.minecraft.world.entity.monster.piglin.AbstractPiglin"
 import { $BuddingAmethystBlock, $BuddingAmethystBlock$$Type } from "net.minecraft.world.level.block.BuddingAmethystBlock"
 import { $ChunkTicketLevelUpdatedEvent, $ChunkTicketLevelUpdatedEvent$$Type } from "net.minecraftforge.event.level.ChunkTicketLevelUpdatedEvent"
@@ -3229,8 +3226,8 @@ import { $AzAnimationTimer, $AzAnimationTimer$$Type } from "mod.azure.azurelib.a
 import { $DamageSourceAccess, $DamageSourceAccess$$Type } from "net.puffish.skillsmod.access.DamageSourceAccess"
 import { $PressurePlateBlockBuilder, $PressurePlateBlockBuilder$$Type } from "dev.latvian.mods.kubejs.block.custom.PressurePlateBlockBuilder"
 import { $CustomGeoLayerJSBuilder, $CustomGeoLayerJSBuilder$$Type } from "net.liopyu.entityjs.client.living.model.CustomGeoLayerJSBuilder"
-import { $ContextUtils$EntityDamageContext, $ContextUtils$EntityDamageContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntityDamageContext"
 import { $LevelEvent$Save, $LevelEvent$Save$$Type } from "net.minecraftforge.event.level.LevelEvent$Save"
+import { $ContextUtils$EntityDamageContext, $ContextUtils$EntityDamageContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntityDamageContext"
 import { $FishingSpeedEnchantment, $FishingSpeedEnchantment$$Type } from "net.minecraft.world.item.enchantment.FishingSpeedEnchantment"
 import { $PotionRegistry, $PotionRegistry$$Type } from "io.redspace.ironsspellbooks.registries.PotionRegistry"
 import { $SculkSensorBlockEntity, $SculkSensorBlockEntity$$Type } from "net.minecraft.world.level.block.entity.SculkSensorBlockEntity"
@@ -3245,8 +3242,8 @@ import { $ServerLevel, $ServerLevel$$Type } from "net.minecraft.server.level.Ser
 import { $AbstractVisionCondition, $AbstractVisionCondition$$Type } from "net.lixir.vminus.vision.values.conditions.AbstractVisionCondition"
 import { $CustomMapData, $CustomMapData$$Type } from "net.mehvahdjukaar.moonlight.api.map.CustomMapData"
 import { $MobAttackStrength, $MobAttackStrength$$Type } from "me.Thelnfamous1.bettermobcombat.api.MobAttackStrength"
-import { $NoOpFeature, $NoOpFeature$$Type } from "net.minecraft.world.level.levelgen.feature.NoOpFeature"
 import { $ModuleStateChangedEvent, $ModuleStateChangedEvent$$Type } from "org.violetmoon.quark.api.event.ModuleStateChangedEvent"
+import { $NoOpFeature, $NoOpFeature$$Type } from "net.minecraft.world.level.levelgen.feature.NoOpFeature"
 import { $LootDataId, $LootDataId$$Type } from "net.minecraft.world.level.storage.loot.LootDataId"
 import { $ConfiguredDouble, $ConfiguredDouble$$Type } from "net.blay09.mods.balm.api.config.schema.ConfiguredDouble"
 import { $LevelStorageSource$LevelStorageAccess, $LevelStorageSource$LevelStorageAccess$$Type } from "net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess"
@@ -3260,8 +3257,8 @@ import { $MultifaceBlock, $MultifaceBlock$$Type } from "net.minecraft.world.leve
 import { $ModFileScanData$AnnotationData, $ModFileScanData$AnnotationData$$Type } from "net.minecraftforge.forgespi.language.ModFileScanData$AnnotationData"
 import { $AzAnimationStageProperties, $AzAnimationStageProperties$$Type } from "mod.azure.azurelib.animation.property.AzAnimationStageProperties"
 import { $ItemForgeAccessor, $ItemForgeAccessor$$Type } from "fuzs.puzzleslib.mixin.client.accessor.ItemForgeAccessor"
-import { $Explosion, $Explosion$$Type } from "net.minecraft.world.level.Explosion"
 import { $ScreenEvent$CharacterTyped, $ScreenEvent$CharacterTyped$$Type } from "net.minecraftforge.client.event.ScreenEvent$CharacterTyped"
+import { $Explosion, $Explosion$$Type } from "net.minecraft.world.level.Explosion"
 import { $LongConsumer, $LongConsumer$$Type } from "java.util.function.LongConsumer"
 import { $SlashBladeDefinition$BladeComparator, $SlashBladeDefinition$BladeComparator$$Type } from "mods.flammpfeil.slashblade.registry.slashblade.SlashBladeDefinition$BladeComparator"
 import { $Model, $Model$$Type } from "net.minecraft.client.model.Model"
@@ -3275,8 +3272,8 @@ import { $HeightRangePlacement, $HeightRangePlacement$$Type } from "net.minecraf
 import { $MonitorCreator, $MonitorCreator$$Type } from "com.mojang.blaze3d.platform.MonitorCreator"
 import { $ServerboundCommandSuggestionPacket, $ServerboundCommandSuggestionPacket$$Type } from "net.minecraft.network.protocol.game.ServerboundCommandSuggestionPacket"
 import { $StructureVoidBlock, $StructureVoidBlock$$Type } from "net.minecraft.world.level.block.StructureVoidBlock"
-import { $Shapes$DoubleLineConsumer, $Shapes$DoubleLineConsumer$$Type } from "net.minecraft.world.phys.shapes.Shapes$DoubleLineConsumer"
 import { $ScreenEvent$Closing, $ScreenEvent$Closing$$Type } from "net.minecraftforge.client.event.ScreenEvent$Closing"
+import { $Shapes$DoubleLineConsumer, $Shapes$DoubleLineConsumer$$Type } from "net.minecraft.world.phys.shapes.Shapes$DoubleLineConsumer"
 import { $Team as $Team$0, $Team$$Type as $Team$0$$Type } from "net.minecraft.world.scores.Team"
 import { $NormalNoise, $NormalNoise$$Type } from "net.minecraft.world.level.levelgen.synth.NormalNoise"
 import { $NetworkEvent$ClientCustomPayloadLoginEvent, $NetworkEvent$ClientCustomPayloadLoginEvent$$Type } from "net.minecraftforge.network.NetworkEvent$ClientCustomPayloadLoginEvent"
@@ -3406,16 +3403,16 @@ import { $PrintJob, $PrintJob$$Type } from "java.awt.PrintJob"
 import { $Gun$Sounds, $Gun$Sounds$$Type } from "top.ribs.scguns.common.Gun$Sounds"
 import { $Lifecycle as $Lifecycle$0, $Lifecycle$$Type as $Lifecycle$0$$Type } from "icyllis.modernui.lifecycle.Lifecycle"
 import { $AbstractInt2ObjectFunction, $AbstractInt2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.ints.AbstractInt2ObjectFunction"
-import { $ICraftingContainer, $ICraftingContainer$$Type } from "dev.shadowsoffire.fastbench.api.ICraftingContainer"
 import { $ModifyValueEvent, $ModifyValueEvent$$Type } from "io.github.apace100.apoli.integration.ModifyValueEvent"
+import { $ICraftingContainer, $ICraftingContainer$$Type } from "dev.shadowsoffire.fastbench.api.ICraftingContainer"
 import { $BlockPattern, $BlockPattern$$Type } from "net.minecraft.world.level.block.state.pattern.BlockPattern"
 import { $CollisionGetter, $CollisionGetter$$Type } from "net.minecraft.world.level.CollisionGetter"
 import { $MemoryLayout, $MemoryLayout$$Type } from "java.lang.foreign.MemoryLayout"
 import { $MaterialDefinition, $MaterialDefinition$$Type } from "net.minecraft.client.model.geom.builders.MaterialDefinition"
 import { $AbstractVillager, $AbstractVillager$$Type } from "net.minecraft.world.entity.npc.AbstractVillager"
 import { $WatchEvent$Kind, $WatchEvent$Kind$$Type } from "java.nio.file.WatchEvent$Kind"
-import { $PaintingVariantBuilder, $PaintingVariantBuilder$$Type } from "dev.latvian.mods.kubejs.misc.PaintingVariantBuilder"
 import { $ClientEventJS, $ClientEventJS$$Type } from "dev.latvian.mods.kubejs.client.ClientEventJS"
+import { $PaintingVariantBuilder, $PaintingVariantBuilder$$Type } from "dev.latvian.mods.kubejs.misc.PaintingVariantBuilder"
 import { $ValueEvent, $ValueEvent$$Type } from "com.blamejared.clumps.api.events.ValueEvent"
 import { $TagEventJS, $TagEventJS$$Type } from "dev.latvian.mods.kubejs.server.tag.TagEventJS"
 import { $CameraTransform, $CameraTransform$$Type } from "me.jellysquid.mods.sodium.client.render.viewport.CameraTransform"
@@ -3485,9 +3482,9 @@ import { $IZetaBlock, $IZetaBlock$$Type } from "org.violetmoon.zeta.block.IZetaB
 import { $Reference, $Reference$$Type } from "java.lang.ref.Reference"
 import { $ComposableEntryContainer, $ComposableEntryContainer$$Type } from "net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer"
 import { $ByteConsumer, $ByteConsumer$$Type } from "it.unimi.dsi.fastutil.bytes.ByteConsumer"
+import { $ClientChatReceivedEvent, $ClientChatReceivedEvent$$Type } from "net.minecraftforge.client.event.ClientChatReceivedEvent"
 import { $Char2DoubleFunction, $Char2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.chars.Char2DoubleFunction"
 import { $LevelAccessor as $LevelAccessor$0, $LevelAccessor$$Type as $LevelAccessor$0$$Type } from "net.minecraft.world.level.LevelAccessor"
-import { $ClientChatReceivedEvent, $ClientChatReceivedEvent$$Type } from "net.minecraftforge.client.event.ClientChatReceivedEvent"
 import { $CommandSource, $CommandSource$$Type } from "net.minecraft.commands.CommandSource"
 import { $GameRules$BooleanValue, $GameRules$BooleanValue$$Type } from "net.minecraft.world.level.GameRules$BooleanValue"
 import { $EntityEventJS, $EntityEventJS$$Type } from "dev.latvian.mods.kubejs.entity.EntityEventJS"
@@ -3513,8 +3510,8 @@ import { $ProbeNamedDump, $ProbeNamedDump$$Type } from "zzzank.probejs.lang.type
 import { $FoodEatenEventJS, $FoodEatenEventJS$$Type } from "dev.latvian.mods.kubejs.item.FoodEatenEventJS"
 import { $PaintingTextureManager, $PaintingTextureManager$$Type } from "net.minecraft.client.resources.PaintingTextureManager"
 import { $ViewModelStoreOwner, $ViewModelStoreOwner$$Type } from "icyllis.modernui.lifecycle.ViewModelStoreOwner"
-import { $RailBlock, $RailBlock$$Type } from "net.minecraft.world.level.block.RailBlock"
 import { $ServerStoppingEvent, $ServerStoppingEvent$$Type } from "net.minecraftforge.event.server.ServerStoppingEvent"
+import { $RailBlock, $RailBlock$$Type } from "net.minecraft.world.level.block.RailBlock"
 import { $TSKeyofType, $TSKeyofType$$Type } from "zzzank.probejs.lang.typescript.code.type.ts.TSKeyofType"
 import { $LayerLightSectionStorage$SectionType, $LayerLightSectionStorage$SectionType$$Type } from "net.minecraft.world.level.lighting.LayerLightSectionStorage$SectionType"
 import { $AnimationPart, $AnimationPart$$Type } from "com.alrex.parcool.api.unstable.animation.AnimationPart"
@@ -3574,8 +3571,8 @@ import { $LogType, $LogType$$Type } from "dev.latvian.mods.kubejs.util.LogType"
 import { $EntityAccessor as $EntityAccessor$0, $EntityAccessor$$Type as $EntityAccessor$0$$Type } from "io.redspace.ironsspellbooks.mixin.EntityAccessor"
 import { $EventGetFluidRenderType as $EventGetFluidRenderType$0, $EventGetFluidRenderType$$Type as $EventGetFluidRenderType$0$$Type } from "com.github.alexthe666.citadel.client.event.EventGetFluidRenderType"
 import { $NetherFossilStructure, $NetherFossilStructure$$Type } from "net.minecraft.world.level.levelgen.structure.structures.NetherFossilStructure"
-import { $RemoveJEICategoriesEvent, $RemoveJEICategoriesEvent$$Type } from "dev.latvian.mods.kubejs.integration.forge.jei.RemoveJEICategoriesEvent"
 import { $RenderGuiOverlayEvent$Pre, $RenderGuiOverlayEvent$Pre$$Type } from "net.minecraftforge.client.event.RenderGuiOverlayEvent$Pre"
+import { $RemoveJEICategoriesEvent, $RemoveJEICategoriesEvent$$Type } from "dev.latvian.mods.kubejs.integration.forge.jei.RemoveJEICategoriesEvent"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
 import { $ModifierData, $ModifierData$$Type } from "io.github.edwinmindcraft.apoli.api.power.ModifierData"
 import { $CustomBuilderObject, $CustomBuilderObject$$Type } from "dev.latvian.mods.kubejs.registry.CustomBuilderObject"
@@ -3637,8 +3634,8 @@ import { $EventExceptionHandler, $EventExceptionHandler$$Type } from "dev.latvia
 import { $ViewParent, $ViewParent$$Type } from "icyllis.modernui.view.ViewParent"
 import { $Vec3i, $Vec3i$$Type } from "net.minecraft.core.Vec3i"
 import { $MultiNoiseBiomeSourceParameterList$Preset, $MultiNoiseBiomeSourceParameterList$Preset$$Type } from "net.minecraft.world.level.biome.MultiNoiseBiomeSourceParameterList$Preset"
-import { $ItemCombinerMenu, $ItemCombinerMenu$$Type } from "net.minecraft.world.inventory.ItemCombinerMenu"
 import { $SleepingTimeCheckEvent, $SleepingTimeCheckEvent$$Type } from "net.minecraftforge.event.entity.player.SleepingTimeCheckEvent"
+import { $ItemCombinerMenu, $ItemCombinerMenu$$Type } from "net.minecraft.world.inventory.ItemCombinerMenu"
 import { $CaveSpider, $CaveSpider$$Type } from "net.minecraft.world.entity.monster.CaveSpider"
 import { $PackResources, $PackResources$$Type } from "net.minecraft.server.packs.PackResources"
 import { $InformationJEIEventJS, $InformationJEIEventJS$$Type } from "dev.latvian.mods.kubejs.integration.forge.jei.InformationJEIEventJS"
@@ -3651,8 +3648,8 @@ import { $ChunkMeshAttribute, $ChunkMeshAttribute$$Type } from "me.jellysquid.mo
 import { $ShaderCompiler, $ShaderCompiler$$Type } from "icyllis.arc3d.compiler.ShaderCompiler"
 import { $IMixinMob, $IMixinMob$$Type } from "com.majruszlibrary.mixin.IMixinMob"
 import { $Clock, $Clock$$Type } from "java.time.Clock"
-import { $StreamCodec, $StreamCodec$$Type } from "net.blay09.mods.balm.common.codec.StreamCodec"
 import { $ClientChatReceivedEvent$System, $ClientChatReceivedEvent$System$$Type } from "net.minecraftforge.client.event.ClientChatReceivedEvent$System"
+import { $StreamCodec, $StreamCodec$$Type } from "net.blay09.mods.balm.common.codec.StreamCodec"
 import { $InputMethodListener, $InputMethodListener$$Type } from "java.awt.event.InputMethodListener"
 import { $Enumeration, $Enumeration$$Type } from "java.util.Enumeration"
 import { $ExemptionMechanism, $ExemptionMechanism$$Type } from "javax.crypto.ExemptionMechanism"
@@ -3698,8 +3695,8 @@ import { $PlayerBleedOutEvent, $PlayerBleedOutEvent$$Type } from "team.creative.
 import { $Long2ObjectMap$FastEntrySet, $Long2ObjectMap$FastEntrySet$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectMap$FastEntrySet"
 import { $DragonPhaseInstance, $DragonPhaseInstance$$Type } from "net.minecraft.world.entity.boss.enderdragon.phases.DragonPhaseInstance"
 import { $PiglinArmPose, $PiglinArmPose$$Type } from "net.minecraft.world.entity.monster.piglin.PiglinArmPose"
-import { $EnchantmentPredicateAccessor, $EnchantmentPredicateAccessor$$Type } from "fzzyhmstrs.emi_loot.mixins.EnchantmentPredicateAccessor"
 import { $BuildCreativeModeTabContentsEvent, $BuildCreativeModeTabContentsEvent$$Type } from "net.minecraftforge.event.BuildCreativeModeTabContentsEvent"
+import { $EnchantmentPredicateAccessor, $EnchantmentPredicateAccessor$$Type } from "fzzyhmstrs.emi_loot.mixins.EnchantmentPredicateAccessor"
 import { $DoubleBinaryOperator as $DoubleBinaryOperator$0, $DoubleBinaryOperator$$Type as $DoubleBinaryOperator$0$$Type } from "it.unimi.dsi.fastutil.doubles.DoubleBinaryOperator"
 import { $OnDatapackSyncEvent, $OnDatapackSyncEvent$$Type } from "net.minecraftforge.event.OnDatapackSyncEvent"
 import { $InstrumentItem, $InstrumentItem$$Type } from "net.minecraft.world.item.InstrumentItem"
@@ -3799,8 +3796,8 @@ import { $UseAnim, $UseAnim$$Type } from "net.minecraft.world.item.UseAnim"
 import { $AgeableListModel, $AgeableListModel$$Type } from "net.minecraft.client.model.AgeableListModel"
 import { $BaseImmutableMultimap, $BaseImmutableMultimap$$Type } from "com.google.common.collect.BaseImmutableMultimap"
 import { $CapabilityDataSerializer, $CapabilityDataSerializer$$Type } from "com.mega.endinglib.api.capability.syncher.CapabilityDataSerializer"
-import { $Face, $Face$$Type } from "mods.flammpfeil.slashblade.client.renderer.model.obj.Face"
 import { $RenderLivingEvent$Pre, $RenderLivingEvent$Pre$$Type } from "net.minecraftforge.client.event.RenderLivingEvent$Pre"
+import { $Face, $Face$$Type } from "mods.flammpfeil.slashblade.client.renderer.model.obj.Face"
 import { $BlockStateRotateCallbackJS, $BlockStateRotateCallbackJS$$Type } from "dev.latvian.mods.kubejs.block.callbacks.BlockStateRotateCallbackJS"
 import { $AutoGlowingGeoLayer, $AutoGlowingGeoLayer$$Type } from "software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer"
 import { $TextureAtlasSprite$Ticker, $TextureAtlasSprite$Ticker$$Type } from "net.minecraft.client.renderer.texture.TextureAtlasSprite$Ticker"
@@ -3820,8 +3817,8 @@ import { $WeatheringCopperSlabBlock, $WeatheringCopperSlabBlock$$Type } from "ne
 import { $TypeDescriptor$OfField, $TypeDescriptor$OfField$$Type } from "java.lang.invoke.TypeDescriptor$OfField"
 import { $RenderAttachmentBlockEntity, $RenderAttachmentBlockEntity$$Type } from "net.fabricmc.fabric.api.rendering.data.v1.RenderAttachmentBlockEntity"
 import { $BoatEntityJS, $BoatEntityJS$$Type } from "net.liopyu.entityjs.entities.nonliving.vanilla.BoatEntityJS"
-import { $PoiRecord, $PoiRecord$$Type } from "net.minecraft.world.entity.ai.village.poi.PoiRecord"
 import { $ModConfigEvent$Unloading, $ModConfigEvent$Unloading$$Type } from "net.minecraftforge.fml.event.config.ModConfigEvent$Unloading"
+import { $PoiRecord, $PoiRecord$$Type } from "net.minecraft.world.entity.ai.village.poi.PoiRecord"
 import { $ParCoolConfig$Server$Doubles, $ParCoolConfig$Server$Doubles$$Type } from "com.alrex.parcool.config.ParCoolConfig$Server$Doubles"
 import { $AWTKeyStroke, $AWTKeyStroke$$Type } from "java.awt.AWTKeyStroke"
 import { $LootFunctionsContainer, $LootFunctionsContainer$$Type } from "com.almostreliable.lootjs.loot.LootFunctionsContainer"
@@ -3854,8 +3851,8 @@ import { $RollingEntity, $RollingEntity$$Type } from "net.combatroll.internals.R
 import { $CocoaDecorator, $CocoaDecorator$$Type } from "net.minecraft.world.level.levelgen.feature.treedecorators.CocoaDecorator"
 import { $BlockEntityAttachment, $BlockEntityAttachment$$Type } from "dev.latvian.mods.kubejs.block.entity.BlockEntityAttachment"
 import { $AzAbstractAnimationController, $AzAbstractAnimationController$$Type } from "mod.azure.azurelib.animation.controller.AzAbstractAnimationController"
-import { $ComparatorMode, $ComparatorMode$$Type } from "net.minecraft.world.level.block.state.properties.ComparatorMode"
 import { $OptionPageConstructionEvent, $OptionPageConstructionEvent$$Type } from "org.embeddedt.embeddium.api.OptionPageConstructionEvent"
+import { $ComparatorMode, $ComparatorMode$$Type } from "net.minecraft.world.level.block.state.properties.ComparatorMode"
 import { $VanillaPackResources, $VanillaPackResources$$Type } from "net.minecraft.server.packs.VanillaPackResources"
 import { $LivingDamageEvent as $LivingDamageEvent$0, $LivingDamageEvent$$Type as $LivingDamageEvent$0$$Type } from "net.blay09.mods.balm.api.event.LivingDamageEvent"
 import { $EndCrystalItem, $EndCrystalItem$$Type } from "net.minecraft.world.item.EndCrystalItem"
@@ -3870,8 +3867,8 @@ import { $StateDefinition, $StateDefinition$$Type } from "net.minecraft.world.le
 import { $QuestObjectStartedEventJS, $QuestObjectStartedEventJS$$Type } from "dev.ftb.mods.ftbxmodcompat.ftbquests.kubejs.QuestObjectStartedEventJS"
 import { $ClientboundStopSoundPacket, $ClientboundStopSoundPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundStopSoundPacket"
 import { $ChunkRenderDispatcher$CompiledChunk, $ChunkRenderDispatcher$CompiledChunk$$Type } from "net.minecraft.client.renderer.chunk.ChunkRenderDispatcher$CompiledChunk"
-import { $CameraKeyframeAnimation$AnimType, $CameraKeyframeAnimation$AnimType$$Type } from "com.mega.endinglib.api.client.camera.CameraKeyframeAnimation$AnimType"
 import { $AccessorSynchedEntityData, $AccessorSynchedEntityData$$Type } from "com.mega.endinglib.mixin.accessor.AccessorSynchedEntityData"
+import { $CameraKeyframeAnimation$AnimType, $CameraKeyframeAnimation$AnimType$$Type } from "com.mega.endinglib.api.client.camera.CameraKeyframeAnimation$AnimType"
 import { $ClampedNormalInt, $ClampedNormalInt$$Type } from "net.minecraft.util.valueproviders.ClampedNormalInt"
 import { $PowderSnowCauldronBlock, $PowderSnowCauldronBlock$$Type } from "net.minecraft.world.level.block.PowderSnowCauldronBlock"
 import { $InetSocketAddress, $InetSocketAddress$$Type } from "java.net.InetSocketAddress"
@@ -3923,9 +3920,9 @@ import { $LootNumberProviderType, $LootNumberProviderType$$Type } from "net.mine
 import { $ThreadGroup, $ThreadGroup$$Type } from "java.lang.ThreadGroup"
 import { $AzAnimationProperties, $AzAnimationProperties$$Type } from "mod.azure.azurelib.animation.property.AzAnimationProperties"
 import { $BannerBlockEntity, $BannerBlockEntity$$Type } from "net.minecraft.world.level.block.entity.BannerBlockEntity"
+import { $ClientPlayerChangeGameTypeEvent, $ClientPlayerChangeGameTypeEvent$$Type } from "net.minecraftforge.client.event.ClientPlayerChangeGameTypeEvent"
 import { $ParticleCreator, $ParticleCreator$$Type } from "me.fzzyhmstrs.particle_core.interfaces.ParticleCreator"
 import { $SpectatorMenuItem, $SpectatorMenuItem$$Type } from "net.minecraft.client.gui.spectator.SpectatorMenuItem"
-import { $ClientPlayerChangeGameTypeEvent, $ClientPlayerChangeGameTypeEvent$$Type } from "net.minecraftforge.client.event.ClientPlayerChangeGameTypeEvent"
 import { $ValueRange, $ValueRange$$Type } from "java.time.temporal.ValueRange"
 import { $RootSystemConfiguration, $RootSystemConfiguration$$Type } from "net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration"
 import { $BaseNonAnimatableEntityBuilder, $BaseNonAnimatableEntityBuilder$$Type } from "net.liopyu.entityjs.builders.nonliving.BaseNonAnimatableEntityBuilder"
@@ -3993,9 +3990,9 @@ import { $PowerFactory$Instance, $PowerFactory$Instance$$Type } from "io.github.
 import { $View$Mu, $View$Mu$$Type } from "com.mojang.datafixers.View$Mu"
 import { $ViewModel, $ViewModel$$Type } from "icyllis.modernui.lifecycle.ViewModel"
 import { $TelemetryPropertyMap, $TelemetryPropertyMap$$Type } from "net.minecraft.client.telemetry.TelemetryPropertyMap"
+import { $AdvancementEvent$AdvancementEarnEvent, $AdvancementEvent$AdvancementEarnEvent$$Type } from "net.minecraftforge.event.entity.player.AdvancementEvent$AdvancementEarnEvent"
 import { $BundlerInfo$Bundler, $BundlerInfo$Bundler$$Type } from "net.minecraft.network.protocol.BundlerInfo$Bundler"
 import { $ServerboundAcceptTeleportationPacket, $ServerboundAcceptTeleportationPacket$$Type } from "net.minecraft.network.protocol.game.ServerboundAcceptTeleportationPacket"
-import { $AdvancementEvent$AdvancementEarnEvent, $AdvancementEvent$AdvancementEarnEvent$$Type } from "net.minecraftforge.event.entity.player.AdvancementEvent$AdvancementEarnEvent"
 import { $ConfiguredEntityCondition, $ConfiguredEntityCondition$$Type } from "io.github.edwinmindcraft.apoli.api.power.configuration.ConfiguredEntityCondition"
 import { $StructureProcessorList, $StructureProcessorList$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList"
 import { $ShufflingList$WeightedEntry, $ShufflingList$WeightedEntry$$Type } from "net.minecraft.world.entity.ai.behavior.ShufflingList$WeightedEntry"
@@ -4009,8 +4006,8 @@ import { $EventHandlerInvoker, $EventHandlerInvoker$$Type } from "dev.latvian.mo
 import { $BannerPatternItem, $BannerPatternItem$$Type } from "net.minecraft.world.item.BannerPatternItem"
 import { $ReloadInstance, $ReloadInstance$$Type } from "net.minecraft.server.packs.resources.ReloadInstance"
 import { $SplashRenderer, $SplashRenderer$$Type } from "net.minecraft.client.gui.components.SplashRenderer"
-import { $Pig, $Pig$$Type } from "net.minecraft.world.entity.animal.Pig"
 import { $ContainerScreenEvent$Render, $ContainerScreenEvent$Render$$Type } from "net.minecraftforge.client.event.ContainerScreenEvent$Render"
+import { $Pig, $Pig$$Type } from "net.minecraft.world.entity.animal.Pig"
 import { $TimeZone as $TimeZone$0, $TimeZone$$Type as $TimeZone$0$$Type } from "java.util.TimeZone"
 import { $Collection, $Collection$$Type } from "java.util.Collection"
 import { $MessageSignature, $MessageSignature$$Type } from "net.minecraft.network.chat.MessageSignature"
@@ -4030,8 +4027,8 @@ import { $EnderPickupEvent, $EnderPickupEvent$$Type } from "dev.xkmc.l2complemen
 import { $ScreenInitEvent$Post, $ScreenInitEvent$Post$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenInitEvent$Post"
 import { $TridentRiptideEnchantment, $TridentRiptideEnchantment$$Type } from "net.minecraft.world.item.enchantment.TridentRiptideEnchantment"
 import { $Int2IntMap, $Int2IntMap$$Type } from "it.unimi.dsi.fastutil.ints.Int2IntMap"
-import { $SimpleRandomSelectorFeature, $SimpleRandomSelectorFeature$$Type } from "net.minecraft.world.level.levelgen.feature.SimpleRandomSelectorFeature"
 import { $ScreenshotEvent, $ScreenshotEvent$$Type } from "net.minecraftforge.client.event.ScreenshotEvent"
+import { $SimpleRandomSelectorFeature, $SimpleRandomSelectorFeature$$Type } from "net.minecraft.world.level.levelgen.feature.SimpleRandomSelectorFeature"
 import { $GunReloadEvent$Pre, $GunReloadEvent$Pre$$Type } from "top.ribs.scguns.event.GunReloadEvent$Pre"
 import { $CommentedFileConfig, $CommentedFileConfig$$Type } from "com.electronwill.nightconfig.core.file.CommentedFileConfig"
 import { $EntityGetter, $EntityGetter$$Type } from "net.minecraft.world.level.EntityGetter"
@@ -4089,8 +4086,8 @@ import { $SculkBehaviour, $SculkBehaviour$$Type } from "net.minecraft.world.leve
 import { $FilterOutputStream, $FilterOutputStream$$Type } from "java.io.FilterOutputStream"
 import { $CropGrowEvent$Pre, $CropGrowEvent$Pre$$Type } from "net.blay09.mods.balm.api.event.CropGrowEvent$Pre"
 import { $AccessScriptManager, $AccessScriptManager$$Type } from "zzzank.probejs.mixins.AccessScriptManager"
-import { $SpectatorMenu, $SpectatorMenu$$Type } from "net.minecraft.client.gui.spectator.SpectatorMenu"
 import { $UsageTickerEvent, $UsageTickerEvent$$Type } from "org.violetmoon.quark.api.event.UsageTickerEvent"
+import { $SpectatorMenu, $SpectatorMenu$$Type } from "net.minecraft.client.gui.spectator.SpectatorMenu"
 import { $BaseLivingEntityBuilder$ParticleKeyFrameEventJS, $BaseLivingEntityBuilder$ParticleKeyFrameEventJS$$Type } from "net.liopyu.entityjs.builders.living.BaseLivingEntityBuilder$ParticleKeyFrameEventJS"
 import { $IFactory, $IFactory$$Type } from "io.github.edwinmindcraft.apoli.api.power.IFactory"
 import { $Vector3dc, $Vector3dc$$Type } from "org.joml.Vector3dc"
@@ -4128,8 +4125,8 @@ import { $SpawnProperties, $SpawnProperties$$Type } from "dev.architectury.hooks
 import { $DripstoneClusterFeature, $DripstoneClusterFeature$$Type } from "net.minecraft.world.level.levelgen.feature.DripstoneClusterFeature"
 import { $Vector3fc, $Vector3fc$$Type } from "org.joml.Vector3fc"
 import { $SweepingEdgeEnchantment, $SweepingEdgeEnchantment$$Type } from "net.minecraft.world.item.enchantment.SweepingEdgeEnchantment"
-import { $AddGoalTargetsEventJS, $AddGoalTargetsEventJS$$Type } from "net.liopyu.entityjs.events.AddGoalTargetsEventJS"
 import { $MobEffectEvent, $MobEffectEvent$$Type } from "net.minecraftforge.event.entity.living.MobEffectEvent"
+import { $AddGoalTargetsEventJS, $AddGoalTargetsEventJS$$Type } from "net.liopyu.entityjs.events.AddGoalTargetsEventJS"
 import { $PowderSnowBlock, $PowderSnowBlock$$Type } from "net.minecraft.world.level.block.PowderSnowBlock"
 import { $LivingEntityAccess, $LivingEntityAccess$$Type } from "com.github.raverbury.aggroindicator.mixin.LivingEntityAccess"
 import { $SingletonArgumentInfo, $SingletonArgumentInfo$$Type } from "net.minecraft.commands.synchronization.SingletonArgumentInfo"
@@ -4159,8 +4156,8 @@ import { $ObjectDescJS$Entry, $ObjectDescJS$Entry$$Type } from "dev.latvian.mods
 import { $SurfaceRules$Condition, $SurfaceRules$Condition$$Type } from "net.minecraft.world.level.levelgen.SurfaceRules$Condition"
 import { $PointedDripstoneConfiguration, $PointedDripstoneConfiguration$$Type } from "net.minecraft.world.level.levelgen.feature.configurations.PointedDripstoneConfiguration"
 import { $BlockEvent$CropGrowEvent$Pre, $BlockEvent$CropGrowEvent$Pre$$Type } from "net.minecraftforge.event.level.BlockEvent$CropGrowEvent$Pre"
-import { $EventLoopTaskQueueFactory, $EventLoopTaskQueueFactory$$Type } from "io.netty.channel.EventLoopTaskQueueFactory"
 import { $PlayerXpEvent$PickupXp, $PlayerXpEvent$PickupXp$$Type } from "net.minecraftforge.event.entity.player.PlayerXpEvent$PickupXp"
+import { $EventLoopTaskQueueFactory, $EventLoopTaskQueueFactory$$Type } from "io.netty.channel.EventLoopTaskQueueFactory"
 import { $SingletonGeoAnimatable, $SingletonGeoAnimatable$$Type } from "software.bernie.geckolib.animatable.SingletonGeoAnimatable"
 import { $BalmConfigSchema, $BalmConfigSchema$$Type } from "net.blay09.mods.balm.api.config.schema.BalmConfigSchema"
 import { $AccessorParticleEngine, $AccessorParticleEngine$$Type } from "com.mega.endinglib.mixin.accessor.AccessorParticleEngine"
@@ -4169,9 +4166,9 @@ import { $GraniteImage, $GraniteImage$$Type } from "icyllis.arc3d.granite.Granit
 import { $IValueModifyingPower, $IValueModifyingPower$$Type } from "io.github.edwinmindcraft.apoli.api.power.IValueModifyingPower"
 import { $Behaviors, $Behaviors$$Type } from "net.liopyu.entityjs.util.ai.Behaviors"
 import { $AbstractIllager$IllagerArmPose, $AbstractIllager$IllagerArmPose$$Type } from "net.minecraft.world.entity.monster.AbstractIllager$IllagerArmPose"
-import { $SlashBladeEvent$ChargeActionEvent, $SlashBladeEvent$ChargeActionEvent$$Type } from "mods.flammpfeil.slashblade.event.SlashBladeEvent$ChargeActionEvent"
 import { $MultithreadEventExecutorGroup, $MultithreadEventExecutorGroup$$Type } from "io.netty.util.concurrent.MultithreadEventExecutorGroup"
 import { $AddAttributesFunction$Modifier$Builder, $AddAttributesFunction$Modifier$Builder$$Type } from "com.almostreliable.lootjs.loot.AddAttributesFunction$Modifier$Builder"
+import { $SlashBladeEvent$ChargeActionEvent, $SlashBladeEvent$ChargeActionEvent$$Type } from "mods.flammpfeil.slashblade.event.SlashBladeEvent$ChargeActionEvent"
 import { $IJeiRuntime, $IJeiRuntime$$Type } from "mezz.jei.api.runtime.IJeiRuntime"
 import { $IForgeItem, $IForgeItem$$Type } from "net.minecraftforge.common.extensions.IForgeItem"
 import { $OptionsDuck, $OptionsDuck$$Type } from "com.github.exopandora.shouldersurfing.mixinducks.OptionsDuck"
@@ -4198,8 +4195,8 @@ import { $IBleeding, $IBleeding$$Type } from "team.creative.playerrevive.api.IBl
 import { $Channel as $Channel$1, $Channel$$Type as $Channel$1$$Type } from "com.mojang.blaze3d.audio.Channel"
 import { $Climate$RTree, $Climate$RTree$$Type } from "net.minecraft.world.level.biome.Climate$RTree"
 import { $CooldownInstance, $CooldownInstance$$Type } from "io.redspace.ironsspellbooks.capabilities.magic.CooldownInstance"
-import { $ScriptManager, $ScriptManager$$Type } from "dev.latvian.mods.kubejs.script.ScriptManager"
 import { $PlayerEvent$SaveToFile, $PlayerEvent$SaveToFile$$Type } from "net.minecraftforge.event.entity.player.PlayerEvent$SaveToFile"
+import { $ScriptManager, $ScriptManager$$Type } from "dev.latvian.mods.kubejs.script.ScriptManager"
 import { $ZEarlyRender, $ZEarlyRender$$Type } from "org.violetmoon.zeta.client.event.play.ZEarlyRender"
 import { $TrackedDataContainer, $TrackedDataContainer$$Type } from "dev.corgitaco.dataanchor.data.TrackedDataContainer"
 import { $FallbackResourceManager$PackEntry, $FallbackResourceManager$PackEntry$$Type } from "net.minecraft.server.packs.resources.FallbackResourceManager$PackEntry"
@@ -4243,8 +4240,8 @@ import { $ChatType$Bound, $ChatType$Bound$$Type } from "net.minecraft.network.ch
 import { $GetEnchantmentLevelEvent, $GetEnchantmentLevelEvent$$Type } from "dev.shadowsoffire.placebo.events.GetEnchantmentLevelEvent"
 import { $ToIntFunction, $ToIntFunction$$Type } from "java.util.function.ToIntFunction"
 import { $BlendMode as $BlendMode$0, $BlendMode$$Type as $BlendMode$0$$Type } from "com.mojang.blaze3d.shaders.BlendMode"
-import { $RewardTable, $RewardTable$$Type } from "dev.ftb.mods.ftbquests.quest.loot.RewardTable"
 import { $PlayerAttackEvent, $PlayerAttackEvent$$Type } from "net.blay09.mods.balm.api.event.PlayerAttackEvent"
+import { $RewardTable, $RewardTable$$Type } from "dev.ftb.mods.ftbquests.quest.loot.RewardTable"
 import { $LerpingBossEvent, $LerpingBossEvent$$Type } from "net.minecraft.client.gui.components.LerpingBossEvent"
 import { $CapeData, $CapeData$$Type } from "io.redspace.ironspatreonlib.game.client.CapeData"
 import { $BaseLivingEntityBuilder, $BaseLivingEntityBuilder$$Type } from "net.liopyu.entityjs.builders.living.BaseLivingEntityBuilder"
@@ -4255,7 +4252,6 @@ import { $AbstractObject2ByteSortedMap, $AbstractObject2ByteSortedMap$$Type } fr
 import { $MapBlockMarker, $MapBlockMarker$$Type } from "net.mehvahdjukaar.moonlight.api.map.markers.MapBlockMarker"
 import { $ShapedRecipeSchema$ShapedRecipeJS, $ShapedRecipeSchema$ShapedRecipeJS$$Type } from "dev.latvian.mods.kubejs.recipe.schema.minecraft.ShapedRecipeSchema$ShapedRecipeJS"
 import { $BlockEvent$BlockToolModificationEvent, $BlockEvent$BlockToolModificationEvent$$Type } from "net.minecraftforge.event.level.BlockEvent$BlockToolModificationEvent"
-import { $DataHolder, $DataHolder$$Type } from "dev.tr7zw.notenoughanimations.versionless.animations.DataHolder"
 import { $DamageSources, $DamageSources$$Type } from "net.minecraft.world.damagesource.DamageSources"
 import { $ByteBufAllocator, $ByteBufAllocator$$Type } from "io.netty.buffer.ByteBufAllocator"
 import { $ClassDecl$Builder, $ClassDecl$Builder$$Type } from "zzzank.probejs.lang.typescript.code.member.ClassDecl$Builder"
@@ -4286,8 +4282,8 @@ import { $UnitContext, $UnitContext$$Type } from "dev.latvian.mods.unit.UnitCont
 import { $Llama, $Llama$$Type } from "net.minecraft.world.entity.animal.horse.Llama"
 import { $BaseEntityBuilder$SoundKeyFrameEventJS, $BaseEntityBuilder$SoundKeyFrameEventJS$$Type } from "net.liopyu.entityjs.builders.nonliving.BaseEntityBuilder$SoundKeyFrameEventJS"
 import { $Pair as $Pair$1, $Pair$$Type as $Pair$1$$Type } from "com.supermartijn642.fusion.api.util.Pair"
-import { $TickingBlockEntity, $TickingBlockEntity$$Type } from "net.minecraft.world.level.block.entity.TickingBlockEntity"
 import { $RenderTooltipEvent as $RenderTooltipEvent$0, $RenderTooltipEvent$$Type as $RenderTooltipEvent$0$$Type } from "net.minecraftforge.client.event.RenderTooltipEvent"
+import { $TickingBlockEntity, $TickingBlockEntity$$Type } from "net.minecraft.world.level.block.entity.TickingBlockEntity"
 import { $Pointer, $Pointer$$Type } from "org.lwjgl.system.Pointer"
 import { $OctahedralGroup, $OctahedralGroup$$Type } from "com.mojang.math.OctahedralGroup"
 import { $ProgramTypeAccessor, $ProgramTypeAccessor$$Type } from "net.irisshaders.iris.mixin.ProgramTypeAccessor"
@@ -4295,8 +4291,8 @@ import { $FloatTag, $FloatTag$$Type } from "net.minecraft.nbt.FloatTag"
 import { $Program, $Program$$Type } from "com.mojang.blaze3d.shaders.Program"
 import { $AbstractStringBuilder, $AbstractStringBuilder$$Type } from "java.lang.AbstractStringBuilder"
 import { $CriterionEvent, $CriterionEvent$$Type } from "com.anthonyhilyard.iceberg.events.CriterionEvent"
-import { $FilterableWeightedList, $FilterableWeightedList$$Type } from "io.github.apace100.calio.FilterableWeightedList"
 import { $PlayerEvent$ItemSmeltedEvent, $PlayerEvent$ItemSmeltedEvent$$Type } from "net.minecraftforge.event.entity.player.PlayerEvent$ItemSmeltedEvent"
+import { $FilterableWeightedList, $FilterableWeightedList$$Type } from "io.github.apace100.calio.FilterableWeightedList"
 import { $ValueLayout$OfLong, $ValueLayout$OfLong$$Type } from "java.lang.foreign.ValueLayout$OfLong"
 import { $ContextUtils$ArrowLivingEntityContext, $ContextUtils$ArrowLivingEntityContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ArrowLivingEntityContext"
 import { $PartEntityJS, $PartEntityJS$$Type } from "net.liopyu.entityjs.entities.nonliving.entityjs.PartEntityJS"
@@ -4381,8 +4377,8 @@ import { $ScreenKeyboardEvents$AfterKeyRelease, $ScreenKeyboardEvents$AfterKeyRe
 import { $ChronoUnit, $ChronoUnit$$Type } from "java.time.temporal.ChronoUnit"
 import { $TickEvent$RenderTickEvent, $TickEvent$RenderTickEvent$$Type } from "net.minecraftforge.event.TickEvent$RenderTickEvent"
 import { $EventJS, $EventJS$$Type } from "dev.latvian.mods.kubejs.event.EventJS"
-import { $ElderGuardian, $ElderGuardian$$Type } from "net.minecraft.world.entity.monster.ElderGuardian"
 import { $PlayerWakeUpEvent, $PlayerWakeUpEvent$$Type } from "net.minecraftforge.event.entity.player.PlayerWakeUpEvent"
+import { $ElderGuardian, $ElderGuardian$$Type } from "net.minecraft.world.entity.monster.ElderGuardian"
 import { $SpecialEquality, $SpecialEquality$$Type } from "dev.latvian.mods.rhino.util.SpecialEquality"
 import { $ItemBuilder$ReleaseUsingCallback, $ItemBuilder$ReleaseUsingCallback$$Type } from "dev.latvian.mods.kubejs.item.ItemBuilder$ReleaseUsingCallback"
 import { $BackendImage, $BackendImage$$Type } from "icyllis.arc3d.engine.BackendImage"
@@ -4392,8 +4388,8 @@ import { $WatchKey, $WatchKey$$Type } from "java.nio.file.WatchKey"
 import { $ServerPlayerKJS, $ServerPlayerKJS$$Type } from "dev.latvian.mods.kubejs.core.ServerPlayerKJS"
 import { $ContextUtils$RotLerpContext, $ContextUtils$RotLerpContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$RotLerpContext"
 import { $IIngredientManager, $IIngredientManager$$Type } from "mezz.jei.api.runtime.IIngredientManager"
-import { $ServerStatus, $ServerStatus$$Type } from "net.minecraft.network.protocol.status.ServerStatus"
 import { $LivingAttackEvent, $LivingAttackEvent$$Type } from "net.minecraftforge.event.entity.living.LivingAttackEvent"
+import { $ServerStatus, $ServerStatus$$Type } from "net.minecraft.network.protocol.status.ServerStatus"
 import { $MinecraftClientAccessor as $MinecraftClientAccessor$1, $MinecraftClientAccessor$$Type as $MinecraftClientAccessor$1$$Type } from "net.bettercombat.mixin.client.MinecraftClientAccessor"
 import { $FlushInfo$FinishedCallback, $FlushInfo$FinishedCallback$$Type } from "icyllis.arc3d.engine.FlushInfo$FinishedCallback"
 import { $IRecipeCategoriesLookup, $IRecipeCategoriesLookup$$Type } from "mezz.jei.api.recipe.IRecipeCategoriesLookup"
@@ -4426,8 +4422,8 @@ import { $WorldBorder, $WorldBorder$$Type } from "net.minecraft.world.level.bord
 import { $TrapezoidHeight, $TrapezoidHeight$$Type } from "net.minecraft.world.level.levelgen.heightproviders.TrapezoidHeight"
 import { $Env, $Env$$Type } from "dev.architectury.utils.Env"
 import { $ButtonAccessor, $ButtonAccessor$$Type } from "net.mehvahdjukaar.moonlight.core.mixins.forge.ButtonAccessor"
-import { $RecipeCollection, $RecipeCollection$$Type } from "net.minecraft.client.gui.screens.recipebook.RecipeCollection"
 import { $MobEffectEvent$Expired, $MobEffectEvent$Expired$$Type } from "net.minecraftforge.event.entity.living.MobEffectEvent$Expired"
+import { $RecipeCollection, $RecipeCollection$$Type } from "net.minecraft.client.gui.screens.recipebook.RecipeCollection"
 import { $OutputStream, $OutputStream$$Type } from "java.io.OutputStream"
 import { $SpellCastingMobJS, $SpellCastingMobJS$$Type } from "com.squoshi.irons_spells_js.compat.entityjs.entity.SpellCastingMobJS"
 import { $BlockTintCache, $BlockTintCache$$Type } from "net.minecraft.client.color.block.BlockTintCache"
@@ -4468,8 +4464,8 @@ import { $Type$FieldNotFoundException, $Type$FieldNotFoundException$$Type } from
 import { $ArmorItemBuilder$Boots, $ArmorItemBuilder$Boots$$Type } from "dev.latvian.mods.kubejs.item.custom.ArmorItemBuilder$Boots"
 import { $Statement, $Statement$$Type } from "icyllis.arc3d.compiler.tree.Statement"
 import { $EntitySubPredicate$Type, $EntitySubPredicate$Type$$Type } from "net.minecraft.advancements.critereon.EntitySubPredicate$Type"
-import { $RuleBlockEntityModifierType, $RuleBlockEntityModifierType$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.rule.blockentity.RuleBlockEntityModifierType"
 import { $LivingHealEvent as $LivingHealEvent$0, $LivingHealEvent$$Type as $LivingHealEvent$0$$Type } from "net.minecraftforge.event.entity.living.LivingHealEvent"
+import { $RuleBlockEntityModifierType, $RuleBlockEntityModifierType$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.rule.blockentity.RuleBlockEntityModifierType"
 import { $ProfilerFiller, $ProfilerFiller$$Type } from "net.minecraft.util.profiling.ProfilerFiller"
 import { $View$OnDragListener, $View$OnDragListener$$Type } from "icyllis.modernui.view.View$OnDragListener"
 import { $DoubleList, $DoubleList$$Type } from "it.unimi.dsi.fastutil.doubles.DoubleList"
@@ -4493,8 +4489,8 @@ import { $MouseHandler, $MouseHandler$$Type } from "net.minecraft.client.MouseHa
 import { $Currency$CurrencyUsage, $Currency$CurrencyUsage$$Type } from "com.ibm.icu.util.Currency$CurrencyUsage"
 import { $ResourceLocationConfigProperty, $ResourceLocationConfigProperty$$Type } from "net.blay09.mods.balm.api.config.schema.builder.ResourceLocationConfigProperty"
 import { $Button as $Button$0, $Button$$Type as $Button$0$$Type } from "net.minecraft.client.gui.components.Button"
-import { $Double2DoubleFunction, $Double2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2DoubleFunction"
 import { $GeoRenderEvent$Entity$CompileRenderLayers, $GeoRenderEvent$Entity$CompileRenderLayers$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Entity$CompileRenderLayers"
+import { $Double2DoubleFunction, $Double2DoubleFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2DoubleFunction"
 import { $EntitySubPredicate, $EntitySubPredicate$$Type } from "net.minecraft.advancements.critereon.EntitySubPredicate"
 import { $FovUpdateEvent, $FovUpdateEvent$$Type } from "net.blay09.mods.balm.api.event.client.FovUpdateEvent"
 import { $ClientboundBlockEventPacket, $ClientboundBlockEventPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEventPacket"
@@ -4514,8 +4510,8 @@ import { $Bucketable, $Bucketable$$Type } from "net.minecraft.world.entity.anima
 import { $TextureAccess as $TextureAccess$0, $TextureAccess$$Type as $TextureAccess$0$$Type } from "toni.sodiumextras.foundation.darkness.accessors.TextureAccess"
 import { $ITooltipBuilder, $ITooltipBuilder$$Type } from "mezz.jei.api.gui.builder.ITooltipBuilder"
 import { $SpellSelectionManager$SelectionOption, $SpellSelectionManager$SelectionOption$$Type } from "io.redspace.ironsspellbooks.api.magic.SpellSelectionManager$SelectionOption"
-import { $FrogAttackablesSensor, $FrogAttackablesSensor$$Type } from "net.minecraft.world.entity.ai.sensing.FrogAttackablesSensor"
 import { $ScreenEvent$KeyInput, $ScreenEvent$KeyInput$$Type } from "net.minecraftforge.client.event.ScreenEvent$KeyInput"
+import { $FrogAttackablesSensor, $FrogAttackablesSensor$$Type } from "net.minecraft.world.entity.ai.sensing.FrogAttackablesSensor"
 import { $WoodTypeMixin, $WoodTypeMixin$$Type } from "com.dannbrown.deltaboxlib.mixin.woodType.WoodTypeMixin"
 import { $ArtifactRepositoryPolicy, $ArtifactRepositoryPolicy$$Type } from "org.apache.maven.artifact.repository.ArtifactRepositoryPolicy"
 import { $ExtraLivingEntityData, $ExtraLivingEntityData$$Type } from "com.mega.endinglib.util.mixin.data_expand.ExtraLivingEntityData"
@@ -4575,15 +4571,15 @@ import { $EnchantmentCategory, $EnchantmentCategory$$Type } from "net.minecraft.
 import { $ScriptPackInfo, $ScriptPackInfo$$Type } from "dev.latvian.mods.kubejs.script.ScriptPackInfo"
 import { $ParCoolConfig$Item, $ParCoolConfig$Item$$Type } from "com.alrex.parcool.config.ParCoolConfig$Item"
 import { $BedItem, $BedItem$$Type } from "net.minecraft.world.item.BedItem"
-import { $ItemComponentManager$ItemUseCondition, $ItemComponentManager$ItemUseCondition$$Type } from "com.mega.endinglib.api.item.component.ItemComponentManager$ItemUseCondition"
 import { $ScreenEvent$MouseScrolled$Post, $ScreenEvent$MouseScrolled$Post$$Type } from "net.minecraftforge.client.event.ScreenEvent$MouseScrolled$Post"
+import { $ItemComponentManager$ItemUseCondition, $ItemComponentManager$ItemUseCondition$$Type } from "com.mega.endinglib.api.item.component.ItemComponentManager$ItemUseCondition"
 import { $ClientboundSetBorderWarningDelayPacket, $ClientboundSetBorderWarningDelayPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundSetBorderWarningDelayPacket"
 import { $IZetaConditionSerializer, $IZetaConditionSerializer$$Type } from "org.violetmoon.zeta.recipe.IZetaConditionSerializer"
 import { $PipelineKey, $PipelineKey$$Type } from "icyllis.arc3d.engine.PipelineKey"
 import { $PrintWriter, $PrintWriter$$Type } from "java.io.PrintWriter"
 import { $ColorFilter, $ColorFilter$$Type } from "icyllis.modernui.graphics.ColorFilter"
-import { $EventLivingRenderer$PreSetupAnimations, $EventLivingRenderer$PreSetupAnimations$$Type } from "com.github.alexthe666.citadel.client.event.EventLivingRenderer$PreSetupAnimations"
 import { $PowerDeserializationEvent, $PowerDeserializationEvent$$Type } from "io.github.apace100.apoli.integration.PowerDeserializationEvent"
+import { $EventLivingRenderer$PreSetupAnimations, $EventLivingRenderer$PreSetupAnimations$$Type } from "com.github.alexthe666.citadel.client.event.EventLivingRenderer$PreSetupAnimations"
 import { $ParticleEngineAccessor, $ParticleEngineAccessor$$Type } from "punchy.mixin.client.accessor.ParticleEngineAccessor"
 import { $EnumConfig, $EnumConfig$$Type } from "dev.ftb.mods.ftblibrary.config.EnumConfig"
 import { $WizardRecoverGoal, $WizardRecoverGoal$$Type } from "io.redspace.ironsspellbooks.entity.mobs.goals.WizardRecoverGoal"
@@ -4610,8 +4606,8 @@ import { $TimerQueue, $TimerQueue$$Type } from "net.minecraft.world.level.timers
 import { $WidgetLayout, $WidgetLayout$$Type } from "dev.ftb.mods.ftblibrary.ui.WidgetLayout"
 import { $EntityDataSerializer, $EntityDataSerializer$$Type } from "net.minecraft.network.syncher.EntityDataSerializer"
 import { $SurfaceRules$SurfaceRule, $SurfaceRules$SurfaceRule$$Type } from "net.minecraft.world.level.levelgen.SurfaceRules$SurfaceRule"
-import { $ContextUtils$EEntityFallDamageContext, $ContextUtils$EEntityFallDamageContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EEntityFallDamageContext"
 import { $HUDOverlayEvent$HealthRestored, $HUDOverlayEvent$HealthRestored$$Type } from "squeek.appleskin.api.event.HUDOverlayEvent$HealthRestored"
+import { $ContextUtils$EEntityFallDamageContext, $ContextUtils$EEntityFallDamageContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EEntityFallDamageContext"
 import { $BiomeModifier, $BiomeModifier$$Type } from "net.minecraftforge.common.world.BiomeModifier"
 import { $PumpkinBlock, $PumpkinBlock$$Type } from "net.minecraft.world.level.block.PumpkinBlock"
 import { $TelemetryPropertyMap$Builder, $TelemetryPropertyMap$Builder$$Type } from "net.minecraft.client.telemetry.TelemetryPropertyMap$Builder"
@@ -4626,8 +4622,8 @@ import { $Registry, $Registry$$Type } from "net.minecraft.core.Registry"
 import { $ShulkerBoxBlockEntity, $ShulkerBoxBlockEntity$$Type } from "net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity"
 import { $Short2ByteFunction, $Short2ByteFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2ByteFunction"
 import { $Dynamic2CommandExceptionType$Function, $Dynamic2CommandExceptionType$Function$$Type } from "com.mojang.brigadier.exceptions.Dynamic2CommandExceptionType$Function"
-import { $DiscreteVSAccess, $DiscreteVSAccess$$Type } from "malte0811.ferritecore.mixin.blockstatecache.DiscreteVSAccess"
 import { $PlayerOpenMenuEvent, $PlayerOpenMenuEvent$$Type } from "net.blay09.mods.balm.api.event.PlayerOpenMenuEvent"
+import { $DiscreteVSAccess, $DiscreteVSAccess$$Type } from "malte0811.ferritecore.mixin.blockstatecache.DiscreteVSAccess"
 import { $MobFilter, $MobFilter$$Type } from "dev.latvian.mods.kubejs.level.gen.filter.mob.MobFilter"
 import { $IntStream$Builder, $IntStream$Builder$$Type } from "java.util.stream.IntStream$Builder"
 import { $SpawnerBlockEntity, $SpawnerBlockEntity$$Type } from "net.minecraft.world.level.block.entity.SpawnerBlockEntity"
@@ -4725,8 +4721,8 @@ import { $FuelHandler, $FuelHandler$$Type } from "org.violetmoon.zeta.util.handl
 import { $DynamicCommandExceptionType, $DynamicCommandExceptionType$$Type } from "com.mojang.brigadier.exceptions.DynamicCommandExceptionType"
 import { $BlockStateKJS, $BlockStateKJS$$Type } from "dev.latvian.mods.kubejs.core.BlockStateKJS"
 import { $LayoutTransition, $LayoutTransition$$Type } from "icyllis.modernui.animation.LayoutTransition"
-import { $Heightmap$Types, $Heightmap$Types$$Type } from "net.minecraft.world.level.levelgen.Heightmap$Types"
 import { $BlockEvent$BreakEvent, $BlockEvent$BreakEvent$$Type } from "net.minecraftforge.event.level.BlockEvent$BreakEvent"
+import { $Heightmap$Types, $Heightmap$Types$$Type } from "net.minecraft.world.level.levelgen.Heightmap$Types"
 import { $ServerFunctionManager$TraceCallbacks, $ServerFunctionManager$TraceCallbacks$$Type } from "net.minecraft.server.ServerFunctionManager$TraceCallbacks"
 import { $SkeletonJSBuilder, $SkeletonJSBuilder$$Type } from "net.liopyu.entityjs.builders.living.vanilla.SkeletonJSBuilder"
 import { $DensityFunctions$PureTransformer, $DensityFunctions$PureTransformer$$Type } from "net.minecraft.world.level.levelgen.DensityFunctions$PureTransformer"
@@ -4765,9 +4761,9 @@ import { $ContextUtils$EntityBlockPosContext, $ContextUtils$EntityBlockPosContex
 import { $ComponentMapBuilder, $ComponentMapBuilder$$Type } from "com.mega.endinglib.api.item.component.ComponentMapBuilder"
 import { $IFocusFactory, $IFocusFactory$$Type } from "mezz.jei.api.recipe.IFocusFactory"
 import { $Shulker, $Shulker$$Type } from "net.minecraft.world.entity.monster.Shulker"
+import { $LivingExperienceDropEvent, $LivingExperienceDropEvent$$Type } from "net.minecraftforge.event.entity.living.LivingExperienceDropEvent"
 import { $GraphicsPipeline, $GraphicsPipeline$$Type } from "icyllis.arc3d.engine.GraphicsPipeline"
 import { $Tickable, $Tickable$$Type } from "net.minecraft.client.renderer.texture.Tickable"
-import { $LivingExperienceDropEvent, $LivingExperienceDropEvent$$Type } from "net.minecraftforge.event.entity.living.LivingExperienceDropEvent"
 import { $ModelBakery$LoadedJson, $ModelBakery$LoadedJson$$Type } from "net.minecraft.client.resources.model.ModelBakery$LoadedJson"
 import { $EventMergeStructureSpawns, $EventMergeStructureSpawns$$Type } from "com.github.alexthe666.citadel.server.event.EventMergeStructureSpawns"
 import { $ClientboundMoveVehiclePacket, $ClientboundMoveVehiclePacket$$Type } from "net.minecraft.network.protocol.game.ClientboundMoveVehiclePacket"
@@ -4904,8 +4900,8 @@ import { $MerchantMenu, $MerchantMenu$$Type } from "net.minecraft.world.inventor
 import { $ServerboundEntityTagQuery, $ServerboundEntityTagQuery$$Type } from "net.minecraft.network.protocol.game.ServerboundEntityTagQuery"
 import { $Function as $Function$0, $Function$$Type as $Function$0$$Type } from "com.google.common.base.Function"
 import { $LookControlJS, $LookControlJS$$Type } from "net.liopyu.entityjs.util.ai.LookControlJS"
-import { $ImmutableMap, $ImmutableMap$$Type } from "com.google.common.collect.ImmutableMap"
 import { $PlayerFlyableFallEvent, $PlayerFlyableFallEvent$$Type } from "net.minecraftforge.event.entity.player.PlayerFlyableFallEvent"
+import { $ImmutableMap, $ImmutableMap$$Type } from "com.google.common.collect.ImmutableMap"
 import { $RenderType$OutlineProperty, $RenderType$OutlineProperty$$Type } from "net.minecraft.client.renderer.RenderType$OutlineProperty"
 import { $App, $App$$Type } from "com.mojang.datafixers.kinds.App"
 import { $Boat$Status, $Boat$Status$$Type } from "net.minecraft.world.entity.vehicle.Boat$Status"
@@ -4916,10 +4912,10 @@ import { $Bee, $Bee$$Type } from "net.minecraft.world.entity.animal.Bee"
 import { $Climate$RTree$Leaf, $Climate$RTree$Leaf$$Type } from "net.minecraft.world.level.biome.Climate$RTree$Leaf"
 import { $BlockModelBuilder, $BlockModelBuilder$$Type } from "net.minecraftforge.client.model.generators.BlockModelBuilder"
 import { $FireBlockAccessor, $FireBlockAccessor$$Type } from "com.Polarice3.Goety.mixin.FireBlockAccessor"
-import { $ParsePosition, $ParsePosition$$Type } from "java.text.ParsePosition"
 import { $EnchantmentLevelSetEvent, $EnchantmentLevelSetEvent$$Type } from "net.minecraftforge.event.enchanting.EnchantmentLevelSetEvent"
-import { $MultiPackResourceManager, $MultiPackResourceManager$$Type } from "net.minecraft.server.packs.resources.MultiPackResourceManager"
+import { $ParsePosition, $ParsePosition$$Type } from "java.text.ParsePosition"
 import { $Calendar as $Calendar$0, $Calendar$$Type as $Calendar$0$$Type } from "com.ibm.icu.util.Calendar"
+import { $MultiPackResourceManager, $MultiPackResourceManager$$Type } from "net.minecraft.server.packs.resources.MultiPackResourceManager"
 import { $PowerLoadEvent$Pre, $PowerLoadEvent$Pre$$Type } from "io.github.apace100.apoli.integration.PowerLoadEvent$Pre"
 import { $Deque, $Deque$$Type } from "java.util.Deque"
 import { $ServerStartingEvent as $ServerStartingEvent$0, $ServerStartingEvent$$Type as $ServerStartingEvent$0$$Type } from "net.minecraftforge.event.server.ServerStartingEvent"
@@ -4960,8 +4956,8 @@ import { $ScaleType, $ScaleType$$Type } from "virtuoel.pehkui.api.ScaleType"
 import { $PackOutput, $PackOutput$$Type } from "net.minecraft.data.PackOutput"
 import { $SpreadingSnowyDirtBlock, $SpreadingSnowyDirtBlock$$Type } from "net.minecraft.world.level.block.SpreadingSnowyDirtBlock"
 import { $GeoRenderLayer, $GeoRenderLayer$$Type } from "software.bernie.geckolib.renderer.layer.GeoRenderLayer"
-import { $AzCustomInstructionKeyframeEvent, $AzCustomInstructionKeyframeEvent$$Type } from "mod.azure.azurelib.animation.event.AzCustomInstructionKeyframeEvent"
 import { $EntityAddedEvent, $EntityAddedEvent$$Type } from "net.blay09.mods.balm.api.event.EntityAddedEvent"
+import { $AzCustomInstructionKeyframeEvent, $AzCustomInstructionKeyframeEvent$$Type } from "mod.azure.azurelib.animation.event.AzCustomInstructionKeyframeEvent"
 import { $IEMFModelNameContainer, $IEMFModelNameContainer$$Type } from "traben.entity_model_features.models.IEMFModelNameContainer"
 import { $EntityDefinitionDuck, $EntityDefinitionDuck$$Type } from "net.lixir.vminus.api.registry.definition.duck.EntityDefinitionDuck"
 import { $SuspiciousEffectHolder, $SuspiciousEffectHolder$$Type } from "net.minecraft.world.level.block.SuspiciousEffectHolder"
@@ -4981,8 +4977,8 @@ import { $BatJSBuilder, $BatJSBuilder$$Type } from "net.liopyu.entityjs.builders
 import { $EntityDataAccessor, $EntityDataAccessor$$Type } from "net.minecraft.network.syncher.EntityDataAccessor"
 import { $ZoneId, $ZoneId$$Type } from "java.time.ZoneId"
 import { $Potion, $Potion$$Type } from "net.minecraft.world.item.alchemy.Potion"
-import { $Node$SymbolKind, $Node$SymbolKind$$Type } from "icyllis.arc3d.compiler.tree.Node$SymbolKind"
 import { $PreCopySpecialAttackFromBladeEvent, $PreCopySpecialAttackFromBladeEvent$$Type } from "mods.flammpfeil.slashblade.event.bladestand.PreCopySpecialAttackFromBladeEvent"
+import { $Node$SymbolKind, $Node$SymbolKind$$Type } from "icyllis.arc3d.compiler.tree.Node$SymbolKind"
 import { $RemappableRegistry, $RemappableRegistry$$Type } from "net.fabricmc.fabric.impl.registry.sync.RemappableRegistry"
 import { $BambooStalkBlock, $BambooStalkBlock$$Type } from "net.minecraft.world.level.block.BambooStalkBlock"
 import { $Clazz, $Clazz$$Type } from "zzzank.probejs.lang.java.clazz.Clazz"
@@ -5073,10 +5069,10 @@ import { $ChapterImage, $ChapterImage$$Type } from "dev.ftb.mods.ftbquests.quest
 import { $DataSenderKJS, $DataSenderKJS$$Type } from "dev.latvian.mods.kubejs.core.DataSenderKJS"
 import { $ClientboundSetCarriedItemPacket, $ClientboundSetCarriedItemPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundSetCarriedItemPacket"
 import { $EntityTickList, $EntityTickList$$Type } from "net.minecraft.world.level.entity.EntityTickList"
+import { $PlayerXpEvent$XpChange, $PlayerXpEvent$XpChange$$Type } from "net.minecraftforge.event.entity.player.PlayerXpEvent$XpChange"
 import { $TagVisitor, $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
 import { $CampfireBlockEntity, $CampfireBlockEntity$$Type } from "net.minecraft.world.level.block.entity.CampfireBlockEntity"
 import { $OceanRuinStructure$Type, $OceanRuinStructure$Type$$Type } from "net.minecraft.world.level.levelgen.structure.structures.OceanRuinStructure$Type"
-import { $PlayerXpEvent$XpChange, $PlayerXpEvent$XpChange$$Type } from "net.minecraftforge.event.entity.player.PlayerXpEvent$XpChange"
 import { $DoublePredicate as $DoublePredicate$0, $DoublePredicate$$Type as $DoublePredicate$0$$Type } from "java.util.function.DoublePredicate"
 import { $PlayerEvent$PlayerRespawnEvent, $PlayerEvent$PlayerRespawnEvent$$Type } from "net.minecraftforge.event.entity.player.PlayerEvent$PlayerRespawnEvent"
 import { $ScreenMouseEvent$Click$Pre, $ScreenMouseEvent$Click$Pre$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenMouseEvent$Click$Pre"
@@ -5104,13 +5100,13 @@ import { $ForgeZModulesReady, $ForgeZModulesReady$$Type } from "org.violetmoon.z
 import { $VertexFormatElement$Type, $VertexFormatElement$Type$$Type } from "com.mojang.blaze3d.vertex.VertexFormatElement$Type"
 import { $SequentialEntry$Builder, $SequentialEntry$Builder$$Type } from "net.minecraft.world.level.storage.loot.entries.SequentialEntry$Builder"
 import { $DensityFunction$NoiseHolder, $DensityFunction$NoiseHolder$$Type } from "net.minecraft.world.level.levelgen.DensityFunction$NoiseHolder"
-import { $LerpingModel, $LerpingModel$$Type } from "net.minecraft.world.entity.LerpingModel"
 import { $PistonEvent$Pre, $PistonEvent$Pre$$Type } from "net.minecraftforge.event.level.PistonEvent$Pre"
+import { $LerpingModel, $LerpingModel$$Type } from "net.minecraft.world.entity.LerpingModel"
 import { $SimpleJsonResourceReloadListenerAccessor, $SimpleJsonResourceReloadListenerAccessor$$Type } from "net.lixir.vminus.mixins.server.SimpleJsonResourceReloadListenerAccessor"
 import { $IronGolemEntityAccessor, $IronGolemEntityAccessor$$Type } from "tocraft.walkers.mixin.accessor.IronGolemEntityAccessor"
 import { $NbtCompoundExtensions, $NbtCompoundExtensions$$Type } from "virtuoel.pehkui.util.NbtCompoundExtensions"
-import { $ResolverStyle, $ResolverStyle$$Type } from "java.time.format.ResolverStyle"
 import { $RegisterClientCommandsEvent, $RegisterClientCommandsEvent$$Type } from "net.minecraftforge.client.event.RegisterClientCommandsEvent"
+import { $ResolverStyle, $ResolverStyle$$Type } from "java.time.format.ResolverStyle"
 import { $VertexFormatAccessor, $VertexFormatAccessor$$Type } from "de.mrjulsen.mcdragonlib.mixin.VertexFormatAccessor"
 import { $SimpleHarvestEvent, $SimpleHarvestEvent$$Type } from "org.violetmoon.quark.api.event.SimpleHarvestEvent"
 import { $ObjIntConsumer, $ObjIntConsumer$$Type } from "java.util.function.ObjIntConsumer"
@@ -5158,8 +5154,8 @@ import { $NoiseGeneratorSettings, $NoiseGeneratorSettings$$Type } from "net.mine
 import { $Theme, $Theme$$Type } from "dev.ftb.mods.ftblibrary.ui.Theme"
 import { $IdMappingEvent$IdRemapping, $IdMappingEvent$IdRemapping$$Type } from "net.minecraftforge.registries.IdMappingEvent$IdRemapping"
 import { $ELServerCameraManager, $ELServerCameraManager$$Type } from "com.mega.endinglib.client.advanced.ELServerCameraManager"
-import { $Display$TextDisplay$LineSplitter, $Display$TextDisplay$LineSplitter$$Type } from "net.minecraft.world.entity.Display$TextDisplay$LineSplitter"
 import { $LivingPackSizeEvent, $LivingPackSizeEvent$$Type } from "net.minecraftforge.event.entity.living.LivingPackSizeEvent"
+import { $Display$TextDisplay$LineSplitter, $Display$TextDisplay$LineSplitter$$Type } from "net.minecraft.world.entity.Display$TextDisplay$LineSplitter"
 import { $NoiseBasedStateProvider, $NoiseBasedStateProvider$$Type } from "net.minecraft.world.level.levelgen.feature.stateproviders.NoiseBasedStateProvider"
 import { $VertexGeomBuilder, $VertexGeomBuilder$$Type } from "icyllis.arc3d.granite.shading.VertexGeomBuilder"
 import { $Bee$BeeGoToKnownFlowerGoal, $Bee$BeeGoToKnownFlowerGoal$$Type } from "net.minecraft.world.entity.animal.Bee$BeeGoToKnownFlowerGoal"
@@ -5188,8 +5184,8 @@ import { $BlastFurnaceBlock, $BlastFurnaceBlock$$Type } from "net.minecraft.worl
 import { $RegisterKeyMappingsEvent, $RegisterKeyMappingsEvent$$Type } from "net.minecraftforge.client.event.RegisterKeyMappingsEvent"
 import { $ArchitecturyFluidAttributes, $ArchitecturyFluidAttributes$$Type } from "dev.architectury.core.fluid.ArchitecturyFluidAttributes"
 import { $BasicItemJS$Builder, $BasicItemJS$Builder$$Type } from "dev.latvian.mods.kubejs.item.custom.BasicItemJS$Builder"
-import { $RandomPatchFeature, $RandomPatchFeature$$Type } from "net.minecraft.world.level.levelgen.feature.RandomPatchFeature"
 import { $LivingBreatheEvent, $LivingBreatheEvent$$Type } from "net.minecraftforge.event.entity.living.LivingBreatheEvent"
+import { $RandomPatchFeature, $RandomPatchFeature$$Type } from "net.minecraft.world.level.levelgen.feature.RandomPatchFeature"
 import { $LootTable, $LootTable$$Type } from "net.minecraft.world.level.storage.loot.LootTable"
 import { $EggItem, $EggItem$$Type } from "net.minecraft.world.item.EggItem"
 import { $ExplosionEventJS, $ExplosionEventJS$$Type } from "dev.latvian.mods.kubejs.level.ExplosionEventJS"
@@ -5359,9 +5355,9 @@ import { $EntityJoinLevelEvent, $EntityJoinLevelEvent$$Type } from "net.minecraf
 import { $CustomCondition$Test, $CustomCondition$Test$$Type } from "snownee.lychee.core.contextual.CustomCondition$Test"
 import { $NetworkEvent$RegistrationChangeType, $NetworkEvent$RegistrationChangeType$$Type } from "net.minecraftforge.network.NetworkEvent$RegistrationChangeType"
 import { $BehaviorEnforcer$Marker, $BehaviorEnforcer$Marker$$Type } from "com.alrex.parcool.common.action.BehaviorEnforcer$Marker"
+import { $ForgeZRecipeCrawl$Reset, $ForgeZRecipeCrawl$Reset$$Type } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Reset"
 import { $Watchable, $Watchable$$Type } from "java.nio.file.Watchable"
 import { $IRecipeLayoutDrawable, $IRecipeLayoutDrawable$$Type } from "mezz.jei.api.gui.IRecipeLayoutDrawable"
-import { $ForgeZRecipeCrawl$Reset, $ForgeZRecipeCrawl$Reset$$Type } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Reset"
 import { $Cat, $Cat$$Type } from "net.minecraft.world.entity.animal.Cat"
 import { $BlockBuilderProvider, $BlockBuilderProvider$$Type } from "dev.latvian.mods.kubejs.core.BlockBuilderProvider"
 import { $FullChunkStatus, $FullChunkStatus$$Type } from "net.minecraft.server.level.FullChunkStatus"
@@ -5479,9 +5475,9 @@ import { $MagicData$IExtendedEntity, $MagicData$IExtendedEntity$$Type } from "io
 import { $ClassDesc, $ClassDesc$$Type } from "java.lang.constant.ClassDesc"
 import { $AbstractSchoolingFish, $AbstractSchoolingFish$$Type } from "net.minecraft.world.entity.animal.AbstractSchoolingFish"
 import { $Timestamp, $Timestamp$$Type } from "java.security.Timestamp"
+import { $ModConfigEvent, $ModConfigEvent$$Type } from "net.minecraftforge.fml.event.config.ModConfigEvent"
 import { $GatheringByteChannel, $GatheringByteChannel$$Type } from "java.nio.channels.GatheringByteChannel"
 import { $MultifaceSpreader$SpreadPredicate, $MultifaceSpreader$SpreadPredicate$$Type } from "net.minecraft.world.level.block.MultifaceSpreader$SpreadPredicate"
-import { $ModConfigEvent, $ModConfigEvent$$Type } from "net.minecraftforge.fml.event.config.ModConfigEvent"
 import { $SingletonArgumentInfo$Template, $SingletonArgumentInfo$Template$$Type } from "net.minecraft.commands.synchronization.SingletonArgumentInfo$Template"
 import { $ClientboundLevelChunkPacketData, $ClientboundLevelChunkPacketData$$Type } from "net.minecraft.network.protocol.game.ClientboundLevelChunkPacketData"
 import { $Node$StatementKind, $Node$StatementKind$$Type } from "icyllis.arc3d.compiler.tree.Node$StatementKind"
@@ -5520,8 +5516,8 @@ import { $VertexFormat$IndexType, $VertexFormat$IndexType$$Type } from "com.moja
 import { $CaveSurface, $CaveSurface$$Type } from "net.minecraft.world.level.levelgen.placement.CaveSurface"
 import { $EntityType, $EntityType$$Type } from "net.minecraft.world.entity.EntityType"
 import { $Criterion, $Criterion$$Type } from "net.minecraft.advancements.Criterion"
-import { $Excludable, $Excludable$$Type } from "dev.ftb.mods.ftbquests.quest.Excludable"
 import { $GeoRenderEvent$Block$CompileRenderLayers, $GeoRenderEvent$Block$CompileRenderLayers$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Block$CompileRenderLayers"
+import { $Excludable, $Excludable$$Type } from "dev.ftb.mods.ftbquests.quest.Excludable"
 import { $ClientboundLevelEventPacket, $ClientboundLevelEventPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundLevelEventPacket"
 import { $Locale$IsoCountryCode, $Locale$IsoCountryCode$$Type } from "java.util.Locale$IsoCountryCode"
 import { $ViewTreeObserver, $ViewTreeObserver$$Type } from "icyllis.modernui.view.ViewTreeObserver"
@@ -5579,8 +5575,8 @@ import { $FileSystem, $FileSystem$$Type } from "java.nio.file.FileSystem"
 import { $Short2CharFunction, $Short2CharFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2CharFunction"
 import { $WindowEvent, $WindowEvent$$Type } from "java.awt.event.WindowEvent"
 import { $RecipeManager, $RecipeManager$$Type } from "net.minecraft.world.item.crafting.RecipeManager"
-import { $BoundingBoxAccessor, $BoundingBoxAccessor$$Type } from "com.github.L_Ender.cataclysm.mixin.accessor.BoundingBoxAccessor"
 import { $GeoRenderEvent$Object$CompileRenderLayers, $GeoRenderEvent$Object$CompileRenderLayers$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Object$CompileRenderLayers"
+import { $BoundingBoxAccessor, $BoundingBoxAccessor$$Type } from "com.github.L_Ender.cataclysm.mixin.accessor.BoundingBoxAccessor"
 import { $RenderLevelStageEvent$RegisterStageEvent, $RenderLevelStageEvent$RegisterStageEvent$$Type } from "net.minecraftforge.client.event.RenderLevelStageEvent$RegisterStageEvent"
 import { $Spliterator, $Spliterator$$Type } from "java.util.Spliterator"
 import { $FlowerPotBlock, $FlowerPotBlock$$Type } from "net.minecraft.world.level.block.FlowerPotBlock"
@@ -5595,9 +5591,9 @@ import { $DamageType, $DamageType$$Type } from "net.minecraft.world.damagesource
 import { $Stack as $Stack$0, $Stack$$Type as $Stack$0$$Type } from "java.util.Stack"
 import { $EventReplaceBiome, $EventReplaceBiome$$Type } from "com.github.alexthe666.citadel.server.event.EventReplaceBiome"
 import { $TextureSheetParticle, $TextureSheetParticle$$Type } from "net.minecraft.client.particle.TextureSheetParticle"
+import { $RenderTooltipEvent$Pre as $RenderTooltipEvent$Pre$0, $RenderTooltipEvent$Pre$$Type as $RenderTooltipEvent$Pre$0$$Type } from "net.minecraftforge.client.event.RenderTooltipEvent$Pre"
 import { $ConcurrentMap, $ConcurrentMap$$Type } from "java.util.concurrent.ConcurrentMap"
 import { $BasePressurePlateBlock, $BasePressurePlateBlock$$Type } from "net.minecraft.world.level.block.BasePressurePlateBlock"
-import { $RenderTooltipEvent$Pre as $RenderTooltipEvent$Pre$0, $RenderTooltipEvent$Pre$$Type as $RenderTooltipEvent$Pre$0$$Type } from "net.minecraftforge.client.event.RenderTooltipEvent$Pre"
 import { $ConfiguredEnum, $ConfiguredEnum$$Type } from "net.blay09.mods.balm.api.config.schema.ConfiguredEnum"
 import { $LivingEntityRenderer, $LivingEntityRenderer$$Type } from "net.minecraft.client.renderer.entity.LivingEntityRenderer"
 import { $InscribeSpellEvent, $InscribeSpellEvent$$Type } from "io.redspace.ironsspellbooks.api.events.InscribeSpellEvent"
@@ -5607,8 +5603,8 @@ import { $SpellPreCastEventJS, $SpellPreCastEventJS$$Type } from "com.squoshi.ir
 import { $RenderLivingEvent$Post, $RenderLivingEvent$Post$$Type } from "net.minecraftforge.client.event.RenderLivingEvent$Post"
 import { $PlayerAdvancementsAccessor, $PlayerAdvancementsAccessor$$Type } from "dev.uncandango.alltheleaks.mixin.core.accessor.PlayerAdvancementsAccessor"
 import { $PipeBlock, $PipeBlock$$Type } from "net.minecraft.world.level.block.PipeBlock"
-import { $ListenableRegistry, $ListenableRegistry$$Type } from "net.fabricmc.fabric.impl.registry.sync.ListenableRegistry"
 import { $TickEvent$ServerTickEvent, $TickEvent$ServerTickEvent$$Type } from "net.minecraftforge.event.TickEvent$ServerTickEvent"
+import { $ListenableRegistry, $ListenableRegistry$$Type } from "net.fabricmc.fabric.impl.registry.sync.ListenableRegistry"
 import { $RhinoException, $RhinoException$$Type } from "dev.latvian.mods.rhino.RhinoException"
 import { $NearestVisibleLivingEntities, $NearestVisibleLivingEntities$$Type } from "net.minecraft.world.entity.ai.memory.NearestVisibleLivingEntities"
 import { $ChestLootEventJS, $ChestLootEventJS$$Type } from "dev.latvian.mods.kubejs.loot.ChestLootEventJS"
@@ -5698,8 +5694,8 @@ import { $IStackHelper, $IStackHelper$$Type } from "mezz.jei.api.helpers.IStackH
 import { $RewardType, $RewardType$$Type } from "dev.ftb.mods.ftbquests.quest.reward.RewardType"
 import { $NetworkEvent$PacketDispatcher, $NetworkEvent$PacketDispatcher$$Type } from "net.minecraftforge.network.NetworkEvent$PacketDispatcher"
 import { $ServerboundPlayerInputPacket, $ServerboundPlayerInputPacket$$Type } from "net.minecraft.network.protocol.game.ServerboundPlayerInputPacket"
-import { $IKeyConflictContext, $IKeyConflictContext$$Type } from "net.minecraftforge.client.settings.IKeyConflictContext"
 import { $GunFireEvent$Post, $GunFireEvent$Post$$Type } from "top.ribs.scguns.event.GunFireEvent$Post"
+import { $IKeyConflictContext, $IKeyConflictContext$$Type } from "net.minecraftforge.client.settings.IKeyConflictContext"
 import { $GuiMessageTag, $GuiMessageTag$$Type } from "net.minecraft.client.GuiMessageTag"
 import { $IForgeLivingEntity, $IForgeLivingEntity$$Type } from "net.minecraftforge.common.extensions.IForgeLivingEntity"
 import { $UserApiService$UserFlag, $UserApiService$UserFlag$$Type } from "com.mojang.authlib.minecraft.UserApiService$UserFlag"
@@ -5749,13 +5745,13 @@ import { $SlimeEntityJS, $SlimeEntityJS$$Type } from "net.liopyu.entityjs.entiti
 import { $DamageSource, $DamageSource$$Type } from "net.minecraft.world.damagesource.DamageSource"
 import { $ArgumentTypeWrappers, $ArgumentTypeWrappers$$Type } from "dev.latvian.mods.kubejs.command.ArgumentTypeWrappers"
 import { $AccessorCommandSourceStack, $AccessorCommandSourceStack$$Type } from "com.mega.endinglib.mixin.accessor.AccessorCommandSourceStack"
-import { $BiasedToBottomInt, $BiasedToBottomInt$$Type } from "net.minecraft.util.valueproviders.BiasedToBottomInt"
 import { $RenderGuiEvent, $RenderGuiEvent$$Type } from "net.minecraftforge.client.event.RenderGuiEvent"
+import { $BiasedToBottomInt, $BiasedToBottomInt$$Type } from "net.minecraft.util.valueproviders.BiasedToBottomInt"
 import { $BellBlock, $BellBlock$$Type } from "net.minecraft.world.level.block.BellBlock"
 import { $ItemTooltipEventJS$StaticTooltipHandlerFromJS, $ItemTooltipEventJS$StaticTooltipHandlerFromJS$$Type } from "dev.latvian.mods.kubejs.item.ItemTooltipEventJS$StaticTooltipHandlerFromJS"
 import { $MutableColor4I, $MutableColor4I$$Type } from "dev.ftb.mods.ftblibrary.icon.MutableColor4I"
-import { $PlayerLoginEvent, $PlayerLoginEvent$$Type } from "net.blay09.mods.balm.api.event.PlayerLoginEvent"
 import { $PlayerEvent$BreakSpeed, $PlayerEvent$BreakSpeed$$Type } from "net.minecraftforge.event.entity.player.PlayerEvent$BreakSpeed"
+import { $PlayerLoginEvent, $PlayerLoginEvent$$Type } from "net.blay09.mods.balm.api.event.PlayerLoginEvent"
 import { $AllOfPredicate, $AllOfPredicate$$Type } from "net.minecraft.world.level.levelgen.blockpredicates.AllOfPredicate"
 import { $ChannelInfoHolder, $ChannelInfoHolder$$Type } from "net.fabricmc.fabric.impl.networking.ChannelInfoHolder"
 import { $HolderLookup, $HolderLookup$$Type } from "net.minecraft.core.HolderLookup"
@@ -5831,11 +5827,11 @@ import { $DoubleIterator, $DoubleIterator$$Type } from "it.unimi.dsi.fastutil.do
 import { $RealmsClient$Environment, $RealmsClient$Environment$$Type } from "com.mojang.realmsclient.client.RealmsClient$Environment"
 import { $ClientPlayerKJS, $ClientPlayerKJS$$Type } from "dev.latvian.mods.kubejs.core.ClientPlayerKJS"
 import { $ProgressListener, $ProgressListener$$Type } from "net.minecraft.util.ProgressListener"
-import { $AccessorGameRenderer, $AccessorGameRenderer$$Type } from "com.mega.endinglib.mixin.accessor.AccessorGameRenderer"
 import { $OptionGroupConstructionEvent, $OptionGroupConstructionEvent$$Type } from "org.embeddedt.embeddium.api.OptionGroupConstructionEvent"
+import { $AccessorGameRenderer, $AccessorGameRenderer$$Type } from "com.mega.endinglib.mixin.accessor.AccessorGameRenderer"
 import { $BeehiveBlockEntity$BeeReleaseStatus, $BeehiveBlockEntity$BeeReleaseStatus$$Type } from "net.minecraft.world.level.block.entity.BeehiveBlockEntity$BeeReleaseStatus"
-import { $SignableCommand, $SignableCommand$$Type } from "net.minecraft.network.chat.SignableCommand"
 import { $CustomizeGuiOverlayEvent$Chat, $CustomizeGuiOverlayEvent$Chat$$Type } from "net.minecraftforge.client.event.CustomizeGuiOverlayEvent$Chat"
+import { $SignableCommand, $SignableCommand$$Type } from "net.minecraft.network.chat.SignableCommand"
 import { $BlockPredicate as $BlockPredicate$1, $BlockPredicate$$Type as $BlockPredicate$1$$Type } from "net.minecraft.advancements.critereon.BlockPredicate"
 import { $BiomeSpecialEffectsBuilder, $BiomeSpecialEffectsBuilder$$Type } from "net.minecraftforge.common.world.BiomeSpecialEffectsBuilder"
 import { $CraftingMenuAccess, $CraftingMenuAccess$$Type } from "snownee.lychee.mixin.CraftingMenuAccess"
@@ -5919,13 +5915,13 @@ import { $RecipeSchema, $RecipeSchema$$Type } from "dev.latvian.mods.kubejs.reci
 import { $FileChannel$MapMode, $FileChannel$MapMode$$Type } from "java.nio.channels.FileChannel$MapMode"
 import { $AdditionalProperties, $AdditionalProperties$$Type } from "com.alrex.parcool.common.action.AdditionalProperties"
 import { $BuiltSectionInfo, $BuiltSectionInfo$$Type } from "me.jellysquid.mods.sodium.client.render.chunk.data.BuiltSectionInfo"
-import { $GameRulesIntRuleAccessor, $GameRulesIntRuleAccessor$$Type } from "net.fabricmc.fabric.mixin.gamerule.GameRulesIntRuleAccessor"
 import { $LevelEvent, $LevelEvent$$Type } from "net.minecraftforge.event.level.LevelEvent"
+import { $GameRulesIntRuleAccessor, $GameRulesIntRuleAccessor$$Type } from "net.fabricmc.fabric.mixin.gamerule.GameRulesIntRuleAccessor"
 import { $Object2ObjectOpenHashMap, $Object2ObjectOpenHashMap$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap"
 import { $TSGlobalDump, $TSGlobalDump$$Type } from "zzzank.probejs.api.dump.TSGlobalDump"
 import { $TransparencyType, $TransparencyType$$Type } from "net.irisshaders.batchedentityrendering.impl.TransparencyType"
-import { $ParCoolConfig$Client$Integers, $ParCoolConfig$Client$Integers$$Type } from "com.alrex.parcool.config.ParCoolConfig$Client$Integers"
 import { $SpecialTypeKeyEvent$SpecialTypeKey5PressedEvent, $SpecialTypeKeyEvent$SpecialTypeKey5PressedEvent$$Type } from "com.dinzeer.legendreliclib.lib.key.SpecialTypeKeyEvent$SpecialTypeKey5PressedEvent"
+import { $ParCoolConfig$Client$Integers, $ParCoolConfig$Client$Integers$$Type } from "com.alrex.parcool.config.ParCoolConfig$Client$Integers"
 import { $Event as $Event$2, $Event$$Type as $Event$2$$Type } from "java.awt.Event"
 import { $CreativeModeTab$Row, $CreativeModeTab$Row$$Type } from "net.minecraft.world.item.CreativeModeTab$Row"
 import { $ExclusionStrategy, $ExclusionStrategy$$Type } from "com.google.gson.ExclusionStrategy"
@@ -5933,8 +5929,8 @@ import { $NumberFormat$Style, $NumberFormat$Style$$Type } from "java.text.Number
 import { $DamageScaling, $DamageScaling$$Type } from "net.minecraft.world.damagesource.DamageScaling"
 import { $Freezable, $Freezable$$Type } from "com.ibm.icu.util.Freezable"
 import { $GenericLootEventJS, $GenericLootEventJS$$Type } from "dev.latvian.mods.kubejs.loot.GenericLootEventJS"
-import { $MapDecoder, $MapDecoder$$Type } from "com.mojang.serialization.MapDecoder"
 import { $ContainerScreenEvent, $ContainerScreenEvent$$Type } from "net.minecraftforge.client.event.ContainerScreenEvent"
+import { $MapDecoder, $MapDecoder$$Type } from "com.mojang.serialization.MapDecoder"
 import { $Exception, $Exception$$Type } from "java.lang.Exception"
 import { $CustomEntityJSBuilder, $CustomEntityJSBuilder$$Type } from "net.liopyu.entityjs.builders.misc.CustomEntityJSBuilder"
 import { $RenderWorldEvent, $RenderWorldEvent$$Type } from "com.supermartijn642.core.render.RenderWorldEvent"
@@ -5956,8 +5952,8 @@ import { $CartographyTableBlock, $CartographyTableBlock$$Type } from "net.minecr
 import { $WallClimberNavigation, $WallClimberNavigation$$Type } from "net.minecraft.world.entity.ai.navigation.WallClimberNavigation"
 import { $RegisterSpawnPlacementsEventJS, $RegisterSpawnPlacementsEventJS$$Type } from "net.liopyu.entityjs.events.RegisterSpawnPlacementsEventJS"
 import { $ShapelessRecipe$Serializer, $ShapelessRecipe$Serializer$$Type } from "net.minecraft.world.item.crafting.ShapelessRecipe$Serializer"
-import { $SoundBuffer, $SoundBuffer$$Type } from "com.mojang.blaze3d.audio.SoundBuffer"
 import { $SlashBladeEvent, $SlashBladeEvent$$Type } from "mods.flammpfeil.slashblade.event.SlashBladeEvent"
+import { $SoundBuffer, $SoundBuffer$$Type } from "com.mojang.blaze3d.audio.SoundBuffer"
 import { $ResolvedModule, $ResolvedModule$$Type } from "java.lang.module.ResolvedModule"
 import { $LightPredicate, $LightPredicate$$Type } from "net.minecraft.advancements.critereon.LightPredicate"
 import { $Rotations, $Rotations$$Type } from "net.minecraft.core.Rotations"
@@ -5986,9 +5982,9 @@ import { $TransformablePart, $TransformablePart$$Type } from "punchy.client.acce
 import { $IAttachment$Type, $IAttachment$Type$$Type } from "top.ribs.scguns.item.attachment.IAttachment$Type"
 import { $CrossbowAttackMob, $CrossbowAttackMob$$Type } from "net.minecraft.world.entity.monster.CrossbowAttackMob"
 import { $PaintEventJS, $PaintEventJS$$Type } from "dev.latvian.mods.kubejs.client.painter.PaintEventJS"
+import { $ForgeZRecipeCrawl$Starting, $ForgeZRecipeCrawl$Starting$$Type } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Starting"
 import { $ParticleEngine, $ParticleEngine$$Type } from "net.minecraft.client.particle.ParticleEngine"
 import { $ZScreenshot, $ZScreenshot$$Type } from "org.violetmoon.zeta.client.event.play.ZScreenshot"
-import { $ForgeZRecipeCrawl$Starting, $ForgeZRecipeCrawl$Starting$$Type } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Starting"
 import { $LightTextureAccessor as $LightTextureAccessor$0, $LightTextureAccessor$$Type as $LightTextureAccessor$0$$Type } from "net.irisshaders.iris.mixin.LightTextureAccessor"
 import { $VertexSorting$DistanceFunction, $VertexSorting$DistanceFunction$$Type } from "com.mojang.blaze3d.vertex.VertexSorting$DistanceFunction"
 import { $SpawnerBlock, $SpawnerBlock$$Type } from "net.minecraft.world.level.block.SpawnerBlock"
@@ -6013,8 +6009,8 @@ import { $SlotAccessor as $SlotAccessor$0, $SlotAccessor$$Type as $SlotAccessor$
 import { $RequirementsStrategy, $RequirementsStrategy$$Type } from "net.minecraft.advancements.RequirementsStrategy"
 import { $CraftingBookCategory, $CraftingBookCategory$$Type } from "net.minecraft.world.item.crafting.CraftingBookCategory"
 import { $TreeDecorator, $TreeDecorator$$Type } from "net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator"
-import { $BarrelBlockEntity, $BarrelBlockEntity$$Type } from "net.minecraft.world.level.block.entity.BarrelBlockEntity"
 import { $ContainerScreenEvent$Render$Foreground, $ContainerScreenEvent$Render$Foreground$$Type } from "net.minecraftforge.client.event.ContainerScreenEvent$Render$Foreground"
+import { $BarrelBlockEntity, $BarrelBlockEntity$$Type } from "net.minecraft.world.level.block.entity.BarrelBlockEntity"
 import { $IronsWeaponTier, $IronsWeaponTier$$Type } from "io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier"
 import { $WorldTemplate, $WorldTemplate$$Type } from "com.mojang.realmsclient.dto.WorldTemplate"
 import { $GameRulesBooleanRuleAccessor, $GameRulesBooleanRuleAccessor$$Type } from "net.fabricmc.fabric.mixin.gamerule.GameRulesBooleanRuleAccessor"
@@ -6066,8 +6062,8 @@ import { $IFireConsumeBlockEvent, $IFireConsumeBlockEvent$$Type } from "net.mehv
 import { $FenceGateBlock, $FenceGateBlock$$Type } from "net.minecraft.world.level.block.FenceGateBlock"
 import { $AABB, $AABB$$Type } from "net.minecraft.world.phys.AABB"
 import { $ServerboundSwingPacket, $ServerboundSwingPacket$$Type } from "net.minecraft.network.protocol.game.ServerboundSwingPacket"
-import { $ServerLevelAccessor as $ServerLevelAccessor$0, $ServerLevelAccessor$$Type as $ServerLevelAccessor$0$$Type } from "net.conczin.immersive_optimization.mixin.ServerLevelAccessor"
 import { $GeoRenderEvent$Item$Pre, $GeoRenderEvent$Item$Pre$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Item$Pre"
+import { $ServerLevelAccessor as $ServerLevelAccessor$0, $ServerLevelAccessor$$Type as $ServerLevelAccessor$0$$Type } from "net.conczin.immersive_optimization.mixin.ServerLevelAccessor"
 import { $ItemFTBL, $ItemFTBL$$Type } from "dev.ftb.mods.ftblibrary.core.ItemFTBL"
 import { $GameMasterBlockItem, $GameMasterBlockItem$$Type } from "net.minecraft.world.item.GameMasterBlockItem"
 import { $Object2IntLinkedOpenHashMap, $Object2IntLinkedOpenHashMap$$Type } from "it.unimi.dsi.fastutil.objects.Object2IntLinkedOpenHashMap"
@@ -6083,8 +6079,8 @@ import { $AttachedToLeavesDecorator, $AttachedToLeavesDecorator$$Type } from "ne
 import { $State, $State$$Type } from "mod.azure.azurelib.util.state.State"
 import { $FontCollection, $FontCollection$$Type } from "icyllis.modernui.graphics.text.FontCollection"
 import { $FeaturePoolElementAccessor, $FeaturePoolElementAccessor$$Type } from "com.github.L_Ender.cataclysm.mixin.accessor.FeaturePoolElementAccessor"
-import { $Stream, $Stream$$Type } from "java.util.stream.Stream"
 import { $BlockVisualizerEvent$Render$Pre, $BlockVisualizerEvent$Render$Pre$$Type } from "xyz.apex.forge.apexcore.lib.event.client.BlockVisualizerEvent$Render$Pre"
+import { $Stream, $Stream$$Type } from "java.util.stream.Stream"
 import { $SubMenu, $SubMenu$$Type } from "icyllis.modernui.view.SubMenu"
 import { $BlockContextHolder, $BlockContextHolder$$Type } from "net.irisshaders.iris.compat.sodium.impl.block_context.BlockContextHolder"
 import { $Marker as $Marker$1, $Marker$$Type as $Marker$1$$Type } from "net.minecraft.world.entity.Marker"
@@ -6125,8 +6121,8 @@ import { $DoorBlock, $DoorBlock$$Type } from "net.minecraft.world.level.block.Do
 import { $BrewingStandBlockEntity, $BrewingStandBlockEntity$$Type } from "net.minecraft.world.level.block.entity.BrewingStandBlockEntity"
 import { $ShapedBlockBuilder, $ShapedBlockBuilder$$Type } from "dev.latvian.mods.kubejs.block.custom.ShapedBlockBuilder"
 import { $FireBlockHooks, $FireBlockHooks$$Type } from "net.fabricmc.fabric.impl.content.registry.FireBlockHooks"
-import { $BakedGlyph$Effect, $BakedGlyph$Effect$$Type } from "net.minecraft.client.gui.font.glyphs.BakedGlyph$Effect"
 import { $LivingDropsEvent, $LivingDropsEvent$$Type } from "net.minecraftforge.event.entity.living.LivingDropsEvent"
+import { $BakedGlyph$Effect, $BakedGlyph$Effect$$Type } from "net.minecraft.client.gui.font.glyphs.BakedGlyph$Effect"
 import { $CameraModifier$Operation, $CameraModifier$Operation$$Type } from "com.mega.endinglib.api.client.camera.CameraModifier$Operation"
 import { $ExtendedBufferBuilder, $ExtendedBufferBuilder$$Type } from "me.jellysquid.mods.sodium.client.render.vertex.buffer.ExtendedBufferBuilder"
 import { $DoubleCollection, $DoubleCollection$$Type } from "it.unimi.dsi.fastutil.doubles.DoubleCollection"
@@ -6185,8 +6181,8 @@ import { $ContextUtils$RenderContextCustom, $ContextUtils$RenderContextCustom$$T
 import { $Response, $Response$$Type } from "com.mojang.authlib.yggdrasil.response.Response"
 import { $WorldgenRandom, $WorldgenRandom$$Type } from "net.minecraft.world.level.levelgen.WorldgenRandom"
 import { $PartEntity, $PartEntity$$Type } from "net.minecraftforge.entity.PartEntity"
-import { $AdvancementRewards$Builder, $AdvancementRewards$Builder$$Type } from "net.minecraft.advancements.AdvancementRewards$Builder"
 import { $RegisterColorHandlersEvent$Item, $RegisterColorHandlersEvent$Item$$Type } from "net.minecraftforge.client.event.RegisterColorHandlersEvent$Item"
+import { $AdvancementRewards$Builder, $AdvancementRewards$Builder$$Type } from "net.minecraft.advancements.AdvancementRewards$Builder"
 import { $ImmutableMap$Builder, $ImmutableMap$Builder$$Type } from "com.google.common.collect.ImmutableMap$Builder"
 import { $AnvilBlock, $AnvilBlock$$Type } from "net.minecraft.world.level.block.AnvilBlock"
 import { $StaminaConsumeTiming, $StaminaConsumeTiming$$Type } from "com.alrex.parcool.common.action.StaminaConsumeTiming"
@@ -6201,8 +6197,8 @@ import { $ResourceConfigValue, $ResourceConfigValue$$Type } from "dev.ftb.mods.f
 import { $PackType, $PackType$$Type } from "net.minecraft.server.packs.PackType"
 import { $IExtendedItem, $IExtendedItem$$Type } from "net.mehvahdjukaar.moonlight.core.misc.IExtendedItem"
 import { $PrepareRamNearestTarget, $PrepareRamNearestTarget$$Type } from "net.minecraft.world.entity.ai.behavior.PrepareRamNearestTarget"
-import { $Matcher, $Matcher$$Type } from "java.util.regex.Matcher"
 import { $ScreenEvent$MouseDragged, $ScreenEvent$MouseDragged$$Type } from "net.minecraftforge.client.event.ScreenEvent$MouseDragged"
+import { $Matcher, $Matcher$$Type } from "java.util.regex.Matcher"
 import { $View$OnFocusChangeListener, $View$OnFocusChangeListener$$Type } from "icyllis.modernui.view.View$OnFocusChangeListener"
 import { $FieldPosition, $FieldPosition$$Type } from "java.text.FieldPosition"
 import { $WithAttachedData, $WithAttachedData$$Type } from "dev.latvian.mods.kubejs.core.WithAttachedData"
@@ -6218,8 +6214,8 @@ import { $BlockColumnConfiguration, $BlockColumnConfiguration$$Type } from "net.
 import { $LevelRenderer, $LevelRenderer$$Type } from "net.minecraft.client.renderer.LevelRenderer"
 import { $ISlashBladeState, $ISlashBladeState$$Type } from "mods.flammpfeil.slashblade.capability.slashblade.ISlashBladeState"
 import { $RenderSectionDistanceFilter, $RenderSectionDistanceFilter$$Type } from "org.embeddedt.embeddium.api.render.chunk.RenderSectionDistanceFilter"
-import { $DoubleListIterator, $DoubleListIterator$$Type } from "it.unimi.dsi.fastutil.doubles.DoubleListIterator"
 import { $ICastData, $ICastData$$Type } from "io.redspace.ironsspellbooks.api.spells.ICastData"
+import { $DoubleListIterator, $DoubleListIterator$$Type } from "it.unimi.dsi.fastutil.doubles.DoubleListIterator"
 import { $BrainAccess, $BrainAccess$$Type } from "com.github.raverbury.aggroindicator.util.BrainAccess"
 import { $BlockEvent$NeighborNotifyEvent, $BlockEvent$NeighborNotifyEvent$$Type } from "net.minecraftforge.event.level.BlockEvent$NeighborNotifyEvent"
 import { $CachedLightProvider, $CachedLightProvider$$Type } from "me.fzzyhmstrs.particle_core.interfaces.CachedLightProvider"
@@ -6325,8 +6321,8 @@ import { $SearchRegistry$TreeBuilderSupplier, $SearchRegistry$TreeBuilderSupplie
 import { $Reference2ByteFunction, $Reference2ByteFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2ByteFunction"
 import { $Target, $Target$$Type } from "net.minecraft.world.level.pathfinder.Target"
 import { $Vector3i, $Vector3i$$Type } from "org.joml.Vector3i"
-import { $Vector3f, $Vector3f$$Type } from "org.joml.Vector3f"
 import { $ForgeZRecipeCrawl$Visit$Shaped, $ForgeZRecipeCrawl$Visit$Shaped$$Type } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Visit$Shaped"
+import { $Vector3f, $Vector3f$$Type } from "org.joml.Vector3f"
 import { $NetherForestVegetationFeature, $NetherForestVegetationFeature$$Type } from "net.minecraft.world.level.levelgen.feature.NetherForestVegetationFeature"
 import { $ParCoolAnimationInfoEvent, $ParCoolAnimationInfoEvent$$Type } from "com.alrex.parcool.api.unstable.animation.ParCoolAnimationInfoEvent"
 import { $Short2IntFunction, $Short2IntFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2IntFunction"
@@ -6338,8 +6334,8 @@ import { $BaseLivingEntityBuilder$KeyFrameEventJS, $BaseLivingEntityBuilder$KeyF
 import { $SequencedMap, $SequencedMap$$Type } from "java.util.SequencedMap"
 import { $HeightRangePlacementAccessor, $HeightRangePlacementAccessor$$Type } from "cc.abbie.emi_ores.mixin.accessor.HeightRangePlacementAccessor"
 import { $UseItemEvent, $UseItemEvent$$Type } from "net.blay09.mods.balm.api.event.UseItemEvent"
-import { $ClientboundSetEntityMotionPacket, $ClientboundSetEntityMotionPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket"
 import { $GeoRenderEvent$Item, $GeoRenderEvent$Item$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Item"
+import { $ClientboundSetEntityMotionPacket, $ClientboundSetEntityMotionPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket"
 import { $Serializable, $Serializable$$Type } from "java.io.Serializable"
 import { $Short2FloatFunction, $Short2FloatFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2FloatFunction"
 import { $Vector2i, $Vector2i$$Type } from "org.joml.Vector2i"
@@ -6358,16 +6354,16 @@ import { $LocalDateTime, $LocalDateTime$$Type } from "java.time.LocalDateTime"
 import { $Behavior$Status, $Behavior$Status$$Type } from "net.minecraft.world.entity.ai.behavior.Behavior$Status"
 import { $AzAnimator, $AzAnimator$$Type } from "mod.azure.azurelib.animation.AzAnimator"
 import { $CalioDynamicRegistryEvent$Initialize, $CalioDynamicRegistryEvent$Initialize$$Type } from "io.github.edwinmindcraft.calio.api.event.CalioDynamicRegistryEvent$Initialize"
-import { $ClientboundSetSubtitleTextPacket, $ClientboundSetSubtitleTextPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundSetSubtitleTextPacket"
 import { $PlayerInteractEvent$LeftClickBlock, $PlayerInteractEvent$LeftClickBlock$$Type } from "net.minecraftforge.event.entity.player.PlayerInteractEvent$LeftClickBlock"
+import { $ClientboundSetSubtitleTextPacket, $ClientboundSetSubtitleTextPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundSetSubtitleTextPacket"
 import { $ServerLimitation, $ServerLimitation$$Type } from "com.alrex.parcool.common.info.ServerLimitation"
 import { $Supplier as $Supplier$0, $Supplier$$Type as $Supplier$0$$Type } from "java.util.function.Supplier"
 import { $ServerPlayer, $ServerPlayer$$Type } from "net.minecraft.server.level.ServerPlayer"
 import { $GeoArmorRenderer, $GeoArmorRenderer$$Type } from "software.bernie.geckolib.renderer.GeoArmorRenderer"
 import { $IForgeFluidState, $IForgeFluidState$$Type } from "net.minecraftforge.common.extensions.IForgeFluidState"
 import { $Structure$StructureSettings, $Structure$StructureSettings$$Type } from "net.minecraft.world.level.levelgen.structure.Structure$StructureSettings"
-import { $BookCloningRecipe, $BookCloningRecipe$$Type } from "net.minecraft.world.item.crafting.BookCloningRecipe"
 import { $InterModEnqueueEvent, $InterModEnqueueEvent$$Type } from "net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent"
+import { $BookCloningRecipe, $BookCloningRecipe$$Type } from "net.minecraft.world.item.crafting.BookCloningRecipe"
 import { $AbuseReport, $AbuseReport$$Type } from "com.mojang.authlib.minecraft.report.AbuseReport"
 import { $EntityPotionEffectsJS, $EntityPotionEffectsJS$$Type } from "dev.latvian.mods.kubejs.entity.EntityPotionEffectsJS"
 import { $MappingRecipeComponent, $MappingRecipeComponent$$Type } from "dev.latvian.mods.kubejs.recipe.component.MappingRecipeComponent"
@@ -6408,8 +6404,8 @@ import { $RenderContext as $RenderContext$0, $RenderContext$$Type as $RenderCont
 import { $TSDumpBase, $TSDumpBase$$Type } from "zzzank.probejs.api.dump.TSDumpBase"
 import { $MoveControl$Operation, $MoveControl$Operation$$Type } from "net.minecraft.world.entity.ai.control.MoveControl$Operation"
 import { $NativeImageAccessor as $NativeImageAccessor$0, $NativeImageAccessor$$Type as $NativeImageAccessor$0$$Type } from "com.leclowndu93150.particular.mixin.NativeImageAccessor"
-import { $Paint as $Paint$1, $Paint$$Type as $Paint$1$$Type } from "java.awt.Paint"
 import { $ViewportEvent, $ViewportEvent$$Type } from "net.minecraftforge.client.event.ViewportEvent"
+import { $Paint as $Paint$1, $Paint$$Type as $Paint$1$$Type } from "java.awt.Paint"
 import { $RegistryDefinition, $RegistryDefinition$$Type } from "net.lixir.vminus.api.registry.definition.RegistryDefinition"
 import { $FileNotFoundAction, $FileNotFoundAction$$Type } from "com.electronwill.nightconfig.core.file.FileNotFoundAction"
 import { $ScatteredOreFeature, $ScatteredOreFeature$$Type } from "net.minecraft.world.level.levelgen.feature.ScatteredOreFeature"
@@ -6425,8 +6421,8 @@ import { $ServerOpListEntry, $ServerOpListEntry$$Type } from "net.minecraft.serv
 import { $RRect, $RRect$$Type } from "icyllis.arc3d.sketch.RRect"
 import { $ContextUtils$EntityItemStackContext, $ContextUtils$EntityItemStackContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntityItemStackContext"
 import { $ZGatherHints as $ZGatherHints$0, $ZGatherHints$$Type as $ZGatherHints$0$$Type } from "org.violetmoon.zeta.event.load.ZGatherHints"
-import { $ItemTintFunction, $ItemTintFunction$$Type } from "dev.latvian.mods.kubejs.item.ItemTintFunction"
 import { $ForgeZGatherHints as $ForgeZGatherHints$0, $ForgeZGatherHints$$Type as $ForgeZGatherHints$0$$Type } from "org.violetmoon.zetaimplforge.event.load.ForgeZGatherHints"
+import { $ItemTintFunction, $ItemTintFunction$$Type } from "dev.latvian.mods.kubejs.item.ItemTintFunction"
 import { $SnowAndFreezeFeature, $SnowAndFreezeFeature$$Type } from "net.minecraft.world.level.levelgen.feature.SnowAndFreezeFeature"
 import { $AnimatablePlayer, $AnimatablePlayer$$Type } from "net.combatroll.client.animation.AnimatablePlayer"
 import { $HoeItemAccess, $HoeItemAccess$$Type } from "snownee.kiwi.mixin.HoeItemAccess"
@@ -6487,8 +6483,8 @@ import { $TextColorInterface, $TextColorInterface$$Type } from "com.mega.endingl
 import { $GrassBlock, $GrassBlock$$Type } from "net.minecraft.world.level.block.GrassBlock"
 import { $BrewingStandBlock, $BrewingStandBlock$$Type } from "net.minecraft.world.level.block.BrewingStandBlock"
 import { $RuleTest, $RuleTest$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest"
-import { $ParticleProvider$Sprite, $ParticleProvider$Sprite$$Type } from "net.minecraft.client.particle.ParticleProvider$Sprite"
 import { $LivingEntityUseItemEvent$Finish, $LivingEntityUseItemEvent$Finish$$Type } from "net.minecraftforge.event.entity.living.LivingEntityUseItemEvent$Finish"
+import { $ParticleProvider$Sprite, $ParticleProvider$Sprite$$Type } from "net.minecraft.client.particle.ParticleProvider$Sprite"
 import { $Attributes$Name, $Attributes$Name$$Type } from "java.util.jar.Attributes$Name"
 import { $AccessorItem, $AccessorItem$$Type } from "net.darkhax.bookshelf.mixin.accessors.item.AccessorItem"
 import { $String, $String$$Type } from "java.lang.String"
@@ -6512,8 +6508,8 @@ import { $MobAttackAnimation, $MobAttackAnimation$$Type } from "me.Thelnfamous1.
 import { $SPIRVVersion, $SPIRVVersion$$Type } from "icyllis.arc3d.compiler.SPIRVVersion"
 import { $RenderLayerParent, $RenderLayerParent$$Type } from "net.minecraft.client.renderer.entity.RenderLayerParent"
 import { $SchoolType, $SchoolType$$Type } from "io.redspace.ironsspellbooks.api.spells.SchoolType"
-import { $PipelineDesc$SamplerInfo, $PipelineDesc$SamplerInfo$$Type } from "icyllis.arc3d.engine.PipelineDesc$SamplerInfo"
 import { $PlayerChangedDimensionEvent, $PlayerChangedDimensionEvent$$Type } from "net.blay09.mods.balm.api.event.PlayerChangedDimensionEvent"
+import { $PipelineDesc$SamplerInfo, $PipelineDesc$SamplerInfo$$Type } from "icyllis.arc3d.engine.PipelineDesc$SamplerInfo"
 import { $LlamaSpit, $LlamaSpit$$Type } from "net.minecraft.world.entity.projectile.LlamaSpit"
 import { $TridentEntityJS, $TridentEntityJS$$Type } from "net.liopyu.entityjs.entities.nonliving.vanilla.TridentEntityJS"
 import { $InSquarePlacement, $InSquarePlacement$$Type } from "net.minecraft.world.level.levelgen.placement.InSquarePlacement"
@@ -6531,8 +6527,8 @@ import { $Compressable, $Compressable$$Type } from "com.mojang.serialization.Com
 import { $LootingLevelEvent, $LootingLevelEvent$$Type } from "net.minecraftforge.event.entity.living.LootingLevelEvent"
 import { $ModelBakery, $ModelBakery$$Type } from "net.minecraft.client.resources.model.ModelBakery"
 import { $DecoratedPotBlockEntity$Decorations, $DecoratedPotBlockEntity$Decorations$$Type } from "net.minecraft.world.level.block.entity.DecoratedPotBlockEntity$Decorations"
-import { $RegisterNamedRenderTypesEvent, $RegisterNamedRenderTypesEvent$$Type } from "net.minecraftforge.client.event.RegisterNamedRenderTypesEvent"
 import { $TextureStitchEvent$Post, $TextureStitchEvent$Post$$Type } from "net.minecraftforge.client.event.TextureStitchEvent$Post"
+import { $RegisterNamedRenderTypesEvent, $RegisterNamedRenderTypesEvent$$Type } from "net.minecraftforge.client.event.RegisterNamedRenderTypesEvent"
 import { $EnchantmentBuilder, $EnchantmentBuilder$$Type } from "dev.latvian.mods.kubejs.misc.EnchantmentBuilder"
 import { $ScreenEvent$MouseButtonReleased$Pre, $ScreenEvent$MouseButtonReleased$Pre$$Type } from "net.minecraftforge.client.event.ScreenEvent$MouseButtonReleased$Pre"
 import { $FloatIterable, $FloatIterable$$Type } from "it.unimi.dsi.fastutil.floats.FloatIterable"
@@ -6594,8 +6590,8 @@ import { $SmithingTrimRecipe, $SmithingTrimRecipe$$Type } from "net.minecraft.wo
 import { $ContextUtils$EntityServerLevelContext, $ContextUtils$EntityServerLevelContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$EntityServerLevelContext"
 import { $BiomeSpawnsEventJS, $BiomeSpawnsEventJS$$Type } from "net.liopyu.entityjs.events.BiomeSpawnsEventJS"
 import { $ServerboundPlayerCommandPacket, $ServerboundPlayerCommandPacket$$Type } from "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket"
-import { $LivingEntityUseItemEvent$Tick, $LivingEntityUseItemEvent$Tick$$Type } from "net.minecraftforge.event.entity.living.LivingEntityUseItemEvent$Tick"
 import { $GeoRenderEvent$Entity$Pre, $GeoRenderEvent$Entity$Pre$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Entity$Pre"
+import { $LivingEntityUseItemEvent$Tick, $LivingEntityUseItemEvent$Tick$$Type } from "net.minecraftforge.event.entity.living.LivingEntityUseItemEvent$Tick"
 import { $AbstractInterruptibleChannel, $AbstractInterruptibleChannel$$Type } from "java.nio.channels.spi.AbstractInterruptibleChannel"
 import { $AzAnimatorAccessor, $AzAnimatorAccessor$$Type } from "mod.azure.azurelib.animation.AzAnimatorAccessor"
 import { $WorldCreationContext$DimensionsUpdater, $WorldCreationContext$DimensionsUpdater$$Type } from "net.minecraft.client.gui.screens.worldselection.WorldCreationContext$DimensionsUpdater"
@@ -6630,8 +6626,8 @@ import { $GameRenderer, $GameRenderer$$Type } from "net.minecraft.client.rendere
 import { $AccessorFontManager as $AccessorFontManager$0, $AccessorFontManager$$Type as $AccessorFontManager$0$$Type } from "com.mega.endinglib.mixin.accessor.AccessorFontManager"
 import { $ModelGenerator$Element, $ModelGenerator$Element$$Type } from "dev.latvian.mods.kubejs.client.ModelGenerator$Element"
 import { $ActionRuntime, $ActionRuntime$$Type } from "snownee.lychee.core.ActionRuntime"
-import { $StructureTemplate$Palette, $StructureTemplate$Palette$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate$Palette"
 import { $GeoRenderEvent$ReplacedEntity, $GeoRenderEvent$ReplacedEntity$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$ReplacedEntity"
+import { $StructureTemplate$Palette, $StructureTemplate$Palette$$Type } from "net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate$Palette"
 import { $IntList, $IntList$$Type } from "it.unimi.dsi.fastutil.ints.IntList"
 import { $Long2ReferenceFunction, $Long2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2ReferenceFunction"
 import { $FabricClientCommandSource, $FabricClientCommandSource$$Type } from "net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource"
@@ -6651,8 +6647,8 @@ import { $ZetaSide, $ZetaSide$$Type } from "org.violetmoon.zeta.util.ZetaSide"
 import { $Object2FloatMap, $Object2FloatMap$$Type } from "it.unimi.dsi.fastutil.objects.Object2FloatMap"
 import { $Short, $Short$$Type } from "java.lang.Short"
 import { $Locale, $Locale$$Type } from "java.util.Locale"
-import { $ZetaCategory, $ZetaCategory$$Type } from "org.violetmoon.zeta.module.ZetaCategory"
 import { $GunProjectileHitEvent, $GunProjectileHitEvent$$Type } from "top.ribs.scguns.event.GunProjectileHitEvent"
+import { $ZetaCategory, $ZetaCategory$$Type } from "org.violetmoon.zeta.module.ZetaCategory"
 import { $IJeiUserInput, $IJeiUserInput$$Type } from "mezz.jei.api.gui.inputs.IJeiUserInput"
 import { $FirstPersonConfiguration, $FirstPersonConfiguration$$Type } from "dev.kosmx.playerAnim.api.firstPerson.FirstPersonConfiguration"
 import { $IFlying, $IFlying$$Type } from "dev.shadowsoffire.attributeslib.util.IFlying"
@@ -6761,8 +6757,8 @@ import { $DefaultedVertexConsumer, $DefaultedVertexConsumer$$Type } from "com.mo
 import { $GraphicsDevice$WindowTranslucency, $GraphicsDevice$WindowTranslucency$$Type } from "java.awt.GraphicsDevice$WindowTranslucency"
 import { $EntityRendererProvider, $EntityRendererProvider$$Type } from "net.minecraft.client.renderer.entity.EntityRendererProvider"
 import { $LivingEntityUseItemEvent$Start, $LivingEntityUseItemEvent$Start$$Type } from "net.minecraftforge.event.entity.living.LivingEntityUseItemEvent$Start"
-import { $ThreadProperties, $ThreadProperties$$Type } from "io.netty.util.concurrent.ThreadProperties"
 import { $InputEvent as $InputEvent$0, $InputEvent$$Type as $InputEvent$0$$Type } from "net.minecraftforge.client.event.InputEvent"
+import { $ThreadProperties, $ThreadProperties$$Type } from "io.netty.util.concurrent.ThreadProperties"
 import { $DragSourceListener, $DragSourceListener$$Type } from "java.awt.dnd.DragSourceListener"
 import { $ForgeRegistryForgeAccessor, $ForgeRegistryForgeAccessor$$Type } from "fuzs.puzzleslib.mixin.accessor.ForgeRegistryForgeAccessor"
 import { $BlockVisualizerEvent$Render$Post, $BlockVisualizerEvent$Render$Post$$Type } from "xyz.apex.forge.apexcore.lib.event.client.BlockVisualizerEvent$Render$Post"
@@ -6774,8 +6770,8 @@ import { $StructurePieceSerializationContext, $StructurePieceSerializationContex
 import { $MessageSizeEstimator$Handle, $MessageSizeEstimator$Handle$$Type } from "io.netty.channel.MessageSizeEstimator$Handle"
 import { $ServerboundRenameItemPacket, $ServerboundRenameItemPacket$$Type } from "net.minecraft.network.protocol.game.ServerboundRenameItemPacket"
 import { $BlockBehaviour$StatePredicate, $BlockBehaviour$StatePredicate$$Type } from "net.minecraft.world.level.block.state.BlockBehaviour$StatePredicate"
-import { $ScreenDrawEvent$Pre, $ScreenDrawEvent$Pre$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenDrawEvent$Pre"
 import { $PotionColorCalculationEvent, $PotionColorCalculationEvent$$Type } from "net.minecraftforge.event.entity.living.PotionColorCalculationEvent"
+import { $ScreenDrawEvent$Pre, $ScreenDrawEvent$Pre$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenDrawEvent$Pre"
 import { $ErrorReporter, $ErrorReporter$$Type } from "dev.latvian.mods.rhino.ErrorReporter"
 import { $StructureProcessorAccessor as $StructureProcessorAccessor$0, $StructureProcessorAccessor$$Type as $StructureProcessorAccessor$0$$Type } from "com.Polarice3.Goety.mixin.StructureProcessorAccessor"
 import { $MegaJungleFoliagePlacer, $MegaJungleFoliagePlacer$$Type } from "net.minecraft.world.level.levelgen.feature.foliageplacers.MegaJungleFoliagePlacer"
@@ -6809,8 +6805,8 @@ import { $ClientboundContainerClosePacket, $ClientboundContainerClosePacket$$Typ
 import { $ETFRenderLayerWithTexture, $ETFRenderLayerWithTexture$$Type } from "traben.entity_texture_features.utils.ETFRenderLayerWithTexture"
 import { $ConfigParser, $ConfigParser$$Type } from "com.electronwill.nightconfig.core.io.ConfigParser"
 import { $Animation as $Animation$1, $Animation$$Type as $Animation$1$$Type } from "com.github.alexthe666.citadel.animation.Animation"
-import { $GeoLayerJSBuilder, $GeoLayerJSBuilder$$Type } from "net.liopyu.entityjs.client.living.model.GeoLayerJSBuilder"
 import { $GrindstoneEvent$OnPlaceItem, $GrindstoneEvent$OnPlaceItem$$Type } from "net.minecraftforge.event.GrindstoneEvent$OnPlaceItem"
+import { $GeoLayerJSBuilder, $GeoLayerJSBuilder$$Type } from "net.liopyu.entityjs.client.living.model.GeoLayerJSBuilder"
 import { $ProfilePublicKey$Data, $ProfilePublicKey$Data$$Type } from "net.minecraft.world.entity.player.ProfilePublicKey$Data"
 import { $AbstractObjectList, $AbstractObjectList$$Type } from "it.unimi.dsi.fastutil.objects.AbstractObjectList"
 import { $MangroveRootPlacer, $MangroveRootPlacer$$Type } from "net.minecraft.world.level.levelgen.feature.rootplacers.MangroveRootPlacer"
@@ -6826,11 +6822,11 @@ import { $DataFlavor, $DataFlavor$$Type } from "java.awt.datatransfer.DataFlavor
 import { $CreeperEntityJS, $CreeperEntityJS$$Type } from "net.liopyu.entityjs.entities.living.vanilla.CreeperEntityJS"
 import { $SimpleCommandExceptionType, $SimpleCommandExceptionType$$Type } from "com.mojang.brigadier.exceptions.SimpleCommandExceptionType"
 import { $UnicodeSet$SpanCondition, $UnicodeSet$SpanCondition$$Type } from "com.ibm.icu.text.UnicodeSet$SpanCondition"
-import { $FlatLevelGeneratorPreset, $FlatLevelGeneratorPreset$$Type } from "net.minecraft.world.level.levelgen.flat.FlatLevelGeneratorPreset"
 import { $VanillaGameEvent, $VanillaGameEvent$$Type } from "net.minecraftforge.event.VanillaGameEvent"
-import { $ServerboundMoveVehiclePacket, $ServerboundMoveVehiclePacket$$Type } from "net.minecraft.network.protocol.game.ServerboundMoveVehiclePacket"
-import { $ChunkRenderDispatcher$ChunkTaskResult, $ChunkRenderDispatcher$ChunkTaskResult$$Type } from "net.minecraft.client.renderer.chunk.ChunkRenderDispatcher$ChunkTaskResult"
+import { $FlatLevelGeneratorPreset, $FlatLevelGeneratorPreset$$Type } from "net.minecraft.world.level.levelgen.flat.FlatLevelGeneratorPreset"
 import { $ConstantDesc, $ConstantDesc$$Type } from "java.lang.constant.ConstantDesc"
+import { $ChunkRenderDispatcher$ChunkTaskResult, $ChunkRenderDispatcher$ChunkTaskResult$$Type } from "net.minecraft.client.renderer.chunk.ChunkRenderDispatcher$ChunkTaskResult"
+import { $ServerboundMoveVehiclePacket, $ServerboundMoveVehiclePacket$$Type } from "net.minecraft.network.protocol.game.ServerboundMoveVehiclePacket"
 import { $TextureStitchEvent, $TextureStitchEvent$$Type } from "net.minecraftforge.client.event.TextureStitchEvent"
 import { $ScreenEvent$MouseButtonReleased, $ScreenEvent$MouseButtonReleased$$Type } from "net.minecraftforge.client.event.ScreenEvent$MouseButtonReleased"
 import { $ObjectiveCriteria, $ObjectiveCriteria$$Type } from "net.minecraft.world.scores.criteria.ObjectiveCriteria"
@@ -6945,8 +6941,9 @@ import { $ModelResolver$Context, $ModelResolver$Context$$Type } from "net.fabric
 import { $AbstractFish, $AbstractFish$$Type } from "net.minecraft.world.entity.animal.AbstractFish"
 import { $MinecraftServer$ServerResourcePackInfo, $MinecraftServer$ServerResourcePackInfo$$Type } from "net.minecraft.server.MinecraftServer$ServerResourcePackInfo"
 import { $PolarBear, $PolarBear$$Type } from "net.minecraft.world.entity.animal.PolarBear"
-import { $ContextUtils$TargetChangeContext, $ContextUtils$TargetChangeContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$TargetChangeContext"
 import { $GunReloadEvent$Post, $GunReloadEvent$Post$$Type } from "top.ribs.scguns.event.GunReloadEvent$Post"
+import { $ContextUtils$TargetChangeContext, $ContextUtils$TargetChangeContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$TargetChangeContext"
+import { $RangedBowAttackGoal, $RangedBowAttackGoal$$Type } from "net.minecraft.world.entity.ai.goal.RangedBowAttackGoal"
 import { $CustomBossEvents, $CustomBossEvents$$Type } from "net.minecraft.server.bossevents.CustomBossEvents"
 import { $Declaration, $Declaration$$Type } from "zzzank.probejs.lang.typescript.Declaration"
 import { $Overlay, $Overlay$$Type } from "net.minecraft.client.gui.screens.Overlay"
@@ -7002,8 +6999,8 @@ import { $ISerializable, $ISerializable$$Type } from "io.redspace.ironsspellbook
 import { $ContextUtils$ScaleModelRenderContext, $ContextUtils$ScaleModelRenderContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ScaleModelRenderContext"
 import { $MultiNoiseSamplerHooks, $MultiNoiseSamplerHooks$$Type } from "net.fabricmc.fabric.impl.biome.MultiNoiseSamplerHooks"
 import { $BlockPileFeature, $BlockPileFeature$$Type } from "net.minecraft.world.level.levelgen.feature.BlockPileFeature"
-import { $ServerOpList, $ServerOpList$$Type } from "net.minecraft.server.players.ServerOpList"
 import { $ScreenEvent$MouseButtonPressed, $ScreenEvent$MouseButtonPressed$$Type } from "net.minecraftforge.client.event.ScreenEvent$MouseButtonPressed"
+import { $ServerOpList, $ServerOpList$$Type } from "net.minecraft.server.players.ServerOpList"
 import { $AbstractByteCollection, $AbstractByteCollection$$Type } from "it.unimi.dsi.fastutil.bytes.AbstractByteCollection"
 import { $ImageViewProxy$LazyInstantiateCallback, $ImageViewProxy$LazyInstantiateCallback$$Type } from "icyllis.arc3d.engine.ImageViewProxy$LazyInstantiateCallback"
 import { $EnderChestBlock, $EnderChestBlock$$Type } from "net.minecraft.world.level.block.EnderChestBlock"
@@ -7013,8 +7010,8 @@ import { $URLConnection, $URLConnection$$Type } from "java.net.URLConnection"
 import { $IJeiConfigCategory, $IJeiConfigCategory$$Type } from "mezz.jei.api.runtime.config.IJeiConfigCategory"
 import { $ArrowKnockbackEnchantment, $ArrowKnockbackEnchantment$$Type } from "net.minecraft.world.item.enchantment.ArrowKnockbackEnchantment"
 import { $InputFluid, $InputFluid$$Type } from "dev.latvian.mods.kubejs.fluid.InputFluid"
-import { $ModuleDescriptor$Opens$Modifier, $ModuleDescriptor$Opens$Modifier$$Type } from "java.lang.module.ModuleDescriptor$Opens$Modifier"
 import { $BlockEvent$EntityPlaceEvent, $BlockEvent$EntityPlaceEvent$$Type } from "net.minecraftforge.event.level.BlockEvent$EntityPlaceEvent"
+import { $ModuleDescriptor$Opens$Modifier, $ModuleDescriptor$Opens$Modifier$$Type } from "java.lang.module.ModuleDescriptor$Opens$Modifier"
 import { $ByteStack, $ByteStack$$Type } from "it.unimi.dsi.fastutil.bytes.ByteStack"
 import { $ModuleLayer$Controller, $ModuleLayer$Controller$$Type } from "java.lang.ModuleLayer$Controller"
 import { $SinglePieceStructure, $SinglePieceStructure$$Type } from "net.minecraft.world.level.levelgen.structure.SinglePieceStructure"
@@ -7032,8 +7029,8 @@ import { $KnockbackEnchantment, $KnockbackEnchantment$$Type } from "net.minecraf
 import { $ModelPartAccessor as $ModelPartAccessor$0, $ModelPartAccessor$$Type as $ModelPartAccessor$0$$Type } from "punchy.mixin.client.accessor.ModelPartAccessor"
 import { $IngredientWrapper, $IngredientWrapper$$Type } from "dev.latvian.mods.kubejs.bindings.IngredientWrapper"
 import { $AccessorBlockItem, $AccessorBlockItem$$Type } from "org.violetmoon.quark.mixin.mixins.accessor.AccessorBlockItem"
-import { $TextureAtlas, $TextureAtlas$$Type } from "net.minecraft.client.renderer.texture.TextureAtlas"
 import { $LivingSwapItemsEvent$Hands, $LivingSwapItemsEvent$Hands$$Type } from "net.minecraftforge.event.entity.living.LivingSwapItemsEvent$Hands"
+import { $TextureAtlas, $TextureAtlas$$Type } from "net.minecraft.client.renderer.texture.TextureAtlas"
 import { $ColorSpace$Connector, $ColorSpace$Connector$$Type } from "icyllis.arc3d.core.ColorSpace$Connector"
 import { $IProjectileEntityJS, $IProjectileEntityJS$$Type } from "net.liopyu.entityjs.entities.nonliving.entityjs.IProjectileEntityJS"
 import { $AzAnimatorConfig$Builder, $AzAnimatorConfig$Builder$$Type } from "mod.azure.azurelib.animation.AzAnimatorConfig$Builder"
@@ -7097,8 +7094,8 @@ import { $TextureAtlasExtension, $TextureAtlasExtension$$Type } from "net.irissh
 import { $BlockData, $BlockData$$Type } from "net.lixir.vminus.api.datagen.block.BlockData"
 import { $SetMultimap, $SetMultimap$$Type } from "com.google.common.collect.SetMultimap"
 import { $RealmsServerPing, $RealmsServerPing$$Type } from "com.mojang.realmsclient.dto.RealmsServerPing"
-import { $ChannelConfig, $ChannelConfig$$Type } from "io.netty.channel.ChannelConfig"
 import { $GeoRenderEvent$Block, $GeoRenderEvent$Block$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Block"
+import { $ChannelConfig, $ChannelConfig$$Type } from "io.netty.channel.ChannelConfig"
 import { $LootDataResolver, $LootDataResolver$$Type } from "net.minecraft.world.level.storage.loot.LootDataResolver"
 import { $ContextUtils$ProjectileBlockHitContext, $ContextUtils$ProjectileBlockHitContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ProjectileBlockHitContext"
 import { $Gun$Projectile, $Gun$Projectile$$Type } from "top.ribs.scguns.common.Gun$Projectile"
@@ -7166,8 +7163,8 @@ import { $TickPriority, $TickPriority$$Type } from "net.minecraft.world.ticks.Ti
 import { $Context as $Context$2, $Context$$Type as $Context$2$$Type } from "icyllis.arc3d.engine.Context"
 import { $WitherJSBuilder, $WitherJSBuilder$$Type } from "net.liopyu.entityjs.builders.living.vanilla.WitherJSBuilder"
 import { $TranslucentQuadAnalyzer$SortState, $TranslucentQuadAnalyzer$SortState$$Type } from "org.embeddedt.embeddium.render.chunk.sorting.TranslucentQuadAnalyzer$SortState"
-import { $Reference2BooleanFunction, $Reference2BooleanFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2BooleanFunction"
 import { $PlayerContainerEvent$Close, $PlayerContainerEvent$Close$$Type } from "net.minecraftforge.event.entity.player.PlayerContainerEvent$Close"
+import { $Reference2BooleanFunction, $Reference2BooleanFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2BooleanFunction"
 import { $Mob, $Mob$$Type } from "net.minecraft.world.entity.Mob"
 import { $TaskType, $TaskType$$Type } from "dev.ftb.mods.ftbquests.quest.task.TaskType"
 import { $IScrollBoxWidget, $IScrollBoxWidget$$Type } from "mezz.jei.api.gui.widgets.IScrollBoxWidget"
@@ -7207,13 +7204,13 @@ import { $ServerboundSetJigsawBlockPacket, $ServerboundSetJigsawBlockPacket$$Typ
 import { $IForgeRegistry$ClearCallback, $IForgeRegistry$ClearCallback$$Type } from "net.minecraftforge.registries.IForgeRegistry$ClearCallback"
 import { $Double2BooleanFunction, $Double2BooleanFunction$$Type } from "it.unimi.dsi.fastutil.doubles.Double2BooleanFunction"
 import { $AbstractMultimap, $AbstractMultimap$$Type } from "com.google.common.collect.AbstractMultimap"
-import { $EntityDropChanceAccessor, $EntityDropChanceAccessor$$Type } from "com.github.alexmodguy.alexscaves.server.entity.util.EntityDropChanceAccessor"
 import { $ParCoolConfig$Client$Booleans, $ParCoolConfig$Client$Booleans$$Type } from "com.alrex.parcool.config.ParCoolConfig$Client$Booleans"
+import { $EntityDropChanceAccessor, $EntityDropChanceAccessor$$Type } from "com.github.alexmodguy.alexscaves.server.entity.util.EntityDropChanceAccessor"
 import { $GlVertexFormat$Builder, $GlVertexFormat$Builder$$Type } from "me.jellysquid.mods.sodium.client.gl.attribute.GlVertexFormat$Builder"
 import { $Transaction$Lifecycle, $Transaction$Lifecycle$$Type } from "net.fabricmc.fabric.api.transfer.v1.transaction.Transaction$Lifecycle"
 import { $BlockModel, $BlockModel$$Type } from "net.minecraft.client.renderer.block.model.BlockModel"
-import { $InputCommandEvent, $InputCommandEvent$$Type } from "mods.flammpfeil.slashblade.event.handler.InputCommandEvent"
 import { $ChunkDataEvent$Load, $ChunkDataEvent$Load$$Type } from "net.minecraftforge.event.level.ChunkDataEvent$Load"
+import { $InputCommandEvent, $InputCommandEvent$$Type } from "mods.flammpfeil.slashblade.event.handler.InputCommandEvent"
 import { $IRecipeCatalystLookup, $IRecipeCatalystLookup$$Type } from "mezz.jei.api.recipe.IRecipeCatalystLookup"
 import { $ColorSpace$Model, $ColorSpace$Model$$Type } from "icyllis.arc3d.core.ColorSpace$Model"
 import { $MossBlock, $MossBlock$$Type } from "net.minecraft.world.level.block.MossBlock"
@@ -7229,9 +7226,9 @@ import { $LongStream$LongMapMultiConsumer, $LongStream$LongMapMultiConsumer$$Typ
 import { $IBiomeConfig, $IBiomeConfig$$Type } from "org.violetmoon.zeta.config.type.IBiomeConfig"
 import { $TSOptionalType, $TSOptionalType$$Type } from "zzzank.probejs.lang.typescript.code.type.ts.TSOptionalType"
 import { $ItemStackKey, $ItemStackKey$$Type } from "dev.latvian.mods.kubejs.item.ItemStackKey"
+import { $CurioEquipEvent, $CurioEquipEvent$$Type } from "top.theillusivec4.curios.api.event.CurioEquipEvent"
 import { $ContainerSingleItem, $ContainerSingleItem$$Type } from "net.minecraft.world.ticks.ContainerSingleItem"
 import { $SlotResult, $SlotResult$$Type } from "top.theillusivec4.curios.api.SlotResult"
-import { $CurioEquipEvent, $CurioEquipEvent$$Type } from "top.theillusivec4.curios.api.event.CurioEquipEvent"
 import { $MobEntityJS, $MobEntityJS$$Type } from "net.liopyu.entityjs.entities.living.entityjs.MobEntityJS"
 import { $RecipeManagerAccess as $RecipeManagerAccess$0, $RecipeManagerAccess$$Type as $RecipeManagerAccess$0$$Type } from "snownee.lychee.mixin.RecipeManagerAccess"
 import { $AttackHand, $AttackHand$$Type } from "net.bettercombat.api.AttackHand"
@@ -7244,15 +7241,15 @@ import { $TSDump, $TSDump$$Type } from "zzzank.probejs.api.dump.TSDump"
 import { $TypeToken as $TypeToken$0, $TypeToken$$Type as $TypeToken$0$$Type } from "com.google.gson.reflect.TypeToken"
 import { $EntityAttributeInstanceInvoker, $EntityAttributeInstanceInvoker$$Type } from "net.puffish.attributesmod.mixin.EntityAttributeInstanceInvoker"
 import { $EntityModel, $EntityModel$$Type } from "net.minecraft.client.model.EntityModel"
+import { $InputEvent$MouseButton$Post, $InputEvent$MouseButton$Post$$Type } from "net.minecraftforge.client.event.InputEvent$MouseButton$Post"
 import { $TypedOptic$Element, $TypedOptic$Element$$Type } from "com.mojang.datafixers.TypedOptic$Element"
 import { $PaletteResize, $PaletteResize$$Type } from "net.minecraft.world.level.chunk.PaletteResize"
-import { $InputEvent$MouseButton$Post, $InputEvent$MouseButton$Post$$Type } from "net.minecraftforge.client.event.InputEvent$MouseButton$Post"
 import { $SkullModelBase, $SkullModelBase$$Type } from "net.minecraft.client.model.SkullModelBase"
 import { $StructurePlacementType, $StructurePlacementType$$Type } from "net.minecraft.world.level.levelgen.structure.placement.StructurePlacementType"
 import { $TelemetrySession, $TelemetrySession$$Type } from "com.mojang.authlib.minecraft.TelemetrySession"
 import { $ModelBuilder$TransformsBuilder$TransformVecBuilder, $ModelBuilder$TransformsBuilder$TransformVecBuilder$$Type } from "net.minecraftforge.client.model.generators.ModelBuilder$TransformsBuilder$TransformVecBuilder"
-import { $LevelSummary$BackupStatus, $LevelSummary$BackupStatus$$Type } from "net.minecraft.world.level.storage.LevelSummary$BackupStatus"
 import { $PlayerEvent, $PlayerEvent$$Type } from "net.minecraftforge.event.entity.player.PlayerEvent"
+import { $LevelSummary$BackupStatus, $LevelSummary$BackupStatus$$Type } from "net.minecraft.world.level.storage.LevelSummary$BackupStatus"
 import { $EasingType, $EasingType$$Type } from "software.bernie.geckolib.core.animation.EasingType"
 import { $Drowned, $Drowned$$Type } from "net.minecraft.world.entity.monster.Drowned"
 import { $Set, $Set$$Type } from "java.util.Set"
@@ -7330,8 +7327,8 @@ import { $IntConfigProperty, $IntConfigProperty$$Type } from "net.blay09.mods.ba
 import { $ContextUtils$DeathContext, $ContextUtils$DeathContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$DeathContext"
 import { $LevelStorageSource, $LevelStorageSource$$Type } from "net.minecraft.world.level.storage.LevelStorageSource"
 import { $ConditionContainer, $ConditionContainer$$Type } from "dev.latvian.mods.kubejs.loot.ConditionContainer"
-import { $SkeletonHorse, $SkeletonHorse$$Type } from "net.minecraft.world.entity.animal.horse.SkeletonHorse"
 import { $CustomizeGuiOverlayEvent$BossEventProgress, $CustomizeGuiOverlayEvent$BossEventProgress$$Type } from "net.minecraftforge.client.event.CustomizeGuiOverlayEvent$BossEventProgress"
+import { $SkeletonHorse, $SkeletonHorse$$Type } from "net.minecraft.world.entity.animal.horse.SkeletonHorse"
 import { $BlockBehaviour$StateArgumentPredicate, $BlockBehaviour$StateArgumentPredicate$$Type } from "net.minecraft.world.level.block.state.BlockBehaviour$StateArgumentPredicate"
 import { $IDynamicStackHandler, $IDynamicStackHandler$$Type } from "top.theillusivec4.curios.api.type.inventory.IDynamicStackHandler"
 import { $OreFeature, $OreFeature$$Type } from "net.minecraft.world.level.levelgen.feature.OreFeature"
@@ -7345,8 +7342,8 @@ import { $FocusEvent, $FocusEvent$$Type } from "java.awt.event.FocusEvent"
 import { $CustomEntityJSBuilder$CustomInstructionKeyframeEventJS, $CustomEntityJSBuilder$CustomInstructionKeyframeEventJS$$Type } from "net.liopyu.entityjs.builders.misc.CustomEntityJSBuilder$CustomInstructionKeyframeEventJS"
 import { $ShortConsumer, $ShortConsumer$$Type } from "it.unimi.dsi.fastutil.shorts.ShortConsumer"
 import { $StructurePieceType, $StructurePieceType$$Type } from "net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType"
-import { $EnderChestBlockEntity, $EnderChestBlockEntity$$Type } from "net.minecraft.world.level.block.entity.EnderChestBlockEntity"
 import { $NetworkEvent, $NetworkEvent$$Type } from "net.minecraftforge.network.NetworkEvent"
+import { $EnderChestBlockEntity, $EnderChestBlockEntity$$Type } from "net.minecraft.world.level.block.entity.EnderChestBlockEntity"
 import { $OptionIdentifier as $OptionIdentifier$0, $OptionIdentifier$$Type as $OptionIdentifier$0$$Type } from "toni.sodiumoptionsapi.api.OptionIdentifier"
 import { $WatchEvent$Modifier, $WatchEvent$Modifier$$Type } from "java.nio.file.WatchEvent$Modifier"
 import { $Resolver, $Resolver$$Type } from "com.almostreliable.lootjs.filters.Resolver"
@@ -7391,8 +7388,8 @@ import { $ProtectionEnchantment$Type, $ProtectionEnchantment$Type$$Type } from "
 import { $EventResult$Type, $EventResult$Type$$Type } from "dev.latvian.mods.kubejs.event.EventResult$Type"
 import { $Constructor, $Constructor$$Type } from "java.lang.reflect.Constructor"
 import { $OptionalLong, $OptionalLong$$Type } from "java.util.OptionalLong"
-import { $Dialog$ModalityType, $Dialog$ModalityType$$Type } from "java.awt.Dialog$ModalityType"
 import { $SpellCooldownAddedEvent, $SpellCooldownAddedEvent$$Type } from "io.redspace.ironsspellbooks.api.events.SpellCooldownAddedEvent"
+import { $Dialog$ModalityType, $Dialog$ModalityType$$Type } from "java.awt.Dialog$ModalityType"
 import { $ToolAction, $ToolAction$$Type } from "net.minecraftforge.common.ToolAction"
 import { $Choreographer, $Choreographer$$Type } from "icyllis.modernui.core.Choreographer"
 import { $ConfiguredLong, $ConfiguredLong$$Type } from "net.blay09.mods.balm.api.config.schema.ConfiguredLong"
@@ -7408,8 +7405,8 @@ import { $MinecraftAccessor as $MinecraftAccessor$0, $MinecraftAccessor$$Type as
 import { $GLFramebufferInfo, $GLFramebufferInfo$$Type } from "icyllis.arc3d.opengl.GLFramebufferInfo"
 import { $DoubleConfigProperty, $DoubleConfigProperty$$Type } from "net.blay09.mods.balm.api.config.schema.builder.DoubleConfigProperty"
 import { $BossEvent$BossBarOverlay, $BossEvent$BossBarOverlay$$Type } from "net.minecraft.world.BossEvent$BossBarOverlay"
-import { $QueueManager, $QueueManager$$Type } from "icyllis.arc3d.engine.QueueManager"
 import { $AnimalTameEvent, $AnimalTameEvent$$Type } from "net.minecraftforge.event.entity.living.AnimalTameEvent"
+import { $QueueManager, $QueueManager$$Type } from "icyllis.arc3d.engine.QueueManager"
 import { $LootContextType, $LootContextType$$Type } from "com.almostreliable.lootjs.core.LootContextType"
 import { $ModelQuadView, $ModelQuadView$$Type } from "me.jellysquid.mods.sodium.client.model.quad.ModelQuadView"
 import { $TutorialSteps, $TutorialSteps$$Type } from "net.minecraft.client.tutorial.TutorialSteps"
@@ -7515,8 +7512,8 @@ import { $ClientboundAddExperienceOrbPacket, $ClientboundAddExperienceOrbPacket$
 import { $Endermite, $Endermite$$Type } from "net.minecraft.world.entity.monster.Endermite"
 import { $DrawTask, $DrawTask$$Type } from "icyllis.arc3d.granite.task.DrawTask"
 import { $FMLDedicatedServerSetupEvent, $FMLDedicatedServerSetupEvent$$Type } from "net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent"
-import { $SpriteContentsAnimatorImplAccessor, $SpriteContentsAnimatorImplAccessor$$Type } from "me.jellysquid.mods.sodium.mixin.features.textures.animations.upload.SpriteContentsAnimatorImplAccessor"
 import { $ForgeZGatherAdditionalFlags, $ForgeZGatherAdditionalFlags$$Type } from "org.violetmoon.zetaimplforge.event.load.ForgeZGatherAdditionalFlags"
+import { $SpriteContentsAnimatorImplAccessor, $SpriteContentsAnimatorImplAccessor$$Type } from "me.jellysquid.mods.sodium.mixin.features.textures.animations.upload.SpriteContentsAnimatorImplAccessor"
 import { $DripstoneThickness, $DripstoneThickness$$Type } from "net.minecraft.world.level.block.state.properties.DripstoneThickness"
 import { $SurfaceWaterDepthFilter, $SurfaceWaterDepthFilter$$Type } from "net.minecraft.world.level.levelgen.placement.SurfaceWaterDepthFilter"
 import { $PropertyDispatch$TriFunction, $PropertyDispatch$TriFunction$$Type } from "net.minecraft.data.models.blockstates.PropertyDispatch$TriFunction"
@@ -7526,8 +7523,8 @@ import { $IBat, $IBat$$Type } from "com.crackerjackbox.mobcontrol.iface.IBat"
 import { $ScheduledEvents$ScheduledEvent, $ScheduledEvents$ScheduledEvent$$Type } from "dev.latvian.mods.kubejs.util.ScheduledEvents$ScheduledEvent"
 import { $Property as $Property$1, $Property$$Type as $Property$1$$Type } from "icyllis.modernui.util.Property"
 import { $SpyglassItem, $SpyglassItem$$Type } from "net.minecraft.world.item.SpyglassItem"
-import { $FontMetrics, $FontMetrics$$Type } from "java.awt.FontMetrics"
 import { $RecvByteBufAllocator$Handle, $RecvByteBufAllocator$Handle$$Type } from "io.netty.channel.RecvByteBufAllocator$Handle"
+import { $FontMetrics, $FontMetrics$$Type } from "java.awt.FontMetrics"
 import { $BarrierBlock, $BarrierBlock$$Type } from "net.minecraft.world.level.block.BarrierBlock"
 import { $AccessorModelPart, $AccessorModelPart$$Type } from "com.mega.endinglib.mixin.accessor.AccessorModelPart"
 import { $RandomBlockStateMatchTestAccessor, $RandomBlockStateMatchTestAccessor$$Type } from "cc.abbie.emi_ores.mixin.accessor.RandomBlockStateMatchTestAccessor"
@@ -7563,9 +7560,9 @@ import { $Rect2i as $Rect2i$0, $Rect2i$$Type as $Rect2i$0$$Type } from "icyllis.
 import { $ClientboundSetPlayerTeamPacket$Parameters, $ClientboundSetPlayerTeamPacket$Parameters$$Type } from "net.minecraft.network.protocol.game.ClientboundSetPlayerTeamPacket$Parameters"
 import { $EntitySpawnedEventJS, $EntitySpawnedEventJS$$Type } from "dev.latvian.mods.kubejs.entity.EntitySpawnedEventJS"
 import { $AzPlayBehavior, $AzPlayBehavior$$Type } from "mod.azure.azurelib.animation.play_behavior.AzPlayBehavior"
+import { $RegisterEntitySpectatorShadersEvent, $RegisterEntitySpectatorShadersEvent$$Type } from "net.minecraftforge.client.event.RegisterEntitySpectatorShadersEvent"
 import { $SocketOptions, $SocketOptions$$Type } from "java.net.SocketOptions"
 import { $ClientboundAwardStatsPacket, $ClientboundAwardStatsPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundAwardStatsPacket"
-import { $RegisterEntitySpectatorShadersEvent, $RegisterEntitySpectatorShadersEvent$$Type } from "net.minecraftforge.client.event.RegisterEntitySpectatorShadersEvent"
 import { $Control as $Control$0, $Control$$Type as $Control$0$$Type } from "net.minecraft.world.entity.ai.control.Control"
 import { $FragmentResultListener, $FragmentResultListener$$Type } from "icyllis.modernui.fragment.FragmentResultListener"
 import { $MemoryLayout$PathElement, $MemoryLayout$PathElement$$Type } from "java.lang.foreign.MemoryLayout$PathElement"
@@ -7672,9 +7669,9 @@ import { $IAlternatingSpellCaster, $IAlternatingSpellCaster$$Type } from "dev.ut
 import { $SimpleWeightedRandomList$Builder, $SimpleWeightedRandomList$Builder$$Type } from "net.minecraft.util.random.SimpleWeightedRandomList$Builder"
 import { $AbstractObject2IntFunction, $AbstractObject2IntFunction$$Type } from "it.unimi.dsi.fastutil.objects.AbstractObject2IntFunction"
 import { $TextBlobCache$FeatureKey, $TextBlobCache$FeatureKey$$Type } from "icyllis.arc3d.granite.TextBlobCache$FeatureKey"
+import { $CropGrowEvent, $CropGrowEvent$$Type } from "net.blay09.mods.balm.api.event.CropGrowEvent"
 import { $IValueEvent, $IValueEvent$$Type } from "com.blamejared.clumps.api.events.IValueEvent"
 import { $Menu as $Menu$0, $Menu$$Type as $Menu$0$$Type } from "java.awt.Menu"
-import { $CropGrowEvent, $CropGrowEvent$$Type } from "net.blay09.mods.balm.api.event.CropGrowEvent"
 import { $LevelReader, $LevelReader$$Type } from "net.minecraft.world.level.LevelReader"
 import { $ShortTag, $ShortTag$$Type } from "net.minecraft.nbt.ShortTag"
 import { $DoublePlantBlock, $DoublePlantBlock$$Type } from "net.minecraft.world.level.block.DoublePlantBlock"
@@ -7682,8 +7679,8 @@ import { $ComparatorBlock, $ComparatorBlock$$Type } from "net.minecraft.world.le
 import { $MapExtendingRecipe, $MapExtendingRecipe$$Type } from "net.minecraft.world.item.crafting.MapExtendingRecipe"
 import { $CameraDuck, $CameraDuck$$Type } from "com.github.exopandora.shouldersurfing.mixinducks.CameraDuck"
 import { $PlacementModifier, $PlacementModifier$$Type } from "net.minecraft.world.level.levelgen.placement.PlacementModifier"
-import { $EnchantmentMenu, $EnchantmentMenu$$Type } from "net.minecraft.world.inventory.EnchantmentMenu"
 import { $GeoLayerJS, $GeoLayerJS$$Type } from "net.liopyu.entityjs.client.living.model.GeoLayerJS"
+import { $EnchantmentMenu, $EnchantmentMenu$$Type } from "net.minecraft.world.inventory.EnchantmentMenu"
 import { $ArgumentWrapper, $ArgumentWrapper$$Type } from "io.github.apace100.calio.util.ArgumentWrapper"
 import { $StringSplitter, $StringSplitter$$Type } from "net.minecraft.client.StringSplitter"
 import { $Shape as $Shape$0, $Shape$$Type as $Shape$0$$Type } from "icyllis.arc3d.sketch.Shape"
@@ -7695,8 +7692,8 @@ import { $SpellSelection, $SpellSelection$$Type } from "io.redspace.ironsspellbo
 import { $EndRodBlock, $EndRodBlock$$Type } from "net.minecraft.world.level.block.EndRodBlock"
 import { $AbstractEventExecutor, $AbstractEventExecutor$$Type } from "io.netty.util.concurrent.AbstractEventExecutor"
 import { $ClientboundOpenBookPacket, $ClientboundOpenBookPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundOpenBookPacket"
-import { $NBTUtils, $NBTUtils$$Type } from "dev.latvian.mods.rhino.mod.util.NBTUtils"
 import { $ClassWrapper, $ClassWrapper$$Type } from "dev.latvian.mods.kubejs.util.ClassWrapper"
+import { $NBTUtils, $NBTUtils$$Type } from "dev.latvian.mods.rhino.mod.util.NBTUtils"
 import { $Object2IntFunction, $Object2IntFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2IntFunction"
 import { $BlockModel$GuiLight, $BlockModel$GuiLight$$Type } from "net.minecraft.client.renderer.block.model.BlockModel$GuiLight"
 import { $LivingEntityRendererAccessor as $LivingEntityRendererAccessor$1, $LivingEntityRendererAccessor$$Type as $LivingEntityRendererAccessor$1$$Type } from "punchy.mixin.client.accessor.LivingEntityRendererAccessor"
@@ -7736,8 +7733,8 @@ import { $ShapedText$RunConsumer, $ShapedText$RunConsumer$$Type } from "icyllis.
 import { $OutlineBufferSourceAccessor, $OutlineBufferSourceAccessor$$Type } from "net.irisshaders.batchedentityrendering.mixin.OutlineBufferSourceAccessor"
 import { $AzBoneCache, $AzBoneCache$$Type } from "mod.azure.azurelib.animation.cache.AzBoneCache"
 import { $Easing, $Easing$$Type } from "com.mega.endinglib.api.client.Easing"
-import { $InvokerViewerCountManager, $InvokerViewerCountManager$$Type } from "com.leclowndu93150.particular.mixin.InvokerViewerCountManager"
 import { $SpecialTypeKeyEvent$SpecialTypeKey3PressedEvent, $SpecialTypeKeyEvent$SpecialTypeKey3PressedEvent$$Type } from "com.dinzeer.legendreliclib.lib.key.SpecialTypeKeyEvent$SpecialTypeKey3PressedEvent"
+import { $InvokerViewerCountManager, $InvokerViewerCountManager$$Type } from "com.leclowndu93150.particular.mixin.InvokerViewerCountManager"
 import { $BlockSetType, $BlockSetType$$Type } from "net.minecraft.world.level.block.state.properties.BlockSetType"
 import { $PostAction, $PostAction$$Type } from "snownee.lychee.core.post.PostAction"
 import { $EntityPositionSource$Type, $EntityPositionSource$Type$$Type } from "net.minecraft.world.level.gameevent.EntityPositionSource$Type"
@@ -7749,8 +7746,8 @@ import { $BlockPileConfiguration, $BlockPileConfiguration$$Type } from "net.mine
 import { $IPlayer as $IPlayer$0, $IPlayer$$Type as $IPlayer$0$$Type } from "dev.kosmx.playerAnim.api.IPlayer"
 import { $HolderLookup$Provider, $HolderLookup$Provider$$Type } from "net.minecraft.core.HolderLookup$Provider"
 import { $Variable, $Variable$$Type } from "zzzank.probejs.lang.snippet.parts.Variable"
-import { $CommandSigningContext, $CommandSigningContext$$Type } from "net.minecraft.commands.CommandSigningContext"
 import { $BookDrawScreenEvent, $BookDrawScreenEvent$$Type } from "vazkii.patchouli.api.BookDrawScreenEvent"
+import { $CommandSigningContext, $CommandSigningContext$$Type } from "net.minecraft.commands.CommandSigningContext"
 import { $Screen$NarratableSearchResult, $Screen$NarratableSearchResult$$Type } from "net.minecraft.client.gui.screens.Screen$NarratableSearchResult"
 import { $IngredientAction, $IngredientAction$$Type } from "dev.latvian.mods.kubejs.recipe.ingredientaction.IngredientAction"
 import { $IScalableDrawable, $IScalableDrawable$$Type } from "mezz.jei.api.gui.drawable.IScalableDrawable"
@@ -7806,10 +7803,10 @@ import { $ValueLayout, $ValueLayout$$Type } from "java.lang.foreign.ValueLayout"
 import { $Matrix4c, $Matrix4c$$Type } from "icyllis.arc3d.core.Matrix4c"
 import { $DropperBlock, $DropperBlock$$Type } from "net.minecraft.world.level.block.DropperBlock"
 import { $IZetaConfigInternals, $IZetaConfigInternals$$Type } from "org.violetmoon.zeta.config.IZetaConfigInternals"
-import { $ImmutableMultisetGwtSerializationDependencies, $ImmutableMultisetGwtSerializationDependencies$$Type } from "com.google.common.collect.ImmutableMultisetGwtSerializationDependencies"
 import { $Products$P1, $Products$P1$$Type } from "com.mojang.datafixers.Products$P1"
-import { $Products$P3, $Products$P3$$Type } from "com.mojang.datafixers.Products$P3"
+import { $ImmutableMultisetGwtSerializationDependencies, $ImmutableMultisetGwtSerializationDependencies$$Type } from "com.google.common.collect.ImmutableMultisetGwtSerializationDependencies"
 import { $SlashBladeEvent$AddProudSoulEvent, $SlashBladeEvent$AddProudSoulEvent$$Type } from "mods.flammpfeil.slashblade.event.SlashBladeEvent$AddProudSoulEvent"
+import { $Products$P3, $Products$P3$$Type } from "com.mojang.datafixers.Products$P3"
 import { $StatType, $StatType$$Type } from "net.minecraft.stats.StatType"
 import { $Products$P2, $Products$P2$$Type } from "com.mojang.datafixers.Products$P2"
 import { $Input, $Input$$Type } from "net.minecraft.client.player.Input"
@@ -7836,8 +7833,8 @@ import { $StateListAnimator, $StateListAnimator$$Type } from "icyllis.modernui.a
 import { $AccessorItemCooldowns as $AccessorItemCooldowns$0, $AccessorItemCooldowns$$Type as $AccessorItemCooldowns$0$$Type } from "net.darkhax.bookshelf.mixin.accessors.item.AccessorItemCooldowns"
 import { $ReflectionAccessFilter, $ReflectionAccessFilter$$Type } from "com.google.gson.ReflectionAccessFilter"
 import { $BlockStateModifyPlacementCallbackJS, $BlockStateModifyPlacementCallbackJS$$Type } from "dev.latvian.mods.kubejs.block.callbacks.BlockStateModifyPlacementCallbackJS"
-import { $Animation as $Animation$2, $Animation$$Type as $Animation$2$$Type } from "com.github.L_Ender.lionfishapi.server.animation.Animation"
 import { $SpellCooldownAddedEvent$Pre, $SpellCooldownAddedEvent$Pre$$Type } from "io.redspace.ironsspellbooks.api.events.SpellCooldownAddedEvent$Pre"
+import { $Animation as $Animation$2, $Animation$$Type as $Animation$2$$Type } from "com.github.L_Ender.lionfishapi.server.animation.Animation"
 import { $PlayerInfo as $PlayerInfo$0, $PlayerInfo$$Type as $PlayerInfo$0$$Type } from "net.minecraft.client.multiplayer.PlayerInfo"
 import { $PointedDripstoneBlock, $PointedDripstoneBlock$$Type } from "net.minecraft.world.level.block.PointedDripstoneBlock"
 import { $ClientboundPlayerAbilitiesPacket, $ClientboundPlayerAbilitiesPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket"
@@ -7866,8 +7863,8 @@ import { $VillagerEntityAccessor, $VillagerEntityAccessor$$Type } from "net.fabr
 import { $IRegistryJS, $IRegistryJS$$Type } from "net.liopyu.entityjs.util.implementation.IRegistryJS"
 import { $OpenScreenEvent, $OpenScreenEvent$$Type } from "net.blay09.mods.balm.api.event.client.OpenScreenEvent"
 import { $SharedElementCallback, $SharedElementCallback$$Type } from "icyllis.modernui.fragment.SharedElementCallback"
-import { $FPFragmentBuilder, $FPFragmentBuilder$$Type } from "icyllis.arc3d.granite.shading.FPFragmentBuilder"
 import { $PlaySoundSourceEvent, $PlaySoundSourceEvent$$Type } from "net.minecraftforge.client.event.sound.PlaySoundSourceEvent"
+import { $FPFragmentBuilder, $FPFragmentBuilder$$Type } from "icyllis.arc3d.granite.shading.FPFragmentBuilder"
 import { $NamedPackage, $NamedPackage$$Type } from "java.lang.NamedPackage"
 import { $Scoreboard, $Scoreboard$$Type } from "net.minecraft.world.scores.Scoreboard"
 import { $ProcessorMailbox, $ProcessorMailbox$$Type } from "net.minecraft.util.thread.ProcessorMailbox"
@@ -7891,8 +7888,8 @@ import { $SnifferEggBlock, $SnifferEggBlock$$Type } from "net.minecraft.world.le
 import { $CanyonWorldCarver, $CanyonWorldCarver$$Type } from "net.minecraft.world.level.levelgen.carver.CanyonWorldCarver"
 import { $SchoolTypeJSBuilder, $SchoolTypeJSBuilder$$Type } from "com.squoshi.irons_spells_js.spell.school.SchoolTypeJSBuilder"
 import { $RenderShape, $RenderShape$$Type } from "net.minecraft.world.level.block.RenderShape"
-import { $Proxy as $Proxy$0, $Proxy$$Type as $Proxy$0$$Type } from "java.net.Proxy"
 import { $PlayerXpEvent, $PlayerXpEvent$$Type } from "net.minecraftforge.event.entity.player.PlayerXpEvent"
+import { $Proxy as $Proxy$0, $Proxy$$Type as $Proxy$0$$Type } from "java.net.Proxy"
 import { $ConfigSchemaImpl, $ConfigSchemaImpl$$Type } from "net.blay09.mods.balm.api.config.schema.impl.ConfigSchemaImpl"
 import { $RegisterConfigParametersEvent, $RegisterConfigParametersEvent$$Type } from "io.redspace.ironsspellbooks.api.config.RegisterConfigParametersEvent"
 import { $DragSourceDropEvent, $DragSourceDropEvent$$Type } from "java.awt.dnd.DragSourceDropEvent"
@@ -7940,8 +7937,8 @@ import { $WorldStem, $WorldStem$$Type } from "net.minecraft.server.WorldStem"
 import { $TelemetryEvent, $TelemetryEvent$$Type } from "com.mojang.authlib.minecraft.TelemetryEvent"
 import { $RecipesUpdatedEvent as $RecipesUpdatedEvent$0, $RecipesUpdatedEvent$$Type as $RecipesUpdatedEvent$0$$Type } from "net.minecraftforge.client.event.RecipesUpdatedEvent"
 import { $Measure, $Measure$$Type } from "com.ibm.icu.util.Measure"
-import { $Short2ReferenceFunction, $Short2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2ReferenceFunction"
 import { $ItemExpireEvent, $ItemExpireEvent$$Type } from "net.minecraftforge.event.entity.item.ItemExpireEvent"
+import { $Short2ReferenceFunction, $Short2ReferenceFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2ReferenceFunction"
 import { $IEventExceptionHandler, $IEventExceptionHandler$$Type } from "net.minecraftforge.eventbus.api.IEventExceptionHandler"
 import { $Gun$Reloads, $Gun$Reloads$$Type } from "top.ribs.scguns.common.Gun$Reloads"
 import { $FloatBinaryOperator, $FloatBinaryOperator$$Type } from "it.unimi.dsi.fastutil.floats.FloatBinaryOperator"
@@ -7961,8 +7958,8 @@ import { $RenderableImage, $RenderableImage$$Type } from "java.awt.image.rendera
 import { $SpawnSettingsBuilderAccessor, $SpawnSettingsBuilderAccessor$$Type } from "net.fabricmc.fabric.mixin.biome.SpawnSettingsBuilderAccessor"
 import { $WindowStateListener, $WindowStateListener$$Type } from "java.awt.event.WindowStateListener"
 import { $Matrix2d, $Matrix2d$$Type } from "org.joml.Matrix2d"
-import { $RewardType$Provider, $RewardType$Provider$$Type } from "dev.ftb.mods.ftbquests.quest.reward.RewardType$Provider"
 import { $LongConfig, $LongConfig$$Type } from "dev.ftb.mods.ftblibrary.config.LongConfig"
+import { $RewardType$Provider, $RewardType$Provider$$Type } from "dev.ftb.mods.ftbquests.quest.reward.RewardType$Provider"
 import { $AccessibleValue, $AccessibleValue$$Type } from "javax.accessibility.AccessibleValue"
 import { $ZRecipeCrawl$Reset, $ZRecipeCrawl$Reset$$Type } from "org.violetmoon.zeta.event.play.ZRecipeCrawl$Reset"
 import { $GameMasterBlock, $GameMasterBlock$$Type } from "net.minecraft.world.level.block.GameMasterBlock"
@@ -8005,8 +8002,8 @@ import { $PropagatingDefaultedOptionalFieldCodec, $PropagatingDefaultedOptionalF
 import { $WeightedStateProvider, $WeightedStateProvider$$Type } from "net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider"
 import { $StructureBlockEntity, $StructureBlockEntity$$Type } from "net.minecraft.world.level.block.entity.StructureBlockEntity"
 import { $ObjectCompletedEvent$ChapterEvent, $ObjectCompletedEvent$ChapterEvent$$Type } from "dev.ftb.mods.ftbquests.events.ObjectCompletedEvent$ChapterEvent"
-import { $CustomFilterItemEventJS, $CustomFilterItemEventJS$$Type } from "dev.ftb.mods.ftbxmodcompat.ftbquests.kubejs.CustomFilterItemEventJS"
 import { $ViewportEvent$ComputeCameraAngles, $ViewportEvent$ComputeCameraAngles$$Type } from "net.minecraftforge.client.event.ViewportEvent$ComputeCameraAngles"
+import { $CustomFilterItemEventJS, $CustomFilterItemEventJS$$Type } from "dev.ftb.mods.ftbxmodcompat.ftbquests.kubejs.CustomFilterItemEventJS"
 import { $NearbySongAccessor, $NearbySongAccessor$$Type } from "tocraft.walkers.impl.NearbySongAccessor"
 import { $StringJoiner, $StringJoiner$$Type } from "java.util.StringJoiner"
 import { $GsonContextImpl, $GsonContextImpl$$Type } from "snownee.lychee.util.GsonContextImpl"
@@ -8027,12 +8024,12 @@ import { $ClientboundTabListPacket, $ClientboundTabListPacket$$Type } from "net.
 import { $PistonHeadBlock, $PistonHeadBlock$$Type } from "net.minecraft.world.level.block.piston.PistonHeadBlock"
 import { $TreeDecorator$Context, $TreeDecorator$Context$$Type } from "net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context"
 import { $InsideWorldBoundsPredicate, $InsideWorldBoundsPredicate$$Type } from "net.minecraft.world.level.levelgen.blockpredicates.InsideWorldBoundsPredicate"
-import { $IntStack, $IntStack$$Type } from "it.unimi.dsi.fastutil.ints.IntStack"
 import { $MethodHandles$Lookup, $MethodHandles$Lookup$$Type } from "java.lang.invoke.MethodHandles$Lookup"
+import { $IntStack, $IntStack$$Type } from "it.unimi.dsi.fastutil.ints.IntStack"
 import { $ByteArrayTag, $ByteArrayTag$$Type } from "net.minecraft.nbt.ByteArrayTag"
 import { $ServerConnectionListener, $ServerConnectionListener$$Type } from "net.minecraft.server.network.ServerConnectionListener"
-import { $FileAttribute, $FileAttribute$$Type } from "java.nio.file.attribute.FileAttribute"
 import { $LivingConversionEvent, $LivingConversionEvent$$Type } from "net.minecraftforge.event.entity.living.LivingConversionEvent"
+import { $FileAttribute, $FileAttribute$$Type } from "java.nio.file.attribute.FileAttribute"
 import { $AmphibiousPathNavigation, $AmphibiousPathNavigation$$Type } from "net.minecraft.world.entity.ai.navigation.AmphibiousPathNavigation"
 import { $ScreenEvent, $ScreenEvent$$Type } from "net.minecraftforge.client.event.ScreenEvent"
 import { $LootEntryAccessor, $LootEntryAccessor$$Type } from "com.saloeater.emiloot_integrates_lootjs.mixin.LootEntryAccessor"
@@ -8074,15 +8071,15 @@ import { $ViewRoot, $ViewRoot$$Type } from "icyllis.modernui.view.ViewRoot"
 import { $FileFilter, $FileFilter$$Type } from "java.io.FileFilter"
 import { $BaseEntityJS, $BaseEntityJS$$Type } from "net.liopyu.entityjs.entities.nonliving.entityjs.BaseEntityJS"
 import { $CommandNode, $CommandNode$$Type } from "com.mojang.brigadier.tree.CommandNode"
-import { $Long2ObjectMap, $Long2ObjectMap$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectMap"
 import { $UnmodifiableIterator, $UnmodifiableIterator$$Type } from "com.google.common.collect.UnmodifiableIterator"
+import { $Long2ObjectMap, $Long2ObjectMap$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectMap"
 import { $ClickEvent, $ClickEvent$$Type } from "net.minecraft.network.chat.ClickEvent"
 import { $EntityTrackerAccessor as $EntityTrackerAccessor$0, $EntityTrackerAccessor$$Type as $EntityTrackerAccessor$0$$Type } from "net.fabricmc.fabric.mixin.networking.accessor.EntityTrackerAccessor"
 import { $AzBone, $AzBone$$Type } from "mod.azure.azurelib.model.AzBone"
 import { $Object2ObjectMap$Entry, $Object2ObjectMap$Entry$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectMap$Entry"
 import { $ByteTag, $ByteTag$$Type } from "net.minecraft.nbt.ByteTag"
-import { $JobAttributes, $JobAttributes$$Type } from "java.awt.JobAttributes"
 import { $ItemBuilder$FinishUsingCallback, $ItemBuilder$FinishUsingCallback$$Type } from "dev.latvian.mods.kubejs.item.ItemBuilder$FinishUsingCallback"
+import { $JobAttributes, $JobAttributes$$Type } from "java.awt.JobAttributes"
 import { $ModCheck, $ModCheck$$Type } from "net.minecraft.util.ModCheck"
 import { $GlowLichenBlock, $GlowLichenBlock$$Type } from "net.minecraft.world.level.block.GlowLichenBlock"
 import { $NumberFormat as $NumberFormat$0, $NumberFormat$$Type as $NumberFormat$0$$Type } from "com.ibm.icu.text.NumberFormat"
@@ -8130,9 +8127,9 @@ import { $Char2BooleanFunction, $Char2BooleanFunction$$Type } from "it.unimi.dsi
 import { $VisionEntry, $VisionEntry$$Type } from "net.lixir.vminus.vision.VisionEntry"
 import { $ICastDataSerializable, $ICastDataSerializable$$Type } from "io.redspace.ironsspellbooks.api.spells.ICastDataSerializable"
 import { $CreativeTabBuilder, $CreativeTabBuilder$$Type } from "dev.latvian.mods.kubejs.item.creativetab.CreativeTabBuilder"
+import { $ClientChatReceivedEvent$Player, $ClientChatReceivedEvent$Player$$Type } from "net.minecraftforge.client.event.ClientChatReceivedEvent$Player"
 import { $CameraPosEvent, $CameraPosEvent$$Type } from "com.mega.endinglib.api.event.render.CameraPosEvent"
 import { $ClientLevel$ClientLevelData, $ClientLevel$ClientLevelData$$Type } from "net.minecraft.client.multiplayer.ClientLevel$ClientLevelData"
-import { $ClientChatReceivedEvent$Player, $ClientChatReceivedEvent$Player$$Type } from "net.minecraftforge.client.event.ClientChatReceivedEvent$Player"
 import { $IRecipeWidget, $IRecipeWidget$$Type } from "mezz.jei.api.gui.widgets.IRecipeWidget"
 import { $BaseStream, $BaseStream$$Type } from "java.util.stream.BaseStream"
 import { $LifecycleOwner, $LifecycleOwner$$Type } from "icyllis.modernui.lifecycle.LifecycleOwner"
@@ -8149,9 +8146,9 @@ import { $SmithingTemplateItem, $SmithingTemplateItem$$Type } from "net.minecraf
 import { $BlockEntityJS, $BlockEntityJS$$Type } from "dev.latvian.mods.kubejs.block.entity.BlockEntityJS"
 import { $GameConfig, $GameConfig$$Type } from "net.minecraft.client.main.GameConfig"
 import { $ObjectProgressEvent, $ObjectProgressEvent$$Type } from "dev.ftb.mods.ftbquests.events.ObjectProgressEvent"
+import { $ScreenEvent$KeyPressed$Post, $ScreenEvent$KeyPressed$Post$$Type } from "net.minecraftforge.client.event.ScreenEvent$KeyPressed$Post"
 import { $SimpleEvent, $SimpleEvent$$Type } from "net.mehvahdjukaar.moonlight.api.events.SimpleEvent"
 import { $MinMaxBounds$Doubles, $MinMaxBounds$Doubles$$Type } from "net.minecraft.advancements.critereon.MinMaxBounds$Doubles"
-import { $ScreenEvent$KeyPressed$Post, $ScreenEvent$KeyPressed$Post$$Type } from "net.minecraftforge.client.event.ScreenEvent$KeyPressed$Post"
 import { $GeoReplacedEntityRenderer, $GeoReplacedEntityRenderer$$Type } from "software.bernie.geckolib.renderer.GeoReplacedEntityRenderer"
 import { $PerlinSimplexNoise, $PerlinSimplexNoise$$Type } from "net.minecraft.world.level.levelgen.synth.PerlinSimplexNoise"
 import { $MultiPlayerGameMode, $MultiPlayerGameMode$$Type } from "net.minecraft.client.multiplayer.MultiPlayerGameMode"
@@ -8159,8 +8156,8 @@ import { $Level as $Level$1, $Level$$Type as $Level$1$$Type } from "org.slf4j.ev
 import { $IAnimatableJSCustom, $IAnimatableJSCustom$$Type } from "net.liopyu.entityjs.entities.living.entityjs.IAnimatableJSCustom"
 import { $Subscription, $Subscription$$Type } from "com.mojang.realmsclient.dto.Subscription"
 import { $HudRender, $HudRender$$Type } from "io.github.apace100.apoli.util.HudRender"
-import { $HumanoidModelAccess, $HumanoidModelAccess$$Type } from "me.Thelnfamous1.mobplayeranimator.api.HumanoidModelAccess"
 import { $PlayerEvent$PlayerChangeGameModeEvent, $PlayerEvent$PlayerChangeGameModeEvent$$Type } from "net.minecraftforge.event.entity.player.PlayerEvent$PlayerChangeGameModeEvent"
+import { $HumanoidModelAccess, $HumanoidModelAccess$$Type } from "me.Thelnfamous1.mobplayeranimator.api.HumanoidModelAccess"
 import { $Long2IntFunction, $Long2IntFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2IntFunction"
 import { $PlayStreamingSourceEvent, $PlayStreamingSourceEvent$$Type } from "net.minecraftforge.client.event.sound.PlayStreamingSourceEvent"
 import { $StemGrownBlock, $StemGrownBlock$$Type } from "net.minecraft.world.level.block.StemGrownBlock"
@@ -8185,15 +8182,15 @@ import { $MethodHandles$Lookup$ClassOption, $MethodHandles$Lookup$ClassOption$$T
 import { $UtilsWrapper, $UtilsWrapper$$Type } from "dev.latvian.mods.kubejs.bindings.UtilsWrapper"
 import { $ItemStackShrinkProvider, $ItemStackShrinkProvider$$Type } from "dev.xkmc.l2backpack.events.ItemStackShrinkProvider"
 import { $PropagatingOptionalFieldCodec, $PropagatingOptionalFieldCodec$$Type } from "io.github.edwinmindcraft.calio.api.network.PropagatingOptionalFieldCodec"
-import { $LightChunk, $LightChunk$$Type } from "net.minecraft.world.level.chunk.LightChunk"
 import { $EntityMobGriefingEvent, $EntityMobGriefingEvent$$Type } from "net.minecraftforge.event.entity.EntityMobGriefingEvent"
+import { $LightChunk, $LightChunk$$Type } from "net.minecraft.world.level.chunk.LightChunk"
 import { $ServerboundEditBookPacket, $ServerboundEditBookPacket$$Type } from "net.minecraft.network.protocol.game.ServerboundEditBookPacket"
 import { $IntProperty, $IntProperty$$Type } from "icyllis.modernui.util.IntProperty"
 import { $PrimitiveIterator$OfLong, $PrimitiveIterator$OfLong$$Type } from "java.util.PrimitiveIterator$OfLong"
 import { $TemporalAmount, $TemporalAmount$$Type } from "java.time.temporal.TemporalAmount"
 import { $IModStateTransition$EventGenerator, $IModStateTransition$EventGenerator$$Type } from "net.minecraftforge.fml.IModStateTransition$EventGenerator"
-import { $BrainDebugRenderer, $BrainDebugRenderer$$Type } from "net.minecraft.client.renderer.debug.BrainDebugRenderer"
 import { $ForgeZGatherAdditionalFlags as $ForgeZGatherAdditionalFlags$0, $ForgeZGatherAdditionalFlags$$Type as $ForgeZGatherAdditionalFlags$0$$Type } from "org.violetmoon.zetaimplforge.event.play.loading.ForgeZGatherAdditionalFlags"
+import { $BrainDebugRenderer, $BrainDebugRenderer$$Type } from "net.minecraft.client.renderer.debug.BrainDebugRenderer"
 import { $Attribute as $Attribute$0, $Attribute$$Type as $Attribute$0$$Type } from "io.netty.util.Attribute"
 import { $RenderGuiOverlayEvent$Post, $RenderGuiOverlayEvent$Post$$Type } from "net.minecraftforge.client.event.RenderGuiOverlayEvent$Post"
 import { $AxisAngle4f, $AxisAngle4f$$Type } from "org.joml.AxisAngle4f"
@@ -8286,8 +8283,8 @@ import { $VanishingCurseEnchantment, $VanishingCurseEnchantment$$Type } from "ne
 import { $ForgeFlowingFluid$Source, $ForgeFlowingFluid$Source$$Type } from "net.minecraftforge.fluids.ForgeFlowingFluid$Source"
 import { $IRecipeSlotsView, $IRecipeSlotsView$$Type } from "mezz.jei.api.gui.ingredient.IRecipeSlotsView"
 import { $ServerboundPlayerCommandPacket$Action, $ServerboundPlayerCommandPacket$Action$$Type } from "net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket$Action"
-import { $WardenSpawnTracker, $WardenSpawnTracker$$Type } from "net.minecraft.world.entity.monster.warden.WardenSpawnTracker"
 import { $GeoRenderEvent$ReplacedEntity$CompileRenderLayers, $GeoRenderEvent$ReplacedEntity$CompileRenderLayers$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$ReplacedEntity$CompileRenderLayers"
+import { $WardenSpawnTracker, $WardenSpawnTracker$$Type } from "net.minecraft.world.entity.monster.warden.WardenSpawnTracker"
 import { $ScreenKeyEvent$Press$Post, $ScreenKeyEvent$Press$Post$$Type } from "net.blay09.mods.balm.api.event.client.screen.ScreenKeyEvent$Press$Post"
 import { $MerchantOffer, $MerchantOffer$$Type } from "net.minecraft.world.item.trading.MerchantOffer"
 import { $BlockAction, $BlockAction$$Type } from "io.github.edwinmindcraft.apoli.api.power.factory.BlockAction"
@@ -8299,8 +8296,8 @@ import { $LiteralArgumentBuilder, $LiteralArgumentBuilder$$Type } from "com.moja
 import { $MenuBar, $MenuBar$$Type } from "java.awt.MenuBar"
 import { $VertexFormat, $VertexFormat$$Type } from "com.mojang.blaze3d.vertex.VertexFormat"
 import { $Drawable as $Drawable$0, $Drawable$$Type as $Drawable$0$$Type } from "icyllis.modernui.graphics.drawable.Drawable"
-import { $ProjectileEntityBuilder, $ProjectileEntityBuilder$$Type } from "net.liopyu.entityjs.builders.nonliving.entityjs.ProjectileEntityBuilder"
 import { $FirstPersonTracker, $FirstPersonTracker$$Type } from "me.Thelnfamous1.mobplayeranimator.api.FirstPersonTracker"
+import { $ProjectileEntityBuilder, $ProjectileEntityBuilder$$Type } from "net.liopyu.entityjs.builders.nonliving.entityjs.ProjectileEntityBuilder"
 import { $CountOnEveryLayerPlacement, $CountOnEveryLayerPlacement$$Type } from "net.minecraft.world.level.levelgen.placement.CountOnEveryLayerPlacement"
 import { $Double, $Double$$Type } from "java.lang.Double"
 import { $SodiumWorldRendererAccessor, $SodiumWorldRendererAccessor$$Type } from "net.irisshaders.iris.compat.sodium.mixin.shadow_map.SodiumWorldRendererAccessor"
@@ -8328,8 +8325,8 @@ import { $Snowball, $Snowball$$Type } from "net.minecraft.world.entity.projectil
 import { $WrittenBookItem, $WrittenBookItem$$Type } from "net.minecraft.world.item.WrittenBookItem"
 import { $Constable, $Constable$$Type } from "java.lang.constant.Constable"
 import { $Zoglin, $Zoglin$$Type } from "net.minecraft.world.entity.monster.Zoglin"
-import { $SymbolScriptable, $SymbolScriptable$$Type } from "dev.latvian.mods.rhino.SymbolScriptable"
 import { $SpellModificationEventJS, $SpellModificationEventJS$$Type } from "com.squoshi.irons_spells_js.events.SpellModificationEventJS"
+import { $SymbolScriptable, $SymbolScriptable$$Type } from "dev.latvian.mods.rhino.SymbolScriptable"
 import { $ModifyRecipeResultCallback, $ModifyRecipeResultCallback$$Type } from "dev.latvian.mods.kubejs.recipe.ModifyRecipeResultCallback"
 import { $GeoRenderEvent$Armor$Post, $GeoRenderEvent$Armor$Post$$Type } from "software.bernie.geckolib.event.GeoRenderEvent$Armor$Post"
 import { $IDisableable, $IDisableable$$Type } from "org.violetmoon.zeta.module.IDisableable"
@@ -8351,8 +8348,8 @@ import { $Products$P14, $Products$P14$$Type } from "com.mojang.datafixers.Produc
 import { $Products$P11, $Products$P11$$Type } from "com.mojang.datafixers.Products$P11"
 import { $Products$P12, $Products$P12$$Type } from "com.mojang.datafixers.Products$P12"
 import { $LidBlockEntity, $LidBlockEntity$$Type } from "net.minecraft.world.level.block.entity.LidBlockEntity"
-import { $Products$P10, $Products$P10$$Type } from "com.mojang.datafixers.Products$P10"
 import { $ClientPlayerNetworkEvent$LoggingIn, $ClientPlayerNetworkEvent$LoggingIn$$Type } from "net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn"
+import { $Products$P10, $Products$P10$$Type } from "com.mojang.datafixers.Products$P10"
 import { $ScoreHolderArgument$Result, $ScoreHolderArgument$Result$$Type } from "net.minecraft.commands.arguments.ScoreHolderArgument$Result"
 import { $Pack$Position, $Pack$Position$$Type } from "net.minecraft.server.packs.repository.Pack$Position"
 import { $KeyEntryListenersEvent, $KeyEntryListenersEvent$$Type } from "com.blamejared.controlling.api.events.KeyEntryListenersEvent"
@@ -8429,10 +8426,10 @@ export type MobBuilder<T extends ($Mob & $IAnimatableJS)> = $MobBuilder<T>;
 export type MobBuilder_<T extends ($Mob & $IAnimatableJS)> = $MobBuilder$$Type<T>;
 export type RemoveOresProperties = $RemoveOresProperties;
 export type RemoveOresProperties_ = $RemoveOresProperties$$Type;
-export type BalmEntity = $BalmEntity;
-export type BalmEntity_ = $BalmEntity$$Type;
 export type CurioAttributeModifierEvent = $CurioAttributeModifierEvent;
 export type CurioAttributeModifierEvent_ = $CurioAttributeModifierEvent$$Type;
+export type BalmEntity = $BalmEntity;
+export type BalmEntity_ = $BalmEntity$$Type;
 export type BufferSourceAccessor = $BufferSourceAccessor;
 export type BufferSourceAccessor_ = $BufferSourceAccessor$$Type;
 export type Int2BooleanFunction = $Int2BooleanFunction;
@@ -8485,10 +8482,10 @@ export type EventRenderSplashText = $EventRenderSplashText;
 export type EventRenderSplashText_ = $EventRenderSplashText$$Type;
 export type Shader = $Shader;
 export type Shader_ = $Shader$$Type;
-export type IGuiOverlay = $IGuiOverlay;
-export type IGuiOverlay_ = $IGuiOverlay$$Type;
 export type ModConfigEvent$Loading = $ModConfigEvent$Loading;
 export type ModConfigEvent$Loading_ = $ModConfigEvent$Loading$$Type;
+export type IGuiOverlay = $IGuiOverlay;
+export type IGuiOverlay_ = $IGuiOverlay$$Type;
 export type Currency = $Currency;
 export type Currency_ = $Currency$$Type;
 export type ClientboundSetActionBarTextPacket = $ClientboundSetActionBarTextPacket;
@@ -8595,10 +8592,10 @@ export type ETFEntity = $ETFEntity;
 export type ETFEntity_ = $ETFEntity$$Type;
 export type CriterionTrigger$Listener<T extends $CriterionTriggerInstance> = $CriterionTrigger$Listener<T>;
 export type CriterionTrigger$Listener_<T extends $CriterionTriggerInstance> = $CriterionTrigger$Listener$$Type<T>;
-export type DownloadedPackSource = $DownloadedPackSource;
-export type DownloadedPackSource_ = $DownloadedPackSource$$Type;
 export type CompostableRecipesEventJS = $CompostableRecipesEventJS;
 export type CompostableRecipesEventJS_ = $CompostableRecipesEventJS$$Type;
+export type DownloadedPackSource = $DownloadedPackSource;
+export type DownloadedPackSource_ = $DownloadedPackSource$$Type;
 export type BowItem = $BowItem;
 export type BowItem_ = $BowItem$$Type;
 export type WaterFluid$Source = $WaterFluid$Source;
@@ -8817,10 +8814,10 @@ export type CombatTrackerClone = $CombatTrackerClone;
 export type CombatTrackerClone_ = $CombatTrackerClone$$Type;
 export type MemoryTrackingBuffer = $MemoryTrackingBuffer;
 export type MemoryTrackingBuffer_ = $MemoryTrackingBuffer$$Type;
-export type Rotation = $Rotation;
-export type Rotation_ = $Rotation$$Type;
 export type PlayerContainerEvent$Open = $PlayerContainerEvent$Open;
 export type PlayerContainerEvent$Open_ = $PlayerContainerEvent$Open$$Type;
+export type Rotation = $Rotation;
+export type Rotation_ = $Rotation$$Type;
 export type ResourceArgument<T> = $ResourceArgument<T>;
 export type ResourceArgument_<T> = $ResourceArgument$$Type<T>;
 export type PlayMessages$SpawnEntity = $PlayMessages$SpawnEntity;
@@ -8871,10 +8868,10 @@ export type PickaxeItemBuilder = $PickaxeItemBuilder;
 export type PickaxeItemBuilder_ = $PickaxeItemBuilder$$Type;
 export type TickEvent$Type = $TickEvent$Type;
 export type TickEvent$Type_ = $TickEvent$Type$$Type;
-export type MenuItem$OnActionExpandListener = $MenuItem$OnActionExpandListener;
-export type MenuItem$OnActionExpandListener_ = $MenuItem$OnActionExpandListener$$Type;
 export type ByteBuf = $ByteBuf;
 export type ByteBuf_ = $ByteBuf$$Type;
+export type MenuItem$OnActionExpandListener = $MenuItem$OnActionExpandListener;
+export type MenuItem$OnActionExpandListener_ = $MenuItem$OnActionExpandListener$$Type;
 export type WorldGenLevel = $WorldGenLevel;
 export type WorldGenLevel_ = $WorldGenLevel$$Type;
 export type CarverDebugSettings = $CarverDebugSettings;
@@ -8887,10 +8884,10 @@ export type JobAttributes$SidesType = $JobAttributes$SidesType;
 export type JobAttributes$SidesType_ = $JobAttributes$SidesType$$Type;
 export type PatrollingMonster = $PatrollingMonster;
 export type PatrollingMonster_ = $PatrollingMonster$$Type;
-export type ItemComponentParser = $ItemComponentParser;
-export type ItemComponentParser_ = $ItemComponentParser$$Type;
 export type CustomizeGuiOverlayEvent = $CustomizeGuiOverlayEvent;
 export type CustomizeGuiOverlayEvent_ = $CustomizeGuiOverlayEvent$$Type;
+export type ItemComponentParser = $ItemComponentParser;
+export type ItemComponentParser_ = $ItemComponentParser$$Type;
 export type ChestType = $ChestType;
 export type ChestType_ = $ChestType$$Type;
 export type BaseLivingEntityBuilder$ISoundListenerJS<E extends ($LivingEntity & $IAnimatableJS)> = $BaseLivingEntityBuilder$ISoundListenerJS<E>;
@@ -8919,10 +8916,10 @@ export type Animation$LoopType = $Animation$LoopType;
 export type Animation$LoopType_ = $Animation$LoopType$$Type;
 export type AnimationEvent$Start$0<T extends ($Entity & $IAnimatedEntity$0)> = $AnimationEvent$Start$0<T>;
 export type AnimationEvent$Start$0_<T extends ($Entity & $IAnimatedEntity$0)> = $AnimationEvent$Start$0$$Type<T>;
-export type FireworkRocketEntityKJS = $FireworkRocketEntityKJS;
-export type FireworkRocketEntityKJS_ = $FireworkRocketEntityKJS$$Type;
 export type Monitor = $Monitor;
 export type Monitor_ = $Monitor$$Type;
+export type FireworkRocketEntityKJS = $FireworkRocketEntityKJS;
+export type FireworkRocketEntityKJS_ = $FireworkRocketEntityKJS$$Type;
 export type DatagramChannel = $DatagramChannel;
 export type DatagramChannel_ = $DatagramChannel$$Type;
 export type NoiseGeneratorSettingsAccessor = $NoiseGeneratorSettingsAccessor;
@@ -8935,10 +8932,10 @@ export type PlaceOnWaterBlockItem = $PlaceOnWaterBlockItem;
 export type PlaceOnWaterBlockItem_ = $PlaceOnWaterBlockItem$$Type;
 export type Reference2IntFunction<K> = $Reference2IntFunction<K>;
 export type Reference2IntFunction_<K> = $Reference2IntFunction$$Type<K>;
-export type UnmodifiableConfig$Entry = $UnmodifiableConfig$Entry;
-export type UnmodifiableConfig$Entry_ = $UnmodifiableConfig$Entry$$Type;
 export type SaplingGrowTreeEvent = $SaplingGrowTreeEvent;
 export type SaplingGrowTreeEvent_ = $SaplingGrowTreeEvent$$Type;
+export type UnmodifiableConfig$Entry = $UnmodifiableConfig$Entry;
+export type UnmodifiableConfig$Entry_ = $UnmodifiableConfig$Entry$$Type;
 export type PlayerChatDecorateEventJS = $PlayerChatDecorateEventJS;
 export type PlayerChatDecorateEventJS_ = $PlayerChatDecorateEventJS$$Type;
 export type FTBQuestsKubeJSTeamDataWrapper = $FTBQuestsKubeJSTeamDataWrapper;
@@ -9211,10 +9208,10 @@ export type GameEventListener = $GameEventListener;
 export type GameEventListener_ = $GameEventListener$$Type;
 export type WoodType = $WoodType;
 export type WoodType_ = $WoodType$$Type;
-export type Double2ReferenceFunction<V> = $Double2ReferenceFunction<V>;
-export type Double2ReferenceFunction_<V> = $Double2ReferenceFunction$$Type<V>;
 export type ForgeZRecipeCrawl$Visit$Shapeless = $ForgeZRecipeCrawl$Visit$Shapeless;
 export type ForgeZRecipeCrawl$Visit$Shapeless_ = $ForgeZRecipeCrawl$Visit$Shapeless$$Type;
+export type Double2ReferenceFunction<V> = $Double2ReferenceFunction<V>;
+export type Double2ReferenceFunction_<V> = $Double2ReferenceFunction$$Type<V>;
 export type ImageViewProxy$LazyCallbackResult = $ImageViewProxy$LazyCallbackResult;
 export type ImageViewProxy$LazyCallbackResult_ = $ImageViewProxy$LazyCallbackResult$$Type;
 export type Shearable = $Shearable;
@@ -9355,10 +9352,10 @@ export type SpecialKeyType = $SpecialKeyType;
 export type SpecialKeyType_ = $SpecialKeyType$$Type;
 export type AccessorEntitySelector = $AccessorEntitySelector;
 export type AccessorEntitySelector_ = $AccessorEntitySelector$$Type;
-export type IrisExtendedBufferBuilder = $IrisExtendedBufferBuilder;
-export type IrisExtendedBufferBuilder_ = $IrisExtendedBufferBuilder$$Type;
 export type ServerLifecycleEvent = $ServerLifecycleEvent;
 export type ServerLifecycleEvent_ = $ServerLifecycleEvent$$Type;
+export type IrisExtendedBufferBuilder = $IrisExtendedBufferBuilder;
+export type IrisExtendedBufferBuilder_ = $IrisExtendedBufferBuilder$$Type;
 export type DateFormat$BooleanAttribute = $DateFormat$BooleanAttribute;
 export type DateFormat$BooleanAttribute_ = $DateFormat$BooleanAttribute$$Type;
 export type ItemComponentType<T> = $ItemComponentType<T>;
@@ -9401,10 +9398,10 @@ export type ScreenEvent$MouseButtonPressed$Pre = $ScreenEvent$MouseButtonPressed
 export type ScreenEvent$MouseButtonPressed$Pre_ = $ScreenEvent$MouseButtonPressed$Pre$$Type;
 export type LivingDamageCache = $LivingDamageCache;
 export type LivingDamageCache_ = $LivingDamageCache$$Type;
-export type TeamMessage = $TeamMessage;
-export type TeamMessage_ = $TeamMessage$$Type;
 export type ScreenMouseEvent$Drag = $ScreenMouseEvent$Drag;
 export type ScreenMouseEvent$Drag_ = $ScreenMouseEvent$Drag$$Type;
+export type TeamMessage = $TeamMessage;
+export type TeamMessage_ = $TeamMessage$$Type;
 export type FileDescriptor = $FileDescriptor;
 export type FileDescriptor_ = $FileDescriptor$$Type;
 export type AxisCycle = $AxisCycle;
@@ -9493,10 +9490,10 @@ export type RedstoneWallTorchBlock = $RedstoneWallTorchBlock;
 export type RedstoneWallTorchBlock_ = $RedstoneWallTorchBlock$$Type;
 export type ContextUtils$ArrowEntityHitContext = $ContextUtils$ArrowEntityHitContext;
 export type ContextUtils$ArrowEntityHitContext_ = $ContextUtils$ArrowEntityHitContext$$Type;
-export type Turtle = $Turtle;
-export type Turtle_ = $Turtle$$Type;
 export type ScreenEvent$MouseButtonReleased$Post = $ScreenEvent$MouseButtonReleased$Post;
 export type ScreenEvent$MouseButtonReleased$Post_ = $ScreenEvent$MouseButtonReleased$Post$$Type;
+export type Turtle = $Turtle;
+export type Turtle_ = $Turtle$$Type;
 export type ArrayRecipeComponent<T> = $ArrayRecipeComponent<T>;
 export type ArrayRecipeComponent_<T> = $ArrayRecipeComponent$$Type<T>;
 export type SerializableTickContainer<T> = $SerializableTickContainer<T>;
@@ -9521,10 +9518,10 @@ export type CachedOutput = $CachedOutput;
 export type CachedOutput_ = $CachedOutput$$Type;
 export type ImprovedNoise = $ImprovedNoise;
 export type ImprovedNoise_ = $ImprovedNoise$$Type;
-export type IForgeShearable = $IForgeShearable;
-export type IForgeShearable_ = $IForgeShearable$$Type;
 export type ChunkEvent$Load = $ChunkEvent$Load;
 export type ChunkEvent$Load_ = $ChunkEvent$Load$$Type;
+export type IForgeShearable = $IForgeShearable;
+export type IForgeShearable_ = $IForgeShearable$$Type;
 export type ServerLevelKJS = $ServerLevelKJS;
 export type ServerLevelKJS_ = $ServerLevelKJS$$Type;
 export type FontRenderContext = $FontRenderContext;
@@ -9543,10 +9540,10 @@ export type WoodlandMansionStructure = $WoodlandMansionStructure;
 export type WoodlandMansionStructure_ = $WoodlandMansionStructure$$Type;
 export type RenderTooltipExtEvent$Color = $RenderTooltipExtEvent$Color;
 export type RenderTooltipExtEvent$Color_ = $RenderTooltipExtEvent$Color$$Type;
-export type SpikeConfiguration = $SpikeConfiguration;
-export type SpikeConfiguration_ = $SpikeConfiguration$$Type;
 export type ExplosionEvent$Start = $ExplosionEvent$Start;
 export type ExplosionEvent$Start_ = $ExplosionEvent$Start$$Type;
+export type SpikeConfiguration = $SpikeConfiguration;
+export type SpikeConfiguration_ = $SpikeConfiguration$$Type;
 export type ClientboundPlaceGhostRecipePacket = $ClientboundPlaceGhostRecipePacket;
 export type ClientboundPlaceGhostRecipePacket_ = $ClientboundPlaceGhostRecipePacket$$Type;
 export type ThrownExperienceBottle = $ThrownExperienceBottle;
@@ -9585,10 +9582,10 @@ export type JSJoinedType = $JSJoinedType;
 export type JSJoinedType_ = $JSJoinedType$$Type;
 export type RealmsServerList = $RealmsServerList;
 export type RealmsServerList_ = $RealmsServerList$$Type;
-export type ChunkProgressListener = $ChunkProgressListener;
-export type ChunkProgressListener_ = $ChunkProgressListener$$Type;
 export type ScreenEvent$CharacterTyped$Post = $ScreenEvent$CharacterTyped$Post;
 export type ScreenEvent$CharacterTyped$Post_ = $ScreenEvent$CharacterTyped$Post$$Type;
+export type ChunkProgressListener = $ChunkProgressListener;
+export type ChunkProgressListener_ = $ChunkProgressListener$$Type;
 export type StructureCheckResult = $StructureCheckResult;
 export type StructureCheckResult_ = $StructureCheckResult$$Type;
 export type MultiPartBlockStateBuilder$PartBuilder$ConditionGroup = $MultiPartBlockStateBuilder$PartBuilder$ConditionGroup;
@@ -9621,8 +9618,6 @@ export type CollectionTag<T extends $Tag> = $CollectionTag<T>;
 export type CollectionTag_<T extends $Tag> = $CollectionTag$$Type<T>;
 export type Object2BooleanFunction<K> = $Object2BooleanFunction<K>;
 export type Object2BooleanFunction_<K> = $Object2BooleanFunction$$Type<K>;
-export type PlayerModelAccessor = $PlayerModelAccessor;
-export type PlayerModelAccessor_ = $PlayerModelAccessor$$Type;
 export type TemporalUnit = $TemporalUnit;
 export type TemporalUnit_ = $TemporalUnit$$Type;
 export type Button$Builder = $Button$Builder;
@@ -9665,10 +9660,10 @@ export type ActionProvider$SubUiVisibilityListener = $ActionProvider$SubUiVisibi
 export type ActionProvider$SubUiVisibilityListener_ = $ActionProvider$SubUiVisibilityListener$$Type;
 export type GeoObjectRenderer<T extends $GeoAnimatable> = $GeoObjectRenderer<T>;
 export type GeoObjectRenderer_<T extends $GeoAnimatable> = $GeoObjectRenderer$$Type<T>;
-export type EntityArrayList = $EntityArrayList;
-export type EntityArrayList_ = $EntityArrayList$$Type;
 export type PlayerInteractEvent$RightClickEmpty = $PlayerInteractEvent$RightClickEmpty;
 export type PlayerInteractEvent$RightClickEmpty_ = $PlayerInteractEvent$RightClickEmpty$$Type;
+export type EntityArrayList = $EntityArrayList;
+export type EntityArrayList_ = $EntityArrayList$$Type;
 export type SpritePreparationContext = $SpritePreparationContext;
 export type SpritePreparationContext_ = $SpritePreparationContext$$Type;
 export type Vec2 = $Vec2;
@@ -9711,10 +9706,10 @@ export type ClientboundCommandsPacket = $ClientboundCommandsPacket;
 export type ClientboundCommandsPacket_ = $ClientboundCommandsPacket$$Type;
 export type Function<K, V> = $Function<K, V>;
 export type Function_<K, V> = $Function$$Type<K, V>;
-export type ChronoLocalDateTime<D extends $ChronoLocalDate> = $ChronoLocalDateTime<D>;
-export type ChronoLocalDateTime_<D extends $ChronoLocalDate> = $ChronoLocalDateTime$$Type<D>;
 export type ModifyDamageDealtConfiguration = $ModifyDamageDealtConfiguration;
 export type ModifyDamageDealtConfiguration_ = $ModifyDamageDealtConfiguration$$Type;
+export type ChronoLocalDateTime<D extends $ChronoLocalDate> = $ChronoLocalDateTime<D>;
+export type ChronoLocalDateTime_<D extends $ChronoLocalDate> = $ChronoLocalDateTime$$Type<D>;
 export type TaskList = $TaskList;
 export type TaskList_ = $TaskList$$Type;
 export type TransactionContext = $TransactionContext;
@@ -9953,14 +9948,14 @@ export type Packet<T extends $PacketListener> = $Packet<T>;
 export type Packet_<T extends $PacketListener> = $Packet$$Type<T>;
 export type BaseEntityBuilder$ISoundListenerJS<E extends ($Entity & $IAnimatableJSNL)> = $BaseEntityBuilder$ISoundListenerJS<E>;
 export type BaseEntityBuilder$ISoundListenerJS_<E extends ($Entity & $IAnimatableJSNL)> = $BaseEntityBuilder$ISoundListenerJS$$Type<E>;
+export type ModConfigEvent$Reloading = $ModConfigEvent$Reloading;
+export type ModConfigEvent$Reloading_ = $ModConfigEvent$Reloading$$Type;
 export type Shader$0 = $Shader$0;
 export type Shader$0_ = $Shader$0$$Type;
 export type ClientboundLevelChunkWithLightPacket = $ClientboundLevelChunkWithLightPacket;
 export type ClientboundLevelChunkWithLightPacket_ = $ClientboundLevelChunkWithLightPacket$$Type;
 export type BaseCommandBlock = $BaseCommandBlock;
 export type BaseCommandBlock_ = $BaseCommandBlock$$Type;
-export type ModConfigEvent$Reloading = $ModConfigEvent$Reloading;
-export type ModConfigEvent$Reloading_ = $ModConfigEvent$Reloading$$Type;
 export type Byte2IntFunction = $Byte2IntFunction;
 export type Byte2IntFunction_ = $Byte2IntFunction$$Type;
 export type StreamTagVisitor = $StreamTagVisitor;
@@ -10185,14 +10180,14 @@ export type ScoreboardNameProvider = $ScoreboardNameProvider;
 export type ScoreboardNameProvider_ = $ScoreboardNameProvider$$Type;
 export type ItemSupplier = $ItemSupplier;
 export type ItemSupplier_ = $ItemSupplier$$Type;
-export type IPowerContainer = $IPowerContainer;
-export type IPowerContainer_ = $IPowerContainer$$Type;
 export type BufferViewInfo = $BufferViewInfo;
 export type BufferViewInfo_ = $BufferViewInfo$$Type;
-export type ExtraDisplayEntity = $ExtraDisplayEntity;
-export type ExtraDisplayEntity_ = $ExtraDisplayEntity$$Type;
+export type IPowerContainer = $IPowerContainer;
+export type IPowerContainer_ = $IPowerContainer$$Type;
 export type GameShuttingDownEvent = $GameShuttingDownEvent;
 export type GameShuttingDownEvent_ = $GameShuttingDownEvent$$Type;
+export type ExtraDisplayEntity = $ExtraDisplayEntity;
+export type ExtraDisplayEntity_ = $ExtraDisplayEntity$$Type;
 export type ChestMenuInventoryClickEvent$Callback = $ChestMenuInventoryClickEvent$Callback;
 export type ChestMenuInventoryClickEvent$Callback_ = $ChestMenuInventoryClickEvent$Callback$$Type;
 export type Boolean2ObjectFunction<V> = $Boolean2ObjectFunction<V>;
@@ -10219,12 +10214,12 @@ export type HangingEntity = $HangingEntity;
 export type HangingEntity_ = $HangingEntity$$Type;
 export type BundleDelimiterPacket<T extends $PacketListener> = $BundleDelimiterPacket<T>;
 export type BundleDelimiterPacket_<T extends $PacketListener> = $BundleDelimiterPacket$$Type<T>;
+export type ItemFishedEvent = $ItemFishedEvent;
+export type ItemFishedEvent_ = $ItemFishedEvent$$Type;
 export type IChunkTimeSave = $IChunkTimeSave;
 export type IChunkTimeSave_ = $IChunkTimeSave$$Type;
 export type ItemExtensions = $ItemExtensions;
 export type ItemExtensions_ = $ItemExtensions$$Type;
-export type ItemFishedEvent = $ItemFishedEvent;
-export type ItemFishedEvent_ = $ItemFishedEvent$$Type;
 export type CustomEntityBuilder = $CustomEntityBuilder;
 export type CustomEntityBuilder_ = $CustomEntityBuilder$$Type;
 export type GiftLootEventJS = $GiftLootEventJS;
@@ -10395,10 +10390,10 @@ export type ParticleVertexer = $ParticleVertexer;
 export type ParticleVertexer_ = $ParticleVertexer$$Type;
 export type CloudStatus = $CloudStatus;
 export type CloudStatus_ = $CloudStatus$$Type;
-export type Ease = $Ease;
-export type Ease_ = $Ease$$Type;
 export type HUDOverlayEvent$HungerRestored = $HUDOverlayEvent$HungerRestored;
 export type HUDOverlayEvent$HungerRestored_ = $HUDOverlayEvent$HungerRestored$$Type;
+export type Ease = $Ease;
+export type Ease_ = $Ease$$Type;
 export type Option<T> = $Option<T>;
 export type Option_<T> = $Option$$Type<T>;
 export type StructureModifier$Phase = $StructureModifier$Phase;
@@ -10733,10 +10728,10 @@ export type CustomPayloadC2SPacketAccessor = $CustomPayloadC2SPacketAccessor;
 export type CustomPayloadC2SPacketAccessor_ = $CustomPayloadC2SPacketAccessor$$Type;
 export type BiomeWeatherAccess = $BiomeWeatherAccess;
 export type BiomeWeatherAccess_ = $BiomeWeatherAccess$$Type;
-export type View$OnAttachStateChangeListener = $View$OnAttachStateChangeListener;
-export type View$OnAttachStateChangeListener_ = $View$OnAttachStateChangeListener$$Type;
 export type RenderHandEvent = $RenderHandEvent;
 export type RenderHandEvent_ = $RenderHandEvent$$Type;
+export type View$OnAttachStateChangeListener = $View$OnAttachStateChangeListener;
+export type View$OnAttachStateChangeListener_ = $View$OnAttachStateChangeListener$$Type;
 export type IScrollGridWidget = $IScrollGridWidget;
 export type IScrollGridWidget_ = $IScrollGridWidget$$Type;
 export type SpellDataRegistryHolder = $SpellDataRegistryHolder;
@@ -10793,10 +10788,10 @@ export type BlastFurnaceBlockEntity = $BlastFurnaceBlockEntity;
 export type BlastFurnaceBlockEntity_ = $BlastFurnaceBlockEntity$$Type;
 export type InputEvent$Key = $InputEvent$Key;
 export type InputEvent$Key_ = $InputEvent$Key$$Type;
-export type Parameter = $Parameter;
-export type Parameter_ = $Parameter$$Type;
 export type TypeWrappers = $TypeWrappers;
 export type TypeWrappers_ = $TypeWrappers$$Type;
+export type Parameter = $Parameter;
+export type Parameter_ = $Parameter$$Type;
 export type DataResult<R> = $DataResult<R>;
 export type DataResult_<R> = $DataResult$$Type<R>;
 export type FileConfig = $FileConfig;
@@ -10839,12 +10834,12 @@ export type BeaconBlock = $BeaconBlock;
 export type BeaconBlock_ = $BeaconBlock$$Type;
 export type Matrix4x3f = $Matrix4x3f;
 export type Matrix4x3f_ = $Matrix4x3f$$Type;
+export type TooltipOverlayEvent = $TooltipOverlayEvent;
+export type TooltipOverlayEvent_ = $TooltipOverlayEvent$$Type;
 export type IntValue = $IntValue;
 export type IntValue_ = $IntValue$$Type;
 export type GenerateClientAssetsEventJS = $GenerateClientAssetsEventJS;
 export type GenerateClientAssetsEventJS_ = $GenerateClientAssetsEventJS$$Type;
-export type TooltipOverlayEvent = $TooltipOverlayEvent;
-export type TooltipOverlayEvent_ = $TooltipOverlayEvent$$Type;
 export type Inventory = $Inventory;
 export type Inventory_ = $Inventory$$Type;
 export type ContainerScreenDrawEvent$Background = $ContainerScreenDrawEvent$Background;
@@ -11059,8 +11054,6 @@ export type ItemTransform = $ItemTransform;
 export type ItemTransform_ = $ItemTransform$$Type;
 export type RenderHighlightEvent = $RenderHighlightEvent;
 export type RenderHighlightEvent_ = $RenderHighlightEvent$$Type;
-export type PlayerData = $PlayerData;
-export type PlayerData_ = $PlayerData$$Type;
 export type AzBoneAnimation = $AzBoneAnimation;
 export type AzBoneAnimation_ = $AzBoneAnimation$$Type;
 export type WallHangingSignBlock = $WallHangingSignBlock;
@@ -11373,10 +11366,10 @@ export type CustomInstructionKeyframeData = $CustomInstructionKeyframeData;
 export type CustomInstructionKeyframeData_ = $CustomInstructionKeyframeData$$Type;
 export type RegistryAccess$Frozen = $RegistryAccess$Frozen;
 export type RegistryAccess$Frozen_ = $RegistryAccess$Frozen$$Type;
-export type ContextUtils$IsWalkableContext = $ContextUtils$IsWalkableContext;
-export type ContextUtils$IsWalkableContext_ = $ContextUtils$IsWalkableContext$$Type;
 export type RegisterPresetEditorsEvent = $RegisterPresetEditorsEvent;
 export type RegisterPresetEditorsEvent_ = $RegisterPresetEditorsEvent$$Type;
+export type ContextUtils$IsWalkableContext = $ContextUtils$IsWalkableContext;
+export type ContextUtils$IsWalkableContext_ = $ContextUtils$IsWalkableContext$$Type;
 export type GameProfileCache = $GameProfileCache;
 export type GameProfileCache_ = $GameProfileCache$$Type;
 export type ZetaModuleManager = $ZetaModuleManager;
@@ -11397,10 +11390,10 @@ export type ServerPlayerConnection = $ServerPlayerConnection;
 export type ServerPlayerConnection_ = $ServerPlayerConnection$$Type;
 export type ArrowDamageEnchantment = $ArrowDamageEnchantment;
 export type ArrowDamageEnchantment_ = $ArrowDamageEnchantment$$Type;
-export type CoralTreeFeature = $CoralTreeFeature;
-export type CoralTreeFeature_ = $CoralTreeFeature$$Type;
 export type FMLClientSetupEvent = $FMLClientSetupEvent;
 export type FMLClientSetupEvent_ = $FMLClientSetupEvent$$Type;
+export type CoralTreeFeature = $CoralTreeFeature;
+export type CoralTreeFeature_ = $CoralTreeFeature$$Type;
 export type GeoRenderEvent$Object$Pre = $GeoRenderEvent$Object$Pre;
 export type GeoRenderEvent$Object$Pre_ = $GeoRenderEvent$Object$Pre$$Type;
 export type Pair$Mu<S> = $Pair$Mu<S>;
@@ -11803,10 +11796,10 @@ export type SimpleMappingRecipeComponent<T> = $SimpleMappingRecipeComponent<T>;
 export type SimpleMappingRecipeComponent_<T> = $SimpleMappingRecipeComponent$$Type<T>;
 export type IModInfo$DependencySide = $IModInfo$DependencySide;
 export type IModInfo$DependencySide_ = $IModInfo$DependencySide$$Type;
-export type WorldTemplatePaginatedList = $WorldTemplatePaginatedList;
-export type WorldTemplatePaginatedList_ = $WorldTemplatePaginatedList$$Type;
 export type LocalRef<T> = $LocalRef<T>;
 export type LocalRef_<T> = $LocalRef$$Type<T>;
+export type WorldTemplatePaginatedList = $WorldTemplatePaginatedList;
+export type WorldTemplatePaginatedList_ = $WorldTemplatePaginatedList$$Type;
 export type ThrowablePotionItem = $ThrowablePotionItem;
 export type ThrowablePotionItem_ = $ThrowablePotionItem$$Type;
 export type WeightedEntry$Wrapper<T> = $WeightedEntry$Wrapper<T>;
@@ -11839,10 +11832,10 @@ export type NarrationThunk<T> = $NarrationThunk<T>;
 export type NarrationThunk_<T> = $NarrationThunk$$Type<T>;
 export type JsonArray = $JsonArray;
 export type JsonArray_ = $JsonArray$$Type;
-export type DeadBushBlock = $DeadBushBlock;
-export type DeadBushBlock_ = $DeadBushBlock$$Type;
 export type CommandPerformEvent = $CommandPerformEvent;
 export type CommandPerformEvent_ = $CommandPerformEvent$$Type;
+export type DeadBushBlock = $DeadBushBlock;
+export type DeadBushBlock_ = $DeadBushBlock$$Type;
 export type CustomGlowingGeoLayerJS<T extends ($LivingEntity & $IAnimatableJSCustom)> = $CustomGlowingGeoLayerJS<T>;
 export type CustomGlowingGeoLayerJS_<T extends ($LivingEntity & $IAnimatableJSCustom)> = $CustomGlowingGeoLayerJS$$Type<T>;
 export type MenuProvider = $MenuProvider;
@@ -11973,10 +11966,10 @@ export type IForgeKeyMapping = $IForgeKeyMapping;
 export type IForgeKeyMapping_ = $IForgeKeyMapping$$Type;
 export type Display$BillboardConstraints = $Display$BillboardConstraints;
 export type Display$BillboardConstraints_ = $Display$BillboardConstraints$$Type;
-export type ISlottedRecipeWidget = $ISlottedRecipeWidget;
-export type ISlottedRecipeWidget_ = $ISlottedRecipeWidget$$Type;
 export type SleepFinishedTimeEvent = $SleepFinishedTimeEvent;
 export type SleepFinishedTimeEvent_ = $SleepFinishedTimeEvent$$Type;
+export type ISlottedRecipeWidget = $ISlottedRecipeWidget;
+export type ISlottedRecipeWidget_ = $ISlottedRecipeWidget$$Type;
 export type ChatReportBuilder$ChatReport = $ChatReportBuilder$ChatReport;
 export type ChatReportBuilder$ChatReport_ = $ChatReportBuilder$ChatReport$$Type;
 export type Message = $Message;
@@ -12017,10 +12010,10 @@ export type IsInsideStructureTracker = $IsInsideStructureTracker;
 export type IsInsideStructureTracker_ = $IsInsideStructureTracker$$Type;
 export type Goat = $Goat;
 export type Goat_ = $Goat$$Type;
-export type LavaSubmergedBlockProcessor = $LavaSubmergedBlockProcessor;
-export type LavaSubmergedBlockProcessor_ = $LavaSubmergedBlockProcessor$$Type;
 export type PlayerEvent$HarvestCheck = $PlayerEvent$HarvestCheck;
 export type PlayerEvent$HarvestCheck_ = $PlayerEvent$HarvestCheck$$Type;
+export type LavaSubmergedBlockProcessor = $LavaSubmergedBlockProcessor;
+export type LavaSubmergedBlockProcessor_ = $LavaSubmergedBlockProcessor$$Type;
 export type DoubleConsumer = $DoubleConsumer;
 export type DoubleConsumer_ = $DoubleConsumer$$Type;
 export type ConfigLoadedEvent = $ConfigLoadedEvent;
@@ -12093,10 +12086,10 @@ export type ZRecipeCrawl$Visit$Custom = $ZRecipeCrawl$Visit$Custom;
 export type ZRecipeCrawl$Visit$Custom_ = $ZRecipeCrawl$Visit$Custom$$Type;
 export type IceBlock = $IceBlock;
 export type IceBlock_ = $IceBlock$$Type;
-export type ClickType = $ClickType;
-export type ClickType_ = $ClickType$$Type;
 export type CommandContext<S> = $CommandContext<S>;
 export type CommandContext_<S> = $CommandContext$$Type<S>;
+export type ClickType = $ClickType;
+export type ClickType_ = $ClickType$$Type;
 export type RandomizedIntStateProvider = $RandomizedIntStateProvider;
 export type RandomizedIntStateProvider_ = $RandomizedIntStateProvider$$Type;
 export type YggdrasilAuthenticationService = $YggdrasilAuthenticationService;
@@ -12205,12 +12198,12 @@ export type ItemAccessor = $ItemAccessor;
 export type ItemAccessor_ = $ItemAccessor$$Type;
 export type OpenMenuEvent = $OpenMenuEvent;
 export type OpenMenuEvent_ = $OpenMenuEvent$$Type;
+export type CurioChangeEvent = $CurioChangeEvent;
+export type CurioChangeEvent_ = $CurioChangeEvent$$Type;
 export type BlockApiLookup$BlockEntityApiProvider<A, C> = $BlockApiLookup$BlockEntityApiProvider<A, C>;
 export type BlockApiLookup$BlockEntityApiProvider_<A, C> = $BlockApiLookup$BlockEntityApiProvider$$Type<A, C>;
 export type RecipeSerializer<T extends $Recipe<any>> = $RecipeSerializer<T>;
 export type RecipeSerializer_<T extends $Recipe<any>> = $RecipeSerializer$$Type<T>;
-export type CurioChangeEvent = $CurioChangeEvent;
-export type CurioChangeEvent_ = $CurioChangeEvent$$Type;
 export type SpecialTypeKeyEvent$SpecialTypeKey3ReleasedEvent = $SpecialTypeKeyEvent$SpecialTypeKey3ReleasedEvent;
 export type SpecialTypeKeyEvent$SpecialTypeKey3ReleasedEvent_ = $SpecialTypeKeyEvent$SpecialTypeKey3ReleasedEvent$$Type;
 export type FeatureSize = $FeatureSize;
@@ -12281,14 +12274,14 @@ export type SpecialTypeKeyEvent$SpecialTypeKey2PressedEvent = $SpecialTypeKeyEve
 export type SpecialTypeKeyEvent$SpecialTypeKey2PressedEvent_ = $SpecialTypeKeyEvent$SpecialTypeKey2PressedEvent$$Type;
 export type Rect = $Rect;
 export type Rect_ = $Rect$$Type;
+export type GeoRenderEvent$Object = $GeoRenderEvent$Object;
+export type GeoRenderEvent$Object_ = $GeoRenderEvent$Object$$Type;
 export type RenderType$CompositeRenderType = $RenderType$CompositeRenderType;
 export type RenderType$CompositeRenderType_ = $RenderType$CompositeRenderType$$Type;
 export type LinearPosTest = $LinearPosTest;
 export type LinearPosTest_ = $LinearPosTest$$Type;
 export type AppendLoot = $AppendLoot;
 export type AppendLoot_ = $AppendLoot$$Type;
-export type GeoRenderEvent$Object = $GeoRenderEvent$Object;
-export type GeoRenderEvent$Object_ = $GeoRenderEvent$Object$$Type;
 export type Type$TypeError = $Type$TypeError;
 export type Type$TypeError_ = $Type$TypeError$$Type;
 export type Reader = $Reader;
@@ -12307,18 +12300,18 @@ export type ModConfig = $ModConfig;
 export type ModConfig_ = $ModConfig$$Type;
 export type TransitionListener = $TransitionListener;
 export type TransitionListener_ = $TransitionListener$$Type;
+export type RegisterEvent = $RegisterEvent;
+export type RegisterEvent_ = $RegisterEvent$$Type;
 export type IllusionerEntityJS = $IllusionerEntityJS;
 export type IllusionerEntityJS_ = $IllusionerEntityJS$$Type;
 export type Message$0 = $Message$0;
 export type Message$0_ = $Message$0$$Type;
-export type RegisterEvent = $RegisterEvent;
-export type RegisterEvent_ = $RegisterEvent$$Type;
 export type DataObject<T extends $DataObject<T>> = $DataObject<T>;
 export type DataObject_<T extends $DataObject<T>> = $DataObject$$Type<T>;
-export type BlockBehaviour$OffsetType = $BlockBehaviour$OffsetType;
-export type BlockBehaviour$OffsetType_ = $BlockBehaviour$OffsetType$$Type;
 export type RegisterItemDecorationsEvent = $RegisterItemDecorationsEvent;
 export type RegisterItemDecorationsEvent_ = $RegisterItemDecorationsEvent$$Type;
+export type BlockBehaviour$OffsetType = $BlockBehaviour$OffsetType;
+export type BlockBehaviour$OffsetType_ = $BlockBehaviour$OffsetType$$Type;
 export type LivingDeathEvent = $LivingDeathEvent;
 export type LivingDeathEvent_ = $LivingDeathEvent$$Type;
 export type ChestBlockEntity = $ChestBlockEntity;
@@ -12519,6 +12512,8 @@ export type PipelineDesc$UniformBlockInfo = $PipelineDesc$UniformBlockInfo;
 export type PipelineDesc$UniformBlockInfo_ = $PipelineDesc$UniformBlockInfo$$Type;
 export type PlayerModelRotator = $PlayerModelRotator;
 export type PlayerModelRotator_ = $PlayerModelRotator$$Type;
+export type PlayerBrewedPotionEvent = $PlayerBrewedPotionEvent;
+export type PlayerBrewedPotionEvent_ = $PlayerBrewedPotionEvent$$Type;
 export type ITypedIngredient<T> = $ITypedIngredient<T>;
 export type ITypedIngredient_<T> = $ITypedIngredient$$Type<T>;
 export type RegistryIdRemapCallback<T> = $RegistryIdRemapCallback<T>;
@@ -12527,8 +12522,6 @@ export type ItemOverrides$BakedOverride = $ItemOverrides$BakedOverride;
 export type ItemOverrides$BakedOverride_ = $ItemOverrides$BakedOverride$$Type;
 export type AnimalMakeLove = $AnimalMakeLove;
 export type AnimalMakeLove_ = $AnimalMakeLove$$Type;
-export type PlayerBrewedPotionEvent = $PlayerBrewedPotionEvent;
-export type PlayerBrewedPotionEvent_ = $PlayerBrewedPotionEvent$$Type;
 export type NameMap$Builder<T> = $NameMap$Builder<T>;
 export type NameMap$Builder_<T> = $NameMap$Builder$$Type<T>;
 export type JSJoinedType$Intersection = $JSJoinedType$Intersection;
@@ -12569,10 +12562,10 @@ export type TallSeagrassBlock = $TallSeagrassBlock;
 export type TallSeagrassBlock_ = $TallSeagrassBlock$$Type;
 export type ConstantHeight = $ConstantHeight;
 export type ConstantHeight_ = $ConstantHeight$$Type;
-export type ScreenMouseEvent = $ScreenMouseEvent;
-export type ScreenMouseEvent_ = $ScreenMouseEvent$$Type;
 export type PlayLevelSoundEvent$AtPosition = $PlayLevelSoundEvent$AtPosition;
 export type PlayLevelSoundEvent$AtPosition_ = $PlayLevelSoundEvent$AtPosition$$Type;
+export type ScreenMouseEvent = $ScreenMouseEvent;
+export type ScreenMouseEvent_ = $ScreenMouseEvent$$Type;
 export type AccessorScreen = $AccessorScreen;
 export type AccessorScreen_ = $AccessorScreen$$Type;
 export type TextureType<T> = $TextureType<T>;
@@ -12773,10 +12766,10 @@ export type FluidPredicateAccessor = $FluidPredicateAccessor;
 export type FluidPredicateAccessor_ = $FluidPredicateAccessor$$Type;
 export type BlockEntityPredicateDataCheck = $BlockEntityPredicateDataCheck;
 export type BlockEntityPredicateDataCheck_ = $BlockEntityPredicateDataCheck$$Type;
-export type AccessorSmithingTransformRecipe$0 = $AccessorSmithingTransformRecipe$0;
-export type AccessorSmithingTransformRecipe$0_ = $AccessorSmithingTransformRecipe$0$$Type;
 export type ScreenMouseEvent$Drag$Post = $ScreenMouseEvent$Drag$Post;
 export type ScreenMouseEvent$Drag$Post_ = $ScreenMouseEvent$Drag$Post$$Type;
+export type AccessorSmithingTransformRecipe$0 = $AccessorSmithingTransformRecipe$0;
+export type AccessorSmithingTransformRecipe$0_ = $AccessorSmithingTransformRecipe$0$$Type;
 export type ContextualCondition = $ContextualCondition;
 export type ContextualCondition_ = $ContextualCondition$$Type;
 export type ContextUtils$EntityFluidStateContext = $ContextUtils$EntityFluidStateContext;
@@ -12785,10 +12778,10 @@ export type CustomMapData$Type<T extends $CustomMapData<any>> = $CustomMapData$T
 export type CustomMapData$Type_<T extends $CustomMapData<any>> = $CustomMapData$Type$$Type<T>;
 export type CastingItem = $CastingItem;
 export type CastingItem_ = $CastingItem$$Type;
-export type ItemStackSet = $ItemStackSet;
-export type ItemStackSet_ = $ItemStackSet$$Type;
 export type PowerLoadEvent$Post = $PowerLoadEvent$Post;
 export type PowerLoadEvent$Post_ = $PowerLoadEvent$Post$$Type;
+export type ItemStackSet = $ItemStackSet;
+export type ItemStackSet_ = $ItemStackSet$$Type;
 export type ForwardingList<E> = $ForwardingList<E>;
 export type ForwardingList_<E> = $ForwardingList$$Type<E>;
 export type ShortPredicate = $ShortPredicate;
@@ -12809,10 +12802,10 @@ export type GlassBlock = $GlassBlock;
 export type GlassBlock_ = $GlassBlock$$Type;
 export type SelectableChannel = $SelectableChannel;
 export type SelectableChannel_ = $SelectableChannel$$Type;
-export type FloatListIterator = $FloatListIterator;
-export type FloatListIterator_ = $FloatListIterator$$Type;
 export type ModuleLoadedEvent = $ModuleLoadedEvent;
 export type ModuleLoadedEvent_ = $ModuleLoadedEvent$$Type;
+export type FloatListIterator = $FloatListIterator;
+export type FloatListIterator_ = $FloatListIterator$$Type;
 export type BatchRenderElement<T> = $BatchRenderElement<T>;
 export type BatchRenderElement_<T> = $BatchRenderElement$$Type<T>;
 export type ScreenKeyEvent = $ScreenKeyEvent;
@@ -12851,10 +12844,10 @@ export type FragmentStage$Uniform = $FragmentStage$Uniform;
 export type FragmentStage$Uniform_ = $FragmentStage$Uniform$$Type;
 export type GeoRenderEvent$Armor = $GeoRenderEvent$Armor;
 export type GeoRenderEvent$Armor_ = $GeoRenderEvent$Armor$$Type;
-export type ExtendedEntityFlagsPredicate$IBuilder<T> = $ExtendedEntityFlagsPredicate$IBuilder<T>;
-export type ExtendedEntityFlagsPredicate$IBuilder_<T> = $ExtendedEntityFlagsPredicate$IBuilder$$Type<T>;
 export type PowerLoadEvent = $PowerLoadEvent;
 export type PowerLoadEvent_ = $PowerLoadEvent$$Type;
+export type ExtendedEntityFlagsPredicate$IBuilder<T> = $ExtendedEntityFlagsPredicate$IBuilder<T>;
+export type ExtendedEntityFlagsPredicate$IBuilder_<T> = $ExtendedEntityFlagsPredicate$IBuilder$$Type<T>;
 export type MemoryStatus = $MemoryStatus;
 export type MemoryStatus_ = $MemoryStatus$$Type;
 export type WardenEntitySensor = $WardenEntitySensor;
@@ -12899,18 +12892,18 @@ export type ClientLevel = $ClientLevel;
 export type ClientLevel_ = $ClientLevel$$Type;
 export type MixinMemoryModuleType = $MixinMemoryModuleType;
 export type MixinMemoryModuleType_ = $MixinMemoryModuleType$$Type;
-export type ZombieJSBuilder = $ZombieJSBuilder;
-export type ZombieJSBuilder_ = $ZombieJSBuilder$$Type;
 export type ScreenMouseEvent$Release$Pre = $ScreenMouseEvent$Release$Pre;
 export type ScreenMouseEvent$Release$Pre_ = $ScreenMouseEvent$Release$Pre$$Type;
+export type ZombieJSBuilder = $ZombieJSBuilder;
+export type ZombieJSBuilder_ = $ZombieJSBuilder$$Type;
 export type PermissionNode<T> = $PermissionNode<T>;
 export type PermissionNode_<T> = $PermissionNode$$Type<T>;
 export type DeserializationContext = $DeserializationContext;
 export type DeserializationContext_ = $DeserializationContext$$Type;
-export type JarMetadata = $JarMetadata;
-export type JarMetadata_ = $JarMetadata$$Type;
 export type ClientChatEvent = $ClientChatEvent;
 export type ClientChatEvent_ = $ClientChatEvent$$Type;
+export type JarMetadata = $JarMetadata;
+export type JarMetadata_ = $JarMetadata$$Type;
 export type ForbiddenSymlinkInfo = $ForbiddenSymlinkInfo;
 export type ForbiddenSymlinkInfo_ = $ForbiddenSymlinkInfo$$Type;
 export type MutableHashedLinkedMap$MergeFunction<Key, Value> = $MutableHashedLinkedMap$MergeFunction<Key, Value>;
@@ -12943,10 +12936,10 @@ export type Pixmap = $Pixmap;
 export type Pixmap_ = $Pixmap$$Type;
 export type SingleThreadEventExecutor = $SingleThreadEventExecutor;
 export type SingleThreadEventExecutor_ = $SingleThreadEventExecutor$$Type;
-export type AbstractGolem = $AbstractGolem;
-export type AbstractGolem_ = $AbstractGolem$$Type;
 export type PlayerSetSpawnEvent = $PlayerSetSpawnEvent;
 export type PlayerSetSpawnEvent_ = $PlayerSetSpawnEvent$$Type;
+export type AbstractGolem = $AbstractGolem;
+export type AbstractGolem_ = $AbstractGolem$$Type;
 export type Tadpole = $Tadpole;
 export type Tadpole_ = $Tadpole$$Type;
 export type QuickPlayLog$Type = $QuickPlayLog$Type;
@@ -12967,10 +12960,10 @@ export type AzAnimationStage = $AzAnimationStage;
 export type AzAnimationStage_ = $AzAnimationStage$$Type;
 export type AccessorServerLevel = $AccessorServerLevel;
 export type AccessorServerLevel_ = $AccessorServerLevel$$Type;
-export type RuleBasedBlockStateProvider$Rule = $RuleBasedBlockStateProvider$Rule;
-export type RuleBasedBlockStateProvider$Rule_ = $RuleBasedBlockStateProvider$Rule$$Type;
 export type TooltipOverlayEvent$Pre = $TooltipOverlayEvent$Pre;
 export type TooltipOverlayEvent$Pre_ = $TooltipOverlayEvent$Pre$$Type;
+export type RuleBasedBlockStateProvider$Rule = $RuleBasedBlockStateProvider$Rule;
+export type RuleBasedBlockStateProvider$Rule_ = $RuleBasedBlockStateProvider$Rule$$Type;
 export type LevelTimeAccess = $LevelTimeAccess;
 export type LevelTimeAccess_ = $LevelTimeAccess$$Type;
 export type DyeablesRegistry = $DyeablesRegistry;
@@ -13067,14 +13060,12 @@ export type AccessMode = $AccessMode;
 export type AccessMode_ = $AccessMode$$Type;
 export type Ingredient = $Ingredient;
 export type Ingredient_ = $Ingredient$$Type;
-export type EntityRenderDispatcherAccessor = $EntityRenderDispatcherAccessor;
-export type EntityRenderDispatcherAccessor_ = $EntityRenderDispatcherAccessor$$Type;
 export type AxeItemAccessor = $AxeItemAccessor;
 export type AxeItemAccessor_ = $AxeItemAccessor$$Type;
-export type LongIterable = $LongIterable;
-export type LongIterable_ = $LongIterable$$Type;
 export type FMLCommonSetupEvent = $FMLCommonSetupEvent;
 export type FMLCommonSetupEvent_ = $FMLCommonSetupEvent$$Type;
+export type LongIterable = $LongIterable;
+export type LongIterable_ = $LongIterable$$Type;
 export type IntSupplier$0 = $IntSupplier$0;
 export type IntSupplier$0_ = $IntSupplier$0$$Type;
 export type ItemLike = $ItemLike;
@@ -13093,10 +13084,10 @@ export type SoundEvent = $SoundEvent;
 export type SoundEvent_ = $SoundEvent$$Type;
 export type CustomSpell$Builder = $CustomSpell$Builder;
 export type CustomSpell$Builder_ = $CustomSpell$Builder$$Type;
-export type AccessibleObject = $AccessibleObject;
-export type AccessibleObject_ = $AccessibleObject$$Type;
 export type ScreenEvent$KeyPressed = $ScreenEvent$KeyPressed;
 export type ScreenEvent$KeyPressed_ = $ScreenEvent$KeyPressed$$Type;
+export type AccessibleObject = $AccessibleObject;
+export type AccessibleObject_ = $AccessibleObject$$Type;
 export type CustomTask$Check = $CustomTask$Check;
 export type CustomTask$Check_ = $CustomTask$Check$$Type;
 export type EntityFallenOnBlockCallbackJS = $EntityFallenOnBlockCallbackJS;
@@ -13223,12 +13214,12 @@ export type ChunkHolder$LevelChangeListener = $ChunkHolder$LevelChangeListener;
 export type ChunkHolder$LevelChangeListener_ = $ChunkHolder$LevelChangeListener$$Type;
 export type GrindstoneEvent$OnTakeItem = $GrindstoneEvent$OnTakeItem;
 export type GrindstoneEvent$OnTakeItem_ = $GrindstoneEvent$OnTakeItem$$Type;
+export type RegisterColorHandlersEvent = $RegisterColorHandlersEvent;
+export type RegisterColorHandlersEvent_ = $RegisterColorHandlersEvent$$Type;
 export type AlterGroundDecorator = $AlterGroundDecorator;
 export type AlterGroundDecorator_ = $AlterGroundDecorator$$Type;
 export type NoiseBasedCountPlacement = $NoiseBasedCountPlacement;
 export type NoiseBasedCountPlacement_ = $NoiseBasedCountPlacement$$Type;
-export type RegisterColorHandlersEvent = $RegisterColorHandlersEvent;
-export type RegisterColorHandlersEvent_ = $RegisterColorHandlersEvent$$Type;
 export type CustomSpell$PreCastConditionsContext = $CustomSpell$PreCastConditionsContext;
 export type CustomSpell$PreCastConditionsContext_ = $CustomSpell$PreCastConditionsContext$$Type;
 export type LootItemConditionMixin = $LootItemConditionMixin;
@@ -13415,10 +13406,10 @@ export type LifecycleObserver = $LifecycleObserver;
 export type LifecycleObserver_ = $LifecycleObserver$$Type;
 export type BlockExplodedCallbackJS = $BlockExplodedCallbackJS;
 export type BlockExplodedCallbackJS_ = $BlockExplodedCallbackJS$$Type;
-export type Evoker = $Evoker;
-export type Evoker_ = $Evoker$$Type;
 export type MobEffectEvent$Applicable = $MobEffectEvent$Applicable;
 export type MobEffectEvent$Applicable_ = $MobEffectEvent$Applicable$$Type;
+export type Evoker = $Evoker;
+export type Evoker_ = $Evoker$$Type;
 export type AccessorCraftingMenu$0 = $AccessorCraftingMenu$0;
 export type AccessorCraftingMenu$0_ = $AccessorCraftingMenu$0$$Type;
 export type PlayerAttackAnimatable = $PlayerAttackAnimatable;
@@ -13455,12 +13446,12 @@ export type Direction$Axis = $Direction$Axis;
 export type Direction$Axis_ = $Direction$Axis$$Type;
 export type Container = $Container;
 export type Container_ = $Container$$Type;
+export type ComputeFovModifierEvent = $ComputeFovModifierEvent;
+export type ComputeFovModifierEvent_ = $ComputeFovModifierEvent$$Type;
 export type CookingBookCategory = $CookingBookCategory;
 export type CookingBookCategory_ = $CookingBookCategory$$Type;
 export type SimpleCookingSerializer<T extends $AbstractCookingRecipe> = $SimpleCookingSerializer<T>;
 export type SimpleCookingSerializer_<T extends $AbstractCookingRecipe> = $SimpleCookingSerializer$$Type<T>;
-export type ComputeFovModifierEvent = $ComputeFovModifierEvent;
-export type ComputeFovModifierEvent_ = $ComputeFovModifierEvent$$Type;
 export type ResourceBundle$Control = $ResourceBundle$Control;
 export type ResourceBundle$Control_ = $ResourceBundle$Control$$Type;
 export type BiConsumer<T, U> = $BiConsumer<T, U>;
@@ -13477,10 +13468,10 @@ export type DiodeBlock = $DiodeBlock;
 export type DiodeBlock_ = $DiodeBlock$$Type;
 export type AnimalEntityJS = $AnimalEntityJS;
 export type AnimalEntityJS_ = $AnimalEntityJS$$Type;
-export type BehaviorEnforcer = $BehaviorEnforcer;
-export type BehaviorEnforcer_ = $BehaviorEnforcer$$Type;
 export type ScreenEvent$Opening = $ScreenEvent$Opening;
 export type ScreenEvent$Opening_ = $ScreenEvent$Opening$$Type;
+export type BehaviorEnforcer = $BehaviorEnforcer;
+export type BehaviorEnforcer_ = $BehaviorEnforcer$$Type;
 export type Animal = $Animal;
 export type Animal_ = $Animal$$Type;
 export type AddJEIEventJS<T> = $AddJEIEventJS<T>;
@@ -13827,10 +13818,10 @@ export type PointerIcon = $PointerIcon;
 export type PointerIcon_ = $PointerIcon$$Type;
 export type VBlockLootProvider = $VBlockLootProvider;
 export type VBlockLootProvider_ = $VBlockLootProvider$$Type;
-export type EventLoopGroup = $EventLoopGroup;
-export type EventLoopGroup_ = $EventLoopGroup$$Type;
 export type PreCopySpecialEffectFromBladeEvent = $PreCopySpecialEffectFromBladeEvent;
 export type PreCopySpecialEffectFromBladeEvent_ = $PreCopySpecialEffectFromBladeEvent$$Type;
+export type EventLoopGroup = $EventLoopGroup;
+export type EventLoopGroup_ = $EventLoopGroup$$Type;
 export type TargetEntityCastData = $TargetEntityCastData;
 export type TargetEntityCastData_ = $TargetEntityCastData$$Type;
 export type Task$1 = $Task$1;
@@ -13907,12 +13898,12 @@ export type LocatorValue = $LocatorValue;
 export type LocatorValue_ = $LocatorValue$$Type;
 export type Screen = $Screen;
 export type Screen_ = $Screen$$Type;
+export type RegisterStructureConversionsEvent = $RegisterStructureConversionsEvent;
+export type RegisterStructureConversionsEvent_ = $RegisterStructureConversionsEvent$$Type;
 export type RecvByteBufAllocator = $RecvByteBufAllocator;
 export type RecvByteBufAllocator_ = $RecvByteBufAllocator$$Type;
 export type ForgeConfigSpec$Range<V extends $Comparable<V>> = $ForgeConfigSpec$Range<V>;
 export type ForgeConfigSpec$Range_<V extends $Comparable<V>> = $ForgeConfigSpec$Range$$Type<V>;
-export type RegisterStructureConversionsEvent = $RegisterStructureConversionsEvent;
-export type RegisterStructureConversionsEvent_ = $RegisterStructureConversionsEvent$$Type;
 export type AffineTransform = $AffineTransform;
 export type AffineTransform_ = $AffineTransform$$Type;
 export type RecipeBook = $RecipeBook;
@@ -13989,10 +13980,10 @@ export type NbtPredicateAccessor = $NbtPredicateAccessor;
 export type NbtPredicateAccessor_ = $NbtPredicateAccessor$$Type;
 export type ScreenEvents$BeforeRender = $ScreenEvents$BeforeRender;
 export type ScreenEvents$BeforeRender_ = $ScreenEvents$BeforeRender$$Type;
-export type PistonStructureResolver = $PistonStructureResolver;
-export type PistonStructureResolver_ = $PistonStructureResolver$$Type;
 export type EntityEvent$Size = $EntityEvent$Size;
 export type EntityEvent$Size_ = $EntityEvent$Size$$Type;
+export type PistonStructureResolver = $PistonStructureResolver;
+export type PistonStructureResolver_ = $PistonStructureResolver$$Type;
 export type UnicodeFilter = $UnicodeFilter;
 export type UnicodeFilter_ = $UnicodeFilter$$Type;
 export type ConfigCategoryImpl = $ConfigCategoryImpl;
@@ -14009,10 +14000,10 @@ export type PalettedContainerRO<T> = $PalettedContainerRO<T>;
 export type PalettedContainerRO_<T> = $PalettedContainerRO$$Type<T>;
 export type MeshAppender$Context = $MeshAppender$Context;
 export type MeshAppender$Context_ = $MeshAppender$Context$$Type;
-export type HandledScreenAccessor = $HandledScreenAccessor;
-export type HandledScreenAccessor_ = $HandledScreenAccessor$$Type;
 export type Movable = $Movable;
 export type Movable_ = $Movable$$Type;
+export type HandledScreenAccessor = $HandledScreenAccessor;
+export type HandledScreenAccessor_ = $HandledScreenAccessor$$Type;
 export type LevelChunk$EntityCreationType = $LevelChunk$EntityCreationType;
 export type LevelChunk$EntityCreationType_ = $LevelChunk$EntityCreationType$$Type;
 export type LiteralCommandNode<S> = $LiteralCommandNode<S>;
@@ -14141,10 +14132,10 @@ export type IGeometryBakingContext = $IGeometryBakingContext;
 export type IGeometryBakingContext_ = $IGeometryBakingContext$$Type;
 export type Long2BooleanFunction = $Long2BooleanFunction;
 export type Long2BooleanFunction_ = $Long2BooleanFunction$$Type;
-export type BlockSnapshot = $BlockSnapshot;
-export type BlockSnapshot_ = $BlockSnapshot$$Type;
 export type FMLConstructModEvent = $FMLConstructModEvent;
 export type FMLConstructModEvent_ = $FMLConstructModEvent$$Type;
+export type BlockSnapshot = $BlockSnapshot;
+export type BlockSnapshot_ = $BlockSnapshot$$Type;
 export type ModifyEntityBuilder = $ModifyEntityBuilder;
 export type ModifyEntityBuilder_ = $ModifyEntityBuilder$$Type;
 export type ElementType = $ElementType;
@@ -14179,10 +14170,10 @@ export type CryingObsidianBlock = $CryingObsidianBlock;
 export type CryingObsidianBlock_ = $CryingObsidianBlock$$Type;
 export type IClientItemExtensions$FontContext = $IClientItemExtensions$FontContext;
 export type IClientItemExtensions$FontContext_ = $IClientItemExtensions$FontContext$$Type;
-export type VertexInputLayout = $VertexInputLayout;
-export type VertexInputLayout_ = $VertexInputLayout$$Type;
 export type InjectedItemExtension = $InjectedItemExtension;
 export type InjectedItemExtension_ = $InjectedItemExtension$$Type;
+export type VertexInputLayout = $VertexInputLayout;
+export type VertexInputLayout_ = $VertexInputLayout$$Type;
 export type StoredUserList<K, V extends $StoredUserEntry<K>> = $StoredUserList<K, V>;
 export type StoredUserList_<K, V extends $StoredUserEntry<K>> = $StoredUserList$$Type<K, V>;
 export type BeaconBlockEntity = $BeaconBlockEntity;
@@ -14305,10 +14296,10 @@ export type WaterWalkerEnchantment = $WaterWalkerEnchantment;
 export type WaterWalkerEnchantment_ = $WaterWalkerEnchantment$$Type;
 export type DarknessIncarnateUserAccessor = $DarknessIncarnateUserAccessor;
 export type DarknessIncarnateUserAccessor_ = $DarknessIncarnateUserAccessor$$Type;
-export type ServerActivity = $ServerActivity;
-export type ServerActivity_ = $ServerActivity$$Type;
 export type ScreenEvent$MouseInput = $ScreenEvent$MouseInput;
 export type ScreenEvent$MouseInput_ = $ScreenEvent$MouseInput$$Type;
+export type ServerActivity = $ServerActivity;
+export type ServerActivity_ = $ServerActivity$$Type;
 export type SwampHutStructure = $SwampHutStructure;
 export type SwampHutStructure_ = $SwampHutStructure$$Type;
 export type SlashArts$ArtsType = $SlashArts$ArtsType;
@@ -14373,10 +14364,10 @@ export type BlockRightClickedEventJS = $BlockRightClickedEventJS;
 export type BlockRightClickedEventJS_ = $BlockRightClickedEventJS$$Type;
 export type AzKeyframeStack<T extends $AzKeyframe<any>> = $AzKeyframeStack<T>;
 export type AzKeyframeStack_<T extends $AzKeyframe<any>> = $AzKeyframeStack$$Type<T>;
-export type InputReplacement = $InputReplacement;
-export type InputReplacement_ = $InputReplacement$$Type;
 export type LivingChangeTargetEvent = $LivingChangeTargetEvent;
 export type LivingChangeTargetEvent_ = $LivingChangeTargetEvent$$Type;
+export type InputReplacement = $InputReplacement;
+export type InputReplacement_ = $InputReplacement$$Type;
 export type LongConfigProperty = $LongConfigProperty;
 export type LongConfigProperty_ = $LongConfigProperty$$Type;
 export type Component<T> = $Component<T>;
@@ -14387,10 +14378,10 @@ export type ContextUtils$FinalRenderContext<T extends ($LivingEntity & $IAnimata
 export type ContextUtils$FinalRenderContext_<T extends ($LivingEntity & $IAnimatableJS)> = $ContextUtils$FinalRenderContext$$Type<T>;
 export type AbstractBlockAccessor = $AbstractBlockAccessor;
 export type AbstractBlockAccessor_ = $AbstractBlockAccessor$$Type;
-export type RandomBlockMatchTest = $RandomBlockMatchTest;
-export type RandomBlockMatchTest_ = $RandomBlockMatchTest$$Type;
 export type BlockVisualizerEvent$ModifyContext = $BlockVisualizerEvent$ModifyContext;
 export type BlockVisualizerEvent$ModifyContext_ = $BlockVisualizerEvent$ModifyContext$$Type;
+export type RandomBlockMatchTest = $RandomBlockMatchTest;
+export type RandomBlockMatchTest_ = $RandomBlockMatchTest$$Type;
 export type ForgeZRecipeCrawl$Visit$Custom = $ForgeZRecipeCrawl$Visit$Custom;
 export type ForgeZRecipeCrawl$Visit$Custom_ = $ForgeZRecipeCrawl$Visit$Custom$$Type;
 export type ProfilePublicKey = $ProfilePublicKey;
@@ -14501,10 +14492,10 @@ export type AttachFace = $AttachFace;
 export type AttachFace_ = $AttachFace$$Type;
 export type GroupLayout = $GroupLayout;
 export type GroupLayout_ = $GroupLayout$$Type;
-export type IronBarsBlock = $IronBarsBlock;
-export type IronBarsBlock_ = $IronBarsBlock$$Type;
 export type ModelEvent$RegisterGeometryLoaders = $ModelEvent$RegisterGeometryLoaders;
 export type ModelEvent$RegisterGeometryLoaders_ = $ModelEvent$RegisterGeometryLoaders$$Type;
+export type IronBarsBlock = $IronBarsBlock;
+export type IronBarsBlock_ = $IronBarsBlock$$Type;
 export type IIngredientType<T> = $IIngredientType<T>;
 export type IIngredientType_<T> = $IIngredientType$$Type<T>;
 export type Boat = $Boat;
@@ -14635,10 +14626,10 @@ export type AccessorPlayerModel = $AccessorPlayerModel;
 export type AccessorPlayerModel_ = $AccessorPlayerModel$$Type;
 export type BlazeEntityJS = $BlazeEntityJS;
 export type BlazeEntityJS_ = $BlazeEntityJS$$Type;
-export type ItemOverride$Predicate = $ItemOverride$Predicate;
-export type ItemOverride$Predicate_ = $ItemOverride$Predicate$$Type;
 export type TickEvent$ClientTickEvent = $TickEvent$ClientTickEvent;
 export type TickEvent$ClientTickEvent_ = $TickEvent$ClientTickEvent$$Type;
+export type ItemOverride$Predicate = $ItemOverride$Predicate;
+export type ItemOverride$Predicate_ = $ItemOverride$Predicate$$Type;
 export type GhastEntityJS = $GhastEntityJS;
 export type GhastEntityJS_ = $GhastEntityJS$$Type;
 export type AccessorAbstractArrow$0 = $AccessorAbstractArrow$0;
@@ -14659,10 +14650,10 @@ export type ChannelInboundInvoker = $ChannelInboundInvoker;
 export type ChannelInboundInvoker_ = $ChannelInboundInvoker$$Type;
 export type Font$DisplayMode = $Font$DisplayMode;
 export type Font$DisplayMode_ = $Font$DisplayMode$$Type;
-export type Raids = $Raids;
-export type Raids_ = $Raids$$Type;
 export type RenderTooltipEvent$GatherComponents = $RenderTooltipEvent$GatherComponents;
 export type RenderTooltipEvent$GatherComponents_ = $RenderTooltipEvent$GatherComponents$$Type;
+export type Raids = $Raids;
+export type Raids_ = $Raids$$Type;
 export type StructureSet = $StructureSet;
 export type StructureSet_ = $StructureSet$$Type;
 export type PrioritizeChunkUpdates = $PrioritizeChunkUpdates;
@@ -14745,10 +14736,10 @@ export type NBTSerializable = $NBTSerializable;
 export type NBTSerializable_ = $NBTSerializable$$Type;
 export type Matrix3dc = $Matrix3dc;
 export type Matrix3dc_ = $Matrix3dc$$Type;
-export type WebBlock = $WebBlock;
-export type WebBlock_ = $WebBlock$$Type;
 export type IdMappingEvent = $IdMappingEvent;
 export type IdMappingEvent_ = $IdMappingEvent$$Type;
+export type WebBlock = $WebBlock;
+export type WebBlock_ = $WebBlock$$Type;
 export type AbstractPiglin = $AbstractPiglin;
 export type AbstractPiglin_ = $AbstractPiglin$$Type;
 export type BuddingAmethystBlock = $BuddingAmethystBlock;
@@ -14869,10 +14860,10 @@ export type PressurePlateBlockBuilder = $PressurePlateBlockBuilder;
 export type PressurePlateBlockBuilder_ = $PressurePlateBlockBuilder$$Type;
 export type CustomGeoLayerJSBuilder<T extends ($LivingEntity & $IAnimatableJSCustom)> = $CustomGeoLayerJSBuilder<T>;
 export type CustomGeoLayerJSBuilder_<T extends ($LivingEntity & $IAnimatableJSCustom)> = $CustomGeoLayerJSBuilder$$Type<T>;
-export type ContextUtils$EntityDamageContext = $ContextUtils$EntityDamageContext;
-export type ContextUtils$EntityDamageContext_ = $ContextUtils$EntityDamageContext$$Type;
 export type LevelEvent$Save = $LevelEvent$Save;
 export type LevelEvent$Save_ = $LevelEvent$Save$$Type;
+export type ContextUtils$EntityDamageContext = $ContextUtils$EntityDamageContext;
+export type ContextUtils$EntityDamageContext_ = $ContextUtils$EntityDamageContext$$Type;
 export type FishingSpeedEnchantment = $FishingSpeedEnchantment;
 export type FishingSpeedEnchantment_ = $FishingSpeedEnchantment$$Type;
 export type PotionRegistry = $PotionRegistry;
@@ -14901,10 +14892,10 @@ export type CustomMapData<H extends $CustomMapData$DirtyCounter> = $CustomMapDat
 export type CustomMapData_<H extends $CustomMapData$DirtyCounter> = $CustomMapData$$Type<H>;
 export type MobAttackStrength = $MobAttackStrength;
 export type MobAttackStrength_ = $MobAttackStrength$$Type;
-export type NoOpFeature = $NoOpFeature;
-export type NoOpFeature_ = $NoOpFeature$$Type;
 export type ModuleStateChangedEvent = $ModuleStateChangedEvent;
 export type ModuleStateChangedEvent_ = $ModuleStateChangedEvent$$Type;
+export type NoOpFeature = $NoOpFeature;
+export type NoOpFeature_ = $NoOpFeature$$Type;
 export type LootDataId<T> = $LootDataId<T>;
 export type LootDataId_<T> = $LootDataId$$Type<T>;
 export type ConfiguredDouble = $ConfiguredDouble;
@@ -14931,10 +14922,10 @@ export type AzAnimationStageProperties = $AzAnimationStageProperties;
 export type AzAnimationStageProperties_ = $AzAnimationStageProperties$$Type;
 export type ItemForgeAccessor = $ItemForgeAccessor;
 export type ItemForgeAccessor_ = $ItemForgeAccessor$$Type;
-export type Explosion = $Explosion;
-export type Explosion_ = $Explosion$$Type;
 export type ScreenEvent$CharacterTyped = $ScreenEvent$CharacterTyped;
 export type ScreenEvent$CharacterTyped_ = $ScreenEvent$CharacterTyped$$Type;
+export type Explosion = $Explosion;
+export type Explosion_ = $Explosion$$Type;
 export type LongConsumer = $LongConsumer;
 export type LongConsumer_ = $LongConsumer$$Type;
 export type SlashBladeDefinition$BladeComparator = $SlashBladeDefinition$BladeComparator;
@@ -14961,10 +14952,10 @@ export type ServerboundCommandSuggestionPacket = $ServerboundCommandSuggestionPa
 export type ServerboundCommandSuggestionPacket_ = $ServerboundCommandSuggestionPacket$$Type;
 export type StructureVoidBlock = $StructureVoidBlock;
 export type StructureVoidBlock_ = $StructureVoidBlock$$Type;
-export type Shapes$DoubleLineConsumer = $Shapes$DoubleLineConsumer;
-export type Shapes$DoubleLineConsumer_ = $Shapes$DoubleLineConsumer$$Type;
 export type ScreenEvent$Closing = $ScreenEvent$Closing;
 export type ScreenEvent$Closing_ = $ScreenEvent$Closing$$Type;
+export type Shapes$DoubleLineConsumer = $Shapes$DoubleLineConsumer;
+export type Shapes$DoubleLineConsumer_ = $Shapes$DoubleLineConsumer$$Type;
 export type Team$0 = $Team$0;
 export type Team$0_ = $Team$0$$Type;
 export type NormalNoise = $NormalNoise;
@@ -15223,10 +15214,10 @@ export type Lifecycle$0 = $Lifecycle$0;
 export type Lifecycle$0_ = $Lifecycle$0$$Type;
 export type AbstractInt2ObjectFunction<V> = $AbstractInt2ObjectFunction<V>;
 export type AbstractInt2ObjectFunction_<V> = $AbstractInt2ObjectFunction$$Type<V>;
-export type ICraftingContainer = $ICraftingContainer;
-export type ICraftingContainer_ = $ICraftingContainer$$Type;
 export type ModifyValueEvent = $ModifyValueEvent;
 export type ModifyValueEvent_ = $ModifyValueEvent$$Type;
+export type ICraftingContainer = $ICraftingContainer;
+export type ICraftingContainer_ = $ICraftingContainer$$Type;
 export type BlockPattern = $BlockPattern;
 export type BlockPattern_ = $BlockPattern$$Type;
 export type CollisionGetter = $CollisionGetter;
@@ -15239,10 +15230,10 @@ export type AbstractVillager = $AbstractVillager;
 export type AbstractVillager_ = $AbstractVillager$$Type;
 export type WatchEvent$Kind<T> = $WatchEvent$Kind<T>;
 export type WatchEvent$Kind_<T> = $WatchEvent$Kind$$Type<T>;
-export type PaintingVariantBuilder = $PaintingVariantBuilder;
-export type PaintingVariantBuilder_ = $PaintingVariantBuilder$$Type;
 export type ClientEventJS = $ClientEventJS;
 export type ClientEventJS_ = $ClientEventJS$$Type;
+export type PaintingVariantBuilder = $PaintingVariantBuilder;
+export type PaintingVariantBuilder_ = $PaintingVariantBuilder$$Type;
 export type ValueEvent = $ValueEvent;
 export type ValueEvent_ = $ValueEvent$$Type;
 export type TagEventJS = $TagEventJS;
@@ -15381,12 +15372,12 @@ export type ComposableEntryContainer = $ComposableEntryContainer;
 export type ComposableEntryContainer_ = $ComposableEntryContainer$$Type;
 export type ByteConsumer = $ByteConsumer;
 export type ByteConsumer_ = $ByteConsumer$$Type;
+export type ClientChatReceivedEvent = $ClientChatReceivedEvent;
+export type ClientChatReceivedEvent_ = $ClientChatReceivedEvent$$Type;
 export type Char2DoubleFunction = $Char2DoubleFunction;
 export type Char2DoubleFunction_ = $Char2DoubleFunction$$Type;
 export type LevelAccessor$0 = $LevelAccessor$0;
 export type LevelAccessor$0_ = $LevelAccessor$0$$Type;
-export type ClientChatReceivedEvent = $ClientChatReceivedEvent;
-export type ClientChatReceivedEvent_ = $ClientChatReceivedEvent$$Type;
 export type CommandSource = $CommandSource;
 export type CommandSource_ = $CommandSource$$Type;
 export type GameRules$BooleanValue = $GameRules$BooleanValue;
@@ -15437,10 +15428,10 @@ export type PaintingTextureManager = $PaintingTextureManager;
 export type PaintingTextureManager_ = $PaintingTextureManager$$Type;
 export type ViewModelStoreOwner = $ViewModelStoreOwner;
 export type ViewModelStoreOwner_ = $ViewModelStoreOwner$$Type;
-export type RailBlock = $RailBlock;
-export type RailBlock_ = $RailBlock$$Type;
 export type ServerStoppingEvent = $ServerStoppingEvent;
 export type ServerStoppingEvent_ = $ServerStoppingEvent$$Type;
+export type RailBlock = $RailBlock;
+export type RailBlock_ = $RailBlock$$Type;
 export type TSKeyofType = $TSKeyofType;
 export type TSKeyofType_ = $TSKeyofType$$Type;
 export type LayerLightSectionStorage$SectionType = $LayerLightSectionStorage$SectionType;
@@ -15559,10 +15550,10 @@ export type EventGetFluidRenderType$0 = $EventGetFluidRenderType$0;
 export type EventGetFluidRenderType$0_ = $EventGetFluidRenderType$0$$Type;
 export type NetherFossilStructure = $NetherFossilStructure;
 export type NetherFossilStructure_ = $NetherFossilStructure$$Type;
-export type RemoveJEICategoriesEvent = $RemoveJEICategoriesEvent;
-export type RemoveJEICategoriesEvent_ = $RemoveJEICategoriesEvent$$Type;
 export type RenderGuiOverlayEvent$Pre = $RenderGuiOverlayEvent$Pre;
 export type RenderGuiOverlayEvent$Pre_ = $RenderGuiOverlayEvent$Pre$$Type;
+export type RemoveJEICategoriesEvent = $RemoveJEICategoriesEvent;
+export type RemoveJEICategoriesEvent_ = $RemoveJEICategoriesEvent$$Type;
 export type Map$Entry<K, V> = $Map$Entry<K, V>;
 export type Map$Entry_<K, V> = $Map$Entry$$Type<K, V>;
 export type ModifierData = $ModifierData;
@@ -15685,10 +15676,10 @@ export type Vec3i = $Vec3i;
 export type Vec3i_ = $Vec3i$$Type;
 export type MultiNoiseBiomeSourceParameterList$Preset = $MultiNoiseBiomeSourceParameterList$Preset;
 export type MultiNoiseBiomeSourceParameterList$Preset_ = $MultiNoiseBiomeSourceParameterList$Preset$$Type;
-export type ItemCombinerMenu = $ItemCombinerMenu;
-export type ItemCombinerMenu_ = $ItemCombinerMenu$$Type;
 export type SleepingTimeCheckEvent = $SleepingTimeCheckEvent;
 export type SleepingTimeCheckEvent_ = $SleepingTimeCheckEvent$$Type;
+export type ItemCombinerMenu = $ItemCombinerMenu;
+export type ItemCombinerMenu_ = $ItemCombinerMenu$$Type;
 export type CaveSpider = $CaveSpider;
 export type CaveSpider_ = $CaveSpider$$Type;
 export type PackResources = $PackResources;
@@ -15713,10 +15704,10 @@ export type IMixinMob = $IMixinMob;
 export type IMixinMob_ = $IMixinMob$$Type;
 export type Clock = $Clock;
 export type Clock_ = $Clock$$Type;
-export type StreamCodec<TBuffer, TData> = $StreamCodec<TBuffer, TData>;
-export type StreamCodec_<TBuffer, TData> = $StreamCodec$$Type<TBuffer, TData>;
 export type ClientChatReceivedEvent$System = $ClientChatReceivedEvent$System;
 export type ClientChatReceivedEvent$System_ = $ClientChatReceivedEvent$System$$Type;
+export type StreamCodec<TBuffer, TData> = $StreamCodec<TBuffer, TData>;
+export type StreamCodec_<TBuffer, TData> = $StreamCodec$$Type<TBuffer, TData>;
 export type InputMethodListener = $InputMethodListener;
 export type InputMethodListener_ = $InputMethodListener$$Type;
 export type Enumeration<E> = $Enumeration<E>;
@@ -15807,10 +15798,10 @@ export type DragonPhaseInstance = $DragonPhaseInstance;
 export type DragonPhaseInstance_ = $DragonPhaseInstance$$Type;
 export type PiglinArmPose = $PiglinArmPose;
 export type PiglinArmPose_ = $PiglinArmPose$$Type;
-export type EnchantmentPredicateAccessor = $EnchantmentPredicateAccessor;
-export type EnchantmentPredicateAccessor_ = $EnchantmentPredicateAccessor$$Type;
 export type BuildCreativeModeTabContentsEvent = $BuildCreativeModeTabContentsEvent;
 export type BuildCreativeModeTabContentsEvent_ = $BuildCreativeModeTabContentsEvent$$Type;
+export type EnchantmentPredicateAccessor = $EnchantmentPredicateAccessor;
+export type EnchantmentPredicateAccessor_ = $EnchantmentPredicateAccessor$$Type;
 export type DoubleBinaryOperator$0 = $DoubleBinaryOperator$0;
 export type DoubleBinaryOperator$0_ = $DoubleBinaryOperator$0$$Type;
 export type OnDatapackSyncEvent = $OnDatapackSyncEvent;
@@ -16009,10 +16000,10 @@ export type BaseImmutableMultimap<K, V> = $BaseImmutableMultimap<K, V>;
 export type BaseImmutableMultimap_<K, V> = $BaseImmutableMultimap$$Type<K, V>;
 export type CapabilityDataSerializer<T> = $CapabilityDataSerializer<T>;
 export type CapabilityDataSerializer_<T> = $CapabilityDataSerializer$$Type<T>;
-export type Face = $Face;
-export type Face_ = $Face$$Type;
 export type RenderLivingEvent$Pre<T extends $LivingEntity, M extends $EntityModel<T>> = $RenderLivingEvent$Pre<T, M>;
 export type RenderLivingEvent$Pre_<T extends $LivingEntity, M extends $EntityModel<T>> = $RenderLivingEvent$Pre$$Type<T, M>;
+export type Face = $Face;
+export type Face_ = $Face$$Type;
 export type BlockStateRotateCallbackJS = $BlockStateRotateCallbackJS;
 export type BlockStateRotateCallbackJS_ = $BlockStateRotateCallbackJS$$Type;
 export type AutoGlowingGeoLayer<T extends $GeoAnimatable> = $AutoGlowingGeoLayer<T>;
@@ -16051,10 +16042,10 @@ export type RenderAttachmentBlockEntity = $RenderAttachmentBlockEntity;
 export type RenderAttachmentBlockEntity_ = $RenderAttachmentBlockEntity$$Type;
 export type BoatEntityJS = $BoatEntityJS;
 export type BoatEntityJS_ = $BoatEntityJS$$Type;
-export type PoiRecord = $PoiRecord;
-export type PoiRecord_ = $PoiRecord$$Type;
 export type ModConfigEvent$Unloading = $ModConfigEvent$Unloading;
 export type ModConfigEvent$Unloading_ = $ModConfigEvent$Unloading$$Type;
+export type PoiRecord = $PoiRecord;
+export type PoiRecord_ = $PoiRecord$$Type;
 export type ParCoolConfig$Server$Doubles = $ParCoolConfig$Server$Doubles;
 export type ParCoolConfig$Server$Doubles_ = $ParCoolConfig$Server$Doubles$$Type;
 export type AWTKeyStroke = $AWTKeyStroke;
@@ -16119,10 +16110,10 @@ export type BlockEntityAttachment = $BlockEntityAttachment;
 export type BlockEntityAttachment_ = $BlockEntityAttachment$$Type;
 export type AzAbstractAnimationController = $AzAbstractAnimationController;
 export type AzAbstractAnimationController_ = $AzAbstractAnimationController$$Type;
-export type ComparatorMode = $ComparatorMode;
-export type ComparatorMode_ = $ComparatorMode$$Type;
 export type OptionPageConstructionEvent = $OptionPageConstructionEvent;
 export type OptionPageConstructionEvent_ = $OptionPageConstructionEvent$$Type;
+export type ComparatorMode = $ComparatorMode;
+export type ComparatorMode_ = $ComparatorMode$$Type;
 export type VanillaPackResources = $VanillaPackResources;
 export type VanillaPackResources_ = $VanillaPackResources$$Type;
 export type LivingDamageEvent$0 = $LivingDamageEvent$0;
@@ -16151,10 +16142,10 @@ export type ClientboundStopSoundPacket = $ClientboundStopSoundPacket;
 export type ClientboundStopSoundPacket_ = $ClientboundStopSoundPacket$$Type;
 export type ChunkRenderDispatcher$CompiledChunk = $ChunkRenderDispatcher$CompiledChunk;
 export type ChunkRenderDispatcher$CompiledChunk_ = $ChunkRenderDispatcher$CompiledChunk$$Type;
-export type CameraKeyframeAnimation$AnimType = $CameraKeyframeAnimation$AnimType;
-export type CameraKeyframeAnimation$AnimType_ = $CameraKeyframeAnimation$AnimType$$Type;
 export type AccessorSynchedEntityData = $AccessorSynchedEntityData;
 export type AccessorSynchedEntityData_ = $AccessorSynchedEntityData$$Type;
+export type CameraKeyframeAnimation$AnimType = $CameraKeyframeAnimation$AnimType;
+export type CameraKeyframeAnimation$AnimType_ = $CameraKeyframeAnimation$AnimType$$Type;
 export type ClampedNormalInt = $ClampedNormalInt;
 export type ClampedNormalInt_ = $ClampedNormalInt$$Type;
 export type PowderSnowCauldronBlock = $PowderSnowCauldronBlock;
@@ -16257,12 +16248,12 @@ export type AzAnimationProperties = $AzAnimationProperties;
 export type AzAnimationProperties_ = $AzAnimationProperties$$Type;
 export type BannerBlockEntity = $BannerBlockEntity;
 export type BannerBlockEntity_ = $BannerBlockEntity$$Type;
+export type ClientPlayerChangeGameTypeEvent = $ClientPlayerChangeGameTypeEvent;
+export type ClientPlayerChangeGameTypeEvent_ = $ClientPlayerChangeGameTypeEvent$$Type;
 export type ParticleCreator = $ParticleCreator;
 export type ParticleCreator_ = $ParticleCreator$$Type;
 export type SpectatorMenuItem = $SpectatorMenuItem;
 export type SpectatorMenuItem_ = $SpectatorMenuItem$$Type;
-export type ClientPlayerChangeGameTypeEvent = $ClientPlayerChangeGameTypeEvent;
-export type ClientPlayerChangeGameTypeEvent_ = $ClientPlayerChangeGameTypeEvent$$Type;
 export type ValueRange = $ValueRange;
 export type ValueRange_ = $ValueRange$$Type;
 export type RootSystemConfiguration = $RootSystemConfiguration;
@@ -16397,12 +16388,12 @@ export type ViewModel = $ViewModel;
 export type ViewModel_ = $ViewModel$$Type;
 export type TelemetryPropertyMap = $TelemetryPropertyMap;
 export type TelemetryPropertyMap_ = $TelemetryPropertyMap$$Type;
+export type AdvancementEvent$AdvancementEarnEvent = $AdvancementEvent$AdvancementEarnEvent;
+export type AdvancementEvent$AdvancementEarnEvent_ = $AdvancementEvent$AdvancementEarnEvent$$Type;
 export type BundlerInfo$Bundler = $BundlerInfo$Bundler;
 export type BundlerInfo$Bundler_ = $BundlerInfo$Bundler$$Type;
 export type ServerboundAcceptTeleportationPacket = $ServerboundAcceptTeleportationPacket;
 export type ServerboundAcceptTeleportationPacket_ = $ServerboundAcceptTeleportationPacket$$Type;
-export type AdvancementEvent$AdvancementEarnEvent = $AdvancementEvent$AdvancementEarnEvent;
-export type AdvancementEvent$AdvancementEarnEvent_ = $AdvancementEvent$AdvancementEarnEvent$$Type;
 export type ConfiguredEntityCondition<C extends $IDynamicFeatureConfiguration, F extends $EntityCondition<C>> = $ConfiguredEntityCondition<C, F>;
 export type ConfiguredEntityCondition_<C extends $IDynamicFeatureConfiguration, F extends $EntityCondition<C>> = $ConfiguredEntityCondition$$Type<C, F>;
 export type StructureProcessorList = $StructureProcessorList;
@@ -16429,10 +16420,10 @@ export type ReloadInstance = $ReloadInstance;
 export type ReloadInstance_ = $ReloadInstance$$Type;
 export type SplashRenderer = $SplashRenderer;
 export type SplashRenderer_ = $SplashRenderer$$Type;
-export type Pig = $Pig;
-export type Pig_ = $Pig$$Type;
 export type ContainerScreenEvent$Render = $ContainerScreenEvent$Render;
 export type ContainerScreenEvent$Render_ = $ContainerScreenEvent$Render$$Type;
+export type Pig = $Pig;
+export type Pig_ = $Pig$$Type;
 export type TimeZone$0 = $TimeZone$0;
 export type TimeZone$0_ = $TimeZone$0$$Type;
 export type Collection<E> = $Collection<E>;
@@ -16471,10 +16462,10 @@ export type TridentRiptideEnchantment = $TridentRiptideEnchantment;
 export type TridentRiptideEnchantment_ = $TridentRiptideEnchantment$$Type;
 export type Int2IntMap = $Int2IntMap;
 export type Int2IntMap_ = $Int2IntMap$$Type;
-export type SimpleRandomSelectorFeature = $SimpleRandomSelectorFeature;
-export type SimpleRandomSelectorFeature_ = $SimpleRandomSelectorFeature$$Type;
 export type ScreenshotEvent = $ScreenshotEvent;
 export type ScreenshotEvent_ = $ScreenshotEvent$$Type;
+export type SimpleRandomSelectorFeature = $SimpleRandomSelectorFeature;
+export type SimpleRandomSelectorFeature_ = $SimpleRandomSelectorFeature$$Type;
 export type GunReloadEvent$Pre = $GunReloadEvent$Pre;
 export type GunReloadEvent$Pre_ = $GunReloadEvent$Pre$$Type;
 export type CommentedFileConfig = $CommentedFileConfig;
@@ -16589,10 +16580,10 @@ export type CropGrowEvent$Pre = $CropGrowEvent$Pre;
 export type CropGrowEvent$Pre_ = $CropGrowEvent$Pre$$Type;
 export type AccessScriptManager = $AccessScriptManager;
 export type AccessScriptManager_ = $AccessScriptManager$$Type;
-export type SpectatorMenu = $SpectatorMenu;
-export type SpectatorMenu_ = $SpectatorMenu$$Type;
 export type UsageTickerEvent = $UsageTickerEvent;
 export type UsageTickerEvent_ = $UsageTickerEvent$$Type;
+export type SpectatorMenu = $SpectatorMenu;
+export type SpectatorMenu_ = $SpectatorMenu$$Type;
 export type BaseLivingEntityBuilder$ParticleKeyFrameEventJS<E extends ($LivingEntity & $IAnimatableJS)> = $BaseLivingEntityBuilder$ParticleKeyFrameEventJS<E>;
 export type BaseLivingEntityBuilder$ParticleKeyFrameEventJS_<E extends ($LivingEntity & $IAnimatableJS)> = $BaseLivingEntityBuilder$ParticleKeyFrameEventJS$$Type<E>;
 export type IFactory<T extends $IDynamicFeatureConfiguration, C extends $ConfiguredFactory<T, F, any>, F extends $IFactory<T, C, F>> = $IFactory<T, C, F>;
@@ -16667,10 +16658,10 @@ export type Vector3fc = $Vector3fc;
 export type Vector3fc_ = $Vector3fc$$Type;
 export type SweepingEdgeEnchantment = $SweepingEdgeEnchantment;
 export type SweepingEdgeEnchantment_ = $SweepingEdgeEnchantment$$Type;
-export type AddGoalTargetsEventJS<T extends $Mob> = $AddGoalTargetsEventJS<T>;
-export type AddGoalTargetsEventJS_<T extends $Mob> = $AddGoalTargetsEventJS$$Type<T>;
 export type MobEffectEvent = $MobEffectEvent;
 export type MobEffectEvent_ = $MobEffectEvent$$Type;
+export type AddGoalTargetsEventJS<T extends $Mob> = $AddGoalTargetsEventJS<T>;
+export type AddGoalTargetsEventJS_<T extends $Mob> = $AddGoalTargetsEventJS$$Type<T>;
 export type PowderSnowBlock = $PowderSnowBlock;
 export type PowderSnowBlock_ = $PowderSnowBlock$$Type;
 export type LivingEntityAccess = $LivingEntityAccess;
@@ -16729,10 +16720,10 @@ export type PointedDripstoneConfiguration = $PointedDripstoneConfiguration;
 export type PointedDripstoneConfiguration_ = $PointedDripstoneConfiguration$$Type;
 export type BlockEvent$CropGrowEvent$Pre = $BlockEvent$CropGrowEvent$Pre;
 export type BlockEvent$CropGrowEvent$Pre_ = $BlockEvent$CropGrowEvent$Pre$$Type;
-export type EventLoopTaskQueueFactory = $EventLoopTaskQueueFactory;
-export type EventLoopTaskQueueFactory_ = $EventLoopTaskQueueFactory$$Type;
 export type PlayerXpEvent$PickupXp = $PlayerXpEvent$PickupXp;
 export type PlayerXpEvent$PickupXp_ = $PlayerXpEvent$PickupXp$$Type;
+export type EventLoopTaskQueueFactory = $EventLoopTaskQueueFactory;
+export type EventLoopTaskQueueFactory_ = $EventLoopTaskQueueFactory$$Type;
 export type SingletonGeoAnimatable = $SingletonGeoAnimatable;
 export type SingletonGeoAnimatable_ = $SingletonGeoAnimatable$$Type;
 export type BalmConfigSchema = $BalmConfigSchema;
@@ -16749,12 +16740,12 @@ export type Behaviors = $Behaviors;
 export type Behaviors_ = $Behaviors$$Type;
 export type AbstractIllager$IllagerArmPose = $AbstractIllager$IllagerArmPose;
 export type AbstractIllager$IllagerArmPose_ = $AbstractIllager$IllagerArmPose$$Type;
-export type SlashBladeEvent$ChargeActionEvent = $SlashBladeEvent$ChargeActionEvent;
-export type SlashBladeEvent$ChargeActionEvent_ = $SlashBladeEvent$ChargeActionEvent$$Type;
 export type MultithreadEventExecutorGroup = $MultithreadEventExecutorGroup;
 export type MultithreadEventExecutorGroup_ = $MultithreadEventExecutorGroup$$Type;
 export type AddAttributesFunction$Modifier$Builder = $AddAttributesFunction$Modifier$Builder;
 export type AddAttributesFunction$Modifier$Builder_ = $AddAttributesFunction$Modifier$Builder$$Type;
+export type SlashBladeEvent$ChargeActionEvent = $SlashBladeEvent$ChargeActionEvent;
+export type SlashBladeEvent$ChargeActionEvent_ = $SlashBladeEvent$ChargeActionEvent$$Type;
 export type IJeiRuntime = $IJeiRuntime;
 export type IJeiRuntime_ = $IJeiRuntime$$Type;
 export type IForgeItem = $IForgeItem;
@@ -16807,10 +16798,10 @@ export type Climate$RTree<T> = $Climate$RTree<T>;
 export type Climate$RTree_<T> = $Climate$RTree$$Type<T>;
 export type CooldownInstance = $CooldownInstance;
 export type CooldownInstance_ = $CooldownInstance$$Type;
-export type ScriptManager = $ScriptManager;
-export type ScriptManager_ = $ScriptManager$$Type;
 export type PlayerEvent$SaveToFile = $PlayerEvent$SaveToFile;
 export type PlayerEvent$SaveToFile_ = $PlayerEvent$SaveToFile$$Type;
+export type ScriptManager = $ScriptManager;
+export type ScriptManager_ = $ScriptManager$$Type;
 export type ZEarlyRender = $ZEarlyRender;
 export type ZEarlyRender_ = $ZEarlyRender$$Type;
 export type TrackedDataContainer<O, T extends $TrackedData<O>> = $TrackedDataContainer<O, T>;
@@ -16897,10 +16888,10 @@ export type ToIntFunction<T> = $ToIntFunction<T>;
 export type ToIntFunction_<T> = $ToIntFunction$$Type<T>;
 export type BlendMode$0 = $BlendMode$0;
 export type BlendMode$0_ = $BlendMode$0$$Type;
-export type RewardTable = $RewardTable;
-export type RewardTable_ = $RewardTable$$Type;
 export type PlayerAttackEvent = $PlayerAttackEvent;
 export type PlayerAttackEvent_ = $PlayerAttackEvent$$Type;
+export type RewardTable = $RewardTable;
+export type RewardTable_ = $RewardTable$$Type;
 export type LerpingBossEvent = $LerpingBossEvent;
 export type LerpingBossEvent_ = $LerpingBossEvent$$Type;
 export type CapeData = $CapeData;
@@ -16921,8 +16912,6 @@ export type MapBlockMarker<D extends $CustomMapDecoration> = $MapBlockMarker<D>;
 export type MapBlockMarker_<D extends $CustomMapDecoration> = $MapBlockMarker$$Type<D>;
 export type BlockEvent$BlockToolModificationEvent = $BlockEvent$BlockToolModificationEvent;
 export type BlockEvent$BlockToolModificationEvent_ = $BlockEvent$BlockToolModificationEvent$$Type;
-export type DataHolder<T> = $DataHolder<T>;
-export type DataHolder_<T> = $DataHolder$$Type<T>;
 export type DamageSources = $DamageSources;
 export type DamageSources_ = $DamageSources$$Type;
 export type ByteBufAllocator = $ByteBufAllocator;
@@ -16983,10 +16972,10 @@ export type BaseEntityBuilder$SoundKeyFrameEventJS<E extends ($Entity & $IAnimat
 export type BaseEntityBuilder$SoundKeyFrameEventJS_<E extends ($Entity & $IAnimatableJSNL)> = $BaseEntityBuilder$SoundKeyFrameEventJS$$Type<E>;
 export type Pair$1<X, Y> = $Pair$1<X, Y>;
 export type Pair$1_<X, Y> = $Pair$1$$Type<X, Y>;
-export type TickingBlockEntity = $TickingBlockEntity;
-export type TickingBlockEntity_ = $TickingBlockEntity$$Type;
 export type RenderTooltipEvent$0 = $RenderTooltipEvent$0;
 export type RenderTooltipEvent$0_ = $RenderTooltipEvent$0$$Type;
+export type TickingBlockEntity = $TickingBlockEntity;
+export type TickingBlockEntity_ = $TickingBlockEntity$$Type;
 export type Pointer = $Pointer;
 export type Pointer_ = $Pointer$$Type;
 export type OctahedralGroup = $OctahedralGroup;
@@ -17001,10 +16990,10 @@ export type AbstractStringBuilder = $AbstractStringBuilder;
 export type AbstractStringBuilder_ = $AbstractStringBuilder$$Type;
 export type CriterionEvent = $CriterionEvent;
 export type CriterionEvent_ = $CriterionEvent$$Type;
-export type FilterableWeightedList<U> = $FilterableWeightedList<U>;
-export type FilterableWeightedList_<U> = $FilterableWeightedList$$Type<U>;
 export type PlayerEvent$ItemSmeltedEvent = $PlayerEvent$ItemSmeltedEvent;
 export type PlayerEvent$ItemSmeltedEvent_ = $PlayerEvent$ItemSmeltedEvent$$Type;
+export type FilterableWeightedList<U> = $FilterableWeightedList<U>;
+export type FilterableWeightedList_<U> = $FilterableWeightedList$$Type<U>;
 export type ValueLayout$OfLong = $ValueLayout$OfLong;
 export type ValueLayout$OfLong_ = $ValueLayout$OfLong$$Type;
 export type ContextUtils$ArrowLivingEntityContext = $ContextUtils$ArrowLivingEntityContext;
@@ -17173,10 +17162,10 @@ export type TickEvent$RenderTickEvent = $TickEvent$RenderTickEvent;
 export type TickEvent$RenderTickEvent_ = $TickEvent$RenderTickEvent$$Type;
 export type EventJS = $EventJS;
 export type EventJS_ = $EventJS$$Type;
-export type ElderGuardian = $ElderGuardian;
-export type ElderGuardian_ = $ElderGuardian$$Type;
 export type PlayerWakeUpEvent = $PlayerWakeUpEvent;
 export type PlayerWakeUpEvent_ = $PlayerWakeUpEvent$$Type;
+export type ElderGuardian = $ElderGuardian;
+export type ElderGuardian_ = $ElderGuardian$$Type;
 export type SpecialEquality = $SpecialEquality;
 export type SpecialEquality_ = $SpecialEquality$$Type;
 export type ItemBuilder$ReleaseUsingCallback = $ItemBuilder$ReleaseUsingCallback;
@@ -17195,10 +17184,10 @@ export type ContextUtils$RotLerpContext = $ContextUtils$RotLerpContext;
 export type ContextUtils$RotLerpContext_ = $ContextUtils$RotLerpContext$$Type;
 export type IIngredientManager = $IIngredientManager;
 export type IIngredientManager_ = $IIngredientManager$$Type;
-export type ServerStatus = $ServerStatus;
-export type ServerStatus_ = $ServerStatus$$Type;
 export type LivingAttackEvent = $LivingAttackEvent;
 export type LivingAttackEvent_ = $LivingAttackEvent$$Type;
+export type ServerStatus = $ServerStatus;
+export type ServerStatus_ = $ServerStatus$$Type;
 export type MinecraftClientAccessor$1 = $MinecraftClientAccessor$1;
 export type MinecraftClientAccessor$1_ = $MinecraftClientAccessor$1$$Type;
 export type FlushInfo$FinishedCallback = $FlushInfo$FinishedCallback;
@@ -17263,10 +17252,10 @@ export type Env = $Env;
 export type Env_ = $Env$$Type;
 export type ButtonAccessor = $ButtonAccessor;
 export type ButtonAccessor_ = $ButtonAccessor$$Type;
-export type RecipeCollection = $RecipeCollection;
-export type RecipeCollection_ = $RecipeCollection$$Type;
 export type MobEffectEvent$Expired = $MobEffectEvent$Expired;
 export type MobEffectEvent$Expired_ = $MobEffectEvent$Expired$$Type;
+export type RecipeCollection = $RecipeCollection;
+export type RecipeCollection_ = $RecipeCollection$$Type;
 export type OutputStream = $OutputStream;
 export type OutputStream_ = $OutputStream$$Type;
 export type SpellCastingMobJS = $SpellCastingMobJS;
@@ -17347,10 +17336,10 @@ export type Statement = $Statement;
 export type Statement_ = $Statement$$Type;
 export type EntitySubPredicate$Type = $EntitySubPredicate$Type;
 export type EntitySubPredicate$Type_ = $EntitySubPredicate$Type$$Type;
-export type RuleBlockEntityModifierType<P extends $RuleBlockEntityModifier> = $RuleBlockEntityModifierType<P>;
-export type RuleBlockEntityModifierType_<P extends $RuleBlockEntityModifier> = $RuleBlockEntityModifierType$$Type<P>;
 export type LivingHealEvent$0 = $LivingHealEvent$0;
 export type LivingHealEvent$0_ = $LivingHealEvent$0$$Type;
+export type RuleBlockEntityModifierType<P extends $RuleBlockEntityModifier> = $RuleBlockEntityModifierType<P>;
+export type RuleBlockEntityModifierType_<P extends $RuleBlockEntityModifier> = $RuleBlockEntityModifierType$$Type<P>;
 export type ProfilerFiller = $ProfilerFiller;
 export type ProfilerFiller_ = $ProfilerFiller$$Type;
 export type View$OnDragListener = $View$OnDragListener;
@@ -17397,10 +17386,10 @@ export type ResourceLocationConfigProperty = $ResourceLocationConfigProperty;
 export type ResourceLocationConfigProperty_ = $ResourceLocationConfigProperty$$Type;
 export type Button$0 = $Button$0;
 export type Button$0_ = $Button$0$$Type;
-export type Double2DoubleFunction = $Double2DoubleFunction;
-export type Double2DoubleFunction_ = $Double2DoubleFunction$$Type;
 export type GeoRenderEvent$Entity$CompileRenderLayers = $GeoRenderEvent$Entity$CompileRenderLayers;
 export type GeoRenderEvent$Entity$CompileRenderLayers_ = $GeoRenderEvent$Entity$CompileRenderLayers$$Type;
+export type Double2DoubleFunction = $Double2DoubleFunction;
+export type Double2DoubleFunction_ = $Double2DoubleFunction$$Type;
 export type EntitySubPredicate = $EntitySubPredicate;
 export type EntitySubPredicate_ = $EntitySubPredicate$$Type;
 export type FovUpdateEvent = $FovUpdateEvent;
@@ -17439,10 +17428,10 @@ export type ITooltipBuilder = $ITooltipBuilder;
 export type ITooltipBuilder_ = $ITooltipBuilder$$Type;
 export type SpellSelectionManager$SelectionOption = $SpellSelectionManager$SelectionOption;
 export type SpellSelectionManager$SelectionOption_ = $SpellSelectionManager$SelectionOption$$Type;
-export type FrogAttackablesSensor = $FrogAttackablesSensor;
-export type FrogAttackablesSensor_ = $FrogAttackablesSensor$$Type;
 export type ScreenEvent$KeyInput = $ScreenEvent$KeyInput;
 export type ScreenEvent$KeyInput_ = $ScreenEvent$KeyInput$$Type;
+export type FrogAttackablesSensor = $FrogAttackablesSensor;
+export type FrogAttackablesSensor_ = $FrogAttackablesSensor$$Type;
 export type WoodTypeMixin = $WoodTypeMixin;
 export type WoodTypeMixin_ = $WoodTypeMixin$$Type;
 export type ArtifactRepositoryPolicy = $ArtifactRepositoryPolicy;
@@ -17561,10 +17550,10 @@ export type ParCoolConfig$Item<T> = $ParCoolConfig$Item<T>;
 export type ParCoolConfig$Item_<T> = $ParCoolConfig$Item$$Type<T>;
 export type BedItem = $BedItem;
 export type BedItem_ = $BedItem$$Type;
-export type ItemComponentManager$ItemUseCondition = $ItemComponentManager$ItemUseCondition;
-export type ItemComponentManager$ItemUseCondition_ = $ItemComponentManager$ItemUseCondition$$Type;
 export type ScreenEvent$MouseScrolled$Post = $ScreenEvent$MouseScrolled$Post;
 export type ScreenEvent$MouseScrolled$Post_ = $ScreenEvent$MouseScrolled$Post$$Type;
+export type ItemComponentManager$ItemUseCondition = $ItemComponentManager$ItemUseCondition;
+export type ItemComponentManager$ItemUseCondition_ = $ItemComponentManager$ItemUseCondition$$Type;
 export type ClientboundSetBorderWarningDelayPacket = $ClientboundSetBorderWarningDelayPacket;
 export type ClientboundSetBorderWarningDelayPacket_ = $ClientboundSetBorderWarningDelayPacket$$Type;
 export type IZetaConditionSerializer<T extends $IZetaCondition> = $IZetaConditionSerializer<T>;
@@ -17575,10 +17564,10 @@ export type PrintWriter = $PrintWriter;
 export type PrintWriter_ = $PrintWriter$$Type;
 export type ColorFilter = $ColorFilter;
 export type ColorFilter_ = $ColorFilter$$Type;
-export type EventLivingRenderer$PreSetupAnimations = $EventLivingRenderer$PreSetupAnimations;
-export type EventLivingRenderer$PreSetupAnimations_ = $EventLivingRenderer$PreSetupAnimations$$Type;
 export type PowerDeserializationEvent = $PowerDeserializationEvent;
 export type PowerDeserializationEvent_ = $PowerDeserializationEvent$$Type;
+export type EventLivingRenderer$PreSetupAnimations = $EventLivingRenderer$PreSetupAnimations;
+export type EventLivingRenderer$PreSetupAnimations_ = $EventLivingRenderer$PreSetupAnimations$$Type;
 export type ParticleEngineAccessor = $ParticleEngineAccessor;
 export type ParticleEngineAccessor_ = $ParticleEngineAccessor$$Type;
 export type EnumConfig<E> = $EnumConfig<E>;
@@ -17631,10 +17620,10 @@ export type EntityDataSerializer<T> = $EntityDataSerializer<T>;
 export type EntityDataSerializer_<T> = $EntityDataSerializer$$Type<T>;
 export type SurfaceRules$SurfaceRule = $SurfaceRules$SurfaceRule;
 export type SurfaceRules$SurfaceRule_ = $SurfaceRules$SurfaceRule$$Type;
-export type ContextUtils$EEntityFallDamageContext = $ContextUtils$EEntityFallDamageContext;
-export type ContextUtils$EEntityFallDamageContext_ = $ContextUtils$EEntityFallDamageContext$$Type;
 export type HUDOverlayEvent$HealthRestored = $HUDOverlayEvent$HealthRestored;
 export type HUDOverlayEvent$HealthRestored_ = $HUDOverlayEvent$HealthRestored$$Type;
+export type ContextUtils$EEntityFallDamageContext = $ContextUtils$EEntityFallDamageContext;
+export type ContextUtils$EEntityFallDamageContext_ = $ContextUtils$EEntityFallDamageContext$$Type;
 export type BiomeModifier = $BiomeModifier;
 export type BiomeModifier_ = $BiomeModifier$$Type;
 export type PumpkinBlock = $PumpkinBlock;
@@ -17663,10 +17652,10 @@ export type Short2ByteFunction = $Short2ByteFunction;
 export type Short2ByteFunction_ = $Short2ByteFunction$$Type;
 export type Dynamic2CommandExceptionType$Function = $Dynamic2CommandExceptionType$Function;
 export type Dynamic2CommandExceptionType$Function_ = $Dynamic2CommandExceptionType$Function$$Type;
-export type DiscreteVSAccess = $DiscreteVSAccess;
-export type DiscreteVSAccess_ = $DiscreteVSAccess$$Type;
 export type PlayerOpenMenuEvent = $PlayerOpenMenuEvent;
 export type PlayerOpenMenuEvent_ = $PlayerOpenMenuEvent$$Type;
+export type DiscreteVSAccess = $DiscreteVSAccess;
+export type DiscreteVSAccess_ = $DiscreteVSAccess$$Type;
 export type MobFilter = $MobFilter;
 export type MobFilter_ = $MobFilter$$Type;
 export type IntStream$Builder = $IntStream$Builder;
@@ -17861,10 +17850,10 @@ export type BlockStateKJS = $BlockStateKJS;
 export type BlockStateKJS_ = $BlockStateKJS$$Type;
 export type LayoutTransition = $LayoutTransition;
 export type LayoutTransition_ = $LayoutTransition$$Type;
-export type Heightmap$Types = $Heightmap$Types;
-export type Heightmap$Types_ = $Heightmap$Types$$Type;
 export type BlockEvent$BreakEvent = $BlockEvent$BreakEvent;
 export type BlockEvent$BreakEvent_ = $BlockEvent$BreakEvent$$Type;
+export type Heightmap$Types = $Heightmap$Types;
+export type Heightmap$Types_ = $Heightmap$Types$$Type;
 export type ServerFunctionManager$TraceCallbacks = $ServerFunctionManager$TraceCallbacks;
 export type ServerFunctionManager$TraceCallbacks_ = $ServerFunctionManager$TraceCallbacks$$Type;
 export type SkeletonJSBuilder = $SkeletonJSBuilder;
@@ -17941,12 +17930,12 @@ export type IFocusFactory = $IFocusFactory;
 export type IFocusFactory_ = $IFocusFactory$$Type;
 export type Shulker = $Shulker;
 export type Shulker_ = $Shulker$$Type;
+export type LivingExperienceDropEvent = $LivingExperienceDropEvent;
+export type LivingExperienceDropEvent_ = $LivingExperienceDropEvent$$Type;
 export type GraphicsPipeline = $GraphicsPipeline;
 export type GraphicsPipeline_ = $GraphicsPipeline$$Type;
 export type Tickable = $Tickable;
 export type Tickable_ = $Tickable$$Type;
-export type LivingExperienceDropEvent = $LivingExperienceDropEvent;
-export type LivingExperienceDropEvent_ = $LivingExperienceDropEvent$$Type;
 export type ModelBakery$LoadedJson = $ModelBakery$LoadedJson;
 export type ModelBakery$LoadedJson_ = $ModelBakery$LoadedJson$$Type;
 export type EventMergeStructureSpawns = $EventMergeStructureSpawns;
@@ -18219,10 +18208,10 @@ export type Function$0<F, T> = $Function$0<F, T>;
 export type Function$0_<F, T> = $Function$0$$Type<F, T>;
 export type LookControlJS = $LookControlJS;
 export type LookControlJS_ = $LookControlJS$$Type;
-export type ImmutableMap<K, V> = $ImmutableMap<K, V>;
-export type ImmutableMap_<K, V> = $ImmutableMap$$Type<K, V>;
 export type PlayerFlyableFallEvent = $PlayerFlyableFallEvent;
 export type PlayerFlyableFallEvent_ = $PlayerFlyableFallEvent$$Type;
+export type ImmutableMap<K, V> = $ImmutableMap<K, V>;
+export type ImmutableMap_<K, V> = $ImmutableMap$$Type<K, V>;
 export type RenderType$OutlineProperty = $RenderType$OutlineProperty;
 export type RenderType$OutlineProperty_ = $RenderType$OutlineProperty$$Type;
 export type App<F extends $K1, A> = $App<F, A>;
@@ -18243,14 +18232,14 @@ export type BlockModelBuilder = $BlockModelBuilder;
 export type BlockModelBuilder_ = $BlockModelBuilder$$Type;
 export type FireBlockAccessor = $FireBlockAccessor;
 export type FireBlockAccessor_ = $FireBlockAccessor$$Type;
-export type ParsePosition = $ParsePosition;
-export type ParsePosition_ = $ParsePosition$$Type;
 export type EnchantmentLevelSetEvent = $EnchantmentLevelSetEvent;
 export type EnchantmentLevelSetEvent_ = $EnchantmentLevelSetEvent$$Type;
-export type MultiPackResourceManager = $MultiPackResourceManager;
-export type MultiPackResourceManager_ = $MultiPackResourceManager$$Type;
+export type ParsePosition = $ParsePosition;
+export type ParsePosition_ = $ParsePosition$$Type;
 export type Calendar$0 = $Calendar$0;
 export type Calendar$0_ = $Calendar$0$$Type;
+export type MultiPackResourceManager = $MultiPackResourceManager;
+export type MultiPackResourceManager_ = $MultiPackResourceManager$$Type;
 export type PowerLoadEvent$Pre = $PowerLoadEvent$Pre;
 export type PowerLoadEvent$Pre_ = $PowerLoadEvent$Pre$$Type;
 export type Deque<E> = $Deque<E>;
@@ -18331,10 +18320,10 @@ export type SpreadingSnowyDirtBlock = $SpreadingSnowyDirtBlock;
 export type SpreadingSnowyDirtBlock_ = $SpreadingSnowyDirtBlock$$Type;
 export type GeoRenderLayer<T extends $GeoAnimatable> = $GeoRenderLayer<T>;
 export type GeoRenderLayer_<T extends $GeoAnimatable> = $GeoRenderLayer$$Type<T>;
-export type AzCustomInstructionKeyframeEvent<T> = $AzCustomInstructionKeyframeEvent<T>;
-export type AzCustomInstructionKeyframeEvent_<T> = $AzCustomInstructionKeyframeEvent$$Type<T>;
 export type EntityAddedEvent = $EntityAddedEvent;
 export type EntityAddedEvent_ = $EntityAddedEvent$$Type;
+export type AzCustomInstructionKeyframeEvent<T> = $AzCustomInstructionKeyframeEvent<T>;
+export type AzCustomInstructionKeyframeEvent_<T> = $AzCustomInstructionKeyframeEvent$$Type<T>;
 export type IEMFModelNameContainer = $IEMFModelNameContainer;
 export type IEMFModelNameContainer_ = $IEMFModelNameContainer$$Type;
 export type EntityDefinitionDuck = $EntityDefinitionDuck;
@@ -18373,10 +18362,10 @@ export type ZoneId = $ZoneId;
 export type ZoneId_ = $ZoneId$$Type;
 export type Potion = $Potion;
 export type Potion_ = $Potion$$Type;
-export type Node$SymbolKind = $Node$SymbolKind;
-export type Node$SymbolKind_ = $Node$SymbolKind$$Type;
 export type PreCopySpecialAttackFromBladeEvent = $PreCopySpecialAttackFromBladeEvent;
 export type PreCopySpecialAttackFromBladeEvent_ = $PreCopySpecialAttackFromBladeEvent$$Type;
+export type Node$SymbolKind = $Node$SymbolKind;
+export type Node$SymbolKind_ = $Node$SymbolKind$$Type;
 export type RemappableRegistry = $RemappableRegistry;
 export type RemappableRegistry_ = $RemappableRegistry$$Type;
 export type BambooStalkBlock = $BambooStalkBlock;
@@ -18557,14 +18546,14 @@ export type ClientboundSetCarriedItemPacket = $ClientboundSetCarriedItemPacket;
 export type ClientboundSetCarriedItemPacket_ = $ClientboundSetCarriedItemPacket$$Type;
 export type EntityTickList = $EntityTickList;
 export type EntityTickList_ = $EntityTickList$$Type;
+export type PlayerXpEvent$XpChange = $PlayerXpEvent$XpChange;
+export type PlayerXpEvent$XpChange_ = $PlayerXpEvent$XpChange$$Type;
 export type TagVisitor = $TagVisitor;
 export type TagVisitor_ = $TagVisitor$$Type;
 export type CampfireBlockEntity = $CampfireBlockEntity;
 export type CampfireBlockEntity_ = $CampfireBlockEntity$$Type;
 export type OceanRuinStructure$Type = $OceanRuinStructure$Type;
 export type OceanRuinStructure$Type_ = $OceanRuinStructure$Type$$Type;
-export type PlayerXpEvent$XpChange = $PlayerXpEvent$XpChange;
-export type PlayerXpEvent$XpChange_ = $PlayerXpEvent$XpChange$$Type;
 export type DoublePredicate$0 = $DoublePredicate$0;
 export type DoublePredicate$0_ = $DoublePredicate$0$$Type;
 export type PlayerEvent$PlayerRespawnEvent = $PlayerEvent$PlayerRespawnEvent;
@@ -18619,20 +18608,20 @@ export type SequentialEntry$Builder = $SequentialEntry$Builder;
 export type SequentialEntry$Builder_ = $SequentialEntry$Builder$$Type;
 export type DensityFunction$NoiseHolder = $DensityFunction$NoiseHolder;
 export type DensityFunction$NoiseHolder_ = $DensityFunction$NoiseHolder$$Type;
-export type LerpingModel = $LerpingModel;
-export type LerpingModel_ = $LerpingModel$$Type;
 export type PistonEvent$Pre = $PistonEvent$Pre;
 export type PistonEvent$Pre_ = $PistonEvent$Pre$$Type;
+export type LerpingModel = $LerpingModel;
+export type LerpingModel_ = $LerpingModel$$Type;
 export type SimpleJsonResourceReloadListenerAccessor = $SimpleJsonResourceReloadListenerAccessor;
 export type SimpleJsonResourceReloadListenerAccessor_ = $SimpleJsonResourceReloadListenerAccessor$$Type;
 export type IronGolemEntityAccessor = $IronGolemEntityAccessor;
 export type IronGolemEntityAccessor_ = $IronGolemEntityAccessor$$Type;
 export type NbtCompoundExtensions = $NbtCompoundExtensions;
 export type NbtCompoundExtensions_ = $NbtCompoundExtensions$$Type;
-export type ResolverStyle = $ResolverStyle;
-export type ResolverStyle_ = $ResolverStyle$$Type;
 export type RegisterClientCommandsEvent = $RegisterClientCommandsEvent;
 export type RegisterClientCommandsEvent_ = $RegisterClientCommandsEvent$$Type;
+export type ResolverStyle = $ResolverStyle;
+export type ResolverStyle_ = $ResolverStyle$$Type;
 export type VertexFormatAccessor = $VertexFormatAccessor;
 export type VertexFormatAccessor_ = $VertexFormatAccessor$$Type;
 export type SimpleHarvestEvent = $SimpleHarvestEvent;
@@ -18727,10 +18716,10 @@ export type IdMappingEvent$IdRemapping = $IdMappingEvent$IdRemapping;
 export type IdMappingEvent$IdRemapping_ = $IdMappingEvent$IdRemapping$$Type;
 export type ELServerCameraManager = $ELServerCameraManager;
 export type ELServerCameraManager_ = $ELServerCameraManager$$Type;
-export type Display$TextDisplay$LineSplitter = $Display$TextDisplay$LineSplitter;
-export type Display$TextDisplay$LineSplitter_ = $Display$TextDisplay$LineSplitter$$Type;
 export type LivingPackSizeEvent = $LivingPackSizeEvent;
 export type LivingPackSizeEvent_ = $LivingPackSizeEvent$$Type;
+export type Display$TextDisplay$LineSplitter = $Display$TextDisplay$LineSplitter;
+export type Display$TextDisplay$LineSplitter_ = $Display$TextDisplay$LineSplitter$$Type;
 export type NoiseBasedStateProvider = $NoiseBasedStateProvider;
 export type NoiseBasedStateProvider_ = $NoiseBasedStateProvider$$Type;
 export type VertexGeomBuilder = $VertexGeomBuilder;
@@ -18787,10 +18776,10 @@ export type ArchitecturyFluidAttributes = $ArchitecturyFluidAttributes;
 export type ArchitecturyFluidAttributes_ = $ArchitecturyFluidAttributes$$Type;
 export type BasicItemJS$Builder = $BasicItemJS$Builder;
 export type BasicItemJS$Builder_ = $BasicItemJS$Builder$$Type;
-export type RandomPatchFeature = $RandomPatchFeature;
-export type RandomPatchFeature_ = $RandomPatchFeature$$Type;
 export type LivingBreatheEvent = $LivingBreatheEvent;
 export type LivingBreatheEvent_ = $LivingBreatheEvent$$Type;
+export type RandomPatchFeature = $RandomPatchFeature;
+export type RandomPatchFeature_ = $RandomPatchFeature$$Type;
 export type LootTable = $LootTable;
 export type LootTable_ = $LootTable$$Type;
 export type EggItem = $EggItem;
@@ -19129,12 +19118,12 @@ export type NetworkEvent$RegistrationChangeType = $NetworkEvent$RegistrationChan
 export type NetworkEvent$RegistrationChangeType_ = $NetworkEvent$RegistrationChangeType$$Type;
 export type BehaviorEnforcer$Marker = $BehaviorEnforcer$Marker;
 export type BehaviorEnforcer$Marker_ = $BehaviorEnforcer$Marker$$Type;
+export type ForgeZRecipeCrawl$Reset = $ForgeZRecipeCrawl$Reset;
+export type ForgeZRecipeCrawl$Reset_ = $ForgeZRecipeCrawl$Reset$$Type;
 export type Watchable = $Watchable;
 export type Watchable_ = $Watchable$$Type;
 export type IRecipeLayoutDrawable<R> = $IRecipeLayoutDrawable<R>;
 export type IRecipeLayoutDrawable_<R> = $IRecipeLayoutDrawable$$Type<R>;
-export type ForgeZRecipeCrawl$Reset = $ForgeZRecipeCrawl$Reset;
-export type ForgeZRecipeCrawl$Reset_ = $ForgeZRecipeCrawl$Reset$$Type;
 export type Cat = $Cat;
 export type Cat_ = $Cat$$Type;
 export type BlockBuilderProvider = $BlockBuilderProvider;
@@ -19369,12 +19358,12 @@ export type AbstractSchoolingFish = $AbstractSchoolingFish;
 export type AbstractSchoolingFish_ = $AbstractSchoolingFish$$Type;
 export type Timestamp = $Timestamp;
 export type Timestamp_ = $Timestamp$$Type;
+export type ModConfigEvent = $ModConfigEvent;
+export type ModConfigEvent_ = $ModConfigEvent$$Type;
 export type GatheringByteChannel = $GatheringByteChannel;
 export type GatheringByteChannel_ = $GatheringByteChannel$$Type;
 export type MultifaceSpreader$SpreadPredicate = $MultifaceSpreader$SpreadPredicate;
 export type MultifaceSpreader$SpreadPredicate_ = $MultifaceSpreader$SpreadPredicate$$Type;
-export type ModConfigEvent = $ModConfigEvent;
-export type ModConfigEvent_ = $ModConfigEvent$$Type;
 export type SingletonArgumentInfo$Template = $SingletonArgumentInfo$Template;
 export type SingletonArgumentInfo$Template_ = $SingletonArgumentInfo$Template$$Type;
 export type ClientboundLevelChunkPacketData = $ClientboundLevelChunkPacketData;
@@ -19451,10 +19440,10 @@ export type EntityType<T extends $Entity> = $EntityType<T>;
 export type EntityType_<T extends $Entity> = $EntityType$$Type<T>;
 export type Criterion = $Criterion;
 export type Criterion_ = $Criterion$$Type;
-export type Excludable = $Excludable;
-export type Excludable_ = $Excludable$$Type;
 export type GeoRenderEvent$Block$CompileRenderLayers = $GeoRenderEvent$Block$CompileRenderLayers;
 export type GeoRenderEvent$Block$CompileRenderLayers_ = $GeoRenderEvent$Block$CompileRenderLayers$$Type;
+export type Excludable = $Excludable;
+export type Excludable_ = $Excludable$$Type;
 export type ClientboundLevelEventPacket = $ClientboundLevelEventPacket;
 export type ClientboundLevelEventPacket_ = $ClientboundLevelEventPacket$$Type;
 export type Locale$IsoCountryCode = $Locale$IsoCountryCode;
@@ -19569,10 +19558,10 @@ export type WindowEvent = $WindowEvent;
 export type WindowEvent_ = $WindowEvent$$Type;
 export type RecipeManager = $RecipeManager;
 export type RecipeManager_ = $RecipeManager$$Type;
-export type BoundingBoxAccessor = $BoundingBoxAccessor;
-export type BoundingBoxAccessor_ = $BoundingBoxAccessor$$Type;
 export type GeoRenderEvent$Object$CompileRenderLayers = $GeoRenderEvent$Object$CompileRenderLayers;
 export type GeoRenderEvent$Object$CompileRenderLayers_ = $GeoRenderEvent$Object$CompileRenderLayers$$Type;
+export type BoundingBoxAccessor = $BoundingBoxAccessor;
+export type BoundingBoxAccessor_ = $BoundingBoxAccessor$$Type;
 export type RenderLevelStageEvent$RegisterStageEvent = $RenderLevelStageEvent$RegisterStageEvent;
 export type RenderLevelStageEvent$RegisterStageEvent_ = $RenderLevelStageEvent$RegisterStageEvent$$Type;
 export type Spliterator<T> = $Spliterator<T>;
@@ -19601,12 +19590,12 @@ export type EventReplaceBiome = $EventReplaceBiome;
 export type EventReplaceBiome_ = $EventReplaceBiome$$Type;
 export type TextureSheetParticle = $TextureSheetParticle;
 export type TextureSheetParticle_ = $TextureSheetParticle$$Type;
+export type RenderTooltipEvent$Pre$0 = $RenderTooltipEvent$Pre$0;
+export type RenderTooltipEvent$Pre$0_ = $RenderTooltipEvent$Pre$0$$Type;
 export type ConcurrentMap<K, V> = $ConcurrentMap<K, V>;
 export type ConcurrentMap_<K, V> = $ConcurrentMap$$Type<K, V>;
 export type BasePressurePlateBlock = $BasePressurePlateBlock;
 export type BasePressurePlateBlock_ = $BasePressurePlateBlock$$Type;
-export type RenderTooltipEvent$Pre$0 = $RenderTooltipEvent$Pre$0;
-export type RenderTooltipEvent$Pre$0_ = $RenderTooltipEvent$Pre$0$$Type;
 export type ConfiguredEnum<T extends $Enum<T>> = $ConfiguredEnum<T>;
 export type ConfiguredEnum_<T extends $Enum<T>> = $ConfiguredEnum$$Type<T>;
 export type LivingEntityRenderer<T extends $LivingEntity, M extends $EntityModel<T>> = $LivingEntityRenderer<T, M>;
@@ -19625,10 +19614,10 @@ export type PlayerAdvancementsAccessor = $PlayerAdvancementsAccessor;
 export type PlayerAdvancementsAccessor_ = $PlayerAdvancementsAccessor$$Type;
 export type PipeBlock = $PipeBlock;
 export type PipeBlock_ = $PipeBlock$$Type;
-export type ListenableRegistry<T> = $ListenableRegistry<T>;
-export type ListenableRegistry_<T> = $ListenableRegistry$$Type<T>;
 export type TickEvent$ServerTickEvent = $TickEvent$ServerTickEvent;
 export type TickEvent$ServerTickEvent_ = $TickEvent$ServerTickEvent$$Type;
+export type ListenableRegistry<T> = $ListenableRegistry<T>;
+export type ListenableRegistry_<T> = $ListenableRegistry$$Type<T>;
 export type RhinoException = $RhinoException;
 export type RhinoException_ = $RhinoException$$Type;
 export type NearestVisibleLivingEntities = $NearestVisibleLivingEntities;
@@ -19807,10 +19796,10 @@ export type NetworkEvent$PacketDispatcher = $NetworkEvent$PacketDispatcher;
 export type NetworkEvent$PacketDispatcher_ = $NetworkEvent$PacketDispatcher$$Type;
 export type ServerboundPlayerInputPacket = $ServerboundPlayerInputPacket;
 export type ServerboundPlayerInputPacket_ = $ServerboundPlayerInputPacket$$Type;
-export type IKeyConflictContext = $IKeyConflictContext;
-export type IKeyConflictContext_ = $IKeyConflictContext$$Type;
 export type GunFireEvent$Post = $GunFireEvent$Post;
 export type GunFireEvent$Post_ = $GunFireEvent$Post$$Type;
+export type IKeyConflictContext = $IKeyConflictContext;
+export type IKeyConflictContext_ = $IKeyConflictContext$$Type;
 export type GuiMessageTag = $GuiMessageTag;
 export type GuiMessageTag_ = $GuiMessageTag$$Type;
 export type IForgeLivingEntity = $IForgeLivingEntity;
@@ -19909,20 +19898,20 @@ export type ArgumentTypeWrappers = $ArgumentTypeWrappers;
 export type ArgumentTypeWrappers_ = $ArgumentTypeWrappers$$Type;
 export type AccessorCommandSourceStack = $AccessorCommandSourceStack;
 export type AccessorCommandSourceStack_ = $AccessorCommandSourceStack$$Type;
-export type BiasedToBottomInt = $BiasedToBottomInt;
-export type BiasedToBottomInt_ = $BiasedToBottomInt$$Type;
 export type RenderGuiEvent = $RenderGuiEvent;
 export type RenderGuiEvent_ = $RenderGuiEvent$$Type;
+export type BiasedToBottomInt = $BiasedToBottomInt;
+export type BiasedToBottomInt_ = $BiasedToBottomInt$$Type;
 export type BellBlock = $BellBlock;
 export type BellBlock_ = $BellBlock$$Type;
 export type ItemTooltipEventJS$StaticTooltipHandlerFromJS = $ItemTooltipEventJS$StaticTooltipHandlerFromJS;
 export type ItemTooltipEventJS$StaticTooltipHandlerFromJS_ = $ItemTooltipEventJS$StaticTooltipHandlerFromJS$$Type;
 export type MutableColor4I = $MutableColor4I;
 export type MutableColor4I_ = $MutableColor4I$$Type;
-export type PlayerLoginEvent = $PlayerLoginEvent;
-export type PlayerLoginEvent_ = $PlayerLoginEvent$$Type;
 export type PlayerEvent$BreakSpeed = $PlayerEvent$BreakSpeed;
 export type PlayerEvent$BreakSpeed_ = $PlayerEvent$BreakSpeed$$Type;
+export type PlayerLoginEvent = $PlayerLoginEvent;
+export type PlayerLoginEvent_ = $PlayerLoginEvent$$Type;
 export type AllOfPredicate = $AllOfPredicate;
 export type AllOfPredicate_ = $AllOfPredicate$$Type;
 export type ChannelInfoHolder = $ChannelInfoHolder;
@@ -20073,16 +20062,16 @@ export type ClientPlayerKJS = $ClientPlayerKJS;
 export type ClientPlayerKJS_ = $ClientPlayerKJS$$Type;
 export type ProgressListener = $ProgressListener;
 export type ProgressListener_ = $ProgressListener$$Type;
-export type AccessorGameRenderer = $AccessorGameRenderer;
-export type AccessorGameRenderer_ = $AccessorGameRenderer$$Type;
 export type OptionGroupConstructionEvent = $OptionGroupConstructionEvent;
 export type OptionGroupConstructionEvent_ = $OptionGroupConstructionEvent$$Type;
+export type AccessorGameRenderer = $AccessorGameRenderer;
+export type AccessorGameRenderer_ = $AccessorGameRenderer$$Type;
 export type BeehiveBlockEntity$BeeReleaseStatus = $BeehiveBlockEntity$BeeReleaseStatus;
 export type BeehiveBlockEntity$BeeReleaseStatus_ = $BeehiveBlockEntity$BeeReleaseStatus$$Type;
-export type SignableCommand<S> = $SignableCommand<S>;
-export type SignableCommand_<S> = $SignableCommand$$Type<S>;
 export type CustomizeGuiOverlayEvent$Chat = $CustomizeGuiOverlayEvent$Chat;
 export type CustomizeGuiOverlayEvent$Chat_ = $CustomizeGuiOverlayEvent$Chat$$Type;
+export type SignableCommand<S> = $SignableCommand<S>;
+export type SignableCommand_<S> = $SignableCommand$$Type<S>;
 export type BlockPredicate$1 = $BlockPredicate$1;
 export type BlockPredicate$1_ = $BlockPredicate$1$$Type;
 export type BiomeSpecialEffectsBuilder = $BiomeSpecialEffectsBuilder;
@@ -20249,20 +20238,20 @@ export type AdditionalProperties = $AdditionalProperties;
 export type AdditionalProperties_ = $AdditionalProperties$$Type;
 export type BuiltSectionInfo = $BuiltSectionInfo;
 export type BuiltSectionInfo_ = $BuiltSectionInfo$$Type;
-export type GameRulesIntRuleAccessor = $GameRulesIntRuleAccessor;
-export type GameRulesIntRuleAccessor_ = $GameRulesIntRuleAccessor$$Type;
 export type LevelEvent = $LevelEvent;
 export type LevelEvent_ = $LevelEvent$$Type;
+export type GameRulesIntRuleAccessor = $GameRulesIntRuleAccessor;
+export type GameRulesIntRuleAccessor_ = $GameRulesIntRuleAccessor$$Type;
 export type Object2ObjectOpenHashMap<K, V> = $Object2ObjectOpenHashMap<K, V>;
 export type Object2ObjectOpenHashMap_<K, V> = $Object2ObjectOpenHashMap$$Type<K, V>;
 export type TSGlobalDump = $TSGlobalDump;
 export type TSGlobalDump_ = $TSGlobalDump$$Type;
 export type TransparencyType = $TransparencyType;
 export type TransparencyType_ = $TransparencyType$$Type;
-export type ParCoolConfig$Client$Integers = $ParCoolConfig$Client$Integers;
-export type ParCoolConfig$Client$Integers_ = $ParCoolConfig$Client$Integers$$Type;
 export type SpecialTypeKeyEvent$SpecialTypeKey5PressedEvent = $SpecialTypeKeyEvent$SpecialTypeKey5PressedEvent;
 export type SpecialTypeKeyEvent$SpecialTypeKey5PressedEvent_ = $SpecialTypeKeyEvent$SpecialTypeKey5PressedEvent$$Type;
+export type ParCoolConfig$Client$Integers = $ParCoolConfig$Client$Integers;
+export type ParCoolConfig$Client$Integers_ = $ParCoolConfig$Client$Integers$$Type;
 export type Event$2 = $Event$2;
 export type Event$2_ = $Event$2$$Type;
 export type CreativeModeTab$Row = $CreativeModeTab$Row;
@@ -20277,10 +20266,10 @@ export type Freezable<T> = $Freezable<T>;
 export type Freezable_<T> = $Freezable$$Type<T>;
 export type GenericLootEventJS = $GenericLootEventJS;
 export type GenericLootEventJS_ = $GenericLootEventJS$$Type;
-export type MapDecoder<A> = $MapDecoder<A>;
-export type MapDecoder_<A> = $MapDecoder$$Type<A>;
 export type ContainerScreenEvent = $ContainerScreenEvent;
 export type ContainerScreenEvent_ = $ContainerScreenEvent$$Type;
+export type MapDecoder<A> = $MapDecoder<A>;
+export type MapDecoder_<A> = $MapDecoder$$Type<A>;
 export type Exception = $Exception;
 export type Exception_ = $Exception$$Type;
 export type CustomEntityJSBuilder = $CustomEntityJSBuilder;
@@ -20323,10 +20312,10 @@ export type RegisterSpawnPlacementsEventJS = $RegisterSpawnPlacementsEventJS;
 export type RegisterSpawnPlacementsEventJS_ = $RegisterSpawnPlacementsEventJS$$Type;
 export type ShapelessRecipe$Serializer = $ShapelessRecipe$Serializer;
 export type ShapelessRecipe$Serializer_ = $ShapelessRecipe$Serializer$$Type;
-export type SoundBuffer = $SoundBuffer;
-export type SoundBuffer_ = $SoundBuffer$$Type;
 export type SlashBladeEvent = $SlashBladeEvent;
 export type SlashBladeEvent_ = $SlashBladeEvent$$Type;
+export type SoundBuffer = $SoundBuffer;
+export type SoundBuffer_ = $SoundBuffer$$Type;
 export type ResolvedModule = $ResolvedModule;
 export type ResolvedModule_ = $ResolvedModule$$Type;
 export type LightPredicate = $LightPredicate;
@@ -20383,12 +20372,12 @@ export type CrossbowAttackMob = $CrossbowAttackMob;
 export type CrossbowAttackMob_ = $CrossbowAttackMob$$Type;
 export type PaintEventJS = $PaintEventJS;
 export type PaintEventJS_ = $PaintEventJS$$Type;
+export type ForgeZRecipeCrawl$Starting = $ForgeZRecipeCrawl$Starting;
+export type ForgeZRecipeCrawl$Starting_ = $ForgeZRecipeCrawl$Starting$$Type;
 export type ParticleEngine = $ParticleEngine;
 export type ParticleEngine_ = $ParticleEngine$$Type;
 export type ZScreenshot = $ZScreenshot;
 export type ZScreenshot_ = $ZScreenshot$$Type;
-export type ForgeZRecipeCrawl$Starting = $ForgeZRecipeCrawl$Starting;
-export type ForgeZRecipeCrawl$Starting_ = $ForgeZRecipeCrawl$Starting$$Type;
 export type LightTextureAccessor$0 = $LightTextureAccessor$0;
 export type LightTextureAccessor$0_ = $LightTextureAccessor$0$$Type;
 export type VertexSorting$DistanceFunction = $VertexSorting$DistanceFunction;
@@ -20437,10 +20426,10 @@ export type CraftingBookCategory = $CraftingBookCategory;
 export type CraftingBookCategory_ = $CraftingBookCategory$$Type;
 export type TreeDecorator = $TreeDecorator;
 export type TreeDecorator_ = $TreeDecorator$$Type;
-export type BarrelBlockEntity = $BarrelBlockEntity;
-export type BarrelBlockEntity_ = $BarrelBlockEntity$$Type;
 export type ContainerScreenEvent$Render$Foreground = $ContainerScreenEvent$Render$Foreground;
 export type ContainerScreenEvent$Render$Foreground_ = $ContainerScreenEvent$Render$Foreground$$Type;
+export type BarrelBlockEntity = $BarrelBlockEntity;
+export type BarrelBlockEntity_ = $BarrelBlockEntity$$Type;
 export type IronsWeaponTier = $IronsWeaponTier;
 export type IronsWeaponTier_ = $IronsWeaponTier$$Type;
 export type WorldTemplate = $WorldTemplate;
@@ -20543,10 +20532,10 @@ export type AABB = $AABB;
 export type AABB_ = $AABB$$Type;
 export type ServerboundSwingPacket = $ServerboundSwingPacket;
 export type ServerboundSwingPacket_ = $ServerboundSwingPacket$$Type;
-export type ServerLevelAccessor$0 = $ServerLevelAccessor$0;
-export type ServerLevelAccessor$0_ = $ServerLevelAccessor$0$$Type;
 export type GeoRenderEvent$Item$Pre = $GeoRenderEvent$Item$Pre;
 export type GeoRenderEvent$Item$Pre_ = $GeoRenderEvent$Item$Pre$$Type;
+export type ServerLevelAccessor$0 = $ServerLevelAccessor$0;
+export type ServerLevelAccessor$0_ = $ServerLevelAccessor$0$$Type;
 export type ItemFTBL = $ItemFTBL;
 export type ItemFTBL_ = $ItemFTBL$$Type;
 export type GameMasterBlockItem = $GameMasterBlockItem;
@@ -20577,10 +20566,10 @@ export type FontCollection = $FontCollection;
 export type FontCollection_ = $FontCollection$$Type;
 export type FeaturePoolElementAccessor = $FeaturePoolElementAccessor;
 export type FeaturePoolElementAccessor_ = $FeaturePoolElementAccessor$$Type;
-export type Stream<T> = $Stream<T>;
-export type Stream_<T> = $Stream$$Type<T>;
 export type BlockVisualizerEvent$Render$Pre = $BlockVisualizerEvent$Render$Pre;
 export type BlockVisualizerEvent$Render$Pre_ = $BlockVisualizerEvent$Render$Pre$$Type;
+export type Stream<T> = $Stream<T>;
+export type Stream_<T> = $Stream$$Type<T>;
 export type SubMenu = $SubMenu;
 export type SubMenu_ = $SubMenu$$Type;
 export type BlockContextHolder = $BlockContextHolder;
@@ -20661,10 +20650,10 @@ export type ShapedBlockBuilder = $ShapedBlockBuilder;
 export type ShapedBlockBuilder_ = $ShapedBlockBuilder$$Type;
 export type FireBlockHooks = $FireBlockHooks;
 export type FireBlockHooks_ = $FireBlockHooks$$Type;
-export type BakedGlyph$Effect = $BakedGlyph$Effect;
-export type BakedGlyph$Effect_ = $BakedGlyph$Effect$$Type;
 export type LivingDropsEvent = $LivingDropsEvent;
 export type LivingDropsEvent_ = $LivingDropsEvent$$Type;
+export type BakedGlyph$Effect = $BakedGlyph$Effect;
+export type BakedGlyph$Effect_ = $BakedGlyph$Effect$$Type;
 export type CameraModifier$Operation = $CameraModifier$Operation;
 export type CameraModifier$Operation_ = $CameraModifier$Operation$$Type;
 export type ExtendedBufferBuilder = $ExtendedBufferBuilder;
@@ -20781,10 +20770,10 @@ export type WorldgenRandom = $WorldgenRandom;
 export type WorldgenRandom_ = $WorldgenRandom$$Type;
 export type PartEntity<T extends $Entity> = $PartEntity<T>;
 export type PartEntity_<T extends $Entity> = $PartEntity$$Type<T>;
-export type AdvancementRewards$Builder = $AdvancementRewards$Builder;
-export type AdvancementRewards$Builder_ = $AdvancementRewards$Builder$$Type;
 export type RegisterColorHandlersEvent$Item = $RegisterColorHandlersEvent$Item;
 export type RegisterColorHandlersEvent$Item_ = $RegisterColorHandlersEvent$Item$$Type;
+export type AdvancementRewards$Builder = $AdvancementRewards$Builder;
+export type AdvancementRewards$Builder_ = $AdvancementRewards$Builder$$Type;
 export type ImmutableMap$Builder<K, V> = $ImmutableMap$Builder<K, V>;
 export type ImmutableMap$Builder_<K, V> = $ImmutableMap$Builder$$Type<K, V>;
 export type AnvilBlock = $AnvilBlock;
@@ -20813,10 +20802,10 @@ export type IExtendedItem = $IExtendedItem;
 export type IExtendedItem_ = $IExtendedItem$$Type;
 export type PrepareRamNearestTarget<E extends $PathfinderMob> = $PrepareRamNearestTarget<E>;
 export type PrepareRamNearestTarget_<E extends $PathfinderMob> = $PrepareRamNearestTarget$$Type<E>;
-export type Matcher = $Matcher;
-export type Matcher_ = $Matcher$$Type;
 export type ScreenEvent$MouseDragged = $ScreenEvent$MouseDragged;
 export type ScreenEvent$MouseDragged_ = $ScreenEvent$MouseDragged$$Type;
+export type Matcher = $Matcher;
+export type Matcher_ = $Matcher$$Type;
 export type View$OnFocusChangeListener = $View$OnFocusChangeListener;
 export type View$OnFocusChangeListener_ = $View$OnFocusChangeListener$$Type;
 export type FieldPosition = $FieldPosition;
@@ -20847,10 +20836,10 @@ export type ISlashBladeState = $ISlashBladeState;
 export type ISlashBladeState_ = $ISlashBladeState$$Type;
 export type RenderSectionDistanceFilter = $RenderSectionDistanceFilter;
 export type RenderSectionDistanceFilter_ = $RenderSectionDistanceFilter$$Type;
-export type DoubleListIterator = $DoubleListIterator;
-export type DoubleListIterator_ = $DoubleListIterator$$Type;
 export type ICastData = $ICastData;
 export type ICastData_ = $ICastData$$Type;
+export type DoubleListIterator = $DoubleListIterator;
+export type DoubleListIterator_ = $DoubleListIterator$$Type;
 export type BrainAccess = $BrainAccess;
 export type BrainAccess_ = $BrainAccess$$Type;
 export type BlockEvent$NeighborNotifyEvent = $BlockEvent$NeighborNotifyEvent;
@@ -21061,10 +21050,10 @@ export type Target = $Target;
 export type Target_ = $Target$$Type;
 export type Vector3i = $Vector3i;
 export type Vector3i_ = $Vector3i$$Type;
-export type Vector3f = $Vector3f;
-export type Vector3f_ = $Vector3f$$Type;
 export type ForgeZRecipeCrawl$Visit$Shaped = $ForgeZRecipeCrawl$Visit$Shaped;
 export type ForgeZRecipeCrawl$Visit$Shaped_ = $ForgeZRecipeCrawl$Visit$Shaped$$Type;
+export type Vector3f = $Vector3f;
+export type Vector3f_ = $Vector3f$$Type;
 export type NetherForestVegetationFeature = $NetherForestVegetationFeature;
 export type NetherForestVegetationFeature_ = $NetherForestVegetationFeature$$Type;
 export type ParCoolAnimationInfoEvent = $ParCoolAnimationInfoEvent;
@@ -21087,10 +21076,10 @@ export type HeightRangePlacementAccessor = $HeightRangePlacementAccessor;
 export type HeightRangePlacementAccessor_ = $HeightRangePlacementAccessor$$Type;
 export type UseItemEvent = $UseItemEvent;
 export type UseItemEvent_ = $UseItemEvent$$Type;
-export type ClientboundSetEntityMotionPacket = $ClientboundSetEntityMotionPacket;
-export type ClientboundSetEntityMotionPacket_ = $ClientboundSetEntityMotionPacket$$Type;
 export type GeoRenderEvent$Item = $GeoRenderEvent$Item;
 export type GeoRenderEvent$Item_ = $GeoRenderEvent$Item$$Type;
+export type ClientboundSetEntityMotionPacket = $ClientboundSetEntityMotionPacket;
+export type ClientboundSetEntityMotionPacket_ = $ClientboundSetEntityMotionPacket$$Type;
 export type Serializable = $Serializable;
 export type Serializable_ = $Serializable$$Type;
 export type Short2FloatFunction = $Short2FloatFunction;
@@ -21115,10 +21104,10 @@ export type LootParams$Builder = $LootParams$Builder;
 export type LootParams$Builder_ = $LootParams$Builder$$Type;
 export type EntityTickListAccessor = $EntityTickListAccessor;
 export type EntityTickListAccessor_ = $EntityTickListAccessor$$Type;
-export type AbstractContainerMenu = $AbstractContainerMenu;
-export type AbstractContainerMenu_ = $AbstractContainerMenu$$Type;
 export type NumberConfig<T extends number> = $NumberConfig<T>;
 export type NumberConfig_<T extends number> = $NumberConfig$$Type<T>;
+export type AbstractContainerMenu = $AbstractContainerMenu;
+export type AbstractContainerMenu_ = $AbstractContainerMenu$$Type;
 export type LocalDateTime = $LocalDateTime;
 export type LocalDateTime_ = $LocalDateTime$$Type;
 export type Behavior$Status = $Behavior$Status;
@@ -21127,10 +21116,10 @@ export type AzAnimator<K, T> = $AzAnimator<K, T>;
 export type AzAnimator_<K, T> = $AzAnimator$$Type<K, T>;
 export type CalioDynamicRegistryEvent$Initialize = $CalioDynamicRegistryEvent$Initialize;
 export type CalioDynamicRegistryEvent$Initialize_ = $CalioDynamicRegistryEvent$Initialize$$Type;
-export type ClientboundSetSubtitleTextPacket = $ClientboundSetSubtitleTextPacket;
-export type ClientboundSetSubtitleTextPacket_ = $ClientboundSetSubtitleTextPacket$$Type;
 export type PlayerInteractEvent$LeftClickBlock = $PlayerInteractEvent$LeftClickBlock;
 export type PlayerInteractEvent$LeftClickBlock_ = $PlayerInteractEvent$LeftClickBlock$$Type;
+export type ClientboundSetSubtitleTextPacket = $ClientboundSetSubtitleTextPacket;
+export type ClientboundSetSubtitleTextPacket_ = $ClientboundSetSubtitleTextPacket$$Type;
 export type ServerLimitation = $ServerLimitation;
 export type ServerLimitation_ = $ServerLimitation$$Type;
 export type Supplier$0<T> = $Supplier$0<T>;
@@ -21143,10 +21132,10 @@ export type IForgeFluidState = $IForgeFluidState;
 export type IForgeFluidState_ = $IForgeFluidState$$Type;
 export type Structure$StructureSettings = $Structure$StructureSettings;
 export type Structure$StructureSettings_ = $Structure$StructureSettings$$Type;
-export type BookCloningRecipe = $BookCloningRecipe;
-export type BookCloningRecipe_ = $BookCloningRecipe$$Type;
 export type InterModEnqueueEvent = $InterModEnqueueEvent;
 export type InterModEnqueueEvent_ = $InterModEnqueueEvent$$Type;
+export type BookCloningRecipe = $BookCloningRecipe;
+export type BookCloningRecipe_ = $BookCloningRecipe$$Type;
 export type AbuseReport = $AbuseReport;
 export type AbuseReport_ = $AbuseReport$$Type;
 export type EntityPotionEffectsJS = $EntityPotionEffectsJS;
@@ -21227,10 +21216,10 @@ export type MoveControl$Operation = $MoveControl$Operation;
 export type MoveControl$Operation_ = $MoveControl$Operation$$Type;
 export type NativeImageAccessor$0 = $NativeImageAccessor$0;
 export type NativeImageAccessor$0_ = $NativeImageAccessor$0$$Type;
-export type Paint$1 = $Paint$1;
-export type Paint$1_ = $Paint$1$$Type;
 export type ViewportEvent = $ViewportEvent;
 export type ViewportEvent_ = $ViewportEvent$$Type;
+export type Paint$1 = $Paint$1;
+export type Paint$1_ = $Paint$1$$Type;
 export type FileNotFoundAction = $FileNotFoundAction;
 export type FileNotFoundAction_ = $FileNotFoundAction$$Type;
 export type RegistryDefinition<E extends $RegistryDefinition<E, T>, T> = $RegistryDefinition<E, T>;
@@ -21261,10 +21250,10 @@ export type ContextUtils$EntityItemStackContext = $ContextUtils$EntityItemStackC
 export type ContextUtils$EntityItemStackContext_ = $ContextUtils$EntityItemStackContext$$Type;
 export type ZGatherHints$0 = $ZGatherHints$0;
 export type ZGatherHints$0_ = $ZGatherHints$0$$Type;
-export type ItemTintFunction = $ItemTintFunction;
-export type ItemTintFunction_ = $ItemTintFunction$$Type;
 export type ForgeZGatherHints$0 = $ForgeZGatherHints$0;
 export type ForgeZGatherHints$0_ = $ForgeZGatherHints$0$$Type;
+export type ItemTintFunction = $ItemTintFunction;
+export type ItemTintFunction_ = $ItemTintFunction$$Type;
 export type SnowAndFreezeFeature = $SnowAndFreezeFeature;
 export type SnowAndFreezeFeature_ = $SnowAndFreezeFeature$$Type;
 export type AnimatablePlayer = $AnimatablePlayer;
@@ -21385,10 +21374,10 @@ export type BrewingStandBlock = $BrewingStandBlock;
 export type BrewingStandBlock_ = $BrewingStandBlock$$Type;
 export type RuleTest = $RuleTest;
 export type RuleTest_ = $RuleTest$$Type;
-export type ParticleProvider$Sprite<T extends $ParticleOptions> = $ParticleProvider$Sprite<T>;
-export type ParticleProvider$Sprite_<T extends $ParticleOptions> = $ParticleProvider$Sprite$$Type<T>;
 export type LivingEntityUseItemEvent$Finish = $LivingEntityUseItemEvent$Finish;
 export type LivingEntityUseItemEvent$Finish_ = $LivingEntityUseItemEvent$Finish$$Type;
+export type ParticleProvider$Sprite<T extends $ParticleOptions> = $ParticleProvider$Sprite<T>;
+export type ParticleProvider$Sprite_<T extends $ParticleOptions> = $ParticleProvider$Sprite$$Type<T>;
 export type Attributes$Name = $Attributes$Name;
 export type Attributes$Name_ = $Attributes$Name$$Type;
 export type AccessorItem = $AccessorItem;
@@ -21435,10 +21424,10 @@ export type RenderLayerParent<T extends $Entity, M extends $EntityModel<T>> = $R
 export type RenderLayerParent_<T extends $Entity, M extends $EntityModel<T>> = $RenderLayerParent$$Type<T, M>;
 export type SchoolType = $SchoolType;
 export type SchoolType_ = $SchoolType$$Type;
-export type PipelineDesc$SamplerInfo = $PipelineDesc$SamplerInfo;
-export type PipelineDesc$SamplerInfo_ = $PipelineDesc$SamplerInfo$$Type;
 export type PlayerChangedDimensionEvent = $PlayerChangedDimensionEvent;
 export type PlayerChangedDimensionEvent_ = $PlayerChangedDimensionEvent$$Type;
+export type PipelineDesc$SamplerInfo = $PipelineDesc$SamplerInfo;
+export type PipelineDesc$SamplerInfo_ = $PipelineDesc$SamplerInfo$$Type;
 export type LlamaSpit = $LlamaSpit;
 export type LlamaSpit_ = $LlamaSpit$$Type;
 export type TridentEntityJS = $TridentEntityJS;
@@ -21473,10 +21462,10 @@ export type ModelBakery = $ModelBakery;
 export type ModelBakery_ = $ModelBakery$$Type;
 export type DecoratedPotBlockEntity$Decorations = $DecoratedPotBlockEntity$Decorations;
 export type DecoratedPotBlockEntity$Decorations_ = $DecoratedPotBlockEntity$Decorations$$Type;
-export type RegisterNamedRenderTypesEvent = $RegisterNamedRenderTypesEvent;
-export type RegisterNamedRenderTypesEvent_ = $RegisterNamedRenderTypesEvent$$Type;
 export type TextureStitchEvent$Post = $TextureStitchEvent$Post;
 export type TextureStitchEvent$Post_ = $TextureStitchEvent$Post$$Type;
+export type RegisterNamedRenderTypesEvent = $RegisterNamedRenderTypesEvent;
+export type RegisterNamedRenderTypesEvent_ = $RegisterNamedRenderTypesEvent$$Type;
 export type EnchantmentBuilder = $EnchantmentBuilder;
 export type EnchantmentBuilder_ = $EnchantmentBuilder$$Type;
 export type ScreenEvent$MouseButtonReleased$Pre = $ScreenEvent$MouseButtonReleased$Pre;
@@ -21599,10 +21588,10 @@ export type BiomeSpawnsEventJS = $BiomeSpawnsEventJS;
 export type BiomeSpawnsEventJS_ = $BiomeSpawnsEventJS$$Type;
 export type ServerboundPlayerCommandPacket = $ServerboundPlayerCommandPacket;
 export type ServerboundPlayerCommandPacket_ = $ServerboundPlayerCommandPacket$$Type;
-export type LivingEntityUseItemEvent$Tick = $LivingEntityUseItemEvent$Tick;
-export type LivingEntityUseItemEvent$Tick_ = $LivingEntityUseItemEvent$Tick$$Type;
 export type GeoRenderEvent$Entity$Pre = $GeoRenderEvent$Entity$Pre;
 export type GeoRenderEvent$Entity$Pre_ = $GeoRenderEvent$Entity$Pre$$Type;
+export type LivingEntityUseItemEvent$Tick = $LivingEntityUseItemEvent$Tick;
+export type LivingEntityUseItemEvent$Tick_ = $LivingEntityUseItemEvent$Tick$$Type;
 export type AbstractInterruptibleChannel = $AbstractInterruptibleChannel;
 export type AbstractInterruptibleChannel_ = $AbstractInterruptibleChannel$$Type;
 export type AzAnimatorAccessor<K, T> = $AzAnimatorAccessor<K, T>;
@@ -21671,10 +21660,10 @@ export type ModelGenerator$Element = $ModelGenerator$Element;
 export type ModelGenerator$Element_ = $ModelGenerator$Element$$Type;
 export type ActionRuntime = $ActionRuntime;
 export type ActionRuntime_ = $ActionRuntime$$Type;
-export type StructureTemplate$Palette = $StructureTemplate$Palette;
-export type StructureTemplate$Palette_ = $StructureTemplate$Palette$$Type;
 export type GeoRenderEvent$ReplacedEntity = $GeoRenderEvent$ReplacedEntity;
 export type GeoRenderEvent$ReplacedEntity_ = $GeoRenderEvent$ReplacedEntity$$Type;
+export type StructureTemplate$Palette = $StructureTemplate$Palette;
+export type StructureTemplate$Palette_ = $StructureTemplate$Palette$$Type;
 export type IntList = $IntList;
 export type IntList_ = $IntList$$Type;
 export type Long2ReferenceFunction<V> = $Long2ReferenceFunction<V>;
@@ -21713,10 +21702,10 @@ export type Short = $Short;
 export type Short_ = $Short$$Type;
 export type Locale = $Locale;
 export type Locale_ = $Locale$$Type;
-export type ZetaCategory = $ZetaCategory;
-export type ZetaCategory_ = $ZetaCategory$$Type;
 export type GunProjectileHitEvent = $GunProjectileHitEvent;
 export type GunProjectileHitEvent_ = $GunProjectileHitEvent$$Type;
+export type ZetaCategory = $ZetaCategory;
+export type ZetaCategory_ = $ZetaCategory$$Type;
 export type IJeiUserInput = $IJeiUserInput;
 export type IJeiUserInput_ = $IJeiUserInput$$Type;
 export type FirstPersonConfiguration = $FirstPersonConfiguration;
@@ -21933,10 +21922,10 @@ export type EntityRendererProvider<T extends $Entity> = $EntityRendererProvider<
 export type EntityRendererProvider_<T extends $Entity> = $EntityRendererProvider$$Type<T>;
 export type LivingEntityUseItemEvent$Start = $LivingEntityUseItemEvent$Start;
 export type LivingEntityUseItemEvent$Start_ = $LivingEntityUseItemEvent$Start$$Type;
-export type ThreadProperties = $ThreadProperties;
-export type ThreadProperties_ = $ThreadProperties$$Type;
 export type InputEvent$0 = $InputEvent$0;
 export type InputEvent$0_ = $InputEvent$0$$Type;
+export type ThreadProperties = $ThreadProperties;
+export type ThreadProperties_ = $ThreadProperties$$Type;
 export type DragSourceListener = $DragSourceListener;
 export type DragSourceListener_ = $DragSourceListener$$Type;
 export type ForgeRegistryForgeAccessor<V> = $ForgeRegistryForgeAccessor<V>;
@@ -21959,10 +21948,10 @@ export type ServerboundRenameItemPacket = $ServerboundRenameItemPacket;
 export type ServerboundRenameItemPacket_ = $ServerboundRenameItemPacket$$Type;
 export type BlockBehaviour$StatePredicate = $BlockBehaviour$StatePredicate;
 export type BlockBehaviour$StatePredicate_ = $BlockBehaviour$StatePredicate$$Type;
-export type ScreenDrawEvent$Pre = $ScreenDrawEvent$Pre;
-export type ScreenDrawEvent$Pre_ = $ScreenDrawEvent$Pre$$Type;
 export type PotionColorCalculationEvent = $PotionColorCalculationEvent;
 export type PotionColorCalculationEvent_ = $PotionColorCalculationEvent$$Type;
+export type ScreenDrawEvent$Pre = $ScreenDrawEvent$Pre;
+export type ScreenDrawEvent$Pre_ = $ScreenDrawEvent$Pre$$Type;
 export type ErrorReporter = $ErrorReporter;
 export type ErrorReporter_ = $ErrorReporter$$Type;
 export type StructureProcessorAccessor$0 = $StructureProcessorAccessor$0;
@@ -22029,10 +22018,10 @@ export type ConfigParser<C extends $Config$0> = $ConfigParser<C>;
 export type ConfigParser_<C extends $Config$0> = $ConfigParser$$Type<C>;
 export type Animation$1 = $Animation$1;
 export type Animation$1_ = $Animation$1$$Type;
-export type GeoLayerJSBuilder<T extends ($LivingEntity & $IAnimatableJS)> = $GeoLayerJSBuilder<T>;
-export type GeoLayerJSBuilder_<T extends ($LivingEntity & $IAnimatableJS)> = $GeoLayerJSBuilder$$Type<T>;
 export type GrindstoneEvent$OnPlaceItem = $GrindstoneEvent$OnPlaceItem;
 export type GrindstoneEvent$OnPlaceItem_ = $GrindstoneEvent$OnPlaceItem$$Type;
+export type GeoLayerJSBuilder<T extends ($LivingEntity & $IAnimatableJS)> = $GeoLayerJSBuilder<T>;
+export type GeoLayerJSBuilder_<T extends ($LivingEntity & $IAnimatableJS)> = $GeoLayerJSBuilder$$Type<T>;
 export type ProfilePublicKey$Data = $ProfilePublicKey$Data;
 export type ProfilePublicKey$Data_ = $ProfilePublicKey$Data$$Type;
 export type AbstractObjectList<K> = $AbstractObjectList<K>;
@@ -22063,16 +22052,16 @@ export type SimpleCommandExceptionType = $SimpleCommandExceptionType;
 export type SimpleCommandExceptionType_ = $SimpleCommandExceptionType$$Type;
 export type UnicodeSet$SpanCondition = $UnicodeSet$SpanCondition;
 export type UnicodeSet$SpanCondition_ = $UnicodeSet$SpanCondition$$Type;
-export type FlatLevelGeneratorPreset = $FlatLevelGeneratorPreset;
-export type FlatLevelGeneratorPreset_ = $FlatLevelGeneratorPreset$$Type;
 export type VanillaGameEvent = $VanillaGameEvent;
 export type VanillaGameEvent_ = $VanillaGameEvent$$Type;
-export type ServerboundMoveVehiclePacket = $ServerboundMoveVehiclePacket;
-export type ServerboundMoveVehiclePacket_ = $ServerboundMoveVehiclePacket$$Type;
-export type ChunkRenderDispatcher$ChunkTaskResult = $ChunkRenderDispatcher$ChunkTaskResult;
-export type ChunkRenderDispatcher$ChunkTaskResult_ = $ChunkRenderDispatcher$ChunkTaskResult$$Type;
+export type FlatLevelGeneratorPreset = $FlatLevelGeneratorPreset;
+export type FlatLevelGeneratorPreset_ = $FlatLevelGeneratorPreset$$Type;
 export type ConstantDesc = $ConstantDesc;
 export type ConstantDesc_ = $ConstantDesc$$Type;
+export type ChunkRenderDispatcher$ChunkTaskResult = $ChunkRenderDispatcher$ChunkTaskResult;
+export type ChunkRenderDispatcher$ChunkTaskResult_ = $ChunkRenderDispatcher$ChunkTaskResult$$Type;
+export type ServerboundMoveVehiclePacket = $ServerboundMoveVehiclePacket;
+export type ServerboundMoveVehiclePacket_ = $ServerboundMoveVehiclePacket$$Type;
 export type TextureStitchEvent = $TextureStitchEvent;
 export type TextureStitchEvent_ = $TextureStitchEvent$$Type;
 export type ScreenEvent$MouseButtonReleased = $ScreenEvent$MouseButtonReleased;
@@ -22301,10 +22290,12 @@ export type MinecraftServer$ServerResourcePackInfo = $MinecraftServer$ServerReso
 export type MinecraftServer$ServerResourcePackInfo_ = $MinecraftServer$ServerResourcePackInfo$$Type;
 export type PolarBear = $PolarBear;
 export type PolarBear_ = $PolarBear$$Type;
-export type ContextUtils$TargetChangeContext = $ContextUtils$TargetChangeContext;
-export type ContextUtils$TargetChangeContext_ = $ContextUtils$TargetChangeContext$$Type;
 export type GunReloadEvent$Post = $GunReloadEvent$Post;
 export type GunReloadEvent$Post_ = $GunReloadEvent$Post$$Type;
+export type ContextUtils$TargetChangeContext = $ContextUtils$TargetChangeContext;
+export type ContextUtils$TargetChangeContext_ = $ContextUtils$TargetChangeContext$$Type;
+export type RangedBowAttackGoal<T extends ($Mob & $RangedAttackMob)> = $RangedBowAttackGoal<T>;
+export type RangedBowAttackGoal_<T extends ($Mob & $RangedAttackMob)> = $RangedBowAttackGoal$$Type<T>;
 export type CustomBossEvents = $CustomBossEvents;
 export type CustomBossEvents_ = $CustomBossEvents$$Type;
 export type Declaration = $Declaration;
@@ -22415,10 +22406,10 @@ export type MultiNoiseSamplerHooks = $MultiNoiseSamplerHooks;
 export type MultiNoiseSamplerHooks_ = $MultiNoiseSamplerHooks$$Type;
 export type BlockPileFeature = $BlockPileFeature;
 export type BlockPileFeature_ = $BlockPileFeature$$Type;
-export type ServerOpList = $ServerOpList;
-export type ServerOpList_ = $ServerOpList$$Type;
 export type ScreenEvent$MouseButtonPressed = $ScreenEvent$MouseButtonPressed;
 export type ScreenEvent$MouseButtonPressed_ = $ScreenEvent$MouseButtonPressed$$Type;
+export type ServerOpList = $ServerOpList;
+export type ServerOpList_ = $ServerOpList$$Type;
 export type AbstractByteCollection = $AbstractByteCollection;
 export type AbstractByteCollection_ = $AbstractByteCollection$$Type;
 export type ImageViewProxy$LazyInstantiateCallback = $ImageViewProxy$LazyInstantiateCallback;
@@ -22437,10 +22428,10 @@ export type ArrowKnockbackEnchantment = $ArrowKnockbackEnchantment;
 export type ArrowKnockbackEnchantment_ = $ArrowKnockbackEnchantment$$Type;
 export type InputFluid = $InputFluid;
 export type InputFluid_ = $InputFluid$$Type;
-export type ModuleDescriptor$Opens$Modifier = $ModuleDescriptor$Opens$Modifier;
-export type ModuleDescriptor$Opens$Modifier_ = $ModuleDescriptor$Opens$Modifier$$Type;
 export type BlockEvent$EntityPlaceEvent = $BlockEvent$EntityPlaceEvent;
 export type BlockEvent$EntityPlaceEvent_ = $BlockEvent$EntityPlaceEvent$$Type;
+export type ModuleDescriptor$Opens$Modifier = $ModuleDescriptor$Opens$Modifier;
+export type ModuleDescriptor$Opens$Modifier_ = $ModuleDescriptor$Opens$Modifier$$Type;
 export type ByteStack = $ByteStack;
 export type ByteStack_ = $ByteStack$$Type;
 export type ModuleLayer$Controller = $ModuleLayer$Controller;
@@ -22475,10 +22466,10 @@ export type IngredientWrapper = $IngredientWrapper;
 export type IngredientWrapper_ = $IngredientWrapper$$Type;
 export type AccessorBlockItem = $AccessorBlockItem;
 export type AccessorBlockItem_ = $AccessorBlockItem$$Type;
-export type TextureAtlas = $TextureAtlas;
-export type TextureAtlas_ = $TextureAtlas$$Type;
 export type LivingSwapItemsEvent$Hands = $LivingSwapItemsEvent$Hands;
 export type LivingSwapItemsEvent$Hands_ = $LivingSwapItemsEvent$Hands$$Type;
+export type TextureAtlas = $TextureAtlas;
+export type TextureAtlas_ = $TextureAtlas$$Type;
 export type ColorSpace$Connector = $ColorSpace$Connector;
 export type ColorSpace$Connector_ = $ColorSpace$Connector$$Type;
 export type IProjectileEntityJS = $IProjectileEntityJS;
@@ -22605,10 +22596,10 @@ export type SetMultimap<K, V> = $SetMultimap<K, V>;
 export type SetMultimap_<K, V> = $SetMultimap$$Type<K, V>;
 export type RealmsServerPing = $RealmsServerPing;
 export type RealmsServerPing_ = $RealmsServerPing$$Type;
-export type ChannelConfig = $ChannelConfig;
-export type ChannelConfig_ = $ChannelConfig$$Type;
 export type GeoRenderEvent$Block = $GeoRenderEvent$Block;
 export type GeoRenderEvent$Block_ = $GeoRenderEvent$Block$$Type;
+export type ChannelConfig = $ChannelConfig;
+export type ChannelConfig_ = $ChannelConfig$$Type;
 export type LootDataResolver = $LootDataResolver;
 export type LootDataResolver_ = $LootDataResolver$$Type;
 export type ContextUtils$ProjectileBlockHitContext = $ContextUtils$ProjectileBlockHitContext;
@@ -22743,10 +22734,10 @@ export type WitherJSBuilder = $WitherJSBuilder;
 export type WitherJSBuilder_ = $WitherJSBuilder$$Type;
 export type TranslucentQuadAnalyzer$SortState = $TranslucentQuadAnalyzer$SortState;
 export type TranslucentQuadAnalyzer$SortState_ = $TranslucentQuadAnalyzer$SortState$$Type;
-export type Reference2BooleanFunction<K> = $Reference2BooleanFunction<K>;
-export type Reference2BooleanFunction_<K> = $Reference2BooleanFunction$$Type<K>;
 export type PlayerContainerEvent$Close = $PlayerContainerEvent$Close;
 export type PlayerContainerEvent$Close_ = $PlayerContainerEvent$Close$$Type;
+export type Reference2BooleanFunction<K> = $Reference2BooleanFunction<K>;
+export type Reference2BooleanFunction_<K> = $Reference2BooleanFunction$$Type<K>;
 export type TaskType = $TaskType;
 export type TaskType_ = $TaskType$$Type;
 export type Mob = $Mob;
@@ -22825,20 +22816,20 @@ export type Double2BooleanFunction = $Double2BooleanFunction;
 export type Double2BooleanFunction_ = $Double2BooleanFunction$$Type;
 export type AbstractMultimap<K, V> = $AbstractMultimap<K, V>;
 export type AbstractMultimap_<K, V> = $AbstractMultimap$$Type<K, V>;
-export type EntityDropChanceAccessor = $EntityDropChanceAccessor;
-export type EntityDropChanceAccessor_ = $EntityDropChanceAccessor$$Type;
 export type ParCoolConfig$Client$Booleans = $ParCoolConfig$Client$Booleans;
 export type ParCoolConfig$Client$Booleans_ = $ParCoolConfig$Client$Booleans$$Type;
+export type EntityDropChanceAccessor = $EntityDropChanceAccessor;
+export type EntityDropChanceAccessor_ = $EntityDropChanceAccessor$$Type;
 export type GlVertexFormat$Builder<T extends $Enum<T>> = $GlVertexFormat$Builder<T>;
 export type GlVertexFormat$Builder_<T extends $Enum<T>> = $GlVertexFormat$Builder$$Type<T>;
 export type Transaction$Lifecycle = $Transaction$Lifecycle;
 export type Transaction$Lifecycle_ = $Transaction$Lifecycle$$Type;
 export type BlockModel = $BlockModel;
 export type BlockModel_ = $BlockModel$$Type;
-export type InputCommandEvent = $InputCommandEvent;
-export type InputCommandEvent_ = $InputCommandEvent$$Type;
 export type ChunkDataEvent$Load = $ChunkDataEvent$Load;
 export type ChunkDataEvent$Load_ = $ChunkDataEvent$Load$$Type;
+export type InputCommandEvent = $InputCommandEvent;
+export type InputCommandEvent_ = $InputCommandEvent$$Type;
 export type IRecipeCatalystLookup = $IRecipeCatalystLookup;
 export type IRecipeCatalystLookup_ = $IRecipeCatalystLookup$$Type;
 export type ColorSpace$Model = $ColorSpace$Model;
@@ -22869,12 +22860,12 @@ export type TSOptionalType = $TSOptionalType;
 export type TSOptionalType_ = $TSOptionalType$$Type;
 export type ItemStackKey = $ItemStackKey;
 export type ItemStackKey_ = $ItemStackKey$$Type;
+export type CurioEquipEvent = $CurioEquipEvent;
+export type CurioEquipEvent_ = $CurioEquipEvent$$Type;
 export type ContainerSingleItem = $ContainerSingleItem;
 export type ContainerSingleItem_ = $ContainerSingleItem$$Type;
 export type SlotResult = $SlotResult;
 export type SlotResult_ = $SlotResult$$Type;
-export type CurioEquipEvent = $CurioEquipEvent;
-export type CurioEquipEvent_ = $CurioEquipEvent$$Type;
 export type MobEntityJS = $MobEntityJS;
 export type MobEntityJS_ = $MobEntityJS$$Type;
 export type RecipeManagerAccess$0 = $RecipeManagerAccess$0;
@@ -22899,12 +22890,12 @@ export type EntityAttributeInstanceInvoker = $EntityAttributeInstanceInvoker;
 export type EntityAttributeInstanceInvoker_ = $EntityAttributeInstanceInvoker$$Type;
 export type EntityModel<T extends $Entity> = $EntityModel<T>;
 export type EntityModel_<T extends $Entity> = $EntityModel$$Type<T>;
+export type InputEvent$MouseButton$Post = $InputEvent$MouseButton$Post;
+export type InputEvent$MouseButton$Post_ = $InputEvent$MouseButton$Post$$Type;
 export type TypedOptic$Element<S, T, A, B> = $TypedOptic$Element<S, T, A, B>;
 export type TypedOptic$Element_<S, T, A, B> = $TypedOptic$Element$$Type<S, T, A, B>;
 export type PaletteResize<T> = $PaletteResize<T>;
 export type PaletteResize_<T> = $PaletteResize$$Type<T>;
-export type InputEvent$MouseButton$Post = $InputEvent$MouseButton$Post;
-export type InputEvent$MouseButton$Post_ = $InputEvent$MouseButton$Post$$Type;
 export type SkullModelBase = $SkullModelBase;
 export type SkullModelBase_ = $SkullModelBase$$Type;
 export type StructurePlacementType<SP extends $StructurePlacement> = $StructurePlacementType<SP>;
@@ -22913,10 +22904,10 @@ export type TelemetrySession = $TelemetrySession;
 export type TelemetrySession_ = $TelemetrySession$$Type;
 export type ModelBuilder$TransformsBuilder$TransformVecBuilder = $ModelBuilder$TransformsBuilder$TransformVecBuilder;
 export type ModelBuilder$TransformsBuilder$TransformVecBuilder_ = $ModelBuilder$TransformsBuilder$TransformVecBuilder$$Type;
-export type LevelSummary$BackupStatus = $LevelSummary$BackupStatus;
-export type LevelSummary$BackupStatus_ = $LevelSummary$BackupStatus$$Type;
 export type PlayerEvent = $PlayerEvent;
 export type PlayerEvent_ = $PlayerEvent$$Type;
+export type LevelSummary$BackupStatus = $LevelSummary$BackupStatus;
+export type LevelSummary$BackupStatus_ = $LevelSummary$BackupStatus$$Type;
 export type EasingType = $EasingType;
 export type EasingType_ = $EasingType$$Type;
 export type Drowned = $Drowned;
@@ -23071,10 +23062,10 @@ export type LevelStorageSource = $LevelStorageSource;
 export type LevelStorageSource_ = $LevelStorageSource$$Type;
 export type ConditionContainer = $ConditionContainer;
 export type ConditionContainer_ = $ConditionContainer$$Type;
-export type SkeletonHorse = $SkeletonHorse;
-export type SkeletonHorse_ = $SkeletonHorse$$Type;
 export type CustomizeGuiOverlayEvent$BossEventProgress = $CustomizeGuiOverlayEvent$BossEventProgress;
 export type CustomizeGuiOverlayEvent$BossEventProgress_ = $CustomizeGuiOverlayEvent$BossEventProgress$$Type;
+export type SkeletonHorse = $SkeletonHorse;
+export type SkeletonHorse_ = $SkeletonHorse$$Type;
 export type BlockBehaviour$StateArgumentPredicate<A> = $BlockBehaviour$StateArgumentPredicate<A>;
 export type BlockBehaviour$StateArgumentPredicate_<A> = $BlockBehaviour$StateArgumentPredicate$$Type<A>;
 export type IDynamicStackHandler = $IDynamicStackHandler;
@@ -23101,10 +23092,10 @@ export type ShortConsumer = $ShortConsumer;
 export type ShortConsumer_ = $ShortConsumer$$Type;
 export type StructurePieceType = $StructurePieceType;
 export type StructurePieceType_ = $StructurePieceType$$Type;
-export type EnderChestBlockEntity = $EnderChestBlockEntity;
-export type EnderChestBlockEntity_ = $EnderChestBlockEntity$$Type;
 export type NetworkEvent = $NetworkEvent;
 export type NetworkEvent_ = $NetworkEvent$$Type;
+export type EnderChestBlockEntity = $EnderChestBlockEntity;
+export type EnderChestBlockEntity_ = $EnderChestBlockEntity$$Type;
 export type OptionIdentifier$0<T> = $OptionIdentifier$0<T>;
 export type OptionIdentifier$0_<T> = $OptionIdentifier$0$$Type<T>;
 export type WatchEvent$Modifier = $WatchEvent$Modifier;
@@ -23193,10 +23184,10 @@ export type Constructor<T> = $Constructor<T>;
 export type Constructor_<T> = $Constructor$$Type<T>;
 export type OptionalLong = $OptionalLong;
 export type OptionalLong_ = $OptionalLong$$Type;
-export type Dialog$ModalityType = $Dialog$ModalityType;
-export type Dialog$ModalityType_ = $Dialog$ModalityType$$Type;
 export type SpellCooldownAddedEvent = $SpellCooldownAddedEvent;
 export type SpellCooldownAddedEvent_ = $SpellCooldownAddedEvent$$Type;
+export type Dialog$ModalityType = $Dialog$ModalityType;
+export type Dialog$ModalityType_ = $Dialog$ModalityType$$Type;
 export type ToolAction = $ToolAction;
 export type ToolAction_ = $ToolAction$$Type;
 export type Choreographer = $Choreographer;
@@ -23227,10 +23218,10 @@ export type DoubleConfigProperty = $DoubleConfigProperty;
 export type DoubleConfigProperty_ = $DoubleConfigProperty$$Type;
 export type BossEvent$BossBarOverlay = $BossEvent$BossBarOverlay;
 export type BossEvent$BossBarOverlay_ = $BossEvent$BossBarOverlay$$Type;
-export type QueueManager = $QueueManager;
-export type QueueManager_ = $QueueManager$$Type;
 export type AnimalTameEvent = $AnimalTameEvent;
 export type AnimalTameEvent_ = $AnimalTameEvent$$Type;
+export type QueueManager = $QueueManager;
+export type QueueManager_ = $QueueManager$$Type;
 export type LootContextType = $LootContextType;
 export type LootContextType_ = $LootContextType$$Type;
 export type ModelQuadView = $ModelQuadView;
@@ -23441,10 +23432,10 @@ export type DrawTask = $DrawTask;
 export type DrawTask_ = $DrawTask$$Type;
 export type FMLDedicatedServerSetupEvent = $FMLDedicatedServerSetupEvent;
 export type FMLDedicatedServerSetupEvent_ = $FMLDedicatedServerSetupEvent$$Type;
-export type SpriteContentsAnimatorImplAccessor = $SpriteContentsAnimatorImplAccessor;
-export type SpriteContentsAnimatorImplAccessor_ = $SpriteContentsAnimatorImplAccessor$$Type;
 export type ForgeZGatherAdditionalFlags = $ForgeZGatherAdditionalFlags;
 export type ForgeZGatherAdditionalFlags_ = $ForgeZGatherAdditionalFlags$$Type;
+export type SpriteContentsAnimatorImplAccessor = $SpriteContentsAnimatorImplAccessor;
+export type SpriteContentsAnimatorImplAccessor_ = $SpriteContentsAnimatorImplAccessor$$Type;
 export type DripstoneThickness = $DripstoneThickness;
 export type DripstoneThickness_ = $DripstoneThickness$$Type;
 export type SurfaceWaterDepthFilter = $SurfaceWaterDepthFilter;
@@ -23463,10 +23454,10 @@ export type Property$1<T, V> = $Property$1<T, V>;
 export type Property$1_<T, V> = $Property$1$$Type<T, V>;
 export type SpyglassItem = $SpyglassItem;
 export type SpyglassItem_ = $SpyglassItem$$Type;
-export type FontMetrics = $FontMetrics;
-export type FontMetrics_ = $FontMetrics$$Type;
 export type RecvByteBufAllocator$Handle = $RecvByteBufAllocator$Handle;
 export type RecvByteBufAllocator$Handle_ = $RecvByteBufAllocator$Handle$$Type;
+export type FontMetrics = $FontMetrics;
+export type FontMetrics_ = $FontMetrics$$Type;
 export type BarrierBlock = $BarrierBlock;
 export type BarrierBlock_ = $BarrierBlock$$Type;
 export type AccessorModelPart = $AccessorModelPart;
@@ -23537,12 +23528,12 @@ export type EntitySpawnedEventJS = $EntitySpawnedEventJS;
 export type EntitySpawnedEventJS_ = $EntitySpawnedEventJS$$Type;
 export type AzPlayBehavior = $AzPlayBehavior;
 export type AzPlayBehavior_ = $AzPlayBehavior$$Type;
+export type RegisterEntitySpectatorShadersEvent = $RegisterEntitySpectatorShadersEvent;
+export type RegisterEntitySpectatorShadersEvent_ = $RegisterEntitySpectatorShadersEvent$$Type;
 export type SocketOptions = $SocketOptions;
 export type SocketOptions_ = $SocketOptions$$Type;
 export type ClientboundAwardStatsPacket = $ClientboundAwardStatsPacket;
 export type ClientboundAwardStatsPacket_ = $ClientboundAwardStatsPacket$$Type;
-export type RegisterEntitySpectatorShadersEvent = $RegisterEntitySpectatorShadersEvent;
-export type RegisterEntitySpectatorShadersEvent_ = $RegisterEntitySpectatorShadersEvent$$Type;
 export type Control$0 = $Control$0;
 export type Control$0_ = $Control$0$$Type;
 export type FragmentResultListener = $FragmentResultListener;
@@ -23755,12 +23746,12 @@ export type AbstractObject2IntFunction<K> = $AbstractObject2IntFunction<K>;
 export type AbstractObject2IntFunction_<K> = $AbstractObject2IntFunction$$Type<K>;
 export type TextBlobCache$FeatureKey = $TextBlobCache$FeatureKey;
 export type TextBlobCache$FeatureKey_ = $TextBlobCache$FeatureKey$$Type;
+export type CropGrowEvent = $CropGrowEvent;
+export type CropGrowEvent_ = $CropGrowEvent$$Type;
 export type IValueEvent = $IValueEvent;
 export type IValueEvent_ = $IValueEvent$$Type;
 export type Menu$0 = $Menu$0;
 export type Menu$0_ = $Menu$0$$Type;
-export type CropGrowEvent = $CropGrowEvent;
-export type CropGrowEvent_ = $CropGrowEvent$$Type;
 export type LevelReader = $LevelReader;
 export type LevelReader_ = $LevelReader$$Type;
 export type ShortTag = $ShortTag;
@@ -23773,10 +23764,10 @@ export type MapExtendingRecipe = $MapExtendingRecipe;
 export type MapExtendingRecipe_ = $MapExtendingRecipe$$Type;
 export type CameraDuck = $CameraDuck;
 export type CameraDuck_ = $CameraDuck$$Type;
-export type EnchantmentMenu = $EnchantmentMenu;
-export type EnchantmentMenu_ = $EnchantmentMenu$$Type;
 export type GeoLayerJS<T extends ($LivingEntity & $IAnimatableJS)> = $GeoLayerJS<T>;
 export type GeoLayerJS_<T extends ($LivingEntity & $IAnimatableJS)> = $GeoLayerJS$$Type<T>;
+export type EnchantmentMenu = $EnchantmentMenu;
+export type EnchantmentMenu_ = $EnchantmentMenu$$Type;
 export type PlacementModifier = $PlacementModifier;
 export type PlacementModifier_ = $PlacementModifier$$Type;
 export type ArgumentWrapper<T> = $ArgumentWrapper<T>;
@@ -23801,10 +23792,10 @@ export type AbstractEventExecutor = $AbstractEventExecutor;
 export type AbstractEventExecutor_ = $AbstractEventExecutor$$Type;
 export type ClientboundOpenBookPacket = $ClientboundOpenBookPacket;
 export type ClientboundOpenBookPacket_ = $ClientboundOpenBookPacket$$Type;
-export type NBTUtils = $NBTUtils;
-export type NBTUtils_ = $NBTUtils$$Type;
 export type ClassWrapper<T> = $ClassWrapper<T>;
 export type ClassWrapper_<T> = $ClassWrapper$$Type<T>;
+export type NBTUtils = $NBTUtils;
+export type NBTUtils_ = $NBTUtils$$Type;
 export type Object2IntFunction<K> = $Object2IntFunction<K>;
 export type Object2IntFunction_<K> = $Object2IntFunction$$Type<K>;
 export type BlockModel$GuiLight = $BlockModel$GuiLight;
@@ -23883,10 +23874,10 @@ export type AzBoneCache = $AzBoneCache;
 export type AzBoneCache_ = $AzBoneCache$$Type;
 export type Easing = $Easing;
 export type Easing_ = $Easing$$Type;
-export type InvokerViewerCountManager = $InvokerViewerCountManager;
-export type InvokerViewerCountManager_ = $InvokerViewerCountManager$$Type;
 export type SpecialTypeKeyEvent$SpecialTypeKey3PressedEvent = $SpecialTypeKeyEvent$SpecialTypeKey3PressedEvent;
 export type SpecialTypeKeyEvent$SpecialTypeKey3PressedEvent_ = $SpecialTypeKeyEvent$SpecialTypeKey3PressedEvent$$Type;
+export type InvokerViewerCountManager = $InvokerViewerCountManager;
+export type InvokerViewerCountManager_ = $InvokerViewerCountManager$$Type;
 export type BlockSetType = $BlockSetType;
 export type BlockSetType_ = $BlockSetType$$Type;
 export type EntityPositionSource$Type = $EntityPositionSource$Type;
@@ -23909,10 +23900,10 @@ export type HolderLookup$Provider = $HolderLookup$Provider;
 export type HolderLookup$Provider_ = $HolderLookup$Provider$$Type;
 export type Variable = $Variable;
 export type Variable_ = $Variable$$Type;
-export type CommandSigningContext = $CommandSigningContext;
-export type CommandSigningContext_ = $CommandSigningContext$$Type;
 export type BookDrawScreenEvent = $BookDrawScreenEvent;
 export type BookDrawScreenEvent_ = $BookDrawScreenEvent$$Type;
+export type CommandSigningContext = $CommandSigningContext;
+export type CommandSigningContext_ = $CommandSigningContext$$Type;
 export type Screen$NarratableSearchResult = $Screen$NarratableSearchResult;
 export type Screen$NarratableSearchResult_ = $Screen$NarratableSearchResult$$Type;
 export type IngredientAction = $IngredientAction;
@@ -24023,14 +24014,14 @@ export type DropperBlock = $DropperBlock;
 export type DropperBlock_ = $DropperBlock$$Type;
 export type IZetaConfigInternals = $IZetaConfigInternals;
 export type IZetaConfigInternals_ = $IZetaConfigInternals$$Type;
-export type ImmutableMultisetGwtSerializationDependencies<E> = $ImmutableMultisetGwtSerializationDependencies<E>;
-export type ImmutableMultisetGwtSerializationDependencies_<E> = $ImmutableMultisetGwtSerializationDependencies$$Type<E>;
 export type Products$P1<F extends $K1, T1> = $Products$P1<F, T1>;
 export type Products$P1_<F extends $K1, T1> = $Products$P1$$Type<F, T1>;
-export type Products$P3<F extends $K1, T1, T2, T3> = $Products$P3<F, T1, T2, T3>;
-export type Products$P3_<F extends $K1, T1, T2, T3> = $Products$P3$$Type<F, T1, T2, T3>;
+export type ImmutableMultisetGwtSerializationDependencies<E> = $ImmutableMultisetGwtSerializationDependencies<E>;
+export type ImmutableMultisetGwtSerializationDependencies_<E> = $ImmutableMultisetGwtSerializationDependencies$$Type<E>;
 export type SlashBladeEvent$AddProudSoulEvent = $SlashBladeEvent$AddProudSoulEvent;
 export type SlashBladeEvent$AddProudSoulEvent_ = $SlashBladeEvent$AddProudSoulEvent$$Type;
+export type Products$P3<F extends $K1, T1, T2, T3> = $Products$P3<F, T1, T2, T3>;
+export type Products$P3_<F extends $K1, T1, T2, T3> = $Products$P3$$Type<F, T1, T2, T3>;
 export type StatType<T> = $StatType<T>;
 export type StatType_<T> = $StatType$$Type<T>;
 export type Products$P2<F extends $K1, T1, T2> = $Products$P2<F, T1, T2>;
@@ -24083,10 +24074,10 @@ export type ReflectionAccessFilter = $ReflectionAccessFilter;
 export type ReflectionAccessFilter_ = $ReflectionAccessFilter$$Type;
 export type BlockStateModifyPlacementCallbackJS = $BlockStateModifyPlacementCallbackJS;
 export type BlockStateModifyPlacementCallbackJS_ = $BlockStateModifyPlacementCallbackJS$$Type;
-export type Animation$2 = $Animation$2;
-export type Animation$2_ = $Animation$2$$Type;
 export type SpellCooldownAddedEvent$Pre = $SpellCooldownAddedEvent$Pre;
 export type SpellCooldownAddedEvent$Pre_ = $SpellCooldownAddedEvent$Pre$$Type;
+export type Animation$2 = $Animation$2;
+export type Animation$2_ = $Animation$2$$Type;
 export type PlayerInfo$0 = $PlayerInfo$0;
 export type PlayerInfo$0_ = $PlayerInfo$0$$Type;
 export type PointedDripstoneBlock = $PointedDripstoneBlock;
@@ -24143,10 +24134,10 @@ export type OpenScreenEvent = $OpenScreenEvent;
 export type OpenScreenEvent_ = $OpenScreenEvent$$Type;
 export type SharedElementCallback = $SharedElementCallback;
 export type SharedElementCallback_ = $SharedElementCallback$$Type;
-export type FPFragmentBuilder = $FPFragmentBuilder;
-export type FPFragmentBuilder_ = $FPFragmentBuilder$$Type;
 export type PlaySoundSourceEvent = $PlaySoundSourceEvent;
 export type PlaySoundSourceEvent_ = $PlaySoundSourceEvent$$Type;
+export type FPFragmentBuilder = $FPFragmentBuilder;
+export type FPFragmentBuilder_ = $FPFragmentBuilder$$Type;
 export type NamedPackage = $NamedPackage;
 export type NamedPackage_ = $NamedPackage$$Type;
 export type Scoreboard = $Scoreboard;
@@ -24193,10 +24184,10 @@ export type SchoolTypeJSBuilder = $SchoolTypeJSBuilder;
 export type SchoolTypeJSBuilder_ = $SchoolTypeJSBuilder$$Type;
 export type RenderShape = $RenderShape;
 export type RenderShape_ = $RenderShape$$Type;
-export type Proxy$0 = $Proxy$0;
-export type Proxy$0_ = $Proxy$0$$Type;
 export type PlayerXpEvent = $PlayerXpEvent;
 export type PlayerXpEvent_ = $PlayerXpEvent$$Type;
+export type Proxy$0 = $Proxy$0;
+export type Proxy$0_ = $Proxy$0$$Type;
 export type ConfigSchemaImpl = $ConfigSchemaImpl;
 export type ConfigSchemaImpl_ = $ConfigSchemaImpl$$Type;
 export type RegisterConfigParametersEvent = $RegisterConfigParametersEvent;
@@ -24291,10 +24282,10 @@ export type RecipesUpdatedEvent$0 = $RecipesUpdatedEvent$0;
 export type RecipesUpdatedEvent$0_ = $RecipesUpdatedEvent$0$$Type;
 export type Measure = $Measure;
 export type Measure_ = $Measure$$Type;
-export type Short2ReferenceFunction<V> = $Short2ReferenceFunction<V>;
-export type Short2ReferenceFunction_<V> = $Short2ReferenceFunction$$Type<V>;
 export type ItemExpireEvent = $ItemExpireEvent;
 export type ItemExpireEvent_ = $ItemExpireEvent$$Type;
+export type Short2ReferenceFunction<V> = $Short2ReferenceFunction<V>;
+export type Short2ReferenceFunction_<V> = $Short2ReferenceFunction$$Type<V>;
 export type IEventExceptionHandler = $IEventExceptionHandler;
 export type IEventExceptionHandler_ = $IEventExceptionHandler$$Type;
 export type Gun$Reloads = $Gun$Reloads;
@@ -24333,10 +24324,10 @@ export type WindowStateListener = $WindowStateListener;
 export type WindowStateListener_ = $WindowStateListener$$Type;
 export type Matrix2d = $Matrix2d;
 export type Matrix2d_ = $Matrix2d$$Type;
-export type RewardType$Provider = $RewardType$Provider;
-export type RewardType$Provider_ = $RewardType$Provider$$Type;
 export type LongConfig = $LongConfig;
 export type LongConfig_ = $LongConfig$$Type;
+export type RewardType$Provider = $RewardType$Provider;
+export type RewardType$Provider_ = $RewardType$Provider$$Type;
 export type AccessibleValue = $AccessibleValue;
 export type AccessibleValue_ = $AccessibleValue$$Type;
 export type ZRecipeCrawl$Reset = $ZRecipeCrawl$Reset;
@@ -24421,10 +24412,10 @@ export type StructureBlockEntity = $StructureBlockEntity;
 export type StructureBlockEntity_ = $StructureBlockEntity$$Type;
 export type ObjectCompletedEvent$ChapterEvent = $ObjectCompletedEvent$ChapterEvent;
 export type ObjectCompletedEvent$ChapterEvent_ = $ObjectCompletedEvent$ChapterEvent$$Type;
-export type CustomFilterItemEventJS = $CustomFilterItemEventJS;
-export type CustomFilterItemEventJS_ = $CustomFilterItemEventJS$$Type;
 export type ViewportEvent$ComputeCameraAngles = $ViewportEvent$ComputeCameraAngles;
 export type ViewportEvent$ComputeCameraAngles_ = $ViewportEvent$ComputeCameraAngles$$Type;
+export type CustomFilterItemEventJS = $CustomFilterItemEventJS;
+export type CustomFilterItemEventJS_ = $CustomFilterItemEventJS$$Type;
 export type NearbySongAccessor = $NearbySongAccessor;
 export type NearbySongAccessor_ = $NearbySongAccessor$$Type;
 export type StringJoiner = $StringJoiner;
@@ -24465,18 +24456,18 @@ export type TreeDecorator$Context = $TreeDecorator$Context;
 export type TreeDecorator$Context_ = $TreeDecorator$Context$$Type;
 export type InsideWorldBoundsPredicate = $InsideWorldBoundsPredicate;
 export type InsideWorldBoundsPredicate_ = $InsideWorldBoundsPredicate$$Type;
-export type IntStack = $IntStack;
-export type IntStack_ = $IntStack$$Type;
 export type MethodHandles$Lookup = $MethodHandles$Lookup;
 export type MethodHandles$Lookup_ = $MethodHandles$Lookup$$Type;
+export type IntStack = $IntStack;
+export type IntStack_ = $IntStack$$Type;
 export type ByteArrayTag = $ByteArrayTag;
 export type ByteArrayTag_ = $ByteArrayTag$$Type;
 export type ServerConnectionListener = $ServerConnectionListener;
 export type ServerConnectionListener_ = $ServerConnectionListener$$Type;
-export type FileAttribute<T> = $FileAttribute<T>;
-export type FileAttribute_<T> = $FileAttribute$$Type<T>;
 export type LivingConversionEvent = $LivingConversionEvent;
 export type LivingConversionEvent_ = $LivingConversionEvent$$Type;
+export type FileAttribute<T> = $FileAttribute<T>;
+export type FileAttribute_<T> = $FileAttribute$$Type<T>;
 export type AmphibiousPathNavigation = $AmphibiousPathNavigation;
 export type AmphibiousPathNavigation_ = $AmphibiousPathNavigation$$Type;
 export type ScreenEvent = $ScreenEvent;
@@ -24559,10 +24550,10 @@ export type BaseEntityJS = $BaseEntityJS;
 export type BaseEntityJS_ = $BaseEntityJS$$Type;
 export type CommandNode<S> = $CommandNode<S>;
 export type CommandNode_<S> = $CommandNode$$Type<S>;
-export type Long2ObjectMap<V> = $Long2ObjectMap<V>;
-export type Long2ObjectMap_<V> = $Long2ObjectMap$$Type<V>;
 export type UnmodifiableIterator<E> = $UnmodifiableIterator<E>;
 export type UnmodifiableIterator_<E> = $UnmodifiableIterator$$Type<E>;
+export type Long2ObjectMap<V> = $Long2ObjectMap<V>;
+export type Long2ObjectMap_<V> = $Long2ObjectMap$$Type<V>;
 export type ClickEvent = $ClickEvent;
 export type ClickEvent_ = $ClickEvent$$Type;
 export type EntityTrackerAccessor$0 = $EntityTrackerAccessor$0;
@@ -24573,10 +24564,10 @@ export type Object2ObjectMap$Entry<K, V> = $Object2ObjectMap$Entry<K, V>;
 export type Object2ObjectMap$Entry_<K, V> = $Object2ObjectMap$Entry$$Type<K, V>;
 export type ByteTag = $ByteTag;
 export type ByteTag_ = $ByteTag$$Type;
-export type JobAttributes = $JobAttributes;
-export type JobAttributes_ = $JobAttributes$$Type;
 export type ItemBuilder$FinishUsingCallback = $ItemBuilder$FinishUsingCallback;
 export type ItemBuilder$FinishUsingCallback_ = $ItemBuilder$FinishUsingCallback$$Type;
+export type JobAttributes = $JobAttributes;
+export type JobAttributes_ = $JobAttributes$$Type;
 export type ModCheck = $ModCheck;
 export type ModCheck_ = $ModCheck$$Type;
 export type GlowLichenBlock = $GlowLichenBlock;
@@ -24671,12 +24662,12 @@ export type ICastDataSerializable = $ICastDataSerializable;
 export type ICastDataSerializable_ = $ICastDataSerializable$$Type;
 export type CreativeTabBuilder = $CreativeTabBuilder;
 export type CreativeTabBuilder_ = $CreativeTabBuilder$$Type;
+export type ClientChatReceivedEvent$Player = $ClientChatReceivedEvent$Player;
+export type ClientChatReceivedEvent$Player_ = $ClientChatReceivedEvent$Player$$Type;
 export type CameraPosEvent = $CameraPosEvent;
 export type CameraPosEvent_ = $CameraPosEvent$$Type;
 export type ClientLevel$ClientLevelData = $ClientLevel$ClientLevelData;
 export type ClientLevel$ClientLevelData_ = $ClientLevel$ClientLevelData$$Type;
-export type ClientChatReceivedEvent$Player = $ClientChatReceivedEvent$Player;
-export type ClientChatReceivedEvent$Player_ = $ClientChatReceivedEvent$Player$$Type;
 export type IRecipeWidget = $IRecipeWidget;
 export type IRecipeWidget_ = $IRecipeWidget$$Type;
 export type BaseStream<T, S extends $BaseStream<T, S>> = $BaseStream<T, S>;
@@ -24709,12 +24700,12 @@ export type GameConfig = $GameConfig;
 export type GameConfig_ = $GameConfig$$Type;
 export type ObjectProgressEvent<T extends $QuestObject> = $ObjectProgressEvent<T>;
 export type ObjectProgressEvent_<T extends $QuestObject> = $ObjectProgressEvent$$Type<T>;
+export type ScreenEvent$KeyPressed$Post = $ScreenEvent$KeyPressed$Post;
+export type ScreenEvent$KeyPressed$Post_ = $ScreenEvent$KeyPressed$Post$$Type;
 export type SimpleEvent = $SimpleEvent;
 export type SimpleEvent_ = $SimpleEvent$$Type;
 export type MinMaxBounds$Doubles = $MinMaxBounds$Doubles;
 export type MinMaxBounds$Doubles_ = $MinMaxBounds$Doubles$$Type;
-export type ScreenEvent$KeyPressed$Post = $ScreenEvent$KeyPressed$Post;
-export type ScreenEvent$KeyPressed$Post_ = $ScreenEvent$KeyPressed$Post$$Type;
 export type GeoReplacedEntityRenderer<E extends $Entity, T extends $GeoAnimatable> = $GeoReplacedEntityRenderer<E, T>;
 export type GeoReplacedEntityRenderer_<E extends $Entity, T extends $GeoAnimatable> = $GeoReplacedEntityRenderer$$Type<E, T>;
 export type PerlinSimplexNoise = $PerlinSimplexNoise;
@@ -24729,10 +24720,10 @@ export type HudRender = $HudRender;
 export type HudRender_ = $HudRender$$Type;
 export type IAnimatableJSCustom = $IAnimatableJSCustom;
 export type IAnimatableJSCustom_ = $IAnimatableJSCustom$$Type;
-export type HumanoidModelAccess = $HumanoidModelAccess;
-export type HumanoidModelAccess_ = $HumanoidModelAccess$$Type;
 export type PlayerEvent$PlayerChangeGameModeEvent = $PlayerEvent$PlayerChangeGameModeEvent;
 export type PlayerEvent$PlayerChangeGameModeEvent_ = $PlayerEvent$PlayerChangeGameModeEvent$$Type;
+export type HumanoidModelAccess = $HumanoidModelAccess;
+export type HumanoidModelAccess_ = $HumanoidModelAccess$$Type;
 export type Long2IntFunction = $Long2IntFunction;
 export type Long2IntFunction_ = $Long2IntFunction$$Type;
 export type PlayStreamingSourceEvent = $PlayStreamingSourceEvent;
@@ -24781,10 +24772,10 @@ export type ItemStackShrinkProvider = $ItemStackShrinkProvider;
 export type ItemStackShrinkProvider_ = $ItemStackShrinkProvider$$Type;
 export type PropagatingOptionalFieldCodec<A> = $PropagatingOptionalFieldCodec<A>;
 export type PropagatingOptionalFieldCodec_<A> = $PropagatingOptionalFieldCodec$$Type<A>;
-export type LightChunk = $LightChunk;
-export type LightChunk_ = $LightChunk$$Type;
 export type EntityMobGriefingEvent = $EntityMobGriefingEvent;
 export type EntityMobGriefingEvent_ = $EntityMobGriefingEvent$$Type;
+export type LightChunk = $LightChunk;
+export type LightChunk_ = $LightChunk$$Type;
 export type ServerboundEditBookPacket = $ServerboundEditBookPacket;
 export type ServerboundEditBookPacket_ = $ServerboundEditBookPacket$$Type;
 export type IntProperty<T> = $IntProperty<T>;
@@ -24795,10 +24786,10 @@ export type TemporalAmount = $TemporalAmount;
 export type TemporalAmount_ = $TemporalAmount$$Type;
 export type IModStateTransition$EventGenerator<T extends ($Event$1 & $IModBusEvent)> = $IModStateTransition$EventGenerator<T>;
 export type IModStateTransition$EventGenerator_<T extends ($Event$1 & $IModBusEvent)> = $IModStateTransition$EventGenerator$$Type<T>;
-export type BrainDebugRenderer = $BrainDebugRenderer;
-export type BrainDebugRenderer_ = $BrainDebugRenderer$$Type;
 export type ForgeZGatherAdditionalFlags$0 = $ForgeZGatherAdditionalFlags$0;
 export type ForgeZGatherAdditionalFlags$0_ = $ForgeZGatherAdditionalFlags$0$$Type;
+export type BrainDebugRenderer = $BrainDebugRenderer;
+export type BrainDebugRenderer_ = $BrainDebugRenderer$$Type;
 export type Attribute$0<T> = $Attribute$0<T>;
 export type Attribute$0_<T> = $Attribute$0$$Type<T>;
 export type RenderGuiOverlayEvent$Post = $RenderGuiOverlayEvent$Post;
@@ -24983,10 +24974,10 @@ export type IRecipeSlotsView = $IRecipeSlotsView;
 export type IRecipeSlotsView_ = $IRecipeSlotsView$$Type;
 export type ServerboundPlayerCommandPacket$Action = $ServerboundPlayerCommandPacket$Action;
 export type ServerboundPlayerCommandPacket$Action_ = $ServerboundPlayerCommandPacket$Action$$Type;
-export type WardenSpawnTracker = $WardenSpawnTracker;
-export type WardenSpawnTracker_ = $WardenSpawnTracker$$Type;
 export type GeoRenderEvent$ReplacedEntity$CompileRenderLayers = $GeoRenderEvent$ReplacedEntity$CompileRenderLayers;
 export type GeoRenderEvent$ReplacedEntity$CompileRenderLayers_ = $GeoRenderEvent$ReplacedEntity$CompileRenderLayers$$Type;
+export type WardenSpawnTracker = $WardenSpawnTracker;
+export type WardenSpawnTracker_ = $WardenSpawnTracker$$Type;
 export type ScreenKeyEvent$Press$Post = $ScreenKeyEvent$Press$Post;
 export type ScreenKeyEvent$Press$Post_ = $ScreenKeyEvent$Press$Post$$Type;
 export type MerchantOffer = $MerchantOffer;
@@ -25009,10 +25000,10 @@ export type VertexFormat = $VertexFormat;
 export type VertexFormat_ = $VertexFormat$$Type;
 export type Drawable$0 = $Drawable$0;
 export type Drawable$0_ = $Drawable$0$$Type;
-export type ProjectileEntityBuilder<T extends ($Entity & $IProjectileEntityJS)> = $ProjectileEntityBuilder<T>;
-export type ProjectileEntityBuilder_<T extends ($Entity & $IProjectileEntityJS)> = $ProjectileEntityBuilder$$Type<T>;
 export type FirstPersonTracker = $FirstPersonTracker;
 export type FirstPersonTracker_ = $FirstPersonTracker$$Type;
+export type ProjectileEntityBuilder<T extends ($Entity & $IProjectileEntityJS)> = $ProjectileEntityBuilder<T>;
+export type ProjectileEntityBuilder_<T extends ($Entity & $IProjectileEntityJS)> = $ProjectileEntityBuilder$$Type<T>;
 export type CountOnEveryLayerPlacement = $CountOnEveryLayerPlacement;
 export type CountOnEveryLayerPlacement_ = $CountOnEveryLayerPlacement$$Type;
 export type Double = $Double;
@@ -25067,10 +25058,10 @@ export type Constable = $Constable;
 export type Constable_ = $Constable$$Type;
 export type Zoglin = $Zoglin;
 export type Zoglin_ = $Zoglin$$Type;
-export type SymbolScriptable = $SymbolScriptable;
-export type SymbolScriptable_ = $SymbolScriptable$$Type;
 export type SpellModificationEventJS = $SpellModificationEventJS;
 export type SpellModificationEventJS_ = $SpellModificationEventJS$$Type;
+export type SymbolScriptable = $SymbolScriptable;
+export type SymbolScriptable_ = $SymbolScriptable$$Type;
 export type ModifyRecipeResultCallback = $ModifyRecipeResultCallback;
 export type ModifyRecipeResultCallback_ = $ModifyRecipeResultCallback$$Type;
 export type GeoRenderEvent$Armor$Post = $GeoRenderEvent$Armor$Post;
@@ -25113,10 +25104,10 @@ export type Products$P12<F extends $K1, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10,
 export type Products$P12_<F extends $K1, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> = $Products$P12$$Type<F, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>;
 export type LidBlockEntity = $LidBlockEntity;
 export type LidBlockEntity_ = $LidBlockEntity$$Type;
-export type Products$P10<F extends $K1, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> = $Products$P10<F, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>;
-export type Products$P10_<F extends $K1, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> = $Products$P10$$Type<F, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>;
 export type ClientPlayerNetworkEvent$LoggingIn = $ClientPlayerNetworkEvent$LoggingIn;
 export type ClientPlayerNetworkEvent$LoggingIn_ = $ClientPlayerNetworkEvent$LoggingIn$$Type;
+export type Products$P10<F extends $K1, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> = $Products$P10<F, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>;
+export type Products$P10_<F extends $K1, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> = $Products$P10$$Type<F, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>;
 export type ScoreHolderArgument$Result = $ScoreHolderArgument$Result;
 export type ScoreHolderArgument$Result_ = $ScoreHolderArgument$Result$$Type;
 export type Pack$Position = $Pack$Position;

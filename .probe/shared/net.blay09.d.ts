@@ -1657,8 +1657,8 @@ import { $BalmConfigSchema$$Type } from "net.blay09.mods.balm.api.config.schema.
 import { $LoadedConfig, $LoadedConfig$$Type } from "net.blay09.mods.balm.api.config.LoadedConfig"
 
 export interface $MutableLoadedConfig extends $LoadedConfig {
-"applyFrom"(balmConfigSchema0: $BalmConfigSchema$$Type, loadedConfig1: $LoadedConfig$$Type, predicate2: $Predicate$$Type<$ConfiguredProperty$$Type<any>>): void
 "applyFrom"(balmConfigSchema0: $BalmConfigSchema$$Type, loadedConfig1: $LoadedConfig$$Type): void
+"applyFrom"(balmConfigSchema0: $BalmConfigSchema$$Type, loadedConfig1: $LoadedConfig$$Type, predicate2: $Predicate$$Type<$ConfiguredProperty$$Type<any>>): void
 "copy"(): $MutableLoadedConfig
 "getRaw"<T>(configuredProperty0: $ConfiguredProperty$$Type<T>): T
 "mutable"(balmConfigSchema0: $BalmConfigSchema$$Type): $MutableLoadedConfig
@@ -1736,8 +1736,8 @@ import { $BlockState, $BlockState$$Type } from "net.minecraft.world.level.block.
 import { $Player, $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $DigSpeedEvent extends $BalmEvent {
-constructor()
 constructor(player0: $Player$$Type, blockState1: $BlockState$$Type, float2: float)
+constructor()
 
 public "getPlayer"(): $Player
 public "getSpeed"(): float

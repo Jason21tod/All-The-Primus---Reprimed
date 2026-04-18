@@ -58,15 +58,6 @@ public "signalToStructure"(resourceLocation: $ResourceLocation$$Type): $EyeOfEnd
  */
 public "signalToStructure"(resourceLocation: $ResourceLocation$$Type, chunkRadius: integer): $EyeOfEnderItemBuilder
 /**
- * A function to determine which structure tag the thrown ender eye item will head towards in a certain chunk radius.
- * 
- * Example usage:
- * ```javascript
- * builder.signalToStructureTag("minecraft:village", 100);
- * ```
- */
-public "signalToStructureTag"(resourceLocation: $ResourceLocation$$Type, chunkRadius: integer): $EyeOfEnderItemBuilder
-/**
  * A function to determine which structure tag the thrown ender eye item will head towards in a 100 chunk radius.
  * 
  * Example usage:
@@ -75,6 +66,15 @@ public "signalToStructureTag"(resourceLocation: $ResourceLocation$$Type, chunkRa
  * ```
  */
 public "signalToStructureTag"(resourceLocation: $ResourceLocation$$Type): $EyeOfEnderItemBuilder
+/**
+ * A function to determine which structure tag the thrown ender eye item will head towards in a certain chunk radius.
+ * 
+ * Example usage:
+ * ```javascript
+ * builder.signalToStructureTag("minecraft:village", 100);
+ * ```
+ */
+public "signalToStructureTag"(resourceLocation: $ResourceLocation$$Type, chunkRadius: integer): $EyeOfEnderItemBuilder
 /** Sets if the eye of ender triggers the USED_ENDER_EYE Criteria */
 public "triggersCriteria"(triggersCriteria: boolean): $EyeOfEnderItemBuilder
 }

@@ -59,8 +59,8 @@ import { $DamageSource, $DamageSource$$Type } from "net.minecraft.world.damageso
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $PlayerDeathEvent extends $Event implements $EventItf {
-constructor(death0: $Death$$Type, serverPlayer1: $ServerPlayer$$Type, damageSource2: $DamageSource$$Type)
 constructor()
+constructor(death0: $Death$$Type, serverPlayer1: $ServerPlayer$$Type, damageSource2: $DamageSource$$Type)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

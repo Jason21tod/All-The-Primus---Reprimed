@@ -137,9 +137,9 @@ public "contains"(recipe0: $Recipe$$Type<any>): boolean
 public "contains"(resourceLocation0: $ResourceLocation$$Type): boolean
 public "copyOverData"(recipeBook0: $RecipeBook$$Type): void
 public "getBookSettings"(): $RecipeBookSettings
-public "handler$hej000$onCopy"(pOther: $RecipeBook$$Type, ci: $CallbackInfo$$Type): void
-public "isFiltering"(recipeBookType0: $RecipeBookType$$Type): boolean
+public "handler$hed000$onCopy"(pOther: $RecipeBook$$Type, ci: $CallbackInfo$$Type): void
 public "isFiltering"(recipeBookMenu0: $RecipeBookMenu$$Type<any>): boolean
+public "isFiltering"(recipeBookType0: $RecipeBookType$$Type): boolean
 public "isOpen"(recipeBookType0: $RecipeBookType$$Type): boolean
 public "remove"(recipe0: $Recipe$$Type<any>): void
 public "removeHighlight"(recipe0: $Recipe$$Type<any>): void
@@ -211,13 +211,13 @@ public static "addTagsForType"(recipeBookType0: $RecipeBookType$$Type, string1: 
 public "copy"(): $RecipeBookSettings
 public "isFiltering"(recipeBookType0: $RecipeBookType$$Type): boolean
 public "isOpen"(recipeBookType0: $RecipeBookType$$Type): boolean
-public static "read"(compoundTag0: $CompoundTag$$Type): $RecipeBookSettings
 public static "read"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $RecipeBookSettings
+public static "read"(compoundTag0: $CompoundTag$$Type): $RecipeBookSettings
 public "replaceFrom"(recipeBookSettings0: $RecipeBookSettings$$Type): void
 public "setFiltering"(recipeBookType0: $RecipeBookType$$Type, boolean1: boolean): void
 public "setOpen"(recipeBookType0: $RecipeBookType$$Type, boolean1: boolean): void
-public "write"(compoundTag0: $CompoundTag$$Type): void
 public "write"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
+public "write"(compoundTag0: $CompoundTag$$Type): void
 }
 }
 
@@ -240,9 +240,9 @@ constructor()
 
 public "addRecipes"(collection0: $Collection$$Type<$Recipe$$Type<any>>, serverPlayer1: $ServerPlayer$$Type): integer
 public "fromNbt"(compoundTag0: $CompoundTag$$Type, recipeManager1: $RecipeManager$$Type): void
-public "handler$hel000$onLoad"(pTag: $CompoundTag$$Type, pRecipeManager: $RecipeManager$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hel000$onLoad"(pState: $ClientboundRecipePacket$State$$Type, pPlayer: $ServerPlayer$$Type, pRecipes: $List$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hel000$onSave"(cir: $CallbackInfoReturnable$$Type): void
+public "handler$hef000$onLoad"(pState: $ClientboundRecipePacket$State$$Type, pPlayer: $ServerPlayer$$Type, pRecipes: $List$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hef000$onLoad"(pTag: $CompoundTag$$Type, pRecipeManager: $RecipeManager$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hef000$onSave"(cir: $CallbackInfoReturnable$$Type): void
 public "removeRecipes"(collection0: $Collection$$Type<$Recipe$$Type<any>>, serverPlayer1: $ServerPlayer$$Type): integer
 public "sendInitialRecipeBook"(serverPlayer0: $ServerPlayer$$Type): void
 public "toNbt"(): $CompoundTag

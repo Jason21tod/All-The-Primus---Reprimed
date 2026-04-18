@@ -16,13 +16,12 @@ public "anyType"(...resolvers: $Resolver$$Type[]): $EntityPredicateBuilderJS
 public "build"(): $EntityPredicate
 public "hasEffect"(effect: $MobEffect$$Type): $EntityPredicateBuilderJS
 public "hasEffect"(effect: $MobEffect$$Type, amplifier: integer): $EntityPredicateBuilderJS
-public "isBaby"(flag: boolean): $EntityPredicateBuilderJS
-public "isCrouching"(flag: boolean): $EntityPredicateBuilderJS
 public "isIllegarMob"(flag: boolean): $EntityPredicateBuilderJS
-public "isInWater"(flag: boolean): $EntityPredicateBuilderJS
-public "isMonster"(flag: boolean): $EntityPredicateBuilderJS
+public "isOnFire"(flag: boolean): $EntityPredicateBuilderJS
+public "isOnGround"(flag: boolean): $EntityPredicateBuilderJS
+public "isSprinting"(flag: boolean): $EntityPredicateBuilderJS
+public "isSwimming"(flag: boolean): $EntityPredicateBuilderJS
 public "isUnderWater"(flag: boolean): $EntityPredicateBuilderJS
-public "isWaterMob"(flag: boolean): $EntityPredicateBuilderJS
 public "matchBlock"(resolver: $Resolver$$Type): $EntityPredicateBuilderJS
 public "matchBlock"(resolver: $Resolver$$Type, propertyMap: $Map$$Type<string, string>): $EntityPredicateBuilderJS
 public "matchFluid"(resolver: $Resolver$$Type): $EntityPredicateBuilderJS
@@ -70,14 +69,14 @@ public "applyOreBonus"(enchantment: $Enchantment$$Type): $LootEntry
 public "createItem"(context: $LootContext$$Type): $ItemStack
 public "customFunction"(json: $JsonObject$$Type): $LootEntry
 public "damage"(numberProvider: $NumberProvider$$Type): $LootEntry
-public "enchantRandomly"(): $LootEntry
 public "enchantRandomly"(enchantments: $Enchantment$$Type[]): $LootEntry
+public "enchantRandomly"(): $LootEntry
 public "enchantWithLevels"(numberProvider: $NumberProvider$$Type): $LootEntry
 public "enchantWithLevels"(numberProvider: $NumberProvider$$Type, allowTreasure: boolean): $LootEntry
 public "functions"(filter: $ItemFilter$$Type, action: $Consumer$$Type<$LootFunctionsContainer$$Type<$LootEntry$$Type>>): $LootEntry
 public "hasWeight"(): boolean
-public "limitCount"(numberProvider: $NumberProvider$$Type): $LootEntry
 public "limitCount"(numberProviderMin: $NumberProvider$$Type, numberProviderMax: $NumberProvider$$Type): $LootEntry
+public "limitCount"(numberProvider: $NumberProvider$$Type): $LootEntry
 public "matchesConditions"(context: $LootContext$$Type): boolean
 public "replaceLore"(...components: $Component$$Type[]): $LootEntry
 public "setName"(component: $Component$$Type): $LootEntry
@@ -140,8 +139,8 @@ public "addNBT"(tag: $CompoundTag$$Type): $GroupedLootBuilder
 public "addNbt"(tag: $CompoundTag$$Type): $GroupedLootBuilder
 public "addPotion"(potion: $Potion$$Type): $GroupedLootBuilder
 public "addSequenceLoot"(...entries: $LootEntry$$Type[]): $GroupedLootBuilder
-public "addWeightedLoot"(poolEntries: $LootEntry$$Type[]): $GroupedLootBuilder
 public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, allowDuplicateLoot: boolean, poolEntries: $LootEntry$$Type[]): $GroupedLootBuilder
+public "addWeightedLoot"(poolEntries: $LootEntry$$Type[]): $GroupedLootBuilder
 public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, poolEntries: $LootEntry$$Type[]): $GroupedLootBuilder
 public "and"(action: $Consumer$$Type<$LootConditionsContainer$$Type<$GroupedLootBuilder$$Type>>): $GroupedLootBuilder
 public "anyBiome"(...resolvers: $Resolver$$Type[]): $GroupedLootBuilder
@@ -162,8 +161,8 @@ public "damage"(numberProvider: $NumberProvider$$Type): $GroupedLootBuilder
 public "directKillerPredicate"(predicate: $Predicate$$Type<$Entity$$Type>): $GroupedLootBuilder
 public "distanceToKiller"(bounds: $MinMaxBounds$Doubles$$Type): $GroupedLootBuilder
 public "dropExperience"(amount: integer): $GroupedLootBuilder
-public "enchantRandomly"(): $GroupedLootBuilder
 public "enchantRandomly"(enchantments: $Enchantment$$Type[]): $GroupedLootBuilder
+public "enchantRandomly"(): $GroupedLootBuilder
 public "enchantWithLevels"(numberProvider: $NumberProvider$$Type): $GroupedLootBuilder
 public "enchantWithLevels"(numberProvider: $NumberProvider$$Type, allowTreasure: boolean): $GroupedLootBuilder
 public "entityPredicate"(predicate: $Predicate$$Type<$Entity$$Type>): $GroupedLootBuilder
@@ -172,8 +171,8 @@ public "hasAnyStage"(...stages: string[]): $GroupedLootBuilder
 public "killedByPlayer"(): $GroupedLootBuilder
 public "killerPredicate"(predicate: $Predicate$$Type<$Entity$$Type>): $GroupedLootBuilder
 public "lightLevel"(min: integer, max: integer): $GroupedLootBuilder
-public "limitCount"(numberProvider: $NumberProvider$$Type): $GroupedLootBuilder
 public "limitCount"(numberProviderMin: $NumberProvider$$Type, numberProviderMax: $NumberProvider$$Type): $GroupedLootBuilder
+public "limitCount"(numberProvider: $NumberProvider$$Type): $GroupedLootBuilder
 public "matchBlockState"(block: $Block$$Type, propertyMap: $Map$$Type<string, string>): $GroupedLootBuilder
 public "matchDamageSource"(action: $Consumer$$Type<$DamageSourcePredicateBuilderJS$$Type>): $GroupedLootBuilder
 public "matchDirectKiller"(action: $Consumer$$Type<$EntityPredicateBuilderJS$$Type>): $GroupedLootBuilder
@@ -181,8 +180,8 @@ public "matchEntity"(action: $Consumer$$Type<$EntityPredicateBuilderJS$$Type>): 
 public "matchEquip"(slot: $EquipmentSlot$$Type, filter: $ItemFilter$$Type): $GroupedLootBuilder
 public "matchFluid"(resolver: $Resolver$$Type): $GroupedLootBuilder
 public "matchKiller"(action: $Consumer$$Type<$EntityPredicateBuilderJS$$Type>): $GroupedLootBuilder
-public "matchLoot"(filter: $ItemFilter$$Type): $GroupedLootBuilder
 public "matchLoot"(filter: $ItemFilter$$Type, exact: boolean): $GroupedLootBuilder
+public "matchLoot"(filter: $ItemFilter$$Type): $GroupedLootBuilder
 public "matchMainHand"(filter: $ItemFilter$$Type): $GroupedLootBuilder
 public "matchOffHand"(filter: $ItemFilter$$Type): $GroupedLootBuilder
 public "matchPlayer"(action: $Consumer$$Type<$EntityPredicateBuilderJS$$Type>): $GroupedLootBuilder
@@ -195,8 +194,8 @@ public "randomChanceWithEnchantment"(enchantment: $Enchantment$$Type, chances: f
 public "randomChanceWithLooting"(value: float, looting: float): $GroupedLootBuilder
 public "randomTableBonus"(enchantment: $Enchantment$$Type, chances: float[]): $GroupedLootBuilder
 public "removeLoot"(filter: $ItemFilter$$Type): $GroupedLootBuilder
-public "replaceLoot"(filter: $ItemFilter$$Type, lootEntry: $LootEntry$$Type, preserveCount: boolean): $GroupedLootBuilder
 public "replaceLoot"(filter: $ItemFilter$$Type, lootEntry: $LootEntry$$Type): $GroupedLootBuilder
+public "replaceLoot"(filter: $ItemFilter$$Type, lootEntry: $LootEntry$$Type, preserveCount: boolean): $GroupedLootBuilder
 public "replaceLore"(...components: $Component$$Type[]): $GroupedLootBuilder
 public "rolls"(numberProvider: $NumberProvider$$Type): $GroupedLootBuilder
 public "setName"(component: $Component$$Type): $GroupedLootBuilder
@@ -460,14 +459,14 @@ export interface $LootActionsContainer<A extends $LootActionsContainer<any> = $L
 "addAlternativesLoot"(...entries: $LootEntry$$Type[]): A
 "addLoot"(...entries: $LootEntry$$Type[]): A
 "addSequenceLoot"(...entries: $LootEntry$$Type[]): A
-"addWeightedLoot"(poolEntries: $LootEntry$$Type[]): A
 "addWeightedLoot"(numberProvider: $NumberProvider$$Type, allowDuplicateLoot: boolean, poolEntries: $LootEntry$$Type[]): A
+"addWeightedLoot"(poolEntries: $LootEntry$$Type[]): A
 "addWeightedLoot"(numberProvider: $NumberProvider$$Type, poolEntries: $LootEntry$$Type[]): A
 "dropExperience"(amount: integer): A
 "modifyLoot"(filter: $ItemFilter$$Type, callback: $ModifyLootAction$Callback$$Type): A
 "removeLoot"(filter: $ItemFilter$$Type): A
-"replaceLoot"(filter: $ItemFilter$$Type, lootEntry: $LootEntry$$Type, preserveCount: boolean): A
 "replaceLoot"(filter: $ItemFilter$$Type, lootEntry: $LootEntry$$Type): A
+"replaceLoot"(filter: $ItemFilter$$Type, lootEntry: $LootEntry$$Type, preserveCount: boolean): A
 "triggerExplosion"(radius: float, destroy: boolean, fire: boolean): A
 "triggerExplosion"(radius: float, mode: $Explosion$BlockInteraction$$Type, fire: boolean): A
 "triggerLightningStrike"(shouldDamage: boolean): A
@@ -631,8 +630,8 @@ import { $Potion$$Type } from "net.minecraft.world.item.alchemy.Potion"
 
 export interface $LootFunctionsContainer<F extends $LootFunctionsContainer<any> = $LootFunctionsContainer<any>> {
 "addAttributes"(action: $Consumer$$Type<$AddAttributesFunction$Builder$$Type>): F
-"addFunction"(builder: $LootItemFunction$Builder$$Type): F
 "addFunction"(lootItemFunction0: $LootItemFunction$$Type): F
+"addFunction"(builder: $LootItemFunction$Builder$$Type): F
 "addLore"(...components: $Component$$Type[]): F
 "addNBT"(tag: $CompoundTag$$Type): F
 "addNbt"(tag: $CompoundTag$$Type): F
@@ -643,13 +642,13 @@ export interface $LootFunctionsContainer<F extends $LootFunctionsContainer<any> 
 "applyOreBonus"(enchantment: $Enchantment$$Type): F
 "customFunction"(json: $JsonObject$$Type): F
 "damage"(numberProvider: $NumberProvider$$Type): F
-"enchantRandomly"(): F
 "enchantRandomly"(enchantments: $Enchantment$$Type[]): F
+"enchantRandomly"(): F
 "enchantWithLevels"(numberProvider: $NumberProvider$$Type): F
 "enchantWithLevels"(numberProvider: $NumberProvider$$Type, allowTreasure: boolean): F
 "functions"(filter: $ItemFilter$$Type, action: $Consumer$$Type<$LootFunctionsContainer$$Type<F>>): F
-"limitCount"(numberProvider: $NumberProvider$$Type): F
 "limitCount"(numberProviderMin: $NumberProvider$$Type, numberProviderMax: $NumberProvider$$Type): F
+"limitCount"(numberProvider: $NumberProvider$$Type): F
 "replaceLore"(...components: $Component$$Type[]): F
 "setName"(component: $Component$$Type): F
 "simulateExplosionDecay"(): F
@@ -687,8 +686,8 @@ import { $DamageSourcePredicateBuilderJS$$Type } from "com.almostreliable.lootjs
 import { $EntityPredicateBuilderJS$$Type } from "com.almostreliable.lootjs.kube.builder.EntityPredicateBuilderJS"
 
 export interface $LootConditionsContainer<B extends $LootConditionsContainer<any> = $LootConditionsContainer<any>> {
-"addCondition"(builder: $LootItemCondition$Builder$$Type): B
 "addCondition"(iLootCondition0: $ILootCondition$$Type): B
+"addCondition"(builder: $LootItemCondition$Builder$$Type): B
 "and"(action: $Consumer$$Type<$LootConditionsContainer$$Type<B>>): B
 "anyBiome"(...resolvers: $Resolver$$Type[]): B
 "anyDimension"(...dimensions: $ResourceLocation$$Type[]): B
@@ -712,8 +711,8 @@ export interface $LootConditionsContainer<B extends $LootConditionsContainer<any
 "matchEquip"(slot: $EquipmentSlot$$Type, filter: $ItemFilter$$Type): B
 "matchFluid"(resolver: $Resolver$$Type): B
 "matchKiller"(action: $Consumer$$Type<$EntityPredicateBuilderJS$$Type>): B
-"matchLoot"(filter: $ItemFilter$$Type): B
 "matchLoot"(filter: $ItemFilter$$Type, exact: boolean): B
+"matchLoot"(filter: $ItemFilter$$Type): B
 "matchMainHand"(filter: $ItemFilter$$Type): B
 "matchOffHand"(filter: $ItemFilter$$Type): B
 "matchPlayer"(action: $Consumer$$Type<$EntityPredicateBuilderJS$$Type>): B
@@ -847,8 +846,8 @@ public "addNBT"(tag: $CompoundTag$$Type): $LootActionsBuilderJS
 public "addNbt"(tag: $CompoundTag$$Type): $LootActionsBuilderJS
 public "addPotion"(potion: $Potion$$Type): $LootActionsBuilderJS
 public "addSequenceLoot"(...entries: $LootEntry$$Type[]): $LootActionsBuilderJS
-public "addWeightedLoot"(poolEntries: $LootEntry$$Type[]): $LootActionsBuilderJS
 public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, allowDuplicateLoot: boolean, poolEntries: $LootEntry$$Type[]): $LootActionsBuilderJS
+public "addWeightedLoot"(poolEntries: $LootEntry$$Type[]): $LootActionsBuilderJS
 public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, poolEntries: $LootEntry$$Type[]): $LootActionsBuilderJS
 public "and"(action: $Consumer$$Type<$LootConditionsContainer$$Type<$LootActionsBuilderJS$$Type>>): $LootActionsBuilderJS
 public "anyBiome"(...resolvers: $Resolver$$Type[]): $LootActionsBuilderJS
@@ -869,8 +868,8 @@ public "damage"(numberProvider: $NumberProvider$$Type): $LootActionsBuilderJS
 public "directKillerPredicate"(predicate: $Predicate$$Type<$Entity$$Type>): $LootActionsBuilderJS
 public "distanceToKiller"(bounds: $MinMaxBounds$Doubles$$Type): $LootActionsBuilderJS
 public "dropExperience"(amount: integer): $LootActionsBuilderJS
-public "enchantRandomly"(): $LootActionsBuilderJS
 public "enchantRandomly"(enchantments: $Enchantment$$Type[]): $LootActionsBuilderJS
+public "enchantRandomly"(): $LootActionsBuilderJS
 public "enchantWithLevels"(numberProvider: $NumberProvider$$Type): $LootActionsBuilderJS
 public "enchantWithLevels"(numberProvider: $NumberProvider$$Type, allowTreasure: boolean): $LootActionsBuilderJS
 public "entityPredicate"(predicate: $Predicate$$Type<$Entity$$Type>): $LootActionsBuilderJS
@@ -881,8 +880,8 @@ public "hasAnyStage"(...stages: string[]): $LootActionsBuilderJS
 public "killedByPlayer"(): $LootActionsBuilderJS
 public "killerPredicate"(predicate: $Predicate$$Type<$Entity$$Type>): $LootActionsBuilderJS
 public "lightLevel"(min: integer, max: integer): $LootActionsBuilderJS
-public "limitCount"(numberProvider: $NumberProvider$$Type): $LootActionsBuilderJS
 public "limitCount"(numberProviderMin: $NumberProvider$$Type, numberProviderMax: $NumberProvider$$Type): $LootActionsBuilderJS
+public "limitCount"(numberProvider: $NumberProvider$$Type): $LootActionsBuilderJS
 public "logName"(logName: string): $LootActionsBuilderJS
 public "matchBlockState"(block: $Block$$Type, propertyMap: $Map$$Type<string, string>): $LootActionsBuilderJS
 public "matchDamageSource"(action: $Consumer$$Type<$DamageSourcePredicateBuilderJS$$Type>): $LootActionsBuilderJS
@@ -891,8 +890,8 @@ public "matchEntity"(action: $Consumer$$Type<$EntityPredicateBuilderJS$$Type>): 
 public "matchEquip"(slot: $EquipmentSlot$$Type, filter: $ItemFilter$$Type): $LootActionsBuilderJS
 public "matchFluid"(resolver: $Resolver$$Type): $LootActionsBuilderJS
 public "matchKiller"(action: $Consumer$$Type<$EntityPredicateBuilderJS$$Type>): $LootActionsBuilderJS
-public "matchLoot"(filter: $ItemFilter$$Type): $LootActionsBuilderJS
 public "matchLoot"(filter: $ItemFilter$$Type, exact: boolean): $LootActionsBuilderJS
+public "matchLoot"(filter: $ItemFilter$$Type): $LootActionsBuilderJS
 public "matchMainHand"(filter: $ItemFilter$$Type): $LootActionsBuilderJS
 public "matchOffHand"(filter: $ItemFilter$$Type): $LootActionsBuilderJS
 public "matchPlayer"(action: $Consumer$$Type<$EntityPredicateBuilderJS$$Type>): $LootActionsBuilderJS
@@ -907,8 +906,8 @@ public "randomChanceWithEnchantment"(enchantment: $Enchantment$$Type, chances: f
 public "randomChanceWithLooting"(value: float, looting: float): $LootActionsBuilderJS
 public "randomTableBonus"(enchantment: $Enchantment$$Type, chances: float[]): $LootActionsBuilderJS
 public "removeLoot"(filter: $ItemFilter$$Type): $LootActionsBuilderJS
-public "replaceLoot"(filter: $ItemFilter$$Type, lootEntry: $LootEntry$$Type, preserveCount: boolean): $LootActionsBuilderJS
 public "replaceLoot"(filter: $ItemFilter$$Type, lootEntry: $LootEntry$$Type): $LootActionsBuilderJS
+public "replaceLoot"(filter: $ItemFilter$$Type, lootEntry: $LootEntry$$Type, preserveCount: boolean): $LootActionsBuilderJS
 public "replaceLore"(...components: $Component$$Type[]): $LootActionsBuilderJS
 public "setName"(component: $Component$$Type): $LootActionsBuilderJS
 public "simulateExplosionDecay"(): $LootActionsBuilderJS

@@ -71,14 +71,14 @@ export interface $Int2BooleanFunction extends $Function$0<integer, boolean>, $In
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(int0: integer): boolean
+"getOrDefault"(int0: integer, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
-"getOrDefault"(int0: integer, boolean1: boolean): boolean
 "negate"(): $IntPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
-"put"(int0: integer, boolean1: boolean): boolean
 /** @deprecated */
 "put"(integer0: integer, boolean1: boolean): boolean
+"put"(int0: integer, boolean1: boolean): boolean
 "remove"(int0: integer): boolean
 "size"(): integer
 "test"(int0: integer): boolean
@@ -191,9 +191,9 @@ export interface $Int2LongFunction extends $Function$0<integer, long>, $IntToLon
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
 "getOrDefault"(int0: integer, long1: long): long
-"put"(int0: integer, long1: long): long
 /** @deprecated */
 "put"(integer0: integer, long1: long): long
+"put"(int0: integer, long1: long): long
 "remove"(int0: integer): long
 "size"(): integer
 }
@@ -345,9 +345,9 @@ export interface $Int2DoubleFunction extends $Function$0<integer, double>, $IntT
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
 "getOrDefault"(int0: integer, double1: double): double
-"put"(int0: integer, double1: double): double
 /** @deprecated */
 "put"(integer0: integer, double1: double): double
+"put"(int0: integer, double1: double): double
 "remove"(int0: integer): double
 "size"(): integer
 }
@@ -429,9 +429,9 @@ export interface $Int2ObjectFunction<V = any> extends $Function$0<integer, V>, $
 /** @deprecated */
 "get"(object0: any): V
 "get"(int0: integer): V
-"getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 "put"(integer0: integer, v1: V): V
 "put"(int0: integer, v1: V): V
@@ -596,9 +596,9 @@ export interface $Int2ShortFunction extends $Function$0<integer, short>, $IntUna
 /** @deprecated */
 "getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(int0: integer, short1: short): short
-"put"(int0: integer, short1: short): short
 /** @deprecated */
 "put"(integer0: integer, short1: short): short
+"put"(int0: integer, short1: short): short
 "remove"(int0: integer): short
 "size"(): integer
 }
@@ -838,9 +838,9 @@ export interface $Int2FloatFunction extends $Function$0<integer, float>, $IntToD
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(int0: integer, float1: float): float
-"put"(int0: integer, float1: float): float
 /** @deprecated */
 "put"(integer0: integer, float1: float): float
+"put"(int0: integer, float1: float): float
 "remove"(int0: integer): float
 "size"(): integer
 }
@@ -1004,13 +1004,13 @@ public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public static "toList"(intStream0: $IntStream$$Type): $IntArrayList
 public static "toListWithExpectedSize"(intStream0: $IntStream$$Type, int1: integer): $IntArrayList
-public "trim"(int0: integer): void
 public "trim"(): void
+public "trim"(int0: integer): void
 public "unstableSort"(intComparator0: $IntComparator$$Type): void
 /** @deprecated */
 public "unstableSort"(comparator0: $Comparator$$Type<integer>): void
-public static "wrap"(int0s: integer[]): $IntArrayList
 public static "wrap"(int0s: integer[], int1: integer): $IntArrayList
+public static "wrap"(int0s: integer[]): $IntArrayList
 get "first"(): integer
 get "last"(): integer
 }
@@ -1085,9 +1085,9 @@ public "defaultReturnValue"(): V
 /** @deprecated */
 public "get"(object0: any): V
 public "get"(int0: integer): V
-public "getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 public "getOrDefault"(object0: any, v1: V): V
+public "getOrDefault"(int0: integer, v1: V): V
 public static "identity"<T>(): $Function<T, T>
 /** @deprecated */
 public "put"(integer0: integer, v1: V): V
@@ -1157,6 +1157,7 @@ import { $Int2ByteFunction } from "it.unimi.dsi.fastutil.ints.Int2ByteFunction"
 import { $Int2ReferenceFunction } from "it.unimi.dsi.fastutil.ints.Int2ReferenceFunction"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
 import { $Double2ObjectFunction } from "it.unimi.dsi.fastutil.doubles.Double2ObjectFunction"
+import { $Int2ObjectMap$FastEntrySet } from "it.unimi.dsi.fastutil.ints.Int2ObjectMap$FastEntrySet"
 import { $Object2ObjectFunction, $Object2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ObjectFunction"
 import { $Function, $Function$$Type } from "java.util.function.Function"
 import { $Int2DoubleFunction } from "it.unimi.dsi.fastutil.ints.Int2DoubleFunction"
@@ -1255,6 +1256,7 @@ public "getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 public "getOrDefault"(object0: any, v1: V): V
 public static "identity"<T>(): $Function<T, T>
+public "int2ObjectEntrySet"(): $Int2ObjectMap$FastEntrySet<V>
 public "merge"(int0: integer, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public "merge"(integer0: integer, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
@@ -1954,9 +1956,9 @@ export interface $Int2ReferenceFunction<V = any> extends $Function$0<integer, V>
 /** @deprecated */
 "get"(object0: any): V
 "get"(int0: integer): V
-"getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(int0: integer, v1: V): V
 /** @deprecated */
 "put"(integer0: integer, v1: V): V
 "put"(int0: integer, v1: V): V
@@ -2125,7 +2127,7 @@ public "isEmpty"(): boolean
 public "lastIndexOf"(int0: integer): integer
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
-public "listIterator"(): $IntListIterator
+public "listIterator"(int0: integer): $IntListIterator
 public static "of"(...int0s: integer[]): $IntList
 public static "of"(int0: integer, int1: integer): $IntList
 public static "of"(): $IntList
@@ -2411,9 +2413,9 @@ export interface $Int2CharFunction extends $Function$0<integer, character>, $Int
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
 "getOrDefault"(int0: integer, char1: character): character
-"put"(int0: integer, char1: character): character
 /** @deprecated */
 "put"(integer0: integer, character1: character): character
+"put"(int0: integer, char1: character): character
 "remove"(int0: integer): character
 "size"(): integer
 }
@@ -2834,9 +2836,9 @@ export interface $Int2ByteFunction extends $Function$0<integer, byte>, $IntUnary
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(int0: integer, byte1: byte): byte
-"put"(int0: integer, byte1: byte): byte
 /** @deprecated */
 "put"(integer0: integer, byte1: byte): byte
+"put"(int0: integer, byte1: byte): byte
 "remove"(int0: integer): byte
 "size"(): integer
 }

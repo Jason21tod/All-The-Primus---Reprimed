@@ -1,0 +1,73 @@
+{
+    "type": "origins:multiple",
+    "feed": {
+        "priority":1,
+        "type": "origins:action_on_entity_use",
+        "bientity_action":{
+                "type": "origins:and",
+                "actions":[
+                    {
+                        "type": "origins:actor_action",
+                        "action":{
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:apply_effect",
+                                    "effects": [
+                                        {
+                                            "effect": "irons_spellbooks:instant_mana",
+                                            "duration": 10
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "msg @s voce se alimentou da mana do inimigo"
+                                }
+                            ]
+                        }
+                    }
+                ]
+        },
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions":[
+                {
+                    "type":"origins:target_condition",
+                    "condition": {
+                        "type":"origins:in_tag",
+                        "tag": "minecraft:vampire_food"
+                    }
+                },{
+                    "type":"origins:actor_condition",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource":"origins:vampire_thirsty_skill_cooldown",
+                        "comparison": "<=",
+                        "compare_to": 10
+                    }
+                }
+            ]
+        },
+        "item_condition": {
+            "type":"origins:empty"
+        }
+    },
+    "normal_blood":{
+        "type":"origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": 
+            {
+                "effect": "irons_spellbooks:instant_mana",
+                "duration": 1
+            }
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "kubejs:blood_bottle"
+            }
+        }
+    }
+}

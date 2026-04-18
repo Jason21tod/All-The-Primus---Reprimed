@@ -7,8 +7,8 @@ import { $BlockPredicate$$Type } from "net.minecraft.world.level.levelgen.blockp
 export class $EnvironmentScanPlacement extends $PlacementModifier {
 static readonly "CODEC": $Codec<$EnvironmentScanPlacement>
 
-public static "scanningFor"(direction0: $Direction$$Type, blockPredicate1: $BlockPredicate$$Type, int2: integer): $EnvironmentScanPlacement
 public static "scanningFor"(direction0: $Direction$$Type, blockPredicate1: $BlockPredicate$$Type, blockPredicate2: $BlockPredicate$$Type, int3: integer): $EnvironmentScanPlacement
+public static "scanningFor"(direction0: $Direction$$Type, blockPredicate1: $BlockPredicate$$Type, int2: integer): $EnvironmentScanPlacement
 }
 }
 

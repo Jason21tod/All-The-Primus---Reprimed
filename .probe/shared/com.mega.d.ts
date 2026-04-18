@@ -111,8 +111,8 @@ public "onSyncedDataUpdated"(capabilityEntityData0: $CapabilityEntityData$$Type<
 public "readSyncData"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type): void
 public "serializeNBT"(): $CompoundTag
 public "shouldAttachTo"(entity0: $Entity$$Type): boolean
-public "sync"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type): void
 public "sync"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type, level4: $Level$$Type): void
+public "sync"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type): void
 public "syncData"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type): void
 public "update"(entity0: $Entity$$Type): void
 get "dataManager"(): $SynchedCapabilityData
@@ -610,8 +610,8 @@ public "getXRelative"(float0: float): double
 public "getXRelative0"(): $CameraValueInstance
 public "getXRot0"(): $CameraValueInstance
 public "getXRotation"(float0: float): double
-public "getY"(float0: float): double
 public "getY"(): $CameraValueInstance
+public "getY"(float0: float): double
 public "getYOffset"(float0: float): double
 public "getYOffset0"(): $CameraValueInstance
 public "getYRelative"(float0: float): double
@@ -934,8 +934,8 @@ export interface $ICameraManager {
 "getYRelative0"(): $CameraValueInstance
 "getYRot0"(): $CameraValueInstance
 "getYRotation"(float0: float): double
-"getZ"(): $CameraValueInstance
 "getZ"(float0: float): double
+"getZ"(): $CameraValueInstance
 "getZOffset"(float0: float): double
 "getZOffset0"(): $CameraValueInstance
 "getZRelative"(float0: float): double
@@ -1346,8 +1346,8 @@ import { $MultiBufferSource, $MultiBufferSource$$Type } from "net.minecraft.clie
 import { $PoseStack, $PoseStack$$Type } from "com.mojang.blaze3d.vertex.PoseStack"
 
 export class $RenderShadowEvent extends $EntityEvent {
-constructor(entity0: $Entity$$Type, poseStack1: $PoseStack$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float, float4: float, float5: float)
 constructor()
+constructor(entity0: $Entity$$Type, poseStack1: $PoseStack$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float, float4: float, float5: float)
 
 public "getBufferSource"(): $MultiBufferSource
 public "getPartialTicks"(): float
@@ -1572,22 +1572,6 @@ static "simpleEnum"<T extends $Enum<T>>(class0: $Class$$Type<T>): $CapabilityDat
 }
 }
 
-declare module "com.mega.endinglib.api.client.camera.CameraKeyframeAnimation$AnimType" {
-import { $Codec } from "com.mojang.serialization.Codec"
-import { $Enum } from "java.lang.Enum"
-
-export class $CameraKeyframeAnimation$AnimType extends $Enum<$CameraKeyframeAnimation$AnimType> {
-static readonly "CODEC": $Codec<$CameraKeyframeAnimation$AnimType>
-static readonly "FOREVER": $CameraKeyframeAnimation$AnimType
-static readonly "LOOP": $CameraKeyframeAnimation$AnimType
-static readonly "STOP": $CameraKeyframeAnimation$AnimType
-static readonly "STOP_BACK_TO_ZERO": $CameraKeyframeAnimation$AnimType
-
-public static "valueOf"(string0: string): $CameraKeyframeAnimation$AnimType
-public static "values"(): $CameraKeyframeAnimation$AnimType[]
-}
-}
-
 declare module "com.mega.endinglib.mixin.accessor.AccessorSynchedEntityData" {
 import { $Entity } from "net.minecraft.world.entity.Entity"
 import { $SynchedEntityData$DataItem } from "net.minecraft.network.syncher.SynchedEntityData$DataItem"
@@ -1611,6 +1595,22 @@ export namespace $AccessorSynchedEntityData {
 const probejs$$marker: never
 }
 export abstract class $AccessorSynchedEntityData$$Static implements $AccessorSynchedEntityData {
+}
+}
+
+declare module "com.mega.endinglib.api.client.camera.CameraKeyframeAnimation$AnimType" {
+import { $Codec } from "com.mojang.serialization.Codec"
+import { $Enum } from "java.lang.Enum"
+
+export class $CameraKeyframeAnimation$AnimType extends $Enum<$CameraKeyframeAnimation$AnimType> {
+static readonly "CODEC": $Codec<$CameraKeyframeAnimation$AnimType>
+static readonly "FOREVER": $CameraKeyframeAnimation$AnimType
+static readonly "LOOP": $CameraKeyframeAnimation$AnimType
+static readonly "STOP": $CameraKeyframeAnimation$AnimType
+static readonly "STOP_BACK_TO_ZERO": $CameraKeyframeAnimation$AnimType
+
+public static "valueOf"(string0: string): $CameraKeyframeAnimation$AnimType
+public static "values"(): $CameraKeyframeAnimation$AnimType[]
 }
 }
 
@@ -1733,8 +1733,8 @@ public "removeDynamicKeyframeAnimations"(): void
 public "removeKeyframeAnimation"(string0: string): void
 public "removeKeyframeAnimation"(cameraKeyframeAnimation0: $CameraKeyframeAnimation$$Type): void
 public "removeKeyframeAnimations"(): void
-public "removeModifier"(uUID0: $UUID$$Type): void
 public "removeModifier"(cameraModifier0: $CameraModifier$$Type): void
+public "removeModifier"(uUID0: $UUID$$Type): void
 public "removeModifierWithoutDirty"(cameraModifier0: $CameraModifier$$Type): void
 public "removeModifierWithoutDirty"(uUID0: $UUID$$Type): void
 public "removeModifiers"(): void
@@ -1744,11 +1744,11 @@ public "removePermanentModifierWithoutDirty"(uUID0: $UUID$$Type): boolean
 public "removeStaticKeyframeAnimations"(): void
 public "replaceFrom"(cameraValueInstance0: $CameraValueInstance$$Type): void
 public "save"(): $CompoundTag
-public "setAnimDirty"(boolean0: boolean): void
 public "setAnimDirty"(): void
+public "setAnimDirty"(boolean0: boolean): void
 public "setBaseValue"(double0: double): void
-public "setDirty"(): void
 public "setDirty"(boolean0: boolean): void
+public "setDirty"(): void
 public "tickAnimations"(): void
 get "baseValue"(): double
 get "keyframeAnimations"(): $Collection<$CameraKeyframeAnimation>
@@ -2754,8 +2754,8 @@ public "removeIndex"(string0: string, int1: integer): boolean
 public "replaceIndex"(string0: string, int1: integer, cameraKeyframe2: $CameraKeyframe$$Type): boolean
 public "reset"(): void
 public "serializeNBT"(): $CompoundTag
-public "setDirty"(): void
 public "setDirty"(boolean0: boolean): void
+public "setDirty"(): void
 public "setDynamic"(boolean0: boolean): void
 public "setStopped"(boolean0: boolean): void
 public "tick"(): void
@@ -3163,8 +3163,8 @@ public "getItemStack"(): $ItemStack
 public static "getRegistryMap"(): $Map<$ResourceLocation, $ItemComponentType<any>>
 public static "getWeaponDisableBlockingForSeconds"(livingEntity0: $LivingEntity$$Type): float
 public static "has"<T>(itemStack0: $ItemStack$$Type, itemComponentType1: $ItemComponentType$$Type<T>): boolean
-public "ifPresent"<T>(itemComponentType0: $ItemComponentType$$Type<T>, consumer1: $Consumer$$Type<T>): void
 public static "ifPresent"<T>(itemStack0: $ItemStack$$Type, itemComponentType1: $ItemComponentType$$Type<T>, consumer2: $Consumer$$Type<T>): void
+public "ifPresent"<T>(itemComponentType0: $ItemComponentType$$Type<T>, consumer1: $Consumer$$Type<T>): void
 public static "init"(): void
 public static "itemStackCodec"(itemLike0: $ItemLike$$Type, int1: integer, optional2: $Optional$$Type<$CompoundTag$$Type>, componentChanges3: $ComponentChanges$$Type): $ItemStack
 public "mergeChangedToNBTAndUpdate"(componentChanges0: $ComponentChanges$$Type): void

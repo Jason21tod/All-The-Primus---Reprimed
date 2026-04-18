@@ -65,8 +65,8 @@ constructor(player0: $Player$$Type)
 
 public "add"(itemStack0: $ItemStack$$Type): boolean
 public "add"(int0: integer, itemStack1: $ItemStack$$Type): boolean
-public "addResource"(int0: integer, itemStack1: $ItemStack$$Type): integer
 public "addResource"(itemStack0: $ItemStack$$Type): integer
+public "addResource"(int0: integer, itemStack1: $ItemStack$$Type): integer
 public "asContainer"(): $Container
 public "canPlaceItem"(int0: integer, itemStack1: $ItemStack$$Type): boolean
 public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $ItemStack$$Type): boolean
@@ -74,18 +74,18 @@ public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearContent"(): void
 public "clearOrCountMatchingItems"(predicate0: $Predicate$$Type<$ItemStack$$Type>, int1: integer, container2: $Container$$Type): integer
-public "contains"(tagKey0: $TagKey$$Type<$Item$$Type>): boolean
 public "contains"(itemStack0: $ItemStack$$Type): boolean
-public "count"(ingredient: $Ingredient$$Type): integer
+public "contains"(tagKey0: $TagKey$$Type<$Item$$Type>): boolean
 public "count"(): integer
+public "count"(ingredient: $Ingredient$$Type): integer
 public "countItem"(item0: $Item$$Type): integer
 public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
 public "dropAll"(): void
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fillStackedContents"(stackedContents0: $StackedContents$$Type): void
-public "find"(): integer
 public "find"(ingredient: $Ingredient$$Type): integer
+public "find"(): integer
 public "findSlotMatchingItem"(itemStack0: $ItemStack$$Type): integer
 public "findSlotMatchingUnusedItem"(itemStack0: $ItemStack$$Type): integer
 public "getAllItems"(): $List<$ItemStack>
@@ -112,9 +112,9 @@ public "getWidth"(): integer
 public "handler$dgb000$celestisynth$pickSlot"(int0: integer, callbackInfo1: $CallbackInfo$$Type): void
 public "handler$dgb000$celestisynth$setPickedItem"(itemStack0: $ItemStack$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public "handler$dgb000$celestisynth$swapPaint"(double0: double, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$hhf000$onDropSelectedItem"(dropEntireStack: boolean, info: $CallbackInfoReturnable$$Type): void
-public "handler$hlm000$fireDropEvent"(ci: $CallbackInfo$$Type, var1: $Iterator$$Type, list: $List$$Type, i: integer): void
-public "handler$hlm000$restoreNotDropped"(ci: $CallbackInfo$$Type, var1: $Iterator$$Type, list: $List$$Type, i: integer): void
+public "handler$hgp000$onDropSelectedItem"(dropEntireStack: boolean, info: $CallbackInfoReturnable$$Type): void
+public "handler$hlg000$fireDropEvent"(ci: $CallbackInfo$$Type, var1: $Iterator$$Type, list: $List$$Type, i: integer): void
+public "handler$hlg000$restoreNotDropped"(ci: $CallbackInfo$$Type, var1: $Iterator$$Type, list: $List$$Type, i: integer): void
 public "hasAnyMatching"(predicate0: $Predicate$$Type): boolean
 public "hasAnyOf"(set0: $Set$$Type<$Item$$Type>): boolean
 public "hasCustomName"(): boolean
@@ -130,8 +130,8 @@ public "isMutable"(): boolean
 public "kjs$self"(): $Container
 public "load"(listTag0: $ListTag$$Type): void
 public "pickSlot"(int0: integer): void
-public "placeItemBackInInventory"(itemStack0: $ItemStack$$Type, boolean1: boolean): void
 public "placeItemBackInInventory"(itemStack0: $ItemStack$$Type): void
+public "placeItemBackInInventory"(itemStack0: $ItemStack$$Type, boolean1: boolean): void
 public "removeFromSelected"(boolean0: boolean): $ItemStack
 public "removeItem"(int0: integer, int1: integer): $ItemStack
 public "removeItem"(itemStack0: $ItemStack$$Type): void
@@ -145,8 +145,8 @@ public "setPickedItem"(itemStack0: $ItemStack$$Type): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
+public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public "swapPaint"(double0: double): void
@@ -296,7 +296,6 @@ import { $EntityPlayer_BetterCombat } from "net.bettercombat.api.EntityPlayer_Be
 import { $Set } from "java.util.Set"
 import { $LevelRenderer$$Type } from "net.minecraft.client.renderer.LevelRenderer"
 import { $InteractionResult } from "net.minecraft.world.InteractionResult"
-import { $PlayerData } from "dev.tr7zw.notenoughanimations.access.PlayerData"
 import { $ObjectOpenCustomHashSet } from "it.unimi.dsi.fastutil.objects.ObjectOpenCustomHashSet"
 import { $Nameable } from "net.minecraft.world.Nameable"
 import { $Boat$$Type } from "net.minecraft.world.entity.vehicle.Boat"
@@ -339,7 +338,6 @@ import { $ACExBaseInterface } from "org.crimsoncrips.alexscavesexemplified.misc.
 import { $InteractionHand, $InteractionHand$$Type } from "net.minecraft.world.InteractionHand"
 import { $ShapeType, $ShapeType$$Type } from "tocraft.walkers.api.variant.ShapeType"
 import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
-import { $DataHolder$$Type } from "dev.tr7zw.notenoughanimations.versionless.animations.DataHolder"
 import { $Either } from "com.mojang.datafixers.util.Either"
 import { $LivingEntity, $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $MerchantOffers$$Type } from "net.minecraft.world.item.trading.MerchantOffers"
@@ -423,7 +421,7 @@ import { $AbstractHorse$$Type } from "net.minecraft.world.entity.animal.horse.Ab
 import { $Class } from "java.lang.Class"
 import { $LocalBooleanRef$$Type } from "com.llamalad7.mixinextras.sugar.ref.LocalBooleanRef"
 
-export class $Player extends $LivingEntity implements $IForgePlayer, $IAnimatedPlayer, $ACExBaseInterface, $Nameable, $CommandSource, $ModifyPlayerSpawnCache, $VisionDuck, $IFlying, $SlowFallingEntity, $PlayerMixinSupport, $PlayerEntityAccessor, $PlayerAttackProperties, $EntityPlayer_BetterCombat, $PlayerEntityAccessor$0, $Trackable, $PlayerData, $DynamicLightSource, $ETFPlayerEntity, $PlayerAccessor, $ISupportTransmog, $AccessorPlayer, $IModifiesTime, $PlayerDataProvider$0, $PlayerDataProvider, $SonicBoomUser, $PlayerKJS {
+export class $Player extends $LivingEntity implements $IForgePlayer, $IAnimatedPlayer, $ACExBaseInterface, $Nameable, $CommandSource, $ModifyPlayerSpawnCache, $VisionDuck, $IFlying, $SlowFallingEntity, $PlayerMixinSupport, $PlayerEntityAccessor, $PlayerAttackProperties, $EntityPlayer_BetterCombat, $PlayerEntityAccessor$0, $Trackable, $DynamicLightSource, $ETFPlayerEntity, $PlayerAccessor, $ISupportTransmog, $AccessorPlayer, $IModifiesTime, $PlayerDataProvider$0, $PlayerDataProvider, $SonicBoomUser, $PlayerKJS {
 static readonly "CROUCH_BB_HEIGHT": float
 static readonly "DEFAULT_EYE_HEIGHT": float
 static readonly "ENDER_SLOT_OFFSET": integer
@@ -494,14 +492,14 @@ public "crit"(entity0: $Entity$$Type): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "disableShield"(boolean0: boolean): void
 public "displayClientMessage"(component0: $Component$$Type, boolean1: boolean): void
-public "drop"(itemStack0: $ItemStack$$Type, boolean1: boolean): $ItemEntity
 public "drop"(itemStack0: $ItemStack$$Type, boolean1: boolean, boolean2: boolean): $ItemEntity
+public "drop"(itemStack0: $ItemStack$$Type, boolean1: boolean): $ItemEntity
 public "etf$canBeBright"(): boolean
 public "etf$distanceTo"(entity0: $Entity$$Type): float
 public "etf$getArmorItems"(): $Iterable<$ItemStack>
@@ -542,8 +540,8 @@ public "getAndDestroyFlyingCache"(): boolean
 public "getAnimation"(): $AnimationApplier
 public "getAnimationStack"(): $AnimationStack
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -567,15 +565,14 @@ public "getCraftingGrid"(): $InventoryKJS
 public "getCurrentAttack"(): $AttackHand
 public "getCurrentItemAttackStrengthDelay"(): float
 public "getCustomName"(): $Component
-public "getData"(holder: $DataHolder$$Type, builder: $Supplier$$Type): any
 public "getData"(): $AttachedData
 public "getDefaultMovementSpeed"(): double
 /** @deprecated */
 public "getDestroySpeed"(blockState0: $BlockState$$Type): float
 public "getDigSpeed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type): float
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEnchantmentSeed"(): integer
 public "getEnderChestInventory"(): $PlayerEnderChestContainer
@@ -597,11 +594,7 @@ public "getInventory"(): $InventoryKJS
 public "getInventory"(): $Inventory
 public "getInventoryChangeListener"(): $KubeJSInventoryListener
 public "getItem"(): $ItemStack
-public "getItemSwapAnimationTimer"(): integer
-public "getLastAnimationSwapTick"(): integer
 public "getLastDeathLocation"(): $Optional<$GlobalPos>
-public "getLastHeldItems"(): $ItemStack[]
-public "getLastRotations"(): float[]
 public "getLegsArmorItem"(): $ItemStack
 public "getLevel"(): $Level
 public "getLuck"(): float
@@ -618,7 +611,6 @@ public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public "getParts"(): $PartEntity<any>[]
 public "getPassengers"(): $EntityArrayList
 public "getPickedResult"(hitResult0: $HitResult$$Type): $ItemStack
-public "getPoseOverwrite"(): $Pose
 public "getPotionEffects"(): $EntityPotionEffectsJS
 public "getPrefixes"(): $Collection<$MutableComponent>
 public "getProfile"(): $GameProfile
@@ -638,7 +630,6 @@ public "getSelfDestructTime"(): integer
 public "getServer"(): $MinecraftServer
 public "getShoulderEntityLeft"(): $CompoundTag
 public "getShoulderEntityRight"(): $CompoundTag
-public "getSideSword"(): $ItemStack
 public "getSleepTimer"(): integer
 public "getSoundFromFluidType"(fluidType0: $FluidType$$Type, soundAction1: $SoundAction$$Type): $SoundEvent
 public "getStages"(): $Stages
@@ -668,19 +659,20 @@ public "handler$dge000$celestisynth$attack"(entity0: $Entity$$Type, callbackInfo
 public "handler$dge000$celestisynth$tick"(callbackInfo0: $CallbackInfo$$Type): void
 public "handler$dic000$isBleeding"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
 public "handler$dka000$stopSleepInBed"(boolean0: boolean, boolean1: boolean, callbackInfo2: $CallbackInfo$$Type): void
-public "handler$emn000$getEquippedStack_Pre"(slot: $EquipmentSlot$$Type, cir: $CallbackInfoReturnable$$Type): void
-public "handler$emn001$post_Tick"(ci: $CallbackInfo$$Type): void
-public "handler$fdm017$tick"(info: $CallbackInfo$$Type): void
-public "handler$gcf000$l2damagetracker$attack$allowSweep"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type, localBooleanRef2: $LocalBooleanRef$$Type): void
-public "handler$gcf000$l2damagetracker$attack$critParticle"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type, localBooleanRef2: $LocalBooleanRef$$Type, localRef3: $LocalRef$$Type): void
-public "handler$hib000$mca$getActiveEyeHeight"(pose: $Pose$$Type, dimensions: $EntityDimensions$$Type, cir: $CallbackInfoReturnable$$Type): void
-public "handler$hjj000$ac_getFlyingSpeed"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$hjj000$ac_getSpeed"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ifg000$getStandingEyeHeight"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$ifg000$onIsStayingOnGroundSurface"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ifg000$onJumpFromGround"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$ifg000$onTryToStartFallFlying"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ifg001$getDimensions"(pose0: $Pose$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$elp000$_onDropEquipment"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$elp000$_onGetExperience"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$emp000$getEquippedStack_Pre"(slot: $EquipmentSlot$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$emp001$post_Tick"(ci: $CallbackInfo$$Type): void
+public "handler$gbp000$l2damagetracker$attack$allowSweep"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type, localBooleanRef2: $LocalBooleanRef$$Type): void
+public "handler$gbp000$l2damagetracker$attack$critParticle"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type, localBooleanRef2: $LocalBooleanRef$$Type, localRef3: $LocalRef$$Type): void
+public "handler$hhl000$mca$getActiveEyeHeight"(pose: $Pose$$Type, dimensions: $EntityDimensions$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$hjd000$ac_getFlyingSpeed"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$hjd000$ac_getSpeed"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ife000$getStandingEyeHeight"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$ife000$onIsStayingOnGroundSurface"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ife000$onJumpFromGround"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$ife000$onTryToStartFallFlying"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ife001$getDimensions"(pose0: $Pose$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
 public "handler$znf000$goetyInteractOn"(entity0: $Entity$$Type, interactionHand1: $InteractionHand$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
 public "hasContainerOpen"(): boolean
 public "hasCorrectToolForDrops"(blockState0: $BlockState$$Type): boolean
@@ -696,7 +688,6 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isCloseEnough"(entity0: $Entity$$Type, double1: double): boolean
 public "isCreative"(): boolean
-public "isDisableBodyRotation"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFake"(): boolean
 public "isFrame"(): boolean
@@ -718,14 +709,12 @@ public "isPlayer"(): boolean
 public "isPowered"(): boolean
 public "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
 public "isReducedDebugInfo"(): boolean
-public "isRotateBodyToHead"(): boolean
 public "isScoping"(): boolean
 public "isSecondaryUseActive"(): boolean
 public "isSleepingLongEnough"(): boolean
 public "isTextFilteringEnabled"(): boolean
 public "isTimeModificationValid"(tickRateModifier0: $TickRateModifier$$Type): boolean
 public "isUndead"(): boolean
-public "isUpdated"(frameId: integer): integer
 public "isWaterCreature"(): boolean
 public "jumpFromGround"(): void
 public "jumpInFluid"(fluidType0: $FluidType$$Type): void
@@ -736,7 +725,7 @@ public "markFlying"(): void
 public "mayBuild"(): boolean
 public "mayUseItemAt"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type, itemStack2: $ItemStack$$Type): boolean
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
-public "modify$emn000$getHand"(hand: $InteractionHand$$Type): $InteractionHand
+public "modify$emp000$getHand"(hand: $InteractionHand$$Type): $InteractionHand
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "modifyAttribute"(attribute: $Attribute$$Type, identifier: string, d: double, operation: $AttributeModifier$Operation$$Type): void
 public "moveInFluid"(fluidState0: $FluidState$$Type, vec31: $Vec3$$Type, double2: double): boolean
@@ -756,17 +745,17 @@ public "openStructureBlock"(structureBlockEntity0: $StructureBlockEntity$$Type):
 public "openTextEdit"(signBlockEntity0: $SignBlockEntity$$Type, boolean1: boolean): void
 public "paint"(renderer: $CompoundTag$$Type): void
 public "playNotifySound"(soundEvent0: $SoundEvent$$Type, soundSource1: $SoundSource$$Type, float2: float, float3: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playerAnimator_getAnimation"(): $AnimationApplier
 public "playerAnimator_getAnimation"(id: $ResourceLocation$$Type): $IAnimation
 public "playerAnimator_setAnimation"(id: $ResourceLocation$$Type, animation: $IAnimation$$Type): $IAnimation
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "redirect$cko000$isSubmergedInProxy"(player0: $Player$$Type, tagKey1: $TagKey$$Type): boolean
-public "redirect$emn000$getMainHandStack_Redirect"(instance: $Player$$Type): $ItemStack
-public "redirect$emn000$setStackInHand_Redirect"(instance: $Player$$Type, handArg: $InteractionHand$$Type, itemStack: $ItemStack$$Type): void
+public "redirect$emp000$getMainHandStack_Redirect"(instance: $Player$$Type): $ItemStack
+public "redirect$emp000$setStackInHand_Redirect"(instance: $Player$$Type, handArg: $InteractionHand$$Type, itemStack: $ItemStack$$Type): void
 public "refreshDisplayName"(): void
 public "removeActiveSpawnPower"(): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -791,6 +780,7 @@ public "sendData"(channel: string): void
 public "sendInventoryUpdate"(): void
 public "sendMerchantOffers"(int0: integer, merchantOffers1: $MerchantOffers$$Type, int2: integer, int3: integer, boolean4: boolean, boolean5: boolean): void
 public "sendSystemMessage"(component0: $Component$$Type): void
+public "serializeNBT"(): $CompoundTag
 public "setActiveSpawnPower"(resourceKey0: $ResourceKey$$Type): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChantColor"(int0: integer): void
@@ -801,7 +791,6 @@ public "setChestArmorItem"(item: $ItemStack$$Type): void
 public "setComboCount"(comboCount: integer): void
 public "setDefaultMovementSpeed"(speed: double): void
 public "setDefaultMovementSpeedMultiplier"(speed: double): void
-public "setDisableBodyRotation"(disableBodyRotation: boolean): void
 public "setEntityOnShoulder"(compoundTag0: $CompoundTag$$Type): boolean
 public "setEquipment"(slot: $EquipmentSlot$$Type, item: $ItemStack$$Type): void
 public "setFeetArmorItem"(item: $ItemStack$$Type): void
@@ -810,10 +799,7 @@ public "setForcedPose"(pose0: $Pose$$Type): void
 public static "setFromWeightedList"(livingEntity0: $LivingEntity$$Type): $VisionEntityVariant
 public "setHeadArmorItem"(item: $ItemStack$$Type): void
 public "setHeldItem"(hand: $InteractionHand$$Type, item: $ItemStack$$Type): void
-public "setItemSwapAnimationTimer"(count: integer): void
-public "setLastAnimationSwapTick"(count: integer): void
 public "setLastDeathLocation"(optional0: $Optional$$Type<$GlobalPos$$Type>): void
-public "setLastRotations"(lastRotations: float[]): void
 public "setLegsArmorItem"(item: $ItemStack$$Type): void
 public "setMainArm"(humanoidArm0: $HumanoidArm$$Type): void
 public "setMainHandItem"(item: $ItemStack$$Type): void
@@ -825,7 +811,6 @@ public "setMouseItem"(item: $ItemStack$$Type): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPoseOverwrite"(state: $Pose$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
@@ -833,7 +818,6 @@ public "setProjectionScale"(int0: integer): void
 public "setPulseScale"(int0: integer): void
 public "setPulseTimeSpeed"(int0: integer): void
 public "setReducedDebugInfo"(boolean0: boolean): void
-public "setRotateBodyToHead"(rotateBodyToHead: boolean): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setSaturation"(saturation: float): void
 public "setScore"(int0: integer): void
@@ -841,12 +825,10 @@ public "setScreenShakeDuration"(int0: integer): void
 public "setScreenShakeFadeoutBegin"(int0: integer): void
 public "setScreenShakeIntensity"(float0: float): void
 public "setSelectedSlot"(index: integer): void
-public "setSideSword"(sideSword: $ItemStack$$Type): void
 public "setStatusMessage"(message: $Component$$Type): void
 public "setTexturePulseImage"(string0: string): void
 public "setTexturePulseMark"(int0: integer): void
 public "setTotalMovementSpeedMultiplier"(speed: double): void
-public "setUpdated"(frameId: integer): void
 public "setX"(x: double): void
 public "setXp"(xp: integer): void
 public "setXpLevel"(l: integer): void
@@ -863,13 +845,13 @@ public "spawn"(): void
 public "startAutoSpinAttack"(int0: integer): void
 public "startFallFlying"(): void
 public "startSleepInBed"(blockPos0: $BlockPos$$Type): $Either<$Player$BedSleepingProblem, $Unit>
-public "startTracking"(): void
 public static "startTracking"(object0: any): void
+public "startTracking"(): void
 public "stopFallFlying"(): void
 public "stopSleepInBed"(boolean0: boolean, boolean1: boolean): void
 public "sweepAttack"(): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
@@ -891,8 +873,8 @@ public "walkers$setCurrentShape"(shape: $LivingEntity$$Type): void
 public "walkers$setRemainingHostilityTime"(max: integer): void
 public "walkers$updateShapes"(shape: $LivingEntity$$Type): void
 public "wrap"(): $WeakReference<$Trackable>
-public "wrapOperation$gcf000$l2damagetracker$actuallyHurt$moveLivingDamagePre"(player0: $Player$$Type, damageSource1: $DamageSource$$Type, float2: float, operation3: $Operation$$Type): float
-public "wrapOperation$gcf001$l2damagetracker$actuallyHurt$moveLivingDamagePost"(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float, operation3: $Operation$$Type): float
+public "wrapOperation$gbp000$l2damagetracker$actuallyHurt$moveLivingDamagePre"(player0: $Player$$Type, damageSource1: $DamageSource$$Type, float2: float, operation3: $Operation$$Type): float
+public "wrapOperation$gbp001$l2damagetracker$actuallyHurt$moveLivingDamagePost"(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float, operation3: $Operation$$Type): float
 get "bob"(): float
 set "bob"(value: float)
 get "containerMenu"(): $AbstractContainerMenu
@@ -962,11 +944,7 @@ get "inventory"(): $InventoryKJS
 get "inventory"(): $Inventory
 get "inventoryChangeListener"(): $KubeJSInventoryListener
 get "item"(): $ItemStack
-get "itemSwapAnimationTimer"(): integer
-get "lastAnimationSwapTick"(): integer
 get "lastDeathLocation"(): $Optional<$GlobalPos>
-get "lastHeldItems"(): $ItemStack[]
-get "lastRotations"(): float[]
 get "legsArmorItem"(): $ItemStack
 get "level"(): $Level
 get "luck"(): float
@@ -981,7 +959,6 @@ get "offHandItem"(): $ItemStack
 get "openInventory"(): $AbstractContainerMenu
 get "parts"(): $PartEntity<any>[]
 get "passengers"(): $EntityArrayList
-get "poseOverwrite"(): $Pose
 get "potionEffects"(): $EntityPotionEffectsJS
 get "prefixes"(): $Collection<$MutableComponent>
 get "profile"(): $GameProfile
@@ -1001,7 +978,6 @@ get "selfDestructTime"(): integer
 get "server"(): $MinecraftServer
 get "shoulderEntityLeft"(): $CompoundTag
 get "shoulderEntityRight"(): $CompoundTag
-get "sideSword"(): $ItemStack
 get "sleepTimer"(): integer
 get "stages"(): $Stages
 get "stats"(): $PlayerStatsJS
@@ -1020,7 +996,6 @@ get "affectedByFluids"(): boolean
 get "ambientCreature"(): boolean
 get "animal"(): boolean
 get "creative"(): boolean
-get "disableBodyRotation"(): boolean
 get "fake"(): boolean
 get "frame"(): boolean
 get "hurt"(): boolean
@@ -1034,7 +1009,6 @@ get "peacefulCreature"(): boolean
 get "player"(): boolean
 get "powered"(): boolean
 get "reducedDebugInfo"(): boolean
-get "rotateBodyToHead"(): boolean
 get "scoping"(): boolean
 get "secondaryUseActive"(): boolean
 get "sleepingLongEnough"(): boolean
@@ -1050,16 +1024,12 @@ set "chestArmorItem"(value: $ItemStack$$Type)
 set "comboCount"(value: integer)
 set "defaultMovementSpeed"(value: double)
 set "defaultMovementSpeedMultiplier"(value: double)
-set "disableBodyRotation"(value: boolean)
 set "entityOnShoulder"(value: $CompoundTag$$Type)
 set "feetArmorItem"(value: $ItemStack$$Type)
 set "foodLevel"(value: integer)
 set "forcedPose"(value: $Pose$$Type)
 set "headArmorItem"(value: $ItemStack$$Type)
-set "itemSwapAnimationTimer"(value: integer)
-set "lastAnimationSwapTick"(value: integer)
 set "lastDeathLocation"(value: $Optional$$Type<$GlobalPos$$Type>)
-set "lastRotations"(value: float[])
 set "legsArmorItem"(value: $ItemStack$$Type)
 set "mainArm"(value: $HumanoidArm$$Type)
 set "mainHandItem"(value: $ItemStack$$Type)
@@ -1071,25 +1041,21 @@ set "mouseItem"(value: $ItemStack$$Type)
 set "movementSpeedAddition"(value: double)
 set "nbt"(value: $CompoundTag$$Type)
 set "offHandItem"(value: $ItemStack$$Type)
-set "poseOverwrite"(value: $Pose$$Type)
 set "position"(value: $BlockContainerJS$$Type)
 set "projectionScale"(value: integer)
 set "pulseScale"(value: integer)
 set "pulseTimeSpeed"(value: integer)
 set "reducedDebugInfo"(value: boolean)
-set "rotateBodyToHead"(value: boolean)
 set "saturation"(value: float)
 set "score"(value: integer)
 set "screenShakeDuration"(value: integer)
 set "screenShakeFadeoutBegin"(value: integer)
 set "screenShakeIntensity"(value: float)
 set "selectedSlot"(value: integer)
-set "sideSword"(value: $ItemStack$$Type)
 set "statusMessage"(value: $Component$$Type)
 set "texturePulseImage"(value: string)
 set "texturePulseMark"(value: integer)
 set "totalMovementSpeedMultiplier"(value: double)
-set "updated"(value: integer)
 set "x"(value: double)
 set "xp"(value: integer)
 set "xpLevel"(value: integer)
@@ -1135,8 +1101,8 @@ public "canCraft"(recipe0: $Recipe$$Type<any>, intList1: $IntList$$Type): boolea
 public "canCraft"(recipe0: $Recipe$$Type<any>, intList1: $IntList$$Type, int2: integer): boolean
 public "clear"(): void
 public static "fromStackingIndex"(int0: integer): $ItemStack
-public "getBiggestCraftableStack"(recipe0: $Recipe$$Type<any>, intList1: $IntList$$Type): integer
 public "getBiggestCraftableStack"(recipe0: $Recipe$$Type<any>, int1: integer, intList2: $IntList$$Type): integer
+public "getBiggestCraftableStack"(recipe0: $Recipe$$Type<any>, intList1: $IntList$$Type): integer
 public static "getStackingIndex"(itemStack0: $ItemStack$$Type): integer
 }
 }

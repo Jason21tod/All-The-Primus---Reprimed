@@ -308,9 +308,9 @@ export interface $Long2CharFunction extends $Function$0<long, character>, $LongT
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
 "getOrDefault"(long0: long, char1: character): character
-"put"(long0: long, char1: character): character
 /** @deprecated */
 "put"(long0: long, character1: character): character
+"put"(long0: long, char1: character): character
 "remove"(long0: long): character
 "size"(): integer
 }
@@ -396,8 +396,8 @@ export interface $Long2ByteFunction extends $Function$0<long, byte>, $LongToIntF
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(long0: long, byte1: byte): byte
-"put"(long0: long, byte1: byte): byte
 /** @deprecated */
+"put"(long0: long, byte1: byte): byte
 "put"(long0: long, byte1: byte): byte
 "remove"(long0: long): byte
 "size"(): integer
@@ -484,13 +484,13 @@ export interface $Long2BooleanFunction extends $Function$0<long, boolean>, $Long
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(long0: long): boolean
+"getOrDefault"(long0: long, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
-"getOrDefault"(long0: long, boolean1: boolean): boolean
 "negate"(): $LongPredicate
 "or"(longPredicate0: $LongPredicate$$Type): $LongPredicate
-"put"(long0: long, boolean1: boolean): boolean
 /** @deprecated */
+"put"(long0: long, boolean1: boolean): boolean
 "put"(long0: long, boolean1: boolean): boolean
 "remove"(long0: long): boolean
 "size"(): integer
@@ -779,8 +779,8 @@ export interface $Long2ShortFunction extends $Function$0<long, short>, $LongToIn
 /** @deprecated */
 "getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(long0: long, short1: short): short
-"put"(long0: long, short1: short): short
 /** @deprecated */
+"put"(long0: long, short1: short): short
 "put"(long0: long, short1: short): short
 "remove"(long0: long): short
 "size"(): integer
@@ -867,8 +867,8 @@ export interface $Long2FloatFunction extends $Function$0<long, float>, $LongToDo
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(long0: long, float1: float): float
-"put"(long0: long, float1: float): float
 /** @deprecated */
+"put"(long0: long, float1: float): float
 "put"(long0: long, float1: float): float
 "remove"(long0: long): float
 "size"(): integer
@@ -1228,8 +1228,8 @@ export interface $Long2DoubleFunction extends $Function$0<long, double>, $LongTo
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
 "getOrDefault"(long0: long, double1: double): double
-"put"(long0: long, double1: double): double
 /** @deprecated */
+"put"(long0: long, double1: double): double
 "put"(long0: long, double1: double): double
 "remove"(long0: long): double
 "size"(): integer
@@ -1354,9 +1354,9 @@ export interface $LongList extends $List<long>, $Comparable<$List<long>>, $LongC
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(long0s: long[]): long[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toLongArray"(): long[]
 /** @deprecated */
 "toLongArray"(long0s: long[]): long[]
+"toLongArray"(): long[]
 "unstableSort"(longComparator0: $LongComparator$$Type): void
 /** @deprecated */
 "unstableSort"(comparator0: $Comparator$$Type<long>): void
@@ -1475,9 +1475,9 @@ export interface $Long2ObjectFunction<V = any> extends $Function$0<long, V>, $Lo
 /** @deprecated */
 "get"(object0: any): V
 "get"(long0: long): V
-"getOrDefault"(long0: long, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(long0: long, v1: V): V
 /** @deprecated */
 "put"(long0: long, v1: V): V
 "put"(long0: long, v1: V): V
@@ -1675,9 +1675,9 @@ export interface $LongSortedSet extends $LongSet, $SortedSet<long>, $LongBidirec
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toLongArray"(): long[]
 /** @deprecated */
 "toLongArray"(long0s: long[]): long[]
+"toLongArray"(): long[]
 get "last"(): long
 get "empty"(): boolean
 }
@@ -1926,9 +1926,9 @@ export interface $Long2ReferenceFunction<V = any> extends $Function$0<long, V>, 
 /** @deprecated */
 "get"(object0: any): V
 "get"(long0: long): V
-"getOrDefault"(long0: long, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(long0: long, v1: V): V
 /** @deprecated */
 "put"(long0: long, v1: V): V
 "put"(long0: long, v1: V): V
@@ -2203,9 +2203,9 @@ public "defaultReturnValue"(): V
 /** @deprecated */
 public "get"(object0: any): V
 public "get"(long0: long): V
-public "getOrDefault"(long0: long, v1: V): V
 /** @deprecated */
 public "getOrDefault"(object0: any, v1: V): V
+public "getOrDefault"(long0: long, v1: V): V
 public static "identity"<T>(): $Function<T, T>
 /** @deprecated */
 public "put"(long0: long, v1: V): V
@@ -2279,9 +2279,9 @@ export interface $LongSet extends $LongCollection, $Set<long> {
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toLongArray"(): long[]
 /** @deprecated */
 "toLongArray"(long0s: long[]): long[]
+"toLongArray"(): long[]
 get "empty"(): boolean
 }
 
@@ -2552,9 +2552,9 @@ export interface $Long2IntFunction extends $Function$0<long, integer>, $LongToIn
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
 "getOrDefault"(long0: long, int1: integer): integer
-"put"(long0: long, int1: integer): integer
 /** @deprecated */
 "put"(long0: long, integer1: integer): integer
+"put"(long0: long, int1: integer): integer
 "remove"(long0: long): integer
 "size"(): integer
 }
@@ -2626,9 +2626,9 @@ export interface $LongCollection extends $Collection<long>, $LongIterable {
 "toArray"<T>(t0s: T[]): T[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 "toArray"(): any[]
-"toLongArray"(): long[]
 /** @deprecated */
 "toLongArray"(long0s: long[]): long[]
+"toLongArray"(): long[]
 get "empty"(): boolean
 }
 

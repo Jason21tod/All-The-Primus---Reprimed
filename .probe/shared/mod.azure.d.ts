@@ -466,9 +466,10 @@ constructor(double0: double, azEasingType1: $AzEasingType$$Type, azPlayBehavior2
 public "hasPlayBehavior"(): boolean
 public "playBehavior"(): $AzPlayBehavior
 public "withAnimationSpeed"(double0: double): $AzAnimationStageProperties
+public "withEasingType"(azEasingType0: $AzEasingType$$Type): $AzAnimationStageProperties
+public "withFreezeTickOffset"(double0: double): $AzAnimationStageProperties
 public "withPlayBehavior"(azPlayBehavior0: $AzPlayBehavior$$Type): $AzAnimationStageProperties
-public "withStartTickOffset"(double0: double): $AzAnimationStageProperties
-public "withTransitionLength"(float0: float): $AzAnimationStageProperties
+public "withRepeatXTimes"(double0: double): $AzAnimationStageProperties
 }
 }
 
@@ -1043,8 +1044,8 @@ import { $AzAnimationControllerContainer, $AzAnimationControllerContainer$$Type 
 import { $AzBakedAnimation } from "mod.azure.azurelib.animation.primitive.AzBakedAnimation"
 
 export class $AzAnimator<K = any, T = any> {
-public "animate"(t0: T, float1: float): void
 public "animate"(t0: T, float1: float, boolean2: boolean): void
+public "animate"(t0: T, float1: float): void
 public "context"(): $AzAnimationContext<T>
 public "createAzAnimationTimer"(azAnimatorConfig0: $AzAnimatorConfig$$Type): $AzAnimationTimer
 public "createBoneCache"(): $AzBoneCache

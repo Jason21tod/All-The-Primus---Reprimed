@@ -101,9 +101,9 @@ export interface $Byte2IntFunction extends $Function$0<byte, integer>, $IntUnary
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
 "getOrDefault"(byte0: byte, int1: integer): integer
-"put"(byte0: byte, int1: integer): integer
 /** @deprecated */
 "put"(byte0: byte, integer1: integer): integer
+"put"(byte0: byte, int1: integer): integer
 "remove"(byte0: byte): integer
 "size"(): integer
 }
@@ -192,9 +192,9 @@ export interface $Byte2CharFunction extends $Function$0<byte, character>, $IntUn
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
 "getOrDefault"(byte0: byte, char1: character): character
-"put"(byte0: byte, char1: character): character
 /** @deprecated */
 "put"(byte0: byte, character1: character): character
+"put"(byte0: byte, char1: character): character
 "remove"(byte0: byte): character
 "size"(): integer
 }
@@ -270,8 +270,8 @@ public "iterator"(): $ByteListIterator
 public "lastIndexOf"(byte0: byte): integer
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
-public "listIterator"(): $ByteListIterator
 public "listIterator"(int0: integer): $ByteListIterator
+public "listIterator"(): $ByteListIterator
 public static "of"(): $ByteList
 public static "of"(byte0: byte, byte1: byte): $ByteList
 public static "of"(byte0: byte): $ByteList
@@ -328,9 +328,9 @@ public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public "topByte"(): byte
-public "unstableSort"(byteComparator0: $ByteComparator$$Type): void
 /** @deprecated */
 public "unstableSort"(comparator0: $Comparator$$Type<byte>): void
+public "unstableSort"(byteComparator0: $ByteComparator$$Type): void
 get "first"(): byte
 get "last"(): byte
 get "empty"(): boolean
@@ -408,9 +408,9 @@ export interface $Byte2ReferenceFunction<V = any> extends $Function$0<byte, V>, 
 /** @deprecated */
 "get"(object0: any): V
 "get"(byte0: byte): V
-"getOrDefault"(byte0: byte, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(byte0: byte, v1: V): V
 /** @deprecated */
 "put"(byte0: byte, v1: V): V
 "put"(byte0: byte, v1: V): V
@@ -502,8 +502,8 @@ export interface $Byte2LongFunction extends $Function$0<byte, long>, $IntToLongF
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
 "getOrDefault"(byte0: byte, long1: long): long
-"put"(byte0: byte, long1: long): long
 /** @deprecated */
+"put"(byte0: byte, long1: long): long
 "put"(byte0: byte, long1: long): long
 "remove"(byte0: byte): long
 "size"(): integer
@@ -639,6 +639,7 @@ public "addAll"(int0: integer, byteList1: $ByteList$$Type): boolean
 public "addAll"(byteList0: $ByteList$$Type): boolean
 public "addFirst"(byte0: byte): void
 public "addLast"(byte0: byte): void
+public "clone"(): $ByteArrayList
 public "compareTo"(byteArrayList0: $ByteArrayList$$Type): integer
 /** @deprecated */
 public "contains"(object0: any): boolean
@@ -815,8 +816,8 @@ export interface $Byte2FloatFunction extends $Function$0<byte, float>, $IntToDou
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(byte0: byte, float1: float): float
-"put"(byte0: byte, float1: float): float
 /** @deprecated */
+"put"(byte0: byte, float1: float): float
 "put"(byte0: byte, float1: float): float
 "remove"(byte0: byte): float
 "size"(): integer
@@ -865,8 +866,8 @@ export interface $ByteList extends $List<byte>, $Comparable<$List<byte>>, $ByteC
 "addAll"(collection0: $Collection$$Type<byte>): boolean
 "addAll"(int0: integer, collection1: $Collection$$Type<byte>): boolean
 "addAll"(byteCollection0: $ByteCollection$$Type): boolean
-"addElements"(int0: integer, byte1s: byte[], int2: integer, int3: integer): void
 "addElements"(int0: integer, byte1s: byte[]): void
+"addElements"(int0: integer, byte1s: byte[], int2: integer, int3: integer): void
 "addFirst"(byte0: byte): void
 "addLast"(byte0: byte): void
 "clear"(): void
@@ -938,9 +939,9 @@ export interface $ByteList extends $List<byte>, $Comparable<$List<byte>>, $ByteC
 /** @deprecated */
 "toByteArray"(byte0s: byte[]): byte[]
 "toByteArray"(): byte[]
-"unstableSort"(byteComparator0: $ByteComparator$$Type): void
 /** @deprecated */
 "unstableSort"(comparator0: $Comparator$$Type<byte>): void
+"unstableSort"(byteComparator0: $ByteComparator$$Type): void
 get "first"(): byte
 get "last"(): byte
 get "empty"(): boolean
@@ -1110,9 +1111,9 @@ export interface $Byte2ObjectFunction<V = any> extends $Function$0<byte, V>, $In
 /** @deprecated */
 "get"(object0: any): V
 "get"(byte0: byte): V
-"getOrDefault"(byte0: byte, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(byte0: byte, v1: V): V
 /** @deprecated */
 "put"(byte0: byte, v1: V): V
 "put"(byte0: byte, v1: V): V
@@ -1203,13 +1204,13 @@ export interface $Byte2BooleanFunction extends $Function$0<byte, boolean>, $IntP
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(byte0: byte): boolean
+"getOrDefault"(byte0: byte, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
-"getOrDefault"(byte0: byte, boolean1: boolean): boolean
 "negate"(): $IntPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
-"put"(byte0: byte, boolean1: boolean): boolean
 /** @deprecated */
+"put"(byte0: byte, boolean1: boolean): boolean
 "put"(byte0: byte, boolean1: boolean): boolean
 "remove"(byte0: byte): boolean
 "size"(): integer
@@ -1301,8 +1302,8 @@ export interface $Byte2ShortFunction extends $Function$0<byte, short>, $IntUnary
 /** @deprecated */
 "getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(byte0: byte, short1: short): short
-"put"(byte0: byte, short1: short): short
 /** @deprecated */
+"put"(byte0: byte, short1: short): short
 "put"(byte0: byte, short1: short): short
 "remove"(byte0: byte): short
 "size"(): integer
@@ -1390,8 +1391,8 @@ export interface $Byte2DoubleFunction extends $Function$0<byte, double>, $IntToD
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
 "getOrDefault"(byte0: byte, double1: double): double
-"put"(byte0: byte, double1: double): double
 /** @deprecated */
+"put"(byte0: byte, double1: double): double
 "put"(byte0: byte, double1: double): double
 "remove"(byte0: byte): double
 "size"(): integer

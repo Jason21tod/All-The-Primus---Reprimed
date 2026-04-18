@@ -236,8 +236,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $PlayLevelSoundEvent extends $Event implements $EventItf {
-constructor()
 constructor(level0: $Level$$Type, holder1: $Holder$$Type<$SoundEvent$$Type>, soundSource2: $SoundSource$$Type, float3: float, float4: float)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -351,11 +351,11 @@ constructor(creativeModeTab0: $CreativeModeTab$$Type, resourceKey1: $ResourceKey
 public "accept"(supplier0: $Supplier$$Type<$ItemLike>, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 public "accept"(supplier0: $Supplier$$Type<$ItemLike>): void
 public "accept"(itemStack0: $ItemStack$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
-public "accept"(itemLike0: $ItemLike$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
-public "accept"(itemStack0: $ItemStack$$Type): void
 public "accept"(itemLike0: $ItemLike$$Type): void
-public "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>): void
+public "accept"(itemStack0: $ItemStack$$Type): void
+public "accept"(itemLike0: $ItemLike$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 public "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
+public "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>): void
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
 public "getEntries"(): $MutableHashedLinkedMap<$ItemStack, $CreativeModeTab$TabVisibility>
@@ -508,8 +508,8 @@ import { $ParseResults, $ParseResults$$Type } from "com.mojang.brigadier.ParseRe
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $CommandEvent extends $Event implements $EventItf {
-constructor(parseResults0: $ParseResults$$Type<$CommandSourceStack$$Type>)
 constructor()
+constructor(parseResults0: $ParseResults$$Type<$CommandSourceStack$$Type>)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

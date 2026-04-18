@@ -13,8 +13,8 @@ static readonly "ANY": $ContextAwarePredicate
 public static "create"(...lootItemCondition0s: $LootItemCondition$$Type[]): $ContextAwarePredicate
 public static "fromElement"(string0: string, deserializationContext1: $DeserializationContext$$Type, jsonElement2: $JsonElement$$Type, lootContextParamSet3: $LootContextParamSet$$Type): $ContextAwarePredicate
 public "matches"(lootContext0: $LootContext$$Type): boolean
-public static "toJson"(contextAwarePredicate0s: $ContextAwarePredicate$$Type[], serializationContext1: $SerializationContext$$Type): $JsonElement
 public "toJson"(serializationContext0: $SerializationContext$$Type): $JsonElement
+public static "toJson"(contextAwarePredicate0s: $ContextAwarePredicate$$Type[], serializationContext1: $SerializationContext$$Type): $JsonElement
 get "compositePredicates"(): $Predicate<$LootContext>
 set "compositePredicates"(value: $Predicate$$Type<$LootContext$$Type>)
 }
@@ -527,8 +527,8 @@ public "getMaxCriteraRequired"(): integer
 public "getParent"(): $Advancement
 public "getRequirements"(): string[][]
 public "getRewards"(): $AdvancementRewards
-public static "getRoot"(advancement0: $Advancement$$Type): $Advancement
 public "getRoot"(): $Advancement
+public static "getRoot"(advancement0: $Advancement$$Type): $Advancement
 public "sendsTelemetryEvent"(): boolean
 get "criteria"(): $Map<string, $Criterion>
 set "criteria"(value: $Map$$Type<string, $Criterion$$Type>)
@@ -600,15 +600,15 @@ export interface $EntitySubPredicate {
 export namespace $EntitySubPredicate {
 const ANY: $EntitySubPredicate
 function fromJson(jsonElement0: $JsonElement$$Type): $EntitySubPredicate
-function variant(catVariant0: $CatVariant$$Type): $EntitySubPredicate
 function variant(frogVariant0: $FrogVariant$$Type): $EntitySubPredicate
+function variant(catVariant0: $CatVariant$$Type): $EntitySubPredicate
 }
 export abstract class $EntitySubPredicate$$Static implements $EntitySubPredicate {
 static readonly "ANY": $EntitySubPredicate
 
 static "fromJson"(jsonElement0: $JsonElement$$Type): $EntitySubPredicate
-static "variant"(catVariant0: $CatVariant$$Type): $EntitySubPredicate
 static "variant"(frogVariant0: $FrogVariant$$Type): $EntitySubPredicate
+static "variant"(catVariant0: $CatVariant$$Type): $EntitySubPredicate
 }
 }
 
@@ -628,8 +628,8 @@ export class $EntityPredicate implements $EntityPredicateAccessor {
 static readonly "ANY": $EntityPredicate
 
 public static "createContext"(serverPlayer0: $ServerPlayer$$Type, entity1: $Entity$$Type): $LootContext
-public static "fromJson"(jsonElement0: $JsonElement$$Type): $EntityPredicate
 public static "fromJson"(jsonObject0: $JsonObject$$Type, string1: string, deserializationContext2: $DeserializationContext$$Type): $ContextAwarePredicate
+public static "fromJson"(jsonElement0: $JsonElement$$Type): $EntityPredicate
 public static "fromJsonArray"(jsonObject0: $JsonObject$$Type, string1: string, deserializationContext2: $DeserializationContext$$Type): $ContextAwarePredicate[]
 public "matches"(serverLevel0: $ServerLevel$$Type, vec31: $Vec3$$Type, entity2: $Entity$$Type): boolean
 public "matches"(serverPlayer0: $ServerPlayer$$Type, entity1: $Entity$$Type): boolean

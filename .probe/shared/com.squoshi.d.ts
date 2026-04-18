@@ -262,6 +262,7 @@ public "canBeCraftedBy"(predicate: $Predicate$$Type<$Player$$Type>): $CustomSpel
  *     ```
  */
 public "checkPreCastConditions"(predicate: $Predicate$$Type<$CustomSpell$PreCastConditionsContext$$Type>): $CustomSpell$Builder
+public "createObject"(): $CustomSpell
 public "getRegistryType"(): $RegistryInfo<$AbstractSpell>
 /**     Sets whether or not the spell needs to be learned before it can be casted. */
 public "needsLearning"(needs: boolean): $CustomSpell$Builder
@@ -580,9 +581,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -594,8 +595,8 @@ public "getAnimatableInstanceCache"(): $AnimatableInstanceCache
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -610,8 +611,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityType"(): $EntityType<any>
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -685,11 +686,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onJump"(): void
 public "performRangedAttack"(pTarget: $LivingEntity$$Type, pDistanceFactor: float): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "registerControllers"(data: $AnimatableManager$ControllerRegistrar$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -703,6 +704,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setAnimData"<D>(serializableDataTicket0: $SerializableDataTicket$$Type<D>, d1: D): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -742,14 +744,14 @@ public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$
 public "spawn"(): void
 public "startAutoSpinAttack"(pAttackTicks: integer): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public "tickPart"(partName: string, offsetX: double, offsetY: double, offsetZ: double): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
-public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "triggerAnim"(controllerName: string, animName: string): void
+public "triggerAnim"<D>(relatedEntity: $Entity$$Type, instanceId: long, controllerName: string, animName: string): void
 public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 get "hasUsedSingleAttack"(): boolean
@@ -1372,7 +1374,6 @@ import { $EntityDimensions$$Type } from "net.minecraft.world.entity.EntityDimens
 import { $Optional } from "java.util.Optional"
 import { $ItemStack } from "net.minecraft.world.item.ItemStack"
 import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
-import { $ProjectileEntityBuilder } from "net.liopyu.entityjs.builders.nonliving.entityjs.ProjectileEntityBuilder"
 
 export class $SpellProjectileJS extends $AbstractMagicProjectile implements $IProjectileEntityJS, $AntiMagicSusceptible {
 constructor(builder: $SpellProjectileJSBuilder$$Type, pEntityType: $EntityType$$Type<$AbstractMagicProjectile$$Type>, pLevel: $Level$$Type)
@@ -1392,8 +1393,8 @@ public "entityName"(): string
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -1402,8 +1403,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -1422,7 +1423,6 @@ public "getParts"(): $PartEntity<any>[]
 public "getPassengers"(): $EntityArrayList
 public "getPickedResult"(hitResult0: $HitResult$$Type): $ItemStack
 public "getProfile"(): $GameProfile
-public "getProjectileBuilder"(): $ProjectileEntityBuilder<any>
 public "getScriptType"(): $ScriptType
 public "getServer"(): $MinecraftServer
 public "getSoundFromFluidType"(fluidType0: $FluidType$$Type, soundAction1: $SoundAction$$Type): $SoundEvent
@@ -1454,16 +1454,17 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
+public "serializeNBT"(): $CompoundTag
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
@@ -1501,7 +1502,6 @@ get "nbt"(): $CompoundTag
 get "parts"(): $PartEntity<any>[]
 get "passengers"(): $EntityArrayList
 get "profile"(): $GameProfile
-get "projectileBuilder"(): $ProjectileEntityBuilder<any>
 get "scriptType"(): $ScriptType
 get "server"(): $MinecraftServer
 get "stepHeight"(): float
@@ -1597,6 +1597,7 @@ constructor(i: $ResourceLocation$$Type)
 public "addFocusItemTags"(...focusTags: string[]): $SchoolTypeJSBuilder
 /**         Adds specific items to the focus item list for this school. */
 public "addFocusItems"(...items: $Item$$Type[]): $SchoolTypeJSBuilder
+public "createObject"(): $SchoolType
 /**         Disables looting. */
 public "disableLooting"(): $SchoolTypeJSBuilder
 public "getRegistryType"(): $RegistryInfo<$SchoolType>
@@ -1672,6 +1673,7 @@ set "amount"(value: float)
 declare module "com.squoshi.irons_spells_js.item.CustomSpellBook$Builder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $AttributeModifier$Operation$$Type } from "net.minecraft.world.entity.ai.attributes.AttributeModifier$Operation"
+import { $SpellBook } from "io.redspace.ironsspellbooks.item.SpellBook"
 import { $ISSKJSUtils$SpellHolder$$Type } from "com.squoshi.irons_spells_js.util.ISSKJSUtils$SpellHolder"
 import { $ItemBuilder } from "dev.latvian.mods.kubejs.item.ItemBuilder"
 
@@ -1688,6 +1690,7 @@ public "addAttribute"(attribute: string, value: double, operation: $AttributeMod
  * This will turn into Unique Spellbook.
  */
 public "addSpell"(spell: $ISSKJSUtils$SpellHolder$$Type, spellLevel: integer): $CustomSpellBook$Builder
+public "createObject"(): $SpellBook
 /** Sets an affinity that will make this spell a +1 level boost. */
 public "setAffinitySpell"(affinitySpell: string): $CustomSpellBook$Builder
 /** Sets the maximum amount of spell slots the spell book can have. */

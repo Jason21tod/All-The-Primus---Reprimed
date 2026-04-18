@@ -144,8 +144,8 @@ public "hasPrecipitation"(): boolean
 public "modifiableBiomeInfo"(): $ModifiableBiomeInfo
 public "setBiomeCategory"(biomeCategory: integer): void
 public "setDownfall"(float0: float): void
-public "shouldFreeze"(levelReader0: $LevelReader$$Type, blockPos1: $BlockPos$$Type): boolean
 public "shouldFreeze"(levelReader0: $LevelReader$$Type, blockPos1: $BlockPos$$Type, boolean2: boolean): boolean
+public "shouldFreeze"(levelReader0: $LevelReader$$Type, blockPos1: $BlockPos$$Type): boolean
 public "shouldMeltFrozenOceanIcebergSlightly"(blockPos0: $BlockPos$$Type): boolean
 public "shouldSnow"(levelReader0: $LevelReader$$Type, blockPos1: $BlockPos$$Type): boolean
 public "warmEnoughToRain"(blockPos0: $BlockPos$$Type): boolean

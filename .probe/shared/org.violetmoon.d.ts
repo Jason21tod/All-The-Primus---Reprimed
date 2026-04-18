@@ -23,10 +23,10 @@ public "containsTag"(iTag0: $ITag$$Type<T>): boolean
 public static "direct"<T>(t0: T): $Holder<T>
 public "get"(): T
 public "getTagKeys"(): $Stream<$TagKey<T>>
-public "is"(tagKey0: $TagKey$$Type<T>): boolean
-public "is"(resourceKey0: $ResourceKey$$Type<T>): boolean
-public "is"(predicate0: $Predicate$$Type<$ResourceKey$$Type<T>>): boolean
 public "is"(resourceLocation0: $ResourceLocation$$Type): boolean
+public "is"(predicate0: $Predicate$$Type<$ResourceKey$$Type<T>>): boolean
+public "is"(resourceKey0: $ResourceKey$$Type<T>): boolean
+public "is"(tagKey0: $TagKey$$Type<T>): boolean
 public "isBound"(): boolean
 public "kind"(): $Holder$Kind
 public "tags"(): $Stream<$TagKey<T>>
@@ -1014,11 +1014,11 @@ export class $BrewingRegistry {
 constructor(zeta0: $Zeta$$Type)
 
 public "addNegation"(string0: string, potion1: $Potion$$Type, potion2: $Potion$$Type, potion3: $Potion$$Type, potion4: $Potion$$Type, potion5: $Potion$$Type, potion6: $Potion$$Type): void
-public "addPotionMix"(string0: string, supplier1: $Supplier$$Type<$Ingredient>, mobEffect2: $MobEffect$$Type, mobEffect3: $MobEffect$$Type): void
+public "addPotionMix"(string0: string, supplier1: $Supplier$$Type<$Ingredient>, potion2: $Potion$$Type, potion3: $Potion$$Type, potion4: $Potion$$Type): void
 public "addPotionMix"(string0: string, supplier1: $Supplier$$Type<$Ingredient>, mobEffect2: $MobEffect$$Type, int3: integer, int4: integer, int5: integer): void
 public "addPotionMix"(string0: string, supplier1: $Supplier$$Type<$Ingredient>, mobEffect2: $MobEffect$$Type): void
-public "addPotionMix"(string0: string, supplier1: $Supplier$$Type<$Ingredient>, potion2: $Potion$$Type, potion3: $Potion$$Type, potion4: $Potion$$Type): void
 public "addPotionMix"(string0: string, supplier1: $Supplier$$Type<$Ingredient>, mobEffect2: $MobEffect$$Type, mobEffect3: $MobEffect$$Type, int4: integer, int5: integer, int6: integer): void
+public "addPotionMix"(string0: string, supplier1: $Supplier$$Type<$Ingredient>, mobEffect2: $MobEffect$$Type, mobEffect3: $MobEffect$$Type): void
 public static "glowstone"(): $Ingredient
 public "isEnabled"(potion0: $Potion$$Type): boolean
 public static "redstone"(): $Ingredient
@@ -1160,8 +1160,8 @@ export interface $IZetaBlock extends $IZetaBlockExtensions, $IDisableable<$IZeta
 "isStickyBlockZeta"(blockState0: $BlockState$$Type): boolean
 "makesOpenTrapdoorAboveClimbableZeta"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
 "setCondition"(booleanSupplier0: $BooleanSupplier$$Type): $IZetaBlock
-"setCreativeTab"(resourceKey0: $ResourceKey$$Type<$CreativeModeTab>, itemLike1: $ItemLike$$Type, boolean2: boolean): $Block
 "setCreativeTab"(resourceKey0: $ResourceKey$$Type<$CreativeModeTab>): $Block
+"setCreativeTab"(resourceKey0: $ResourceKey$$Type<$CreativeModeTab>, itemLike1: $ItemLike$$Type, boolean2: boolean): $Block
 "shouldDisplayFluidOverlayZeta"(blockState0: $BlockState$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type, fluidState3: $FluidState$$Type): boolean
 get "block"(): $Block
 get "module"(): $ZetaModule
@@ -1496,20 +1496,20 @@ public "newResourceLocation"(string0: string): $ResourceLocation
 public "performDynamicRegistration"<T>(registryInfoLookup0: $RegistryOps$RegistryInfoLookup$$Type, resourceKey1: $ResourceKey$$Type<$Registry<any>>, writableRegistry2: $WritableRegistry$$Type<T>): void
 public "register"<T>(t0: T, resourceLocation1: $ResourceLocation$$Type, resourceKey2: $ResourceKey$$Type<$Registry<T>>): void
 public "register"<T>(t0: T, string1: string, resourceKey2: $ResourceKey$$Type<$Registry<T>>): void
-public "registerBlock"(block0: $Block$$Type, string1: string): void
-public "registerBlock"(block0: $Block$$Type, resourceLocation1: $ResourceLocation$$Type, boolean2: boolean): void
 public "registerBlock"(block0: $Block$$Type, string1: string, boolean2: boolean): void
 public "registerBlock"(block0: $Block$$Type, resourceLocation1: $ResourceLocation$$Type): void
-/** @deprecated */
-public "registerDynamic"<T>(t0: T, resourceLocation1: $ResourceLocation$$Type, resourceKey2: $ResourceKey$$Type<$Registry<T>>): $Holder$Direct<T>
+public "registerBlock"(block0: $Block$$Type, string1: string): void
+public "registerBlock"(block0: $Block$$Type, resourceLocation1: $ResourceLocation$$Type, boolean2: boolean): void
 public "registerDynamic"<T>(t0: T, string1: string, resourceKey2: $ResourceKey$$Type<$Registry<T>>): $Holder$Direct<T>
 /** @deprecated */
 public "registerDynamic"<T>(t0: T, resourceKey1: $ResourceKey$$Type<T>, resourceKey2: $ResourceKey$$Type<$Registry<T>>): $Holder$Direct<T>
-public "registerDynamicF"<T>(function0: $Function$$Type<$RegistryOps$RegistryInfoLookup$$Type, T>, string1: string, resourceKey2: $ResourceKey$$Type<$Registry<T>>): $LateBoundHolder<T>
+/** @deprecated */
+public "registerDynamic"<T>(t0: T, resourceLocation1: $ResourceLocation$$Type, resourceKey2: $ResourceKey$$Type<$Registry<T>>): $Holder$Direct<T>
 public "registerDynamicF"<T>(function0: $Function$$Type<$RegistryOps$RegistryInfoLookup$$Type, T>, resourceKey1: $ResourceKey$$Type<T>, resourceKey2: $ResourceKey$$Type<$Registry<T>>): $LateBoundHolder<T>
+public "registerDynamicF"<T>(function0: $Function$$Type<$RegistryOps$RegistryInfoLookup$$Type, T>, string1: string, resourceKey2: $ResourceKey$$Type<$Registry<T>>): $LateBoundHolder<T>
 public "registerDynamicF"<T>(function0: $Function$$Type<$RegistryOps$RegistryInfoLookup$$Type, T>, resourceLocation1: $ResourceLocation$$Type, resourceKey2: $ResourceKey$$Type<$Registry<T>>): $LateBoundHolder<T>
-public "registerItem"(item0: $Item$$Type, string1: string): void
 public "registerItem"(item0: $Item$$Type, resourceLocation1: $ResourceLocation$$Type): void
+public "registerItem"(item0: $Item$$Type, string1: string): void
 public "validateColorsProviders"(): void
 }
 }
@@ -1568,8 +1568,8 @@ export class $FuelHandler {
 constructor(zeta0: $Zeta$$Type)
 
 public "addAllWoods"(zLoadComplete0: $ZLoadComplete$$Type): void
-public "addFuel"(block0: $Block$$Type, int1: integer): void
 public "addFuel"(item0: $Item$$Type, int1: integer): void
+public "addFuel"(block0: $Block$$Type, int1: integer): void
 public "addWood"(block0: $Block$$Type): void
 public "getFuel"(zFurnaceFuelBurnTime0: $ZFurnaceFuelBurnTime$$Type): void
 }
@@ -1944,8 +1944,8 @@ export class $RegistryUtil {
 constructor(zeta0: $Zeta$$Type)
 
 public static "getTagValues"<T>(registryAccess0: $RegistryAccess$$Type, tagKey1: $TagKey$$Type<T>): $List<T>
-public "inherit"(block0: $Block$$Type, function1: $Function$$Type<string, string>): string
 public "inherit"(block0: $Block$$Type, string1: string): string
+public "inherit"(block0: $Block$$Type, function1: $Function$$Type<string, string>): string
 public "inheritQuark"(iZetaBlock0: $IZetaBlock$$Type, string1: string): string
 public static "massRegistryGet"<T>(collection0: $Collection$$Type<string>, registry1: $Registry$$Type<T>): $List<T>
 }
@@ -1996,6 +1996,17 @@ export abstract class $ZetaLoadModule$$Static implements $ZetaLoadModule {
 }
 }
 
+declare module "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Starting" {
+import { $ZRecipeCrawl$Starting, $ZRecipeCrawl$Starting$$Type } from "org.violetmoon.zeta.event.play.ZRecipeCrawl$Starting"
+import { $ForgeZRecipeCrawl } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl"
+
+export class $ForgeZRecipeCrawl$Starting extends $ForgeZRecipeCrawl<$ZRecipeCrawl$Starting> {
+constructor(starting0: $ZRecipeCrawl$Starting$$Type)
+constructor()
+
+}
+}
+
 declare module "org.violetmoon.zeta.client.event.play.ZScreenshot" {
 import { $IZetaPlayEvent } from "org.violetmoon.zeta.event.bus.IZetaPlayEvent"
 
@@ -2006,17 +2017,6 @@ export namespace $ZScreenshot {
 const probejs$$marker: never
 }
 export abstract class $ZScreenshot$$Static implements $ZScreenshot {
-}
-}
-
-declare module "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Starting" {
-import { $ZRecipeCrawl$Starting, $ZRecipeCrawl$Starting$$Type } from "org.violetmoon.zeta.event.play.ZRecipeCrawl$Starting"
-import { $ForgeZRecipeCrawl } from "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl"
-
-export class $ForgeZRecipeCrawl$Starting extends $ForgeZRecipeCrawl<$ZRecipeCrawl$Starting> {
-constructor(starting0: $ZRecipeCrawl$Starting$$Type)
-constructor()
-
 }
 }
 
@@ -2233,8 +2233,8 @@ public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
 public "gatherHintsFromModule"(zetaModule0: $ZetaModule$$Type, configFlagManager1: $ConfigFlagManager$$Type): void
 public "getRegistryAccess"(): $RegistryAccess
-public "hintItem"(itemLike0: $ItemLike$$Type, string1: string, ...object2s: any[]): void
 public "hintItem"(itemLike0: $ItemLike$$Type, ...object1s: any[]): void
+public "hintItem"(itemLike0: $ItemLike$$Type, string1: string, ...object2s: any[]): void
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
 get "registryAccess"(): $RegistryAccess
@@ -2268,8 +2268,8 @@ import { $Zeta$$Type } from "org.violetmoon.zeta.Zeta"
 import { $AdvancementModifierRegistry } from "org.violetmoon.zeta.advancement.AdvancementModifierRegistry"
 
 export class $ForgeZRegister extends $Event implements $ZRegister, $IModBusEvent, $EventItf {
-constructor(zeta0: $Zeta$$Type)
 constructor()
+constructor(zeta0: $Zeta$$Type)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -2781,12 +2781,12 @@ import { $BlockEntity$$Type } from "net.minecraft.world.level.block.entity.Block
 
 export interface $ZetaCapabilityManager {
 "attachCapability"<T>(object0: any, resourceLocation1: $ResourceLocation$$Type, zetaCapability2: $ZetaCapability$$Type<T>, t3: T): void
-"getCapability"<T>(zetaCapability0: $ZetaCapability$$Type<T>, itemStack1: $ItemStack$$Type): T
 "getCapability"<T>(zetaCapability0: $ZetaCapability$$Type<T>, level1: $Level$$Type): T
 "getCapability"<T>(zetaCapability0: $ZetaCapability$$Type<T>, blockEntity1: $BlockEntity$$Type): T
-"hasCapability"<T>(zetaCapability0: $ZetaCapability$$Type<T>, blockEntity1: $BlockEntity$$Type): boolean
-"hasCapability"<T>(zetaCapability0: $ZetaCapability$$Type<T>, level1: $Level$$Type): boolean
+"getCapability"<T>(zetaCapability0: $ZetaCapability$$Type<T>, itemStack1: $ItemStack$$Type): T
 "hasCapability"<T>(zetaCapability0: $ZetaCapability$$Type<T>, itemStack1: $ItemStack$$Type): boolean
+"hasCapability"<T>(zetaCapability0: $ZetaCapability$$Type<T>, level1: $Level$$Type): boolean
+"hasCapability"<T>(zetaCapability0: $ZetaCapability$$Type<T>, blockEntity1: $BlockEntity$$Type): boolean
 "register"(zetaCapability0: $ZetaCapability$$Type<any>, object1: any): $ZetaCapabilityManager
 }
 

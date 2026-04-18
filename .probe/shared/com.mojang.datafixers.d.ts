@@ -589,14 +589,14 @@ public static "pair"<A, B>(typed0: $Typed$$Type<A>, typed1: $Typed$$Type<B>): $T
 public "set"<FT>(opticFinder0: $OpticFinder$$Type<FT>, ft1: FT): $Typed<any>
 public "set"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, fr2: FR): $Typed<any>
 public "set"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, typed1: $Typed$$Type<FR>): $Typed<any>
-public "update"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<FT, FR>): $Typed<any>
 public "update"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<FT, FT>): $Typed<any>
+public "update"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<FT, FR>): $Typed<any>
 public "updateRecursive"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<FT, FR>): $Typed<any>
 public "updateRecursive"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<FT, FT>): $Typed<any>
-public "updateRecursiveTyped"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
 public "updateRecursiveTyped"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
-public "updateTyped"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
+public "updateRecursiveTyped"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
 public "updateTyped"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>, function2: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
+public "updateTyped"<FT>(opticFinder0: $OpticFinder$$Type<FT>, function1: $Function$$Type<$Typed$$Type<any>, $Typed<any>>): $Typed<any>
 public "write"(): $DataResult<$Dynamic<any>>
 get "ops"(): $DynamicOps<any>
 get "type"(): $Type<A>
@@ -1148,9 +1148,9 @@ public "findTypeCached"<FT, FR>(type0: $Type$$Type<FT>, type1: $Type$$Type<FR>, 
 public "findTypeInChildren"<FT, FR>(type0: $Type$$Type<FT>, type1: $Type$$Type<FR>, typeMatcher2: $Type$TypeMatcher$$Type<FT, FR>, boolean3: boolean): $Either<$TypedOptic<A, any, FT, FR>, $Type$FieldNotFoundException>
 public "finder"(): $OpticFinder<A>
 public "getSetType"<FT, FR>(opticFinder0: $OpticFinder$$Type<FT>, type1: $Type$$Type<FR>): $Type<any>
-public "ifSame"<B>(typed0: $Typed$$Type<B>): $Optional<A>
-public "ifSame"<B>(type0: $Type$$Type<B>, b1: B): $Optional<A>
 public "ifSame"<B>(type0: $Type$$Type<B>, rewriteResult1: $RewriteResult$$Type<B, any>): $Optional<$RewriteResult<A, any>>
+public "ifSame"<B>(type0: $Type$$Type<B>, b1: B): $Optional<A>
+public "ifSame"<B>(typed0: $Typed$$Type<B>): $Optional<A>
 public "one"(typeRewriteRule0: $TypeRewriteRule$$Type): $Optional<$RewriteResult<A, any>>
 public static "opticView"<S, T, A, B>(type0: $Type$$Type<S>, rewriteResult1: $RewriteResult$$Type<A, B>, typedOptic2: $TypedOptic$$Type<S, T, A, B>): $RewriteResult<S, T>
 public "point"(dynamicOps0: $DynamicOps$$Type<any>): $Optional<A>
@@ -1158,8 +1158,8 @@ public "pointTyped"(dynamicOps0: $DynamicOps$$Type<any>): $Optional<$Typed<A>>
 public "read"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Pair<A, $Dynamic<T>>>
 public "read"<T>(dynamicOps0: $DynamicOps$$Type<T>, typeRewriteRule1: $TypeRewriteRule$$Type, pointFreeRule2: $PointFreeRule$$Type, t3: T): $DataResult<$Pair<$Optional<any>, T>>
 public "readAndWrite"<T>(dynamicOps0: $DynamicOps$$Type<T>, type1: $Type$$Type<any>, typeRewriteRule2: $TypeRewriteRule$$Type, pointFreeRule3: $PointFreeRule$$Type, t4: T): $DataResult<T>
-public "readTyped"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<$Pair<$Typed<A>, T>>
 public "readTyped"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<$Pair<$Typed<A>, T>>
+public "readTyped"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<$Pair<$Typed<A>, T>>
 public "rewrite"(typeRewriteRule0: $TypeRewriteRule$$Type, pointFreeRule1: $PointFreeRule$$Type): $Optional<$RewriteResult<A, any>>
 public "rewriteOrNop"(typeRewriteRule0: $TypeRewriteRule$$Type): $RewriteResult<A, any>
 public "template"(): $TypeTemplate
@@ -1635,8 +1635,8 @@ export class $Either<L = any, R = any> implements $App<$Either$Mu<R>, L> {
 public "flatMap"<L2>(function0: $Function$$Type<L, $Either<L2, R>>): $Either<L2, R>
 public "ifLeft"(consumer0: $Consumer$$Type<L>): $Either<L, R>
 public "ifRight"(consumer0: $Consumer$$Type<R>): $Either<L, R>
-public "left"(): $Optional<L>
 public static "left"<L, R>(l0: L): $Either<L, R>
+public "left"(): $Optional<L>
 public "map"<T>(function0: $Function$$Type<L, T>, function1: $Function$$Type<R, T>): T
 public "mapBoth"<C, D>(function0: $Function$$Type<L, C>, function1: $Function$$Type<R, D>): $Either<C, D>
 public "mapLeft"<T>(function0: $Function$$Type<L, T>): $Either<T, R>

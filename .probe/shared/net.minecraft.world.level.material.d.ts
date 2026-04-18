@@ -169,9 +169,9 @@ public "getShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type):
 public "getTags"(): $Stream<$TagKey<$Fluid>>
 public "getType"(): $Fluid
 public "holder"(): $Holder<$Fluid>
+public "is"(fluid0: $Fluid$$Type): boolean
 public "is"(holderSet0: $HolderSet$$Type<$Fluid$$Type>): boolean
 public "is"(tagKey0: $TagKey$$Type<$Fluid$$Type>): boolean
-public "is"(fluid0: $Fluid$$Type): boolean
 public "isEmpty"(): boolean
 public "isRandomlyTicking"(): boolean
 public "isSource"(): boolean
@@ -433,8 +433,8 @@ public "getFlowing"(): $Fluid
 public "getFlowing"(int0: integer, boolean1: boolean): $FluidState
 public "getSource"(): $Fluid
 public "getSource"(boolean0: boolean): $FluidState
-public "handler$hin000$ac_canHoldFluid"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, fluid3: $Fluid$$Type, callbackInfoReturnable4: $CallbackInfoReturnable$$Type): void
-public "handler$hin000$ac_spreadTo"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, direction3: $Direction$$Type, fluidState4: $FluidState$$Type, callbackInfo5: $CallbackInfo$$Type): void
+public "handler$hih000$ac_canHoldFluid"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, fluid3: $Fluid$$Type, callbackInfoReturnable4: $CallbackInfoReturnable$$Type): void
+public "handler$hih000$ac_spreadTo"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, direction3: $Direction$$Type, fluidState4: $FluidState$$Type, callbackInfo5: $CallbackInfo$$Type): void
 public "move"(fluidState0: $FluidState$$Type, livingEntity1: $LivingEntity$$Type, vec32: $Vec3$$Type, double3: double): boolean
 public "shouldUpdateWhileBoating"(fluidState0: $FluidState$$Type, boat1: $Boat$$Type, entity2: $Entity$$Type): boolean
 public "supportsBoating"(fluidState0: $FluidState$$Type, boat1: $Boat$$Type): boolean

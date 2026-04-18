@@ -169,8 +169,8 @@ public static "from"<Z extends $LivingEntity>(entityType: $EntityType$$Type<Z>, 
 public static "from"<Z extends $LivingEntity>(entityType: $EntityType$$Type<Z>): $ShapeType<Z>
 public static "from"<Z extends $LivingEntity>(entity: Z): $ShapeType<Z>
 public static "from"(compound: $CompoundTag$$Type): $ShapeType<any>
-public static "getAllTypes"(world: $Level$$Type): $List<$ShapeType<any>>
 public static "getAllTypes"<T extends $LivingEntity>(entityType: $EntityType$$Type<T>): $List<$ShapeType<T>>
+public static "getAllTypes"(world: $Level$$Type): $List<$ShapeType<any>>
 public static "getDefaultVariantData"<Z extends $LivingEntity>(type: $EntityType$$Type<Z>): integer
 public "getEntityType"(): $EntityType<$LivingEntity>
 public "getVariantData"(): integer

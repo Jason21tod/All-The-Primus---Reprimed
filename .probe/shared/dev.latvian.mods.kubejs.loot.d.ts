@@ -32,6 +32,7 @@ readonly "json": $JsonObject
 
 constructor(o: $JsonObject$$Type)
 
+public "addCondition"(o: $JsonObject$$Type): $LootTableEntry
 public "addConditionalFunction"(func: $Consumer$$Type<$ConditionalFunction$$Type>): $FunctionContainer
 public "copyName"(source: $CopyNameFunction$NameSource$$Type): $FunctionContainer
 public "count"(count: $NumberProvider$$Type): $FunctionContainer
@@ -77,7 +78,6 @@ constructor(prev: $JsonElement$$Type)
 
 public "addCondition"(o: $JsonObject$$Type): $LootBuilder
 public "addConditionalFunction"(func: $Consumer$$Type<$ConditionalFunction$$Type>): $FunctionContainer
-public "addFunction"(o: $JsonObject$$Type): $LootBuilder
 public "addPool"(p: $Consumer$$Type<$LootBuilderPool$$Type>): void
 public "clearConditions"(): void
 public "clearFunctions"(): void

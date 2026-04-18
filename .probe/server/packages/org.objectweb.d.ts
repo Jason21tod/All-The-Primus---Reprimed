@@ -33,11 +33,11 @@ static readonly "VOID_TYPE": $Type
 
 public "getArgumentCount"(): integer
 public static "getArgumentCount"(string0: string): integer
-public static "getArgumentTypes"(method0: $Method$$Type): $Type[]
 public "getArgumentTypes"(): $Type[]
 public static "getArgumentTypes"(string0: string): $Type[]
-public static "getArgumentsAndReturnSizes"(string0: string): integer
+public static "getArgumentTypes"(method0: $Method$$Type): $Type[]
 public "getArgumentsAndReturnSizes"(): integer
+public static "getArgumentsAndReturnSizes"(string0: string): integer
 public "getClassName"(): string
 public static "getConstructorDescriptor"(constructor0: $Constructor$$Type<any>): string
 public static "getDescriptor"(class0: $Class$$Type<any>): string

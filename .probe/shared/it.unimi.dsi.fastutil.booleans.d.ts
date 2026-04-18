@@ -61,11 +61,11 @@ export interface $Boolean2DoubleFunction extends $Function$0<boolean, double> {
 "composeObject"<T>(object2BooleanFunction0: $Object2BooleanFunction$$Type<T>): $Object2DoubleFunction<T>
 "composeReference"<T>(reference2BooleanFunction0: $Reference2BooleanFunction$$Type<T>): $Reference2DoubleFunction<T>
 "composeShort"(short2BooleanFunction0: $Short2BooleanFunction$$Type): $Short2DoubleFunction
+"containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsKey"(boolean0: boolean): boolean
-"defaultReturnValue"(double0: double): void
 "defaultReturnValue"(): double
+"defaultReturnValue"(double0: double): void
 /** @deprecated */
 "get"(object0: any): double
 "get"(boolean0: boolean): double
@@ -75,8 +75,6 @@ export interface $Boolean2DoubleFunction extends $Function$0<boolean, double> {
 "put"(boolean0: boolean, double1: double): double
 /** @deprecated */
 "put"(boolean0: boolean, double1: double): double
-/** @deprecated */
-"remove"(object0: any): double
 "remove"(boolean0: boolean): double
 "size"(): integer
 }
@@ -154,8 +152,8 @@ export interface $Boolean2ObjectFunction<V = any> extends $Function$0<boolean, V
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(boolean0: boolean): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(boolean0: boolean): V
@@ -244,8 +242,8 @@ export interface $Boolean2ReferenceFunction<V = any> extends $Function$0<boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(boolean0: boolean): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(boolean0: boolean): V
@@ -332,11 +330,11 @@ export interface $Boolean2ByteFunction extends $Function$0<boolean, byte> {
 "composeObject"<T>(object2BooleanFunction0: $Object2BooleanFunction$$Type<T>): $Object2ByteFunction<T>
 "composeReference"<T>(reference2BooleanFunction0: $Reference2BooleanFunction$$Type<T>): $Reference2ByteFunction<T>
 "composeShort"(short2BooleanFunction0: $Short2BooleanFunction$$Type): $Short2ByteFunction
+"containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsKey"(boolean0: boolean): boolean
-"defaultReturnValue"(byte0: byte): void
 "defaultReturnValue"(): byte
+"defaultReturnValue"(byte0: byte): void
 /** @deprecated */
 "get"(object0: any): byte
 "get"(boolean0: boolean): byte
@@ -346,8 +344,6 @@ export interface $Boolean2ByteFunction extends $Function$0<boolean, byte> {
 "put"(boolean0: boolean, byte1: byte): byte
 /** @deprecated */
 "put"(boolean0: boolean, byte1: byte): byte
-/** @deprecated */
-"remove"(object0: any): byte
 "remove"(boolean0: boolean): byte
 "size"(): integer
 }
@@ -423,11 +419,11 @@ export interface $Boolean2FloatFunction extends $Function$0<boolean, float> {
 "composeObject"<T>(object2BooleanFunction0: $Object2BooleanFunction$$Type<T>): $Object2FloatFunction<T>
 "composeReference"<T>(reference2BooleanFunction0: $Reference2BooleanFunction$$Type<T>): $Reference2FloatFunction<T>
 "composeShort"(short2BooleanFunction0: $Short2BooleanFunction$$Type): $Short2FloatFunction
+"containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsKey"(boolean0: boolean): boolean
-"defaultReturnValue"(float0: float): void
 "defaultReturnValue"(): float
+"defaultReturnValue"(float0: float): void
 /** @deprecated */
 "get"(object0: any): float
 "get"(boolean0: boolean): float
@@ -437,8 +433,6 @@ export interface $Boolean2FloatFunction extends $Function$0<boolean, float> {
 "put"(boolean0: boolean, float1: float): float
 /** @deprecated */
 "put"(boolean0: boolean, float1: float): float
-/** @deprecated */
-"remove"(object0: any): float
 "remove"(boolean0: boolean): float
 "size"(): integer
 }
@@ -514,11 +508,11 @@ export interface $Boolean2ShortFunction extends $Function$0<boolean, short> {
 "composeObject"<T>(object2BooleanFunction0: $Object2BooleanFunction$$Type<T>): $Object2ShortFunction<T>
 "composeReference"<T>(reference2BooleanFunction0: $Reference2BooleanFunction$$Type<T>): $Reference2ShortFunction<T>
 "composeShort"(short2BooleanFunction0: $Short2BooleanFunction$$Type): $Short2ShortFunction
+"containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsKey"(boolean0: boolean): boolean
-"defaultReturnValue"(short0: short): void
 "defaultReturnValue"(): short
+"defaultReturnValue"(short0: short): void
 /** @deprecated */
 "get"(object0: any): short
 "get"(boolean0: boolean): short
@@ -528,8 +522,6 @@ export interface $Boolean2ShortFunction extends $Function$0<boolean, short> {
 "put"(boolean0: boolean, short1: short): short
 /** @deprecated */
 "put"(boolean0: boolean, short1: short): short
-/** @deprecated */
-"remove"(object0: any): short
 "remove"(boolean0: boolean): short
 "size"(): integer
 }
@@ -605,11 +597,11 @@ export interface $Boolean2LongFunction extends $Function$0<boolean, long> {
 "composeObject"<T>(object2BooleanFunction0: $Object2BooleanFunction$$Type<T>): $Object2LongFunction<T>
 "composeReference"<T>(reference2BooleanFunction0: $Reference2BooleanFunction$$Type<T>): $Reference2LongFunction<T>
 "composeShort"(short2BooleanFunction0: $Short2BooleanFunction$$Type): $Short2LongFunction
+"containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsKey"(boolean0: boolean): boolean
-"defaultReturnValue"(long0: long): void
 "defaultReturnValue"(): long
+"defaultReturnValue"(long0: long): void
 /** @deprecated */
 "get"(object0: any): long
 "get"(boolean0: boolean): long
@@ -619,8 +611,6 @@ export interface $Boolean2LongFunction extends $Function$0<boolean, long> {
 "put"(boolean0: boolean, long1: long): long
 /** @deprecated */
 "put"(boolean0: boolean, long1: long): long
-/** @deprecated */
-"remove"(object0: any): long
 "remove"(boolean0: boolean): long
 "size"(): integer
 }
@@ -696,11 +686,11 @@ export interface $Boolean2IntFunction extends $Function$0<boolean, integer> {
 "composeObject"<T>(object2BooleanFunction0: $Object2BooleanFunction$$Type<T>): $Object2IntFunction<T>
 "composeReference"<T>(reference2BooleanFunction0: $Reference2BooleanFunction$$Type<T>): $Reference2IntFunction<T>
 "composeShort"(short2BooleanFunction0: $Short2BooleanFunction$$Type): $Short2IntFunction
+"containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsKey"(boolean0: boolean): boolean
-"defaultReturnValue"(int0: integer): void
 "defaultReturnValue"(): integer
+"defaultReturnValue"(int0: integer): void
 /** @deprecated */
 "get"(object0: any): integer
 "get"(boolean0: boolean): integer
@@ -710,8 +700,6 @@ export interface $Boolean2IntFunction extends $Function$0<boolean, integer> {
 "put"(boolean0: boolean, int1: integer): integer
 /** @deprecated */
 "put"(boolean0: boolean, integer1: integer): integer
-/** @deprecated */
-"remove"(object0: any): integer
 "remove"(boolean0: boolean): integer
 "size"(): integer
 }
@@ -787,11 +775,11 @@ export interface $Boolean2CharFunction extends $Function$0<boolean, character> {
 "composeObject"<T>(object2BooleanFunction0: $Object2BooleanFunction$$Type<T>): $Object2CharFunction<T>
 "composeReference"<T>(reference2BooleanFunction0: $Reference2BooleanFunction$$Type<T>): $Reference2CharFunction<T>
 "composeShort"(short2BooleanFunction0: $Short2BooleanFunction$$Type): $Short2CharFunction
+"containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsKey"(boolean0: boolean): boolean
-"defaultReturnValue"(char0: character): void
 "defaultReturnValue"(): character
+"defaultReturnValue"(char0: character): void
 /** @deprecated */
 "get"(object0: any): character
 "get"(boolean0: boolean): character
@@ -801,8 +789,6 @@ export interface $Boolean2CharFunction extends $Function$0<boolean, character> {
 "put"(boolean0: boolean, char1: character): character
 /** @deprecated */
 "put"(boolean0: boolean, character1: character): character
-/** @deprecated */
-"remove"(object0: any): character
 "remove"(boolean0: boolean): character
 "size"(): integer
 }

@@ -110,12 +110,12 @@ public static "isNullOrAddition"(operation0: $AttributeModifier$Operation$$Type)
 public "sanitizeValue"(double0: double): double
 public "setSyncable"(boolean0: boolean): $Attribute
 public "ths"(): $Attribute
-public static "toBaseComponent"(attribute0: $Attribute$$Type, double1: double, double2: double, boolean3: boolean, tooltipFlag4: $TooltipFlag$$Type): $MutableComponent
 public "toBaseComponent"(double0: double, double1: double, boolean2: boolean, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
-public "toComponent"(attributeModifier0: $AttributeModifier$$Type, tooltipFlag1: $TooltipFlag$$Type): $MutableComponent
+public static "toBaseComponent"(attribute0: $Attribute$$Type, double1: double, double2: double, boolean3: boolean, tooltipFlag4: $TooltipFlag$$Type): $MutableComponent
 public static "toComponent"(attribute0: $Attribute$$Type, attributeModifier1: $AttributeModifier$$Type, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
-public "toValueComponent"(operation0: $AttributeModifier$Operation$$Type, double1: double, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
+public "toComponent"(attributeModifier0: $AttributeModifier$$Type, tooltipFlag1: $TooltipFlag$$Type): $MutableComponent
 public static "toValueComponent"(attribute0: $Attribute$$Type, operation1: $AttributeModifier$Operation$$Type, double2: double, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
+public "toValueComponent"(operation0: $AttributeModifier$Operation$$Type, double1: double, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
 get "baseUUID"(): $UUID
 get "defaultValue"(): double
 get "descriptionId"(): string
@@ -732,6 +732,14 @@ declare module "net.minecraft.world.entity.ai.behavior.BlockPosTracker" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $BlockPosTracker$$Type = ($BlockPosTracker);
+}
+
+declare module "net.minecraft.world.entity.ai.goal.RangedBowAttackGoal" {
+import { $RangedAttackMob, $RangedAttackMob$$Type } from "net.minecraft.world.entity.monster.RangedAttackMob"
+import { $Mob, $Mob$$Type } from "net.minecraft.world.entity.Mob"
+
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $RangedBowAttackGoal$$Type<T extends ($Mob & $RangedAttackMob) = ($Mob & $RangedAttackMob)> = ($RangedBowAttackGoal<T>);
 }
 
 declare module "net.minecraft.world.entity.ai.sensing.NearestLivingEntitySensor" {

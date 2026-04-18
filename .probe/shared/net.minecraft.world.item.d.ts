@@ -14,8 +14,8 @@ constructor()
 
 public "arch$getTab"(): $CreativeModeTab
 public "arch$getTabSupplier"(): $DeferredSupplier
-public "arch$tab"(tab: $CreativeModeTab$$Type): $Item$Properties
 public "arch$tab"(tab: $DeferredSupplier$$Type): $Item$Properties
+public "arch$tab"(tab: $CreativeModeTab$$Type): $Item$Properties
 public "arch$tab"(tab: $ResourceKey$$Type): $Item$Properties
 public "craftRemainder"(item0: $Item$$Type): $Item$Properties
 public "defaultDurability"(int0: integer): $Item$Properties
@@ -410,7 +410,7 @@ public "getRecipeRemainder"(stack: $ItemStack$$Type): $ItemStack
 public "getShareTag"(itemStack0: $ItemStack$$Type): $CompoundTag
 public "getSweepHitBox"(stack: $ItemStack$$Type, player: $Player$$Type, target: $Entity$$Type): $AABB
 public "getXpRepairRatio"(itemStack0: $ItemStack$$Type): float
-public "handler$gcb000$mm$damageEquipment"(stack: $ItemStack$$Type, entity: $LivingEntity$$Type, player: $LivingEntity$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$gbl000$mm$damageEquipment"(stack: $ItemStack$$Type, entity: $LivingEntity$$Type, player: $LivingEntity$$Type, cir: $CallbackInfoReturnable$$Type): void
 public "hasCraftingRemainingItem"(itemStack0: $ItemStack$$Type): boolean
 public "hasCustomEntity"(itemStack0: $ItemStack$$Type): boolean
 public "initCapabilities"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): $ICapabilityProvider
@@ -2188,8 +2188,8 @@ public "getDefaultAttributeModifiers"(equipmentSlot0: $EquipmentSlot$$Type): $Mu
 public "getDefaultInstance"(): $ItemStack
 public "getDefaultTooltipHideFlags"(itemStack0: $ItemStack$$Type): integer
 public "getDescription"(): $Component
-public "getDescriptionId"(): string
 public "getDescriptionId"(itemStack0: $ItemStack$$Type): string
+public "getDescriptionId"(): string
 public "getDestroySpeed"(itemStack0: $ItemStack$$Type, blockState1: $BlockState$$Type): float
 public "getDigSpeed"(): float
 public "getDrinkingSound"(): $SoundEvent
@@ -2204,8 +2204,8 @@ public "getEquipmentSlot"(itemStack0: $ItemStack$$Type): $EquipmentSlot
 public "getFoodProperties"(): $FoodProperties
 public "getFoodProperties"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): $FoodProperties
 public "getHighlightTip"(itemStack0: $ItemStack$$Type, component1: $Component$$Type): $Component
-public "getId"(): string
 public static "getId"(item0: $Item$$Type): integer
+public "getId"(): string
 public "getIdLocation"(): $ResourceLocation
 public "getItem"(): $Item
 public "getItemBuilder"(): $ItemBuilder
@@ -2232,8 +2232,8 @@ public "getUseAnimation"(itemStack0: $ItemStack$$Type): $UseAnim
 public "getUseDuration"(itemStack0: $ItemStack$$Type): integer
 public "getXpRepairRatio"(itemStack0: $ItemStack$$Type): float
 public "handler$dgc000$initializeClient"(consumer0: $Consumer$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$hnm001$initializeClient"(consumer: $Consumer$$Type, ci: $CallbackInfo$$Type): void
-public "handler$ige000$getHoverName"(itemStack0: $ItemStack$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$hng001$initializeClient"(consumer: $Consumer$$Type, ci: $CallbackInfo$$Type): void
+public "handler$igc000$getHoverName"(itemStack0: $ItemStack$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
 /** @deprecated */
 public "hasCraftingRemainingItem"(): boolean
 public "hasCraftingRemainingItem"(itemStack0: $ItemStack$$Type): boolean
@@ -2265,8 +2265,8 @@ public "makesPiglinsNeutral"(itemStack0: $ItemStack$$Type, livingEntity1: $Livin
 public "mfix$getDelegate"(resourceKey0: $ResourceKey$$Type): $Holder$Reference
 public "mfix$setDelegate"(resourceKey0: $ResourceKey$$Type, reference1: $Holder$Reference$$Type): void
 public "mineBlock"(itemStack0: $ItemStack$$Type, level1: $Level$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, livingEntity4: $LivingEntity$$Type): boolean
-public "modifyReturnValue$ibc000$overrideOtherStackedOnMe"(boolean0: boolean, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type, slot3: $Slot$$Type, clickAction4: $ClickAction$$Type, player5: $Player$$Type, slotAccess6: $SlotAccess$$Type): boolean
-public "modifyReturnValue$ibc000$overrideStackedOnOther"(boolean0: boolean, itemStack1: $ItemStack$$Type, slot2: $Slot$$Type, clickAction3: $ClickAction$$Type, player4: $Player$$Type): boolean
+public "modifyReturnValue$iba000$overrideOtherStackedOnMe"(boolean0: boolean, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type, slot3: $Slot$$Type, clickAction4: $ClickAction$$Type, player5: $Player$$Type, slotAccess6: $SlotAccess$$Type): boolean
+public "modifyReturnValue$iba000$overrideStackedOnOther"(boolean0: boolean, itemStack1: $ItemStack$$Type, slot2: $Slot$$Type, clickAction3: $ClickAction$$Type, player4: $Player$$Type): boolean
 public "moonlight$addAdditionalBehavior"(placementOverride: $AdditionalItemPlacement$$Type): void
 public "moonlight$getAdditionalBehavior"(): $AdditionalItemPlacement
 public "moonlight$getClientAnimationExtension"(): any
@@ -2318,8 +2318,8 @@ public "vMinus$setVisionId"(resourceLocation0: $ResourceLocation$$Type): void
 public "vMinus$update"(): void
 public "verifyTagAfterLoad"(compoundTag0: $CompoundTag$$Type): void
 public "vminus$getMaxDuration"(): integer
-public "wrapOperation$gpg000$l2complements$getBarColor$getMaxDamage"(item0: $Item$$Type, itemStack1: $ItemStack$$Type, operation2: $Operation$$Type): integer
-public "wrapOperation$gpg000$l2complements$getBarWidth$getMaxDamage"(item0: $Item$$Type, itemStack1: $ItemStack$$Type, operation2: $Operation$$Type): integer
+public "wrapOperation$gpa000$l2complements$getBarColor$getMaxDamage"(item0: $Item$$Type, itemStack1: $ItemStack$$Type, operation2: $Operation$$Type): integer
+public "wrapOperation$gpa000$l2complements$getBarWidth$getMaxDamage"(item0: $Item$$Type, itemStack1: $ItemStack$$Type, operation2: $Operation$$Type): integer
 public "zeta$setBlockEntityWithoutLevelRenderer"(blockEntityWithoutLevelRenderer0: $BlockEntityWithoutLevelRenderer$$Type): void
 public "zeta$setHumanoidArmorModel"(humanoidArmorModelGetter0: $HumanoidArmorModelGetter$$Type): void
 get "craftingRemainingItem"(): $Item
@@ -3011,7 +3011,7 @@ public "getRecipeRemainder"(stack: $ItemStack$$Type): $ItemStack
 public "getShareTag"(itemStack0: $ItemStack$$Type): $CompoundTag
 public "getSweepHitBox"(stack: $ItemStack$$Type, player: $Player$$Type, target: $Entity$$Type): $AABB
 public "getXpRepairRatio"(itemStack0: $ItemStack$$Type): float
-public "handler$gbo000$fixInitialArmorStandRot"(context: $UseOnContext$$Type, cir: $CallbackInfoReturnable$$Type, stand: $ArmorStand$$Type): void
+public "handler$gbi000$fixInitialArmorStandRot"(context: $UseOnContext$$Type, cir: $CallbackInfoReturnable$$Type, stand: $ArmorStand$$Type): void
 public "hasCraftingRemainingItem"(itemStack0: $ItemStack$$Type): boolean
 public "hasCustomEntity"(itemStack0: $ItemStack$$Type): boolean
 public "initCapabilities"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): $ICapabilityProvider
@@ -3659,12 +3659,12 @@ import { $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 import { $CreativeModeTab$TabVisibility$$Type } from "net.minecraft.world.item.CreativeModeTab$TabVisibility"
 
 export interface $CreativeModeTab$Output {
-"accept"(itemLike0: $ItemLike$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 "accept"(itemStack0: $ItemStack$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
-"accept"(itemStack0: $ItemStack$$Type): void
 "accept"(itemLike0: $ItemLike$$Type): void
-"acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>): void
+"accept"(itemStack0: $ItemStack$$Type): void
+"accept"(itemLike0: $ItemLike$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
+"acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>): void
 }
 
 export namespace $CreativeModeTab$Output {
@@ -5096,7 +5096,7 @@ public "getRecipeRemainder"(stack: $ItemStack$$Type): $ItemStack
 public "getShareTag"(itemStack0: $ItemStack$$Type): $CompoundTag
 public "getSweepHitBox"(stack: $ItemStack$$Type, player: $Player$$Type, target: $Entity$$Type): $AABB
 public "getXpRepairRatio"(itemStack0: $ItemStack$$Type): float
-public "handler$hhd000$onFinishedUsing"(stack: $ItemStack$$Type, world: $Level$$Type, user: $LivingEntity$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$hgn000$onFinishedUsing"(stack: $ItemStack$$Type, world: $Level$$Type, user: $LivingEntity$$Type, cir: $CallbackInfoReturnable$$Type): void
 public "hasCraftingRemainingItem"(itemStack0: $ItemStack$$Type): boolean
 public "hasCustomEntity"(itemStack0: $ItemStack$$Type): boolean
 public "initCapabilities"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): $ICapabilityProvider
@@ -5683,7 +5683,7 @@ public "getRecipeRemainder"(stack: $ItemStack$$Type): $ItemStack
 public "getShareTag"(itemStack0: $ItemStack$$Type): $CompoundTag
 public "getSweepHitBox"(stack: $ItemStack$$Type, player: $Player$$Type, target: $Entity$$Type): $AABB
 public "getXpRepairRatio"(itemStack0: $ItemStack$$Type): float
-public "handler$igo001$releaseUsing"(itemStack0: $ItemStack$$Type, level1: $Level$$Type, livingEntity2: $LivingEntity$$Type, int3: integer, callbackInfo4: $CallbackInfo$$Type): void
+public "handler$igm001$releaseUsing"(itemStack0: $ItemStack$$Type, level1: $Level$$Type, livingEntity2: $LivingEntity$$Type, int3: integer, callbackInfo4: $CallbackInfo$$Type): void
 public "hasCraftingRemainingItem"(itemStack0: $ItemStack$$Type): boolean
 public "hasCustomEntity"(itemStack0: $ItemStack$$Type): boolean
 public "initCapabilities"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): $ICapabilityProvider
@@ -5743,6 +5743,7 @@ set "tier"(value: $Consumer$$Type<$MutableToolTier$$Type>)
 
 declare module "net.minecraft.world.item.ItemStack" {
 import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
+import { $JsonObject } from "com.google.gson.JsonObject"
 import { $LivingEntity, $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $AABB, $AABB$$Type } from "net.minecraft.world.phys.AABB"
 import { $ItemStackKJS } from "dev.latvian.mods.kubejs.core.ItemStackKJS"
@@ -5870,8 +5871,8 @@ public "copyWithCount"(int0: integer): $ItemStack
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "doesSneakBypassUse"(levelReader0: $LevelReader$$Type, blockPos1: $BlockPos$$Type, player2: $Player$$Type): boolean
 public "elytraFlightTick"(livingEntity0: $LivingEntity$$Type, int1: integer): boolean
-public "enchant"(enchantment: $Enchantment$$Type, level: integer): $ItemStack
 public "enchant"(enchantments: $Map$$Type<any, any>): $ItemStack
+public "enchant"(enchantment: $Enchantment$$Type, level: integer): $ItemStack
 public "enchantStack"(enchantment0: $Enchantment$$Type, int1: integer): void
 public "endingLibrary$getComponentManager"(): $ItemComponentManager
 public "endingLibrary$setComponentManager"(itemComponentManager0: $ItemComponentManager$$Type): void
@@ -5944,16 +5945,16 @@ public "grow"(int0: integer): void
 public "handler$dci000$apoth_tooltipMarker"(player0: $Player$$Type, tooltipFlag1: $TooltipFlag$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type, list3: $List$$Type): void
 public "handler$dci000$apoth_tooltipMarker2"(player0: $Player$$Type, tooltipFlag1: $TooltipFlag$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type, list3: $List$$Type): void
 public "handler$dhe000$l2backpack_shrinkListener"(int0: integer, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$foc000$placebo_itemUseHook"(useOnContext0: $UseOnContext$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$gph000$l2complements_canWalkOnPowderedSnow_enchantOverride"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$gph000$l2complements_hurtAndBreak_lifeSync"(int0: integer, livingEntity1: $LivingEntity$$Type, consumer2: $Consumer$$Type, callbackInfo3: $CallbackInfo$$Type): void
-public "handler$gph000$l2complements_isEnderMask_enchantOverride"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$gph000$l2complements_isPiglinCurrency_enchantOverride"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$gph000$l2complements_makesPiglinsNeutral_enchantOverride"(livingEntity0: $LivingEntity$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$hcd000$azurelib$initializeAzIdForConstructor"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$hcd000$azurelib$initializeAzIdForConstructorWithOptional"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$hcd000$azurelib$initializeAzIdFromCompoundTag"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$igf000$init"(itemLike0: $ItemLike$$Type, int1: integer, compoundTag2: $CompoundTag$$Type, callbackInfo3: $CallbackInfo$$Type): void
+public "handler$fnm000$placebo_itemUseHook"(useOnContext0: $UseOnContext$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$gpb000$l2complements_canWalkOnPowderedSnow_enchantOverride"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$gpb000$l2complements_hurtAndBreak_lifeSync"(int0: integer, livingEntity1: $LivingEntity$$Type, consumer2: $Consumer$$Type, callbackInfo3: $CallbackInfo$$Type): void
+public "handler$gpb000$l2complements_isEnderMask_enchantOverride"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$gpb000$l2complements_isPiglinCurrency_enchantOverride"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$gpb000$l2complements_makesPiglinsNeutral_enchantOverride"(livingEntity0: $LivingEntity$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$hbn000$azurelib$initializeAzIdForConstructor"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$hbn000$azurelib$initializeAzIdForConstructorWithOptional"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$hbn000$azurelib$initializeAzIdFromCompoundTag"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$igd000$init"(itemLike0: $ItemLike$$Type, int1: integer, compoundTag2: $CompoundTag$$Type, callbackInfo3: $CallbackInfo$$Type): void
 public "handler$zkg000$forgeItem"(itemStack0: $ItemStack$$Type, slot1: $Slot$$Type, clickAction2: $ClickAction$$Type, player3: $Player$$Type, slotAccess4: $SlotAccess$$Type, callbackInfoReturnable5: $CallbackInfoReturnable$$Type): void
 public "hasAdventureModeBreakTagForBlock"(registry0: $Registry$$Type<$Block$$Type>, blockInWorld1: $BlockInWorld$$Type): boolean
 public "hasAdventureModePlaceTagForBlock"(registry0: $Registry$$Type<$Block$$Type>, blockInWorld1: $BlockInWorld$$Type): boolean
@@ -5973,9 +5974,9 @@ public "ignoreNBT"(): $Ingredient
 public "interactLivingEntity"(player0: $Player$$Type, livingEntity1: $LivingEntity$$Type, interactionHand2: $InteractionHand$$Type): $InteractionResult
 public "inventoryTick"(level0: $Level$$Type, entity1: $Entity$$Type, int2: integer, boolean3: boolean): void
 public "is"(tagKey0: $TagKey$$Type<$Item$$Type>): boolean
-public "is"(item0: $Item$$Type): boolean
 public "is"(holder0: $Holder$$Type<$Item$$Type>): boolean
 public "is"(predicate0: $Predicate$$Type<$Holder$$Type<$Item$$Type>>): boolean
+public "is"(item0: $Item$$Type): boolean
 public "isBarVisible"(): boolean
 public "isBlock"(): boolean
 public "isBookEnchantable"(itemStack0: $ItemStack$$Type): boolean
@@ -5998,13 +5999,13 @@ public static "isSameItem"(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$
 public static "isSameItemSameTags"(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type): boolean
 public "isStackable"(): boolean
 public "l2backpack$setShrinkListener"(intConsumer0: $IntConsumer$$Type): void
-public "localvar$gph000$l2complements_hurtAndBreak_hardened"(int0: integer): integer
+public "localvar$gpb000$l2complements_hurtAndBreak_hardened"(int0: integer): integer
 public "makesPiglinsNeutral"(livingEntity0: $LivingEntity$$Type): boolean
 public static "matches"(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type): boolean
 public "mineBlock"(level0: $Level$$Type, blockState1: $BlockState$$Type, blockPos2: $BlockPos$$Type, player3: $Player$$Type): void
-public "modifyReturnValue$gph000$l2complements_getMaxDamage_durabilityEnchantment"(int0: integer): integer
-public "modifyReturnValue$gph000$l2complements_getSweepHitBox_enchantOverride"(aABB0: $AABB$$Type): $AABB
-public "modifyReturnValue$gph000$l2complements_hurt_safeguard_preventBreaking"(boolean0: boolean): boolean
+public "modifyReturnValue$gpb000$l2complements_getMaxDamage_durabilityEnchantment"(int0: integer): integer
+public "modifyReturnValue$gpb000$l2complements_getSweepHitBox_enchantOverride"(aABB0: $AABB$$Type): $AABB
+public "modifyReturnValue$gpb000$l2complements_hurt_safeguard_preventBreaking"(boolean0: boolean): boolean
 public static "of"(compoundTag0: $CompoundTag$$Type): $ItemStack
 public static "of"(itemStack0: $ItemStack$$Type): $ExtraItemStackItf
 /** @deprecated */
@@ -6034,6 +6035,7 @@ public "removeTagKey"(string0: string): void
 public "resetHoverName"(): void
 public "save"(compoundTag0: $CompoundTag$$Type): $CompoundTag
 public "self"(): $ItemStack
+public "serializeNBT"(): $CompoundTag
 public "setAnimator"(azAnimator0: $AzAnimator$$Type): void
 public "setCount"(int0: integer): void
 public "setDamageValue"(int0: integer): void
@@ -6052,6 +6054,8 @@ public "specialEquals"(o: any, shallow: boolean): boolean
 public "split"(int0: integer): $ItemStack
 public "strongNBT"(): $Ingredient
 public "toItemString"(): string
+public "toJson"(): $JsonObject
+public "toNBT"(): $CompoundTag
 public "use"(level0: $Level$$Type, player1: $Player$$Type, interactionHand2: $InteractionHand$$Type): $InteractionResultHolder<$ItemStack>
 public "useOn"(useOnContext0: $UseOnContext$$Type): $InteractionResult
 public "useOnRelease"(): boolean
@@ -6066,7 +6070,7 @@ public "withLore"(text: $Component$$Type[]): $ItemStack
 public "withNBT"(nbt: $CompoundTag$$Type): $ItemStack
 public "withName"(displayName: $Component$$Type): $ItemStack
 public "wrapOperation$cip000$celestial_core$hurtAndBroken"(item0: $Item$$Type, itemStack1: $ItemStack$$Type, int2: integer, livingEntity3: $LivingEntity$$Type, consumer4: $Consumer$$Type, operation5: $Operation$$Type): integer
-public "wrapOperation$gph000$l2complements_hurt_safeguard_setDamage"(itemStack0: $ItemStack$$Type, int1: integer, operation2: $Operation$$Type): void
+public "wrapOperation$gpb000$l2complements_hurt_safeguard_setDamage"(itemStack0: $ItemStack$$Type, int1: integer, operation2: $Operation$$Type): void
 get "allEnchantments"(): $Map<$Enchantment, integer>
 get "animator"(): $Optional<$AzAnimator<K, T>>
 get "animatorOrNull"(): $AzAnimator
@@ -6615,9 +6619,9 @@ public "doesSneakBypassUse"(itemStack0: $ItemStack$$Type, levelReader1: $LevelRe
 public "dragonlib$getCustomEquipmentSlot"(stack: $ItemStack$$Type): $EquipmentSlot
 public "dragonlib$tickArmor"(stack: $ItemStack$$Type, player: $Player$$Type): void
 public "elytraFlightTick"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type, int2: integer): boolean
+public "emptyContents"(player0: $Player$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, blockHitResult3: $BlockHitResult$$Type, itemStack4: $ItemStack$$Type): boolean
 /** @deprecated */
 public "emptyContents"(player0: $Player$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, blockHitResult3: $BlockHitResult$$Type): boolean
-public "emptyContents"(player0: $Player$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, blockHitResult3: $BlockHitResult$$Type, itemStack4: $ItemStack$$Type): boolean
 public "getAllEnchantments"(itemStack0: $ItemStack$$Type): $Map<$Enchantment, integer>
 public "getArmorTexture"(itemStack0: $ItemStack$$Type, entity1: $Entity$$Type, equipmentSlot2: $EquipmentSlot$$Type, string3: string): string
 public "getAttributeModifiers"(equipmentSlot0: $EquipmentSlot$$Type, itemStack1: $ItemStack$$Type): $Multimap<$Attribute, $AttributeModifier>
@@ -6792,7 +6796,7 @@ public "getRecipeRemainder"(stack: $ItemStack$$Type): $ItemStack
 public "getShareTag"(itemStack0: $ItemStack$$Type): $CompoundTag
 public "getSweepHitBox"(stack: $ItemStack$$Type, player: $Player$$Type, target: $Entity$$Type): $AABB
 public "getXpRepairRatio"(itemStack0: $ItemStack$$Type): float
-public "handler$gcc001$mm$damageEquipment"(stack: $ItemStack$$Type, entity: $LivingEntity$$Type, player: $LivingEntity$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$gbm001$mm$damageEquipment"(stack: $ItemStack$$Type, entity: $LivingEntity$$Type, player: $LivingEntity$$Type, cir: $CallbackInfoReturnable$$Type): void
 public "hasCraftingRemainingItem"(itemStack0: $ItemStack$$Type): boolean
 public "hasCustomEntity"(itemStack0: $ItemStack$$Type): boolean
 public "initCapabilities"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): $ICapabilityProvider
@@ -10266,12 +10270,12 @@ static "ZOMBIFIED_PIGLIN_SPAWN_EGG": $Item
 
 constructor()
 
-public static "registerBlock"(block0: $Block$$Type): $Item
 public static "registerBlock"(block0: $Block$$Type, ...block1s: $Block$$Type[]): $Item
 public static "registerBlock"(block0: $Block$$Type, item1: $Item$$Type): $Item
+public static "registerBlock"(block0: $Block$$Type): $Item
 public static "registerBlock"(blockItem0: $BlockItem$$Type): $Item
-public static "registerItem"(resourceKey0: $ResourceKey$$Type<$Item>, item1: $Item$$Type): $Item
 public static "registerItem"(string0: string, item1: $Item$$Type): $Item
+public static "registerItem"(resourceKey0: $ResourceKey$$Type<$Item>, item1: $Item$$Type): $Item
 public static "registerItem"(resourceLocation0: $ResourceLocation$$Type, item1: $Item$$Type): $Item
 }
 }
@@ -12932,10 +12936,10 @@ public "getRecipeRemainder"(stack: $ItemStack$$Type): $ItemStack
 public "getShareTag"(itemStack0: $ItemStack$$Type): $CompoundTag
 public "getSweepHitBox"(stack: $ItemStack$$Type, player: $Player$$Type, target: $Entity$$Type): $AABB
 public "getXpRepairRatio"(itemStack0: $ItemStack$$Type): float
-public "handler$hmk000$getDestroySpeed"(stack: $ItemStack$$Type, state: $BlockState$$Type, cir: $CallbackInfoReturnable$$Type): void
-public "handler$hmk000$isCorrectToolForDrops"(state: $BlockState$$Type, cir: $CallbackInfoReturnable$$Type): void
-public "handler$hmk000$mineBlock"(stack: $ItemStack$$Type, level: $Level$$Type, state: $BlockState$$Type, pos: $BlockPos$$Type, miningEntity: $LivingEntity$$Type, cir: $CallbackInfoReturnable$$Type): void
-public "handler$icf001$getDestroySpeed"(itemStack0: $ItemStack$$Type, blockState1: $BlockState$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$hme000$getDestroySpeed"(stack: $ItemStack$$Type, state: $BlockState$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$hme000$isCorrectToolForDrops"(state: $BlockState$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$hme000$mineBlock"(stack: $ItemStack$$Type, level: $Level$$Type, state: $BlockState$$Type, pos: $BlockPos$$Type, miningEntity: $LivingEntity$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$icd001$getDestroySpeed"(itemStack0: $ItemStack$$Type, blockState1: $BlockState$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
 public "hasCraftingRemainingItem"(itemStack0: $ItemStack$$Type): boolean
 public "hasCustomEntity"(itemStack0: $ItemStack$$Type): boolean
 public "initCapabilities"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): $ICapabilityProvider
@@ -15389,8 +15393,8 @@ public "canElytraFly"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity
 public "canGrindstoneRepair"(itemStack0: $ItemStack$$Type): boolean
 public "canPerformAction"(itemStack0: $ItemStack$$Type, toolAction1: $ToolAction$$Type): boolean
 public "canWalkOnPowderedSnow"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): boolean
-public static "createArmorTrimTemplate"(resourceLocation0: $ResourceLocation$$Type): $SmithingTemplateItem
 public static "createArmorTrimTemplate"(resourceKey0: $ResourceKey$$Type<$TrimPattern>): $SmithingTemplateItem
+public static "createArmorTrimTemplate"(resourceLocation0: $ResourceLocation$$Type): $SmithingTemplateItem
 public "createEntity"(level0: $Level$$Type, entity1: $Entity$$Type, itemStack2: $ItemStack$$Type): $Entity
 public static "createNetheriteUpgradeIconList"(): $List<$ResourceLocation>
 public static "createNetheriteUpgradeMaterialList"(): $List<$ResourceLocation>

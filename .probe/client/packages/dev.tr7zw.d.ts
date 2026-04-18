@@ -6,34 +6,10 @@ import { $List$$Type } from "java.util.List"
 export type $ScreenAccessor$$Type = ($ScreenAccessor | (() => $List$$Type<$GuiEventListener$$Type>));
 }
 
-declare module "dev.tr7zw.notenoughanimations.mixins.PlayerModelAccessor" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $PlayerModelAccessor$$Type = ($PlayerModelAccessor | (() => boolean));
-}
-
-declare module "dev.tr7zw.notenoughanimations.access.PlayerData" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $PlayerData$$Type = ($PlayerData);
-}
-
-declare module "dev.tr7zw.notenoughanimations.mixins.EntityRenderDispatcherAccessor" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $EntityRenderDispatcherAccessor$$Type = ($EntityRenderDispatcherAccessor);
-}
-
 declare module "dev.tr7zw.entityculling.versionless.access.Cullable" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $Cullable$$Type = ($Cullable);
-}
-
-declare module "dev.tr7zw.notenoughanimations.versionless.animations.DataHolder" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $DataHolder$$Type<T = any> = ($DataHolder<T>);
 }
 
 declare module "dev.tr7zw.entityculling.mixin.DisplayAccessor" {

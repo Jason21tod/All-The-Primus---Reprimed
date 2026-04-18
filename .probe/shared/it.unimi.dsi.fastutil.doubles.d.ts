@@ -67,9 +67,9 @@ export interface $Double2ReferenceFunction<V = any> extends $Function$0<double, 
 /** @deprecated */
 "get"(object0: any): V
 "get"(double0: double): V
-"getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
 "put"(double0: double, v1: V): V
 "put"(double0: double, v1: V): V
@@ -270,8 +270,8 @@ export interface $Double2ShortFunction extends $Function$0<double, short>, $Doub
 /** @deprecated */
 "getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(double0: double, short1: short): short
-"put"(double0: double, short1: short): short
 /** @deprecated */
+"put"(double0: double, short1: short): short
 "put"(double0: double, short1: short): short
 "remove"(double0: double): short
 "size"(): integer
@@ -381,9 +381,9 @@ export interface $Double2ObjectFunction<V = any> extends $Function$0<double, V>,
 /** @deprecated */
 "get"(object0: any): V
 "get"(double0: double): V
-"getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
+"getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
 "put"(double0: double, v1: V): V
 "put"(double0: double, v1: V): V
@@ -712,8 +712,8 @@ export interface $Double2LongFunction extends $Function$0<double, long>, $Double
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
 "getOrDefault"(double0: double, long1: long): long
-"put"(double0: double, long1: long): long
 /** @deprecated */
+"put"(double0: double, long1: long): long
 "put"(double0: double, long1: long): long
 "remove"(double0: double): long
 "size"(): integer
@@ -800,9 +800,9 @@ export interface $Double2IntFunction extends $Function$0<double, integer>, $Doub
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
 "getOrDefault"(double0: double, int1: integer): integer
-"put"(double0: double, int1: integer): integer
 /** @deprecated */
 "put"(double0: double, integer1: integer): integer
+"put"(double0: double, int1: integer): integer
 "remove"(double0: double): integer
 "size"(): integer
 }
@@ -888,8 +888,8 @@ export interface $Double2ByteFunction extends $Function$0<double, byte>, $Double
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(double0: double, byte1: byte): byte
-"put"(double0: double, byte1: byte): byte
 /** @deprecated */
+"put"(double0: double, byte1: byte): byte
 "put"(double0: double, byte1: byte): byte
 "remove"(double0: double): byte
 "size"(): integer
@@ -978,8 +978,8 @@ export interface $Double2FloatFunction extends $Function$0<double, float>, $Doub
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(double0: double, float1: float): float
-"put"(double0: double, float1: float): float
 /** @deprecated */
+"put"(double0: double, float1: float): float
 "put"(double0: double, float1: float): float
 "remove"(double0: double): float
 "size"(): integer
@@ -1066,9 +1066,9 @@ export interface $Double2CharFunction extends $Function$0<double, character>, $D
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
 "getOrDefault"(double0: double, char1: character): character
-"put"(double0: double, char1: character): character
 /** @deprecated */
 "put"(double0: double, character1: character): character
+"put"(double0: double, char1: character): character
 "remove"(double0: double): character
 "size"(): integer
 }
@@ -1333,13 +1333,13 @@ export interface $Double2BooleanFunction extends $Function$0<double, boolean>, $
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(double0: double): boolean
+"getOrDefault"(double0: double, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
-"getOrDefault"(double0: double, boolean1: boolean): boolean
 "negate"(): $DoublePredicate
 "or"(doublePredicate0: $DoublePredicate$$Type): $DoublePredicate
-"put"(double0: double, boolean1: boolean): boolean
 /** @deprecated */
+"put"(double0: double, boolean1: boolean): boolean
 "put"(double0: double, boolean1: boolean): boolean
 "remove"(double0: double): boolean
 "size"(): integer

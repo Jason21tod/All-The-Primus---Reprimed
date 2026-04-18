@@ -42,7 +42,7 @@ public "getExhaustionLevel"(): float
 public "getFoodLevel"(): integer
 public "getLastFoodLevel"(): integer
 public "getSaturationLevel"(): float
-public "handler$hio000$ac_eat"(item0: $Item$$Type, itemStack1: $ItemStack$$Type, livingEntity2: $LivingEntity$$Type, callbackInfo3: $CallbackInfo$$Type): void
+public "handler$hii000$ac_eat"(item0: $Item$$Type, itemStack1: $ItemStack$$Type, livingEntity2: $LivingEntity$$Type, callbackInfo3: $CallbackInfo$$Type): void
 public "needsFood"(): boolean
 public "readAdditionalSaveData"(compoundTag0: $CompoundTag$$Type): void
 public "setExhaustion"(float0: float): void

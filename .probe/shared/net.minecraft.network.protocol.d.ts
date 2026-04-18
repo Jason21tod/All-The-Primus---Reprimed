@@ -783,8 +783,8 @@ import { $Function$$Type } from "java.util.function.Function"
 export class $ClientboundBlockEntityDataPacket implements $Packet<$ClientGamePacketListener> {
 constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 
-public static "create"(blockEntity0: $BlockEntity$$Type, function1: $Function$$Type<$BlockEntity$$Type, $CompoundTag>): $ClientboundBlockEntityDataPacket
 public static "create"(blockEntity0: $BlockEntity$$Type): $ClientboundBlockEntityDataPacket
+public static "create"(blockEntity0: $BlockEntity$$Type, function1: $Function$$Type<$BlockEntity$$Type, $CompoundTag>): $ClientboundBlockEntityDataPacket
 public "getPos"(): $BlockPos
 public "getTag"(): $CompoundTag
 public "getType"(): $BlockEntityType<any>
@@ -810,9 +810,9 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 import { $EnumSet, $EnumSet$$Type } from "java.util.EnumSet"
 
 export class $ClientboundPlayerInfoUpdatePacket implements $Packet<$ClientGamePacketListener> {
-constructor(enumSet0: $EnumSet$$Type<$ClientboundPlayerInfoUpdatePacket$Action$$Type>, collection1: $Collection$$Type<$ServerPlayer$$Type>)
-constructor(action0: $ClientboundPlayerInfoUpdatePacket$Action$$Type, serverPlayer1: $ServerPlayer$$Type)
 constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
+constructor(action0: $ClientboundPlayerInfoUpdatePacket$Action$$Type, serverPlayer1: $ServerPlayer$$Type)
+constructor(enumSet0: $EnumSet$$Type<$ClientboundPlayerInfoUpdatePacket$Action$$Type>, collection1: $Collection$$Type<$ServerPlayer$$Type>)
 
 public "actions"(): $EnumSet<$ClientboundPlayerInfoUpdatePacket$Action>
 public static "createPlayerInitializing"(collection0: $Collection$$Type<$ServerPlayer$$Type>): $ClientboundPlayerInfoUpdatePacket
@@ -1537,8 +1537,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 import { $ServerGamePacketListener, $ServerGamePacketListener$$Type } from "net.minecraft.network.protocol.game.ServerGamePacketListener"
 
 export class $ServerboundSetCreativeModeSlotPacket implements $Packet<$ServerGamePacketListener> {
-constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 constructor(int0: integer, itemStack1: $ItemStack$$Type)
+constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 
 public "getItem"(): $ItemStack
 public "getSlotNum"(): integer
@@ -2484,8 +2484,8 @@ export class $ServerboundInteractPacket implements $Packet<$ServerGamePacketList
 constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 
 public static "createAttackPacket"(entity0: $Entity$$Type, boolean1: boolean): $ServerboundInteractPacket
-public static "createInteractionPacket"(entity0: $Entity$$Type, boolean1: boolean, interactionHand2: $InteractionHand$$Type): $ServerboundInteractPacket
 public static "createInteractionPacket"(entity0: $Entity$$Type, boolean1: boolean, interactionHand2: $InteractionHand$$Type, vec33: $Vec3$$Type): $ServerboundInteractPacket
+public static "createInteractionPacket"(entity0: $Entity$$Type, boolean1: boolean, interactionHand2: $InteractionHand$$Type): $ServerboundInteractPacket
 public "dispatch"(handler0: $ServerboundInteractPacket$Handler$$Type): void
 public "getTarget"(serverLevel0: $ServerLevel$$Type): $Entity
 public "handle"(serverGamePacketListener0: $ServerGamePacketListener$$Type): void
@@ -2558,8 +2558,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 import { $ServerGamePacketListener, $ServerGamePacketListener$$Type } from "net.minecraft.network.protocol.game.ServerGamePacketListener"
 
 export class $ServerboundKeepAlivePacket implements $Packet<$ServerGamePacketListener> {
-constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 constructor(long0: long)
+constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 
 public "getId"(): long
 public "handle"(serverGamePacketListener0: $ServerGamePacketListener$$Type): void
@@ -3245,8 +3245,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 import { $ServerGamePacketListener, $ServerGamePacketListener$$Type } from "net.minecraft.network.protocol.game.ServerGamePacketListener"
 
 export class $ServerboundLockDifficultyPacket implements $Packet<$ServerGamePacketListener> {
-constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 constructor(boolean0: boolean)
+constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 
 public "handle"(serverGamePacketListener0: $ServerGamePacketListener$$Type): void
 public "isLocked"(): boolean
@@ -3707,8 +3707,8 @@ import { $Difficulty, $Difficulty$$Type } from "net.minecraft.world.Difficulty"
 import { $ServerGamePacketListener, $ServerGamePacketListener$$Type } from "net.minecraft.network.protocol.game.ServerGamePacketListener"
 
 export class $ServerboundChangeDifficultyPacket implements $Packet<$ServerGamePacketListener> {
-constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 constructor(difficulty0: $Difficulty$$Type)
+constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 
 public "getDifficulty"(): $Difficulty
 public "handle"(serverGamePacketListener0: $ServerGamePacketListener$$Type): void
@@ -3750,8 +3750,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 import { $ServerGamePacketListener, $ServerGamePacketListener$$Type } from "net.minecraft.network.protocol.game.ServerGamePacketListener"
 
 export class $ServerboundContainerButtonClickPacket implements $Packet<$ServerGamePacketListener> {
-constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 constructor(int0: integer, int1: integer)
+constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 
 public "getButtonId"(): integer
 public "getContainerId"(): integer
@@ -3809,8 +3809,8 @@ import { $ServerboundSeenAdvancementsPacket$Action, $ServerboundSeenAdvancements
 import { $ServerGamePacketListener, $ServerGamePacketListener$$Type } from "net.minecraft.network.protocol.game.ServerGamePacketListener"
 
 export class $ServerboundSeenAdvancementsPacket implements $Packet<$ServerGamePacketListener> {
-constructor(action0: $ServerboundSeenAdvancementsPacket$Action$$Type, resourceLocation1: $ResourceLocation$$Type)
 constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
+constructor(action0: $ServerboundSeenAdvancementsPacket$Action$$Type, resourceLocation1: $ResourceLocation$$Type)
 
 public static "closedScreen"(): $ServerboundSeenAdvancementsPacket
 public "getAction"(): $ServerboundSeenAdvancementsPacket$Action

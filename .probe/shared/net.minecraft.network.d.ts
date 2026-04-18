@@ -142,8 +142,8 @@ public "readAnySizeNbt"(): $CompoundTag
 public "readBitSet"(): $BitSet
 public "readBlockHitResult"(): $BlockHitResult
 public "readBlockPos"(): $BlockPos
-public "readById"<T>(idMap0: $IdMap$$Type<T>): T
 public "readById"<T>(idMap0: $IdMap$$Type<$Holder$$Type<T>>, reader1: $FriendlyByteBuf$Reader$$Type<T>): $Holder<T>
+public "readById"<T>(idMap0: $IdMap$$Type<T>): T
 public "readByteArray"(int0: integer): byte[]
 public "readByteArray"(): byte[]
 public "readChunkPos"(): $ChunkPos
@@ -163,13 +163,13 @@ public "readIntIdList"(): $IntList
 public "readItem"(): $ItemStack
 public "readJsonWithCodec"<T>(codec0: $Codec$$Type<T>): T
 public "readList"<T>(reader0: $FriendlyByteBuf$Reader$$Type<T>): $List<T>
-public "readLongArray"(long0s: long[], int1: integer): long[]
 public "readLongArray"(): long[]
 public "readLongArray"(long0s: long[]): long[]
+public "readLongArray"(long0s: long[], int1: integer): long[]
 public "readMap"<K, V>(reader0: $FriendlyByteBuf$Reader$$Type<K>, reader1: $FriendlyByteBuf$Reader$$Type<V>): $Map<K, V>
 public "readMap"<K, V, M extends $Map<K, V>>(intFunction0: $IntFunction$$Type<M>, reader1: $FriendlyByteBuf$Reader$$Type<K>, reader2: $FriendlyByteBuf$Reader$$Type<V>): M
-public "readNbt"(nbtAccounter0: $NbtAccounter$$Type): $CompoundTag
 public "readNbt"(): $CompoundTag
+public "readNbt"(nbtAccounter0: $NbtAccounter$$Type): $CompoundTag
 public "readNullable"<T>(reader0: $FriendlyByteBuf$Reader$$Type<T>): T
 public "readOptional"<T>(reader0: $FriendlyByteBuf$Reader$$Type<T>): $Optional<T>
 public "readProperty"(): $Property
@@ -185,16 +185,16 @@ public "readUUID"(): $UUID
 public "readUtf"(): string
 public "readUtf"(int0: integer): string
 public "readVarInt"(): integer
-public "readVarIntArray"(): integer[]
 public "readVarIntArray"(int0: integer): integer[]
+public "readVarIntArray"(): integer[]
 public "readVarLong"(): long
 public "readVector3f"(): $Vector3f
 /** @deprecated */
 public "readWithCodec"<T>(dynamicOps0: $DynamicOps$$Type<$Tag$$Type>, codec1: $Codec$$Type<T>): T
 public "readWithCount"(consumer0: $Consumer$$Type<$FriendlyByteBuf$$Type>): void
 public "refCnt"(): integer
-public "release"(int0: integer): boolean
 public "release"(): boolean
+public "release"(int0: integer): boolean
 public "writeBitSet"(bitSet0: $BitSet$$Type): void
 public "writeBlockHitResult"(blockHitResult0: $BlockHitResult$$Type): void
 public "writeBlockPos"(blockPos0: $BlockPos$$Type): $FriendlyByteBuf
@@ -211,8 +211,8 @@ public "writeFluidStack"(fluidStack0: $FluidStack$$Type): void
 public "writeGameProfile"(gameProfile0: $GameProfile$$Type): void
 public "writeGameProfileProperties"(propertyMap0: $PropertyMap$$Type): void
 public "writeGlobalPos"(globalPos0: $GlobalPos$$Type): void
-public "writeId"<T>(idMap0: $IdMap$$Type<T>, t1: T): void
 public "writeId"<T>(idMap0: $IdMap$$Type<$Holder$$Type<T>>, holder1: $Holder$$Type<T>, writer2: $FriendlyByteBuf$Writer$$Type<T>): void
+public "writeId"<T>(idMap0: $IdMap$$Type<T>, t1: T): void
 public "writeInstant"(instant0: $Instant$$Type): void
 public "writeIntIdList"(intList0: $IntList$$Type): void
 public "writeItem"(itemStack0: $ItemStack$$Type): $FriendlyByteBuf
@@ -227,8 +227,8 @@ public "writeProperty"(property0: $Property$$Type): void
 public "writePublicKey"(publicKey0: $PublicKey$$Type): $FriendlyByteBuf
 public "writeQuaternion"(quaternionf0: $Quaternionf$$Type): void
 public "writeRegistryId"<T>(iForgeRegistry0: $IForgeRegistry$$Type<T>, t1: T): void
-public "writeRegistryIdUnsafe"(iForgeRegistry0: $IForgeRegistry$$Type<any>, resourceLocation1: $ResourceLocation$$Type): void
 public "writeRegistryIdUnsafe"<T>(iForgeRegistry0: $IForgeRegistry$$Type<T>, t1: T): void
+public "writeRegistryIdUnsafe"(iForgeRegistry0: $IForgeRegistry$$Type<any>, resourceLocation1: $ResourceLocation$$Type): void
 public "writeResourceKey"(resourceKey0: $ResourceKey$$Type<any>): void
 public "writeResourceLocation"(resourceLocation0: $ResourceLocation$$Type): $FriendlyByteBuf
 public "writeSectionPos"(sectionPos0: $SectionPos$$Type): $FriendlyByteBuf
@@ -375,8 +375,8 @@ public "isConnected"(): boolean
 public "isConnecting"(): boolean
 public "isEncrypted"(): boolean
 public "isMemoryConnection"(): boolean
-public "send"(packet0: $Packet$$Type<any>, packetSendListener1: $PacketSendListener$$Type): void
 public "send"(packet0: $Packet$$Type<any>): void
+public "send"(packet0: $Packet$$Type<any>, packetSendListener1: $PacketSendListener$$Type): void
 public "setEncryptionKey"(cipher0: $Cipher$$Type, cipher1: $Cipher$$Type): void
 public "setListener"(packetListener0: $PacketListener$$Type): void
 public "setProtocol"(connectionProtocol0: $ConnectionProtocol$$Type): void

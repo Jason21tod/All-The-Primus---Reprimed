@@ -3893,8 +3893,8 @@ declare module "java.util.concurrent.CompletableFuture" {
 import { $Throwable, $Throwable$$Type } from "java.lang.Throwable"
 import { $Executor, $Executor$$Type } from "java.util.concurrent.Executor"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
-import { $Function$$Type } from "java.util.function.Function"
 import { $Supplier$$Type } from "java.util.function.Supplier"
+import { $Function$$Type } from "java.util.function.Function"
 import { $Runnable$$Type } from "java.lang.Runnable"
 import { $Future$State } from "java.util.concurrent.Future$State"
 import { $Consumer$$Type } from "java.util.function.Consumer"
@@ -3908,9 +3908,9 @@ constructor()
 
 public "acceptEither"(completionStage0: $CompletionStage$$Type<T>, consumer1: $Consumer$$Type<T>): $CompletableFuture<void>
 public "acceptEitherAsync"(completionStage0: $CompletionStage$$Type<T>, consumer1: $Consumer$$Type<T>): $CompletableFuture<void>
+public "acceptEitherAsync"(completionStage0: $CompletionStage$$Type<T>, consumer1: $Consumer$$Type<T>, executor2: $Executor$$Type): $CompletableFuture<void>
 public static "allOf"(...completableFuture0s: $CompletableFuture$$Type<any>[]): $CompletableFuture<void>
 public static "anyOf"(...completableFuture0s: $CompletableFuture$$Type<any>[]): $CompletableFuture<any>
-public "applyToEitherAsync"<U>(completionStage0: $CompletionStage$$Type<T>, function1: $Function$$Type<T, U>, executor2: $Executor$$Type): $CompletableFuture<U>
 public "cancel"(boolean0: boolean): boolean
 public "complete"(t0: T): boolean
 public "completeAsync"(supplier0: $Supplier$$Type<T>, executor1: $Executor$$Type): $CompletableFuture<T>
@@ -3924,9 +3924,10 @@ public "defaultExecutor"(): $Executor
 public static "delayedExecutor"(long0: long, timeUnit1: $TimeUnit$$Type): $Executor
 public static "delayedExecutor"(long0: long, timeUnit1: $TimeUnit$$Type, executor2: $Executor$$Type): $Executor
 public "exceptionNow"(): $Throwable
+public "exceptionally"(function0: $Function$$Type<$Throwable$$Type, T>): $CompletableFuture<T>
 public "exceptionallyAsync"(function0: $Function$$Type<$Throwable$$Type, T>): $CompletableFuture<T>
-public "exceptionallyAsync"(function0: $Function$$Type<$Throwable$$Type, T>, executor1: $Executor$$Type): $CompletableFuture<T>
 public "exceptionallyCompose"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>): $CompletableFuture<T>
+public "exceptionallyComposeAsync"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>, executor1: $Executor$$Type): $CompletableFuture<T>
 public "exceptionallyComposeAsync"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>): $CompletableFuture<T>
 public static "failedFuture"<U>(throwable0: $Throwable$$Type): $CompletableFuture<U>
 public static "failedStage"<U>(throwable0: $Throwable$$Type): $CompletionStage<U>
@@ -3934,6 +3935,7 @@ public "get"(): T
 public "get"(long0: long, timeUnit1: $TimeUnit$$Type): T
 public "getNow"(t0: T): T
 public "getNumberOfDependents"(): integer
+public "handleAsync"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>, executor1: $Executor$$Type): $CompletableFuture<U>
 public "isCancelled"(): boolean
 public "isCompletedExceptionally"(): boolean
 public "isDone"(): boolean
@@ -3944,21 +3946,23 @@ public "obtrudeException"(throwable0: $Throwable$$Type): void
 public "obtrudeValue"(t0: T): void
 public "orTimeout"(long0: long, timeUnit1: $TimeUnit$$Type): $CompletableFuture<T>
 public "resultNow"(): T
-public "runAfterBothAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type, executor2: $Executor$$Type): $CompletableFuture<void>
-public "runAfterEither"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletableFuture<void>
-public static "runAsync"(runnable0: $Runnable$$Type, executor1: $Executor$$Type): $CompletableFuture<void>
+public "runAfterEitherAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletableFuture<void>
+public "runAfterEitherAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type, executor2: $Executor$$Type): $CompletableFuture<void>
 public static "runAsync"(runnable0: $Runnable$$Type): $CompletableFuture<void>
+public static "runAsync"(runnable0: $Runnable$$Type, executor1: $Executor$$Type): $CompletableFuture<void>
 public "state"(): $Future$State
 public static "supplyAsync"<U>(supplier0: $Supplier$$Type<U>, executor1: $Executor$$Type): $CompletableFuture<U>
 public static "supplyAsync"<U>(supplier0: $Supplier$$Type<U>): $CompletableFuture<U>
 public "thenAccept"(consumer0: $Consumer$$Type<T>): $CompletableFuture<void>
-public "thenAcceptAsync"(consumer0: $Consumer$$Type<T>, executor1: $Executor$$Type): $CompletableFuture<void>
+public "thenAcceptBothAsync"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>): $CompletableFuture<void>
 public "thenApply"<U>(function0: $Function$$Type<T, U>): $CompletableFuture<U>
-public "thenApplyAsync"<U>(function0: $Function$$Type<T, U>): $CompletableFuture<U>
-public "thenApplyAsync"<U>(function0: $Function$$Type<T, U>, executor1: $Executor$$Type): $CompletableFuture<U>
-public "thenCombine"<U, V>(completionStage0: $CompletionStage$$Type<U>, biFunction1: $BiFunction$$Type<T, U, V>): $CompletableFuture<V>
+public "thenCombineAsync"<U, V>(completionStage0: $CompletionStage$$Type<U>, biFunction1: $BiFunction$$Type<T, U, V>, executor2: $Executor$$Type): $CompletableFuture<V>
+public "thenCombineAsync"<U, V>(completionStage0: $CompletionStage$$Type<U>, biFunction1: $BiFunction$$Type<T, U, V>): $CompletableFuture<V>
 public "thenCompose"<U>(function0: $Function$$Type<T, $CompletionStage<U>>): $CompletableFuture<U>
+public "thenRun"(runnable0: $Runnable$$Type): $CompletableFuture<void>
+public "thenRunAsync"(runnable0: $Runnable$$Type): $CompletableFuture<void>
 public "toCompletableFuture"(): $CompletableFuture<T>
+public "whenComplete"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>): $CompletableFuture<T>
 public "whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>, executor1: $Executor$$Type): $CompletableFuture<T>
 public "whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>): $CompletableFuture<T>
 get "numberOfDependents"(): integer
@@ -4687,14 +4691,14 @@ export interface $CompletionStage<T = any> {
 "exceptionallyAsync"(function0: $Function$$Type<$Throwable$$Type, T>): $CompletionStage<T>
 "exceptionallyAsync"(function0: $Function$$Type<$Throwable$$Type, T>, executor1: $Executor$$Type): $CompletionStage<T>
 "exceptionallyCompose"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>): $CompletionStage<T>
-"exceptionallyComposeAsync"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>, executor1: $Executor$$Type): $CompletionStage<T>
 "exceptionallyComposeAsync"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>): $CompletionStage<T>
+"exceptionallyComposeAsync"(function0: $Function$$Type<$Throwable$$Type, $CompletionStage<T>>, executor1: $Executor$$Type): $CompletionStage<T>
 "handle"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>): $CompletionStage<U>
 "handleAsync"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>): $CompletionStage<U>
 "handleAsync"<U>(biFunction0: $BiFunction$$Type<T, $Throwable$$Type, U>, executor1: $Executor$$Type): $CompletionStage<U>
 "runAfterBoth"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletionStage<void>
-"runAfterBothAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type, executor2: $Executor$$Type): $CompletionStage<void>
 "runAfterBothAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletionStage<void>
+"runAfterBothAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type, executor2: $Executor$$Type): $CompletionStage<void>
 "runAfterEither"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletionStage<void>
 "runAfterEitherAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type, executor2: $Executor$$Type): $CompletionStage<void>
 "runAfterEitherAsync"(completionStage0: $CompletionStage$$Type<any>, runnable1: $Runnable$$Type): $CompletionStage<void>
@@ -4702,8 +4706,8 @@ export interface $CompletionStage<T = any> {
 "thenAcceptAsync"(consumer0: $Consumer$$Type<T>): $CompletionStage<void>
 "thenAcceptAsync"(consumer0: $Consumer$$Type<T>, executor1: $Executor$$Type): $CompletionStage<void>
 "thenAcceptBoth"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>): $CompletionStage<void>
-"thenAcceptBothAsync"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>): $CompletionStage<void>
 "thenAcceptBothAsync"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>, executor2: $Executor$$Type): $CompletionStage<void>
+"thenAcceptBothAsync"<U>(completionStage0: $CompletionStage$$Type<U>, biConsumer1: $BiConsumer$$Type<T, U>): $CompletionStage<void>
 "thenApply"<U>(function0: $Function$$Type<T, U>): $CompletionStage<U>
 "thenApplyAsync"<U>(function0: $Function$$Type<T, U>, executor1: $Executor$$Type): $CompletionStage<U>
 "thenApplyAsync"<U>(function0: $Function$$Type<T, U>): $CompletionStage<U>
@@ -4714,12 +4718,12 @@ export interface $CompletionStage<T = any> {
 "thenComposeAsync"<U>(function0: $Function$$Type<T, $CompletionStage<U>>): $CompletionStage<U>
 "thenComposeAsync"<U>(function0: $Function$$Type<T, $CompletionStage<U>>, executor1: $Executor$$Type): $CompletionStage<U>
 "thenRun"(runnable0: $Runnable$$Type): $CompletionStage<void>
-"thenRunAsync"(runnable0: $Runnable$$Type, executor1: $Executor$$Type): $CompletionStage<void>
 "thenRunAsync"(runnable0: $Runnable$$Type): $CompletionStage<void>
+"thenRunAsync"(runnable0: $Runnable$$Type, executor1: $Executor$$Type): $CompletionStage<void>
 "toCompletableFuture"(): $CompletableFuture<T>
 "whenComplete"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>): $CompletionStage<T>
-"whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>, executor1: $Executor$$Type): $CompletionStage<T>
 "whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>): $CompletionStage<T>
+"whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>, executor1: $Executor$$Type): $CompletionStage<T>
 }
 
 export namespace $CompletionStage {

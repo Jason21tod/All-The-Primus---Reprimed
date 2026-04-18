@@ -134,8 +134,8 @@ import { $Capability$$Type } from "net.minecraftforge.common.capabilities.Capabi
 import { $LazyOptional } from "net.minecraftforge.common.util.LazyOptional"
 
 export class $CapabilityProvider<B extends $ICapabilityProviderImpl<B> = $ICapabilityProviderImpl<B>> implements $ICapabilityProviderImpl<B> {
-public "areCapsCompatible"(capabilityProvider0: $CapabilityProvider$$Type<B>): boolean
 public "areCapsCompatible"(capabilityDispatcher0: $CapabilityDispatcher$$Type): boolean
+public "areCapsCompatible"(capabilityProvider0: $CapabilityProvider$$Type<B>): boolean
 public "getCapability"<T>(capability0: $Capability$$Type<T>, direction1: $Direction$$Type): $LazyOptional<T>
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "invalidateCaps"(): void
@@ -228,60 +228,60 @@ public "define"<T>(string0: string, supplier1: $Supplier$$Type<T>, predicate2: $
 public "define"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<T>
 public "define"<T>(list0: $List$$Type<string>, valueSpec1: $ForgeConfigSpec$ValueSpec$$Type, supplier2: $Supplier$$Type<T>): $ForgeConfigSpec$ConfigValue<T>
 public "define"<T>(list0: $List$$Type<string>, t1: T): $ForgeConfigSpec$ConfigValue<T>
-public "define"<T>(string0: string, t1: T): $ForgeConfigSpec$ConfigValue<T>
 public "define"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>, predicate2: $Predicate$$Type<any>, class3: $Class$$Type<any>): $ForgeConfigSpec$ConfigValue<T>
-public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, enumGetMethod2: $EnumGetMethod$$Type, predicate3: $Predicate$$Type<any>): $ForgeConfigSpec$EnumValue<V>
-public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$EnumValue<V>
-public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V, collection2: $Collection$$Type<V>): $ForgeConfigSpec$EnumValue<V>
+public "define"<T>(string0: string, t1: T): $ForgeConfigSpec$ConfigValue<T>
 public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V, enumGetMethod2: $EnumGetMethod$$Type, collection3: $Collection$$Type<V>): $ForgeConfigSpec$EnumValue<V>
-public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, enumGetMethod2: $EnumGetMethod$$Type, ...v3s: V[]): $ForgeConfigSpec$EnumValue<V>
+public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$EnumValue<V>
+public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, collection2: $Collection$$Type<V>): $ForgeConfigSpec$EnumValue<V>
+public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V, collection2: $Collection$$Type<V>): $ForgeConfigSpec$EnumValue<V>
+public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, enumGetMethod2: $EnumGetMethod$$Type, collection3: $Collection$$Type<V>): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<V>, enumGetMethod2: $EnumGetMethod$$Type, predicate3: $Predicate$$Type<any>, class4: $Class$$Type<V>): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<V>, predicate2: $Predicate$$Type<any>, class3: $Class$$Type<V>): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(string0: string, supplier1: $Supplier$$Type<V>, enumGetMethod2: $EnumGetMethod$$Type, predicate3: $Predicate$$Type<any>, class4: $Class$$Type<V>): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(string0: string, supplier1: $Supplier$$Type<V>, predicate2: $Predicate$$Type<any>, class3: $Class$$Type<V>): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V, enumGetMethod2: $EnumGetMethod$$Type, predicate3: $Predicate$$Type<any>): $ForgeConfigSpec$EnumValue<V>
-public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, ...v2s: V[]): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V, enumGetMethod2: $EnumGetMethod$$Type): $ForgeConfigSpec$EnumValue<V>
+public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, enumGetMethod2: $EnumGetMethod$$Type, predicate3: $Predicate$$Type<any>): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, enumGetMethod2: $EnumGetMethod$$Type): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V): $ForgeConfigSpec$EnumValue<V>
-public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, enumGetMethod2: $EnumGetMethod$$Type, collection3: $Collection$$Type<V>): $ForgeConfigSpec$EnumValue<V>
-public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, collection2: $Collection$$Type<V>): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V, enumGetMethod2: $EnumGetMethod$$Type, ...v3s: V[]): $ForgeConfigSpec$EnumValue<V>
 public "defineEnum"<V extends $Enum<V>>(list0: $List$$Type<string>, v1: V, ...v2s: V[]): $ForgeConfigSpec$EnumValue<V>
-public "defineInList"<T>(string0: string, t1: T, collection2: $Collection$$Type<T>): $ForgeConfigSpec$ConfigValue<T>
-public "defineInList"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>, collection2: $Collection$$Type<T>): $ForgeConfigSpec$ConfigValue<T>
+public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, enumGetMethod2: $EnumGetMethod$$Type, ...v3s: V[]): $ForgeConfigSpec$EnumValue<V>
+public "defineEnum"<V extends $Enum<V>>(string0: string, v1: V, ...v2s: V[]): $ForgeConfigSpec$EnumValue<V>
 public "defineInList"<T>(list0: $List$$Type<string>, t1: T, collection2: $Collection$$Type<T>): $ForgeConfigSpec$ConfigValue<T>
+public "defineInList"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>, collection2: $Collection$$Type<T>): $ForgeConfigSpec$ConfigValue<T>
+public "defineInList"<T>(string0: string, t1: T, collection2: $Collection$$Type<T>): $ForgeConfigSpec$ConfigValue<T>
 public "defineInList"<T>(string0: string, supplier1: $Supplier$$Type<T>, collection2: $Collection$$Type<T>): $ForgeConfigSpec$ConfigValue<T>
+public "defineInRange"(string0: string, supplier1: $Supplier$$Type<integer>, int2: integer, int3: integer): $ForgeConfigSpec$IntValue
+public "defineInRange"(list0: $List$$Type<string>, supplier1: $Supplier$$Type<integer>, int2: integer, int3: integer): $ForgeConfigSpec$IntValue
+public "defineInRange"<V extends $Comparable<V>>(string0: string, v1: V, v2: V, v3: V, class4: $Class$$Type<V>): $ForgeConfigSpec$ConfigValue<V>
+public "defineInRange"(list0: $List$$Type<string>, int1: integer, int2: integer, int3: integer): $ForgeConfigSpec$IntValue
 public "defineInRange"(list0: $List$$Type<string>, supplier1: $Supplier$$Type<long>, long2: long, long3: long): $ForgeConfigSpec$LongValue
 public "defineInRange"(string0: string, supplier1: $Supplier$$Type<long>, long2: long, long3: long): $ForgeConfigSpec$LongValue
 public "defineInRange"(list0: $List$$Type<string>, long1: long, long2: long, long3: long): $ForgeConfigSpec$LongValue
 public "defineInRange"(string0: string, long1: long, long2: long, long3: long): $ForgeConfigSpec$LongValue
+public "defineInRange"<V extends $Comparable<V>>(list0: $List$$Type<string>, v1: V, v2: V, v3: V, class4: $Class$$Type<V>): $ForgeConfigSpec$ConfigValue<V>
 public "defineInRange"<V extends $Comparable<V>>(string0: string, supplier1: $Supplier$$Type<V>, v2: V, v3: V, class4: $Class$$Type<V>): $ForgeConfigSpec$ConfigValue<V>
 public "defineInRange"<V extends $Comparable<V>>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<V>, v2: V, v3: V, class4: $Class$$Type<V>): $ForgeConfigSpec$ConfigValue<V>
-public "defineInRange"(string0: string, supplier1: $Supplier$$Type<double>, double2: double, double3: double): $ForgeConfigSpec$DoubleValue
 public "defineInRange"(list0: $List$$Type<string>, supplier1: $Supplier$$Type<double>, double2: double, double3: double): $ForgeConfigSpec$DoubleValue
-public "defineInRange"<V extends $Comparable<V>>(string0: string, v1: V, v2: V, v3: V, class4: $Class$$Type<V>): $ForgeConfigSpec$ConfigValue<V>
-public "defineInRange"(string0: string, double1: double, double2: double, double3: double): $ForgeConfigSpec$DoubleValue
-public "defineInRange"(list0: $List$$Type<string>, double1: double, double2: double, double3: double): $ForgeConfigSpec$DoubleValue
-public "defineInRange"<V extends $Comparable<V>>(list0: $List$$Type<string>, v1: V, v2: V, v3: V, class4: $Class$$Type<V>): $ForgeConfigSpec$ConfigValue<V>
-public "defineInRange"(string0: string, supplier1: $Supplier$$Type<integer>, int2: integer, int3: integer): $ForgeConfigSpec$IntValue
-public "defineInRange"(list0: $List$$Type<string>, supplier1: $Supplier$$Type<integer>, int2: integer, int3: integer): $ForgeConfigSpec$IntValue
-public "defineInRange"(list0: $List$$Type<string>, int1: integer, int2: integer, int3: integer): $ForgeConfigSpec$IntValue
 public "defineInRange"(string0: string, int1: integer, int2: integer, int3: integer): $ForgeConfigSpec$IntValue
+public "defineInRange"(string0: string, supplier1: $Supplier$$Type<double>, double2: double, double3: double): $ForgeConfigSpec$DoubleValue
+public "defineInRange"(list0: $List$$Type<string>, double1: double, double2: double, double3: double): $ForgeConfigSpec$DoubleValue
+public "defineInRange"(string0: string, double1: double, double2: double, double3: double): $ForgeConfigSpec$DoubleValue
 public "defineList"<T>(string0: string, supplier1: $Supplier$$Type<$List<T>>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<$List<T>>
+public "defineList"<T>(string0: string, list1: $List$$Type<T>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<$List<T>>
 public "defineList"<T>(list0: $List$$Type<string>, list1: $List$$Type<T>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<$List<T>>
 public "defineList"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<$List<T>>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<$List<T>>
-public "defineList"<T>(string0: string, list1: $List$$Type<T>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<$List<T>>
 public "defineListAllowEmpty"<T>(string0: string, supplier1: $Supplier$$Type<$List<T>>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<$List<T>>
 public "defineListAllowEmpty"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<$List<T>>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<$List<T>>
 public "defineListAllowEmpty"<T>(list0: $List$$Type<string>, list1: $List$$Type<T>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<$List<T>>
 public "defineListAllowEmpty"<T>(string0: string, list1: $List$$Type<T>, predicate2: $Predicate$$Type<any>): $ForgeConfigSpec$ConfigValue<$List<T>>
-public "pop"(int0: integer): $ForgeConfigSpec$Builder
 public "pop"(): $ForgeConfigSpec$Builder
-public "push"(list0: $List$$Type<string>): $ForgeConfigSpec$Builder
+public "pop"(int0: integer): $ForgeConfigSpec$Builder
 public "push"(string0: string): $ForgeConfigSpec$Builder
+public "push"(list0: $List$$Type<string>): $ForgeConfigSpec$Builder
 public "translation"(string0: string): $ForgeConfigSpec$Builder
 public "worldRestart"(): $ForgeConfigSpec$Builder
 }
@@ -315,8 +315,8 @@ export interface $IForgeFriendlyByteBuf {
 "readRegistryIdUnsafe"<T>(iForgeRegistry0: $IForgeRegistry$$Type<T>): T
 "writeFluidStack"(fluidStack0: $FluidStack$$Type): void
 "writeRegistryId"<T>(iForgeRegistry0: $IForgeRegistry$$Type<T>, t1: T): void
-"writeRegistryIdUnsafe"(iForgeRegistry0: $IForgeRegistry$$Type<any>, resourceLocation1: $ResourceLocation$$Type): void
 "writeRegistryIdUnsafe"<T>(iForgeRegistry0: $IForgeRegistry$$Type<T>, t1: T): void
+"writeRegistryIdUnsafe"(iForgeRegistry0: $IForgeRegistry$$Type<any>, resourceLocation1: $ResourceLocation$$Type): void
 }
 
 export namespace $IForgeFriendlyByteBuf {
@@ -402,8 +402,8 @@ import { $Capability$$Type } from "net.minecraftforge.common.capabilities.Capabi
 import { $LazyOptional } from "net.minecraftforge.common.util.LazyOptional"
 
 export interface $ICapabilityProviderImpl<B extends $ICapabilityProviderImpl<B> = $ICapabilityProviderImpl<B>> extends $ICapabilityProvider {
-"areCapsCompatible"(capabilityDispatcher0: $CapabilityDispatcher$$Type): boolean
 "areCapsCompatible"(capabilityProvider0: $CapabilityProvider$$Type<B>): boolean
+"areCapsCompatible"(capabilityDispatcher0: $CapabilityDispatcher$$Type): boolean
 "getCapability"<T>(capability0: $Capability$$Type<T>, direction1: $Direction$$Type): $LazyOptional<T>
 "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 "invalidateCaps"(): void
@@ -649,14 +649,15 @@ export interface $IForgeEntity extends $ICapabilitySerializable<$CompoundTag> {
 "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-"isInFluidType"(): boolean
 "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>, boolean1: boolean): boolean
+"isInFluidType"(): boolean
 "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 "isMultipartEntity"(): boolean
 "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
 "onAddedToWorld"(): void
 "onRemovedFromWorld"(): void
 "revive"(): void
+"serializeNBT"(): $CompoundTag
 "shouldRiderSit"(): boolean
 "shouldUpdateFluidWhileBoating"(fluidState0: $FluidState$$Type, boat1: $Boat$$Type): boolean
 get "eyeInFluidType"(): $FluidType
@@ -957,7 +958,6 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "getCapability"(capability0: $Capability$$Type, direction1: $Direction$$Type): $LazyOptional
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "invalidate"(): void
-public "serializeNBT"(): $CompoundTag
 }
 }
 
@@ -1040,9 +1040,9 @@ public "afterReload"(): void
 public "apply"<T>(string0: string): T
 public "apply"<T>(list0: $List$$Type<string>): T
 public "contains"(string0: string): boolean
+public "correct"(commentedConfig0: $CommentedConfig$$Type, correctionListener1: $ConfigSpec$CorrectionListener$$Type, correctionListener2: $ConfigSpec$CorrectionListener$$Type): integer
 public "correct"(commentedConfig0: $CommentedConfig$$Type): integer
 public "correct"(commentedConfig0: $CommentedConfig$$Type, correctionListener1: $ConfigSpec$CorrectionListener$$Type): integer
-public "correct"(commentedConfig0: $CommentedConfig$$Type, correctionListener1: $ConfigSpec$CorrectionListener$$Type, correctionListener2: $ConfigSpec$CorrectionListener$$Type): integer
 public "get"<T>(string0: string): T
 public "get"<T>(list0: $List$$Type<string>): T
 public "getByte"(list0: $List$$Type<string>): byte
@@ -1055,44 +1055,44 @@ public "getCharOrElse"(list0: $List$$Type<string>, char1: character): character
 public "getCharOrElse"(string0: string, char1: character): character
 public "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): T
 public "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-public "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
 public "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-public "getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
+public "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
 public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-public "getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
-public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
+public "getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
 public "getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
 public "getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
 public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+public "getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
 public "getInt"(string0: string): integer
 public "getInt"(list0: $List$$Type<string>): integer
-public "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
-public "getIntOrElse"(string0: string, int1: integer): integer
 public "getIntOrElse"(list0: $List$$Type<string>, int1: integer): integer
+public "getIntOrElse"(string0: string, int1: integer): integer
+public "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
 public "getIntOrElse"(list0: $List$$Type<string>, intSupplier1: $IntSupplier$$Type): integer
 public "getLevelComment"(list0: $List$$Type<string>): string
 public "getLevelTranslationKey"(list0: $List$$Type<string>): string
 public "getLong"(list0: $List$$Type<string>): long
 public "getLong"(string0: string): long
-public "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
 public "getLongOrElse"(string0: string, long1: long): long
 public "getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 public "getLongOrElse"(string0: string, longSupplier1: $LongSupplier$$Type): long
-public "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
+public "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
 public "getOptional"<T>(string0: string): $Optional<T>
-public "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
-public "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
-public "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
+public "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
 public "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
-public "getOptionalInt"(string0: string): $OptionalInt
+public "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
+public "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
+public "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
 public "getOptionalInt"(list0: $List$$Type<string>): $OptionalInt
-public "getOptionalLong"(string0: string): $OptionalLong
+public "getOptionalInt"(string0: string): $OptionalInt
 public "getOptionalLong"(list0: $List$$Type<string>): $OptionalLong
+public "getOptionalLong"(string0: string): $OptionalLong
 public "getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
-public "getOrElse"<T>(string0: string, t1: T): T
-public "getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
 public "getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
+public "getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
+public "getOrElse"<T>(string0: string, t1: T): T
 public "getRaw"<T>(string0: string): T
 public "getShort"(string0: string): short
 public "getShort"(list0: $List$$Type<string>): short
@@ -1204,6 +1204,7 @@ export interface $IForgeItemStack extends $ICapabilitySerializable<$CompoundTag>
 "onItemUseFirst"(useOnContext0: $UseOnContext$$Type): $InteractionResult
 "onStopUsing"(livingEntity0: $LivingEntity$$Type, int1: integer): void
 "readShareTag"(compoundTag0: $CompoundTag$$Type): void
+"serializeNBT"(): $CompoundTag
 "shouldCauseBlockBreakReset"(itemStack0: $ItemStack$$Type): boolean
 get "allEnchantments"(): $Map<$Enchantment, integer>
 get "craftingRemainingItem"(): $ItemStack
@@ -1241,8 +1242,8 @@ import { $FluidState$$Type } from "net.minecraft.world.level.material.FluidState
 import { $FluidType$$Type } from "net.minecraftforge.fluids.FluidType"
 
 export interface $IForgeBoat {
-"canBoatInFluid"(fluidType0: $FluidType$$Type): boolean
 "canBoatInFluid"(fluidState0: $FluidState$$Type): boolean
+"canBoatInFluid"(fluidType0: $FluidType$$Type): boolean
 "shouldUpdateFluidWhileRiding"(fluidState0: $FluidState$$Type, entity1: $Entity$$Type): boolean
 }
 
@@ -1689,8 +1690,8 @@ export interface $IForgeLivingEntity extends $IForgeEntity {
 "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-"isInFluidType"(): boolean
 "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>, boolean1: boolean): boolean
+"isInFluidType"(): boolean
 "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 "isMultipartEntity"(): boolean
 "isPushedByFluid"(fluidType0: $FluidType$$Type): boolean
@@ -1700,6 +1701,7 @@ export interface $IForgeLivingEntity extends $IForgeEntity {
 "onRemovedFromWorld"(): void
 "revive"(): void
 "self"(): $LivingEntity
+"serializeNBT"(): $CompoundTag
 "shouldRiderSit"(): boolean
 "shouldUpdateFluidWhileBoating"(fluidState0: $FluidState$$Type, boat1: $Boat$$Type): boolean
 "sinkInFluid"(fluidType0: $FluidType$$Type): void

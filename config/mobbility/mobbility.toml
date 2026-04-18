@@ -10,7 +10,7 @@ enableAllLogging = false
 # List of entity IDs to blacklist/whitelist
 # Format: \"namespace:entity_id\" (e.g., \"minecraft:zombie\", \"minecraft:skeleton\")
 # Behavior depends on blacklistAsWhitelist setting
-mobBlacklist = [  ]
+mobBlacklist = [ "minecraft:pillager", "minecraft:vindicator", "minecraft:villager" ]
 # If true, blacklist acts as whitelist (only listed mobs can use Mobbility features)
 # If false, blacklist acts as blacklist (listed mobs cannot use Mobbility features)
-blacklistAsWhitelist = false
+blacklistAsWhitelist = true

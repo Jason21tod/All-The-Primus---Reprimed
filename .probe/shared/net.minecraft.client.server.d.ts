@@ -64,8 +64,8 @@ public "sendData"(channel: string, data: $CompoundTag$$Type): void
 public "sendData"(channel: string): void
 public "setStatusMessage"(message: $Component$$Type): void
 public "setUUID"(uUID0: $UUID$$Type): void
-public "startTracking"(): void
 public static "startTracking"(object0: any): void
+public "startTracking"(): void
 public "tell"(message: $Component$$Type): void
 public "wrap"(): $WeakReference<$Trackable>
 get "displayName"(): $Component

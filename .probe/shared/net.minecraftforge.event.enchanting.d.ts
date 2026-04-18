@@ -6,8 +6,8 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $EnchantmentLevelSetEvent extends $Event implements $EventItf {
-constructor()
 constructor(level0: $Level$$Type, blockPos1: $BlockPos$$Type, int2: integer, int3: integer, itemStack4: $ItemStack$$Type, int5: integer)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

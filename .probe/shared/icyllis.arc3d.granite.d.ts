@@ -123,8 +123,8 @@ public "removeLast"(): $Task
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<$Task$$Type>): void
 public "reset"(): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
-public "setElements"(int0: integer, task1s: $Task$$Type[]): void
 public "setElements"(task0s: $Task$$Type[]): void
+public "setElements"(int0: integer, task1s: $Task$$Type[]): void
 public "stream"(): $Stream<$Task>
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 get "first"(): $Task
@@ -1104,10 +1104,10 @@ public "write4f"(v0: float, v1: float, v2: float, v3: float): void
 public "write4fv"(offset: integer, count: integer, value: float[]): void
 public "write4i"(v0: integer, v1: integer, v2: integer, v3: integer): void
 public "writeMatrix3f"(matrix: $Matrixc$$Type): void
-public "writeMatrix3f"(offset: integer, value: float[]): void
 public "writeMatrix3f"(matrix: $Matrix3$$Type): void
-public "writeMatrix4f"(offset: integer, value: float[]): void
+public "writeMatrix3f"(offset: integer, value: float[]): void
 public "writeMatrix4f"(matrix: $Matrix4c$$Type): void
+public "writeMatrix4f"(offset: integer, value: float[]): void
 public "writePaintColor"(r: float, g: float, b: float, a: float): void
 }
 }

@@ -684,10 +684,10 @@ public "getRemaining"(): string
 public "getRemainingLowerCase"(): string
 public "getStart"(): integer
 public "restart"(): $SuggestionsBuilder
+public "suggest"(string0: string, message1: $Message$$Type): $SuggestionsBuilder
 public "suggest"(string0: string): $SuggestionsBuilder
 public "suggest"(int0: integer, message1: $Message$$Type): $SuggestionsBuilder
 public "suggest"(int0: integer): $SuggestionsBuilder
-public "suggest"(string0: string, message1: $Message$$Type): $SuggestionsBuilder
 get "input"(): string
 get "remaining"(): string
 get "remainingLowerCase"(): string

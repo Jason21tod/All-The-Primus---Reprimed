@@ -442,8 +442,8 @@ public "excludeSymbol"(name: string): void
 public "findCode"<T extends $Code>(type: $Class$$Type<T>): $Optional<T>
 public "findCodeNullable"<T extends $Code>(type: $Class$$Type<T>): T
 public "format"(): $List<string>
-public "write"(writeTo: $Path$$Type): void
 public "write"(writer: $Writer$$Type): void
+public "write"(writeTo: $Path$$Type): void
 }
 }
 
@@ -1001,8 +1001,8 @@ public "getPrefixes"(): $List<string>
 public "literal"(content: string): $Snippet
 public "newline"(): $Snippet
 public "prefix"(prefix: string): $Snippet
-public "tabStop"(enumeration: integer, defaultValue: string): $Snippet
 public "tabStop"(): $Snippet
+public "tabStop"(enumeration: integer, defaultValue: string): $Snippet
 public "tabStop"(enumeration: integer): $Snippet
 public "variable"(variable: $Variable$$Type): $Snippet
 get "prefixes"(): $List<string>
@@ -1164,8 +1164,8 @@ import { $TSArrayAccessType } from "zzzank.probejs.lang.typescript.code.type.ts.
 export class $BaseType extends $Code {
 constructor()
 
-public "access"(index: string): $TSArrayAccessType
 public "access"(index: $BaseType$$Type): $TSArrayAccessType
+public "access"(index: string): $TSArrayAccessType
 public "and"(...types: $BaseType$$Type[]): $JSJoinedType$Intersection
 public "asArray"(): $TSArrayType
 public "comment"(comment: string): $WithFormatType
@@ -1177,8 +1177,8 @@ public "line"(declaration: $Declaration$$Type): string
 public "line"(declaration: $Declaration$$Type, formatType: $BaseType$FormatType$$Type): string
 public "optional"(): $TSOptionalType
 public "or"(...types: $BaseType$$Type[]): $JSJoinedType$Union
-public "withParams"(params: $Collection$$Type<$BaseType$$Type>): $TSParamType
 public "withParams"(...params: string[]): $TSParamType
+public "withParams"(params: $Collection$$Type<$BaseType$$Type>): $TSParamType
 public "withParams"(...params: $BaseType$$Type[]): $TSParamType
 public "withPossibleParams"(params: $Collection$$Type<$BaseType$$Type>): $BaseType
 }
@@ -1289,9 +1289,9 @@ function ternary(symbol: string, extend: $BaseType$$Type, ifTrue: $BaseType$$Typ
 function tuple(): $JSTupleType$Builder
 function type(classPath: $ClassPath$$Type): $TSClassType
 function type(clazz: $Class$$Type<any>): $TSClassType
+function typeOf(clazz: $Class$$Type<any>): $JSTypeOfType
 function typeOf(classPath: $ClassPath$$Type): $JSTypeOfType
 function typeOf(classType: $BaseType$$Type): $JSTypeOfType
-function typeOf(clazz: $Class$$Type<any>): $JSTypeOfType
 function withComment(type: $BaseType$$Type, comment: string): $WithFormatType
 }
 export abstract class $Types$$Static implements $Types {
@@ -1347,9 +1347,9 @@ static "ternary"(symbol: string, extend: $BaseType$$Type, ifTrue: $BaseType$$Typ
 static "tuple"(): $JSTupleType$Builder
 static "type"(classPath: $ClassPath$$Type): $TSClassType
 static "type"(clazz: $Class$$Type<any>): $TSClassType
+static "typeOf"(clazz: $Class$$Type<any>): $JSTypeOfType
 static "typeOf"(classPath: $ClassPath$$Type): $JSTypeOfType
 static "typeOf"(classType: $BaseType$$Type): $JSTypeOfType
-static "typeOf"(clazz: $Class$$Type<any>): $JSTypeOfType
 static "withComment"(type: $BaseType$$Type, comment: string): $WithFormatType
 }
 }
@@ -1825,9 +1825,9 @@ constructor(parent: $SharedDump$$Type, type: $ScriptType$$Type, scriptPath: $Pat
 public "acceptClasses"(classes: $Collection$$Type<$Clazz$$Type>): void
 public "addGlobal"(identifier: string, ...content: $Code$$Type[]): void
 public "addGlobal"(identifier: string, excludedNames: $Collection$$Type<string>, ...content: $Code$$Type[]): void
-public "assignType"(classPath: $ClassPath$$Type, name: string, type: $BaseType$$Type): void
 public "assignType"(classPath: $Class$$Type<any>, type: $BaseType$$Type): void
 public "assignType"(classPath: $ClassPath$$Type, type: $BaseType$$Type): void
+public "assignType"(classPath: $ClassPath$$Type, name: string, type: $BaseType$$Type): void
 public "assignType"(classPath: $Class$$Type<any>, name: string, type: $BaseType$$Type): void
 public "dump"(): void
 public "pjsDumpName"(): string
@@ -2029,8 +2029,8 @@ import { $Function$$Type } from "java.util.function.Function"
 export class $MultiDump extends $TSDumpBase {
 constructor(base: $Path$$Type)
 
-public "addChild"<T extends $TSDump>(relativePath: $Path$$Type, dump: $Function$$Type<$Path$$Type, T>): T
 public "addChild"<T extends $TSDump>(dump: T): T
+public "addChild"<T extends $TSDump>(relativePath: $Path$$Type, dump: $Function$$Type<$Path$$Type, T>): T
 public "addChild"<T extends $TSDump>(relativePath: string, dump: $Function$$Type<$Path$$Type, T>): T
 public "cleanOldDumps"(): void
 public "dumpImpl"(): void

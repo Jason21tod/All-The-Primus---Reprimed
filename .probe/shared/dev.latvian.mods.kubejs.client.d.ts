@@ -266,8 +266,8 @@ public "setShaderColor"(r: float, g: float, b: float, a: float): void
 public "setShaderInstance"(shader: $Supplier$$Type<$ShaderInstance>): void
 public "setShaderTexture"(tex: $ResourceLocation$$Type): void
 public "translate"(x: double, y: double, z: double): void
-public "vertex"(m: $Matrix4f$$Type, x: float, y: float, z: float, col: integer): void
 public "vertex"(m: $Matrix4f$$Type, x: float, y: float, z: float, col: integer, u: float, v: float): void
+public "vertex"(m: $Matrix4f$$Type, x: float, y: float, z: float, col: integer): void
 get "matrix"(): $Matrix4f
 set "shaderInstance"(value: $Supplier$$Type<$ShaderInstance>)
 set "shaderTexture"(value: $ResourceLocation$$Type)

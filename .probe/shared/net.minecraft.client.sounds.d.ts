@@ -81,8 +81,8 @@ constructor(minecraft0: $Minecraft$$Type)
 
 public "isPlayingMusic"(music0: $Music$$Type): boolean
 public "startPlaying"(music0: $Music$$Type): void
-public "stopPlaying"(music0: $Music$$Type): void
 public "stopPlaying"(): void
+public "stopPlaying"(music0: $Music$$Type): void
 public "tick"(): void
 }
 }
@@ -122,8 +122,8 @@ public "destroy"(): void
 public "dynamic_fps$updateVolume"(source: $SoundSource$$Type): void
 public "getAvailableSoundDevices"(): $List<string>
 public "getDebugString"(): string
-public "handler$fbg000$onSoundEngineStop"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$fbg000$play"(soundInstance0: $SoundInstance$$Type, callbackInfo1: $CallbackInfo$$Type, channelHandle2: $ChannelAccess$ChannelHandle$$Type): void
+public "handler$fbi000$onSoundEngineStop"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$fbi000$play"(soundInstance0: $SoundInstance$$Type, callbackInfo1: $CallbackInfo$$Type, channelHandle2: $ChannelAccess$ChannelHandle$$Type): void
 public "isActive"(soundInstance0: $SoundInstance$$Type): boolean
 public "pause"(): void
 public "play"(soundInstance0: $SoundInstance$$Type): void
@@ -133,8 +133,8 @@ public "reload"(): void
 public "removeEventListener"(soundEventListener0: $SoundEventListener$$Type): void
 public "requestPreload"(sound0: $Sound$$Type): void
 public "resume"(): void
-public "stop"(soundInstance0: $SoundInstance$$Type): void
 public "stop"(resourceLocation0: $ResourceLocation$$Type, soundSource1: $SoundSource$$Type): void
+public "stop"(soundInstance0: $SoundInstance$$Type): void
 public "stopAll"(): void
 public "tick"(boolean0: boolean): void
 public "updateCategoryVolume"(soundSource0: $SoundSource$$Type, float1: float): void
@@ -254,8 +254,8 @@ public "queueTickingSound"(tickableSoundInstance0: $TickableSoundInstance$$Type)
 public "reload"(): void
 public "removeListener"(soundEventListener0: $SoundEventListener$$Type): void
 public "resume"(): void
-public "stop"(): void
 public "stop"(soundInstance0: $SoundInstance$$Type): void
+public "stop"(): void
 public "stop"(resourceLocation0: $ResourceLocation$$Type, soundSource1: $SoundSource$$Type): void
 public "tick"(boolean0: boolean): void
 public "updateSource"(camera0: $Camera$$Type): void
@@ -279,7 +279,7 @@ export class $ChannelAccess$ChannelHandle {
 constructor(channelAccess0: $ChannelAccess$$Type, channel1: $Channel$$Type)
 
 public "execute"(consumer0: $Consumer$$Type<$Channel$$Type>): void
-public "handler$fan000$release"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$fap000$release"(callbackInfo0: $CallbackInfo$$Type): void
 public "isStopped"(): boolean
 public "release"(): void
 get "stopped"(): boolean

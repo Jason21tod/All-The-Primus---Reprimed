@@ -26,11 +26,11 @@ export class $PotionBuilder extends $BuilderBase<$Potion> {
 constructor(i: $ResourceLocation$$Type)
 
 public "addEffect"(effect: $MobEffectInstance$$Type): $PotionBuilder
-public "effect"(effect: $MobEffect$$Type, duration: integer): $PotionBuilder
-public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean, hiddenEffect: $MobEffectInstance$$Type): $PotionBuilder
-public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean): $PotionBuilder
-public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer): $PotionBuilder
+public "effect"(effect: $MobEffect$$Type, duration: integer): $PotionBuilder
+public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean): $PotionBuilder
+public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean, hiddenEffect: $MobEffectInstance$$Type): $PotionBuilder
+public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type): $PotionBuilder
 }
 }

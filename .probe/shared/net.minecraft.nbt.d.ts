@@ -107,21 +107,21 @@ import { $TagType$$Type } from "net.minecraft.nbt.TagType"
 import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export interface $StreamTagVisitor {
+"visit"(int0: integer): $StreamTagVisitor$ValueResult
 "visit"(string0: string): $StreamTagVisitor$ValueResult
-"visit"(byte0: byte): $StreamTagVisitor$ValueResult
-"visit"(long0: long): $StreamTagVisitor$ValueResult
-"visit"(short0: short): $StreamTagVisitor$ValueResult
-"visit"(float0: float): $StreamTagVisitor$ValueResult
-"visit"(double0: double): $StreamTagVisitor$ValueResult
 "visit"(byte0s: byte[]): $StreamTagVisitor$ValueResult
 "visit"(int0s: integer[]): $StreamTagVisitor$ValueResult
 "visit"(long0s: long[]): $StreamTagVisitor$ValueResult
-"visit"(int0: integer): $StreamTagVisitor$ValueResult
+"visit"(float0: float): $StreamTagVisitor$ValueResult
+"visit"(double0: double): $StreamTagVisitor$ValueResult
+"visit"(byte0: byte): $StreamTagVisitor$ValueResult
+"visit"(short0: short): $StreamTagVisitor$ValueResult
+"visit"(long0: long): $StreamTagVisitor$ValueResult
 "visitContainerEnd"(): $StreamTagVisitor$ValueResult
 "visitElement"(tagType0: $TagType$$Type<any>, int1: integer): $StreamTagVisitor$EntryResult
 "visitEnd"(): $StreamTagVisitor$ValueResult
-"visitEntry"(tagType0: $TagType$$Type<any>): $StreamTagVisitor$EntryResult
 "visitEntry"(tagType0: $TagType$$Type<any>, string1: string): $StreamTagVisitor$EntryResult
+"visitEntry"(tagType0: $TagType$$Type<any>): $StreamTagVisitor$EntryResult
 "visitList"(tagType0: $TagType$$Type<any>, int1: integer): $StreamTagVisitor$ValueResult
 "visitRootEntry"(tagType0: $TagType$$Type<any>): $StreamTagVisitor$ValueResult
 }
@@ -181,9 +181,9 @@ public "addFirst"(tag0: $Tag$$Type): void
 public "addLast"(tag0: $Tag$$Type): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
-public "copy"(): $ListTag
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$Tag$$Type>): void
+public "get"(int0: integer): $Tag
 public "getAsString"(): string
 public "getCompound"(int0: integer): $CompoundTag
 public "getDouble"(int0: integer): double
@@ -212,6 +212,7 @@ public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$Tag>
 public "parent"(): $IParentTag
+public "remove"(int0: integer): $Tag
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
 public "removeFirst"(): $Tag
@@ -313,6 +314,7 @@ public "addFirst"(intTag0: $IntTag$$Type): void
 public "addLast"(intTag0: $IntTag$$Type): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
+public "copy"(): $IntArrayTag
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$IntTag$$Type>): void
 public "get"(int0: integer): $IntTag
@@ -539,7 +541,6 @@ public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$V
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
-public "copy"(): $StringTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$StringTag>
@@ -637,8 +638,8 @@ export interface $TagType<T extends $Tag = $Tag> {
 "load"(dataInput0: $DataInput$$Type, int1: integer, nbtAccounter2: $NbtAccounter$$Type): T
 "parse"(dataInput0: $DataInput$$Type, streamTagVisitor1: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 "parseRoot"(dataInput0: $DataInput$$Type, streamTagVisitor1: $StreamTagVisitor$$Type): void
-"skip"(dataInput0: $DataInput$$Type): void
 "skip"(dataInput0: $DataInput$$Type, int1: integer): void
+"skip"(dataInput0: $DataInput$$Type): void
 get "name"(): string
 get "prettyName"(): string
 get "value"(): boolean
@@ -680,6 +681,7 @@ public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$V
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
+public "copy"(): $IntTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$IntTag>
@@ -707,6 +709,7 @@ static readonly "TYPE": $TagType<$EndTag>
 public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
+public "copy"(): $EndTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$EndTag>
@@ -913,8 +916,8 @@ public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$ByteTag>
 public "sizeInBytes"(): integer
-public static "valueOf"(boolean0: boolean): $ByteTag
 public static "valueOf"(byte0: byte): $ByteTag
+public static "valueOf"(boolean0: boolean): $ByteTag
 public "write"(dataOutput0: $DataOutput$$Type): void
 get "asString"(): string
 get "id"(): byte
@@ -954,7 +957,6 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "contains"(string0: string, int1: integer): boolean
 public "contains"(string0: string): boolean
-public "copy"(): $CompoundTag
 public "get"(string0: string): $Tag
 public "getAllKeys"(): $Set<string>
 public "getAsString"(): string
@@ -976,13 +978,13 @@ public "getString"(string0: string): string
 public "getTagType"(string0: string): byte
 public "getType"(): $TagType<$CompoundTag>
 public "getUUID"(string0: string): $UUID
-public "handler$flh000$afterComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$flh000$befOreComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$flh000$get"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$flh000$getCompound"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$flh000$getList"(string0: string, int1: integer, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$flh000$put"(string0: string, tag1: $Tag$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$flh000$remove"(string0: string, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$flb000$afterComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$flb000$befOreComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$flb000$get"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$flb000$getCompound"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$flb000$getList"(string0: string, int1: integer, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$flb000$put"(string0: string, tag1: $Tag$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$flb000$remove"(string0: string, callbackInfo1: $CallbackInfo$$Type): void
 public "hasUUID"(string0: string): boolean
 public "isEmpty"(): boolean
 public "markDirty"(): void

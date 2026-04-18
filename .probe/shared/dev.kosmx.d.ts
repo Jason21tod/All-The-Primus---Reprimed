@@ -282,8 +282,8 @@ export interface $IAnimatedPlayer extends $IPlayer {
 /** @deprecated */
 "getAnimation"(): $AnimationApplier
 "getAnimationStack"(): $AnimationStack
-"playerAnimator_getAnimation"(): $AnimationApplier
 "playerAnimator_getAnimation"(resourceLocation0: $ResourceLocation$$Type): $IAnimation
+"playerAnimator_getAnimation"(): $AnimationApplier
 "playerAnimator_setAnimation"(resourceLocation0: $ResourceLocation$$Type, iAnimation1: $IAnimation$$Type): $IAnimation
 get "animation"(): $AnimationApplier
 get "animationStack"(): $AnimationStack

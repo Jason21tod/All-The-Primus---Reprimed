@@ -649,16 +649,16 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $ZetaLoadModule$$Type = ($ZetaLoadModule);
 }
 
-declare module "org.violetmoon.zeta.client.event.play.ZScreenshot" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $ZScreenshot$$Type = ($ZScreenshot);
-}
-
 declare module "org.violetmoon.zetaimplforge.event.play.ForgeZRecipeCrawl$Starting" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ForgeZRecipeCrawl$Starting$$Type = ($ForgeZRecipeCrawl$Starting);
+}
+
+declare module "org.violetmoon.zeta.client.event.play.ZScreenshot" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $ZScreenshot$$Type = ($ZScreenshot);
 }
 
 declare module "org.violetmoon.zeta.block.ext.IZetaBlockExtensions" {

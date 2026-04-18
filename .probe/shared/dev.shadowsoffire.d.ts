@@ -7,8 +7,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $AnvilLandEvent extends $Event implements $EventItf {
-constructor()
 constructor(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, fallingBlockEntity4: $FallingBlockEntity$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

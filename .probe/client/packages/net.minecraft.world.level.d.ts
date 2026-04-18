@@ -246,9 +246,9 @@ public "disconnect"(): void
 public "enabledFeatures"(): $FeatureFlagSet
 public "endinglib$levelECData"(): $LevelExpandedContext
 public "endinglib$setECData"(levelExpandedContext0: $LevelExpandedContext$$Type): void
-public "explode"(entity0: $Entity$$Type, damageSource1: $DamageSource$$Type, explosionDamageCalculator2: $ExplosionDamageCalculator$$Type, vec33: $Vec3$$Type, float4: float, boolean5: boolean, explosionInteraction6: $Level$ExplosionInteraction$$Type): $Explosion
 public "explode"(entity0: $Entity$$Type, double1: double, double2: double, double3: double, float4: float, explosionInteraction5: $Level$ExplosionInteraction$$Type): $Explosion
 public "explode"(entity0: $Entity$$Type, damageSource1: $DamageSource$$Type, explosionDamageCalculator2: $ExplosionDamageCalculator$$Type, double3: double, double4: double, double5: double, float6: float, boolean7: boolean, explosionInteraction8: $Level$ExplosionInteraction$$Type): $Explosion
+public "explode"(entity0: $Entity$$Type, damageSource1: $DamageSource$$Type, explosionDamageCalculator2: $ExplosionDamageCalculator$$Type, vec33: $Vec3$$Type, float4: float, boolean5: boolean, explosionInteraction6: $Level$ExplosionInteraction$$Type): $Explosion
 public "explode"(entity0: $Entity$$Type, double1: double, double2: double, double3: double, float4: float, boolean5: boolean, explosionInteraction6: $Level$ExplosionInteraction$$Type): $Explosion
 public "explode"(entity0: $Entity$$Type, damageSource1: $DamageSource$$Type, explosionDamageCalculator2: $ExplosionDamageCalculator$$Type, double3: double, double4: double, double5: double, float6: float, boolean7: boolean, explosionInteraction8: $Level$ExplosionInteraction$$Type, boolean9: boolean): $Explosion
 public "fabric_getAttachments"(): $Map
@@ -262,13 +262,13 @@ public "fillReportDetails"(crashReport0: $CrashReport$$Type): $CrashReportCatego
 public "findFreePosition"(entity0: $Entity$$Type, voxelShape1: $VoxelShape$$Type, vec32: $Vec3$$Type, double3: double, double4: double, double5: double): $Optional<$Vec3>
 public "findSupportingBlock"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Optional<$BlockPos>
 public "gameEvent"(gameEvent0: $GameEvent$$Type, vec31: $Vec3$$Type, context2: $GameEvent$Context$$Type): void
-public "gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, blockPos2: $BlockPos$$Type): void
-public "gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
 public "gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type): void
+public "gameEvent"(gameEvent0: $GameEvent$$Type, blockPos1: $BlockPos$$Type, context2: $GameEvent$Context$$Type): void
+public "gameEvent"(entity0: $Entity$$Type, gameEvent1: $GameEvent$$Type, blockPos2: $BlockPos$$Type): void
 public "gatherChunkSourceStats"(): string
 public "getAttached"(type: $AttachmentType$$Type): any
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -277,8 +277,8 @@ public "getBestNeighborSignal"(blockPos0: $BlockPos$$Type): integer
 public "getBiome"(blockPos0: $BlockPos$$Type): $Holder<$Biome>
 public "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
 public "getBiomeManager"(): $BiomeManager
-public "getBlock"(x: integer, y: integer, z: integer): $BlockContainerJS
 public "getBlock"(blockEntity: $BlockEntity$$Type): $BlockContainerJS
+public "getBlock"(x: integer, y: integer, z: integer): $BlockContainerJS
 public "getBlock"(pos: $BlockPos$$Type): $BlockContainerJS
 public "getBlockCollisions"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $Iterable<$VoxelShape>
 public "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
@@ -286,8 +286,8 @@ public "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, bloc
 /** @deprecated */
 public "getBlockEntityRenderAttachment"(pos: $BlockPos$$Type): any
 public "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
-public "getBlockFloorHeight"(voxelShape0: $VoxelShape$$Type, supplier1: $Supplier$$Type<$VoxelShape>): double
 public "getBlockFloorHeight"(blockPos0: $BlockPos$$Type): double
+public "getBlockFloorHeight"(voxelShape0: $VoxelShape$$Type, supplier1: $Supplier$$Type<$VoxelShape>): double
 public "getBlockRandomPos"(int0: integer, int1: integer, int2: integer, int3: integer): $BlockPos
 public "getBlockState"(blockPos0: $BlockPos$$Type): $BlockState
 public "getBlockStates"(aABB0: $AABB$$Type): $Stream<$BlockState>
@@ -314,10 +314,10 @@ public "getDimensionKey"(): $ResourceKey<$Level>
 public "getDirectSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): integer
 public "getDirectSignalTo"(blockPos0: $BlockPos$$Type): integer
 public "getDisplayName"(): $Component
-public "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
 public "getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<$Entity$$Type>): $List<$Entity>
-public "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>, list3: $List$$Type<T>, int4: integer): void
+public "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>): $List<T>
 public "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>, list3: $List$$Type<T>): void
+public "getEntities"<T extends $Entity>(entityTypeTest0: $EntityTypeTest$$Type<$Entity$$Type, T>, aABB1: $AABB$$Type, predicate2: $Predicate$$Type<T>, list3: $List$$Type<T>, int4: integer): void
 public "getEntities"(): $EntityArrayList
 public "getEntities"(entity0: $Entity$$Type, aABB1: $AABB$$Type): $List<$Entity>
 public "getEntitiesOfClass"<T extends $Entity>(class0: $Class$$Type<T>, aABB1: $AABB$$Type): $List<T>
@@ -342,8 +342,8 @@ public "getMapData"(string0: string): $MapItemSavedData
 public "getMaxBuildHeight"(): integer
 public "getMaxEntityRadius"(): double
 public "getMaxLightLevel"(): integer
-public "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type, int1: integer): integer
 public "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type): integer
+public "getMaxLocalRawBrightness"(blockPos0: $BlockPos$$Type, int1: integer): integer
 public "getMaxSection"(): integer
 public "getMinBuildHeight"(): integer
 public "getMinSection"(): integer
@@ -357,10 +357,10 @@ public "getNearestEntity"<T extends $LivingEntity>(class0: $Class$$Type<T>, targ
 public "getNearestEntity"<T extends $LivingEntity>(list0: $List$$Type<T>, targetingConditions1: $TargetingConditions$$Type, livingEntity2: $LivingEntity$$Type, double3: double, double4: double, double5: double): T
 public "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type): $Player
 public "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, livingEntity1: $LivingEntity$$Type, double2: double, double3: double, double4: double): $Player
-public "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
-public "getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
 public "getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, predicate4: $Predicate$$Type<$Entity$$Type>): $Player
 public "getNearestPlayer"(double0: double, double1: double, double2: double, double3: double, boolean4: boolean): $Player
+public "getNearestPlayer"(targetingConditions0: $TargetingConditions$$Type, double1: double, double2: double, double3: double): $Player
+public "getNearestPlayer"(entity0: $Entity$$Type, double1: double): $Player
 public "getNoiseBiome"(int0: integer, int1: integer, int2: integer): $Holder<$Biome>
 public "getPartEntities"(): $Collection<$PartEntity<any>>
 public "getPathfindingCostFromLightLevels"(blockPos0: $BlockPos$$Type): float
@@ -400,15 +400,15 @@ public "hasAttached"(type: $AttachmentType$$Type): boolean
 public "hasBiomes"(): boolean
 public "hasChunk"(int0: integer, int1: integer): boolean
 /** @deprecated */
-public "hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
-/** @deprecated */
 public "hasChunkAt"(int0: integer, int1: integer): boolean
 /** @deprecated */
-public "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
+public "hasChunkAt"(blockPos0: $BlockPos$$Type): boolean
 /** @deprecated */
 public "hasChunksAt"(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type): boolean
 /** @deprecated */
 public "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer): boolean
+/** @deprecated */
+public "hasChunksAt"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): boolean
 public "hasNearbyAlivePlayer"(double0: double, double1: double, double2: double, double3: double): boolean
 public "hasNeighborSignal"(blockPos0: $BlockPos$$Type): boolean
 public "hasSignal"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type): boolean
@@ -425,8 +425,8 @@ public static "isInSpawnableBounds"(blockPos0: $BlockPos$$Type): boolean
 public "isInWorldBounds"(blockPos0: $BlockPos$$Type): boolean
 public "isLoaded"(blockPos0: $BlockPos$$Type): boolean
 public "isNight"(): boolean
-public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 public "isOutsideBuildHeight"(int0: integer): boolean
+public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
 public "isOverworld"(): boolean
 public "isRaining"(): boolean
 public "isRainingAt"(blockPos0: $BlockPos$$Type): boolean
@@ -445,20 +445,20 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "markAndNotifyBlock"(blockPos0: $BlockPos$$Type, levelChunk1: $LevelChunk$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, int4: integer, int5: integer): void
 public "mayInteract"(player0: $Player$$Type, blockPos1: $BlockPos$$Type): boolean
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
-public "neighborChanged"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, blockPos2: $BlockPos$$Type): void
 public "neighborChanged"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, block2: $Block$$Type, blockPos3: $BlockPos$$Type, boolean4: boolean): void
+public "neighborChanged"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, blockPos2: $BlockPos$$Type): void
 public "neighborShapeChanged"(direction0: $Direction$$Type, blockState1: $BlockState$$Type, blockPos2: $BlockPos$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): void
 public "nextSubTickCount"(): long
 public "noCollision"(entity0: $Entity$$Type, aABB1: $AABB$$Type): boolean
-public "noCollision"(aABB0: $AABB$$Type): boolean
 public "noCollision"(entity0: $Entity$$Type): boolean
+public "noCollision"(aABB0: $AABB$$Type): boolean
 public "noSave"(): boolean
 public "onBlockStateChange"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, blockState2: $BlockState$$Type): void
 public "playLocalSound"(double0: double, double1: double, double2: double, soundEvent3: $SoundEvent$$Type, soundSource4: $SoundSource$$Type, float5: float, float6: float, boolean7: boolean): void
 public "playLocalSound"(blockPos0: $BlockPos$$Type, soundEvent1: $SoundEvent$$Type, soundSource2: $SoundSource$$Type, float3: float, float4: float, boolean5: boolean): void
+public "playSeededSound"(player0: $Player$$Type, double1: double, double2: double, double3: double, holder4: $Holder$$Type<$SoundEvent$$Type>, soundSource5: $SoundSource$$Type, float6: float, float7: float, long8: long): void
 public "playSeededSound"(player0: $Player$$Type, double1: double, double2: double, double3: double, soundEvent4: $SoundEvent$$Type, soundSource5: $SoundSource$$Type, float6: float, float7: float, long8: long): void
 public "playSeededSound"(player0: $Player$$Type, entity1: $Entity$$Type, holder2: $Holder$$Type<$SoundEvent$$Type>, soundSource3: $SoundSource$$Type, float4: float, float5: float, long6: long): void
-public "playSeededSound"(player0: $Player$$Type, double1: double, double2: double, double3: double, holder4: $Holder$$Type<$SoundEvent$$Type>, soundSource5: $SoundSource$$Type, float6: float, float7: float, long8: long): void
 public "playSound"(player0: $Player$$Type, double1: double, double2: double, double3: double, soundEvent4: $SoundEvent$$Type, soundSource5: $SoundSource$$Type, float6: float, float7: float): void
 public "playSound"(player0: $Player$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type, float4: float, float5: float): void
 public "playSound"(entity0: $Entity$$Type, blockPos1: $BlockPos$$Type, soundEvent2: $SoundEvent$$Type, soundSource3: $SoundSource$$Type, float4: float, float5: float): void
@@ -471,9 +471,9 @@ public "removeBlock"(blockPos0: $BlockPos$$Type, boolean1: boolean): boolean
 public "removeBlockEntity"(blockPos0: $BlockPos$$Type): void
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
-public "scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
-public "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer): void
 public "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
+public "scheduleTick"(blockPos0: $BlockPos$$Type, block1: $Block$$Type, int2: integer): void
+public "scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer, tickPriority3: $TickPriority$$Type): void
 public "scheduleTick"(blockPos0: $BlockPos$$Type, fluid1: $Fluid$$Type, int2: integer): void
 public "self"(): $Level
 public "sendBlockUpdated"(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type, blockState2: $BlockState$$Type, int3: integer): void
@@ -490,13 +490,13 @@ public "setSkyFlashTime"(int0: integer): void
 public "setSpawnSettings"(boolean0: boolean, boolean1: boolean): void
 public "setStatusMessage"(message: $Component$$Type): void
 public "setThunderLevel"(float0: float): void
-public "shouldTickBlocksAt"(blockPos0: $BlockPos$$Type): boolean
 public "shouldTickBlocksAt"(long0: long): boolean
+public "shouldTickBlocksAt"(blockPos0: $BlockPos$$Type): boolean
 public "shouldTickDeath"(entity0: $Entity$$Type): boolean
 public "spawnFireworks"(x: double, y: double, z: double, f: $FireworksJS$$Type): void
 public "spawnParticles"(options: $ParticleOptions$$Type, overrideLimiter: boolean, x: double, y: double, z: double, vx: double, vy: double, vz: double, count: integer, speed: double): void
-public "startTracking"(): void
 public static "startTracking"(object0: any): void
+public "startTracking"(): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "traverseBlocks"<T, C>(vec30: $Vec3$$Type, vec31: $Vec3$$Type, c2: C, biFunction3: $BiFunction$$Type<C, $BlockPos$$Type, T>, function4: $Function$$Type<C, T>): T

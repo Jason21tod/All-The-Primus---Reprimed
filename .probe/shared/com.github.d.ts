@@ -28,8 +28,8 @@ import { $GuiGraphics, $GuiGraphics$$Type } from "net.minecraft.client.gui.GuiGr
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $EventRenderSplashText extends $Event implements $EventItf {
-constructor()
 constructor(string0: string, guiGraphics1: $GuiGraphics$$Type, float2: float)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -524,8 +524,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $ClientLevel, $ClientLevel$$Type } from "net.minecraft.client.multiplayer.ClientLevel"
 
 export class $EventGetStarBrightness extends $Event implements $EventItf {
-constructor(clientLevel0: $ClientLevel$$Type, float1: float, float2: float)
 constructor()
+constructor(clientLevel0: $ClientLevel$$Type, float1: float, float2: float)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -654,8 +654,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $StructureManager, $StructureManager$$Type } from "net.minecraft.world.level.StructureManager"
 
 export class $EventMergeStructureSpawns extends $Event implements $EventItf {
-constructor()
 constructor(structureManager0: $StructureManager$$Type, blockPos1: $BlockPos$$Type, mobCategory2: $MobCategory$$Type, weightedRandomList3: $WeightedRandomList$$Type<$MobSpawnSettings$SpawnerData$$Type>, weightedRandomList4: $WeightedRandomList$$Type<$MobSpawnSettings$SpawnerData$$Type>)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

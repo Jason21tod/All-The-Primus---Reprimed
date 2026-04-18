@@ -113,9 +113,9 @@ public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$canBeBright"(): boolean
 public "etf$distanceTo"(entity0: $Entity$$Type): float
@@ -145,8 +145,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -164,8 +164,8 @@ public "getCustomName"(): $Component
 public "getDefaultMovementSpeed"(): double
 public "getDeltaMovementLerped"(float0: float): $Vec3
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getElytraTextureLocation"(): $ResourceLocation
 public "getEntityReach"(): double
@@ -264,11 +264,11 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "paint"(tag: $CompoundTag$$Type): void
 public "playAttackAnimation"(name: string, animatedHand: $AnimatedHand$$Type, length: float, upswing: float): void
 public "playRollAnimation"(animationName: string, direction: $Vec3$$Type): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public static "registerSkinTexture"(resourceLocation0: $ResourceLocation$$Type, string1: string): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -287,6 +287,7 @@ public "sendData"(channel: string, data: $CompoundTag$$Type): void
 public "sendData"(channel: string): void
 public "sendInventoryUpdate"(): void
 public "sendSystemMessage"(component0: $Component$$Type): void
+public "serializeNBT"(): $CompoundTag
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setCharge"(int0: integer): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -329,11 +330,11 @@ public "sinkInFluid"(fluidType0: $FluidType$$Type): void
 public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $LevelRenderer$$Type): void
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
-public "startTracking"(): void
 public static "startTracking"(object0: any): void
+public "startTracking"(): void
 public "stopAttackAnimation"(length: float): void
-public "swing"(hand: $InteractionHand$$Type): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
@@ -642,9 +643,9 @@ public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
+public "damageHeldItem"(): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
-public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "drop"(boolean0: boolean): boolean
 public "etf$canBeBright"(): boolean
@@ -675,8 +676,8 @@ public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 /** @deprecated */
 public "getAnimation"(): $AnimationApplier
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
-public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
+public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>, initializer: $Supplier$$Type<A>): A
 public "getAttachedOrElse"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrGet"<A>(type: $AttachmentType$$Type<A>, defaultValue: $Supplier$$Type<A>): A
 public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
@@ -693,8 +694,8 @@ public "getCurrentMood"(): float
 public "getCustomName"(): $Component
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(x: double, y: double, z: double): double
 public "getDistance"(pos: $BlockPos$$Type): double
+public "getDistance"(x: double, y: double, z: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityReach"(): double
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -753,13 +754,13 @@ public "give"(item: $ItemStack$$Type): void
 public "giveInHand"(item: $ItemStack$$Type): void
 public "handler$dfb000$drop"(boolean0: boolean, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
 public "handler$egp000$caelus$checkFlight"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$eno000$shouldAutoJump_HEAD"(cir: $CallbackInfoReturnable$$Type): void
-public "handler$fbd000$isControlledCamera"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$gpp000$l2complements_handleEntityEvent_stableBody"(byte0: byte, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$gpp000$l2complements_hurtTo_stableBody"(float0: float, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$ifk000$onIsShiftKeyDown"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ifk000$onMove"(moverType0: $MoverType$$Type, vec31: $Vec3$$Type, callbackInfo2: $CallbackInfo$$Type): void
-public "handler$ifk001$onAiStep"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$eoa000$shouldAutoJump_HEAD"(cir: $CallbackInfoReturnable$$Type): void
+public "handler$fbf000$isControlledCamera"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$gpj000$l2complements_handleEntityEvent_stableBody"(byte0: byte, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$gpj000$l2complements_hurtTo_stableBody"(float0: float, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$ifi000$onIsShiftKeyDown"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ifi000$onMove"(moverType0: $MoverType$$Type, vec31: $Vec3$$Type, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$ifi001$onAiStep"(callbackInfo0: $CallbackInfo$$Type): void
 public "hasCustomName"(): boolean
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hurtTo"(float0: float): void
@@ -805,11 +806,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onGameModeChanged"(gameType0: $GameType$$Type): void
 public "paint"(tag: $CompoundTag$$Type): void
-public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
+public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 public "removeRecipeHighlight"(recipe0: $Recipe$$Type<any>): void
@@ -829,6 +830,7 @@ public "sendData"(channel: string, data: $CompoundTag$$Type): void
 public "sendData"(channel: string): void
 public "sendInventoryUpdate"(): void
 public "sendOpenInventory"(): void
+public "serializeNBT"(): $CompoundTag
 public "serverAiStep"(): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setCharge"(int0: integer): void
@@ -877,10 +879,10 @@ public "sinkInFluid"(fluidType0: $FluidType$$Type): void
 public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $LevelRenderer$$Type): void
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
-public "startTracking"(): void
 public static "startTracking"(object0: any): void
-public "swing"(hand: $InteractionHand$$Type): void
+public "startTracking"(): void
 public "swing"(): void
+public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void

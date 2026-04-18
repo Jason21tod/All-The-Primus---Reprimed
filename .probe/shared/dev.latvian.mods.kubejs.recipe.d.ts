@@ -282,8 +282,8 @@ readonly "names": $Set<string>
 constructor(component: $RecipeComponent$$Type<T>, name: string)
 
 public "allowEmpty"(): $RecipeKey<T>
-public "alt"(...names: string[]): $RecipeKey<T>
 public "alt"(name: string): $RecipeKey<T>
+public "alt"(...names: string[]): $RecipeKey<T>
 public "alwaysWrite"(): $RecipeKey<T>
 public "defaultOptional"(): $RecipeKey<T>
 public "exclude"(): $RecipeKey<T>

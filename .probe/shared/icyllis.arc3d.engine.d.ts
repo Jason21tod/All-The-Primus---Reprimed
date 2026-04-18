@@ -584,8 +584,8 @@ constructor(name: string, type: byte)
 constructor(name: string, type: byte, arraySize: integer)
 constructor(name: string, type: byte, typeModifier: byte)
 
-public "addLayoutQualifier"(layoutQualifier: string): void
 public "addLayoutQualifier"(qualifier: string, value: integer): void
+public "addLayoutQualifier"(layoutQualifier: string): void
 public "addModifier"(modifier: string): void
 public "appendDecl"(out: $StringBuilder$$Type): void
 public "getArraySize"(): integer
@@ -798,11 +798,11 @@ import { $Image } from "icyllis.arc3d.engine.Image"
 /** @deprecated */
 export class $GpuRenderTarget extends $GpuSurface {
 public "getBackendRenderTarget"(): $BackendRenderTarget
-public "getColorAttachment"(int0: integer): $Image
 public "getColorAttachment"(): $Image
+public "getColorAttachment"(int0: integer): $Image
 public "getDepthStencilAttachment"(): $Image
-public "getResolveAttachment"(int0: integer): $Image
 public "getResolveAttachment"(): $Image
+public "getResolveAttachment"(int0: integer): $Image
 public "numColorTargets"(): integer
 get "backendRenderTarget"(): $BackendRenderTarget
 get "colorAttachment"(): $Image
@@ -1397,8 +1397,8 @@ get "deferredProvider"(): boolean
 
 declare module "icyllis.arc3d.engine.UniformDataManager" {
 import { $Matrix4$$Type } from "icyllis.arc3d.core.Matrix4"
-import { $Matrixc$$Type } from "icyllis.arc3d.sketch.Matrixc"
 import { $Matrix3$$Type } from "icyllis.arc3d.core.Matrix3"
+import { $Matrixc$$Type } from "icyllis.arc3d.sketch.Matrixc"
 import { $RefCnt } from "icyllis.arc3d.core.RefCnt"
 
 export class $UniformDataManager extends $RefCnt {
@@ -1408,8 +1408,8 @@ public "set1f"(u: integer, v0: float): void
 public "set1fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "set1fv"(u: integer, count: integer, value: long): void
 public "set1i"(u: integer, v0: integer): void
-public "set1iv"(u: integer, count: integer, value: long): void
 public "set1iv"(u: integer, offset: integer, count: integer, value: integer[]): void
+public "set1iv"(u: integer, count: integer, value: long): void
 public "set2f"(u: integer, v0: float, v1: float): void
 public "set2fv"(u: integer, count: integer, value: long): void
 public "set2fv"(u: integer, offset: integer, count: integer, value: float[]): void
@@ -1420,23 +1420,23 @@ public "set3f"(u: integer, v0: float, v1: float, v2: float): void
 public "set3fv"(u: integer, count: integer, value: long): void
 public "set3fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "set3i"(u: integer, v0: integer, v1: integer, v2: integer): void
-public "set3iv"(u: integer, count: integer, value: long): void
 public "set3iv"(u: integer, offset: integer, count: integer, value: integer[]): void
+public "set3iv"(u: integer, count: integer, value: long): void
 public "set4f"(u: integer, v0: float, v1: float, v2: float, v3: float): void
 public "set4fv"(u: integer, count: integer, value: long): void
 public "set4fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "set4i"(u: integer, v0: integer, v1: integer, v2: integer, v3: integer): void
-public "set4iv"(u: integer, count: integer, value: long): void
 public "set4iv"(u: integer, offset: integer, count: integer, value: integer[]): void
-public "setMatrix2fv"(u: integer, offset: integer, count: integer, value: float[]): void
+public "set4iv"(u: integer, count: integer, value: long): void
 public "setMatrix2fv"(u: integer, count: integer, value: long): void
-public "setMatrix3f"(u: integer, matrix: $Matrixc$$Type): void
+public "setMatrix2fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "setMatrix3f"(u: integer, matrix: $Matrix3$$Type): void
-public "setMatrix3fv"(u: integer, offset: integer, count: integer, value: float[]): void
+public "setMatrix3f"(u: integer, matrix: $Matrixc$$Type): void
 public "setMatrix3fv"(u: integer, count: integer, value: long): void
+public "setMatrix3fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "setMatrix4f"(u: integer, matrix: $Matrix4$$Type): void
-public "setMatrix4fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "setMatrix4fv"(u: integer, count: integer, value: long): void
+public "setMatrix4fv"(u: integer, offset: integer, count: integer, value: float[]): void
 }
 }
 
@@ -1580,17 +1580,17 @@ public "createNewImage"(desc: $ImageDesc$$Type, label: string): $Image
 /** @deprecated */
 public "createRenderTarget"(width: integer, height: integer, colorFormat: $BackendFormat$$Type, colorFlags: integer, resolveFormat: $BackendFormat$$Type, resolveFlags: integer, depthStencilFormat: $BackendFormat$$Type, depthStencilFlags: integer, sampleCount: integer, surfaceFlags: integer, label: string): $GpuRenderTarget
 /** @deprecated */
-public "createRenderTarget"(numColorTargets: integer, colorTargets: $Image$$Type[], resolveTargets: $Image$$Type[], mipLevels: integer[], depthStencilTarget: $Image$$Type, surfaceFlags: integer): $GpuRenderTarget
-/** @deprecated */
 public "createRenderTarget"(width: integer, height: integer, sampleCount: integer): $GpuRenderTarget
 /** @deprecated */
-public "createTexture"(width: integer, height: integer, format: $BackendFormat$$Type, sampleCount: integer, surfaceFlags: integer, label: string): $Image
-public "findAndRefScratchImage"(key: $IResourceKey$$Type, budgeted: boolean, shareable: boolean, label: string): $Image
-public "findAndRefScratchImage"(desc: $ImageDesc$$Type, budgeted: boolean, shareable: boolean, label: string): $Image
+public "createRenderTarget"(numColorTargets: integer, colorTargets: $Image$$Type[], resolveTargets: $Image$$Type[], mipLevels: integer[], depthStencilTarget: $Image$$Type, surfaceFlags: integer): $GpuRenderTarget
 /** @deprecated */
-public "findAndRefScratchRenderTarget"(key: $IResourceKey$$Type, label: string): $GpuRenderTarget
+public "createTexture"(width: integer, height: integer, format: $BackendFormat$$Type, sampleCount: integer, surfaceFlags: integer, label: string): $Image
+public "findAndRefScratchImage"(desc: $ImageDesc$$Type, budgeted: boolean, shareable: boolean, label: string): $Image
+public "findAndRefScratchImage"(key: $IResourceKey$$Type, budgeted: boolean, shareable: boolean, label: string): $Image
 /** @deprecated */
 public "findAndRefScratchRenderTarget"(width: integer, height: integer, colorFormat: $BackendFormat$$Type, colorFlags: integer, resolveFormat: $BackendFormat$$Type, resolveFlags: integer, depthStencilFormat: $BackendFormat$$Type, depthStencilFlags: integer, sampleCount: integer, surfaceFlags: integer, label: string): $GpuRenderTarget
+/** @deprecated */
+public "findAndRefScratchRenderTarget"(key: $IResourceKey$$Type, label: string): $GpuRenderTarget
 public "findOrCreateBuffer"(size: long, usage: integer, label: string): $Buffer
 public "findOrCreateCompatibleSampler"(desc: $SamplerDesc$$Type): $Sampler
 public "findOrCreateGraphicsPipeline"(pipelineDesc: $PipelineDesc$$Type, renderPassDesc: $RenderPassDesc$$Type): $GraphicsPipeline

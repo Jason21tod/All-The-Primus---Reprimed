@@ -483,8 +483,8 @@ public "select"(consumer0: $Consumer$$Type<$SelectionKey$$Type>, long1: long): i
 public "select"(consumer0: $Consumer$$Type<$SelectionKey$$Type>): integer
 public "select"(): integer
 public "select"(long0: long): integer
-public "selectNow"(consumer0: $Consumer$$Type<$SelectionKey$$Type>): integer
 public "selectNow"(): integer
+public "selectNow"(consumer0: $Consumer$$Type<$SelectionKey$$Type>): integer
 public "selectedKeys"(): $Set<$SelectionKey>
 public "wakeup"(): $Selector
 }

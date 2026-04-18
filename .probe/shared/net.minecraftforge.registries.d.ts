@@ -22,8 +22,8 @@ public "clean"(): void
 public static "generateRegistryPackets"(boolean0: boolean): $List<$Pair<string, $HandshakeMessages$S2CRegistry>>
 public "getName"<V>(iForgeRegistry0: $IForgeRegistry$$Type<V>): $ResourceLocation
 public "getName"(): string
-public "getRegistry"<V>(resourceLocation0: $ResourceLocation$$Type, registryManager1: $RegistryManager$$Type): $ForgeRegistry<V>
 public "getRegistry"<V>(resourceKey0: $ResourceKey$$Type<$Registry<V>>): $ForgeRegistry<V>
+public "getRegistry"<V>(resourceLocation0: $ResourceLocation$$Type, registryManager1: $RegistryManager$$Type): $ForgeRegistry<V>
 public "getRegistry"<V>(resourceLocation0: $ResourceLocation$$Type): $ForgeRegistry<V>
 public static "getRegistryNamesForSyncToClient"(): $List<$ResourceLocation>
 public static "getVanillaRegistryKeys"(): $Set<$ResourceLocation>
@@ -46,8 +46,8 @@ import { $IForgeRegistry, $IForgeRegistry$$Type } from "net.minecraftforge.regis
 export class $NewRegistryEvent extends $Event implements $IModBusEvent, $EventItf {
 constructor()
 
-public "create"<V>(registryBuilder0: $RegistryBuilder$$Type<V>, consumer1: $Consumer$$Type<$IForgeRegistry$$Type<V>>): $Supplier<$IForgeRegistry<V>>
 public "create"<V>(registryBuilder0: $RegistryBuilder$$Type<V>): $Supplier<$IForgeRegistry<V>>
+public "create"<V>(registryBuilder0: $RegistryBuilder$$Type<V>, consumer1: $Consumer$$Type<$IForgeRegistry$$Type<V>>): $Supplier<$IForgeRegistry<V>>
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
 get "el_isUnCancelable"(): boolean
@@ -82,13 +82,13 @@ export interface $IForgeRegistryInternal<V = any> extends $IForgeRegistry<V> {
 "getDelegate"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder$Reference<V>>
 "getDelegate"(v0: V): $Optional<$Holder$Reference<V>>
 "getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
-"getDelegateOrThrow"(v0: V): $Holder$Reference<V>
-"getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type<V>): $Holder$Reference<V>
 "getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference<V>
+"getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type<V>): $Holder$Reference<V>
+"getDelegateOrThrow"(v0: V): $Holder$Reference<V>
 "getEntries"(): $Set<$Map$Entry<$ResourceKey<V>, V>>
-"getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 "getHolder"(v0: V): $Optional<$Holder<V>>
 "getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
+"getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 "getKey"(v0: V): $ResourceLocation
 "getKeys"(): $Set<$ResourceLocation>
 "getRegistryKey"(): $ResourceKey<$Registry<V>>
@@ -151,13 +151,13 @@ export interface $IForgeRegistry<V = any> extends $Iterable<V> {
 "getDelegate"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder$Reference<V>>
 "getDelegate"(v0: V): $Optional<$Holder$Reference<V>>
 "getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
-"getDelegateOrThrow"(v0: V): $Holder$Reference<V>
-"getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type<V>): $Holder$Reference<V>
 "getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference<V>
+"getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type<V>): $Holder$Reference<V>
+"getDelegateOrThrow"(v0: V): $Holder$Reference<V>
 "getEntries"(): $Set<$Map$Entry<$ResourceKey<V>, V>>
-"getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 "getHolder"(v0: V): $Optional<$Holder<V>>
 "getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
+"getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 "getKey"(v0: V): $ResourceLocation
 "getKeys"(): $Set<$ResourceLocation>
 "getRegistryKey"(): $ResourceKey<$Registry<V>>
@@ -222,8 +222,8 @@ export abstract class $IForgeRegistry$BakeCallback$$Static<V = any> implements $
 
 declare module "net.minecraftforge.registries.RegisterEvent" {
 import { $Registry } from "net.minecraft.core.Registry"
-import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $EventItf } from "com.mega.endinglib.api.event.EventItf"
 import { $IModBusEvent } from "net.minecraftforge.fml.event.IModBusEvent"
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
@@ -240,8 +240,8 @@ public "el_setEventUnCancelable"(boolean0: boolean): void
 public "getForgeRegistry"<T>(): $IForgeRegistry<T>
 public "getRegistryKey"(): $ResourceKey<$Registry<any>>
 public "getVanillaRegistry"<T>(): $Registry<T>
-public "register"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>, resourceLocation1: $ResourceLocation$$Type, supplier2: $Supplier$$Type<T>): void
 public "register"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>, consumer1: $Consumer$$Type<$RegisterEvent$RegisterHelper$$Type<T>>): void
+public "register"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>, resourceLocation1: $ResourceLocation$$Type, supplier2: $Supplier$$Type<T>): void
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
 get "forgeRegistry"(): $IForgeRegistry<T>
@@ -473,8 +473,8 @@ export abstract class $IForgeRegistry$MissingFactory$$Static<V = any> implements
 
 declare module "net.minecraftforge.registries.DeferredRegister" {
 import { $TagKey, $TagKey$$Type } from "net.minecraft.tags.TagKey"
-import { $Registry } from "net.minecraft.core.Registry"
 import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
+import { $Registry } from "net.minecraft.core.Registry"
 import { $RegistryBuilder } from "net.minecraftforge.registries.RegistryBuilder"
 import { $Collection } from "java.util.Collection"
 import { $Set$$Type } from "java.util.Set"
@@ -487,20 +487,20 @@ import { $RegistryObject } from "net.minecraftforge.registries.RegistryObject"
 export class $DeferredRegister<T = any> {
 public "addOptionalTagDefaults"(tagKey0: $TagKey$$Type<T>, set1: $Set$$Type<$Supplier$$Type<T>>): void
 public static "create"<B>(iForgeRegistry0: $IForgeRegistry$$Type<B>, string1: string): $DeferredRegister<B>
-public static "create"<B>(resourceKey0: $ResourceKey$$Type<$Registry<B>>, string1: string): $DeferredRegister<B>
 public static "create"<B>(resourceLocation0: $ResourceLocation$$Type, string1: string): $DeferredRegister<B>
-public static "createOptional"<B>(resourceKey0: $ResourceKey$$Type<$Registry<B>>, string1: string): $DeferredRegister<B>
+public static "create"<B>(resourceKey0: $ResourceKey$$Type<$Registry<B>>, string1: string): $DeferredRegister<B>
 public static "createOptional"<B>(resourceLocation0: $ResourceLocation$$Type, string1: string): $DeferredRegister<B>
-public "createOptionalTagKey"(resourceLocation0: $ResourceLocation$$Type, set1: $Set$$Type<$Supplier$$Type<T>>): $TagKey<T>
+public static "createOptional"<B>(resourceKey0: $ResourceKey$$Type<$Registry<B>>, string1: string): $DeferredRegister<B>
 public "createOptionalTagKey"(string0: string, set1: $Set$$Type<$Supplier$$Type<T>>): $TagKey<T>
+public "createOptionalTagKey"(resourceLocation0: $ResourceLocation$$Type, set1: $Set$$Type<$Supplier$$Type<T>>): $TagKey<T>
 public "createTagKey"(resourceLocation0: $ResourceLocation$$Type): $TagKey<T>
 public "createTagKey"(string0: string): $TagKey<T>
 public "getEntries"(): $Collection<$RegistryObject<T>>
 public "getRegistryKey"(): $ResourceKey<$Registry<T>>
 public "getRegistryName"(): $ResourceLocation
 public "makeRegistry"(supplier0: $Supplier$$Type<$RegistryBuilder<T>>): $Supplier<$IForgeRegistry<T>>
-public "register"<I extends T>(string0: string, supplier1: $Supplier$$Type<I>): $RegistryObject<I>
 public "register"(iEventBus0: $IEventBus$$Type): void
+public "register"<I extends T>(string0: string, supplier1: $Supplier$$Type<I>): $RegistryObject<I>
 get "entries"(): $Collection<$RegistryObject<T>>
 get "registryKey"(): $ResourceKey<$Registry<T>>
 get "registryName"(): $ResourceLocation
@@ -546,13 +546,13 @@ export interface $IForgeRegistryModifiable<V = any> extends $IForgeRegistry<V> {
 "getDelegate"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder$Reference<V>>
 "getDelegate"(v0: V): $Optional<$Holder$Reference<V>>
 "getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
-"getDelegateOrThrow"(v0: V): $Holder$Reference<V>
-"getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type<V>): $Holder$Reference<V>
 "getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference<V>
+"getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type<V>): $Holder$Reference<V>
+"getDelegateOrThrow"(v0: V): $Holder$Reference<V>
 "getEntries"(): $Set<$Map$Entry<$ResourceKey<V>, V>>
-"getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 "getHolder"(v0: V): $Optional<$Holder<V>>
 "getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
+"getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 "getKey"(v0: V): $ResourceLocation
 "getKeys"(): $Set<$ResourceLocation>
 "getRegistryKey"(): $ResourceKey<$Registry<V>>
@@ -672,17 +672,17 @@ public "getDefaultKey"(): $ResourceLocation
 public "getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
 public "getDelegate"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder$Reference<V>>
 public "getDelegate"(v0: V): $Optional<$Holder$Reference<V>>
+public "getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference
 public "getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type): $Holder$Reference
 public "getDelegateOrThrow"(object0: any): $Holder$Reference
-public "getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference
 public "getEntries"(): $Set<$Map$Entry<$ResourceKey<V>, V>>
-public "getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
 public "getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 public "getHolder"(v0: V): $Optional<$Holder<V>>
-public "getID"(resourceLocation0: $ResourceLocation$$Type): integer
+public "getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
 public "getID"(v0: V): integer
-public "getKey"(v0: V): $ResourceLocation
+public "getID"(resourceLocation0: $ResourceLocation$$Type): integer
 public "getKey"(int0: integer): $ResourceKey<V>
+public "getKey"(v0: V): $ResourceLocation
 public "getKeys"(): $Set<$ResourceLocation>
 public "getMissingEvent"(resourceLocation0: $ResourceLocation$$Type, object2IntMap1: $Object2IntMap$$Type<$ResourceLocation$$Type>): $MissingMappingsEvent
 public "getRaw"(resourceLocation0: $ResourceLocation$$Type): V
@@ -819,9 +819,9 @@ constructor()
 
 public "add"(clearCallback0: $IForgeRegistry$ClearCallback$$Type<T>): $RegistryBuilder<T>
 public "add"(addCallback0: $IForgeRegistry$AddCallback$$Type<T>): $RegistryBuilder<T>
-public "add"(bakeCallback0: $IForgeRegistry$BakeCallback$$Type<T>): $RegistryBuilder<T>
-public "add"(createCallback0: $IForgeRegistry$CreateCallback$$Type<T>): $RegistryBuilder<T>
 public "add"(validateCallback0: $IForgeRegistry$ValidateCallback$$Type<T>): $RegistryBuilder<T>
+public "add"(createCallback0: $IForgeRegistry$CreateCallback$$Type<T>): $RegistryBuilder<T>
+public "add"(bakeCallback0: $IForgeRegistry$BakeCallback$$Type<T>): $RegistryBuilder<T>
 public "addCallback"(object0: any): $RegistryBuilder<T>
 public "allowModification"(): $RegistryBuilder<T>
 public "disableOverrides"(): $RegistryBuilder<T>

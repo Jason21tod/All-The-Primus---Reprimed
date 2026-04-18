@@ -90,8 +90,8 @@ export interface $ChannelPipeline extends $ChannelInboundInvoker, $ChannelOutbou
 "context"(channelHandler0: $ChannelHandler$$Type): $ChannelHandlerContext
 "deregister"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "deregister"(): $ChannelFuture
-"disconnect"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "disconnect"(): $ChannelFuture
+"disconnect"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "fireChannelActive"(): $ChannelPipeline
 "fireChannelInactive"(): $ChannelPipeline
 "fireChannelRead"(object0: any): $ChannelPipeline
@@ -171,11 +171,11 @@ public "array"(): byte[]
 public "arrayOffset"(): integer
 public "asByteBuf"(): $ByteBuf
 public "asReadOnly"(): $ByteBuf
-public "bytesBefore"(int0: integer, byte1: byte): integer
 public "bytesBefore"(byte0: byte): integer
+public "bytesBefore"(int0: integer, byte1: byte): integer
 public "bytesBefore"(int0: integer, int1: integer, byte2: byte): integer
-public "capacity"(int0: integer): $ByteBuf
 public "capacity"(): integer
+public "capacity"(int0: integer): $ByteBuf
 public "clear"(): $ByteBuf
 public "compareTo"(byteBuf0: $ByteBuf$$Type): integer
 public "copy"(): $ByteBuf
@@ -183,23 +183,23 @@ public "copy"(int0: integer, int1: integer): $ByteBuf
 public "discardReadBytes"(): $ByteBuf
 public "discardSomeReadBytes"(): $ByteBuf
 public "duplicate"(): $ByteBuf
-public "ensureWritable"(int0: integer, boolean1: boolean): integer
 public "ensureWritable"(int0: integer): $ByteBuf
+public "ensureWritable"(int0: integer, boolean1: boolean): integer
 public "forEachByte"(int0: integer, int1: integer, byteProcessor2: $ByteProcessor$$Type): integer
 public "forEachByte"(byteProcessor0: $ByteProcessor$$Type): integer
 public "forEachByteDesc"(int0: integer, int1: integer, byteProcessor2: $ByteProcessor$$Type): integer
 public "forEachByteDesc"(byteProcessor0: $ByteProcessor$$Type): integer
 public "getBoolean"(int0: integer): boolean
 public "getByte"(int0: integer): byte
-public "getBytes"(int0: integer, byte1s: byte[], int2: integer, int3: integer): $ByteBuf
+public "getBytes"(int0: integer, byteBuf1: $ByteBuf$$Type, int2: integer): $ByteBuf
+public "getBytes"(int0: integer, byteBuf1: $ByteBuf$$Type): $ByteBuf
 public "getBytes"(int0: integer, byteBuffer1: $ByteBuffer$$Type): $ByteBuf
 public "getBytes"(int0: integer, outputStream1: $OutputStream$$Type, int2: integer): $ByteBuf
-public "getBytes"(int0: integer, fileChannel1: $FileChannel$$Type, long2: long, int3: integer): integer
 public "getBytes"(int0: integer, gatheringByteChannel1: $GatheringByteChannel$$Type, int2: integer): integer
-public "getBytes"(int0: integer, byteBuf1: $ByteBuf$$Type): $ByteBuf
-public "getBytes"(int0: integer, byteBuf1: $ByteBuf$$Type, int2: integer): $ByteBuf
+public "getBytes"(int0: integer, fileChannel1: $FileChannel$$Type, long2: long, int3: integer): integer
 public "getBytes"(int0: integer, byteBuf1: $ByteBuf$$Type, int2: integer, int3: integer): $ByteBuf
 public "getBytes"(int0: integer, byte1s: byte[]): $ByteBuf
+public "getBytes"(int0: integer, byte1s: byte[], int2: integer, int3: integer): $ByteBuf
 public "getChar"(int0: integer): character
 public "getCharSequence"(int0: integer, int1: integer, charset2: $Charset$$Type): charseq
 public "getDouble"(int0: integer): double
@@ -228,8 +228,8 @@ public "internalNioBuffer"(int0: integer, int1: integer): $ByteBuffer
 public "isContiguous"(): boolean
 public "isDirect"(): boolean
 public "isReadOnly"(): boolean
-public "isReadable"(int0: integer): boolean
 public "isReadable"(): boolean
+public "isReadable"(int0: integer): boolean
 public "isWritable"(int0: integer): boolean
 public "isWritable"(): boolean
 public "markReaderIndex"(): $ByteBuf
@@ -241,24 +241,24 @@ public "memoryAddress"(): long
 public "nioBuffer"(): $ByteBuffer
 public "nioBuffer"(int0: integer, int1: integer): $ByteBuffer
 public "nioBufferCount"(): integer
-public "nioBuffers"(int0: integer, int1: integer): $ByteBuffer[]
 public "nioBuffers"(): $ByteBuffer[]
+public "nioBuffers"(int0: integer, int1: integer): $ByteBuffer[]
 /** @deprecated */
 public "order"(): $ByteOrder
 /** @deprecated */
 public "order"(byteOrder0: $ByteOrder$$Type): $ByteBuf
 public "readBoolean"(): boolean
 public "readByte"(): byte
-public "readBytes"(byte0s: byte[]): $ByteBuf
-public "readBytes"(byteBuf0: $ByteBuf$$Type, int1: integer, int2: integer): $ByteBuf
+public "readBytes"(fileChannel0: $FileChannel$$Type, long1: long, int2: integer): integer
+public "readBytes"(gatheringByteChannel0: $GatheringByteChannel$$Type, int1: integer): integer
 public "readBytes"(byteBuf0: $ByteBuf$$Type, int1: integer): $ByteBuf
-public "readBytes"(byteBuf0: $ByteBuf$$Type): $ByteBuf
 public "readBytes"(int0: integer): $ByteBuf
+public "readBytes"(byteBuf0: $ByteBuf$$Type): $ByteBuf
+public "readBytes"(byteBuf0: $ByteBuf$$Type, int1: integer, int2: integer): $ByteBuf
+public "readBytes"(byte0s: byte[]): $ByteBuf
+public "readBytes"(byte0s: byte[], int1: integer, int2: integer): $ByteBuf
 public "readBytes"(byteBuffer0: $ByteBuffer$$Type): $ByteBuf
 public "readBytes"(outputStream0: $OutputStream$$Type, int1: integer): $ByteBuf
-public "readBytes"(gatheringByteChannel0: $GatheringByteChannel$$Type, int1: integer): integer
-public "readBytes"(fileChannel0: $FileChannel$$Type, long1: long, int2: integer): integer
-public "readBytes"(byte0s: byte[], int1: integer, int2: integer): $ByteBuf
 public "readChar"(): character
 public "readCharSequence"(int0: integer, charset1: $Charset$$Type): charseq
 public "readDouble"(): double
@@ -290,20 +290,21 @@ public "release"(int0: integer): boolean
 public "release"(): boolean
 public "resetReaderIndex"(): $ByteBuf
 public "resetWriterIndex"(): $ByteBuf
+public "retain"(int0: integer): $ByteBuf
 public "retainedDuplicate"(): $ByteBuf
-public "retainedSlice"(): $ByteBuf
 public "retainedSlice"(int0: integer, int1: integer): $ByteBuf
+public "retainedSlice"(): $ByteBuf
 public "setBoolean"(int0: integer, boolean1: boolean): $ByteBuf
 public "setByte"(int0: integer, int1: integer): $ByteBuf
+public "setBytes"(int0: integer, byteBuf1: $ByteBuf$$Type, int2: integer): $ByteBuf
+public "setBytes"(int0: integer, byteBuf1: $ByteBuf$$Type): $ByteBuf
+public "setBytes"(int0: integer, scatteringByteChannel1: $ScatteringByteChannel$$Type, int2: integer): integer
 public "setBytes"(int0: integer, byteBuffer1: $ByteBuffer$$Type): $ByteBuf
 public "setBytes"(int0: integer, byte1s: byte[], int2: integer, int3: integer): $ByteBuf
 public "setBytes"(int0: integer, byte1s: byte[]): $ByteBuf
 public "setBytes"(int0: integer, inputStream1: $InputStream$$Type, int2: integer): integer
-public "setBytes"(int0: integer, scatteringByteChannel1: $ScatteringByteChannel$$Type, int2: integer): integer
 public "setBytes"(int0: integer, fileChannel1: $FileChannel$$Type, long2: long, int3: integer): integer
 public "setBytes"(int0: integer, byteBuf1: $ByteBuf$$Type, int2: integer, int3: integer): $ByteBuf
-public "setBytes"(int0: integer, byteBuf1: $ByteBuf$$Type, int2: integer): $ByteBuf
-public "setBytes"(int0: integer, byteBuf1: $ByteBuf$$Type): $ByteBuf
 public "setChar"(int0: integer, int1: integer): $ByteBuf
 public "setCharSequence"(int0: integer, charSequence1: charseq, charset2: $Charset$$Type): integer
 public "setDouble"(int0: integer, double1: double): $ByteBuf
@@ -325,21 +326,20 @@ public "slice"(int0: integer, int1: integer): $ByteBuf
 public "slice"(): $ByteBuf
 public "toString"(int0: integer, int1: integer, charset2: $Charset$$Type): string
 public "toString"(charset0: $Charset$$Type): string
-public "touch"(object0: any): $ByteBuf
 public "touch"(): $ByteBuf
 public "unwrap"(): $ByteBuf
 public "writableBytes"(): integer
 public "writeBoolean"(boolean0: boolean): $ByteBuf
 public "writeByte"(int0: integer): $ByteBuf
-public "writeBytes"(inputStream0: $InputStream$$Type, int1: integer): integer
-public "writeBytes"(byte0s: byte[], int1: integer, int2: integer): $ByteBuf
-public "writeBytes"(byteBuf0: $ByteBuf$$Type): $ByteBuf
 public "writeBytes"(fileChannel0: $FileChannel$$Type, long1: long, int2: integer): integer
-public "writeBytes"(scatteringByteChannel0: $ScatteringByteChannel$$Type, int1: integer): integer
 public "writeBytes"(byteBuffer0: $ByteBuffer$$Type): $ByteBuf
-public "writeBytes"(byte0s: byte[]): $ByteBuf
+public "writeBytes"(byteBuf0: $ByteBuf$$Type): $ByteBuf
+public "writeBytes"(inputStream0: $InputStream$$Type, int1: integer): integer
 public "writeBytes"(byteBuf0: $ByteBuf$$Type, int1: integer): $ByteBuf
+public "writeBytes"(scatteringByteChannel0: $ScatteringByteChannel$$Type, int1: integer): integer
+public "writeBytes"(byte0s: byte[], int1: integer, int2: integer): $ByteBuf
 public "writeBytes"(byteBuf0: $ByteBuf$$Type, int1: integer, int2: integer): $ByteBuf
+public "writeBytes"(byte0s: byte[]): $ByteBuf
 public "writeChar"(int0: integer): $ByteBuf
 public "writeCharSequence"(charSequence0: charseq, charset1: $Charset$$Type): integer
 public "writeDouble"(double0: double): $ByteBuf
@@ -355,8 +355,8 @@ public "writeMediumLE"(int0: integer): $ByteBuf
 public "writeShort"(int0: integer): $ByteBuf
 public "writeShortLE"(int0: integer): $ByteBuf
 public "writeZero"(int0: integer): $ByteBuf
-public "writerIndex"(int0: integer): $ByteBuf
 public "writerIndex"(): integer
+public "writerIndex"(int0: integer): $ByteBuf
 get "contiguous"(): boolean
 get "direct"(): boolean
 get "readOnly"(): boolean
@@ -566,8 +566,8 @@ export interface $ScheduledFuture<V = any> extends $Future<V>, $ScheduledFuture$
 "await"(long0: long, timeUnit1: $TimeUnit$$Type): boolean
 "await"(long0: long): boolean
 "awaitUninterruptibly"(long0: long, timeUnit1: $TimeUnit$$Type): boolean
-"awaitUninterruptibly"(): $Future<V>
 "awaitUninterruptibly"(long0: long): boolean
+"awaitUninterruptibly"(): $Future<V>
 "cancel"(boolean0: boolean): boolean
 "cause"(): $Throwable
 "compareTo"(delayed0: $Delayed$$Type): integer
@@ -772,23 +772,23 @@ constructor(byteBufAllocator0: $ByteBufAllocator$$Type, boolean1: boolean, int2:
 constructor(byteBufAllocator0: $ByteBufAllocator$$Type, boolean1: boolean, int2: integer, ...byteBuf3s: $ByteBuf$$Type[])
 
 public "addComponent"(byteBuf0: $ByteBuf$$Type): $CompositeByteBuf
-public "addComponent"(boolean0: boolean, byteBuf1: $ByteBuf$$Type): $CompositeByteBuf
 public "addComponent"(boolean0: boolean, int1: integer, byteBuf2: $ByteBuf$$Type): $CompositeByteBuf
 public "addComponent"(int0: integer, byteBuf1: $ByteBuf$$Type): $CompositeByteBuf
-public "addComponents"(boolean0: boolean, ...byteBuf1s: $ByteBuf$$Type[]): $CompositeByteBuf
-public "addComponents"(int0: integer, ...byteBuf1s: $ByteBuf$$Type[]): $CompositeByteBuf
+public "addComponent"(boolean0: boolean, byteBuf1: $ByteBuf$$Type): $CompositeByteBuf
 public "addComponents"(boolean0: boolean, iterable1: $Iterable$$Type<$ByteBuf$$Type>): $CompositeByteBuf
 public "addComponents"(...byteBuf0s: $ByteBuf$$Type[]): $CompositeByteBuf
-public "addComponents"(iterable0: $Iterable$$Type<$ByteBuf$$Type>): $CompositeByteBuf
+public "addComponents"(int0: integer, ...byteBuf1s: $ByteBuf$$Type[]): $CompositeByteBuf
 public "addComponents"(int0: integer, iterable1: $Iterable$$Type<$ByteBuf$$Type>): $CompositeByteBuf
+public "addComponents"(iterable0: $Iterable$$Type<$ByteBuf$$Type>): $CompositeByteBuf
+public "addComponents"(boolean0: boolean, ...byteBuf1s: $ByteBuf$$Type[]): $CompositeByteBuf
 public "addFlattenedComponents"(boolean0: boolean, byteBuf1: $ByteBuf$$Type): $CompositeByteBuf
 public "component"(int0: integer): $ByteBuf
 public "componentAtOffset"(int0: integer): $ByteBuf
-public "consolidate"(): $CompositeByteBuf
 public "consolidate"(int0: integer, int1: integer): $CompositeByteBuf
+public "consolidate"(): $CompositeByteBuf
 public "decompose"(int0: integer, int1: integer): $List<$ByteBuf>
-public "discardReadBytes"(): $CompositeByteBuf
 public "discardReadComponents"(): $CompositeByteBuf
+public "discardSomeReadBytes"(): $CompositeByteBuf
 public "forEach"(consumer0: $Consumer$$Type<$ByteBuf$$Type>): void
 public "getBytes"(int0: integer, outputStream1: $OutputStream$$Type, int2: integer): $CompositeByteBuf
 public "getBytes"(int0: integer, byteBuf1: $ByteBuf$$Type): $CompositeByteBuf
@@ -800,27 +800,27 @@ public "getBytes"(int0: integer, byteBuf1: $ByteBuf$$Type, int2: integer, int3: 
 public "internalComponent"(int0: integer): $ByteBuf
 public "internalComponentAtOffset"(int0: integer): $ByteBuf
 public "iterator"(): $Iterator<$ByteBuf>
-public "markReaderIndex"(): $CompositeByteBuf
-public "markWriterIndex"(): $CompositeByteBuf
 public "maxNumComponents"(): integer
 public "numComponents"(): integer
 public "readBytes"(byte0s: byte[], int1: integer, int2: integer): $CompositeByteBuf
 public "readBytes"(byte0s: byte[]): $CompositeByteBuf
 public "readBytes"(byteBuf0: $ByteBuf$$Type, int1: integer): $CompositeByteBuf
 public "readBytes"(byteBuf0: $ByteBuf$$Type): $CompositeByteBuf
-public "readerIndex"(int0: integer): $CompositeByteBuf
 public "removeComponent"(int0: integer): $CompositeByteBuf
 public "removeComponents"(int0: integer, int1: integer): $CompositeByteBuf
-public "resetWriterIndex"(): $CompositeByteBuf
-public "retain"(int0: integer): $CompositeByteBuf
+public "resetReaderIndex"(): $CompositeByteBuf
 public "setByte"(int0: integer, int1: integer): $CompositeByteBuf
-public "setBytes"(int0: integer, byteBuf1: $ByteBuf$$Type, int2: integer): $CompositeByteBuf
-public "setBytes"(int0: integer, byteBuffer1: $ByteBuffer$$Type): $CompositeByteBuf
+public "setBytes"(int0: integer, byte1s: byte[]): $CompositeByteBuf
+public "setBytes"(int0: integer, byteBuf1: $ByteBuf$$Type): $CompositeByteBuf
 public "setIndex"(int0: integer, int1: integer): $CompositeByteBuf
 public "setLong"(int0: integer, long1: long): $CompositeByteBuf
+public "setMedium"(int0: integer, int1: integer): $CompositeByteBuf
+public "setZero"(int0: integer, int1: integer): $CompositeByteBuf
+public "skipBytes"(int0: integer): $CompositeByteBuf
 public "spliterator"(): $Spliterator<$ByteBuf>
 public "toByteIndex"(int0: integer): integer
 public "toComponentIndex"(int0: integer): integer
+public "writeBoolean"(boolean0: boolean): $CompositeByteBuf
 public "writeByte"(int0: integer): $CompositeByteBuf
 public "writeBytes"(byte0s: byte[], int1: integer, int2: integer): $CompositeByteBuf
 public "writeBytes"(byteBuffer0: $ByteBuffer$$Type): $CompositeByteBuf
@@ -830,8 +830,8 @@ public "writeBytes"(byteBuf0: $ByteBuf$$Type, int1: integer, int2: integer): $Co
 public "writeBytes"(byte0s: byte[]): $CompositeByteBuf
 public "writeDouble"(double0: double): $CompositeByteBuf
 public "writeLong"(long0: long): $CompositeByteBuf
-public "writeMedium"(int0: integer): $CompositeByteBuf
 public "writeShort"(int0: integer): $CompositeByteBuf
+public "writeZero"(int0: integer): $CompositeByteBuf
 [Symbol.iterator](): IterableIterator<$ByteBuf>;
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -1021,8 +1021,8 @@ public "inEventLoop"(thread0: $Thread$$Type): boolean
 public "inEventLoop"(): boolean
 public "invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>): $List<$Future<T>>
 public "invokeAll"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>, long1: long, timeUnit2: $TimeUnit$$Type): $List<$Future<T>>
-public "invokeAny"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>): T
 public "invokeAny"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>, long1: long, timeUnit2: $TimeUnit$$Type): T
+public "invokeAny"<T>(collection0: $Collection$$Type<$Callable$$Type<T>>): T
 public "isShutdown"(): boolean
 public "isShuttingDown"(): boolean
 public "isTerminated"(): boolean
@@ -1094,8 +1094,8 @@ export interface $ReferenceCounted {
 "refCnt"(): integer
 "release"(int0: integer): boolean
 "release"(): boolean
-"retain"(int0: integer): $ReferenceCounted
 "retain"(): $ReferenceCounted
+"retain"(int0: integer): $ReferenceCounted
 "touch"(): $ReferenceCounted
 "touch"(object0: any): $ReferenceCounted
 }
@@ -1151,8 +1151,8 @@ export interface $ChannelProgressivePromise extends $ProgressivePromise<void>, $
 "resultNow"(): void
 "setFailure"(throwable0: $Throwable$$Type): $ChannelProgressivePromise
 "setProgress"(long0: long, long1: long): $ChannelProgressivePromise
-"setSuccess"(): $ChannelProgressivePromise
 "setSuccess"(void0: void): $ChannelProgressivePromise
+"setSuccess"(): $ChannelProgressivePromise
 "setSuccess"(void0: void): $ProgressivePromise<void>
 "setUncancellable"(): boolean
 "state"(): $Future$State
@@ -1612,8 +1612,8 @@ export interface $Channel extends $AttributeMap, $ChannelOutboundInvoker, $Compa
 "connect"(socketAddress0: $SocketAddress$$Type, socketAddress1: $SocketAddress$$Type, channelPromise2: $ChannelPromise$$Type): $ChannelFuture
 "deregister"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "deregister"(): $ChannelFuture
-"disconnect"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "disconnect"(): $ChannelFuture
+"disconnect"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "eventLoop"(): $EventLoop
 "flush"(): $Channel
 "hasAttr"<T>(attributeKey0: $AttributeKey$$Type<T>): boolean
@@ -1862,8 +1862,8 @@ export interface $ByteBufAllocator {
 "compositeBuffer"(int0: integer): $CompositeByteBuf
 "compositeDirectBuffer"(): $CompositeByteBuf
 "compositeDirectBuffer"(int0: integer): $CompositeByteBuf
-"compositeHeapBuffer"(int0: integer): $CompositeByteBuf
 "compositeHeapBuffer"(): $CompositeByteBuf
+"compositeHeapBuffer"(int0: integer): $CompositeByteBuf
 "directBuffer"(): $ByteBuf
 "directBuffer"(int0: integer): $ByteBuf
 "directBuffer"(int0: integer, int1: integer): $ByteBuf
@@ -2199,8 +2199,8 @@ export interface $ChannelHandlerContext extends $AttributeMap, $ChannelInboundIn
 "connect"(socketAddress0: $SocketAddress$$Type, socketAddress1: $SocketAddress$$Type, channelPromise2: $ChannelPromise$$Type): $ChannelFuture
 "deregister"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "deregister"(): $ChannelFuture
-"disconnect"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "disconnect"(): $ChannelFuture
+"disconnect"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "executor"(): $EventExecutor
 "fireChannelActive"(): $ChannelHandlerContext
 "fireChannelInactive"(): $ChannelHandlerContext
@@ -2616,8 +2616,8 @@ export interface $Future<V = any> extends $Future$0<V> {
 "await"(long0: long, timeUnit1: $TimeUnit$$Type): boolean
 "await"(long0: long): boolean
 "awaitUninterruptibly"(long0: long, timeUnit1: $TimeUnit$$Type): boolean
-"awaitUninterruptibly"(): $Future<V>
 "awaitUninterruptibly"(long0: long): boolean
+"awaitUninterruptibly"(): $Future<V>
 "cancel"(boolean0: boolean): boolean
 "cause"(): $Throwable
 "exceptionNow"(): $Throwable
@@ -2857,8 +2857,8 @@ import { $ByteBufAllocator$$Type } from "io.netty.buffer.ByteBufAllocator"
  */
 export interface $RecvByteBufAllocator$Handle {
 "allocate"(byteBufAllocator0: $ByteBufAllocator$$Type): $ByteBuf
-"attemptedBytesRead"(): integer
 "attemptedBytesRead"(int0: integer): void
+"attemptedBytesRead"(): integer
 "continueReading"(): boolean
 "guess"(): integer
 "incMessagesRead"(int0: integer): void
@@ -2920,6 +2920,7 @@ public "next"(): $EventExecutor
 public "parent"(): $EventExecutorGroup
 public "schedule"<V>(callable0: $Callable$$Type<V>, long1: long, timeUnit2: $TimeUnit$$Type): $ScheduledFuture<V>
 public "schedule"(runnable0: $Runnable$$Type, long1: long, timeUnit2: $TimeUnit$$Type): $ScheduledFuture<any>
+public "scheduleWithFixedDelay"(runnable0: $Runnable$$Type, long1: long, long2: long, timeUnit3: $TimeUnit$$Type): $ScheduledFuture<any>
 /** @deprecated */
 public "shutdown"(): void
 public "shutdownGracefully"(): $Future<any>
@@ -2959,8 +2960,8 @@ export interface $ChannelOutboundInvoker {
 "connect"(socketAddress0: $SocketAddress$$Type, socketAddress1: $SocketAddress$$Type, channelPromise2: $ChannelPromise$$Type): $ChannelFuture
 "deregister"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "deregister"(): $ChannelFuture
-"disconnect"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "disconnect"(): $ChannelFuture
+"disconnect"(channelPromise0: $ChannelPromise$$Type): $ChannelFuture
 "flush"(): $ChannelOutboundInvoker
 "newFailedFuture"(throwable0: $Throwable$$Type): $ChannelFuture
 "newProgressivePromise"(): $ChannelProgressivePromise

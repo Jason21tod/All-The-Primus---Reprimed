@@ -72,8 +72,8 @@ public "averagedFromScales"(scaleData: $ScaleData$$Type, ...scales: $ScaleData$$
 public "equals"(other: $ScaleData$$Type): boolean
 public "fromScale"(scaleData: $ScaleData$$Type, notifyListener: boolean): $ScaleData
 public "fromScale"(scaleData: $ScaleData$$Type): $ScaleData
-public "getBaseScale"(delta: float): float
 public "getBaseScale"(): float
+public "getBaseScale"(delta: float): float
 public "getBaseValueModifiers"(): $SortedSet<$ScaleModifier>
 public "getEasing"(): $Float2FloatFunction
 public "getEntity"(): $Entity
@@ -91,8 +91,8 @@ public "isReset"(): boolean
 public "markForSync"(sync: boolean): void
 public "onUpdate"(): void
 public "readNbt"(tag: $CompoundTag$$Type): void
-public "resetScale"(notifyListener: boolean): $ScaleData
 public "resetScale"(): $ScaleData
+public "resetScale"(notifyListener: boolean): $ScaleData
 public "setBaseScale"(scale: float): void
 public "setEasing"(easing: $Float2FloatFunction$$Type): void
 public "setPersistence"(persistent: boolean): void

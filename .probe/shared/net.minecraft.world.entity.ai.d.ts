@@ -10,7 +10,7 @@ static readonly "TEMPTATION_RANGE": integer
 
 constructor(ingredient0: $Ingredient$$Type)
 
-public "modifyExpressionValue$icl000$quark$findTroughs"(object0: any, serverLevel1: $ServerLevel$$Type, pathfinderMob2: $PathfinderMob$$Type): any
+public "modifyExpressionValue$icj000$quark$findTroughs"(object0: any, serverLevel1: $ServerLevel$$Type, pathfinderMob2: $PathfinderMob$$Type): any
 }
 }
 
@@ -48,8 +48,8 @@ public "getValue"(attribute0: $Attribute$$Type): double
 public "handler$dcf000$apoth_attrModifiedEvent"(attributeInstance0: $AttributeInstance$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public "hasAttribute"(attribute0: $Attribute$$Type): boolean
 public "hasAttribute"(holder0: $Holder$$Type<$Attribute$$Type>): boolean
-public "hasModifier"(holder0: $Holder$$Type<$Attribute$$Type>, uUID1: $UUID$$Type): boolean
 public "hasModifier"(attribute0: $Attribute$$Type, uUID1: $UUID$$Type): boolean
+public "hasModifier"(holder0: $Holder$$Type<$Attribute$$Type>, uUID1: $UUID$$Type): boolean
 public "load"(listTag0: $ListTag$$Type): void
 public "removeAttributeModifiers"(multimap0: $Multimap$$Type<$Attribute$$Type, $AttributeModifier$$Type>): void
 public "save"(): $ListTag
@@ -546,8 +546,8 @@ public static "codec"<T>(codec0: $Codec$$Type<T>): $Codec<$ExpirableValue<T>>
 public "getTimeToLive"(): long
 public "getValue"(): T
 public "hasExpired"(): boolean
-public static "of"<T>(t0: T, long1: long): $ExpirableValue<T>
 public static "of"<T>(t0: T): $ExpirableValue<T>
+public static "of"<T>(t0: T, long1: long): $ExpirableValue<T>
 public "tick"(): void
 get "timeToLive"(): long
 get "value"(): T
@@ -703,10 +703,10 @@ public "getWantedY"(): double
 public "getWantedZ"(): double
 public "isLookingAtTarget"(): boolean
 public "setLookAt"(entity0: $Entity$$Type, float1: float, float2: float): void
-public "setLookAt"(vec30: $Vec3$$Type): void
-public "setLookAt"(double0: double, double1: double, double2: double, float3: float, float4: float): void
 public "setLookAt"(double0: double, double1: double, double2: double): void
 public "setLookAt"(entity0: $Entity$$Type): void
+public "setLookAt"(double0: double, double1: double, double2: double, float3: float, float4: float): void
+public "setLookAt"(vec30: $Vec3$$Type): void
 public "tick"(): void
 get "lookAtCooldown"(): integer
 set "lookAtCooldown"(value: integer)
@@ -718,8 +718,8 @@ get "wantedX"(): double
 get "wantedY"(): double
 get "wantedZ"(): double
 get "lookingAtTarget"(): boolean
-set "lookAt"(value: $Vec3$$Type)
 set "lookAt"(value: $Entity$$Type)
+set "lookAt"(value: $Vec3$$Type)
 }
 }
 
@@ -836,8 +836,8 @@ constructor()
 declare module "net.minecraft.world.entity.ai.navigation.PathNavigation" {
 import { $CallbackInfo$$Type } from "org.spongepowered.asm.mixin.injection.callback.CallbackInfo"
 import { $Path, $Path$$Type } from "net.minecraft.world.level.pathfinder.Path"
-import { $Stream$$Type } from "java.util.stream.Stream"
 import { $Entity$$Type } from "net.minecraft.world.entity.Entity"
+import { $Stream$$Type } from "java.util.stream.Stream"
 import { $BlockPos, $BlockPos$$Type } from "net.minecraft.core.BlockPos"
 import { $BlockPathTypes$$Type } from "net.minecraft.world.level.pathfinder.BlockPathTypes"
 import { $NodeEvaluator } from "net.minecraft.world.level.pathfinder.NodeEvaluator"
@@ -851,11 +851,11 @@ constructor(mob0: $Mob$$Type, level1: $Level$$Type)
 
 public "canCutCorner"(blockPathTypes0: $BlockPathTypes$$Type): boolean
 public "canFloat"(): boolean
+public "createPath"(entity0: $Entity$$Type, int1: integer): $Path
+public "createPath"(blockPos0: $BlockPos$$Type, int1: integer, int2: integer): $Path
+public "createPath"(stream0: $Stream$$Type<$BlockPos$$Type>, int1: integer): $Path
 public "createPath"(set0: $Set$$Type<$BlockPos$$Type>, int1: integer): $Path
 public "createPath"(double0: double, double1: double, double2: double, int3: integer): $Path
-public "createPath"(stream0: $Stream$$Type<$BlockPos$$Type>, int1: integer): $Path
-public "createPath"(blockPos0: $BlockPos$$Type, int1: integer, int2: integer): $Path
-public "createPath"(entity0: $Entity$$Type, int1: integer): $Path
 public "createPath"(blockPos0: $BlockPos$$Type, int1: integer): $Path
 public "getMaxDistanceToWaypoint"(): float
 public "getNodeEvaluator"(): $NodeEvaluator
@@ -924,12 +924,12 @@ public "getMaxValue"(): double
 public "getMinValue"(): double
 public static "isNullOrAddition"(operation0: $AttributeModifier$Operation$$Type): boolean
 public "ths"(): $Attribute
-public static "toBaseComponent"(attribute0: $Attribute$$Type, double1: double, double2: double, boolean3: boolean, tooltipFlag4: $TooltipFlag$$Type): $MutableComponent
 public "toBaseComponent"(double0: double, double1: double, boolean2: boolean, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
-public "toComponent"(attributeModifier0: $AttributeModifier$$Type, tooltipFlag1: $TooltipFlag$$Type): $MutableComponent
+public static "toBaseComponent"(attribute0: $Attribute$$Type, double1: double, double2: double, boolean3: boolean, tooltipFlag4: $TooltipFlag$$Type): $MutableComponent
 public static "toComponent"(attribute0: $Attribute$$Type, attributeModifier1: $AttributeModifier$$Type, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
-public "toValueComponent"(operation0: $AttributeModifier$Operation$$Type, double1: double, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
+public "toComponent"(attributeModifier0: $AttributeModifier$$Type, tooltipFlag1: $TooltipFlag$$Type): $MutableComponent
 public static "toValueComponent"(attribute0: $Attribute$$Type, operation1: $AttributeModifier$Operation$$Type, double2: double, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
+public "toValueComponent"(operation0: $AttributeModifier$Operation$$Type, double1: double, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
 get "baseUUID"(): $UUID
 get "maxValue"(): double
 get "minValue"(): double
@@ -1004,8 +1004,8 @@ import { $MemoryStatus$$Type } from "net.minecraft.world.entity.ai.memory.Memory
 import { $BrainAccessor } from "net.mehvahdjukaar.moonlight.core.mixins.accessor.BrainAccessor"
 import { $ExpirableValue } from "net.minecraft.world.entity.ai.memory.ExpirableValue"
 import { $Sensor$$Type } from "net.minecraft.world.entity.ai.sensing.Sensor"
-import { $BehaviorControl, $BehaviorControl$$Type } from "net.minecraft.world.entity.ai.behavior.BehaviorControl"
 import { $Pair$$Type } from "com.mojang.datafixers.util.Pair"
+import { $BehaviorControl, $BehaviorControl$$Type } from "net.minecraft.world.entity.ai.behavior.BehaviorControl"
 import { $Schedule, $Schedule$$Type } from "net.minecraft.world.entity.schedule.Schedule"
 import { $List, $List$$Type } from "java.util.List"
 import { $Codec } from "com.mojang.serialization.Codec"
@@ -1015,8 +1015,8 @@ import { $Optional, $Optional$$Type } from "java.util.Optional"
 export class $Brain<E extends $LivingEntity = $LivingEntity> implements $BrainAccess, $BrainAccessor {
 constructor(collection0: $Collection$$Type<$MemoryModuleType$$Type<any>>, collection1: $Collection$$Type<$SensorType$$Type<$Sensor$$Type<E>>>, immutableList2: $ImmutableList$$Type<$Brain$MemoryValue$$Type<any>>, supplier3: $Supplier$$Type<$Codec<$Brain<E>>>)
 
-public "addActivity"(activity0: $Activity$$Type, int1: integer, immutableList2: $ImmutableList$$Type<$BehaviorControl$$Type<E>>): void
 public "addActivity"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>): void
+public "addActivity"(activity0: $Activity$$Type, int1: integer, immutableList2: $ImmutableList$$Type<$BehaviorControl$$Type<E>>): void
 public "addActivityAndRemoveMemoriesWhenStopped"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>, set2: $Set$$Type<$Pair$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>>, set3: $Set$$Type<$MemoryModuleType$$Type<any>>): void
 public "addActivityAndRemoveMemoryWhenStopped"(activity0: $Activity$$Type, int1: integer, immutableList2: $ImmutableList$$Type<$BehaviorControl$$Type<E>>, memoryModuleType3: $MemoryModuleType$$Type<any>): void
 public "addActivityWithConditions"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>, set2: $Set$$Type<$Pair$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>>): void
@@ -1049,8 +1049,8 @@ public "setActiveActivityIfPossible"(activity0: $Activity$$Type): void
 public "setActiveActivityToFirstValid"(list0: $List$$Type<$Activity$$Type>): void
 public "setCoreActivities"(set0: $Set$$Type<$Activity$$Type>): void
 public "setDefaultActivity"(activity0: $Activity$$Type): void
-public "setMemory"<U>(memoryModuleType0: $MemoryModuleType$$Type<U>, u1: U): void
 public "setMemory"<U>(memoryModuleType0: $MemoryModuleType$$Type<U>, optional1: $Optional$$Type<U>): void
+public "setMemory"<U>(memoryModuleType0: $MemoryModuleType$$Type<U>, u1: U): void
 public "setMemoryWithExpiry"<U>(memoryModuleType0: $MemoryModuleType$$Type<U>, u1: U, long2: long): void
 public "setSchedule"(schedule0: $Schedule$$Type): void
 public "stopAll"(serverLevel0: $ServerLevel$$Type, e1: E): void
@@ -1441,6 +1441,25 @@ constructor(vec30: $Vec3$$Type)
 public "currentBlockPosition"(): $BlockPos
 public "currentPosition"(): $Vec3
 public "isVisibleBy"(livingEntity0: $LivingEntity$$Type): boolean
+}
+}
+
+declare module "net.minecraft.world.entity.ai.goal.RangedBowAttackGoal" {
+import { $Monster, $Monster$$Type } from "net.minecraft.world.entity.monster.Monster"
+import { $RangedAttackMob, $RangedAttackMob$$Type } from "net.minecraft.world.entity.monster.RangedAttackMob"
+import { $Mob, $Mob$$Type } from "net.minecraft.world.entity.Mob"
+import { $Goal } from "net.minecraft.world.entity.ai.goal.Goal"
+
+export class $RangedBowAttackGoal<T extends ($Mob & $RangedAttackMob) = ($Mob & $RangedAttackMob)> extends $Goal {
+readonly "attackRadiusSqr": float
+
+constructor<M extends ($Monster & $RangedAttackMob)>(m0: M, double1: double, int2: integer, float3: float)
+constructor(t0: T, double1: double, int2: integer, float3: float)
+
+public "setMinAttackInterval"(int0: integer): void
+get "strafingTime"(): integer
+set "strafingTime"(value: integer)
+set "minAttackInterval"(value: integer)
 }
 }
 

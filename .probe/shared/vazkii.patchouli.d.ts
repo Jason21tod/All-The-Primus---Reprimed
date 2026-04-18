@@ -129,8 +129,8 @@ import { $Screen, $Screen$$Type } from "net.minecraft.client.gui.screens.Screen"
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $BookDrawScreenEvent extends $Event implements $EventItf {
-constructor(resourceLocation0: $ResourceLocation$$Type, screen1: $Screen$$Type, int2: integer, int3: integer, float4: float, guiGraphics5: $GuiGraphics$$Type)
 constructor()
+constructor(resourceLocation0: $ResourceLocation$$Type, screen1: $Screen$$Type, int2: integer, int3: integer, float4: float, guiGraphics5: $GuiGraphics$$Type)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

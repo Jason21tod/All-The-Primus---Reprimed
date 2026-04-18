@@ -19,7 +19,7 @@ public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public static "createFromStream"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $MerchantOffers
 public "createTag"(): $CompoundTag
 public "getRecipeFor"(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type, int2: integer): $MerchantOffer
-public "handler$ibk000$setUpTiers"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$ibi000$setUpTiers"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public static "of"<E>(e0: E): $List<E>
 public static "of"<E>(e0: E, e1: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E): $List<E>
