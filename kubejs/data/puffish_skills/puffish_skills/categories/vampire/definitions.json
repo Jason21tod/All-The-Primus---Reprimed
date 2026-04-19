@@ -4,7 +4,7 @@
 		"icon": {
 			"type": "texture",
 			"data": {
-				"texture": "kubejs:textures/icons/example.png"
+				"texture": "kubejs:textures/icons/hunter_vampire.png"
 			}
 		},
 		"size": 3,
@@ -16,6 +16,46 @@
 				"type": "puffish_skills_origins:power",
 				"data": {
 					"power": "origins:vampire_hunter_main"
+			}
+		}]
+	},
+	"warrior_skill_root": {
+		"title": "O Guerreiro Carmesim",
+		"icon": {
+			"type": "texture",
+			"data": {
+				"texture": "kubejs:textures/icons/hunter_vampire.png"
+			}
+		},
+		"size": 3,
+		"cost": 1,
+		"description": "Você utiliza-se do próprio sangue em batalha para fortalecer-se.",
+		"extra_description": "Ao atacar uma criatura, você recebe absorção por 2s e meio. Ao ser atacado, você recebe força I por 2s e meio. Cada efeito tem 2s e meio de tempo de recarga.",
+		"rewards": [
+			{
+				"type": "puffish_skills_origins:power",
+				"data": {
+					"power": "origins:vampire_warrior_main"
+			}
+		}]
+	},
+	"mage_skill_root": {
+		"title": "O Arauto de Sangue",
+		"icon": {
+			"type": "texture",
+			"data": {
+				"texture": "kubejs:textures/icons/hunter_vampire.png"
+			}
+		},
+		"size": 3,
+		"cost": 1,
+		"description": "Você tornou-se capaz de extrair a magia contida no sangue para sua própria utilização.",
+		"extra_description": "Ao beber uma garrafa de sangue, recebe mana instantânea.",
+		"rewards": [
+			{
+				"type": "puffish_skills_origins:power",
+				"data": {
+					"power": "origins:vampire_mage_main"
 			}
 		}]
 	}

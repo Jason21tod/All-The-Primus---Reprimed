@@ -501,13 +501,13 @@
     "curseForgeHash": 4028037080,
     "modrinthHash": "e0fce7d5c41221db91a63bc782d15d2525be2c4c"
   },
-  "dummmmmmy-1.20-2.0.9.jar": {
-    "jarName": "dummmmmmy-1.20-2.0.9.jar",
+  "dummmmmmy-1.20-2.0.11-forge.jar": {
+    "jarName": "dummmmmmy-1.20-2.0.11-forge.jar",
     "modId": "dummmmmmy",
-    "name": "MmmMmmMmmmmm",
-    "version": "1.20-2.0.9",
-    "curseForgeHash": 375369757,
-    "modrinthHash": "782d16edca6fa22fb72fa825cec39117bbb7e78a"
+    "name": "MmmMmmMmmMmm",
+    "version": "1.20-2.0.11",
+    "curseForgeHash": 4284963940,
+    "modrinthHash": "003cde99214de635562c6df55b10f472bed1a971"
   },
   "dynamic-fps-3.11.4+minecraft-1.20.0-forge.jar": {
     "jarName": "dynamic-fps-3.11.4+minecraft-1.20.0-forge.jar",
@@ -1705,6 +1705,14 @@
     "version": "1.0.0",
     "curseForgeHash": 2240970068,
     "modrinthHash": "e398dd5804af0d0c3b55a0ff7ab10c604fa85ae1"
+  },
+  "visualhealth-forge-1.20.1-1.1.0.jar": {
+    "jarName": "visualhealth-forge-1.20.1-1.1.0.jar",
+    "modId": "visual_health",
+    "name": "Visual Health",
+    "version": "1.20.1-1.1.0",
+    "curseForgeHash": 3007500179,
+    "modrinthHash": "66c4565e0dd394b3bf8b96140b8baf874aecba86"
   },
   "vminus-3.3.2.jar": {
     "jarName": "vminus-3.3.2.jar",
