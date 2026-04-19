@@ -1542,9 +1542,9 @@ export interface $QuadView {
 /** @deprecated */
 "spriteV"(vertexIndex: integer, spriteIndex: integer): float
 "tag"(): integer
+"toBakedQuad"(sprite: $TextureAtlasSprite$$Type): $BakedQuad
 /** @deprecated */
 "toBakedQuad"(spriteIndex: integer, sprite: $TextureAtlasSprite$$Type, isItem: boolean): $BakedQuad
-"toBakedQuad"(sprite: $TextureAtlasSprite$$Type): $BakedQuad
 /** @deprecated */
 "toVanilla"(spriteIndex: integer, target: integer[], targetIndex: integer, isItem: boolean): void
 "toVanilla"(int0s: integer[], int1: integer): void
@@ -1840,8 +1840,8 @@ export interface $RenderAttachedBlockView extends $BlockAndTintGetter {
 "clip"(clipContext0: $ClipContext$$Type): $BlockHitResult
 "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
-"getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
+"getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 /** @deprecated */
 "getBlockEntityRenderAttachment"(pos: $BlockPos$$Type): any
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
@@ -1871,8 +1871,8 @@ export interface $RenderAttachedBlockView extends $BlockAndTintGetter {
 "getShade"(float0: float, float1: float, float2: float, boolean3: boolean): float
 "hasBiomes"(): boolean
 "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
-"isOutsideBuildHeight"(int0: integer): boolean
 "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
+"isOutsideBuildHeight"(int0: integer): boolean
 get "height"(): integer
 get "lightEngine"(): $LevelLightEngine
 get "maxBuildHeight"(): integer
@@ -1982,8 +1982,8 @@ export class $AbstractChanneledNetworkAddon<H = any> extends $AbstractNetworkAdd
 public "createPacket"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): $Packet<any>
 public "getSendableChannels"(): $Set<$ResourceLocation>
 public "lateInit"(): void
-public "sendPacket"(packet: $Packet$$Type<any>, callback: $GenericFutureListener$$Type<$Future$$Type<void>>): void
 public "sendPacket"(packet: $Packet$$Type<any>): void
+public "sendPacket"(packet: $Packet$$Type<any>, callback: $GenericFutureListener$$Type<$Future$$Type<void>>): void
 public "sendPacket"(packet: $Packet$$Type<any>, callback: $PacketSendListener$$Type): void
 public "sendPacket"<T extends $FabricPacket>(packet: T, callback: $GenericFutureListener$$Type<$Future$$Type<void>>): void
 public "sendPacket"(channel: $ResourceLocation$$Type, buf: $FriendlyByteBuf$$Type, callback: $PacketSendListener$$Type): void
@@ -2365,7 +2365,6 @@ export interface $FabricItemStack extends $IForgeItemStack {
 "onItemUseFirst"(useOnContext0: $UseOnContext$$Type): $InteractionResult
 "onStopUsing"(livingEntity0: $LivingEntity$$Type, int1: integer): void
 "readShareTag"(compoundTag0: $CompoundTag$$Type): void
-"serializeNBT"(): $CompoundTag
 "shouldCauseBlockBreakReset"(itemStack0: $ItemStack$$Type): boolean
 get "allEnchantments"(): $Map<$Enchantment, integer>
 get "craftingRemainingItem"(): $ItemStack
@@ -2521,8 +2520,8 @@ export interface $WorldViewMixin extends $RenderAttachedBlockView {
 "clip"(clipContext0: $ClipContext$$Type): $BlockHitResult
 "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
-"getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
+"getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 /** @deprecated */
 "getBlockEntityRenderAttachment"(pos: $BlockPos$$Type): any
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
@@ -2552,8 +2551,8 @@ export interface $WorldViewMixin extends $RenderAttachedBlockView {
 "getShade"(float0: float, float1: float, float2: float, boolean3: boolean): float
 "hasBiomes"(): boolean
 "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
-"isOutsideBuildHeight"(int0: integer): boolean
 "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
+"isOutsideBuildHeight"(int0: integer): boolean
 get "height"(): integer
 get "lightEngine"(): $LevelLightEngine
 get "maxBuildHeight"(): integer
@@ -2656,8 +2655,8 @@ function suggest(stream0: $Stream$$Type<string>, suggestionsBuilder1: $Suggestio
 function suggest<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 function suggest2DCoordinates(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 function suggestCoordinates(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
-function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 function suggestResource<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
@@ -2673,8 +2672,8 @@ static "suggest"(stream0: $Stream$$Type<string>, suggestionsBuilder1: $Suggestio
 static "suggest"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 static "suggest2DCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 static "suggestCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
-static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 static "suggestResource"<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
@@ -2683,17 +2682,16 @@ static "suggestResource"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: 
 }
 
 declare module "net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter" {
-import { $RenderMaterial, $RenderMaterial$$Type } from "net.fabricmc.fabric.api.renderer.v1.material.RenderMaterial"
+import { $RenderMaterial } from "net.fabricmc.fabric.api.renderer.v1.material.RenderMaterial"
 import { $MutableQuadView, $MutableQuadView$$Type } from "net.fabricmc.fabric.api.renderer.v1.mesh.MutableQuadView"
 import { $Direction, $Direction$$Type } from "net.minecraft.core.Direction"
 import { $Vector3f, $Vector3f$$Type } from "org.joml.Vector3f"
 import { $Vector2f, $Vector2f$$Type } from "org.joml.Vector2f"
-import { $BakedQuad, $BakedQuad$$Type } from "net.minecraft.client.renderer.block.model.BakedQuad"
+import { $BakedQuad } from "net.minecraft.client.renderer.block.model.BakedQuad"
 import { $TextureAtlasSprite$$Type } from "net.minecraft.client.renderer.texture.TextureAtlasSprite"
 
 export interface $QuadEmitter extends $MutableQuadView {
 "color"(int0: integer): integer
-"colorIndex"(int0: integer): $QuadEmitter
 "colorIndex"(): integer
 "copyNormal"(int0: integer, vector3f1: $Vector3f$$Type): $Vector3f
 "copyPos"(int0: integer, vector3f1: $Vector3f$$Type): $Vector3f
@@ -2705,27 +2703,21 @@ export interface $QuadEmitter extends $MutableQuadView {
 "faceNormal"(): $Vector3f
 /** @deprecated */
 "fromVanilla"(quadData: integer[], startIndex: integer, isItem: boolean): $QuadEmitter
-"fromVanilla"(bakedQuad0: $BakedQuad$$Type, renderMaterial1: $RenderMaterial$$Type, direction2: $Direction$$Type): $QuadEmitter
-"fromVanilla"(int0s: integer[], int1: integer): $QuadEmitter
 "hasNormal"(int0: integer): boolean
 "lightFace"(): $Direction
-"lightmap"(int0: integer, int1: integer): $QuadEmitter
+"lightmap"(b0: integer, b1: integer, b2: integer, b3: integer): $QuadEmitter
 "lightmap"(int0: integer): integer
 "material"(): $RenderMaterial
+"nominalFace"(direction0: $Direction$$Type): $QuadEmitter
 "nominalFace"(): $Direction
-"normal"(vertexIndex: integer, normal: $Vector3f$$Type): $QuadEmitter
 "normal"(int0: integer, float1: float, float2: float, float3: float): $QuadEmitter
+"normal"(vertexIndex: integer, normal: $Vector3f$$Type): $QuadEmitter
 "normalX"(int0: integer): float
 "normalY"(int0: integer): float
 "normalZ"(int0: integer): float
 "posByIndex"(int0: integer, int1: integer): float
 /** @deprecated */
-"spriteBake"(spriteIndex: integer, sprite: $TextureAtlasSprite$$Type, bakeFlags: integer): $QuadEmitter
-"spriteBake"(textureAtlasSprite0: $TextureAtlasSprite$$Type, int1: integer): $QuadEmitter
-/** @deprecated */
-"spriteColor"(vertexIndex: integer, spriteIndex: integer, color: integer): $QuadEmitter
-/** @deprecated */
-"spriteColor"(spriteIndex: integer, c0: integer, c1: integer, c2: integer, c3: integer): $QuadEmitter
+"sprite"(vertexIndex: integer, spriteIndex: integer, u: float, v: float): $QuadEmitter
 /** @deprecated */
 "spriteColor"(vertexIndex: integer, spriteIndex: integer): integer
 /** @deprecated */
@@ -2737,13 +2729,14 @@ export interface $QuadEmitter extends $MutableQuadView {
 "square"(nominalFace: $Direction$$Type, left: float, bottom: float, right: float, top: float, depth: float): $QuadEmitter
 "tag"(int0: integer): $QuadEmitter
 "tag"(): integer
+"toBakedQuad"(sprite: $TextureAtlasSprite$$Type): $BakedQuad
 /** @deprecated */
 "toBakedQuad"(spriteIndex: integer, sprite: $TextureAtlasSprite$$Type, isItem: boolean): $BakedQuad
-"toBakedQuad"(sprite: $TextureAtlasSprite$$Type): $BakedQuad
 /** @deprecated */
 "toVanilla"(spriteIndex: integer, target: integer[], targetIndex: integer, isItem: boolean): void
 "toVanilla"(int0s: integer[], int1: integer): void
 "u"(int0: integer): float
+"uv"(int0: integer, float1: float, float2: float): $QuadEmitter
 "uvUnitSquare"(): $QuadEmitter
 "v"(int0: integer): float
 "x"(int0: integer): float
@@ -3214,10 +3207,10 @@ export interface $MutableQuadView extends $QuadView {
 "cullFace"(direction0: $Direction$$Type): $MutableQuadView
 "cullFace"(): $Direction
 "faceNormal"(): $Vector3f
+"fromVanilla"(bakedQuad0: $BakedQuad$$Type, renderMaterial1: $RenderMaterial$$Type, direction2: $Direction$$Type): $MutableQuadView
+"fromVanilla"(int0s: integer[], int1: integer): $MutableQuadView
 /** @deprecated */
 "fromVanilla"(quadData: integer[], startIndex: integer, isItem: boolean): $MutableQuadView
-"fromVanilla"(int0s: integer[], int1: integer): $MutableQuadView
-"fromVanilla"(bakedQuad0: $BakedQuad$$Type, renderMaterial1: $RenderMaterial$$Type, direction2: $Direction$$Type): $MutableQuadView
 "hasNormal"(int0: integer): boolean
 "lightFace"(): $Direction
 "lightmap"(b0: integer, b1: integer, b2: integer, b3: integer): $MutableQuadView
@@ -3227,8 +3220,8 @@ export interface $MutableQuadView extends $QuadView {
 "material"(): $RenderMaterial
 "nominalFace"(direction0: $Direction$$Type): $MutableQuadView
 "nominalFace"(): $Direction
-"normal"(vertexIndex: integer, normal: $Vector3f$$Type): $MutableQuadView
 "normal"(int0: integer, float1: float, float2: float, float3: float): $MutableQuadView
+"normal"(vertexIndex: integer, normal: $Vector3f$$Type): $MutableQuadView
 "normalX"(int0: integer): float
 "normalY"(int0: integer): float
 "normalZ"(int0: integer): float
@@ -3236,16 +3229,16 @@ export interface $MutableQuadView extends $QuadView {
 "pos"(vertexIndex: integer, pos: $Vector3f$$Type): $MutableQuadView
 "posByIndex"(int0: integer, int1: integer): float
 /** @deprecated */
-"sprite"(vertexIndex: integer, spriteIndex: integer, uv: $Vec2$$Type): $MutableQuadView
-/** @deprecated */
 "sprite"(vertexIndex: integer, spriteIndex: integer, u: float, v: float): $MutableQuadView
+/** @deprecated */
+"sprite"(vertexIndex: integer, spriteIndex: integer, uv: $Vec2$$Type): $MutableQuadView
 "spriteBake"(textureAtlasSprite0: $TextureAtlasSprite$$Type, int1: integer): $MutableQuadView
 /** @deprecated */
 "spriteBake"(spriteIndex: integer, sprite: $TextureAtlasSprite$$Type, bakeFlags: integer): $MutableQuadView
 /** @deprecated */
-"spriteColor"(vertexIndex: integer, spriteIndex: integer, color: integer): $MutableQuadView
-/** @deprecated */
 "spriteColor"(spriteIndex: integer, c0: integer, c1: integer, c2: integer, c3: integer): $MutableQuadView
+/** @deprecated */
+"spriteColor"(vertexIndex: integer, spriteIndex: integer, color: integer): $MutableQuadView
 /** @deprecated */
 "spriteColor"(vertexIndex: integer, spriteIndex: integer): integer
 /** @deprecated */
@@ -3254,9 +3247,9 @@ export interface $MutableQuadView extends $QuadView {
 "spriteV"(vertexIndex: integer, spriteIndex: integer): float
 "tag"(int0: integer): $MutableQuadView
 "tag"(): integer
+"toBakedQuad"(sprite: $TextureAtlasSprite$$Type): $BakedQuad
 /** @deprecated */
 "toBakedQuad"(spriteIndex: integer, sprite: $TextureAtlasSprite$$Type, isItem: boolean): $BakedQuad
-"toBakedQuad"(sprite: $TextureAtlasSprite$$Type): $BakedQuad
 /** @deprecated */
 "toVanilla"(spriteIndex: integer, target: integer[], targetIndex: integer, isItem: boolean): void
 "toVanilla"(int0s: integer[], int1: integer): void

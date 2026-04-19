@@ -350,7 +350,7 @@ constructor(p: $ScriptPack$$Type, i: $ScriptFileInfo$$Type, s: $ScriptSource$$Ty
 
 public "compareTo"(o: $ScriptFile$$Type): integer
 public "load"(): void
-public "redirect$hfh000$preEvalProcess"(instance: $Context$$Type, scope: $Scriptable$$Type, source: string, sourceName: string, lineno: integer, securityDomain: any): any
+public "redirect$hfk000$preEvalProcess"(instance: $Context$$Type, scope: $Scriptable$$Type, source: string, sourceName: string, lineno: integer, securityDomain: any): any
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ScriptFile$$Type = ($ScriptFile);
@@ -446,6 +446,7 @@ public static "isEqual"<T>(object0: any): $Predicate<T>
 public "isServer"(): boolean
 public "isStartup"(): boolean
 public "kjs$getScriptType"(): $ScriptType
+public "negate"(): $ScriptTypePredicate
 public static "not"<T>(predicate0: $Predicate$$Type<T>): $Predicate<T>
 public "or"(predicate0: $Predicate$$Type<$ScriptType$$Type>): $Predicate<$ScriptType>
 public "test"(type: $ScriptType$$Type): boolean

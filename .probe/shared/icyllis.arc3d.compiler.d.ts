@@ -26,8 +26,8 @@ static readonly "kVoid_TypeKind": byte
 public "canCoerceTo"(other: $Type$$Type, allowNarrowing: boolean): boolean
 public "checkLiteralOutOfRange"(context: $Context$$Type, pos: integer, value: double): boolean
 public "coerceExpression"(context: $Context$$Type, expr: $Expression$$Type): $Expression
-public "convertArraySize"(context: $Context$$Type, position: integer, sizePosition: integer, size: long): integer
 public "convertArraySize"(context: $Context$$Type, position: integer, size: $Expression$$Type): integer
+public "convertArraySize"(context: $Context$$Type, position: integer, sizePosition: integer, size: long): integer
 public "getArrayName"(size: integer): string
 public static "getArrayName"(baseName: string, size: integer): string
 public "getArraySize"(): integer
@@ -87,8 +87,8 @@ public static "makeGenericType"(name: string, ...types: $Type$$Type[]): $Type
 public static "makeImageType"(name: string, abbr: string, component: $Type$$Type, dimensions: integer, isArrayed: boolean, isMultiSampled: boolean): $Type
 public static "makeMatrixType"(name: string, desc: string, columnType: $Type$$Type, cols: integer): $Type
 public static "makeSamplerType"(name: string, abbr: string, component: $Type$$Type, dimensions: integer, isShadow: boolean, isArrayed: boolean, isMultiSampled: boolean, isSampled: boolean, isSampler: boolean): $Type
-public static "makeScalarType"(name: string, desc: string, kind: byte, rank: integer, minWidth: integer, width: integer): $Type
 public static "makeScalarType"(name: string, desc: string, kind: byte, rank: integer, width: integer): $Type
+public static "makeScalarType"(name: string, desc: string, kind: byte, rank: integer, minWidth: integer, width: integer): $Type
 public static "makeSeparateType"(name: string, abbr: string, component: $Type$$Type, isShadow: boolean): $Type
 public static "makeSpecialType"(name: string, abbr: string, kind: byte): $Type
 public static "makeStructType"(context: $Context$$Type, position: integer, name: string, fields: $List$$Type<$Type$Field$$Type>, interfaceBlock: boolean): $Type
@@ -249,8 +249,8 @@ public "checkLayoutFlags"(context: $Context$$Type, permittedLayoutFlags: integer
 public "clearFlag"(mask: integer): void
 public "clearLayoutFlag"(mask: integer): void
 public static "describeFlag"(flag: integer): string
-public static "describeFlags"(flags: integer, padded: boolean): string
 public static "describeFlags"(flags: integer): string
+public static "describeFlags"(flags: integer, padded: boolean): string
 public "flags"(): integer
 public "isBuffer"(): boolean
 public "isConst"(): boolean
@@ -648,8 +648,8 @@ public "generateGLSL"(translationUnit: $TranslationUnit$$Type, shaderCaps: $Shad
 public "generateSPIRV"(translationUnit: $TranslationUnit$$Type, shaderCaps: $ShaderCaps$$Type): $ByteBuffer
 public "getContext"(): $Context
 public "getErrorHandler"(): $ErrorHandler
-public "getErrorMessage"(showCount: boolean): string
 public "getErrorMessage"(): string
+public "getErrorMessage"(showCount: boolean): string
 public "parse"(source: charseq, kind: $ShaderKind$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $TranslationUnit
 public "parse"(source: string, kind: $ShaderKind$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $TranslationUnit
 public "parseModule"(source: charseq, kind: $ShaderKind$$Type, parent: $ModuleUnit$$Type, builtin: boolean): $ModuleUnit

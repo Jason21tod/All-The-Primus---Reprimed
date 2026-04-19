@@ -74,18 +74,18 @@ public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearContent"(): void
 public "clearOrCountMatchingItems"(predicate0: $Predicate$$Type<$ItemStack$$Type>, int1: integer, container2: $Container$$Type): integer
-public "contains"(itemStack0: $ItemStack$$Type): boolean
 public "contains"(tagKey0: $TagKey$$Type<$Item$$Type>): boolean
-public "count"(): integer
+public "contains"(itemStack0: $ItemStack$$Type): boolean
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "dropAll"(): void
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fillStackedContents"(stackedContents0: $StackedContents$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public "findSlotMatchingItem"(itemStack0: $ItemStack$$Type): integer
 public "findSlotMatchingUnusedItem"(itemStack0: $ItemStack$$Type): integer
 public "getAllItems"(): $List<$ItemStack>
@@ -109,12 +109,12 @@ public "getStackInSlot"(slot: integer): $ItemStack
 public "getSuitableHotbarSlot"(): integer
 public "getTimesChanged"(): integer
 public "getWidth"(): integer
-public "handler$dgb000$celestisynth$pickSlot"(int0: integer, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$dgb000$celestisynth$setPickedItem"(itemStack0: $ItemStack$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$dgb000$celestisynth$swapPaint"(double0: double, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$hgp000$onDropSelectedItem"(dropEntireStack: boolean, info: $CallbackInfoReturnable$$Type): void
-public "handler$hlg000$fireDropEvent"(ci: $CallbackInfo$$Type, var1: $Iterator$$Type, list: $List$$Type, i: integer): void
-public "handler$hlg000$restoreNotDropped"(ci: $CallbackInfo$$Type, var1: $Iterator$$Type, list: $List$$Type, i: integer): void
+public "handler$dge000$celestisynth$pickSlot"(int0: integer, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$dge000$celestisynth$setPickedItem"(itemStack0: $ItemStack$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$dge000$celestisynth$swapPaint"(double0: double, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$hhc000$onDropSelectedItem"(dropEntireStack: boolean, info: $CallbackInfoReturnable$$Type): void
+public "handler$hlj000$fireDropEvent"(ci: $CallbackInfo$$Type, var1: $Iterator$$Type, list: $List$$Type, i: integer): void
+public "handler$hlj000$restoreNotDropped"(ci: $CallbackInfo$$Type, var1: $Iterator$$Type, list: $List$$Type, i: integer): void
 public "hasAnyMatching"(predicate0: $Predicate$$Type): boolean
 public "hasAnyOf"(set0: $Set$$Type<$Item$$Type>): boolean
 public "hasCustomName"(): boolean
@@ -133,8 +133,8 @@ public "pickSlot"(int0: integer): void
 public "placeItemBackInInventory"(itemStack0: $ItemStack$$Type): void
 public "placeItemBackInInventory"(itemStack0: $ItemStack$$Type, boolean1: boolean): void
 public "removeFromSelected"(boolean0: boolean): $ItemStack
-public "removeItem"(int0: integer, int1: integer): $ItemStack
 public "removeItem"(itemStack0: $ItemStack$$Type): void
+public "removeItem"(int0: integer, int1: integer): $ItemStack
 public "removeItemNoUpdate"(int0: integer): $ItemStack
 public "replaceWith"(inventory0: $Inventory$$Type): void
 public "save"(listTag0: $ListTag$$Type): $ListTag
@@ -145,9 +145,9 @@ public "setPickedItem"(itemStack0: $ItemStack$$Type): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public "swapPaint"(double0: double): void
 public "tick"(): void
@@ -492,14 +492,14 @@ public "crit"(entity0: $Entity$$Type): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "disableShield"(boolean0: boolean): void
 public "displayClientMessage"(component0: $Component$$Type, boolean1: boolean): void
-public "drop"(itemStack0: $ItemStack$$Type, boolean1: boolean, boolean2: boolean): $ItemEntity
 public "drop"(itemStack0: $ItemStack$$Type, boolean1: boolean): $ItemEntity
+public "drop"(itemStack0: $ItemStack$$Type, boolean1: boolean, boolean2: boolean): $ItemEntity
 public "etf$canBeBright"(): boolean
 public "etf$distanceTo"(entity0: $Entity$$Type): float
 public "etf$getArmorItems"(): $Iterable<$ItemStack>
@@ -652,28 +652,28 @@ public "give"(item: $ItemStack$$Type): void
 public "giveExperienceLevels"(int0: integer): void
 public "giveExperiencePoints"(int0: integer): void
 public "giveInHand"(item: $ItemStack$$Type): void
-public "handler$ckk000$slowMovement"(blockState0: $BlockState$$Type, vec31: $Vec3$$Type, callbackInfo2: $CallbackInfo$$Type): void
-public "handler$dcl000$apoth_cacheFlying"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$dcl000$apoth_ownedAbilities"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, float2: float, gameProfile3: $GameProfile$$Type, callbackInfo4: $CallbackInfo$$Type): void
-public "handler$dge000$celestisynth$attack"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$dge000$celestisynth$tick"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$dic000$isBleeding"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$dka000$stopSleepInBed"(boolean0: boolean, boolean1: boolean, callbackInfo2: $CallbackInfo$$Type): void
-public "handler$elp000$_onDropEquipment"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$elp000$_onGetExperience"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$emp000$getEquippedStack_Pre"(slot: $EquipmentSlot$$Type, cir: $CallbackInfoReturnable$$Type): void
-public "handler$emp001$post_Tick"(ci: $CallbackInfo$$Type): void
-public "handler$gbp000$l2damagetracker$attack$allowSweep"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type, localBooleanRef2: $LocalBooleanRef$$Type): void
-public "handler$gbp000$l2damagetracker$attack$critParticle"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type, localBooleanRef2: $LocalBooleanRef$$Type, localRef3: $LocalRef$$Type): void
-public "handler$hhl000$mca$getActiveEyeHeight"(pose: $Pose$$Type, dimensions: $EntityDimensions$$Type, cir: $CallbackInfoReturnable$$Type): void
-public "handler$hjd000$ac_getFlyingSpeed"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$hjd000$ac_getSpeed"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ife000$getStandingEyeHeight"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$ife000$onIsStayingOnGroundSurface"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ife000$onJumpFromGround"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$ife000$onTryToStartFallFlying"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ife001$getDimensions"(pose0: $Pose$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$znf000$goetyInteractOn"(entity0: $Entity$$Type, interactionHand1: $InteractionHand$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$ckn000$slowMovement"(blockState0: $BlockState$$Type, vec31: $Vec3$$Type, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$dco000$apoth_cacheFlying"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$dco000$apoth_ownedAbilities"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, float2: float, gameProfile3: $GameProfile$$Type, callbackInfo4: $CallbackInfo$$Type): void
+public "handler$dgh000$celestisynth$attack"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$dgh000$celestisynth$tick"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$dif000$isBleeding"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$dkd000$stopSleepInBed"(boolean0: boolean, boolean1: boolean, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$emc000$_onDropEquipment"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$emc000$_onGetExperience"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$enc000$getEquippedStack_Pre"(slot: $EquipmentSlot$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$enc001$post_Tick"(ci: $CallbackInfo$$Type): void
+public "handler$gcc000$l2damagetracker$attack$allowSweep"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type, localBooleanRef2: $LocalBooleanRef$$Type): void
+public "handler$gcc000$l2damagetracker$attack$critParticle"(entity0: $Entity$$Type, callbackInfo1: $CallbackInfo$$Type, localBooleanRef2: $LocalBooleanRef$$Type, localRef3: $LocalRef$$Type): void
+public "handler$hho000$mca$getActiveEyeHeight"(pose: $Pose$$Type, dimensions: $EntityDimensions$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$hjg000$ac_getFlyingSpeed"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$hjg000$ac_getSpeed"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ifh000$getStandingEyeHeight"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$ifh000$onIsStayingOnGroundSurface"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ifh000$onJumpFromGround"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$ifh000$onTryToStartFallFlying"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ifh001$getDimensions"(pose0: $Pose$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$zni000$goetyInteractOn"(entity0: $Entity$$Type, interactionHand1: $InteractionHand$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
 public "hasContainerOpen"(): boolean
 public "hasCorrectToolForDrops"(blockState0: $BlockState$$Type): boolean
 public "hasCustomName"(): boolean
@@ -693,9 +693,9 @@ public "isFake"(): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
 public "isHurt"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isLocalPlayer"(): boolean
 public "isMagnetizing"(): boolean
@@ -725,12 +725,12 @@ public "markFlying"(): void
 public "mayBuild"(): boolean
 public "mayUseItemAt"(blockPos0: $BlockPos$$Type, direction1: $Direction$$Type, itemStack2: $ItemStack$$Type): boolean
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
-public "modify$emp000$getHand"(hand: $InteractionHand$$Type): $InteractionHand
+public "modify$enc000$getHand"(hand: $InteractionHand$$Type): $InteractionHand
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "modifyAttribute"(attribute: $Attribute$$Type, identifier: string, d: double, operation: $AttributeModifier$Operation$$Type): void
 public "moveInFluid"(fluidState0: $FluidState$$Type, vec31: $Vec3$$Type, double2: double): boolean
-public "notify"(title: $Component$$Type, text: $Component$$Type): void
 public "notify"(builder: $NotificationBuilder$$Type): void
+public "notify"(title: $Component$$Type, text: $Component$$Type): void
 public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onEnchantmentPerformed"(itemStack0: $ItemStack$$Type, int1: integer): void
@@ -745,17 +745,17 @@ public "openStructureBlock"(structureBlockEntity0: $StructureBlockEntity$$Type):
 public "openTextEdit"(signBlockEntity0: $SignBlockEntity$$Type, boolean1: boolean): void
 public "paint"(renderer: $CompoundTag$$Type): void
 public "playNotifySound"(soundEvent0: $SoundEvent$$Type, soundSource1: $SoundSource$$Type, float2: float, float3: float): void
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "playerAnimator_getAnimation"(): $AnimationApplier
 public "playerAnimator_getAnimation"(id: $ResourceLocation$$Type): $IAnimation
 public "playerAnimator_setAnimation"(id: $ResourceLocation$$Type, animation: $IAnimation$$Type): $IAnimation
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
-public "redirect$cko000$isSubmergedInProxy"(player0: $Player$$Type, tagKey1: $TagKey$$Type): boolean
-public "redirect$emp000$getMainHandStack_Redirect"(instance: $Player$$Type): $ItemStack
-public "redirect$emp000$setStackInHand_Redirect"(instance: $Player$$Type, handArg: $InteractionHand$$Type, itemStack: $ItemStack$$Type): void
+public "rayTrace"(distance: double): $RayTraceResultJS
+public "redirect$clb000$isSubmergedInProxy"(player0: $Player$$Type, tagKey1: $TagKey$$Type): boolean
+public "redirect$enc000$getMainHandStack_Redirect"(instance: $Player$$Type): $ItemStack
+public "redirect$enc000$setStackInHand_Redirect"(instance: $Player$$Type, handArg: $InteractionHand$$Type, itemStack: $ItemStack$$Type): void
 public "refreshDisplayName"(): void
 public "removeActiveSpawnPower"(): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -811,8 +811,8 @@ public "setMouseItem"(item: $ItemStack$$Type): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setProjectionScale"(int0: integer): void
 public "setPulseScale"(int0: integer): void
@@ -873,8 +873,8 @@ public "walkers$setCurrentShape"(shape: $LivingEntity$$Type): void
 public "walkers$setRemainingHostilityTime"(max: integer): void
 public "walkers$updateShapes"(shape: $LivingEntity$$Type): void
 public "wrap"(): $WeakReference<$Trackable>
-public "wrapOperation$gbp000$l2damagetracker$actuallyHurt$moveLivingDamagePre"(player0: $Player$$Type, damageSource1: $DamageSource$$Type, float2: float, operation3: $Operation$$Type): float
-public "wrapOperation$gbp001$l2damagetracker$actuallyHurt$moveLivingDamagePost"(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float, operation3: $Operation$$Type): float
+public "wrapOperation$gcc000$l2damagetracker$actuallyHurt$moveLivingDamagePre"(player0: $Player$$Type, damageSource1: $DamageSource$$Type, float2: float, operation3: $Operation$$Type): float
+public "wrapOperation$gcc001$l2damagetracker$actuallyHurt$moveLivingDamagePost"(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float, operation3: $Operation$$Type): float
 get "bob"(): float
 set "bob"(value: float)
 get "containerMenu"(): $AbstractContainerMenu
@@ -1101,8 +1101,8 @@ public "canCraft"(recipe0: $Recipe$$Type<any>, intList1: $IntList$$Type): boolea
 public "canCraft"(recipe0: $Recipe$$Type<any>, intList1: $IntList$$Type, int2: integer): boolean
 public "clear"(): void
 public static "fromStackingIndex"(int0: integer): $ItemStack
-public "getBiggestCraftableStack"(recipe0: $Recipe$$Type<any>, int1: integer, intList2: $IntList$$Type): integer
 public "getBiggestCraftableStack"(recipe0: $Recipe$$Type<any>, intList1: $IntList$$Type): integer
+public "getBiggestCraftableStack"(recipe0: $Recipe$$Type<any>, int1: integer, intList2: $IntList$$Type): integer
 public static "getStackingIndex"(itemStack0: $ItemStack$$Type): integer
 }
 }
@@ -1122,8 +1122,8 @@ constructor(friendlyByteBuf0: $FriendlyByteBuf$$Type)
 constructor(instant0: $Instant$$Type, publicKey1: $PublicKey$$Type, byte2s: byte[])
 
 public "expiresAt"(): $Instant
-public "hasExpired"(duration0: $Duration$$Type): boolean
 public "hasExpired"(): boolean
+public "hasExpired"(duration0: $Duration$$Type): boolean
 public "key"(): $PublicKey
 public "keySignature"(): byte[]
 public "write"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void

@@ -90,23 +90,23 @@ public "canGrindstoneRepair"(itemStack0: $ItemStack$$Type): boolean
 public "canPerformAction"(itemStack0: $ItemStack$$Type, toolAction1: $ToolAction$$Type): boolean
 /** @deprecated */
 public "canRightClickEquip"(itemStack0: $ItemStack$$Type): boolean
-public "canSync"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
 /** @deprecated */
 public "canSync"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): boolean
-public "canUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
+public "canSync"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
 /** @deprecated */
 public "canUnequip"(string0: string, livingEntity1: $LivingEntity$$Type, itemStack2: $ItemStack$$Type): boolean
+public "canUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
 public "canWalkOnPowderedSnow"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
 public "canWalkOnPowderedSnow"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): boolean
 public "createEntity"(level0: $Level$$Type, entity1: $Entity$$Type, itemStack2: $ItemStack$$Type): $Entity
 /** @deprecated */
 public "curioAnimate"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
-/** @deprecated */
-public "curioBreak"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): void
 public "curioBreak"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
-public "curioTick"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "curioBreak"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): void
 public "curioTick"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
+/** @deprecated */
+public "curioTick"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
 public "damageItem"<T extends $LivingEntity>(itemStack0: $ItemStack$$Type, int1: integer, t2: T, consumer3: $Consumer$$Type<T>): integer
 public "doesSneakBypassUse"(itemStack0: $ItemStack$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, player3: $Player$$Type): boolean
 public "dragonlib$getCustomEquipmentSlot"(stack: $ItemStack$$Type): $EquipmentSlot
@@ -188,9 +188,9 @@ public "onInventoryTick"(itemStack0: $ItemStack$$Type, level1: $Level$$Type, pla
 public "onItemUseFirst"(itemStack0: $ItemStack$$Type, useOnContext1: $UseOnContext$$Type): $InteractionResult
 public "onLeftClickEntity"(itemStack0: $ItemStack$$Type, player1: $Player$$Type, entity2: $Entity$$Type): boolean
 public "onStopUsing"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type, int2: integer): void
-public "onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "onUnequip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "playRightClickEquipSound"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type): void
 public "readShareTag"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): void
@@ -214,9 +214,9 @@ public "showAttributesTooltip"(string0: string, itemStack1: $ItemStack$$Type): b
 public "simpleTextureOverride"(itemStack0: $ItemStack$$Type): $Optional<$ResourceLocation>
 public "vMinus$update"(): void
 public "withAttribute"(holder0: $Holder$$Type<$Attribute$$Type>, double1: double): $SpellBook
+public "writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 /** @deprecated */
 public "writeSyncData"(itemStack0: $ItemStack$$Type): $CompoundTag
-public "writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 get "creativeTab"(): string
 get "digSpeed"(): float
 get "maxSpellSlots"(): integer
@@ -259,8 +259,8 @@ import { $SpellSelection, $SpellSelection$$Type } from "io.redspace.ironsspellbo
 import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 
 export class $SyncedSpellData {
-constructor(int0: integer)
 constructor(livingEntity0: $LivingEntity$$Type)
+constructor(int0: integer)
 
 public "addHeartstopDamage"(float0: float): void
 public "doSync"(): void
@@ -998,23 +998,23 @@ public "canGrindstoneRepair"(itemStack0: $ItemStack$$Type): boolean
 public "canPerformAction"(itemStack0: $ItemStack$$Type, toolAction1: $ToolAction$$Type): boolean
 /** @deprecated */
 public "canRightClickEquip"(itemStack0: $ItemStack$$Type): boolean
-public "canSync"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
 /** @deprecated */
 public "canSync"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): boolean
-public "canUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
+public "canSync"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
 /** @deprecated */
 public "canUnequip"(string0: string, livingEntity1: $LivingEntity$$Type, itemStack2: $ItemStack$$Type): boolean
+public "canUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
 public "canWalkOnPowderedSnow"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): boolean
 public "canWalkOnPowderedSnow"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): boolean
 public "createEntity"(level0: $Level$$Type, entity1: $Entity$$Type, itemStack2: $ItemStack$$Type): $Entity
 /** @deprecated */
 public "curioAnimate"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
-/** @deprecated */
-public "curioBreak"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): void
 public "curioBreak"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
 /** @deprecated */
-public "curioTick"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "curioBreak"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): void
 public "curioTick"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): void
+/** @deprecated */
+public "curioTick"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
 public "damageItem"<T extends $LivingEntity>(itemStack0: $ItemStack$$Type, int1: integer, t2: T, consumer3: $Consumer$$Type<T>): integer
 public "doesSneakBypassUse"(itemStack0: $ItemStack$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, player3: $Player$$Type): boolean
 public "dragonlib$getCustomEquipmentSlot"(stack: $ItemStack$$Type): $EquipmentSlot
@@ -1094,9 +1094,9 @@ public "onInventoryTick"(itemStack0: $ItemStack$$Type, level1: $Level$$Type, pla
 public "onItemUseFirst"(itemStack0: $ItemStack$$Type, useOnContext1: $UseOnContext$$Type): $InteractionResult
 public "onLeftClickEntity"(itemStack0: $ItemStack$$Type, player1: $Player$$Type, entity2: $Entity$$Type): boolean
 public "onStopUsing"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type, int2: integer): void
-public "onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "onUnequip"(string0: string, int1: integer, livingEntity2: $LivingEntity$$Type, itemStack3: $ItemStack$$Type): void
+public "onUnequip"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 /** @deprecated */
 public "playRightClickEquipSound"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type): void
 public "readShareTag"(itemStack0: $ItemStack$$Type, compoundTag1: $CompoundTag$$Type): void
@@ -1120,9 +1120,9 @@ public "showAttributesTooltip"(string0: string, itemStack1: $ItemStack$$Type): b
 public "vMinus$update"(): void
 public "withAttributes"(string0: string, ...attributeContainer1s: $AttributeContainer$$Type[]): $CurioBaseItem
 public "withSpellbookAttributes"(...attributeContainer0s: $AttributeContainer$$Type[]): $CurioBaseItem
+public "writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 /** @deprecated */
 public "writeSyncData"(itemStack0: $ItemStack$$Type): $CompoundTag
-public "writeSyncData"(slotContext0: $SlotContext$$Type, itemStack1: $ItemStack$$Type): $CompoundTag
 get "creativeTab"(): string
 get "digSpeed"(): float
 get "mod"(): string
@@ -1147,8 +1147,8 @@ export class $SpellSelectionManager$SpellSelectionEvent extends $PlayerEvent {
 constructor()
 constructor(player0: $Player$$Type, spellSelectionManager1: $SpellSelectionManager$$Type)
 
-public "addSelectionOption"(spellData0: $SpellData$$Type, string1: string, int2: integer): void
 public "addSelectionOption"(spellData0: $SpellData$$Type, string1: string, int2: integer, int3: integer): void
+public "addSelectionOption"(spellData0: $SpellData$$Type, string1: string, int2: integer): void
 public "getManager"(): $SpellSelectionManager
 get "manager"(): $SpellSelectionManager
 }
@@ -1273,10 +1273,10 @@ constructor(iMagicEntity0: $IMagicEntity$$Type, double1: double, int2: integer, 
 constructor(iMagicEntity0: $IMagicEntity$$Type, double1: double, int2: integer, int3: integer)
 
 public "meleeRange"(): float
+public "setIsFlying"(): $WarlockAttackGoal
 public "setMeleeAttackInverval"(int0: integer, int1: integer): $WarlockAttackGoal
 public "setMeleeBias"(float0: float, float1: float): $WarlockAttackGoal
 public "setMeleeMovespeedModifier"(float0: float): $WarlockAttackGoal
-public "setSpellQuality"(float0: float, float1: float): $WarlockAttackGoal
 set "meleeMovespeedModifier"(value: float)
 }
 }
@@ -1538,7 +1538,6 @@ public "getTicksRemaining"(): integer
 public "getTicksToLive"(): integer
 public "getTotalRecasts"(): integer
 public "readFromBuffer"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
-public "serializeNBT"(): $CompoundTag
 public "writeToBuffer"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 get "castData"(): $ICastDataSerializable
 get "castSource"(): $CastSource
@@ -1687,8 +1686,8 @@ import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent"
 
 export class $SpellDamageEvent extends $LivingEvent {
-constructor()
 constructor(livingEntity0: $LivingEntity$$Type, float1: float, spellDamageSource2: $SpellDamageSource$$Type)
+constructor()
 
 public "getAmount"(): float
 public "getOriginalAmount"(): float
@@ -1715,10 +1714,10 @@ static readonly "SPELL_ID": string
 
 constructor()
 
-public "addCooldown"(abstractSpell0: $AbstractSpell$$Type, int1: integer, int2: integer): void
-public "addCooldown"(abstractSpell0: $AbstractSpell$$Type, int1: integer): void
 public "addCooldown"(string0: string, int1: integer): void
 public "addCooldown"(string0: string, int1: integer, int2: integer): void
+public "addCooldown"(abstractSpell0: $AbstractSpell$$Type, int1: integer, int2: integer): void
+public "addCooldown"(abstractSpell0: $AbstractSpell$$Type, int1: integer): void
 public "clearCooldowns"(): void
 public "decrementCooldown"(cooldownInstance0: $CooldownInstance$$Type, int1: integer): boolean
 public "getCooldownPercent"(abstractSpell0: $AbstractSpell$$Type): float
@@ -1772,23 +1771,23 @@ constructor(serverPlayer0: $ServerPlayer$$Type)
 constructor()
 
 public "addRecast"(recastInstance0: $RecastInstance$$Type, magicData1: $MagicData$$Type): boolean
-public "decrementRecastCount"(abstractSpell0: $AbstractSpell$$Type): void
 public "decrementRecastCount"(string0: string): void
+public "decrementRecastCount"(abstractSpell0: $AbstractSpell$$Type): void
 public "forceAddRecast"(recastInstance0: $RecastInstance$$Type): void
 public "getActiveRecasts"(): $List<$RecastInstance>
 public "getAllRecasts"(): $List<$RecastInstance>
 public "getRecastInstance"(string0: string): $RecastInstance
-public "getRemainingRecastsForSpell"(abstractSpell0: $AbstractSpell$$Type): integer
 public "getRemainingRecastsForSpell"(string0: string): integer
+public "getRemainingRecastsForSpell"(abstractSpell0: $AbstractSpell$$Type): integer
 public "hasRecastForSpell"(abstractSpell0: $AbstractSpell$$Type): boolean
 public "hasRecastForSpell"(string0: string): boolean
 public "hasRecastsActive"(): boolean
 public "isRecastActive"(recastInstance0: $RecastInstance$$Type): boolean
 public "loadNBTData"(listTag0: $ListTag$$Type, provider1: $HolderLookup$Provider$$Type): void
 public "removeAll"(recastResult0: $RecastResult$$Type): void
+public "removeRecast"(recastInstance0: $RecastInstance$$Type, recastResult1: $RecastResult$$Type): void
 /** Client only, do not use in server scripts */
 public "removeRecast"(string0: string): void
-public "removeRecast"(recastInstance0: $RecastInstance$$Type, recastResult1: $RecastResult$$Type): void
 public "saveNBTData"(provider0: $HolderLookup$Provider$$Type): $ListTag
 public "syncAllToPlayer"(): void
 public "syncRemoveToPlayer"(string0: string): void
@@ -1864,8 +1863,8 @@ public "getCastStartSound"(): $Optional<$SoundEvent>
 public "getCastTime"(int0: integer): integer
 public "getCastType"(): $CastType
 public "getComponentId"(): string
-public "getDamageSource"(entity0: $Entity$$Type): $SpellDamageSource
 public "getDamageSource"(entity0: $Entity$$Type, entity1: $Entity$$Type): $SpellDamageSource
+public "getDamageSource"(entity0: $Entity$$Type): $SpellDamageSource
 public "getDeathMessageId"(): string
 public "getDefaultConfig"(): $DefaultConfig
 public "getDisplayName"(player0: $Player$$Type): $MutableComponent
@@ -2205,8 +2204,8 @@ static readonly "random": $RandomSource
 
 constructor()
 
-public static "addFreezeTicks"(livingEntity0: $LivingEntity$$Type, int1: integer, int2: integer): void
 public static "addFreezeTicks"(livingEntity0: $LivingEntity$$Type, int1: integer): void
+public static "addFreezeTicks"(livingEntity0: $LivingEntity$$Type, int1: integer, int2: integer): void
 public static "applyCooldownReduction"(int0: integer, livingEntity1: $LivingEntity$$Type): integer
 public static "canBeUpgraded"(itemStack0: $ItemStack$$Type): boolean
 public static "canHitWithRaycast"(entity0: $Entity$$Type): boolean
@@ -2234,14 +2233,14 @@ public static "getServerTick"(): long
 public static "getStackTraceAsString"(): string
 public static "getTargetBlock"(level0: $Level$$Type, livingEntity1: $LivingEntity$$Type, fluid2: $ClipContext$Fluid$$Type, double3: double): $BlockHitResult
 public static "getTargetOld"(level0: $Level$$Type, player1: $Player$$Type, fluid2: $ClipContext$Fluid$$Type, double3: double): $BlockHitResult
-public static "getWeaponDamage"(livingEntity0: $LivingEntity$$Type): float
 public static "getWeaponDamage"(livingEntity0: $LivingEntity$$Type, mobType1: $MobType$$Type): float
+public static "getWeaponDamage"(livingEntity0: $LivingEntity$$Type): float
 public static "handleShriving"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "handleSpellTeleport"(abstractSpell0: $AbstractSpell$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type): boolean
 public static "hasLineOfSight"(level0: $Level$$Type, entity1: $Entity$$Type, entity2: $Entity$$Type, boolean3: boolean): boolean
 public static "hasLineOfSight"(level0: $Level$$Type, vec31: $Vec3$$Type, vec32: $Vec3$$Type, boolean3: boolean): boolean
-public static "intPow"(float0: float, int1: integer): float
 public static "intPow"(double0: double, int1: integer): double
+public static "intPow"(float0: float, int1: integer): float
 public static "isSameItemSameComponentsIgnoreDurability"(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type): boolean
 public static "lerp"(float0: float, vec31: $Vec3$$Type, vec32: $Vec3$$Type): $Vec3
 public static "loadAllItems"(compoundTag0: $CompoundTag$$Type, nonNullList1: $NonNullList$$Type<$ItemStack$$Type>, string2: string): void
@@ -2256,13 +2255,13 @@ public static "preCastTargetHelper"(level0: $Level$$Type, livingEntity1: $Living
 public static "preCastTargetHelper"(level0: $Level$$Type, livingEntity1: $LivingEntity$$Type, magicData2: $MagicData$$Type, abstractSpell3: $AbstractSpell$$Type, int4: integer, float5: float, boolean6: boolean, predicate7: $Predicate$$Type<$LivingEntity$$Type>): boolean
 public static "raycastForBlock"(level0: $Level$$Type, vec31: $Vec3$$Type, vec32: $Vec3$$Type, fluid3: $ClipContext$Fluid$$Type): $BlockHitResult
 /** @deprecated */
-public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean, float5: float, predicate6: $Predicate$$Type<$Entity$$Type>): $HitResult
-/** @deprecated */
 public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, float2: float, boolean3: boolean, float4: float): $HitResult
+/** @deprecated */
+public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean): $HitResult
 /** @deprecated */
 public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, float2: float, boolean3: boolean): $HitResult
 /** @deprecated */
-public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean): $HitResult
+public static "raycastForEntity"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean, float5: float, predicate6: $Predicate$$Type<$Entity$$Type>): $HitResult
 /** @deprecated */
 public static "raycastForEntityOfClass"(level0: $Level$$Type, entity1: $Entity$$Type, vec32: $Vec3$$Type, vec33: $Vec3$$Type, boolean4: boolean, class5: $Class$$Type<$Entity$$Type>): $HitResult
 public static "releaseUsingHelper"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type, int2: integer): void
@@ -2270,13 +2269,13 @@ public static "rotationBetweenVectors"(vector3f0: $Vector3f$$Type, vector3f1: $V
 public static "rotationFromDirection"(vec30: $Vec3$$Type): $Vec2
 public static "saveAllItems"(compoundTag0: $CompoundTag$$Type, nonNullList1: $NonNullList$$Type<$ItemStack$$Type>, string2: string): $CompoundTag
 public static "sendTargetedNotification"(serverPlayer0: $ServerPlayer$$Type, livingEntity1: $LivingEntity$$Type, abstractSpell2: $AbstractSpell$$Type): void
-public static "serverSideCancelCast"(serverPlayer0: $ServerPlayer$$Type): void
 public static "serverSideCancelCast"(serverPlayer0: $ServerPlayer$$Type, boolean1: boolean): void
+public static "serverSideCancelCast"(serverPlayer0: $ServerPlayer$$Type): void
 public static "serverSideInitiateCast"(serverPlayer0: $ServerPlayer$$Type): boolean
 public static "serverSideInitiateQuickCast"(serverPlayer0: $ServerPlayer$$Type, int1: integer): boolean
 public static "setPlayerSpellbookStack"(player0: $Player$$Type, itemStack1: $ItemStack$$Type): void
-public static "setPotion"(itemStack0: $ItemStack$$Type, potion1: $Potion$$Type): $ItemStack
 public static "setPotion"(itemStack0: $ItemStack$$Type, holder1: $Holder$$Type<$Potion$$Type>): $ItemStack
+public static "setPotion"(itemStack0: $ItemStack$$Type, potion1: $Potion$$Type): $ItemStack
 public static "shouldHealEntity"(entity0: $Entity$$Type, entity1: $Entity$$Type): boolean
 public static "signedMin"(double0: double, double1: double): double
 public static "slerp"(double0: double, vec31: $Vec3$$Type, vec32: $Vec3$$Type): $Vec3
@@ -2932,9 +2931,9 @@ public "isAnimal"(): boolean
 public "isCursorHoming"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -2952,10 +2951,10 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onAntiMagic"(magicData0: $MagicData$$Type): void
 public "pierceOrDiscard"(): void
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readSpawnData"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -2975,8 +2974,8 @@ public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setPierceLevel"(int0: integer): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void

@@ -81,8 +81,8 @@ public "getInitialScale"(): float
 public "getPersistence"(): boolean
 public "getPrevBaseScale"(): float
 public "getPrevScale"(): float
-public "getScale"(): float
 public "getScale"(delta: float): float
+public "getScale"(): float
 public "getScaleTickDelay"(): integer
 public "getScaleType"(): $ScaleType
 public "getTargetScale"(): float

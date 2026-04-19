@@ -127,24 +127,24 @@ public "getStepHeight"(): float
 public "getTeamId"(): string
 public "getTicksUntilDespawn"(): integer
 public "getType"(): string
-public "handler$cio000$celestial_core$tick$recipe"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$deo000$fireImmuneInject"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$deo000$hurtInject"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$deo000$playerTouchInject"(player0: $Player$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$deo000$update"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$deo000$updatePre"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$ghl000$Cmhurt"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$gop000$l2complements_dampensVibrations_sculkiumMinedItem"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$gop000$l2complments_hurt_itemBurnt"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$cjb000$celestial_core$tick$recipe"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$dfb000$fireImmuneInject"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$dfb000$hurtInject"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$dfb000$playerTouchInject"(player0: $Player$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$dfb000$update"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$dfb000$updatePre"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$gho000$Cmhurt"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$gpc000$l2complements_dampensVibrations_sculkiumMinedItem"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$gpc000$l2complments_hurt_itemBurnt"(damageSource0: $DamageSource$$Type, float1: float, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hasPickUpDelay"(): boolean
 public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMergable"(): boolean
 public "isMonster"(): boolean
@@ -167,15 +167,15 @@ public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "newGelatin"(item0: $Item$$Type, itemStack1: $ItemStack$$Type, itemStack2: $ItemStack$$Type): void
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readAdditionalSaveData"(compoundTag0: $CompoundTag$$Type): void
-public "redirect$deo000$isInLavaRedirect"(itemEntity0: $ItemEntity$$Type): boolean
-public "redirect$deo000$isInWaterRedirect"(itemEntity0: $ItemEntity$$Type): boolean
-public "redirect$deo000$isNoGravityRedirect"(itemEntity0: $ItemEntity$$Type): boolean
-public "redirect$deo000$setDeltaMovementRedirect"(itemEntity0: $ItemEntity$$Type, vec31: $Vec3$$Type): void
+public "redirect$dfb000$isInLavaRedirect"(itemEntity0: $ItemEntity$$Type): boolean
+public "redirect$dfb000$isInWaterRedirect"(itemEntity0: $ItemEntity$$Type): boolean
+public "redirect$dfb000$isNoGravityRedirect"(itemEntity0: $ItemEntity$$Type): boolean
+public "redirect$dfb000$setDeltaMovementRedirect"(itemEntity0: $ItemEntity$$Type, vec31: $Vec3$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -197,8 +197,8 @@ public "setNoDespawn"(): void
 public "setNoPickUpDelay"(): void
 public "setNoPickUpDelay"(): void
 public "setPickUpDelay"(int0: integer): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -382,18 +382,18 @@ public "getStartPos"(): $BlockPos
 public "getStepHeight"(): float
 public "getTeamId"(): string
 public "getType"(): string
-public "handler$hcj000$handleLand"(ci: $CallbackInfo$$Type, block: $Block$$Type, blockPos2: $BlockPos$$Type, bl: boolean, bl2: boolean, d: double, blockState: $BlockState$$Type): void
-public "handler$hig002$ac_tick"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$iak000$stopTickingIfRemoved"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$hcm000$handleLand"(ci: $CallbackInfo$$Type, block: $Block$$Type, blockPos2: $BlockPos$$Type, bl: boolean, bl2: boolean, d: double, blockState: $BlockState$$Type): void
+public "handler$hij002$ac_tick"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$ian000$stopTickingIfRemoved"(callbackInfo0: $CallbackInfo$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hasFallBlocking"(): boolean
 public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -410,10 +410,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -428,8 +428,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStartPos"(blockPos0: $BlockPos$$Type): void
@@ -499,7 +499,7 @@ set "z"(value: double)
 
 declare module "net.minecraft.world.entity.item.PrimedTnt" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
-import { $LivingEntity, $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
+import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $EntityType$$Type } from "net.minecraft.world.entity.EntityType"
 import { $Direction } from "net.minecraft.core.Direction"
 import { $GameProfile } from "com.mojang.authlib.GameProfile"
@@ -588,7 +588,6 @@ public "getMotionZ"(): double
 public "getName"(): $Component
 public "getNbt"(): $CompoundTag
 public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
-public "getOwner"(): $LivingEntity
 public "getParts"(): $PartEntity<any>[]
 public "getPassengers"(): $EntityArrayList
 public "getPickedResult"(hitResult0: $HitResult$$Type): $ItemStack
@@ -604,9 +603,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -620,10 +619,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -642,8 +641,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -672,7 +671,6 @@ get "motionY"(): double
 get "motionZ"(): double
 get "name"(): $Component
 get "nbt"(): $CompoundTag
-get "owner"(): $LivingEntity
 get "parts"(): $PartEntity<any>[]
 get "passengers"(): $EntityArrayList
 get "profile"(): $GameProfile

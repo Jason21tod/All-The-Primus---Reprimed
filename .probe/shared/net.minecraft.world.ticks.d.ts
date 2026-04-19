@@ -216,14 +216,14 @@ export interface $ContainerSingleItem extends $Container {
 "clear"(): void
 "clear"(ingredient: $Ingredient$$Type): void
 "clearContent"(): void
-"count"(): integer
 "count"(ingredient: $Ingredient$$Type): integer
+"count"(): integer
 "countItem"(item0: $Item$$Type): integer
-"countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "countNonEmpty"(): integer
+"countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-"find"(ingredient: $Ingredient$$Type): integer
 "find"(): integer
+"find"(ingredient: $Ingredient$$Type): integer
 "getAllItems"(): $List<$ItemStack>
 "getBlock"(level: $Level$$Type): $BlockContainerJS
 "getContainerSize"(): integer
@@ -269,15 +269,15 @@ set "firstItem"(value: $ItemStack$$Type)
 }
 
 export namespace $ContainerSingleItem {
-function stillValidBlockEntity(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 function stillValidBlockEntity(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 function stillValidBlockEntity(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+function stillValidBlockEntity(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 function tryClear(object0: any): void
 }
 export abstract class $ContainerSingleItem$$Static implements $ContainerSingleItem {
-static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 static "tryClear"(object0: any): void
 }
 }
@@ -295,7 +295,7 @@ import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $Optional } from "java.util.Optional"
 import { $SavedTick$$Type } from "net.minecraft.world.ticks.SavedTick"
 import { $SerializableTickContainer } from "net.minecraft.world.ticks.SerializableTickContainer"
-import { $ListTag$$Type } from "net.minecraft.nbt.ListTag"
+import { $ListTag, $ListTag$$Type } from "net.minecraft.nbt.ListTag"
 
 export class $LevelChunkTicks<T = any> implements $SerializableTickContainer<T>, $TickContainerAccess<T> {
 constructor()
@@ -308,6 +308,7 @@ public static "load"<T>(listTag0: $ListTag$$Type, function1: $Function$$Type<str
 public "peek"(): $ScheduledTick<T>
 public "poll"(): $ScheduledTick<T>
 public "removeIf"(predicate0: $Predicate$$Type<$ScheduledTick$$Type<T>>): void
+public "save"(long0: long, function1: $Function$$Type<T, string>): $ListTag
 public "schedule"(scheduledTick0: $ScheduledTick$$Type<T>): void
 public "setOnTickAdded"(biConsumer0: $BiConsumer$$Type<$LevelChunkTicks$$Type<T>, $ScheduledTick$$Type<T>>): void
 public "unpack"(long0: long): void

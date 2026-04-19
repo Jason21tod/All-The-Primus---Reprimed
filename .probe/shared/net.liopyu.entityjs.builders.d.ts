@@ -2939,6 +2939,17 @@ public "fireImmune"(isFireImmune: boolean): $BaseNonAnimatableEntityBuilder<T>
  */
 public "immuneTo"(...blockNames: string[]): $BaseNonAnimatableEntityBuilder<T>
 /**
+ * Sets whether the entity is attackable or not.
+ * 
+ * @param isAttackable Boolean value indicating whether the entity is attackable.
+ * 
+ * Example usage:
+ * ```javascript
+ * entityBuilder.isAttackable(true);
+ * ```
+ */
+public "isAttackable"(b: boolean): $BaseNonAnimatableEntityBuilder<T>
+/**
  * Sets a predicate function to determine whether the entity is attackable.
  * The provided Predicate accepts a {@link Entity} parameter,
  * representing the entity that may be checked for its attackability.
@@ -2953,17 +2964,6 @@ public "immuneTo"(...blockNames: string[]): $BaseNonAnimatableEntityBuilder<T>
  * ```
  */
 public "isAttackable"(predicate: boolean): $BaseNonAnimatableEntityBuilder<T>
-/**
- * Sets whether the entity is attackable or not.
- * 
- * @param isAttackable Boolean value indicating whether the entity is attackable.
- * 
- * Example usage:
- * ```javascript
- * entityBuilder.isAttackable(true);
- * ```
- */
-public "isAttackable"(b: boolean): $BaseNonAnimatableEntityBuilder<T>
 /**
  * Sets a predicate function to determine whether the entity is currently glowing.
  * The provided Predicate accepts a {@link Entity} parameter,
@@ -5335,6 +5335,7 @@ set "wantedPosition"(value: $Consumer$$Type<$ContextUtils$SetWantedPositionConte
 
 declare module "net.liopyu.entityjs.builders.nonliving.vanilla.TridentJSBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
+import { $EntityType } from "net.minecraft.world.entity.EntityType"
 import { $ContextUtils$CollidingProjectileEntityContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$CollidingProjectileEntityContext"
 import { $TridentEntityJS, $TridentEntityJS$$Type } from "net.liopyu.entityjs.entities.nonliving.vanilla.TridentEntityJS"
 import { $ContextUtils$ProjectileEntityHitContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ProjectileEntityHitContext"
@@ -5364,6 +5365,7 @@ constructor(i: $ResourceLocation$$Type)
  * ```
  */
 public "canHitEntity"(function_: $Function$$Type<$Entity$$Type, any>): $TridentJSBuilder
+public "createObject"(): $EntityType<$TridentEntityJS>
 /** Creates the arrow item for this entity type */
 public "item"(item: $Consumer$$Type<$TridentItemBuilder$$Type>): $TridentJSBuilder
 /** Indicates that no projectile item should be created for this entity type */
@@ -5849,17 +5851,6 @@ public "fireImmune"(isFireImmune: boolean): $BaseEntityBuilder<T>
  */
 public "immuneTo"(...blockNames: string[]): $BaseEntityBuilder<T>
 /**
- * Sets whether the entity is attackable or not.
- * 
- * @param isAttackable Boolean value indicating whether the entity is attackable.
- * 
- * Example usage:
- * ```javascript
- * entityBuilder.isAttackable(true);
- * ```
- */
-public "isAttackable"(b: boolean): $BaseEntityBuilder<T>
-/**
  * Sets a predicate function to determine whether the entity is attackable.
  * The provided Predicate accepts a {@link Entity} parameter,
  * representing the entity that may be checked for its attackability.
@@ -5874,6 +5865,17 @@ public "isAttackable"(b: boolean): $BaseEntityBuilder<T>
  * ```
  */
 public "isAttackable"(predicate: boolean): $BaseEntityBuilder<T>
+/**
+ * Sets whether the entity is attackable or not.
+ * 
+ * @param isAttackable Boolean value indicating whether the entity is attackable.
+ * 
+ * Example usage:
+ * ```javascript
+ * entityBuilder.isAttackable(true);
+ * ```
+ */
+public "isAttackable"(b: boolean): $BaseEntityBuilder<T>
 /**
  * Sets a predicate function to determine whether the entity is currently glowing.
  * The provided Predicate accepts a {@link Entity} parameter,
@@ -7554,15 +7556,13 @@ import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocatio
 import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $EyeOfEnderItemBuilder$$Type } from "net.liopyu.entityjs.item.EyeOfEnderItemBuilder"
 import { $EyeOfEnderEntityBuilder } from "net.liopyu.entityjs.builders.nonliving.vanilla.EyeOfEnderEntityBuilder"
-import { $EntityType } from "net.minecraft.world.entity.EntityType"
-import { $EyeOfEnderEntityJS } from "net.liopyu.entityjs.entities.nonliving.vanilla.EyeOfEnderEntityJS"
 import { $Function$$Type } from "java.util.function.Function"
+import { $EyeOfEnderEntityJS } from "net.liopyu.entityjs.entities.nonliving.vanilla.EyeOfEnderEntityJS"
 import { $EyeOfEnder$$Type } from "net.minecraft.world.entity.projectile.EyeOfEnder"
 
 export class $EyeOfEnderJSBuilder extends $EyeOfEnderEntityBuilder<$EyeOfEnderEntityJS> {
 constructor(i: $ResourceLocation$$Type)
 
-public "createObject"(): $EntityType<$EyeOfEnderEntityJS>
 /** Disables the default ender eye break sound as well as the death particles. */
 public "disableDefaultDeathLogic"(): $EyeOfEnderJSBuilder
 /** The default trail particles will be disabled */
@@ -7683,21 +7683,6 @@ constructor(i: $ResourceLocation$$Type)
  */
 public "defaultGoals"(defaultGoals: boolean): $ParrotJSBuilder
 /**
- * Sets a Consumer with the parameter of ContextUtils.PlayerEntityContext callback
- * This is fired after the entity is tamed and all tame logic has already taken place.
- * Useful if you don't want to mess with the UUID logic in the tameOverride method.
- * 
- * @param onTamed A Consumer that fires when the entity is tamed.
- * 
- * Example usage:
- * ```javascript
- * builder.onTamed(entity => {
- *     // Do stuff when the entity is tamed.
- * });
- * ```
- */
-public "onTamed"(onTamed: $Consumer$$Type<$ContextUtils$PlayerEntityContext$$Type>): $ParrotJSBuilder
-/**
  * Sets a Consumer invoked after the entity is tamed
  * and replaces the logic used to set the UUID of the owner
  * with the parameter of ContextUtils.PlayerEntityContext callback
@@ -7788,7 +7773,6 @@ import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $List } from "java.util.List"
 import { $Entity, $Entity$$Type } from "net.minecraft.world.entity.Entity"
 import { $BaseNonAnimatableEntityBuilder } from "net.liopyu.entityjs.builders.nonliving.BaseNonAnimatableEntityBuilder"
-import { $EntityType } from "net.minecraft.world.entity.EntityType"
 import { $ContextUtils$CollidingProjectileEntityContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$CollidingProjectileEntityContext"
 import { $IProjectileEntityJS } from "net.liopyu.entityjs.entities.nonliving.entityjs.IProjectileEntityJS"
 import { $ContextUtils$ProjectileBlockHitContext$$Type } from "net.liopyu.entityjs.util.ContextUtils$ProjectileBlockHitContext"
@@ -7814,7 +7798,6 @@ constructor(i: $ResourceLocation$$Type)
  * ```
  */
 public "canHitEntity"(function_: $Function$$Type<$Entity$$Type, any>): $ProjectileEntityBuilder<T>
-public "createObject"(): $EntityType<T>
 /**
  * Sets a callback function to be executed when the projectile
  * collides with an entity.

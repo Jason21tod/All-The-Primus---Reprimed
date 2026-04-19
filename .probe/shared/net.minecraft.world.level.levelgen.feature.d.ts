@@ -269,7 +269,7 @@ import { $AbstractHugeMushroomFeature } from "net.minecraft.world.level.levelgen
 export class $HugeRedMushroomFeature extends $AbstractHugeMushroomFeature {
 constructor(codec0: $Codec$$Type<$HugeMushroomFeatureConfiguration$$Type>)
 
-public "wrapWithCondition$iao000$isValidRepairItem"(hugeRedMushroomFeature0: $HugeRedMushroomFeature$$Type, levelWriter1: $LevelWriter$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
+public "wrapWithCondition$ibb000$isValidRepairItem"(hugeRedMushroomFeature0: $HugeRedMushroomFeature$$Type, levelWriter1: $LevelWriter$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
 }
 }
 
@@ -2225,7 +2225,7 @@ import { $AbstractHugeMushroomFeature } from "net.minecraft.world.level.levelgen
 export class $HugeBrownMushroomFeature extends $AbstractHugeMushroomFeature {
 constructor(codec0: $Codec$$Type<$HugeMushroomFeatureConfiguration$$Type>)
 
-public "wrapWithCondition$ian000$isValidRepairItem"(hugeBrownMushroomFeature0: $HugeBrownMushroomFeature$$Type, levelWriter1: $LevelWriter$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
+public "wrapWithCondition$iba000$isValidRepairItem"(hugeBrownMushroomFeature0: $HugeBrownMushroomFeature$$Type, levelWriter1: $LevelWriter$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
 }
 }
 

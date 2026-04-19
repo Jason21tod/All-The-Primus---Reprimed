@@ -47,8 +47,8 @@ import { $LivingEvent$LivingJumpEvent } from "net.minecraftforge.event.entity.li
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $LivingJumpEvent extends $Event implements $EventItf {
-constructor(livingEntity0: $LivingEntity$$Type, float1: float)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, float1: float)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

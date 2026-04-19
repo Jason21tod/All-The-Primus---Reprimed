@@ -248,8 +248,8 @@ readonly "tesselator": $Tesselator
 constructor(m: $Minecraft$$Type, g: $GuiGraphics$$Type, d: float, s: $Screen$$Type)
 
 public "begin"(type: $VertexFormat$Mode$$Type, format: $VertexFormat$$Type): void
-public "beginQuads"(format: $VertexFormat$$Type): void
 public "beginQuads"(texture: boolean): void
+public "beginQuads"(format: $VertexFormat$$Type): void
 public "bindTextureForSetup"(tex: $ResourceLocation$$Type): void
 public "blend"(enabled: boolean): void
 public "end"(): void
@@ -313,8 +313,8 @@ public "alignX"(x: float, w: float, alignX: $AlignMode$$Type): float
 public "alignY"(y: float, h: float, alignY: $AlignMode$$Type): float
 public "getVariables"(): $VariableSet
 public "rawText"(text: $FormattedCharSequence$$Type, x: integer, y: integer, color: integer, shadow: boolean): void
-public "rectangle"(x: float, y: float, z: float, w: float, h: float, color: integer, u0: float, v0: float, u1: float, v1: float): void
 public "rectangle"(x: float, y: float, z: float, w: float, h: float, color: integer): void
+public "rectangle"(x: float, y: float, z: float, w: float, h: float, color: integer, u0: float, v0: float, u1: float, v1: float): void
 public "rotateDeg"(angle: float): void
 public "rotateRad"(angle: float): void
 public "scale"(x: float, y: float): void
@@ -384,8 +384,8 @@ import { $Direction$$Type } from "net.minecraft.core.Direction"
 export class $ModelGenerator$Face {
 constructor()
 
-public "cull"(): $ModelGenerator$Face
 public "cull"(d: $Direction$$Type): $ModelGenerator$Face
+public "cull"(): $ModelGenerator$Face
 public "tex"(t: string): $ModelGenerator$Face
 public "tintindex"(i: integer): $ModelGenerator$Face
 public "toJson"(): $JsonObject

@@ -43,8 +43,8 @@ constructor(modContainer0: $ModContainer$$Type)
 public "description"(): string
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
-public "getIMCStream"(): $Stream<$InterModComms$IMCMessage>
 public "getIMCStream"(predicate0: $Predicate$$Type<string>): $Stream<$InterModComms$IMCMessage>
+public "getIMCStream"(): $Stream<$InterModComms$IMCMessage>
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
 get "iMCStream"(): $Stream<$InterModComms$IMCMessage>
@@ -371,8 +371,8 @@ import { $ModContainer$$Type } from "net.minecraftforge.fml.ModContainer"
 import { $ModLifecycleEvent } from "net.minecraftforge.fml.event.lifecycle.ModLifecycleEvent"
 import { $CompletableFuture } from "java.util.concurrent.CompletableFuture"
 import { $ModLoadingStage$$Type } from "net.minecraftforge.fml.ModLoadingStage"
-import { $Supplier$$Type } from "java.util.function.Supplier"
 import { $Runnable$$Type } from "java.lang.Runnable"
+import { $Supplier$$Type } from "java.util.function.Supplier"
 
 /**
  * This class is not allowed By KubeJS!
@@ -383,8 +383,8 @@ export class $ParallelDispatchEvent extends $ModLifecycleEvent {
 constructor()
 constructor(modContainer0: $ModContainer$$Type, modLoadingStage1: $ModLoadingStage$$Type)
 
-public "enqueueWork"<T>(supplier0: $Supplier$$Type<T>): $CompletableFuture<T>
 public "enqueueWork"(runnable0: $Runnable$$Type): $CompletableFuture<void>
+public "enqueueWork"<T>(supplier0: $Supplier$$Type<T>): $CompletableFuture<T>
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $ParallelDispatchEvent$$Type = ($ParallelDispatchEvent);
@@ -616,10 +616,10 @@ public "getModId"(): string
 public "getModInfo"(): $IModInfo
 public "getNamespace"(): string
 public "matches"(object0: any): boolean
-public "registerDisplayTest"(displayTest0: $IExtensionPoint$DisplayTest$$Type): void
-public "registerDisplayTest"(supplier0: $Supplier$$Type<string>, biPredicate1: $BiPredicate$$Type<string, boolean>): void
 public "registerDisplayTest"(supplier0: $Supplier$$Type<$IExtensionPoint$DisplayTest>): void
 public "registerDisplayTest"(string0: string, biPredicate1: $BiPredicate$$Type<string, boolean>): void
+public "registerDisplayTest"(supplier0: $Supplier$$Type<string>, biPredicate1: $BiPredicate$$Type<string, boolean>): void
+public "registerDisplayTest"(displayTest0: $IExtensionPoint$DisplayTest$$Type): void
 public "registerExtensionPoint"<T extends ($Record & $IExtensionPoint<T>)>(class0: $Class$$Type<$IExtensionPoint$$Type<T>>, supplier1: $Supplier$$Type<T>): void
 get "currentState"(): $ModLoadingStage
 get "mod"(): any
@@ -655,8 +655,8 @@ import { $ModContainer$$Type } from "net.minecraftforge.fml.ModContainer"
 import { $Optional, $Optional$$Type } from "java.util.Optional"
 import { $CompletableFuture } from "java.util.concurrent.CompletableFuture"
 import { $ModLoadingStage$$Type } from "net.minecraftforge.fml.ModLoadingStage"
-import { $Runnable$$Type } from "java.lang.Runnable"
 import { $Supplier$$Type } from "java.util.function.Supplier"
+import { $Runnable$$Type } from "java.lang.Runnable"
 
 /**
  * This class is not allowed By KubeJS!
@@ -666,8 +666,8 @@ import { $Supplier$$Type } from "java.util.function.Supplier"
 export class $DeferredWorkQueue {
 constructor(modLoadingStage0: $ModLoadingStage$$Type)
 
-public "enqueueWork"(modContainer0: $ModContainer$$Type, runnable1: $Runnable$$Type): $CompletableFuture<void>
 public "enqueueWork"<T>(modContainer0: $ModContainer$$Type, supplier1: $Supplier$$Type<T>): $CompletableFuture<T>
+public "enqueueWork"(modContainer0: $ModContainer$$Type, runnable1: $Runnable$$Type): $CompletableFuture<void>
 public static "lookup"(optional0: $Optional$$Type<$ModLoadingStage$$Type>): $Optional<$DeferredWorkQueue>
 public "runTasks"(): void
 }
@@ -723,8 +723,8 @@ export interface $IConfigSpec<T extends $IConfigSpec<T> = $IConfigSpec<T>> exten
 "apply"<T>(string0: string): T
 "apply"<T>(list0: $List$$Type<string>): T
 "configFormat"(): $ConfigFormat<any>
-"contains"(string0: string): boolean
 "contains"(list0: $List$$Type<string>): boolean
+"contains"(string0: string): boolean
 "correct"(commentedConfig0: $CommentedConfig$$Type): integer
 "entrySet"(): $Set<$UnmodifiableConfig$Entry>
 "get"<T>(string0: string): T
@@ -739,48 +739,48 @@ export interface $IConfigSpec<T extends $IConfigSpec<T> = $IConfigSpec<T>> exten
 "getCharOrElse"(string0: string, char1: character): character
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): T
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
 "getInt"(string0: string): integer
 "getInt"(list0: $List$$Type<string>): integer
 "getIntOrElse"(list0: $List$$Type<string>, int1: integer): integer
-"getIntOrElse"(string0: string, int1: integer): integer
 "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
 "getIntOrElse"(list0: $List$$Type<string>, intSupplier1: $IntSupplier$$Type): integer
+"getIntOrElse"(string0: string, int1: integer): integer
 "getLong"(list0: $List$$Type<string>): long
 "getLong"(string0: string): long
 "getLongOrElse"(string0: string, long1: long): long
-"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(string0: string, longSupplier1: $LongSupplier$$Type): long
+"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
-"getOptional"<T>(string0: string): $Optional<T>
 "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
-"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
+"getOptional"<T>(string0: string): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
+"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
 "getOptionalInt"(list0: $List$$Type<string>): $OptionalInt
 "getOptionalInt"(string0: string): $OptionalInt
 "getOptionalLong"(list0: $List$$Type<string>): $OptionalLong
 "getOptionalLong"(string0: string): $OptionalLong
-"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
 "getOrElse"<T>(string0: string, t1: T): T
-"getRaw"<T>(string0: string): T
+"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
+"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
+"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
 "getRaw"<T>(list0: $List$$Type<string>): T
+"getRaw"<T>(string0: string): T
 "getShort"(string0: string): short
 "getShort"(list0: $List$$Type<string>): short
-"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "getShortOrElse"(string0: string, short1: short): short
+"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "isCorrect"(commentedConfig0: $CommentedConfig$$Type): boolean
 "isCorrecting"(): boolean
 "isEmpty"(): boolean

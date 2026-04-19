@@ -106,9 +106,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -123,10 +123,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -144,8 +144,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -248,15 +248,15 @@ export interface $ContainerEntity extends $Container, $MenuProvider {
 "clearChestVehicleContent"(): void
 "clearContent"(): void
 "clearItemStacks"(): void
-"count"(): integer
 "count"(ingredient: $Ingredient$$Type): integer
+"count"(): integer
 "countItem"(item0: $Item$$Type): integer
-"countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "countNonEmpty"(): integer
+"countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "createMenu"(int0: integer, inventory1: $Inventory$$Type, player2: $Player$$Type): $AbstractContainerMenu
 "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-"find"(ingredient: $Ingredient$$Type): integer
 "find"(): integer
+"find"(ingredient: $Ingredient$$Type): integer
 "getAllItems"(): $List<$ItemStack>
 "getBlock"(level: $Level$$Type): $BlockContainerJS
 "getChestVehicleItem"(int0: integer): $ItemStack
@@ -325,15 +325,15 @@ set "lootTableSeed"(value: long)
 }
 
 export namespace $ContainerEntity {
-function stillValidBlockEntity(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 function stillValidBlockEntity(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 function stillValidBlockEntity(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+function stillValidBlockEntity(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 function tryClear(object0: any): void
 }
 export abstract class $ContainerEntity$$Static implements $ContainerEntity {
-static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 static "tryClear"(object0: any): void
 }
 }
@@ -420,17 +420,17 @@ public "chestVehicleDestroyed"(damageSource0: $DamageSource$$Type, level1: $Leve
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearChestVehicleContent"(): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "createMenu"(int0: integer, inventory1: $Inventory$$Type): $AbstractContainerMenu
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -504,9 +504,9 @@ public "isEmpty"(): boolean
 public "isEnabled"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isItemValid"(slot: integer, stack: $ItemStack$$Type): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -524,11 +524,11 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "position"(): $Vec3
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readChestVehicleSaveData"(compoundTag0: $CompoundTag$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeChestVehicleItem"(int0: integer, int1: integer): $ItemStack
@@ -552,8 +552,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
@@ -569,9 +569,9 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public "suckInItems"(): boolean
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
@@ -771,18 +771,18 @@ public "getSoundFromFluidType"(fluidType0: $FluidType$$Type, soundAction1: $Soun
 public "getStepHeight"(): float
 public "getTeamId"(): string
 public "getType"(): string
-public "handler$hib000$ac_getPos"(double0: double, double1: double, double2: double, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
-public "handler$hib000$ac_getPosOffs"(double0: double, double1: double, double2: double, double3: double, callbackInfoReturnable4: $CallbackInfoReturnable$$Type): void
-public "handler$hib000$ac_tick"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$hie000$ac_getPos"(double0: double, double1: double, double2: double, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
+public "handler$hie000$ac_getPosOffs"(double0: double, double1: double, double2: double, double3: double, callbackInfoReturnable4: $CallbackInfoReturnable$$Type): void
+public "handler$hie000$ac_tick"(callbackInfo0: $CallbackInfo$$Type): void
 public "hasCustomDisplay"(): boolean
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -800,10 +800,10 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public "moveMinecartOnMagLev"(blockPos0: $BlockPos$$Type): void
 public "moveMinecartOnRail"(blockPos0: $BlockPos$$Type): void
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public static "registerCollisionHandler"(iMinecartCollisionHandler0: $IMinecartCollisionHandler$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -833,8 +833,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -1002,17 +1002,17 @@ public "clear"(ingredient: $Ingredient$$Type): void
 public "clearChestVehicleContent"(): void
 public "clearContent"(): void
 public "clearItemStacks"(): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "createMenu"(int0: integer, inventory1: $Inventory$$Type, player2: $Player$$Type): $AbstractContainerMenu
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -1086,9 +1086,9 @@ public "isEmpty"(): boolean
 public "isEmpty"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isItemValid"(slot: integer, stack: $ItemStack$$Type): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -1106,11 +1106,11 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "position"(): $Vec3
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readChestVehicleSaveData"(compoundTag0: $CompoundTag$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeChestVehicleItem"(int0: integer, int1: integer): $ItemStack
@@ -1140,8 +1140,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
@@ -1158,9 +1158,9 @@ public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$
 public "spawn"(): void
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
@@ -1340,9 +1340,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -1357,10 +1357,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -1378,8 +1378,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -1569,9 +1569,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -1585,8 +1585,8 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "punchy$getChestRotX"(): float
 public "punchy$getChestRotY"(): float
 public "punchy$getChestRotZ"(): float
@@ -1612,8 +1612,8 @@ public "punchy$setLidOpen"(float0: float): void
 public "punchy$setLidVel"(float0: float): void
 public "punchy$setLight"(int0: integer): void
 public "punchy$setVy"(double0: double): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -1630,8 +1630,8 @@ public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setPaddleState"(boolean0: boolean, boolean1: boolean): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -1783,17 +1783,17 @@ public "chestVehicleDestroyed"(damageSource0: $DamageSource$$Type, level1: $Leve
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearChestVehicleContent"(): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "createMenu"(int0: integer, inventory1: $Inventory$$Type): $AbstractContainerMenu
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -1862,9 +1862,9 @@ public "isEmpty"(): boolean
 public "isEmpty"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isItemValid"(slot: integer, stack: $ItemStack$$Type): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -1882,11 +1882,11 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "position"(): $Vec3
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readChestVehicleSaveData"(compoundTag0: $CompoundTag$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeChestVehicleItem"(int0: integer, int1: integer): $ItemStack
@@ -1909,8 +1909,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
@@ -1926,9 +1926,9 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $Level
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
@@ -2154,9 +2154,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -2172,11 +2172,11 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "primeFuse"(): void
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -2194,8 +2194,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -2361,18 +2361,18 @@ public "clear"(ingredient: $Ingredient$$Type): void
 public "clearChestVehicleContent"(): void
 public "clearContent"(): void
 public "clearItemStacks"(): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "createMenu"(int0: integer, inventory1: $Inventory$$Type, player2: $Player$$Type): $AbstractContainerMenu
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "destroy"(damageSource0: $DamageSource$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -2442,9 +2442,9 @@ public "isEmpty"(): boolean
 public "isEmpty"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isItemValid"(slot: integer, stack: $ItemStack$$Type): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -2462,11 +2462,11 @@ public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "openCustomInventoryScreen"(player0: $Player$$Type): void
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "position"(): $Vec3
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readChestVehicleSaveData"(compoundTag0: $CompoundTag$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeChestVehicleItem"(int0: integer, int1: integer): $ItemStack
@@ -2489,8 +2489,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
@@ -2505,9 +2505,9 @@ public "shouldUpdateFluidWhileRiding"(fluidState0: $FluidState$$Type, entity1: $
 public "spawn"(): void
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void
 public "tell"(message: $Component$$Type): void
@@ -2683,9 +2683,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -2700,10 +2700,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -2721,8 +2721,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -2894,9 +2894,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -2911,10 +2911,10 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
@@ -2932,8 +2932,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void

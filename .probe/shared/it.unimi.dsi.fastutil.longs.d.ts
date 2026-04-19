@@ -312,6 +312,8 @@ export interface $Long2CharFunction extends $Function$0<long, character>, $LongT
 "put"(long0: long, character1: character): character
 "put"(long0: long, char1: character): character
 "remove"(long0: long): character
+/** @deprecated */
+"remove"(object0: any): character
 "size"(): integer
 }
 
@@ -400,6 +402,8 @@ export interface $Long2ByteFunction extends $Function$0<long, byte>, $LongToIntF
 "put"(long0: long, byte1: byte): byte
 "put"(long0: long, byte1: byte): byte
 "remove"(long0: long): byte
+/** @deprecated */
+"remove"(object0: any): byte
 "size"(): integer
 }
 
@@ -479,20 +483,22 @@ export interface $Long2BooleanFunction extends $Function$0<long, boolean>, $Long
 "containsKey"(long0: long): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): boolean
 "defaultReturnValue"(boolean0: boolean): void
+"defaultReturnValue"(): boolean
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(long0: long): boolean
-"getOrDefault"(long0: long, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
+"getOrDefault"(long0: long, boolean1: boolean): boolean
 "negate"(): $LongPredicate
 "or"(longPredicate0: $LongPredicate$$Type): $LongPredicate
 /** @deprecated */
 "put"(long0: long, boolean1: boolean): boolean
 "put"(long0: long, boolean1: boolean): boolean
 "remove"(long0: long): boolean
+/** @deprecated */
+"remove"(object0: any): boolean
 "size"(): integer
 "test"(long0: long): boolean
 }
@@ -569,12 +575,12 @@ import { $Object2IntFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2
 import { $Reference2LongFunction$$Type } from "it.unimi.dsi.fastutil.objects.Reference2LongFunction"
 import { $Short2LongFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2LongFunction"
 import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
+import { $Long2ObjectSortedMap$FastSortedEntrySet } from "it.unimi.dsi.fastutil.longs.Long2ObjectSortedMap$FastSortedEntrySet"
 import { $Long2FloatFunction } from "it.unimi.dsi.fastutil.longs.Long2FloatFunction"
 import { $Reference2ObjectFunction } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
 import { $Map$Entry, $Map$Entry$$Type } from "java.util.Map$Entry"
 import { $LongFunction$$Type } from "java.util.function.LongFunction"
 import { $Float2LongFunction$$Type } from "it.unimi.dsi.fastutil.floats.Float2LongFunction"
-import { $LongComparator } from "it.unimi.dsi.fastutil.longs.LongComparator"
 import { $Long2ObjectFunction, $Long2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $Long2LongFunction, $Long2LongFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2LongFunction"
 import { $Float2ObjectFunction } from "it.unimi.dsi.fastutil.floats.Float2ObjectFunction"
@@ -607,7 +613,6 @@ public "andThenShort"(object2ShortFunction0: $Object2ShortFunction$$Type<V>): $L
 public "apply"(long0: long): V
 public "apply"(long0: long): V
 public "clear"(): void
-public "comparator"(): $LongComparator
 /** @deprecated */
 public "compose"<T>(function0: $Function$$Type<T, long>): $Function<T, V>
 public "composeByte"(byte2LongFunction0: $Byte2LongFunction$$Type): $Byte2ObjectFunction<V>
@@ -621,8 +626,8 @@ public "composeReference"<T>(reference2LongFunction0: $Reference2LongFunction$$T
 public "composeShort"(short2LongFunction0: $Short2LongFunction$$Type): $Short2ObjectFunction<V>
 public "compute"(long0: long, biFunction1: $BiFunction$$Type<long, V, V>): V
 public "compute"(long0: long, biFunction1: $BiFunction$$Type<long, V, V>): V
-public "computeIfAbsent"(long0: long, long2ObjectFunction1: $Long2ObjectFunction$$Type<V>): V
 public "computeIfAbsent"(long0: long, longFunction1: $LongFunction$$Type<V>): V
+public "computeIfAbsent"(long0: long, long2ObjectFunction1: $Long2ObjectFunction$$Type<V>): V
 public "computeIfAbsent"(long0: long, function1: $Function$$Type<long, V>): V
 /** @deprecated */
 public "computeIfAbsentPartial"(long0: long, long2ObjectFunction1: $Long2ObjectFunction$$Type<V>): V
@@ -653,6 +658,7 @@ public "headMap"(long0: long): $Long2ObjectSortedMap<V>
 public static "identity"<T>(): $Function<T, T>
 public "lastEntry"(): $Map$Entry<long, V>
 public "lastLongKey"(): long
+public "long2ObjectEntrySet"(): $Long2ObjectSortedMap$FastSortedEntrySet<V>
 public "merge"(long0: long, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public "merge"(long0: long, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
@@ -701,8 +707,8 @@ public "subMap"(long0: long, long1: long): $Long2ObjectSortedMap<V>
 public "tailMap"(long0: long): $Long2ObjectSortedMap<V>
 /** @deprecated */
 public "tailMap"(long0: long): $Long2ObjectSortedMap<V>
-public "trim"(int0: integer): boolean
 public "trim"(): boolean
+public "trim"(int0: integer): boolean
 }
 }
 
@@ -783,6 +789,8 @@ export interface $Long2ShortFunction extends $Function$0<long, short>, $LongToIn
 "put"(long0: long, short1: short): short
 "put"(long0: long, short1: short): short
 "remove"(long0: long): short
+/** @deprecated */
+"remove"(object0: any): short
 "size"(): integer
 }
 
@@ -871,6 +879,8 @@ export interface $Long2FloatFunction extends $Function$0<long, float>, $LongToDo
 "put"(long0: long, float1: float): float
 "put"(long0: long, float1: float): float
 "remove"(long0: long): float
+/** @deprecated */
+"remove"(object0: any): float
 "size"(): integer
 }
 
@@ -970,6 +980,7 @@ import { $Map, $Map$$Type } from "java.util.Map"
 import { $Short2LongFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2LongFunction"
 import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $Long2IntFunction } from "it.unimi.dsi.fastutil.longs.Long2IntFunction"
+import { $Long2ObjectMap$Entry } from "it.unimi.dsi.fastutil.longs.Long2ObjectMap$Entry"
 import { $Long2FloatFunction } from "it.unimi.dsi.fastutil.longs.Long2FloatFunction"
 import { $SequencedSet } from "java.util.SequencedSet"
 import { $Reference2ObjectFunction } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
@@ -1058,6 +1069,7 @@ export interface $Long2ObjectSortedMap<V = any> extends $Long2ObjectMap<V>, $Sor
 "keySet"(): $LongSortedSet
 "lastEntry"(): $Map$Entry<long, V>
 "lastLongKey"(): long
+"long2ObjectEntrySet"(): $ObjectSortedSet<$Long2ObjectMap$Entry<V>>
 "merge"(long0: long, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 "merge"(long0: long, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 "pollFirstEntry"(): $Map$Entry<long, V>
@@ -1232,6 +1244,8 @@ export interface $Long2DoubleFunction extends $Function$0<long, double>, $LongTo
 "put"(long0: long, double1: double): double
 "put"(long0: long, double1: double): double
 "remove"(long0: long): double
+/** @deprecated */
+"remove"(object0: any): double
 "size"(): integer
 }
 
@@ -1279,8 +1293,8 @@ export interface $LongList extends $List<long>, $Comparable<$List<long>>, $LongC
 "addAll"(collection0: $Collection$$Type<long>): boolean
 "addAll"(int0: integer, collection1: $Collection$$Type<long>): boolean
 "addAll"(longCollection0: $LongCollection$$Type): boolean
-"addElements"(int0: integer, long1s: long[], int2: integer, int3: integer): void
 "addElements"(int0: integer, long1s: long[]): void
+"addElements"(int0: integer, long1s: long[], int2: integer, int3: integer): void
 "addFirst"(long0: long): void
 "addLast"(long0: long): void
 "clear"(): void
@@ -1335,18 +1349,17 @@ export interface $LongList extends $List<long>, $Comparable<$List<long>>, $LongC
 "replaceAll"(longUnaryOperator0: $LongUnaryOperator$0$$Type): void
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "retainAll"(longCollection0: $LongCollection$$Type): boolean
+"set"(int0: integer, long1: long): long
 /** @deprecated */
 "set"(int0: integer, long1: long): long
-"set"(int0: integer, long1: long): long
-"setElements"(int0: integer, long1s: long[]): void
-"setElements"(int0: integer, long1s: long[], int2: integer, int3: integer): void
 "setElements"(long0s: long[]): void
+"setElements"(int0: integer, long1s: long[], int2: integer, int3: integer): void
+"setElements"(int0: integer, long1s: long[]): void
 "size"(int0: integer): void
 "size"(): integer
 "sort"(longComparator0: $LongComparator$$Type): void
 /** @deprecated */
 "sort"(comparator0: $Comparator$$Type<long>): void
-"spliterator"(): $LongSpliterator
 /** @deprecated */
 "stream"(): $Stream<long>
 "subList"(int0: integer, int1: integer): $LongList
@@ -1354,9 +1367,9 @@ export interface $LongList extends $List<long>, $Comparable<$List<long>>, $LongC
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(long0s: long[]): long[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toLongArray"(): long[]
 /** @deprecated */
 "toLongArray"(long0s: long[]): long[]
-"toLongArray"(): long[]
 "unstableSort"(longComparator0: $LongComparator$$Type): void
 /** @deprecated */
 "unstableSort"(comparator0: $Comparator$$Type<long>): void
@@ -1470,20 +1483,20 @@ export interface $Long2ObjectFunction<V = any> extends $Function$0<long, V>, $Lo
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(long0: long): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(long0: long): V
-/** @deprecated */
-"getOrDefault"(object0: any, v1: V): V
 "getOrDefault"(long0: long, v1: V): V
 /** @deprecated */
+"getOrDefault"(object0: any, v1: V): V
+/** @deprecated */
 "put"(long0: long, v1: V): V
 "put"(long0: long, v1: V): V
-"remove"(long0: long): V
 /** @deprecated */
 "remove"(object0: any): V
+"remove"(long0: long): V
 "size"(): integer
 }
 
@@ -1567,8 +1580,8 @@ export interface $Long2LongFunction extends $Function<long, long>, $LongUnaryOpe
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(long0: long): boolean
-"defaultReturnValue"(): long
 "defaultReturnValue"(long0: long): void
+"defaultReturnValue"(): long
 "get"(long0: long): long
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
@@ -1675,9 +1688,9 @@ export interface $LongSortedSet extends $LongSet, $SortedSet<long>, $LongBidirec
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toLongArray"(): long[]
 /** @deprecated */
 "toLongArray"(long0s: long[]): long[]
-"toLongArray"(): long[]
 get "last"(): long
 get "empty"(): boolean
 }
@@ -1921,20 +1934,20 @@ export interface $Long2ReferenceFunction<V = any> extends $Function$0<long, V>, 
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(long0: long): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(long0: long): V
-/** @deprecated */
-"getOrDefault"(object0: any, v1: V): V
 "getOrDefault"(long0: long, v1: V): V
 /** @deprecated */
+"getOrDefault"(object0: any, v1: V): V
+/** @deprecated */
 "put"(long0: long, v1: V): V
 "put"(long0: long, v1: V): V
-"remove"(long0: long): V
 /** @deprecated */
 "remove"(object0: any): V
+"remove"(long0: long): V
 "size"(): integer
 }
 
@@ -2003,6 +2016,7 @@ import { $Map, $Map$$Type } from "java.util.Map"
 import { $Short2LongFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2LongFunction"
 import { $BiConsumer$$Type } from "java.util.function.BiConsumer"
 import { $Long2IntFunction } from "it.unimi.dsi.fastutil.longs.Long2IntFunction"
+import { $Long2ObjectMap$Entry } from "it.unimi.dsi.fastutil.longs.Long2ObjectMap$Entry"
 import { $Long2FloatFunction } from "it.unimi.dsi.fastutil.longs.Long2FloatFunction"
 import { $SequencedSet } from "java.util.SequencedSet"
 import { $Reference2ObjectFunction } from "it.unimi.dsi.fastutil.objects.Reference2ObjectFunction"
@@ -2087,6 +2101,7 @@ public "headMap"(long0: long): $Long2ObjectSortedMap<V>
 public static "identity"<T>(): $Function<T, T>
 public "lastEntry"(): $Map$Entry<long, V>
 public "lastLongKey"(): long
+public "long2ObjectEntrySet"(): $ObjectSortedSet<$Long2ObjectMap$Entry<V>>
 public "merge"(long0: long, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public "merge"(long0: long, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
@@ -2203,16 +2218,16 @@ public "defaultReturnValue"(): V
 /** @deprecated */
 public "get"(object0: any): V
 public "get"(long0: long): V
+public "getOrDefault"(long0: long, v1: V): V
 /** @deprecated */
 public "getOrDefault"(object0: any, v1: V): V
-public "getOrDefault"(long0: long, v1: V): V
 public static "identity"<T>(): $Function<T, T>
 /** @deprecated */
 public "put"(long0: long, v1: V): V
 public "put"(long0: long, v1: V): V
-public "remove"(long0: long): V
 /** @deprecated */
 public "remove"(object0: any): V
+public "remove"(long0: long): V
 public "size"(): integer
 }
 }
@@ -2279,9 +2294,9 @@ export interface $LongSet extends $LongCollection, $Set<long> {
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
+"toLongArray"(): long[]
 /** @deprecated */
 "toLongArray"(long0s: long[]): long[]
-"toLongArray"(): long[]
 get "empty"(): boolean
 }
 
@@ -2556,6 +2571,8 @@ export interface $Long2IntFunction extends $Function$0<long, integer>, $LongToIn
 "put"(long0: long, integer1: integer): integer
 "put"(long0: long, int1: integer): integer
 "remove"(long0: long): integer
+/** @deprecated */
+"remove"(object0: any): integer
 "size"(): integer
 }
 
@@ -2626,9 +2643,9 @@ export interface $LongCollection extends $Collection<long>, $LongIterable {
 "toArray"<T>(t0s: T[]): T[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 "toArray"(): any[]
+"toLongArray"(): long[]
 /** @deprecated */
 "toLongArray"(long0s: long[]): long[]
-"toLongArray"(): long[]
 get "empty"(): boolean
 }
 

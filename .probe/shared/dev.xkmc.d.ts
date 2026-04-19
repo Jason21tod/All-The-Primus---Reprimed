@@ -134,8 +134,8 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $Pair, $Pair$$Type } from "com.mojang.datafixers.util.Pair"
 
 export class $ArrowBagEvents$ArrowFindEvent extends $Event implements $EventItf {
-constructor()
 constructor(itemStack0: $ItemStack$$Type, projectileWeaponItem1: $ProjectileWeaponItem$$Type, livingEntity2: $LivingEntity$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

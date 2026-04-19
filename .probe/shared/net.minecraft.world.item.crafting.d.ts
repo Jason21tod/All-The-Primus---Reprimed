@@ -138,7 +138,7 @@ public "getSchema"(): $RecipeSchema
 public "getSerializer"(): $RecipeSerializer<any>
 public "getToastSymbol"(): $ItemStack
 public "getType"(): $ResourceLocation
-public "handler$fin000$customIngredientMatch"(craftingInventory: $CraftingContainer$$Type, world: $Level$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$fja000$customIngredientMatch"(craftingInventory: $CraftingContainer$$Type, world: $Level$$Type, cir: $CallbackInfoReturnable$$Type): void
 public "hasInput"(match: $ReplacementMatch$$Type): boolean
 public "hasOutput"(match: $ReplacementMatch$$Type): boolean
 public "isIncomplete"(): boolean
@@ -333,8 +333,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $SmithingTransformRecipe$Serializer implements $RecipeSerializer<$SmithingTransformRecipe> {
 constructor()
 
-public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): $SmithingTransformRecipe
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): $SmithingTransformRecipe
+public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): $SmithingTransformRecipe
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, smithingTransformRecipe1: $SmithingTransformRecipe$$Type): void
 }
@@ -398,8 +398,8 @@ public "isSpecial"(): boolean
 public static "itemFromJson"(jsonObject0: $JsonObject$$Type): $Item
 public static "itemStackFromJson"(jsonObject0: $JsonObject$$Type): $ItemStack
 public static "keyFromJson"(jsonObject0: $JsonObject$$Type): $Map<string, $Ingredient>
-public "matches"(craftingContainer0: $CraftingContainer$$Type, int1: integer, int2: integer, boolean3: boolean): boolean
 public "matches"(craftingContainer0: $CraftingContainer$$Type, level1: $Level$$Type): boolean
+public "matches"(craftingContainer0: $CraftingContainer$$Type, int1: integer, int2: integer, boolean3: boolean): boolean
 public static "patternFromJson"(jsonArray0: $JsonArray$$Type): string[]
 public "replaceInput"(match: $ReplacementMatch$$Type, with_: $InputReplacement$$Type): boolean
 public "replaceOutput"(match: $ReplacementMatch$$Type, with_: $OutputReplacement$$Type): boolean
@@ -617,8 +617,8 @@ public "asIngredient"(): $Ingredient
 public "asStack"(): $InputItem
 public "canBeUsedForMatching"(): boolean
 public "checkInvalidation"(): boolean
-public static "fromJson"(jsonElement0: $JsonElement$$Type, boolean1: boolean): $Ingredient
 public static "fromJson"(jsonElement0: $JsonElement$$Type): $Ingredient
+public static "fromJson"(jsonElement0: $JsonElement$$Type, boolean1: boolean): $Ingredient
 public static "fromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $Ingredient
 public static "fromValues"(stream0: $Stream$$Type<$Ingredient$Value$$Type>): $Ingredient
 public "getCustomIngredient"(): $CustomIngredient
@@ -629,9 +629,9 @@ public "getItemTypes"(): $Set<$Item>
 public "getSerializer"(): $IIngredientSerializer<$Ingredient>
 public "getStackingIds"(): $IntList
 public "getStacks"(): $ItemStackSet
-public "handler$bpd000$vminus$getItems"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$bpd000$vminus$test"(itemStack0: $ItemStack$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$fgc000$blah"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$bpg000$vminus$getItems"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$bpg000$vminus$test"(itemStack0: $ItemStack$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$fgf000$blah"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
 public static "invalidateAll"(): void
 public "isEmpty"(): boolean
 public static "isEqual"<T>(object0: any): $Predicate<T>
@@ -643,8 +643,8 @@ public "mfix$clearReference"(): void
 public "mfix$hasNoElements"(): boolean
 public "negate"(): $Predicate<$ItemStack>
 public static "not"<T>(predicate0: $Predicate$$Type<T>): $Predicate<T>
-public static "of"(): $Ingredient
 public static "of"(...itemStack0s: $ItemStack$$Type[]): $Ingredient
+public static "of"(): $Ingredient
 public static "of"(tagKey0: $TagKey$$Type<$Item$$Type>): $Ingredient
 public static "of"(...itemLike0s: $ItemLike$$Type[]): $Ingredient
 public static "of"(stream0: $Stream$$Type<$ItemStack$$Type>): $Ingredient
@@ -735,8 +735,8 @@ import { $ICondition$IContext$$Type } from "net.minecraftforge.common.crafting.c
 import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 
 export class $SingleItemRecipe$Serializer<T extends $SingleItemRecipe = $SingleItemRecipe> implements $RecipeSerializer<T> {
-public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): T
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): T
+public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): T
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, t1: T): void
 }
@@ -964,8 +964,8 @@ public "hasInput"(match: $ReplacementMatch$$Type): boolean
 public "hasOutput"(match: $ReplacementMatch$$Type): boolean
 public "isIncomplete"(): boolean
 public "matches"(craftingContainer0: $CraftingContainer$$Type, level1: $Level$$Type): boolean
-public "modifyExpressionValue$hpd000$getLimitAssemble"(int0: integer): integer
-public "modifyExpressionValue$hpd000$getLimitMatches"(int0: integer): integer
+public "modifyExpressionValue$hpg000$getLimitAssemble"(int0: integer): integer
+public "modifyExpressionValue$hpg000$getLimitMatches"(int0: integer): integer
 public "replaceInput"(match: $ReplacementMatch$$Type, with_: $InputReplacement$$Type): boolean
 public "replaceOutput"(match: $ReplacementMatch$$Type, with_: $OutputReplacement$$Type): boolean
 public "setGroup"(group: string): void
@@ -1211,8 +1211,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $SmithingTrimRecipe$Serializer implements $RecipeSerializer<$SmithingTrimRecipe> {
 constructor()
 
-public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): $SmithingTrimRecipe
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): $SmithingTrimRecipe
+public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): $SmithingTrimRecipe
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, smithingTrimRecipe1: $SmithingTrimRecipe$$Type): void
 }
@@ -1231,8 +1231,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $SimpleCraftingRecipeSerializer<T extends $CraftingRecipe = $CraftingRecipe> implements $RecipeSerializer<T> {
 constructor(factory0: $SimpleCraftingRecipeSerializer$Factory$$Type<T>)
 
-public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): T
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): T
+public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): T
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, t1: T): void
 }
@@ -1408,7 +1408,7 @@ public "getRecipes"(): $Collection<$Recipe<any>>
 public "getRecipesFor"<C extends $Container, T extends $Recipe<C>>(recipeType0: $RecipeType$$Type<T>, c1: C, level2: $Level$$Type): $List<T>
 public "getRemainingItemsFor"<C extends $Container, T extends $Recipe<C>>(recipeType0: $RecipeType$$Type<T>, c1: C, level2: $Level$$Type): $NonNullList<$ItemStack>
 public "hadErrorsLoading"(): boolean
-public "handler$hhp000$interceptApply"(map: $Map$$Type, resourceManager: $ResourceManager$$Type, profilerFiller: $ProfilerFiller$$Type, info: $CallbackInfo$$Type): void
+public "handler$hic000$interceptApply"(map: $Map$$Type, resourceManager: $ResourceManager$$Type, profilerFiller: $ProfilerFiller$$Type, info: $CallbackInfo$$Type): void
 public "reload"(preparationBarrier0: $PreparableReloadListener$PreparationBarrier$$Type, resourceManager1: $ResourceManager$$Type, profilerFiller2: $ProfilerFiller$$Type, profilerFiller3: $ProfilerFiller$$Type, executor4: $Executor$$Type, executor5: $Executor$$Type): $CompletableFuture<void>
 public "replaceRecipes"(iterable0: $Iterable$$Type<$Recipe$$Type<any>>): void
 public "vMinus$getRegistryAccess"(): $RegistryAccess$Frozen
@@ -1555,9 +1555,7 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $ShapelessRecipe$Serializer implements $RecipeSerializer<$ShapelessRecipe> {
 constructor()
 
-public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): $ShapelessRecipe
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): $ShapelessRecipe
-public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): $ShapelessRecipe
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, shapelessRecipe1: $ShapelessRecipe$$Type): void
 }
@@ -1738,7 +1736,7 @@ public "getSchema"(): $RecipeSchema
 public "getSerializer"(): $RecipeSerializer<any>
 public "getToastSymbol"(): $ItemStack
 public "getType"(): $ResourceLocation
-public "handler$igl000$fixSpellbookSlotCount"(container0: $Container$$Type, registryAccess1: $RegistryAccess$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$igo000$fixSpellbookSlotCount"(container0: $Container$$Type, registryAccess1: $RegistryAccess$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
 public "hasInput"(match: $ReplacementMatch$$Type): boolean
 public "hasOutput"(match: $ReplacementMatch$$Type): boolean
 public "isAdditionIngredient"(itemStack0: $ItemStack$$Type): boolean

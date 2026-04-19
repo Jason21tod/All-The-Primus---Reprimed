@@ -8294,6 +8294,7 @@ virtuoel.pehkui.api.ScaleData
 ..util.NbtCompoundExtensions
 ...PehkuiBlockStateExtensions
 ...PehkuiEntityExtensions
+win.demistorm.visual_health.client.mixin.EMFModelPartAccessor
 xyz.apex.forge.apexcore.core.client.BlockVisualizer$Context
 ....lib.event.client.BlockVisualizerEvent
 .......BlockVisualizerEvent$ModifyContext

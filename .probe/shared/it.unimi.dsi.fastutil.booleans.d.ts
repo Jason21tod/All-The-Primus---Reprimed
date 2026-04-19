@@ -69,12 +69,14 @@ export interface $Boolean2DoubleFunction extends $Function$0<boolean, double> {
 /** @deprecated */
 "get"(object0: any): double
 "get"(boolean0: boolean): double
-"getOrDefault"(boolean0: boolean, double1: double): double
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
+"getOrDefault"(boolean0: boolean, double1: double): double
 "put"(boolean0: boolean, double1: double): double
 /** @deprecated */
 "put"(boolean0: boolean, double1: double): double
+/** @deprecated */
+"remove"(object0: any): double
 "remove"(boolean0: boolean): double
 "size"(): integer
 }
@@ -149,17 +151,17 @@ export interface $Boolean2ObjectFunction<V = any> extends $Function$0<boolean, V
 "composeObject"<T>(object2BooleanFunction0: $Object2BooleanFunction$$Type<T>): $Object2ObjectFunction<T, V>
 "composeReference"<T>(reference2BooleanFunction0: $Reference2BooleanFunction$$Type<T>): $Reference2ObjectFunction<T, V>
 "composeShort"(short2BooleanFunction0: $Short2BooleanFunction$$Type): $Short2ObjectFunction<V>
+"containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsKey"(boolean0: boolean): boolean
 "defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(boolean0: boolean): V
+"getOrDefault"(boolean0: boolean, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(boolean0: boolean, v1: V): V
 /** @deprecated */
 "put"(boolean0: boolean, v1: V): V
 "put"(boolean0: boolean, v1: V): V
@@ -239,17 +241,17 @@ export interface $Boolean2ReferenceFunction<V = any> extends $Function$0<boolean
 "composeObject"<T>(object2BooleanFunction0: $Object2BooleanFunction$$Type<T>): $Object2ReferenceFunction<T, V>
 "composeReference"<T>(reference2BooleanFunction0: $Reference2BooleanFunction$$Type<T>): $Reference2ReferenceFunction<T, V>
 "composeShort"(short2BooleanFunction0: $Short2BooleanFunction$$Type): $Short2ReferenceFunction<V>
+"containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"containsKey"(boolean0: boolean): boolean
 "defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
 /** @deprecated */
 "get"(object0: any): V
 "get"(boolean0: boolean): V
+"getOrDefault"(boolean0: boolean, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(boolean0: boolean, v1: V): V
 /** @deprecated */
 "put"(boolean0: boolean, v1: V): V
 "put"(boolean0: boolean, v1: V): V
@@ -338,12 +340,14 @@ export interface $Boolean2ByteFunction extends $Function$0<boolean, byte> {
 /** @deprecated */
 "get"(object0: any): byte
 "get"(boolean0: boolean): byte
-"getOrDefault"(boolean0: boolean, byte1: byte): byte
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
+"getOrDefault"(boolean0: boolean, byte1: byte): byte
 "put"(boolean0: boolean, byte1: byte): byte
 /** @deprecated */
 "put"(boolean0: boolean, byte1: byte): byte
+/** @deprecated */
+"remove"(object0: any): byte
 "remove"(boolean0: boolean): byte
 "size"(): integer
 }
@@ -427,12 +431,14 @@ export interface $Boolean2FloatFunction extends $Function$0<boolean, float> {
 /** @deprecated */
 "get"(object0: any): float
 "get"(boolean0: boolean): float
-"getOrDefault"(boolean0: boolean, float1: float): float
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
+"getOrDefault"(boolean0: boolean, float1: float): float
 "put"(boolean0: boolean, float1: float): float
 /** @deprecated */
 "put"(boolean0: boolean, float1: float): float
+/** @deprecated */
+"remove"(object0: any): float
 "remove"(boolean0: boolean): float
 "size"(): integer
 }
@@ -516,12 +522,14 @@ export interface $Boolean2ShortFunction extends $Function$0<boolean, short> {
 /** @deprecated */
 "get"(object0: any): short
 "get"(boolean0: boolean): short
-"getOrDefault"(boolean0: boolean, short1: short): short
 /** @deprecated */
 "getOrDefault"(object0: any, short1: short): short
+"getOrDefault"(boolean0: boolean, short1: short): short
 "put"(boolean0: boolean, short1: short): short
 /** @deprecated */
 "put"(boolean0: boolean, short1: short): short
+/** @deprecated */
+"remove"(object0: any): short
 "remove"(boolean0: boolean): short
 "size"(): integer
 }
@@ -605,12 +613,14 @@ export interface $Boolean2LongFunction extends $Function$0<boolean, long> {
 /** @deprecated */
 "get"(object0: any): long
 "get"(boolean0: boolean): long
-"getOrDefault"(boolean0: boolean, long1: long): long
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
+"getOrDefault"(boolean0: boolean, long1: long): long
 "put"(boolean0: boolean, long1: long): long
 /** @deprecated */
 "put"(boolean0: boolean, long1: long): long
+/** @deprecated */
+"remove"(object0: any): long
 "remove"(boolean0: boolean): long
 "size"(): integer
 }
@@ -694,12 +704,14 @@ export interface $Boolean2IntFunction extends $Function$0<boolean, integer> {
 /** @deprecated */
 "get"(object0: any): integer
 "get"(boolean0: boolean): integer
-"getOrDefault"(boolean0: boolean, int1: integer): integer
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
+"getOrDefault"(boolean0: boolean, int1: integer): integer
 "put"(boolean0: boolean, int1: integer): integer
 /** @deprecated */
 "put"(boolean0: boolean, integer1: integer): integer
+/** @deprecated */
+"remove"(object0: any): integer
 "remove"(boolean0: boolean): integer
 "size"(): integer
 }
@@ -783,12 +795,14 @@ export interface $Boolean2CharFunction extends $Function$0<boolean, character> {
 /** @deprecated */
 "get"(object0: any): character
 "get"(boolean0: boolean): character
-"getOrDefault"(boolean0: boolean, char1: character): character
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
+"getOrDefault"(boolean0: boolean, char1: character): character
 "put"(boolean0: boolean, char1: character): character
 /** @deprecated */
 "put"(boolean0: boolean, character1: character): character
+/** @deprecated */
+"remove"(object0: any): character
 "remove"(boolean0: boolean): character
 "size"(): integer
 }

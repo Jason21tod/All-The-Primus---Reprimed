@@ -85,8 +85,8 @@ static readonly "DEBUG_CRASH_TIME": integer
 constructor(minecraft0: $Minecraft$$Type)
 
 public "getClipboard"(): string
-public "handler$ffh000$onChar"(window: long, codePoint: integer, modifiers: integer, info: $CallbackInfo$$Type): void
-public "handler$ffh000$onKey"(window: long, key: integer, scancode: integer, action: integer, modifiers: integer, info: $CallbackInfo$$Type): void
+public "handler$ffk000$onChar"(window: long, codePoint: integer, modifiers: integer, info: $CallbackInfo$$Type): void
+public "handler$ffk000$onKey"(window: long, key: integer, scancode: integer, action: integer, modifiers: integer, info: $CallbackInfo$$Type): void
 public "handler$zbl000$redirect$handleFullScreenToggle"(pWindowPointer: long, pKey: integer, pScanCode: integer, pAction: integer, pModifiers: integer, ci: $CallbackInfo$$Type): void
 public "keyPress"(long0: long, int1: integer, int2: integer, int3: integer, int4: integer): void
 public "setClipboard"(string0: string): void
@@ -247,8 +247,8 @@ public "fullscreen"(): $OptionInstance<boolean>
 public "gamma"(): $OptionInstance<double>
 public static "genericValueLabel"(component0: $Component$$Type, component1: $Component$$Type): $Component
 public static "genericValueLabel"(component0: $Component$$Type, int1: integer): $Component
-public "getBackgroundColor"(float0: float): integer
 public "getBackgroundColor"(int0: integer): integer
+public "getBackgroundColor"(float0: float): integer
 public "getBackgroundOpacity"(float0: float): float
 public "getCameraType"(): $CameraType
 public "getCloudsType"(): $CloudStatus
@@ -260,8 +260,8 @@ public "glintSpeed"(): $OptionInstance<double>
 public "glintStrength"(): $OptionInstance<double>
 public "graphicsMode"(): $OptionInstance<$GraphicsStatus>
 public "guiScale"(): $OptionInstance<integer>
-public "handler$fai001$setCameraType"(cameraType0: $CameraType$$Type, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$ifj000$onGetCameraType"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$fal001$setCameraType"(cameraType0: $CameraType$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$ifm000$onGetCameraType"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
 public "hideLightningFlash"(): $OptionInstance<boolean>
 public "hideMatchedNames"(): $OptionInstance<boolean>
 public "highContrast"(): $OptionInstance<boolean>
@@ -473,18 +473,18 @@ export class $OptionInstance<T = any> implements $OptionInstanceAccessor {
 static readonly "BOOLEAN_TO_STRING": $OptionInstance$CaptionBasedToString<boolean>
 static readonly "BOOLEAN_VALUES": $OptionInstance$Enum<boolean>
 
-constructor(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<T>, captionBasedToString2: $OptionInstance$CaptionBasedToString$$Type<T>, valueSet3: $OptionInstance$ValueSet$$Type<T>, codec4: $Codec$$Type<T>, t5: T, consumer6: $Consumer$$Type<T>)
 constructor(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<T>, captionBasedToString2: $OptionInstance$CaptionBasedToString$$Type<T>, valueSet3: $OptionInstance$ValueSet$$Type<T>, t4: T, consumer5: $Consumer$$Type<T>)
+constructor(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<T>, captionBasedToString2: $OptionInstance$CaptionBasedToString$$Type<T>, valueSet3: $OptionInstance$ValueSet$$Type<T>, codec4: $Codec$$Type<T>, t5: T, consumer6: $Consumer$$Type<T>)
 
 public static "cachedConstantTooltip"<T>(component0: $Component$$Type): $OptionInstance$TooltipSupplier<T>
 public "codec"(): $Codec<T>
+public static "createBoolean"(string0: string, boolean1: boolean, consumer2: $Consumer$$Type<boolean>): $OptionInstance<boolean>
 public static "createBoolean"(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<boolean>, boolean2: boolean): $OptionInstance<boolean>
 public static "createBoolean"(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<boolean>, boolean2: boolean, consumer3: $Consumer$$Type<boolean>): $OptionInstance<boolean>
-public static "createBoolean"(string0: string, boolean1: boolean, consumer2: $Consumer$$Type<boolean>): $OptionInstance<boolean>
 public static "createBoolean"(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<boolean>, captionBasedToString2: $OptionInstance$CaptionBasedToString$$Type<boolean>, boolean3: boolean, consumer4: $Consumer$$Type<boolean>): $OptionInstance<boolean>
 public static "createBoolean"(string0: string, boolean1: boolean): $OptionInstance<boolean>
-public "createButton"(options0: $Options$$Type, int1: integer, int2: integer, int3: integer, consumer4: $Consumer$$Type<T>): $AbstractWidget
 public "createButton"(options0: $Options$$Type, int1: integer, int2: integer, int3: integer): $AbstractWidget
+public "createButton"(options0: $Options$$Type, int1: integer, int2: integer, int3: integer, consumer4: $Consumer$$Type<T>): $AbstractWidget
 public static "forOptionEnum"<T extends $OptionEnum>(): $OptionInstance$CaptionBasedToString<T>
 public "get"(): T
 public static "noTooltip"<T>(): $OptionInstance$TooltipSupplier<T>
@@ -522,12 +522,12 @@ static readonly "CATEGORY_MISC": string
 static readonly "CATEGORY_MOVEMENT": string
 static readonly "CATEGORY_MULTIPLAYER": string
 
-constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, keyModifier2: $KeyModifier$$Type, type3: $InputConstants$Type$$Type, int4: integer, string5: string)
 constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, keyModifier2: $KeyModifier$$Type, key3: $InputConstants$Key$$Type, string4: string)
+constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, keyModifier2: $KeyModifier$$Type, type3: $InputConstants$Type$$Type, int4: integer, string5: string)
 constructor(string0: string, int1: integer, string2: string)
 constructor(string0: string, type1: $InputConstants$Type$$Type, int2: integer, string3: string)
-constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, key2: $InputConstants$Key$$Type, string3: string)
 constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, type2: $InputConstants$Type$$Type, int3: integer, string4: string)
+constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, key2: $InputConstants$Key$$Type, string3: string)
 
 public static "click"(key0: $InputConstants$Key$$Type): void
 public "compareTo"(keyMapping0: $KeyMapping$$Type): integer
@@ -665,7 +665,7 @@ constructor()
 
 public "getCollection"(recipeBookCategories0: $RecipeBookCategories$$Type): $List<$RecipeCollection>
 public "getCollections"(): $List<$RecipeCollection>
-public "handler$heh000$onSetup"(iterable: $Iterable$$Type, registryAccess: $RegistryAccess$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hek000$onSetup"(iterable: $Iterable$$Type, registryAccess: $RegistryAccess$$Type, ci: $CallbackInfo$$Type): void
 public "setupCollections"(iterable0: $Iterable$$Type<$Recipe$$Type<any>>, registryAccess1: $RegistryAccess$$Type): void
 get "collections"(): $List<$RecipeCollection>
 }
@@ -943,19 +943,19 @@ public "getVanillaPackResources"(): $VanillaPackResources
 public "getVersionType"(): string
 public "getWindow"(): $Window
 public "grabPanoramixScreenshot"(file0: $File$$Type, int1: integer, int2: integer): $Component
-public "handler$cme000$iris$trackLastDimensionOnLeave"(arg: $Screen$$Type, ci: $CallbackInfo$$Type): void
-public "handler$dem000$fillReport"(theCrash: $CrashReport$$Type, ci: $CallbackInfoReturnable$$Type): void
-public "handler$dfc000$rightClickEarly"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$dfc000$rightClickEmpty"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$fbg000$init"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$fha000$disconnectAfter"(screen_1: $Screen$$Type, info: $CallbackInfo$$Type): void
-public "handler$hcg000$dragonlib$resizeDisplay"(ci: $CallbackInfo$$Type): void
-public "handler$hcg000$dragonlib$showScreen"(realmsClient: $RealmsClient$$Type, reloadInstance: $ReloadInstance$$Type, quickPlayData: $GameConfig$QuickPlayData$$Type, ci: $CallbackInfo$$Type): void
-public "handler$ihc000$irons_spellbooks$changeGlowOutline"(entity0: $Entity$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$iia000$startAttackEntity"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$iia000$startAttackMiss"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$iog000$cancelItemPick"(info: $CallbackInfo$$Type): void
-public "handler$zob000$shouldEntityAppearGlowing"(entity0: $Entity$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$cmh000$iris$trackLastDimensionOnLeave"(arg: $Screen$$Type, ci: $CallbackInfo$$Type): void
+public "handler$dep000$fillReport"(theCrash: $CrashReport$$Type, ci: $CallbackInfoReturnable$$Type): void
+public "handler$dff000$rightClickEarly"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$dff000$rightClickEmpty"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$fbj000$init"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$fhd000$disconnectAfter"(screen_1: $Screen$$Type, info: $CallbackInfo$$Type): void
+public "handler$hcj000$dragonlib$resizeDisplay"(ci: $CallbackInfo$$Type): void
+public "handler$hcj000$dragonlib$showScreen"(realmsClient: $RealmsClient$$Type, reloadInstance: $ReloadInstance$$Type, quickPlayData: $GameConfig$QuickPlayData$$Type, ci: $CallbackInfo$$Type): void
+public "handler$ihf000$irons_spellbooks$changeGlowOutline"(entity0: $Entity$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$iid000$startAttackEntity"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$iid000$startAttackMiss"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ioj000$cancelItemPick"(info: $CallbackInfo$$Type): void
+public "handler$zoe000$shouldEntityAppearGlowing"(entity0: $Entity$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
 public "hasSingleplayerServer"(): boolean
 public "hasTargetsInReach"(): boolean
 public "is64Bit"(): boolean
@@ -974,7 +974,7 @@ public "isSingleplayer"(): boolean
 public "isTextFilteringEnabled"(): boolean
 public "isWeaponSwingInProgress"(): boolean
 public "isWindowActive"(): boolean
-public "localvar$iog000$modifyItemPick"(stack: $ItemStack$$Type): $ItemStack
+public "localvar$ioj000$modifyItemPick"(stack: $ItemStack$$Type): $ItemStack
 public "multiplayerBan"(): $BanDetails
 public static "of"(minecraft0: $Minecraft$$Type): $MinecraftExtra
 public static "of"<Msg>(string0: string, consumer1: $Consumer$$Type<Msg>): $ProcessorHandle<Msg>
@@ -985,7 +985,7 @@ public "prepareForMultiplayer"(): void
 public "pushGuiLayer"(screen0: $Screen$$Type): void
 public "quickPlayLog"(): $QuickPlayLog
 public "realmsDataFetcher"(): $RealmsDataFetcher
-public "redirect$hom000$fixUpdateURLs"(renderTarget0: $RenderTarget$$Type, boolean1: boolean): void
+public "redirect$hop000$fixUpdateURLs"(renderTarget0: $RenderTarget$$Type, boolean1: boolean): void
 public "reloadResourcePacks"(): $CompletableFuture<void>
 public "renderBuffers"(): $RenderBuffers
 public static "renderNames"(): boolean
@@ -1166,12 +1166,12 @@ public "getHorizontalScroll"(): double
 public "getXVelocity"(): double
 public "getYVelocity"(): double
 public "grabMouse"(): void
-public "handler$fbh000$turnPlayer"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$fbk000$turnPlayer"(callbackInfo0: $CallbackInfo$$Type): void
 public "isLeftPressed"(): boolean
 public "isMiddlePressed"(): boolean
 public "isMouseGrabbed"(): boolean
 public "isRightPressed"(): boolean
-public "modify$deb000$changeLookDirectionX"(double0: double): double
+public "modify$dee000$changeLookDirectionX"(double0: double): double
 public "releaseMouse"(): void
 public "setIgnoreFirstMove"(): void
 public "setup"(long0: long): void
@@ -1446,8 +1446,8 @@ import { $Style, $Style$$Type } from "net.minecraft.network.chat.Style"
 export class $StringSplitter implements $StringSplitterAccessor, $StringSplitterAccessor$0 {
 constructor(widthProvider0: $StringSplitter$WidthProvider$$Type)
 
-public "componentStyleAtWidth"(formattedText0: $FormattedText$$Type, int1: integer): $Style
 public "componentStyleAtWidth"(formattedCharSequence0: $FormattedCharSequence$$Type, int1: integer): $Style
+public "componentStyleAtWidth"(formattedText0: $FormattedText$$Type, int1: integer): $Style
 public "findLineBreak"(string0: string, int1: integer, style2: $Style$$Type): integer
 public "formattedHeadByWidth"(string0: string, int1: integer, style2: $Style$$Type): string
 public "formattedIndexByWidth"(string0: string, int1: integer, style2: $Style$$Type): integer
@@ -1456,14 +1456,14 @@ public "headByWidth"(formattedText0: $FormattedText$$Type, int1: integer, style2
 public "plainHeadByWidth"(string0: string, int1: integer, style2: $Style$$Type): string
 public "plainIndexAtWidth"(string0: string, int1: integer, style2: $Style$$Type): integer
 public "plainTailByWidth"(string0: string, int1: integer, style2: $Style$$Type): string
-public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type): $List<$FormattedText>
 public "splitLines"(string0: string, int1: integer, style2: $Style$$Type): $List<$FormattedText>
-public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type, biConsumer3: $BiConsumer$$Type<$FormattedText$$Type, boolean>): void
-public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type, formattedText3: $FormattedText$$Type): $List<$FormattedText>
+public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type): $List<$FormattedText>
 public "splitLines"(string0: string, int1: integer, style2: $Style$$Type, boolean3: boolean, linePosConsumer4: $StringSplitter$LinePosConsumer$$Type): void
+public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type, formattedText3: $FormattedText$$Type): $List<$FormattedText>
+public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type, biConsumer3: $BiConsumer$$Type<$FormattedText$$Type, boolean>): void
+public "stringWidth"(formattedText0: $FormattedText$$Type): float
 public "stringWidth"(string0: string): float
 public "stringWidth"(formattedCharSequence0: $FormattedCharSequence$$Type): float
-public "stringWidth"(formattedText0: $FormattedText$$Type): float
 }
 }
 
@@ -1522,8 +1522,8 @@ public "getPosition"(): $Vec3
 public "getUpVector"(): $Vector3f
 public "getXRot"(): float
 public "getYRot"(): float
-public "handler$hjl000$ac_getFluidInCamera"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$hjl000$ac_onSyncedDataUpdated"(blockGetter0: $BlockGetter$$Type, entity1: $Entity$$Type, boolean2: boolean, boolean3: boolean, float4: float, callbackInfo5: $CallbackInfo$$Type): void
+public "handler$hjo000$ac_getFluidInCamera"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$hjo000$ac_onSyncedDataUpdated"(blockGetter0: $BlockGetter$$Type, entity1: $Entity$$Type, boolean2: boolean, boolean3: boolean, float4: float, callbackInfo5: $CallbackInfo$$Type): void
 public "isDetached"(): boolean
 public "isInitialized"(): boolean
 public "move"(double0: double, double1: double, double2: double): void

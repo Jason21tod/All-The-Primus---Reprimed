@@ -16,12 +16,14 @@ public "anyType"(...resolvers: $Resolver$$Type[]): $EntityPredicateBuilderJS
 public "build"(): $EntityPredicate
 public "hasEffect"(effect: $MobEffect$$Type): $EntityPredicateBuilderJS
 public "hasEffect"(effect: $MobEffect$$Type, amplifier: integer): $EntityPredicateBuilderJS
-public "isIllegarMob"(flag: boolean): $EntityPredicateBuilderJS
-public "isOnFire"(flag: boolean): $EntityPredicateBuilderJS
-public "isOnGround"(flag: boolean): $EntityPredicateBuilderJS
+public "isArthropodMob"(flag: boolean): $EntityPredicateBuilderJS
+public "isCreature"(flag: boolean): $EntityPredicateBuilderJS
+public "isCrouching"(flag: boolean): $EntityPredicateBuilderJS
+public "isInWater"(flag: boolean): $EntityPredicateBuilderJS
 public "isSprinting"(flag: boolean): $EntityPredicateBuilderJS
 public "isSwimming"(flag: boolean): $EntityPredicateBuilderJS
-public "isUnderWater"(flag: boolean): $EntityPredicateBuilderJS
+public "isUndeadMob"(flag: boolean): $EntityPredicateBuilderJS
+public "isWaterMob"(flag: boolean): $EntityPredicateBuilderJS
 public "matchBlock"(resolver: $Resolver$$Type): $EntityPredicateBuilderJS
 public "matchBlock"(resolver: $Resolver$$Type, propertyMap: $Map$$Type<string, string>): $EntityPredicateBuilderJS
 public "matchFluid"(resolver: $Resolver$$Type): $EntityPredicateBuilderJS
@@ -48,6 +50,7 @@ import { $CompoundTag$$Type } from "net.minecraft.nbt.CompoundTag"
 import { $NumberProvider$$Type } from "net.minecraft.world.level.storage.loot.providers.number.NumberProvider"
 import { $LootFunctionsContainer, $LootFunctionsContainer$$Type } from "com.almostreliable.lootjs.loot.LootFunctionsContainer"
 import { $LootContext$$Type } from "net.minecraft.world.level.storage.loot.LootContext"
+import { $LootItemFunction$$Type } from "net.minecraft.world.level.storage.loot.functions.LootItemFunction"
 import { $LootItemFunction$Builder$$Type } from "net.minecraft.world.level.storage.loot.functions.LootItemFunction$Builder"
 import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 
@@ -57,6 +60,7 @@ constructor(itemStack: $ItemStack$$Type)
 constructor(item: $Item$$Type)
 
 public "addAttributes"(action: $Consumer$$Type<$AddAttributesFunction$Builder$$Type>): $LootEntry
+public "addFunction"(lootItemFunction: $LootItemFunction$$Type): $LootEntry
 public "addFunction"(builder: $LootItemFunction$Builder$$Type): $LootEntry
 public "addLore"(...components: $Component$$Type[]): $LootEntry
 public "addNBT"(tag: $CompoundTag$$Type): $LootEntry
@@ -139,9 +143,9 @@ public "addNBT"(tag: $CompoundTag$$Type): $GroupedLootBuilder
 public "addNbt"(tag: $CompoundTag$$Type): $GroupedLootBuilder
 public "addPotion"(potion: $Potion$$Type): $GroupedLootBuilder
 public "addSequenceLoot"(...entries: $LootEntry$$Type[]): $GroupedLootBuilder
-public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, allowDuplicateLoot: boolean, poolEntries: $LootEntry$$Type[]): $GroupedLootBuilder
 public "addWeightedLoot"(poolEntries: $LootEntry$$Type[]): $GroupedLootBuilder
 public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, poolEntries: $LootEntry$$Type[]): $GroupedLootBuilder
+public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, allowDuplicateLoot: boolean, poolEntries: $LootEntry$$Type[]): $GroupedLootBuilder
 public "and"(action: $Consumer$$Type<$LootConditionsContainer$$Type<$GroupedLootBuilder$$Type>>): $GroupedLootBuilder
 public "anyBiome"(...resolvers: $Resolver$$Type[]): $GroupedLootBuilder
 public "anyDimension"(...dimensions: $ResourceLocation$$Type[]): $GroupedLootBuilder
@@ -202,8 +206,8 @@ public "setName"(component: $Component$$Type): $GroupedLootBuilder
 public "simulateExplosionDecay"(): $GroupedLootBuilder
 public "smeltLoot"(): $GroupedLootBuilder
 public "survivesExplosion"(): $GroupedLootBuilder
-public "timeCheck"(min: integer, max: integer): $GroupedLootBuilder
 public "timeCheck"(period: long, min: integer, max: integer): $GroupedLootBuilder
+public "timeCheck"(min: integer, max: integer): $GroupedLootBuilder
 public "triggerExplosion"(radius: float, destroy: boolean, fire: boolean): $GroupedLootBuilder
 public "triggerExplosion"(radius: float, mode: $Explosion$BlockInteraction$$Type, fire: boolean): $GroupedLootBuilder
 public "triggerLightningStrike"(shouldDamage: boolean): $GroupedLootBuilder
@@ -459,9 +463,9 @@ export interface $LootActionsContainer<A extends $LootActionsContainer<any> = $L
 "addAlternativesLoot"(...entries: $LootEntry$$Type[]): A
 "addLoot"(...entries: $LootEntry$$Type[]): A
 "addSequenceLoot"(...entries: $LootEntry$$Type[]): A
-"addWeightedLoot"(numberProvider: $NumberProvider$$Type, allowDuplicateLoot: boolean, poolEntries: $LootEntry$$Type[]): A
 "addWeightedLoot"(poolEntries: $LootEntry$$Type[]): A
 "addWeightedLoot"(numberProvider: $NumberProvider$$Type, poolEntries: $LootEntry$$Type[]): A
+"addWeightedLoot"(numberProvider: $NumberProvider$$Type, allowDuplicateLoot: boolean, poolEntries: $LootEntry$$Type[]): A
 "dropExperience"(amount: integer): A
 "modifyLoot"(filter: $ItemFilter$$Type, callback: $ModifyLootAction$Callback$$Type): A
 "removeLoot"(filter: $ItemFilter$$Type): A
@@ -630,8 +634,8 @@ import { $Potion$$Type } from "net.minecraft.world.item.alchemy.Potion"
 
 export interface $LootFunctionsContainer<F extends $LootFunctionsContainer<any> = $LootFunctionsContainer<any>> {
 "addAttributes"(action: $Consumer$$Type<$AddAttributesFunction$Builder$$Type>): F
-"addFunction"(lootItemFunction0: $LootItemFunction$$Type): F
 "addFunction"(builder: $LootItemFunction$Builder$$Type): F
+"addFunction"(lootItemFunction0: $LootItemFunction$$Type): F
 "addLore"(...components: $Component$$Type[]): F
 "addNBT"(tag: $CompoundTag$$Type): F
 "addNbt"(tag: $CompoundTag$$Type): F
@@ -724,8 +728,8 @@ export interface $LootConditionsContainer<B extends $LootConditionsContainer<any
 "randomChanceWithLooting"(value: float, looting: float): B
 "randomTableBonus"(enchantment: $Enchantment$$Type, chances: float[]): B
 "survivesExplosion"(): B
-"timeCheck"(min: integer, max: integer): B
 "timeCheck"(period: long, min: integer, max: integer): B
+"timeCheck"(min: integer, max: integer): B
 "weatherCheck"(map: $Map$$Type<string, boolean>): B
 }
 
@@ -846,9 +850,9 @@ public "addNBT"(tag: $CompoundTag$$Type): $LootActionsBuilderJS
 public "addNbt"(tag: $CompoundTag$$Type): $LootActionsBuilderJS
 public "addPotion"(potion: $Potion$$Type): $LootActionsBuilderJS
 public "addSequenceLoot"(...entries: $LootEntry$$Type[]): $LootActionsBuilderJS
-public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, allowDuplicateLoot: boolean, poolEntries: $LootEntry$$Type[]): $LootActionsBuilderJS
 public "addWeightedLoot"(poolEntries: $LootEntry$$Type[]): $LootActionsBuilderJS
 public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, poolEntries: $LootEntry$$Type[]): $LootActionsBuilderJS
+public "addWeightedLoot"(numberProvider: $NumberProvider$$Type, allowDuplicateLoot: boolean, poolEntries: $LootEntry$$Type[]): $LootActionsBuilderJS
 public "and"(action: $Consumer$$Type<$LootConditionsContainer$$Type<$LootActionsBuilderJS$$Type>>): $LootActionsBuilderJS
 public "anyBiome"(...resolvers: $Resolver$$Type[]): $LootActionsBuilderJS
 public "anyDimension"(...dimensions: $ResourceLocation$$Type[]): $LootActionsBuilderJS
@@ -913,8 +917,8 @@ public "setName"(component: $Component$$Type): $LootActionsBuilderJS
 public "simulateExplosionDecay"(): $LootActionsBuilderJS
 public "smeltLoot"(): $LootActionsBuilderJS
 public "survivesExplosion"(): $LootActionsBuilderJS
-public "timeCheck"(min: integer, max: integer): $LootActionsBuilderJS
 public "timeCheck"(period: long, min: integer, max: integer): $LootActionsBuilderJS
+public "timeCheck"(min: integer, max: integer): $LootActionsBuilderJS
 public "triggerExplosion"(radius: float, destroy: boolean, fire: boolean): $LootActionsBuilderJS
 public "triggerExplosion"(radius: float, mode: $Explosion$BlockInteraction$$Type, fire: boolean): $LootActionsBuilderJS
 public "triggerLightningStrike"(shouldDamage: boolean): $LootActionsBuilderJS

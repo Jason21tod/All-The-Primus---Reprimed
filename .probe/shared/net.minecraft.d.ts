@@ -140,8 +140,8 @@ public static "formatLocation"(levelHeightAccessor0: $LevelHeightAccessor$$Type,
 public "getDetails"(stringBuilder0: $StringBuilder$$Type): void
 public "getStacktrace"(): $StackTraceElement[]
 public static "populateBlockDetails"(crashReportCategory0: $CrashReportCategory$$Type, levelHeightAccessor1: $LevelHeightAccessor$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): void
-public "setDetail"(string0: string, object1: any): $CrashReportCategory
 public "setDetail"(string0: string, crashReportDetail1: $CrashReportDetail$$Type<string>): $CrashReportCategory
+public "setDetail"(string0: string, object1: any): $CrashReportCategory
 public "setDetailError"(string0: string, throwable1: $Throwable$$Type): void
 public "trimStacktrace"(int0: integer): void
 public "validateStackTrace"(stackTraceElement0: $StackTraceElement$$Type, stackTraceElement1: $StackTraceElement$$Type): boolean

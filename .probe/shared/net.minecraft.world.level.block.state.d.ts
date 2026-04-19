@@ -87,10 +87,10 @@ import { $EnumProperty } from "net.minecraft.world.level.block.state.properties.
 import { $Collection$$Type } from "java.util.Collection"
 
 export class $DirectionProperty extends $EnumProperty<$Direction> {
-public static "create"(string0: string, predicate1: $Predicate$$Type<$Direction$$Type>): $DirectionProperty
-public static "create"(string0: string, ...direction1s: $Direction$$Type[]): $DirectionProperty
 public static "create"(string0: string): $DirectionProperty
+public static "create"(string0: string, predicate1: $Predicate$$Type<$Direction$$Type>): $DirectionProperty
 public static "create"(string0: string, collection1: $Collection$$Type<$Direction$$Type>): $DirectionProperty
+public static "create"(string0: string, ...direction1s: $Direction$$Type[]): $DirectionProperty
 }
 }
 
@@ -219,9 +219,9 @@ public "asItem"(): $Item
 /** @deprecated */
 public "attack"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, player3: $Player$$Type): void
 /** @deprecated */
-public "canBeReplaced"(blockState0: $BlockState$$Type, blockPlaceContext1: $BlockPlaceContext$$Type): boolean
-/** @deprecated */
 public "canBeReplaced"(blockState0: $BlockState$$Type, fluid1: $Fluid$$Type): boolean
+/** @deprecated */
+public "canBeReplaced"(blockState0: $BlockState$$Type, blockPlaceContext1: $BlockPlaceContext$$Type): boolean
 /** @deprecated */
 public "canSurvive"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
 public "defaultDestroyTime"(): float
@@ -271,8 +271,8 @@ public "getSignal"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$T
 public "getTypeData"(): $CompoundTag
 /** @deprecated */
 public "getVisualShape"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, collisionContext3: $CollisionContext$$Type): $VoxelShape
-public "handler$gom000$l2complements_getDestroyProgress_cacheBlockHardness"(blockState0: $BlockState$$Type, player1: $Player$$Type, blockGetter2: $BlockGetter$$Type, blockPos3: $BlockPos$$Type, callbackInfoReturnable4: $CallbackInfoReturnable$$Type): void
-public "handler$hph000$quark$tick"(blockState0: $BlockState$$Type, serverLevel1: $ServerLevel$$Type, blockPos2: $BlockPos$$Type, randomSource3: $RandomSource$$Type, callbackInfo4: $CallbackInfo$$Type): void
+public "handler$gop000$l2complements_getDestroyProgress_cacheBlockHardness"(blockState0: $BlockState$$Type, player1: $Player$$Type, blockGetter2: $BlockGetter$$Type, blockPos3: $BlockPos$$Type, callbackInfoReturnable4: $CallbackInfoReturnable$$Type): void
+public "handler$hpk000$quark$tick"(blockState0: $BlockState$$Type, serverLevel1: $ServerLevel$$Type, blockPos2: $BlockPos$$Type, randomSource3: $RandomSource$$Type, callbackInfo4: $CallbackInfo$$Type): void
 /** @deprecated */
 public "hasAnalogOutputSignal"(blockState0: $BlockState$$Type): boolean
 /** @deprecated */
@@ -411,8 +411,8 @@ export class $Property<T extends $Comparable<T> = $Comparable<T>> {
 public "codec"(): $Codec<T>
 public "generateHashCode"(): integer
 public "getAllValues"(): $Stream<$Property$Value<T>>
-public "getName"(): string
 public "getName"(t0: T): string
+public "getName"(): string
 public "getPossibleValues"(): $Collection<T>
 public "getValue"(string0: string): $Optional<T>
 public "getValueClass"(): $Class<T>
@@ -1156,9 +1156,9 @@ readonly "mapColor": $MapColor
 public "attack"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, player2: $Player$$Type): void
 /** @deprecated */
 public "blocksMotion"(): boolean
+public "canBeReplaced"(): boolean
 public "canBeReplaced"(blockPlaceContext0: $BlockPlaceContext$$Type): boolean
 public "canBeReplaced"(fluid0: $Fluid$$Type): boolean
-public "canBeReplaced"(): boolean
 public "canOcclude"(): boolean
 public "canSurvive"(levelReader0: $LevelReader$$Type, blockPos1: $BlockPos$$Type): boolean
 public "clearCache"(): void
@@ -1170,8 +1170,8 @@ public "getAnalogOutputSignal"(level0: $Level$$Type, blockPos1: $BlockPos$$Type)
 public "getBlock"(): $Block
 public "getBlockHolder"(): $Holder<$Block>
 public "getBlockSupportShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): $VoxelShape
-public "getCollisionShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): $VoxelShape
 public "getCollisionShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): $VoxelShape
+public "getCollisionShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): $VoxelShape
 public "getDestroyProgress"(player0: $Player$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): float
 public "getDestroySpeed"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): float
 public "getDirectSignal"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, direction2: $Direction$$Type): integer
@@ -1197,8 +1197,8 @@ public "getSoundType"(): $SoundType
 public "getTags"(): $Stream<$TagKey<$Block>>
 public "getTicker"<T extends $BlockEntity>(level0: $Level$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $BlockEntityTicker<T>
 public "getVisualShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): $VoxelShape
-public "handler$iif000$cacheStateHead"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$iif000$cacheStateTail"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$iii000$cacheStateHead"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$iii000$cacheStateTail"(callbackInfo0: $CallbackInfo$$Type): void
 public "handler$zjf000$getCollisionShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
 public "handler$zjf000$getVisualShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
 public "hasAnalogOutputSignal"(): boolean
@@ -1211,8 +1211,8 @@ public "initCache"(): void
 public "instrument"(): $NoteBlockInstrument
 public "is"(tagKey0: $TagKey$$Type<$Block$$Type>): boolean
 public "is"(block0: $Block$$Type): boolean
-public "is"(tagKey0: $TagKey$$Type<$Block$$Type>, predicate1: $Predicate$$Type<$BlockBehaviour$BlockStateBase$$Type>): boolean
 public "is"(holderSet0: $HolderSet$$Type<$Block$$Type>): boolean
+public "is"(tagKey0: $TagKey$$Type<$Block$$Type>, predicate1: $Predicate$$Type<$BlockBehaviour$BlockStateBase$$Type>): boolean
 public "isAir"(): boolean
 public "isCacheInvalid"(): boolean
 public "isCollisionShapeFullBlock"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): boolean
@@ -1616,7 +1616,7 @@ public "getValues"(): $ImmutableMap<$Property<any>, $Comparable<any>>
 public "getVanillaPropertyMap"(): $ImmutableMap
 public "hasProperty"<T extends $Comparable<T>>(property0: $Property$$Type<T>): boolean
 public "populateNeighbours"(map0: $Map$$Type): void
-public "redirect$iib000$getNeighborFromFastMap"(table0: $Table$$Type, object1: any, object2: any): any
+public "redirect$iie000$getNeighborFromFastMap"(table0: $Table$$Type, object1: any, object2: any): any
 public "replacePropertyMap"(immutableMap0: $ImmutableMap$$Type): void
 public "setNeighborTable"(table0: $Table$$Type): void
 public "setStateIndex"(int0: integer): void

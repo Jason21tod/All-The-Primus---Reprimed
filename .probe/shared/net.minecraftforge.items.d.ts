@@ -9,16 +9,16 @@ import { $Ingredient$$Type } from "net.minecraft.world.item.crafting.Ingredient"
 
 export interface $IItemHandlerModifiable extends $IItemHandler {
 "asContainer"(): $Container
-"clear"(): void
 "clear"(ingredient: $Ingredient$$Type): void
-"count"(): integer
+"clear"(): void
 "count"(ingredient: $Ingredient$$Type): integer
-"countNonEmpty"(ingredient: $Ingredient$$Type): integer
+"count"(): integer
 "countNonEmpty"(): integer
+"countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "extractItem"(i: integer, i1: integer, b: boolean): $ItemStack
 "extractItem"(int0: integer, int1: integer, boolean2: boolean): $ItemStack
-"find"(ingredient: $Ingredient$$Type): integer
 "find"(): integer
+"find"(ingredient: $Ingredient$$Type): integer
 "getAllItems"(): $List<$ItemStack>
 "getBlock"(level: $Level$$Type): $BlockContainerJS
 "getHeight"(): integer
@@ -67,16 +67,16 @@ import { $Ingredient$$Type } from "net.minecraft.world.item.crafting.Ingredient"
 
 export interface $IItemHandler extends $InventoryKJS {
 "asContainer"(): $Container
-"clear"(): void
 "clear"(ingredient: $Ingredient$$Type): void
-"count"(): integer
+"clear"(): void
 "count"(ingredient: $Ingredient$$Type): integer
-"countNonEmpty"(ingredient: $Ingredient$$Type): integer
+"count"(): integer
 "countNonEmpty"(): integer
+"countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "extractItem"(i: integer, i1: integer, b: boolean): $ItemStack
 "extractItem"(int0: integer, int1: integer, boolean2: boolean): $ItemStack
-"find"(ingredient: $Ingredient$$Type): integer
 "find"(): integer
+"find"(ingredient: $Ingredient$$Type): integer
 "getAllItems"(): $List<$ItemStack>
 "getBlock"(level: $Level$$Type): $BlockContainerJS
 "getHeight"(): integer

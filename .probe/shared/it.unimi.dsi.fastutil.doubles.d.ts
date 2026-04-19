@@ -62,20 +62,20 @@ export interface $Double2ReferenceFunction<V = any> extends $Function$0<double, 
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(double0: double): V
-/** @deprecated */
-"getOrDefault"(object0: any, v1: V): V
 "getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
+"getOrDefault"(object0: any, v1: V): V
+/** @deprecated */
 "put"(double0: double, v1: V): V
 "put"(double0: double, v1: V): V
-"remove"(double0: double): V
 /** @deprecated */
 "remove"(object0: any): V
+"remove"(double0: double): V
 "size"(): integer
 }
 
@@ -274,6 +274,8 @@ export interface $Double2ShortFunction extends $Function$0<double, short>, $Doub
 "put"(double0: double, short1: short): short
 "put"(double0: double, short1: short): short
 "remove"(double0: double): short
+/** @deprecated */
+"remove"(object0: any): short
 "size"(): integer
 }
 
@@ -376,20 +378,20 @@ export interface $Double2ObjectFunction<V = any> extends $Function$0<double, V>,
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(double0: double): V
-/** @deprecated */
-"getOrDefault"(object0: any, v1: V): V
 "getOrDefault"(double0: double, v1: V): V
 /** @deprecated */
+"getOrDefault"(object0: any, v1: V): V
+/** @deprecated */
 "put"(double0: double, v1: V): V
 "put"(double0: double, v1: V): V
-"remove"(double0: double): V
 /** @deprecated */
 "remove"(object0: any): V
+"remove"(double0: double): V
 "size"(): integer
 }
 
@@ -437,8 +439,8 @@ export interface $DoubleList extends $List<double>, $Comparable<$List<double>>, 
 "addAll"(collection0: $Collection$$Type<double>): boolean
 "addAll"(int0: integer, collection1: $Collection$$Type<double>): boolean
 "addAll"(doubleCollection0: $DoubleCollection$$Type): boolean
-"addElements"(int0: integer, double1s: double[], int2: integer, int3: integer): void
 "addElements"(int0: integer, double1s: double[]): void
+"addElements"(int0: integer, double1s: double[], int2: integer, int3: integer): void
 "addFirst"(double0: double): void
 "addLast"(double0: double): void
 "clear"(): void
@@ -493,18 +495,17 @@ export interface $DoubleList extends $List<double>, $Comparable<$List<double>>, 
 "replaceAll"(doubleUnaryOperator0: $DoubleUnaryOperator$0$$Type): void
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "retainAll"(doubleCollection0: $DoubleCollection$$Type): boolean
+"set"(int0: integer, double1: double): double
 /** @deprecated */
 "set"(int0: integer, double1: double): double
-"set"(int0: integer, double1: double): double
-"setElements"(int0: integer, double1s: double[]): void
-"setElements"(int0: integer, double1s: double[], int2: integer, int3: integer): void
 "setElements"(double0s: double[]): void
+"setElements"(int0: integer, double1s: double[], int2: integer, int3: integer): void
+"setElements"(int0: integer, double1s: double[]): void
 "size"(int0: integer): void
 "size"(): integer
 "sort"(doubleComparator0: $DoubleComparator$$Type): void
 /** @deprecated */
 "sort"(comparator0: $Comparator$$Type<double>): void
-"spliterator"(): $DoubleSpliterator
 /** @deprecated */
 "stream"(): $Stream<double>
 "subList"(int0: integer, int1: integer): $DoubleList
@@ -616,8 +617,8 @@ export interface $Double2DoubleFunction extends $Function<double, double>, $Doub
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(double0: double): boolean
-"defaultReturnValue"(): double
 "defaultReturnValue"(double0: double): void
+"defaultReturnValue"(): double
 "get"(double0: double): double
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
@@ -716,6 +717,8 @@ export interface $Double2LongFunction extends $Function$0<double, long>, $Double
 "put"(double0: double, long1: long): long
 "put"(double0: double, long1: long): long
 "remove"(double0: double): long
+/** @deprecated */
+"remove"(object0: any): long
 "size"(): integer
 }
 
@@ -804,6 +807,8 @@ export interface $Double2IntFunction extends $Function$0<double, integer>, $Doub
 "put"(double0: double, integer1: integer): integer
 "put"(double0: double, int1: integer): integer
 "remove"(double0: double): integer
+/** @deprecated */
+"remove"(object0: any): integer
 "size"(): integer
 }
 
@@ -892,6 +897,8 @@ export interface $Double2ByteFunction extends $Function$0<double, byte>, $Double
 "put"(double0: double, byte1: byte): byte
 "put"(double0: double, byte1: byte): byte
 "remove"(double0: double): byte
+/** @deprecated */
+"remove"(object0: any): byte
 "size"(): integer
 }
 
@@ -982,6 +989,8 @@ export interface $Double2FloatFunction extends $Function$0<double, float>, $Doub
 "put"(double0: double, float1: float): float
 "put"(double0: double, float1: float): float
 "remove"(double0: double): float
+/** @deprecated */
+"remove"(object0: any): float
 "size"(): integer
 }
 
@@ -1070,6 +1079,8 @@ export interface $Double2CharFunction extends $Function$0<double, character>, $D
 "put"(double0: double, character1: character): character
 "put"(double0: double, char1: character): character
 "remove"(double0: double): character
+/** @deprecated */
+"remove"(object0: any): character
 "size"(): integer
 }
 
@@ -1328,20 +1339,22 @@ export interface $Double2BooleanFunction extends $Function$0<double, boolean>, $
 "containsKey"(double0: double): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): boolean
 "defaultReturnValue"(boolean0: boolean): void
+"defaultReturnValue"(): boolean
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(double0: double): boolean
-"getOrDefault"(double0: double, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
+"getOrDefault"(double0: double, boolean1: boolean): boolean
 "negate"(): $DoublePredicate
 "or"(doublePredicate0: $DoublePredicate$$Type): $DoublePredicate
 /** @deprecated */
 "put"(double0: double, boolean1: boolean): boolean
 "put"(double0: double, boolean1: boolean): boolean
 "remove"(double0: double): boolean
+/** @deprecated */
+"remove"(object0: any): boolean
 "size"(): integer
 "test"(double0: double): boolean
 }

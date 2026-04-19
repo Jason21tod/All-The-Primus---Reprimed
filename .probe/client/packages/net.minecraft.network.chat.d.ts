@@ -244,9 +244,9 @@ static readonly "TEAM_MSG_COMMAND_OUTGOING": $ResourceKey<$ChatType>
 constructor(chatTypeDecoration0: $ChatTypeDecoration$$Type, chatTypeDecoration1: $ChatTypeDecoration$$Type)
 
 public static "bind"(resourceKey0: $ResourceKey$$Type<$ChatType>, entity1: $Entity$$Type): $ChatType$Bound
+public "bind"(component0: $Component$$Type): $ChatType$Bound
 public static "bind"(resourceKey0: $ResourceKey$$Type<$ChatType>, registryAccess1: $RegistryAccess$$Type, component2: $Component$$Type): $ChatType$Bound
 public static "bind"(resourceKey0: $ResourceKey$$Type<$ChatType>, commandSourceStack1: $CommandSourceStack$$Type): $ChatType$Bound
-public "bind"(component0: $Component$$Type): $ChatType$Bound
 public static "bootstrap"(bootstapContext0: $BootstapContext$$Type<$ChatType$$Type>): void
 public "chat"(): $ChatTypeDecoration
 public "narration"(): $ChatTypeDecoration

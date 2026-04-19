@@ -14,8 +14,8 @@ static readonly "kLinearMetrics_Flag": integer
 static readonly "kSubpixelPositioning_Flag": integer
 
 public "createScalerContext"(): $ScalerContext
-public "findOrCreateStrike"(): $Strike
 public "findOrCreateStrike"(cache: $StrikeCache$$Type): $Strike
+public "findOrCreateStrike"(): $Strike
 public "getDeviceMatrix"(dst: $Matrix$$Type): void
 public "getFlags"(): integer
 public "getFrameWidth"(): float
@@ -125,8 +125,8 @@ public "setAntiAlias"(aa: boolean): void
 public "setBlendMode"(mode: $BlendMode$$Type): void
 public "setBlender"(blender: $Blender$$Type): void
 public "setColor"(color: integer): void
-public "setColor4f"(r: float, g: float, b: float, a: float, colorSpace: $ColorSpace$$Type): void
 public "setColor4f"(r: float, g: float, b: float, a: float): void
+public "setColor4f"(r: float, g: float, b: float, a: float, colorSpace: $ColorSpace$$Type): void
 public "setColorFilter"(colorFilter: $ColorFilter$$Type): void
 public "setDither"(dither: boolean): void
 public "setPathEffect"(pathEffect: $PathEffect$$Type): void
@@ -247,8 +247,8 @@ static readonly "kUnset_Action": integer
 constructor(id: integer)
 
 public "actionFor"(actionType: integer): integer
-public "getBounds"(dst: $Rect2f$$Type): void
 public "getBounds"(dst: $Rect2i$$Type): void
+public "getBounds"(dst: $Rect2f$$Type): void
 public static "getGlyphID"(packedID: integer): integer
 public "getGlyphID"(): integer
 public "getHeight"(): integer
@@ -261,8 +261,8 @@ public "getMaxDimension"(): integer
 public "getPackedID"(): integer
 public "getPath"(): $Path
 public "getRowBytes"(): integer
-public static "getSubX"(packedID: integer): float
 public "getSubX"(): float
+public static "getSubX"(packedID: integer): float
 public "getTop"(): integer
 public "getWidth"(): integer
 public "imageIsTooLarge"(): boolean
@@ -271,8 +271,8 @@ public "isEmpty"(): boolean
 public static "packGlyphID"(glyphID: integer, xPos: float, mask: integer): integer
 public "setImage"(scalerContext: $ScalerContext$$Type): boolean
 public "setImageHasBeenCalled"(): boolean
-public "setPath"(path: $Path$$Type): boolean
 public "setPath"(scalerContext: $ScalerContext$$Type): boolean
+public "setPath"(path: $Path$$Type): boolean
 public "setPathHasBeenCalled"(): boolean
 get "glyphID"(): integer
 get "height"(): integer
@@ -291,8 +291,8 @@ get "width"(): integer
 get "color"(): boolean
 get "empty"(): boolean
 set "image"(value: $ScalerContext$$Type)
-set "path"(value: $Path$$Type)
 set "path"(value: $ScalerContext$$Type)
+set "path"(value: $Path$$Type)
 }
 }
 
@@ -398,8 +398,8 @@ static readonly "kTriangleStrip_VertexMode": integer
 static readonly "kTriangles_VertexMode": integer
 static readonly "kVertexModeCount": integer
 
-public "getBounds"(bounds: $Rect2f$$Type): void
 public "getBounds"(): $Rect2fc
+public "getBounds"(bounds: $Rect2f$$Type): void
 public "getColors"(): integer[]
 public "getIndexCount"(): integer
 public "getIndices"(): short[]
@@ -553,46 +553,46 @@ constructor()
 
 public "clear"(color: integer): void
 public "clear"(r: float, g: float, b: float, a: float): void
-public "clipRect"(rect: $Rect2fc$$Type, clipOp: integer, doAA: boolean): void
-public "clipRect"(rect: $Rect2ic$$Type, clipOp: integer): void
-public "clipRect"(left: float, top: float, right: float, bottom: float, clipOp: integer): void
+public "clipRect"(left: float, top: float, right: float, bottom: float, doAA: boolean): void
 public "clipRect"(rect: $Rect2fc$$Type, clipOp: integer): void
+public "clipRect"(rect: $Rect2ic$$Type, clipOp: integer): void
+public "clipRect"(rect: $Rect2fc$$Type, clipOp: integer, doAA: boolean): void
+public "clipRect"(left: float, top: float, right: float, bottom: float, clipOp: integer): void
+public "clipRect"(rect: $Rect2ic$$Type): void
 public "clipRect"(rect: $Rect2fc$$Type): void
 public "clipRect"(left: float, top: float, right: float, bottom: float): void
 public "clipRect"(rect: $Rect2fc$$Type, doAA: boolean): void
-public "clipRect"(left: float, top: float, right: float, bottom: float, doAA: boolean): void
-public "clipRect"(rect: $Rect2ic$$Type): void
 public "close"(): void
 public "concat"(matrix: $Matrixc$$Type): void
-public "concat"(matrix: $Consumer$$Type<$Matrix4$$Type>): void
 public "concat"(matrix: $Matrix4c$$Type): void
+public "concat"(matrix: $Consumer$$Type<$Matrix4$$Type>): void
 public "discard"(): void
-public "drawArc"(cx: float, cy: float, radius: float, startAngle: float, sweepAngle: float, paint: $Paint$$Type): void
 public "drawArc"(cx: float, cy: float, radius: float, startAngle: float, sweepAngle: float, cap: integer, width: float, paint: $Paint$$Type): void
+public "drawArc"(cx: float, cy: float, radius: float, startAngle: float, sweepAngle: float, paint: $Paint$$Type): void
 public "drawBlurredRRect"(rr: $RRect$$Type, paint: $Paint$$Type, blurRadius: float, noiseAlpha: float): void
 public "drawChord"(cx: float, cy: float, radius: float, startAngle: float, sweepAngle: float, paint: $Paint$$Type): void
 public "drawCircle"(cx: float, cy: float, radius: float, paint: $Paint$$Type): void
+public "drawColor"(r: float, g: float, b: float, a: float): void
 public "drawColor"(color: integer, mode: $BlendMode$$Type): void
 public "drawColor"(r: float, g: float, b: float, a: float, mode: $BlendMode$$Type): void
-public "drawColor"(r: float, g: float, b: float, a: float): void
 public "drawColor"(color: integer): void
 public "drawEdgeAAQuad"(rect: $Rect2fc$$Type, clip: float[], edgeFlags: integer, paint: $Paint$$Type): void
 public "drawEllipse"(cx: float, cy: float, radiusX: float, radiusY: float, paint: $Paint$$Type): void
 public "drawGlyphs"(glyphs: integer[], glyphOffset: integer, positions: float[], positionOffset: integer, glyphCount: integer, originX: float, originY: float, font: $Font$$Type, paint: $Paint$$Type): void
 public "drawImage"(image: $Image$$Type, x: float, y: float, sampling: $SamplingOptions$$Type, paint: $Paint$$Type): void
-public "drawImageRect"(image: $Image$$Type, dst: $Rect2fc$$Type, sampling: $SamplingOptions$$Type, paint: $Paint$$Type): void
 public "drawImageRect"(image: $Image$$Type, src: $Rect2fc$$Type, dst: $Rect2fc$$Type, sampling: $SamplingOptions$$Type, paint: $Paint$$Type, constraint: integer): void
+public "drawImageRect"(image: $Image$$Type, dst: $Rect2fc$$Type, sampling: $SamplingOptions$$Type, paint: $Paint$$Type): void
 public "drawLine"(x0: float, y0: float, x1: float, y1: float, cap: integer, width: float, paint: $Paint$$Type): void
 public "drawLine"(x0: float, y0: float, x1: float, y1: float, paint: $Paint$$Type): void
 public "drawPaint"(paint: $Paint$$Type): void
 public "drawPie"(cx: float, cy: float, radius: float, startAngle: float, sweepAngle: float, paint: $Paint$$Type): void
-public "drawPoint"(x: float, y: float, paint: $Paint$$Type): void
 public "drawPoint"(x: float, y: float, cap: integer, size: float, paint: $Paint$$Type): void
+public "drawPoint"(x: float, y: float, paint: $Paint$$Type): void
 public "drawPoints"(mode: integer, pts: float[], offset: integer, count: integer, paint: $Paint$$Type): void
 public "drawRRect"(rrect: $RRect$$Type, paint: $Paint$$Type): void
 public "drawRect"(left: float, top: float, right: float, bottom: float, paint: $Paint$$Type): void
-public "drawRect"(r: $Rect2fc$$Type, paint: $Paint$$Type): void
 public "drawRect"(r: $Rect2ic$$Type, paint: $Paint$$Type): void
+public "drawRect"(r: $Rect2fc$$Type, paint: $Paint$$Type): void
 public "drawTextBlob"(blob: $TextBlob$$Type, originX: float, originY: float, paint: $Paint$$Type): void
 public "drawVertices"(vertices: $Vertices$$Type, blender: $Blender$$Type, paint: $Paint$$Type): void
 public "getBaseLayerHeight"(): integer
@@ -617,19 +617,19 @@ public "rotate"(degrees: float): void
 public "rotate"(degrees: float, px: float, py: float): void
 public "save"(): integer
 public "saveLayer"(bounds: $Rect2f$$Type, paint: $Paint$$Type): integer
-public "saveLayer"(left: float, top: float, right: float, bottom: float, paint: $Paint$$Type): integer
 public "saveLayer"(left: float, top: float, right: float, bottom: float, paint: $Paint$$Type, backdrop: $ImageFilter$$Type, saveLayerFlags: integer): integer
+public "saveLayer"(left: float, top: float, right: float, bottom: float, paint: $Paint$$Type): integer
 public "saveLayer"(bounds: $Rect2f$$Type, paint: $Paint$$Type, backdrop: $ImageFilter$$Type, saveLayerFlags: integer): integer
-public "saveLayerAlpha"(bounds: $Rect2f$$Type, alpha: integer): integer
 public "saveLayerAlpha"(left: float, top: float, right: float, bottom: float, alpha: integer): integer
-public "scale"(sx: float, sy: float, px: float, py: float): void
-public "scale"(sx: float, sy: float, sz: float): void
+public "saveLayerAlpha"(bounds: $Rect2f$$Type, alpha: integer): integer
 public "scale"(sx: float, sy: float): void
+public "scale"(sx: float, sy: float, sz: float): void
+public "scale"(sx: float, sy: float, px: float, py: float): void
 public "setMatrix"(matrix: $Matrix4c$$Type): void
 public "shear"(sx: float, sy: float, px: float, py: float): void
 public "shear"(sx: float, sy: float): void
-public "translate"(dx: float, dy: float): void
 public "translate"(dx: float, dy: float, dz: float): void
+public "translate"(dx: float, dy: float): void
 get "baseLayerHeight"(): integer
 get "baseLayerWidth"(): integer
 get "commandContext"(): $Context
@@ -690,8 +690,8 @@ public "forEach"(action: $PathConsumer$$Type): void
 public "getBounds"(dst: $Rect2f$$Type): void
 public "getBounds"(): $Rectangle
 public "getBounds2D"(): $Rectangle2D
-public "getPathIterator"(at: $AffineTransform$$Type): $PathIterator
 public "getPathIterator"(): $PathIterator
+public "getPathIterator"(at: $AffineTransform$$Type): $PathIterator
 public "getPathIterator"(at: $AffineTransform$$Type, flatness: double): $PathIterator
 public "getSegmentMask"(): integer
 public "getWindingRule"(): integer
@@ -742,8 +742,8 @@ export interface $Matrixc {
 "equals"(object0: any): boolean
 "getMaxScale"(float0: float, float1: float): float
 "getMaxScale"(): float
-"getMinScale"(): float
 "getMinScale"(float0: float, float1: float): float
+"getMinScale"(): float
 "getPerspX"(): float
 "getPerspY"(): float
 "getScaleX"(): float
@@ -762,8 +762,8 @@ export interface $Matrixc {
 "isScaleTranslate"(): boolean
 "isSimilarity"(): boolean
 "isTranslate"(): boolean
-"localAARadius"(float0: float, float1: float, float2: float, float3: float): float
 "localAARadius"(rect2fc0: $Rect2fc$$Type): float
+"localAARadius"(float0: float, float1: float, float2: float, float3: float): float
 "m11"(): float
 "m12"(): float
 "m14"(): float
@@ -774,20 +774,20 @@ export interface $Matrixc {
 "m42"(): float
 "m44"(): float
 "mapPoint"(p: float[]): void
+"mapPoints"(pts: float[]): void
 "mapPoints"(pts: float[], pos: integer, count: integer): void
 "mapPoints"(pts: float[], count: integer): void
-"mapPoints"(src: float[], dst: float[], count: integer): void
 "mapPoints"(float0s: float[], int1: integer, float2s: float[], int3: integer, int4: integer): void
-"mapPoints"(pts: float[]): void
-"mapRect"(rect2fc0: $Rect2fc$$Type, rect2f1: $Rect2f$$Type): boolean
-"mapRect"(r: $Rect2i$$Type): void
+"mapPoints"(src: float[], dst: float[], count: integer): void
+"mapRect"(rect: $Rect2f$$Type): boolean
+"mapRect"(r: $Rect2ic$$Type, out: $Rect2i$$Type): void
 "mapRect"(r: $Rect2fc$$Type, out: $Rect2i$$Type): void
 "mapRect"(float0: float, float1: float, float2: float, float3: float, rect2i4: $Rect2i$$Type): void
-"mapRect"(r: $Rect2ic$$Type, out: $Rect2i$$Type): void
-"mapRect"(rect: $Rect2f$$Type): boolean
+"mapRect"(r: $Rect2i$$Type): void
+"mapRect"(rect2fc0: $Rect2fc$$Type, rect2f1: $Rect2f$$Type): boolean
+"mapRectOut"(float0: float, float1: float, float2: float, float3: float, rect2i4: $Rect2i$$Type): void
 "mapRectOut"(r: $Rect2fc$$Type, dst: $Rect2i$$Type): void
 "mapRectOut"(r: $Rect2i$$Type): void
-"mapRectOut"(float0: float, float1: float, float2: float, float3: float, rect2i4: $Rect2i$$Type): void
 "mapRectOut"(r: $Rect2ic$$Type, dst: $Rect2i$$Type): void
 "preservesRightAngles"(): boolean
 "store"(matrix0: $Matrix$$Type): void
@@ -796,8 +796,8 @@ export interface $Matrixc {
 "store"(byteBuffer0: $ByteBuffer$$Type): void
 "store"(floatBuffer0: $FloatBuffer$$Type): void
 "store"(long0: long): void
-"storeAligned"(byteBuffer0: $ByteBuffer$$Type): void
 "storeAligned"(long0: long): void
+"storeAligned"(byteBuffer0: $ByteBuffer$$Type): void
 "storeAligned"(floatBuffer0: $FloatBuffer$$Type): void
 "toMatrix4"(matrix40: $Matrix4$$Type): void
 "toMatrix4"(): $Matrix4
@@ -1097,16 +1097,16 @@ public "set"(p: long): void
 public "set"(src: $RRect$$Type): void
 public "setEllipse"(cx: float, cy: float, radiusX: float, radiusY: float): void
 public "setEmpty"(): void
-public "setNineSlice"(rect: $Rect2fc$$Type, leftRad: float, topRad: float, rightRad: float, bottomRad: float): void
 public "setNineSlice"(left: float, top: float, right: float, bottom: float, leftRad: float, topRad: float, rightRad: float, bottomRad: float): void
+public "setNineSlice"(rect: $Rect2fc$$Type, leftRad: float, topRad: float, rightRad: float, bottomRad: float): void
 public "setOval"(left: float, top: float, right: float, bottom: float): void
 public "setOval"(oval: $Rect2fc$$Type): void
 public "setRect"(left: float, top: float, right: float, bottom: float): void
 public "setRect"(rect: $Rect2fc$$Type): void
 public "setRectRadii"(left: float, top: float, right: float, bottom: float, radii: float[]): void
 public "setRectRadii"(rect: $Rect2fc$$Type, radii: float[]): void
-public "setRectXY"(left: float, top: float, right: float, bottom: float, radiusX: float, radiusY: float): void
 public "setRectXY"(rect: $Rect2fc$$Type, radiusX: float, radiusY: float): void
+public "setRectXY"(left: float, top: float, right: float, bottom: float, radiusX: float, radiusY: float): void
 public "store"(p: long): void
 public "top"(): float
 public "width"(): float
@@ -1211,40 +1211,40 @@ public "isIdentity"(): boolean
 public "isScaleTranslate"(): boolean
 public "isSimilarity"(): boolean
 public "isTranslate"(): boolean
-public "localAARadius"(bounds: $Rect2fc$$Type): float
 public "localAARadius"(left: float, top: float, right: float, bottom: float): float
-public "m11"(scaleX: float): void
+public "localAARadius"(bounds: $Rect2fc$$Type): float
 public "m11"(): float
-public "m12"(): float
+public "m11"(scaleX: float): void
 public "m12"(shearY: float): void
+public "m12"(): float
 public "m14"(persp0: float): void
 public "m14"(): float
 public "m21"(shearX: float): void
 public "m21"(): float
-public "m22"(): float
 public "m22"(scaleY: float): void
+public "m22"(): float
 public "m24"(): float
 public "m24"(persp1: float): void
 public "m41"(): float
 public "m41"(transX: float): void
 public "m42"(transY: float): void
 public "m42"(): float
-public "m44"(persp2: float): void
 public "m44"(): float
+public "m44"(persp2: float): void
 public static "makeScale"(sx: float, sy: float): $Matrix
 public static "makeTranslate"(dx: float, dy: float): $Matrix
 public "mapPoint"(p: float[]): void
 public "mapPoints"(src: float[], srcPos: integer, dst: float[], dstPos: integer, count: integer): void
+public "mapPoints"(pts: float[]): void
 public "mapPoints"(pts: float[], pos: integer, count: integer): void
 public "mapPoints"(pts: float[], count: integer): void
 public "mapPoints"(src: float[], dst: float[], count: integer): void
-public "mapPoints"(pts: float[]): void
-public "mapRect"(src: $Rect2fc$$Type, dst: $Rect2f$$Type): boolean
 public "mapRect"(left: float, top: float, right: float, bottom: float, dst: $Rect2i$$Type): void
-public "mapRect"(r: $Rect2i$$Type): void
-public "mapRect"(r: $Rect2fc$$Type, out: $Rect2i$$Type): void
-public "mapRect"(r: $Rect2ic$$Type, out: $Rect2i$$Type): void
+public "mapRect"(src: $Rect2fc$$Type, dst: $Rect2f$$Type): boolean
 public "mapRect"(rect: $Rect2f$$Type): boolean
+public "mapRect"(r: $Rect2ic$$Type, out: $Rect2i$$Type): void
+public "mapRect"(r: $Rect2fc$$Type, out: $Rect2i$$Type): void
+public "mapRect"(r: $Rect2i$$Type): void
 public "mapRectOut"(left: float, top: float, right: float, bottom: float, dst: $Rect2i$$Type): void
 public "mapRectOut"(r: $Rect2fc$$Type, dst: $Rect2i$$Type): void
 public "mapRectOut"(r: $Rect2i$$Type): void
@@ -1261,14 +1261,14 @@ public "preScale"(sx: float, sy: float): void
 public "preShear"(sx: float, sy: float): void
 public "preTranslate"(dx: float, dy: float): void
 public "preservesRightAngles"(): boolean
-public "set"(m: $Matrixc$$Type): void
-public "set"(a: $ByteBuffer$$Type): void
-public "set"(p: long): void
 public "set"(scaleX: float, shearY: float, persp0: float, shearX: float, scaleY: float, persp1: float, transX: float, transY: float, persp2: float): void
-public "set"(m: $Matrix4$$Type): void
-public "set"(m: $Matrix4c$$Type): void
 public "set"(a: float[]): void
 public "set"(a: float[], offset: integer): void
+public "set"(m: $Matrixc$$Type): void
+public "set"(m: $Matrix4$$Type): void
+public "set"(a: $ByteBuffer$$Type): void
+public "set"(p: long): void
+public "set"(m: $Matrix4c$$Type): void
 public "set"(a: $FloatBuffer$$Type): void
 public "setIdentity"(): void
 public "setPerspX"(perspX: float): void
@@ -1281,12 +1281,12 @@ public "setScale"(sx: float, sy: float, px: float, py: float): void
 public "setScaleTranslate"(sx: float, sy: float, tx: float, ty: float): void
 public "setScaleX"(scaleX: float): void
 public "setScaleY"(scaleY: float): void
-public "setShear"(sx: float, sy: float): void
 public "setShear"(sx: float, sy: float, px: float, py: float): void
+public "setShear"(sx: float, sy: float): void
 public "setShearX"(shearX: float): void
 public "setShearY"(shearY: float): void
-public "setSinCos"(sin: float, cos: float): void
 public "setSinCos"(sin: float, cos: float, px: float, py: float): void
+public "setSinCos"(sin: float, cos: float): void
 public "setTranslate"(dx: float, dy: float): void
 public "setTranslateX"(transX: float): void
 public "setTranslateY"(transY: float): void
@@ -1296,9 +1296,9 @@ public "store"(a: $ByteBuffer$$Type): void
 public "store"(a: float[], offset: integer): void
 public "store"(p: long): void
 public "store"(a: $FloatBuffer$$Type): void
-public "storeAligned"(a: $FloatBuffer$$Type): void
 public "storeAligned"(p: long): void
 public "storeAligned"(a: $ByteBuffer$$Type): void
+public "storeAligned"(a: $FloatBuffer$$Type): void
 public "toMatrix4"(): $Matrix4
 public "toMatrix4"(dest: $Matrix4$$Type): void
 public "trace"(): float

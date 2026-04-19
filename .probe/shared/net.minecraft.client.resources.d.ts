@@ -243,7 +243,7 @@ public "getSound"(randomSource0: $RandomSource$$Type): $Sound
 public "getType"(): $Sound$Type
 public "getVolume"(): $SampledFloat
 public "getWeight"(): integer
-public "handler$cdm000$detour$fixOpusPath"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$cdp000$detour$fixOpusPath"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
 public "preloadIfRequired"(soundEngine0: $SoundEngine$$Type): void
 public "shouldPreload"(): boolean
 public "shouldStream"(): boolean
@@ -482,16 +482,16 @@ export interface $BakedModel extends $IForgeBakedModel, $FabricBakedModel, $Bake
 "getQuads"(blockState0: $BlockState$$Type, direction1: $Direction$$Type, randomSource2: $RandomSource$$Type): $List<$BakedQuad>
 "getQuads"(blockState0: $BlockState$$Type, direction1: $Direction$$Type, randomSource2: $RandomSource$$Type, modelData3: $ModelData$$Type, renderType4: $RenderType$$Type): $List<$BakedQuad>
 "getRenderPasses"(itemStack0: $ItemStack$$Type, boolean1: boolean): $List<$BakedModel>
-"getRenderTypes"(itemStack0: $ItemStack$$Type, boolean1: boolean): $List<$RenderType>
 "getRenderTypes"(blockState0: $BlockState$$Type, randomSource1: $RandomSource$$Type, modelData2: $ModelData$$Type): $ChunkRenderTypeSet
+"getRenderTypes"(itemStack0: $ItemStack$$Type, boolean1: boolean): $List<$RenderType>
 /** @deprecated */
 "getTransforms"(): $ItemTransforms
 "isCustomRenderer"(): boolean
 "isGui3d"(): boolean
 "isVanillaAdapter"(): boolean
 "useAmbientOcclusion"(): boolean
-"useAmbientOcclusion"(blockState0: $BlockState$$Type): boolean
 "useAmbientOcclusion"(blockState0: $BlockState$$Type, renderType1: $RenderType$$Type): boolean
+"useAmbientOcclusion"(blockState0: $BlockState$$Type): boolean
 "useAmbientOcclusionWithLightEmission"(blockState0: $BlockState$$Type, renderType1: $RenderType$$Type): boolean
 "usesBlockLight"(): boolean
 get "overrides"(): $ItemOverrides

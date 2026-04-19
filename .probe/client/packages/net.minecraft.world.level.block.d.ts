@@ -142,8 +142,8 @@ public "defaultBlockState"(): $BlockState
 public "destroy"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type): void
 /** @deprecated */
 public "dropFromExplosion"(explosion0: $Explosion$$Type): boolean
-public static "dropResources"(blockState0: $BlockState$$Type, levelAccessor1: $LevelAccessor$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type): void
 public static "dropResources"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type): void
+public static "dropResources"(blockState0: $BlockState$$Type, levelAccessor1: $LevelAccessor$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type): void
 public static "dropResources"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type, entity4: $Entity$$Type, itemStack5: $ItemStack$$Type, boolean6: boolean): void
 public static "dropResources"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type, entity4: $Entity$$Type, itemStack5: $ItemStack$$Type): void
 public "fallOn"(level0: $Level$$Type, blockState1: $BlockState$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type, float4: float): void
@@ -157,8 +157,8 @@ public "getBlockStates"(): $List<$BlockState>
 public "getCloneItemStack"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type): $ItemStack
 public "getCloneItemStack"(blockState0: $BlockState$$Type, hitResult1: $HitResult$$Type, blockGetter2: $BlockGetter$$Type, blockPos3: $BlockPos$$Type, player4: $Player$$Type): $ItemStack
 public "getDescriptionId"(): string
-public static "getDrops"(blockState0: $BlockState$$Type, serverLevel1: $ServerLevel$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type, entity4: $Entity$$Type, itemStack5: $ItemStack$$Type): $List<$ItemStack>
 public static "getDrops"(blockState0: $BlockState$$Type, serverLevel1: $ServerLevel$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type): $List<$ItemStack>
+public static "getDrops"(blockState0: $BlockState$$Type, serverLevel1: $ServerLevel$$Type, blockPos2: $BlockPos$$Type, blockEntity3: $BlockEntity$$Type, entity4: $Entity$$Type, itemStack5: $ItemStack$$Type): $List<$ItemStack>
 public "getEnchantPowerBonus"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): float
 public "getExpDrop"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, randomSource2: $RandomSource$$Type, blockPos3: $BlockPos$$Type, int4: integer, int5: integer): integer
 /** @deprecated */
@@ -187,8 +187,8 @@ public "getStateForPlacement"(blockPlaceContext0: $BlockPlaceContext$$Type): $Bl
 public "getToolModifiedState"(blockState0: $BlockState$$Type, useOnContext1: $UseOnContext$$Type, toolAction2: $ToolAction$$Type, boolean3: boolean): $BlockState
 public "getWeakChanges"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
 public "handlePrecipitation"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, precipitation3: $Biome$Precipitation$$Type): void
-public "handler$gon000$l2complements$spawnDestroyParticles$cancelParticle"(level0: $Level$$Type, player1: $Player$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type, callbackInfo4: $CallbackInfo$$Type): void
-public "handler$ham000$spawnParticles"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, randomSource3: $RandomSource$$Type, callbackInfo4: $CallbackInfo$$Type): void
+public "handler$gpa000$l2complements$spawnDestroyParticles$cancelParticle"(level0: $Level$$Type, player1: $Player$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type, callbackInfo4: $CallbackInfo$$Type): void
+public "handler$hap000$spawnParticles"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, randomSource3: $RandomSource$$Type, callbackInfo4: $CallbackInfo$$Type): void
 public "handler$zck000$additionalEntityAttributes$saveBreakingPlayer"(level0: $Level$$Type, player1: $Player$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type, blockEntity4: $BlockEntity$$Type, itemStack5: $ItemStack$$Type, callbackInfo6: $CallbackInfo$$Type): void
 public "hasDynamicShape"(): boolean
 public "hidesNeighborFace"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, blockState3: $BlockState$$Type, direction4: $Direction$$Type): boolean

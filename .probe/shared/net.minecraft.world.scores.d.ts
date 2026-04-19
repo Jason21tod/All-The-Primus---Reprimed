@@ -219,8 +219,8 @@ public static "getCustomCriteriaNames"(): $Set<string>
 public "getDefaultRenderType"(): $ObjectiveCriteria$RenderType
 public "getName"(): string
 public "isReadOnly"(): boolean
-public static "registerCustom"(string0: string): $ObjectiveCriteria
 public static "registerCustom"(string0: string, boolean1: boolean, renderType2: $ObjectiveCriteria$RenderType$$Type): $ObjectiveCriteria
+public static "registerCustom"(string0: string): $ObjectiveCriteria
 get "defaultRenderType"(): $ObjectiveCriteria$RenderType
 get "name"(): string
 get "readOnly"(): boolean

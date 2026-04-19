@@ -58,9 +58,9 @@ public "getActionInfo"(): $ActionInfo
 public "getAdditionalProperties"(): $AdditionalProperties
 public "getBehaviorEnforcer"(): $BehaviorEnforcer
 public "getClientInfo"(): $ClientSetting
+public "getLimitedValue"(integers0: $ParCoolConfig$Client$Integers$$Type, integers1: $ParCoolConfig$Server$Integers$$Type): integer
 public "getLimitedValue"(booleans0: $ParCoolConfig$Client$Booleans$$Type, booleans1: $ParCoolConfig$Server$Booleans$$Type): boolean
 public "getLimitedValue"(doubles0: $ParCoolConfig$Client$Doubles$$Type, doubles1: $ParCoolConfig$Server$Doubles$$Type): double
-public "getLimitedValue"(integers0: $ParCoolConfig$Client$Integers$$Type, integers1: $ParCoolConfig$Server$Integers$$Type): integer
 public "getList"(): $List<$Action>
 public "getServerLimitation"(): $ServerLimitation
 /** Client only, do not use in server scripts */
@@ -443,8 +443,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $Player, $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $ParCoolActionEvent extends $Event implements $EventItf {
-constructor()
 constructor(player0: $Player$$Type, action1: $Action$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -547,8 +547,8 @@ import { $ModelPart$$Type } from "net.minecraft.client.model.geom.ModelPart"
 export class $PlayerModelTransformer {
 constructor(player0: $Player$$Type, playerModel1: $PlayerModel$$Type, boolean2: boolean, float3: float, float4: float, float5: float, float6: float, float7: float)
 
-public "addRotateLeftArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "addRotateLeftArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
+public "addRotateLeftArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "addRotateLeftLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "addRotateLeftLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "addRotateRightArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
@@ -582,8 +582,8 @@ public "rotateLeftLeg"(float0: float, float1: float, float2: float): $PlayerMode
 public "rotateLeftLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "rotateRightArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "rotateRightArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
-public "rotateRightLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "rotateRightLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
+public "rotateRightLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "setOption"(animationOption0: $AnimationOption$$Type): void
 public "translateHead"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "translateLeftArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer

@@ -50,8 +50,8 @@ import { $IKeyEntryRenderEvent } from "com.blamejared.controlling.api.events.IKe
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $KeyEntryRenderEvent extends $Event implements $IKeyEntryRenderEvent, $EventItf {
-constructor(keyEntry0: $NewKeyBindsList$KeyEntry$$Type, guiGraphics1: $GuiGraphics$$Type, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, boolean9: boolean, float10: float)
 constructor()
+constructor(keyEntry0: $NewKeyBindsList$KeyEntry$$Type, guiGraphics1: $GuiGraphics$$Type, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, boolean9: boolean, float10: float)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

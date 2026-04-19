@@ -235,8 +235,8 @@ import { $AttributeInstance, $AttributeInstance$$Type } from "net.minecraft.worl
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $AttributeChangedValueEvent extends $Event implements $EventItf {
-constructor(livingEntity0: $LivingEntity$$Type, attributeInstance1: $AttributeInstance$$Type, double2: double, double3: double)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, attributeInstance1: $AttributeInstance$$Type, double2: double, double3: double)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

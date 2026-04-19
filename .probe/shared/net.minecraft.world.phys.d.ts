@@ -14,8 +14,8 @@ readonly "y": float
 
 constructor(float0: float, float1: float)
 
-public "add"(float0: float): $Vec2
 public "add"(vec20: $Vec2$$Type): $Vec2
+public "add"(float0: float): $Vec2
 public "distanceToSqr"(vec20: $Vec2$$Type): float
 public "dot"(vec20: $Vec2$$Type): float
 public "equals"(vec20: $Vec2$$Type): boolean
@@ -190,8 +190,8 @@ public "forAllBoxes"(doubleLineConsumer0: $Shapes$DoubleLineConsumer$$Type): voi
 public "forAllEdges"(doubleLineConsumer0: $Shapes$DoubleLineConsumer$$Type): void
 public "getFaceShape"(direction0: $Direction$$Type): $VoxelShape
 public "isEmpty"(): boolean
-public "max"(axis0: $Direction$Axis$$Type, double1: double, double2: double): double
 public "max"(axis0: $Direction$Axis$$Type): double
+public "max"(axis0: $Direction$Axis$$Type, double1: double, double2: double): double
 public "min"(axis0: $Direction$Axis$$Type): double
 public "min"(axis0: $Direction$Axis$$Type, double1: double, double2: double): double
 public "move"(double0: double, double1: double, double2: double): $VoxelShape
@@ -249,8 +249,8 @@ constructor(blockPos0: $BlockPos$$Type, blockPos1: $BlockPos$$Type)
 constructor(blockPos0: $BlockPos$$Type)
 constructor(double0: double, double1: double, double2: double, double3: double, double4: double, double5: double)
 
-public static "clip"(iterable0: $Iterable$$Type<$AABB$$Type>, vec31: $Vec3$$Type, vec32: $Vec3$$Type, blockPos3: $BlockPos$$Type): $BlockHitResult
 public "clip"(vec30: $Vec3$$Type, vec31: $Vec3$$Type): $Optional<$Vec3>
+public static "clip"(iterable0: $Iterable$$Type<$AABB$$Type>, vec31: $Vec3$$Type, vec32: $Vec3$$Type, blockPos3: $BlockPos$$Type): $BlockHitResult
 public "contains"(vec30: $Vec3$$Type): boolean
 public "contains"(double0: double, double1: double, double2: double): boolean
 public "contract"(double0: double, double1: double, double2: double): $AABB
@@ -265,11 +265,11 @@ public "getXsize"(): double
 public "getYsize"(): double
 public "getZsize"(): double
 public "hasNaN"(): boolean
-public "inflate"(double0: double): $AABB
 public "inflate"(double0: double, double1: double, double2: double): $AABB
+public "inflate"(double0: double): $AABB
 public "intersect"(aABB0: $AABB$$Type): $AABB
-public "intersects"(vec30: $Vec3$$Type, vec31: $Vec3$$Type): boolean
 public "intersects"(double0: double, double1: double, double2: double, double3: double, double4: double, double5: double): boolean
+public "intersects"(vec30: $Vec3$$Type, vec31: $Vec3$$Type): boolean
 public "intersects"(aABB0: $AABB$$Type): boolean
 public "max"(axis0: $Direction$Axis$$Type): double
 public "min"(axis0: $Direction$Axis$$Type): double
@@ -328,8 +328,8 @@ import { $AxisCycle$$Type } from "net.minecraft.core.AxisCycle"
 
 export class $DiscreteVoxelShape implements $DiscreteVSAccess {
 public "fill"(int0: integer, int1: integer, int2: integer): void
-public "firstFull"(axis0: $Direction$Axis$$Type): integer
 public "firstFull"(axis0: $Direction$Axis$$Type, int1: integer, int2: integer): integer
+public "firstFull"(axis0: $Direction$Axis$$Type): integer
 public "forAllBoxes"(intLineConsumer0: $DiscreteVoxelShape$IntLineConsumer$$Type, boolean1: boolean): void
 public "forAllEdges"(intLineConsumer0: $DiscreteVoxelShape$IntLineConsumer$$Type, boolean1: boolean): void
 public "forAllFaces"(intFaceConsumer0: $DiscreteVoxelShape$IntFaceConsumer$$Type): void
@@ -342,8 +342,8 @@ public "isFull"(int0: integer, int1: integer, int2: integer): boolean
 public "isFull"(axisCycle0: $AxisCycle$$Type, int1: integer, int2: integer, int3: integer): boolean
 public "isFullWide"(int0: integer, int1: integer, int2: integer): boolean
 public "isFullWide"(axisCycle0: $AxisCycle$$Type, int1: integer, int2: integer, int3: integer): boolean
-public "lastFull"(axis0: $Direction$Axis$$Type): integer
 public "lastFull"(axis0: $Direction$Axis$$Type, int1: integer, int2: integer): integer
+public "lastFull"(axis0: $Direction$Axis$$Type): integer
 get "xSize"(): integer
 get "ySize"(): integer
 get "zSize"(): integer

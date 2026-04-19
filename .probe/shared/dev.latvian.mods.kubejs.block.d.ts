@@ -86,17 +86,17 @@ public "blockEntity"(callback: $Consumer$$Type<$BlockEntityInfo$$Type>): $BlockB
  */
 public "bounciness"(bounciness: float): $BlockBuilder
 /** Set the shape of the block. */
-public "box"(x0: double, y0: double, z0: double, x1: double, y1: double, z1: double, scale16: boolean): $BlockBuilder
-/** Set the shape of the block. */
 public "box"(x0: double, y0: double, z0: double, x1: double, y1: double, z1: double): $BlockBuilder
+/** Set the shape of the block. */
+public "box"(x0: double, y0: double, z0: double, x1: double, y1: double, z1: double, scale16: boolean): $BlockBuilder
 /** Set if the block can be replaced by something else. */
 public "canBeReplaced"(callbackJS: $Predicate$$Type<$CanBeReplacedCallbackJS$$Type>): $BlockBuilder
 /** Checks if the block can be waterlogged. */
 public "canBeWaterlogged"(): boolean
 /** Set the color of a specific layer of the block. */
-public "color"(color: $BlockTintFunction$$Type): $BlockBuilder
-/** Set the color of a specific layer of the block. */
 public "color"(index: integer, color: $BlockTintFunction$$Type): $BlockBuilder
+/** Set the color of a specific layer of the block. */
+public "color"(color: $BlockTintFunction$$Type): $BlockBuilder
 public "createProperties"(): $BlockBehaviour$Properties
 public static "createShape"(boxes: $List$$Type<$AABB$$Type>): $VoxelShape
 public "cropSoundType"(): $BlockBuilder
@@ -352,10 +352,13 @@ set "xp"(value: integer)
 declare module "dev.latvian.mods.kubejs.block.custom.HorizontalDirectionalBlockBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $BlockBuilder } from "dev.latvian.mods.kubejs.block.BlockBuilder"
+import { $Block } from "net.minecraft.world.level.block.Block"
 
 export class $HorizontalDirectionalBlockBuilder extends $BlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
+public "createObject"(): $Block
+public "textureAll"(tex: string): $HorizontalDirectionalBlockBuilder
 }
 }
 
@@ -498,10 +501,12 @@ get "item"(): $ItemStack
 declare module "dev.latvian.mods.kubejs.block.custom.CarpetBlockBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ShapedBlockBuilder } from "dev.latvian.mods.kubejs.block.custom.ShapedBlockBuilder"
+import { $Block } from "net.minecraft.world.level.block.Block"
 
 export class $CarpetBlockBuilder extends $ShapedBlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
+public "createObject"(): $Block
 public "texture"(texture: string): $CarpetBlockBuilder
 }
 }
@@ -525,8 +530,8 @@ import { $BlockSetType$$Type } from "net.minecraft.world.level.block.state.prope
 export class $PressurePlateBlockBuilder extends $ShapedBlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
-public "behaviour"(wt: $BlockSetType$$Type): $PressurePlateBlockBuilder
 public "behaviour"(wt: string): $PressurePlateBlockBuilder
+public "behaviour"(wt: $BlockSetType$$Type): $PressurePlateBlockBuilder
 public "createObject"(): $Block
 }
 }
@@ -534,12 +539,10 @@ public "createObject"(): $Block
 declare module "dev.latvian.mods.kubejs.block.custom.SlabBlockBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ShapedBlockBuilder } from "dev.latvian.mods.kubejs.block.custom.ShapedBlockBuilder"
-import { $Block } from "net.minecraft.world.level.block.Block"
 
 export class $SlabBlockBuilder extends $ShapedBlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
-public "createObject"(): $Block
 }
 }
 
@@ -578,8 +581,8 @@ public "inventory"(width: integer, height: integer): void
 public "rightClickOpensInventory"(): void
 public "serverTick"(callback: $BlockEntityCallback$$Type): void
 public "serverTick"(frequency: integer, offset: integer, callback: $BlockEntityCallback$$Type): void
-public "tick"(frequency: integer, offset: integer, callback: $BlockEntityCallback$$Type): void
 public "tick"(callback: $BlockEntityCallback$$Type): void
+public "tick"(frequency: integer, offset: integer, callback: $BlockEntityCallback$$Type): void
 }
 }
 
@@ -600,9 +603,9 @@ public "bounce"(bounciness: float): void
 /** Returns the Vec3 of the entity's velocity. Use .x, .y and .z to get the respective components of that */
 public "getVelocity"(): $Vec3
 /** Sets the entity's velocity */
-public "setVelocity"(x: float, y: float, z: float): void
-/** Sets the entity's velocity */
 public "setVelocity"(vec: $Vec3$$Type): void
+/** Sets the entity's velocity */
+public "setVelocity"(x: float, y: float, z: float): void
 get "velocity"(): $Vec3
 set "velocity"(value: $Vec3$$Type)
 }

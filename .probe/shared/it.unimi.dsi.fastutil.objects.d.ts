@@ -100,14 +100,14 @@ export interface $Object2ShortFunction<K = any> extends $Function$0<K, short>, $
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2ShortFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2ShortFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): short
 "defaultReturnValue"(short0: short): void
-"getOrDefault"(object0: any, short1: short): short
+"defaultReturnValue"(): short
 /** @deprecated */
+"getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(object0: any, short1: short): short
 "getShort"(object0: any): short
-"put"(k0: K, short1: short): short
 /** @deprecated */
+"put"(k0: K, short1: short): short
 "put"(k0: K, short1: short): short
 /** @deprecated */
 "remove"(object0: any): short
@@ -175,9 +175,9 @@ export interface $ObjectList<K = any> extends $List<K>, $Comparable<$List<K>>, $
 "replaceAll"(unaryOperator0: $UnaryOperator$$Type<K>): void
 "retainAll"(collection0: $Collection$$Type<any>): boolean
 "set"(int0: integer, k1: K): K
+"setElements"(int0: integer, k1s: K[]): void
 "setElements"(k0s: K[]): void
 "setElements"(int0: integer, k1s: K[], int2: integer, int3: integer): void
-"setElements"(int0: integer, k1s: K[]): void
 "size"(int0: integer): void
 "size"(): integer
 "sort"(comparator0: $Comparator$$Type<K>): void
@@ -289,16 +289,16 @@ public "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $S
 public "containsKey"(object0: any): boolean
 public "defaultReturnValue"(byte0: byte): void
 public "defaultReturnValue"(): byte
-/** @deprecated */
-public "get"(object0: any): byte
 public "getByte"(object0: any): byte
-public "getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
+public "getOrDefault"(object0: any, byte1: byte): byte
 public "getOrDefault"(object0: any, byte1: byte): byte
 public static "identity"<T>(): $Function<T, T>
 /** @deprecated */
 public "put"(k0: K, byte1: byte): byte
 public "put"(k0: K, byte1: byte): byte
+/** @deprecated */
+public "remove"(object0: any): byte
 public "removeByte"(object0: any): byte
 public "size"(): integer
 }
@@ -368,15 +368,15 @@ export interface $Reference2IntFunction<K = any> extends $Function$0<K, integer>
 "containsKey"(object0: any): boolean
 "defaultReturnValue"(int0: integer): void
 "defaultReturnValue"(): integer
-/** @deprecated */
-"get"(object0: any): integer
 "getInt"(object0: any): integer
-"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
+"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "put"(k0: K, integer1: integer): integer
 "put"(k0: K, int1: integer): integer
+/** @deprecated */
+"remove"(object0: any): integer
 "removeInt"(object0: any): integer
 "size"(): integer
 }
@@ -479,8 +479,8 @@ export interface $Object2IntSortedMap<K = any> extends $Object2IntMap<K>, $Sorte
 "containsValue"(int0: integer): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"defaultReturnValue"(): integer
 "defaultReturnValue"(int0: integer): void
+"defaultReturnValue"(): integer
 "equals"(object0: any): boolean
 "firstEntry"(): $Map$Entry<K, integer>
 "firstKey"(): K
@@ -1108,8 +1108,8 @@ public "containsValue"(byte0: byte): boolean
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(byte0: byte): void
 public "defaultReturnValue"(): byte
+public "defaultReturnValue"(byte0: byte): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 /** @deprecated */
 public "entrySet"(): $ObjectSet<$Map$Entry<K, byte>>
@@ -1229,14 +1229,14 @@ export interface $Reference2ShortFunction<K = any> extends $Function$0<K, short>
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2ShortFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2ShortFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): short
 "defaultReturnValue"(short0: short): void
-"getOrDefault"(object0: any, short1: short): short
+"defaultReturnValue"(): short
 /** @deprecated */
+"getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(object0: any, short1: short): short
 "getShort"(object0: any): short
-"put"(k0: K, short1: short): short
 /** @deprecated */
+"put"(k0: K, short1: short): short
 "put"(k0: K, short1: short): short
 /** @deprecated */
 "remove"(object0: any): short
@@ -1530,8 +1530,8 @@ export interface $Object2ObjectFunction<K = any, V = any> extends $Function<K, V
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2ObjectFunction<T, V>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2ObjectFunction<V>
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 "get"(object0: any): V
 "getOrDefault"(object0: any, v1: V): V
 "put"(k0: K, v1: V): V
@@ -1631,8 +1631,8 @@ export interface $Object2ByteMap<K = any> extends $Object2ByteFunction<K>, $Map<
 "containsValue"(byte0: byte): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"defaultReturnValue"(byte0: byte): void
 "defaultReturnValue"(): byte
+"defaultReturnValue"(byte0: byte): void
 /** @deprecated */
 "entrySet"(): $ObjectSet<$Map$Entry<K, byte>>
 "equals"(object0: any): boolean
@@ -1817,8 +1817,8 @@ public "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, byte, byte>):
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(byte0: byte): void
 public "defaultReturnValue"(): byte
+public "defaultReturnValue"(byte0: byte): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "firstEntry"(): $Map$Entry<K, byte>
 public "firstKey"(): K
@@ -1996,8 +1996,8 @@ export interface $Object2ByteSortedMap<K = any> extends $Object2ByteMap<K>, $Sor
 "containsValue"(byte0: byte): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"defaultReturnValue"(byte0: byte): void
 "defaultReturnValue"(): byte
+"defaultReturnValue"(byte0: byte): void
 "equals"(object0: any): boolean
 "firstEntry"(): $Map$Entry<K, byte>
 "firstKey"(): K
@@ -2318,8 +2318,8 @@ public "containsValue"(float0: float): boolean
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(): float
 public "defaultReturnValue"(float0: float): void
+public "defaultReturnValue"(): float
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 /** @deprecated */
 public "entrySet"(): $ObjectSet<$Map$Entry<K, float>>
@@ -2439,8 +2439,8 @@ export interface $Object2DoubleFunction<K = any> extends $Function$0<K, double>,
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2DoubleFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2DoubleFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): double
 "defaultReturnValue"(double0: double): void
+"defaultReturnValue"(): double
 "getDouble"(object0: any): double
 "getOrDefault"(object0: any, double1: double): double
 /** @deprecated */
@@ -2448,8 +2448,6 @@ export interface $Object2DoubleFunction<K = any> extends $Function$0<K, double>,
 "put"(k0: K, double1: double): double
 /** @deprecated */
 "put"(k0: K, double1: double): double
-/** @deprecated */
-"remove"(object0: any): double
 "removeDouble"(object0: any): double
 "size"(): integer
 }
@@ -2533,6 +2531,7 @@ static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E): $Set<E>
 declare module "it.unimi.dsi.fastutil.objects.ObjectArrayList" {
 import { $Cloneable } from "java.lang.Cloneable"
 import { $Iterator$$Type } from "java.util.Iterator"
+import { $ObjectSpliterator } from "it.unimi.dsi.fastutil.objects.ObjectSpliterator"
 import { $Predicate$$Type } from "java.util.function.Predicate"
 import { $Collection$$Type } from "java.util.Collection"
 import { $UnaryOperator$$Type } from "java.util.function.UnaryOperator"
@@ -2540,6 +2539,7 @@ import { $ObjectCollection$$Type } from "it.unimi.dsi.fastutil.objects.ObjectCol
 import { $Serializable } from "java.io.Serializable"
 import { $RandomAccess } from "java.util.RandomAccess"
 import { $List } from "java.util.List"
+import { $ObjectListIterator } from "it.unimi.dsi.fastutil.objects.ObjectListIterator"
 import { $Stream } from "java.util.stream.Stream"
 import { $ObjectIterator$$Type } from "it.unimi.dsi.fastutil.objects.ObjectIterator"
 import { $Collector } from "java.util.stream.Collector"
@@ -2565,6 +2565,7 @@ public "addAll"(int0: integer, objectList1: $ObjectList$$Type<K>): boolean
 public "addAll"(objectList0: $ObjectList$$Type<K>): boolean
 public "addFirst"(k0: K): void
 public "addLast"(k0: K): void
+public "clone"(): $ObjectArrayList<K>
 public "compareTo"(objectArrayList0: $ObjectArrayList$$Type<K>): integer
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
@@ -2574,6 +2575,7 @@ public "equals"(objectArrayList0: $ObjectArrayList$$Type<K>): boolean
 public "get"(int0: integer): K
 public "getFirst"(): K
 public "getLast"(): K
+public "listIterator"(int0: integer): $ObjectListIterator<K>
 public static "of"<K>(): $ObjectArrayList<K>
 public static "of"<K>(...k0s: K[]): $ObjectArrayList<K>
 public static "of"<K>(k0: K, k1: K, k2: K): $ObjectList<K>
@@ -2594,9 +2596,10 @@ public "removeLast"(): K
 public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<K>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, k1: K): K
-public "setElements"(k0s: K[]): void
 public "setElements"(int0: integer, k1s: K[]): void
+public "setElements"(k0s: K[]): void
 public "sort"(comparator0: $Comparator$$Type<K>): void
+public "spliterator"(): $ObjectSpliterator<K>
 public "stream"(): $Stream<K>
 public "toArray"<K>(k0s: K[]): K[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
@@ -2768,8 +2771,8 @@ public "computeIntIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, integer, i
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(): integer
 public "defaultReturnValue"(int0: integer): void
+public "defaultReturnValue"(): integer
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "firstEntry"(): $Map$Entry<K, integer>
 public "firstKey"(): K
@@ -3077,8 +3080,8 @@ export interface $Object2ReferenceFunction<K = any, V = any> extends $Function$0
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2ReferenceFunction<T, V>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2ReferenceFunction<V>
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 "get"(object0: any): V
 "getOrDefault"(object0: any, v1: V): V
 "put"(k0: K, v1: V): V
@@ -3156,8 +3159,8 @@ export interface $Reference2DoubleFunction<K = any> extends $Function$0<K, doubl
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2DoubleFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2DoubleFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): double
 "defaultReturnValue"(double0: double): void
+"defaultReturnValue"(): double
 "getDouble"(object0: any): double
 "getOrDefault"(object0: any, double1: double): double
 /** @deprecated */
@@ -3165,8 +3168,6 @@ export interface $Reference2DoubleFunction<K = any> extends $Function$0<K, doubl
 "put"(k0: K, double1: double): double
 /** @deprecated */
 "put"(k0: K, double1: double): double
-/** @deprecated */
-"remove"(object0: any): double
 "removeDouble"(object0: any): double
 "size"(): integer
 }
@@ -3241,8 +3242,8 @@ export interface $Object2CharFunction<K = any> extends $Function$0<K, character>
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2CharFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2CharFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): character
 "defaultReturnValue"(char0: character): void
+"defaultReturnValue"(): character
 "getChar"(object0: any): character
 "getOrDefault"(object0: any, char1: character): character
 /** @deprecated */
@@ -3250,8 +3251,6 @@ export interface $Object2CharFunction<K = any> extends $Function$0<K, character>
 "put"(k0: K, char1: character): character
 /** @deprecated */
 "put"(k0: K, character1: character): character
-/** @deprecated */
-"remove"(object0: any): character
 "removeChar"(object0: any): character
 "size"(): integer
 }
@@ -3354,8 +3353,8 @@ public "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, byte, byte>):
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(byte0: byte): void
 public "defaultReturnValue"(): byte
+public "defaultReturnValue"(byte0: byte): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "firstEntry"(): $Map$Entry<K, byte>
 public "firstKey"(): K
@@ -3480,8 +3479,8 @@ export interface $Object2LongFunction<K = any> extends $Function$0<K, long>, $To
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2LongFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2LongFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): long
 "defaultReturnValue"(long0: long): void
+"defaultReturnValue"(): long
 "getLong"(object0: any): long
 "getOrDefault"(object0: any, long1: long): long
 /** @deprecated */
@@ -3489,8 +3488,6 @@ export interface $Object2LongFunction<K = any> extends $Function$0<K, long>, $To
 "put"(k0: K, long1: long): long
 /** @deprecated */
 "put"(k0: K, long1: long): long
-/** @deprecated */
-"remove"(object0: any): long
 "removeLong"(object0: any): long
 "size"(): integer
 }
@@ -3725,8 +3722,8 @@ public "computeIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, float, float>
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(): float
 public "defaultReturnValue"(float0: float): void
+public "defaultReturnValue"(): float
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 /** @deprecated */
 public "entrySet"(): $ObjectSet<$Map$Entry<K, float>>
@@ -3939,8 +3936,8 @@ export interface $Reference2ObjectFunction<K = any, V = any> extends $Function$0
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2ObjectFunction<T, V>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2ObjectFunction<V>
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 "get"(object0: any): V
 "getOrDefault"(object0: any, v1: V): V
 "put"(k0: K, v1: V): V
@@ -4044,6 +4041,7 @@ import { $Byte2ObjectFunction, $Byte2ObjectFunction$$Type } from "it.unimi.dsi.f
 import { $Short2ObjectFunction, $Short2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.shorts.Short2ObjectFunction"
 import { $AbstractObject2ObjectMap } from "it.unimi.dsi.fastutil.objects.AbstractObject2ObjectMap"
 import { $Object2ByteFunction, $Object2ByteFunction$$Type } from "it.unimi.dsi.fastutil.objects.Object2ByteFunction"
+import { $Object2ObjectMap$FastEntrySet } from "it.unimi.dsi.fastutil.objects.Object2ObjectMap$FastEntrySet"
 import { $Int2ObjectFunction, $Int2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2ObjectFunction"
 import { $Long2ObjectFunction, $Long2ObjectFunction$$Type } from "it.unimi.dsi.fastutil.longs.Long2ObjectFunction"
 import { $ObjectSet } from "it.unimi.dsi.fastutil.objects.ObjectSet"
@@ -4105,6 +4103,7 @@ public "get"(object0: any): V
 public "getOrDefault"(object0: any, v1: V): V
 public static "identity"<T>(): $Function<T, T>
 public "merge"(k0: K, v1: V, biFunction2: $BiFunction$$Type<V, V, V>): V
+public "object2ObjectEntrySet"(): $Object2ObjectMap$FastEntrySet<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
@@ -4215,8 +4214,8 @@ export interface $Object2IntMap<K = any> extends $Object2IntFunction<K>, $Map<K,
 "containsValue"(int0: integer): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"defaultReturnValue"(): integer
 "defaultReturnValue"(int0: integer): void
+"defaultReturnValue"(): integer
 /** @deprecated */
 "entrySet"(): $ObjectSet<$Map$Entry<K, integer>>
 "equals"(object0: any): boolean
@@ -4301,7 +4300,6 @@ declare module "it.unimi.dsi.fastutil.objects.Object2IntLinkedOpenHashMap" {
 import { $ObjectSortedSet } from "it.unimi.dsi.fastutil.objects.ObjectSortedSet"
 import { $BiFunction$$Type } from "java.util.function.BiFunction"
 import { $IntBinaryOperator$$Type } from "java.util.function.IntBinaryOperator"
-import { $Object2IntSortedMap$FastSortedEntrySet } from "it.unimi.dsi.fastutil.objects.Object2IntSortedMap$FastSortedEntrySet"
 import { $Int2IntFunction, $Int2IntFunction$$Type } from "it.unimi.dsi.fastutil.ints.Int2IntFunction"
 import { $Float2IntFunction } from "it.unimi.dsi.fastutil.floats.Float2IntFunction"
 import { $Object2FloatFunction } from "it.unimi.dsi.fastutil.objects.Object2FloatFunction"
@@ -4401,8 +4399,8 @@ public "computeIntIfPresent"(k0: K, biFunction1: $BiFunction$$Type<K, integer, i
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(): integer
 public "defaultReturnValue"(int0: integer): void
+public "defaultReturnValue"(): integer
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "firstEntry"(): $Map$Entry<K, integer>
 public "firstKey"(): K
@@ -4425,7 +4423,6 @@ public "merge"(k0: K, integer1: integer, biFunction2: $BiFunction$$Type<integer,
 /** @deprecated */
 public "mergeInt"(k0: K, int1: integer, biFunction2: $BiFunction$$Type<integer, integer, integer>): integer
 public "mergeInt"(k0: K, int1: integer, intBinaryOperator2: $IntBinaryOperator$$Type): integer
-public "object2IntEntrySet"(): $Object2IntSortedMap$FastSortedEntrySet<K>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V): $Map<K, V>
 public static "of"<K, V>(): $Map<K, V>
 public static "of"<K, V>(k0: K, v1: V, k2: K, v3: V, k4: K, v5: V, k6: K, v7: V, k8: K, v9: V, k10: K, v11: V): $Map<K, V>
@@ -4537,15 +4534,15 @@ export interface $Object2ByteFunction<K = any> extends $Function$0<K, byte>, $To
 "containsKey"(object0: any): boolean
 "defaultReturnValue"(byte0: byte): void
 "defaultReturnValue"(): byte
-/** @deprecated */
-"get"(object0: any): byte
 "getByte"(object0: any): byte
-"getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
+"getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
 "put"(k0: K, byte1: byte): byte
 "put"(k0: K, byte1: byte): byte
+/** @deprecated */
+"remove"(object0: any): byte
 "removeByte"(object0: any): byte
 "size"(): integer
 }
@@ -4647,8 +4644,8 @@ export interface $Reference2LongFunction<K = any> extends $Function$0<K, long>, 
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2LongFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2LongFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): long
 "defaultReturnValue"(long0: long): void
+"defaultReturnValue"(): long
 "getLong"(object0: any): long
 "getOrDefault"(object0: any, long1: long): long
 /** @deprecated */
@@ -4656,8 +4653,6 @@ export interface $Reference2LongFunction<K = any> extends $Function$0<K, long>, 
 "put"(k0: K, long1: long): long
 /** @deprecated */
 "put"(k0: K, long1: long): long
-/** @deprecated */
-"remove"(object0: any): long
 "removeLong"(object0: any): long
 "size"(): integer
 }
@@ -4734,15 +4729,15 @@ export interface $Reference2ByteFunction<K = any> extends $Function$0<K, byte>, 
 "containsKey"(object0: any): boolean
 "defaultReturnValue"(byte0: byte): void
 "defaultReturnValue"(): byte
-/** @deprecated */
-"get"(object0: any): byte
 "getByte"(object0: any): byte
-"getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
+"getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(object0: any, byte1: byte): byte
 /** @deprecated */
 "put"(k0: K, byte1: byte): byte
 "put"(k0: K, byte1: byte): byte
+/** @deprecated */
+"remove"(object0: any): byte
 "removeByte"(object0: any): byte
 "size"(): integer
 }
@@ -4817,14 +4812,14 @@ export interface $Reference2FloatFunction<K = any> extends $Function$0<K, float>
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2FloatFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2FloatFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): float
 "defaultReturnValue"(float0: float): void
+"defaultReturnValue"(): float
 "getFloat"(object0: any): float
-"getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
+"getOrDefault"(object0: any, float1: float): float
+/** @deprecated */
 "put"(k0: K, float1: float): float
-/** @deprecated */
 "put"(k0: K, float1: float): float
 /** @deprecated */
 "remove"(object0: any): float
@@ -4924,8 +4919,8 @@ export interface $Object2FloatMap<K = any> extends $Object2FloatFunction<K>, $Ma
 "containsValue"(float0: float): boolean
 /** @deprecated */
 "containsValue"(object0: any): boolean
-"defaultReturnValue"(): float
 "defaultReturnValue"(float0: float): void
+"defaultReturnValue"(): float
 /** @deprecated */
 "entrySet"(): $ObjectSet<$Map$Entry<K, float>>
 "equals"(object0: any): boolean
@@ -5015,6 +5010,7 @@ import { $Stack } from "it.unimi.dsi.fastutil.Stack"
 import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $AbstractObjectCollection } from "it.unimi.dsi.fastutil.objects.AbstractObjectCollection"
 import { $List, $List$$Type } from "java.util.List"
+import { $ObjectListIterator } from "it.unimi.dsi.fastutil.objects.ObjectListIterator"
 import { $Stream } from "java.util.stream.Stream"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $ObjectList, $ObjectList$$Type } from "it.unimi.dsi.fastutil.objects.ObjectList"
@@ -5025,8 +5021,8 @@ public "add"(int0: integer, k1: K): void
 public "addAll"(int0: integer, collection1: $Collection$$Type<K>): boolean
 public "addAll"(objectList0: $ObjectList$$Type<K>): boolean
 public "addAll"(int0: integer, objectList1: $ObjectList$$Type<K>): boolean
-public "addElements"(int0: integer, k1s: K[], int2: integer, int3: integer): void
 public "addElements"(int0: integer, k1s: K[]): void
+public "addElements"(int0: integer, k1s: K[], int2: integer, int3: integer): void
 public "addFirst"(k0: K): void
 public "addLast"(k0: K): void
 public "compareTo"(list0: $List$$Type<K>): integer
@@ -5040,6 +5036,8 @@ public "getLast"(): K
 public "indexOf"(object0: any): integer
 public "isEmpty"(): boolean
 public "lastIndexOf"(object0: any): integer
+public "listIterator"(): $ObjectListIterator<K>
+public "listIterator"(int0: integer): $ObjectListIterator<K>
 public static "of"<K>(): $ObjectList<K>
 public static "of"<K>(k0: K, k1: K, k2: K): $ObjectList<K>
 public static "of"<K>(k0: K, k1: K): $ObjectList<K>
@@ -5067,8 +5065,8 @@ public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<K>): void
 public "retainAll"(collection0: $Collection$$Type<any>): boolean
 public "set"(int0: integer, k1: K): K
 public "setElements"(int0: integer, k1s: K[], int2: integer, int3: integer): void
-public "setElements"(k0s: K[]): void
 public "setElements"(int0: integer, k1s: K[]): void
+public "setElements"(k0s: K[]): void
 public "size"(int0: integer): void
 public "size"(): integer
 public "sort"(comparator0: $Comparator$$Type<K>): void
@@ -5174,8 +5172,8 @@ public "containsValue"(int0: integer): boolean
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(): integer
 public "defaultReturnValue"(int0: integer): void
+public "defaultReturnValue"(): integer
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 /** @deprecated */
 public "entrySet"(): $ObjectSet<$Map$Entry<K, integer>>
@@ -5362,14 +5360,14 @@ export interface $Object2FloatFunction<K = any> extends $Function$0<K, float>, $
 "composeReference"<T>(reference2ObjectFunction0: $Reference2ObjectFunction$$Type<T, K>): $Reference2FloatFunction<T>
 "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $Short2FloatFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): float
 "defaultReturnValue"(float0: float): void
+"defaultReturnValue"(): float
 "getFloat"(object0: any): float
-"getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
+"getOrDefault"(object0: any, float1: float): float
+/** @deprecated */
 "put"(k0: K, float1: float): float
-/** @deprecated */
 "put"(k0: K, float1: float): float
 /** @deprecated */
 "remove"(object0: any): float
@@ -5693,16 +5691,16 @@ public "composeShort"(short2ObjectFunction0: $Short2ObjectFunction$$Type<K>): $S
 public "containsKey"(object0: any): boolean
 public "defaultReturnValue"(int0: integer): void
 public "defaultReturnValue"(): integer
-/** @deprecated */
-public "get"(object0: any): integer
 public "getInt"(object0: any): integer
-public "getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 public "getOrDefault"(object0: any, integer1: integer): integer
+public "getOrDefault"(object0: any, int1: integer): integer
 public static "identity"<T>(): $Function<T, T>
 /** @deprecated */
 public "put"(k0: K, integer1: integer): integer
 public "put"(k0: K, int1: integer): integer
+/** @deprecated */
+public "remove"(object0: any): integer
 public "removeInt"(object0: any): integer
 public "size"(): integer
 }
@@ -5772,15 +5770,15 @@ export interface $Object2IntFunction<K = any> extends $Function$0<K, integer>, $
 "containsKey"(object0: any): boolean
 "defaultReturnValue"(int0: integer): void
 "defaultReturnValue"(): integer
-/** @deprecated */
-"get"(object0: any): integer
 "getInt"(object0: any): integer
-"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
+"getOrDefault"(object0: any, int1: integer): integer
 /** @deprecated */
 "put"(k0: K, integer1: integer): integer
 "put"(k0: K, int1: integer): integer
+/** @deprecated */
+"remove"(object0: any): integer
 "removeInt"(object0: any): integer
 "size"(): integer
 }
@@ -5855,8 +5853,8 @@ export interface $Reference2CharFunction<K = any> extends $Function$0<K, charact
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2CharFunction<T>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2CharFunction
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): character
 "defaultReturnValue"(char0: character): void
+"defaultReturnValue"(): character
 "getChar"(object0: any): character
 "getOrDefault"(object0: any, char1: character): character
 /** @deprecated */
@@ -5864,8 +5862,6 @@ export interface $Reference2CharFunction<K = any> extends $Function$0<K, charact
 "put"(k0: K, char1: character): character
 /** @deprecated */
 "put"(k0: K, character1: character): character
-/** @deprecated */
-"remove"(object0: any): character
 "removeChar"(object0: any): character
 "size"(): integer
 }
@@ -5979,8 +5975,8 @@ export interface $Reference2ReferenceFunction<K = any, V = any> extends $Functio
 "composeReference"<T>(reference2ReferenceFunction0: $Reference2ReferenceFunction$$Type<T, K>): $Reference2ReferenceFunction<T, V>
 "composeShort"(short2ReferenceFunction0: $Short2ReferenceFunction$$Type<K>): $Short2ReferenceFunction<V>
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 "get"(object0: any): V
 "getOrDefault"(object0: any, v1: V): V
 "put"(k0: K, v1: V): V
@@ -6061,12 +6057,12 @@ public "containsKey"(object0: any): boolean
 public "defaultReturnValue"(float0: float): void
 public "defaultReturnValue"(): float
 public "getFloat"(object0: any): float
-public "getOrDefault"(object0: any, float1: float): float
 /** @deprecated */
+public "getOrDefault"(object0: any, float1: float): float
 public "getOrDefault"(object0: any, float1: float): float
 public static "identity"<T>(): $Function<T, T>
-public "put"(k0: K, float1: float): float
 /** @deprecated */
+public "put"(k0: K, float1: float): float
 public "put"(k0: K, float1: float): float
 /** @deprecated */
 public "remove"(object0: any): float

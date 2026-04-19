@@ -183,8 +183,8 @@ constructor(level0: $Level$$Type, chunkPos1: $ChunkPos$$Type, upgradeData2: $Upg
 constructor(level0: $Level$$Type, chunkPos1: $ChunkPos$$Type)
 
 public "addAndRegisterBlockEntity"(blockEntity0: $BlockEntity$$Type): void
-public "areCapsCompatible"(capabilityProvider0: $CapabilityProvider$$Type<$LevelChunk$$Type>): boolean
 public "areCapsCompatible"(capabilityDispatcher0: $CapabilityDispatcher$$Type): boolean
+public "areCapsCompatible"(capabilityProvider0: $CapabilityProvider$$Type<$LevelChunk$$Type>): boolean
 public "clearAllBlockEntities"(): void
 public static "clearNullReferences"(): void
 public "clip"(clipContext0: $ClipContext$$Type): $BlockHitResult
@@ -211,8 +211,8 @@ public "getBlockStates"(aABB0: $AABB$$Type): $Stream<$BlockState>
 public "getCapability"<T>(capability0: $Capability$$Type<T>, direction1: $Direction$$Type): $LazyOptional<T>
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
-public "getFluidState"(int0: integer, int1: integer, int2: integer): $FluidState
 public "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
+public "getFluidState"(int0: integer, int1: integer, int2: integer): $FluidState
 public "getFullStatus"(): $FullChunkStatus
 public "getLevel"(): $Level
 public "getLightEmission"(blockPos0: $BlockPos$$Type): integer
@@ -227,15 +227,15 @@ public "getSectionIndexFromSectionY"(int0: integer): integer
 public "getSectionYFromSectionIndex"(int0: integer): integer
 public "getSectionsCount"(): integer
 public static "getSummary"(): $Map<$Class<any>, $Map<$Class<any>, long>>
-public "handler$fpf000$transferProtoChunkAttachement"(world: $ServerLevel$$Type, protoChunk: $ProtoChunk$$Type, entityLoader: $LevelChunk$PostLoadProcessor$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hce000$dragonlib$onAddAndRegisterBlockEntity"(blockEntity: $BlockEntity$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hce000$dragonlib$onClearAllBlockEntities"(ci: $CallbackInfo$$Type): void
+public "handler$fpi000$transferProtoChunkAttachement"(world: $ServerLevel$$Type, protoChunk: $ProtoChunk$$Type, entityLoader: $LevelChunk$PostLoadProcessor$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hch000$dragonlib$onAddAndRegisterBlockEntity"(blockEntity: $BlockEntity$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hch000$dragonlib$onClearAllBlockEntities"(ci: $CallbackInfo$$Type): void
 public "hasBiomes"(): boolean
 public "invalidateCaps"(): void
 public "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
 public "isEmpty"(): boolean
-public "isOutsideBuildHeight"(int0: integer): boolean
 public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
+public "isOutsideBuildHeight"(int0: integer): boolean
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
@@ -353,8 +353,8 @@ import { $PalettedContainerRO, $PalettedContainerRO$$Type } from "net.minecraft.
 import { $PalettedContainer$CountConsumer$$Type } from "net.minecraft.world.level.chunk.PalettedContainer$CountConsumer"
 
 export class $PalettedContainer<T = any> implements $PaletteResize<T>, $PalettedContainerRO<T>, $ReadableContainerExtended {
-constructor(idMap0: $IdMap$$Type<T>, strategy1: $PalettedContainer$Strategy$$Type, configuration2: $PalettedContainer$Configuration$$Type<T>, bitStorage3: $BitStorage$$Type, list4: $List$$Type<T>)
 constructor(idMap0: $IdMap$$Type<T>, t1: T, strategy2: $PalettedContainer$Strategy$$Type)
+constructor(idMap0: $IdMap$$Type<T>, strategy1: $PalettedContainer$Strategy$$Type, configuration2: $PalettedContainer$Configuration$$Type<T>, bitStorage3: $BitStorage$$Type, list4: $List$$Type<T>)
 
 public "acquire"(): void
 public static "clone"<T>(palettedContainerRO0: $PalettedContainerRO$$Type<T>): $PalettedContainerRO<T>
@@ -523,8 +523,8 @@ public "getSectionsCount"(): integer
 public static "getSummary"(): $Map<$Class<any>, $Map<$Class<any>, long>>
 public "hasBiomes"(): boolean
 public "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
-public "isOutsideBuildHeight"(int0: integer): boolean
 public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
+public "isOutsideBuildHeight"(int0: integer): boolean
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
@@ -773,8 +773,8 @@ public "fabric_readAttachmentsFromNbt"(nbt: $CompoundTag$$Type): void
 public "fabric_writeAttachmentsToNbt"(nbt: $CompoundTag$$Type): void
 public "fillBiomesFromNoise"(biomeResolver0: $BiomeResolver$$Type, sampler1: $Climate$Sampler$$Type): void
 public "findBlockLightSources"(biConsumer0: $BiConsumer$$Type<$BlockPos$$Type, $BlockState$$Type>): void
-public "findBlocks"(biPredicate0: $BiPredicate$$Type<$BlockState$$Type, $BlockPos$$Type>, biConsumer1: $BiConsumer$$Type<$BlockPos$$Type, $BlockState$$Type>): void
 public "findBlocks"(predicate0: $Predicate$$Type<$BlockState$$Type>, biConsumer1: $BiConsumer$$Type<$BlockPos$$Type, $BlockState$$Type>): void
+public "findBlocks"(biPredicate0: $BiPredicate$$Type<$BlockState$$Type, $BlockPos$$Type>, biConsumer1: $BiConsumer$$Type<$BlockPos$$Type, $BlockState$$Type>): void
 public "getAllReferences"(): $Map
 public "getAllStarts"(): $Map<$Structure, $StructureStart>
 public "getAttached"(type: $AttachmentType$$Type): any
@@ -788,8 +788,8 @@ public "getBelowZeroRetrogen"(): $BelowZeroRetrogen
 public "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
 public "getBlendingData"(): $BlendingData
 public "getBlockEntitiesPos"(): $Set<$BlockPos>
-public "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 public "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
+public "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 public "getBlockEntityNbt"(blockPos0: $BlockPos$$Type): $CompoundTag
 public "getBlockEntityNbtForSaving"(blockPos0: $BlockPos$$Type): $CompoundTag
 public "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
@@ -848,8 +848,8 @@ public "initializeLightSources"(): void
 public "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
 public "isLightCorrect"(): boolean
 public "isOldNoiseGeneration"(): boolean
-public "isOutsideBuildHeight"(int0: integer): boolean
 public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
+public "isOutsideBuildHeight"(int0: integer): boolean
 public "isUnsaved"(): boolean
 public "isUpgrading"(): boolean
 public "isYSpaceEmpty"(int0: integer, int1: integer): boolean
@@ -1027,8 +1027,8 @@ public static "getSummary"(): $Map<$Class<any>, $Map<$Class<any>, long>>
 public "getWrapped"(): $LevelChunk
 public "hasBiomes"(): boolean
 public "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
-public "isOutsideBuildHeight"(int0: integer): boolean
 public "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
+public "isOutsideBuildHeight"(int0: integer): boolean
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
@@ -1290,8 +1290,8 @@ constructor()
 
 public "close"(): void
 public "gatherStats"(): string
-public "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $ChunkAccess
 public "getChunk"(int0: integer, int1: integer, boolean2: boolean): $LevelChunk
+public "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $ChunkAccess
 public "getChunkForLighting"(int0: integer, int1: integer): $LightChunk
 public "getChunkNow"(int0: integer, int1: integer): $LevelChunk
 public "getLevel"(): $BlockGetter
@@ -1363,8 +1363,8 @@ export interface $LightChunk extends $BlockGetter {
 "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 "findBlockLightSources"(biConsumer0: $BiConsumer$$Type<$BlockPos$$Type, $BlockState$$Type>): void
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
-"getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
+"getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
 "getBlockFloorHeight"(blockPos0: $BlockPos$$Type): double
 "getBlockFloorHeight"(voxelShape0: $VoxelShape$$Type, supplier1: $Supplier$$Type<$VoxelShape>): double
@@ -1387,8 +1387,8 @@ export interface $LightChunk extends $BlockGetter {
 "getSkyLightSources"(): $ChunkSkyLightSources
 "hasBiomes"(): boolean
 "isBlockInLine"(clipBlockStateContext0: $ClipBlockStateContext$$Type): $BlockHitResult
-"isOutsideBuildHeight"(int0: integer): boolean
 "isOutsideBuildHeight"(blockPos0: $BlockPos$$Type): boolean
+"isOutsideBuildHeight"(int0: integer): boolean
 get "height"(): integer
 get "maxBuildHeight"(): integer
 get "maxLightLevel"(): integer

@@ -61,7 +61,6 @@ import { $BuilderBase } from "dev.latvian.mods.kubejs.registry.BuilderBase"
 export class $VillagerProfessionBuilder extends $BuilderBase<$VillagerProfession> {
 constructor(i: $ResourceLocation$$Type)
 
-public "createObject"(): $VillagerProfession
 public "poiType"(t: $ResourceLocation$$Type): $VillagerProfessionBuilder
 public "poiTypeTag"(t: $ResourceLocation$$Type): $VillagerProfessionBuilder
 public "requestedItems"(t: $Item$$Type[]): $VillagerProfessionBuilder
@@ -115,6 +114,7 @@ import { $BuilderBase } from "dev.latvian.mods.kubejs.registry.BuilderBase"
 export class $ParticleTypeBuilder extends $BuilderBase<$ParticleType<any>> {
 constructor(i: $ResourceLocation$$Type)
 
+public "createObject"(): $ParticleType<any>
 public "deserializer"(d: $ParticleOptions$Deserializer$$Type): $ParticleTypeBuilder
 public "overrideLimiter"(o: boolean): $ParticleTypeBuilder
 }

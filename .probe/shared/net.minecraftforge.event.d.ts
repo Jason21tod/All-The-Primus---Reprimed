@@ -42,8 +42,8 @@ import { $Component, $Component$$Type } from "net.minecraft.network.chat.Compone
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $ServerChatEvent extends $Event implements $EventItf {
-constructor()
 constructor(serverPlayer0: $ServerPlayer$$Type, string1: string, component2: $Component$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -351,9 +351,9 @@ constructor(creativeModeTab0: $CreativeModeTab$$Type, resourceKey1: $ResourceKey
 public "accept"(supplier0: $Supplier$$Type<$ItemLike>, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 public "accept"(supplier0: $Supplier$$Type<$ItemLike>): void
 public "accept"(itemStack0: $ItemStack$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
-public "accept"(itemLike0: $ItemLike$$Type): void
-public "accept"(itemStack0: $ItemStack$$Type): void
 public "accept"(itemLike0: $ItemLike$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
+public "accept"(itemStack0: $ItemStack$$Type): void
+public "accept"(itemLike0: $ItemLike$$Type): void
 public "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 public "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>): void
 public "el_isEventUnCancelable"(): boolean
@@ -579,8 +579,8 @@ import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 import { $GameEvent$Context, $GameEvent$Context$$Type } from "net.minecraft.world.level.gameevent.GameEvent$Context"
 
 export class $VanillaGameEvent extends $Event implements $EventItf {
-constructor(level0: $Level$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type, context3: $GameEvent$Context$$Type)
 constructor()
+constructor(level0: $Level$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type, context3: $GameEvent$Context$$Type)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -609,8 +609,8 @@ import { $Player, $Player$$Type } from "net.minecraft.world.entity.player.Player
 import { $SlotAccess, $SlotAccess$$Type } from "net.minecraft.world.entity.SlotAccess"
 
 export class $ItemStackedOnOtherEvent extends $Event implements $EventItf {
-constructor(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type, slot2: $Slot$$Type, clickAction3: $ClickAction$$Type, player4: $Player$$Type, slotAccess5: $SlotAccess$$Type)
 constructor()
+constructor(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type, slot2: $Slot$$Type, clickAction3: $ClickAction$$Type, player4: $Player$$Type, slotAccess5: $SlotAccess$$Type)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -712,8 +712,8 @@ import { $ModMismatchEvent$MismatchResolutionResult } from "net.minecraftforge.e
 import { $LevelStorageSource$LevelDirectory, $LevelStorageSource$LevelDirectory$$Type } from "net.minecraft.world.level.storage.LevelStorageSource$LevelDirectory"
 
 export class $ModMismatchEvent extends $Event implements $IModBusEvent, $EventItf {
-constructor(levelDirectory0: $LevelStorageSource$LevelDirectory$$Type, map1: $Map$$Type<string, $ArtifactVersion$$Type>, map2: $Map$$Type<string, $ArtifactVersion$$Type>)
 constructor()
+constructor(levelDirectory0: $LevelStorageSource$LevelDirectory$$Type, map1: $Map$$Type<string, $ArtifactVersion$$Type>, map2: $Map$$Type<string, $ArtifactVersion$$Type>)
 
 public "anyResolved"(): boolean
 public "anyUnresolved"(): boolean

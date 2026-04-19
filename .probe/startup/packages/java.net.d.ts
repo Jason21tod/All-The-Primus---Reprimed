@@ -192,8 +192,8 @@ constructor(int0: integer)
 constructor()
 
 public "accept"(): $Socket
-public "bind"(socketAddress0: $SocketAddress$$Type, int1: integer): void
 public "bind"(socketAddress0: $SocketAddress$$Type): void
+public "bind"(socketAddress0: $SocketAddress$$Type, int1: integer): void
 public "close"(): void
 public "getChannel"(): $ServerSocketChannel
 public "getInetAddress"(): $InetAddress
@@ -463,16 +463,16 @@ import { $InputStream } from "java.io.InputStream"
  * Loading the class using require() will not throw an error, but the class will be undefined.
  */
 export class $Socket implements $Closeable {
-constructor(inetAddress0: $InetAddress$$Type, int1: integer, inetAddress2: $InetAddress$$Type, int3: integer)
-constructor(proxy0: $Proxy$$Type)
-constructor(string0: string, int1: integer)
-constructor(inetAddress0: $InetAddress$$Type, int1: integer)
 constructor(string0: string, int1: integer, inetAddress2: $InetAddress$$Type, int3: integer)
 constructor()
+constructor(proxy0: $Proxy$$Type)
+constructor(inetAddress0: $InetAddress$$Type, int1: integer)
+constructor(string0: string, int1: integer)
 /** @deprecated */
 constructor(inetAddress0: $InetAddress$$Type, int1: integer, boolean2: boolean)
 /** @deprecated */
 constructor(string0: string, int1: integer, boolean2: boolean)
+constructor(inetAddress0: $InetAddress$$Type, int1: integer, inetAddress2: $InetAddress$$Type, int3: integer)
 
 public "bind"(socketAddress0: $SocketAddress$$Type): void
 public "close"(): void

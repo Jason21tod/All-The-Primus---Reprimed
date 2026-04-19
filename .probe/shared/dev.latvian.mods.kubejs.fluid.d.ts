@@ -185,8 +185,8 @@ public "hasChance"(): boolean
 public "hasTag"(tag: $ResourceLocation$$Type): boolean
 public "isEmpty"(): boolean
 public "matches"(other: $FluidLike$$Type): boolean
-public static "of"(o: any, amount: long, nbt: $CompoundTag$$Type): $FluidStackJS
 public static "of"(o: any): $FluidStackJS
+public static "of"(o: any, amount: long, nbt: $CompoundTag$$Type): $FluidStackJS
 public "removeChance"(): void
 public "replaceInput"(recipe: $RecipeJS$$Type, match: $ReplacementMatch$$Type, original: $InputReplacement$$Type): any
 public "replaceOutput"(recipe: $RecipeJS$$Type, match: $ReplacementMatch$$Type, original: $OutputReplacement$$Type): any

@@ -33,9 +33,9 @@ static readonly "VOID_TYPE": $Type
 
 public "getArgumentCount"(): integer
 public static "getArgumentCount"(string0: string): integer
-public "getArgumentTypes"(): $Type[]
-public static "getArgumentTypes"(string0: string): $Type[]
 public static "getArgumentTypes"(method0: $Method$$Type): $Type[]
+public static "getArgumentTypes"(string0: string): $Type[]
+public "getArgumentTypes"(): $Type[]
 public "getArgumentsAndReturnSizes"(): integer
 public static "getArgumentsAndReturnSizes"(string0: string): integer
 public "getClassName"(): string
@@ -44,12 +44,12 @@ public static "getDescriptor"(class0: $Class$$Type<any>): string
 public "getDescriptor"(): string
 public "getDimensions"(): integer
 public "getElementType"(): $Type
-public static "getInternalName"(class0: $Class$$Type<any>): string
 public "getInternalName"(): string
+public static "getInternalName"(class0: $Class$$Type<any>): string
 public static "getMethodDescriptor"(type0: $Type$$Type, ...type1s: $Type$$Type[]): string
 public static "getMethodDescriptor"(method0: $Method$$Type): string
-public static "getMethodType"(type0: $Type$$Type, ...type1s: $Type$$Type[]): $Type
 public static "getMethodType"(string0: string): $Type
+public static "getMethodType"(type0: $Type$$Type, ...type1s: $Type$$Type[]): $Type
 public static "getObjectType"(string0: string): $Type
 public "getOpcode"(int0: integer): integer
 public static "getReturnType"(string0: string): $Type

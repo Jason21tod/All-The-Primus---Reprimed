@@ -111,8 +111,8 @@ public "onSyncedDataUpdated"(capabilityEntityData0: $CapabilityEntityData$$Type<
 public "readSyncData"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type): void
 public "serializeNBT"(): $CompoundTag
 public "shouldAttachTo"(entity0: $Entity$$Type): boolean
-public "sync"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type, level4: $Level$$Type): void
 public "sync"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type): void
+public "sync"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type, level4: $Level$$Type): void
 public "syncData"(compoundTag0: $CompoundTag$$Type, dist1: $Dist$$Type, capabilitySyncType2: $CapabilitySyncType$$Type, entity3: $Entity$$Type): void
 public "update"(entity0: $Entity$$Type): void
 get "dataManager"(): $SynchedCapabilityData
@@ -602,8 +602,8 @@ public "getOriginZRot"(): double
 public "getOriginZoom"(): float
 public "getRaycastOffset"(float0: float): double
 public "getRaycastOffset0"(): $CameraValueInstance
-public "getX"(): $CameraValueInstance
 public "getX"(float0: float): double
+public "getX"(): $CameraValueInstance
 public "getXOffset"(float0: float): double
 public "getXOffset0"(): $CameraValueInstance
 public "getXRelative"(float0: float): double
@@ -1720,8 +1720,8 @@ public "getBaseValue"(): double
 public "getKeyframeAnimation"(string0: string): $CameraKeyframeAnimation
 public "getKeyframeAnimations"(): $Collection<$CameraKeyframeAnimation>
 public "getModifier"(uUID0: $UUID$$Type): $CameraModifier
-public "getModifiers"(operation0: $CameraModifier$Operation$$Type): $Set<$CameraModifier>
 public "getModifiers"(): $Set<$CameraModifier>
+public "getModifiers"(operation0: $CameraModifier$Operation$$Type): $Set<$CameraModifier>
 public "getValue"(): double
 public "hasModifier"(cameraModifier0: $CameraModifier$$Type): boolean
 public "isAnimDirty"(): boolean
@@ -1744,8 +1744,8 @@ public "removePermanentModifierWithoutDirty"(uUID0: $UUID$$Type): boolean
 public "removeStaticKeyframeAnimations"(): void
 public "replaceFrom"(cameraValueInstance0: $CameraValueInstance$$Type): void
 public "save"(): $CompoundTag
-public "setAnimDirty"(): void
 public "setAnimDirty"(boolean0: boolean): void
+public "setAnimDirty"(): void
 public "setBaseValue"(double0: double): void
 public "setDirty"(boolean0: boolean): void
 public "setDirty"(): void
@@ -2121,8 +2121,8 @@ public "getYRelative"(float0: float): double
 public "getYRelative0"(): $CameraValueInstance
 public "getYRot0"(): $CameraValueInstance
 public "getYRotation"(float0: float): double
-public "getZ"(): $CameraValueInstance
 public "getZ"(float0: float): double
+public "getZ"(): $CameraValueInstance
 public "getZOffset"(float0: float): double
 public "getZOffset0"(): $CameraValueInstance
 public "getZRelative"(float0: float): double
@@ -2478,8 +2478,8 @@ import { $PoseStack$$Type } from "com.mojang.blaze3d.vertex.PoseStack"
 import { $ItemDisplayContext, $ItemDisplayContext$$Type } from "net.minecraft.world.item.ItemDisplayContext"
 
 export class $ItemRendererEvent$RenderModelListEvent extends $ItemRendererEvent {
-constructor(itemStack0: $ItemStack$$Type, poseStack1: $PoseStack$$Type, float2: float, itemDisplayContext3: $ItemDisplayContext$$Type, vertexConsumer4: $VertexConsumer$$Type, bakedModel5: $BakedModel$$Type, int6: integer, int7: integer)
 constructor()
+constructor(itemStack0: $ItemStack$$Type, poseStack1: $PoseStack$$Type, float2: float, itemDisplayContext3: $ItemDisplayContext$$Type, vertexConsumer4: $VertexConsumer$$Type, bakedModel5: $BakedModel$$Type, int6: integer, int7: integer)
 
 public "getBakedModel"(): $BakedModel
 public "getItemDisplayContext"(): $ItemDisplayContext

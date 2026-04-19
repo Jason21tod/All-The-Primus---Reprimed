@@ -47,19 +47,19 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearContent"(): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onFinalCommit"(slot: integer, oldStack: $ItemStack$$Type, newStack: $ItemStack$$Type): void
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
 public "fabric_setSuppress"(suppress: boolean): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -99,7 +99,7 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "onDataPacket"(connection0: $Connection$$Type, clientboundBlockEntityDataPacket1: $ClientboundBlockEntityDataPacket$$Type): void
 public "onLoad"(): void
-public "redirect$gmp000$fabric_redirectMarkDirty"(self: $RandomizableContainerBlockEntity$$Type): void
+public "redirect$gnc000$fabric_redirectMarkDirty"(self: $RandomizableContainerBlockEntity$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeItem"(int0: integer, int1: integer): $ItemStack
 public "removeItemNoUpdate"(int0: integer): $ItemStack
@@ -115,9 +115,9 @@ public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -259,17 +259,17 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearContent"(): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "createMenu"(int0: integer, inventory1: $Inventory$$Type, player2: $Player$$Type): $AbstractContainerMenu
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -297,7 +297,7 @@ public "getSlots"(): integer
 public "getStackInSlot"(slot: integer): $ItemStack
 public "getWidth"(): integer
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
-public "handler$fpm000$getCapability"(capability0: $Capability$$Type, direction1: $Direction$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$fpp000$getCapability"(capability0: $Capability$$Type, direction1: $Direction$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
 public "hasAnyMatching"(predicate0: $Predicate$$Type<$ItemStack$$Type>): boolean
 public "hasAnyOf"(set0: $Set$$Type<$Item$$Type>): boolean
 public "hasCustomName"(): boolean
@@ -328,9 +328,9 @@ public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -427,11 +427,11 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearContent"(): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
@@ -439,8 +439,8 @@ public "fabric_onFinalCommit"(slot: integer, oldStack: $ItemStack$$Type, newStac
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
 public "fabric_setSuppress"(suppress: boolean): void
 public "fillStackedContents"(stackedContents0: $StackedContents$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -470,8 +470,8 @@ public "getSlotsForFace"(direction0: $Direction$$Type): integer[]
 public "getStackInSlot"(slot: integer): $ItemStack
 public "getWidth"(): integer
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
-public "handler$gmk000$setStackSuppressUpdate"(slot: integer, stack: $ItemStack$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hgi000$onDropExperience"(player: $ServerPlayer$$Type, ci: $CallbackInfo$$Type): void
+public "handler$gmn000$setStackSuppressUpdate"(slot: integer, stack: $ItemStack$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hgl000$onDropExperience"(player: $ServerPlayer$$Type, ci: $CallbackInfo$$Type): void
 public "hasAnyMatching"(predicate0: $Predicate$$Type<$ItemStack$$Type>): boolean
 public "hasAnyOf"(set0: $Set$$Type<$Item$$Type>): boolean
 public "hasCustomName"(): boolean
@@ -505,9 +505,9 @@ public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -555,14 +555,14 @@ export interface $Hopper extends $Container {
 "clear"(): void
 "clear"(ingredient: $Ingredient$$Type): void
 "clearContent"(): void
-"count"(): integer
 "count"(ingredient: $Ingredient$$Type): integer
+"count"(): integer
 "countItem"(item0: $Item$$Type): integer
-"countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "countNonEmpty"(): integer
+"countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-"find"(ingredient: $Ingredient$$Type): integer
 "find"(): integer
+"find"(ingredient: $Ingredient$$Type): integer
 "getAllItems"(): $List<$ItemStack>
 "getBlock"(level: $Level$$Type): $BlockContainerJS
 "getContainerSize"(): integer
@@ -614,9 +614,9 @@ export namespace $Hopper {
 const ABOVE: $VoxelShape
 const INSIDE: $VoxelShape
 const SUCK: $VoxelShape
-function stillValidBlockEntity(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 function stillValidBlockEntity(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 function stillValidBlockEntity(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+function stillValidBlockEntity(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 function tryClear(object0: any): void
 }
 export abstract class $Hopper$$Static implements $Hopper {
@@ -624,9 +624,9 @@ static readonly "ABOVE": $VoxelShape
 static readonly "INSIDE": $VoxelShape
 static readonly "SUCK": $VoxelShape
 
-static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 static "tryClear"(object0: any): void
 }
 }
@@ -854,7 +854,7 @@ import { $TrackedDataRegistry$$Type } from "dev.corgitaco.dataanchor.data.regist
 import { $AzAnimatorAccessor } from "mod.azure.azurelib.animation.AzAnimatorAccessor"
 import { $DecoratedPotBlockEntity$Decorations } from "net.minecraft.world.level.block.entity.DecoratedPotBlockEntity$Decorations"
 import { $ETFEntityRenderState } from "traben.entity_texture_features.features.state.ETFEntityRenderState"
-import { $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
+import { $ClientboundBlockEntityDataPacket, $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
 import { $AttachmentType$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentType"
 import { $ModelData } from "net.minecraftforge.client.model.data.ModelData"
 import { $BlockEntity } from "net.minecraft.world.level.block.entity.BlockEntity"
@@ -888,6 +888,7 @@ public "getDirection"(): $Direction
 public "getModelData"(): $ModelData
 public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public "getRenderBoundingBox"(): $AABB
+public "getUpdatePacket"(): $ClientboundBlockEntityDataPacket
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
@@ -906,6 +907,7 @@ get "decorations"(): $DecoratedPotBlockEntity$Decorations
 get "direction"(): $Direction
 get "modelData"(): $ModelData
 get "renderBoundingBox"(): $AABB
+get "updatePacket"(): $ClientboundBlockEntityDataPacket
 set "fromItem"(value: $ItemStack$$Type)
 }
 }
@@ -955,17 +957,17 @@ public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $I
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -1012,9 +1014,9 @@ public "setRecipeUsed"(level0: $Level$$Type, serverPlayer1: $ServerPlayer$$Type,
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -1172,17 +1174,17 @@ public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $I
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -1229,9 +1231,9 @@ public "setRecipeUsed"(level0: $Level$$Type, serverPlayer1: $ServerPlayer$$Type,
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -1330,7 +1332,7 @@ import { $ETFEntityRenderState } from "traben.entity_texture_features.features.s
 import { $Connection$$Type } from "net.minecraft.network.Connection"
 import { $BlockState$$Type } from "net.minecraft.world.level.block.state.BlockState"
 import { $AzAnimator } from "mod.azure.azurelib.animation.AzAnimator"
-import { $ClientboundBlockEntityDataPacket, $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
+import { $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
 import { $UnaryOperator$$Type } from "java.util.function.UnaryOperator"
 import { $AttachmentTarget$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget"
 import { $AttachmentType$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentType"
@@ -1368,7 +1370,6 @@ public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getModelData"(): $ModelData
 public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public "getRenderBoundingBox"(): $AABB
-public "getUpdatePacket"(): $ClientboundBlockEntityDataPacket
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "isActive"(): boolean
@@ -1389,7 +1390,6 @@ set "tickCount"(value: integer)
 get "animator"(): $Optional<$AzAnimator<K, T>>
 get "modelData"(): $ModelData
 get "renderBoundingBox"(): $AABB
-get "updatePacket"(): $ClientboundBlockEntityDataPacket
 get "active"(): boolean
 get "hunting"(): boolean
 }
@@ -1514,26 +1514,26 @@ static readonly "MOVE_ITEM_SPEED": integer
 
 constructor(blockPos0: $BlockPos$$Type, blockState1: $BlockState$$Type)
 
-public static "addItem"(container0: $Container$$Type, container1: $Container$$Type, itemStack2: $ItemStack$$Type, direction3: $Direction$$Type): $ItemStack
 public static "addItem"(container0: $Container$$Type, itemEntity1: $ItemEntity$$Type): boolean
+public static "addItem"(container0: $Container$$Type, container1: $Container$$Type, itemStack2: $ItemStack$$Type, direction3: $Direction$$Type): $ItemStack
 public "asContainer"(): $Container
 public "canPlaceItem"(int0: integer, itemStack1: $ItemStack$$Type): boolean
 public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $ItemStack$$Type): boolean
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public static "entityInside"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, entity3: $Entity$$Type, hopperBlockEntity4: $HopperBlockEntity$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -1590,9 +1590,9 @@ public "setCooldown"(int0: integer): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "suckInItems"(level0: $Level$$Type, hopper1: $Hopper$$Type): boolean
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
@@ -1666,17 +1666,17 @@ public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $I
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -1728,9 +1728,9 @@ public "setChanged"(): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "swapContents"(chestBlockEntity0: $ChestBlockEntity$$Type, chestBlockEntity1: $ChestBlockEntity$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
@@ -2290,6 +2290,7 @@ public "getAttachedOrThrow"<A>(type: $AttachmentType$$Type<A>): A
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public static "getGameEventFrequency"(gameEvent0: $GameEvent$$Type): integer
 public "getLastVibrationFrequency"(): integer
+public "getListener"(): $VibrationSystem$Listener
 public "getModelData"(): $ModelData
 public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public static "getRedstoneStrengthForDistance"(float0: float, int1: integer): integer
@@ -2312,6 +2313,7 @@ public "setLastVibrationFrequency"(int0: integer): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 get "animator"(): $Optional<$AzAnimator<K, T>>
 get "lastVibrationFrequency"(): integer
+get "listener"(): $VibrationSystem$Listener
 get "modelData"(): $ModelData
 get "renderBoundingBox"(): $AABB
 get "vibrationData"(): $VibrationSystem$Data
@@ -2364,7 +2366,7 @@ import { $TrackedDataRegistry$$Type } from "dev.corgitaco.dataanchor.data.regist
 import { $JigsawBlockEntity$JointType, $JigsawBlockEntity$JointType$$Type } from "net.minecraft.world.level.block.entity.JigsawBlockEntity$JointType"
 import { $AzAnimatorAccessor } from "mod.azure.azurelib.animation.AzAnimatorAccessor"
 import { $ETFEntityRenderState } from "traben.entity_texture_features.features.state.ETFEntityRenderState"
-import { $ClientboundBlockEntityDataPacket, $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
+import { $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
 import { $AttachmentType$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentType"
 import { $ModelData } from "net.minecraftforge.client.model.data.ModelData"
 import { $BlockEntity } from "net.minecraft.world.level.block.entity.BlockEntity"
@@ -2406,7 +2408,6 @@ public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public "getPool"(): $ResourceKey<$StructureTemplatePool>
 public "getRenderBoundingBox"(): $AABB
 public "getTarget"(): $ResourceLocation
-public "getUpdatePacket"(): $ClientboundBlockEntityDataPacket
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
@@ -2432,7 +2433,6 @@ get "name"(): $ResourceLocation
 get "pool"(): $ResourceKey<$StructureTemplatePool>
 get "renderBoundingBox"(): $AABB
 get "target"(): $ResourceLocation
-get "updatePacket"(): $ClientboundBlockEntityDataPacket
 set "finalState"(value: string)
 set "joint"(value: $JigsawBlockEntity$JointType$$Type)
 set "name"(value: $ResourceLocation$$Type)
@@ -2475,7 +2475,7 @@ import { $TrackedDataRegistry$$Type } from "dev.corgitaco.dataanchor.data.regist
 import { $AzAnimatorAccessor } from "mod.azure.azurelib.animation.AzAnimatorAccessor"
 import { $Component, $Component$$Type } from "net.minecraft.network.chat.Component"
 import { $ETFEntityRenderState } from "traben.entity_texture_features.features.state.ETFEntityRenderState"
-import { $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
+import { $ClientboundBlockEntityDataPacket, $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
 import { $AttachmentType$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentType"
 import { $ModelData } from "net.minecraftforge.client.model.data.ModelData"
 import { $BlockEntity } from "net.minecraft.world.level.block.entity.BlockEntity"
@@ -2504,8 +2504,8 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public static "createPatterns"(dyeColor0: $DyeColor$$Type, listTag1: $ListTag$$Type): $List<$Pair<$Holder<$BannerPattern>, $DyeColor>>
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
-public "fromItem"(itemStack0: $ItemStack$$Type): void
 public "fromItem"(itemStack0: $ItemStack$$Type, dyeColor1: $DyeColor$$Type): void
+public "fromItem"(itemStack0: $ItemStack$$Type): void
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
 public "getAttachedOrCreate"<A>(type: $AttachmentType$$Type<A>): A
@@ -2526,6 +2526,7 @@ public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public static "getPatternCount"(itemStack0: $ItemStack$$Type): integer
 public "getPatterns"(): $List<$Pair<$Holder<$BannerPattern>, $DyeColor>>
 public "getRenderBoundingBox"(): $AABB
+public "getUpdatePacket"(): $ClientboundBlockEntityDataPacket
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
 public "hasCustomName"(): boolean
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
@@ -2550,6 +2551,7 @@ get "modelData"(): $ModelData
 get "name"(): $Component
 get "patterns"(): $List<$Pair<$Holder<$BannerPattern>, $DyeColor>>
 get "renderBoundingBox"(): $AABB
+get "updatePacket"(): $ClientboundBlockEntityDataPacket
 set "customName"(value: $Component$$Type)
 }
 }
@@ -2737,8 +2739,8 @@ public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "requestModelDataUpdate"(): void
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
-public "setBook"(itemStack0: $ItemStack$$Type): void
 public "setBook"(itemStack0: $ItemStack$$Type, player1: $Player$$Type): void
+public "setBook"(itemStack0: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -2906,17 +2908,17 @@ public "canTakeItemThroughFace"(int0: integer, itemStack1: $ItemStack$$Type, dir
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimationStatus"(): $ShulkerBoxBlockEntity$AnimationStatus
@@ -2970,9 +2972,9 @@ public "setChanged"(): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "tick"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, shulkerBoxBlockEntity3: $ShulkerBoxBlockEntity$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
@@ -3008,7 +3010,7 @@ import { $TrackedData, $TrackedData$$Type } from "dev.corgitaco.dataanchor.data.
 import { $TrackedDataRegistry$$Type } from "dev.corgitaco.dataanchor.data.registry.TrackedDataRegistry"
 import { $AzAnimatorAccessor } from "mod.azure.azurelib.animation.AzAnimatorAccessor"
 import { $ETFEntityRenderState } from "traben.entity_texture_features.features.state.ETFEntityRenderState"
-import { $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
+import { $ClientboundBlockEntityDataPacket, $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
 import { $RandomSource$$Type } from "net.minecraft.util.RandomSource"
 import { $AttachmentType$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentType"
 import { $ModelData } from "net.minecraftforge.client.model.data.ModelData"
@@ -3042,6 +3044,7 @@ public "getModelData"(): $ModelData
 public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public "getRenderBoundingBox"(): $AABB
 public "getSpawner"(): $BaseSpawner
+public "getUpdatePacket"(): $ClientboundBlockEntityDataPacket
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
@@ -3060,6 +3063,7 @@ get "animator"(): $Optional<$AzAnimator<K, T>>
 get "modelData"(): $ModelData
 get "renderBoundingBox"(): $AABB
 get "spawner"(): $BaseSpawner
+get "updatePacket"(): $ClientboundBlockEntityDataPacket
 }
 }
 
@@ -3279,17 +3283,17 @@ public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $I
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -3335,9 +3339,9 @@ public "setChanged"(): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -3388,7 +3392,7 @@ import { $AzAnimatorAccessor } from "mod.azure.azurelib.animation.AzAnimatorAcce
 import { $Component } from "net.minecraft.network.chat.Component"
 import { $Executor$$Type } from "java.util.concurrent.Executor"
 import { $ETFEntityRenderState } from "traben.entity_texture_features.features.state.ETFEntityRenderState"
-import { $ClientboundBlockEntityDataPacket, $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
+import { $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
 import { $AttachmentType$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentType"
 import { $ModelData } from "net.minecraftforge.client.model.data.ModelData"
 import { $BlockEntity } from "net.minecraft.world.level.block.entity.BlockEntity"
@@ -3435,7 +3439,6 @@ public "getNoteBlockSound"(): $ResourceLocation
 public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public "getOwnerProfile"(): $GameProfile
 public "getRenderBoundingBox"(): $AABB
-public "getUpdatePacket"(): $ClientboundBlockEntityDataPacket
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
@@ -3456,7 +3459,6 @@ get "modelData"(): $ModelData
 get "noteBlockSound"(): $ResourceLocation
 get "ownerProfile"(): $GameProfile
 get "renderBoundingBox"(): $AABB
-get "updatePacket"(): $ClientboundBlockEntityDataPacket
 set "owner"(value: $GameProfile$$Type)
 }
 }
@@ -3597,17 +3599,17 @@ public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $I
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -3655,9 +3657,9 @@ public "setChanged"(): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -3728,16 +3730,16 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearContent"(): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -3793,9 +3795,9 @@ public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -3918,7 +3920,7 @@ import { $ETFEntityRenderState } from "traben.entity_texture_features.features.s
 import { $Connection$$Type } from "net.minecraft.network.Connection"
 import { $BlockState$$Type } from "net.minecraft.world.level.block.state.BlockState"
 import { $AzAnimator } from "mod.azure.azurelib.animation.AzAnimator"
-import { $ClientboundBlockEntityDataPacket, $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
+import { $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
 import { $UnaryOperator$$Type } from "java.util.function.UnaryOperator"
 import { $AttachmentTarget$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentTarget"
 import { $AttachmentType$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentType"
@@ -3955,7 +3957,6 @@ public "getColor"(): $DyeColor
 public "getModelData"(): $ModelData
 public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
 public "getRenderBoundingBox"(): $AABB
-public "getUpdatePacket"(): $ClientboundBlockEntityDataPacket
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
@@ -3973,7 +3974,6 @@ get "animator"(): $Optional<$AzAnimator<K, T>>
 get "color"(): $DyeColor
 get "modelData"(): $ModelData
 get "renderBoundingBox"(): $AABB
-get "updatePacket"(): $ClientboundBlockEntityDataPacket
 set "color"(value: $DyeColor$$Type)
 }
 }
@@ -4022,17 +4022,17 @@ public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $I
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -4077,9 +4077,9 @@ public "setChanged"(): void
 public "setChanged"(): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
 get "allItems"(): $List<$ItemStack>
@@ -4143,19 +4143,19 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearContent"(): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onFinalCommit"(slot: integer, oldStack: $ItemStack$$Type, newStack: $ItemStack$$Type): void
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
 public "fabric_setSuppress"(suppress: boolean): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -4180,7 +4180,7 @@ public "getSlots"(): integer
 public "getStackInSlot"(slot: integer): $ItemStack
 public "getWidth"(): integer
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
-public "handler$idn002$load"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$iea002$load"(compoundTag0: $CompoundTag$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public "hasAnyMatching"(predicate0: $Predicate$$Type<$ItemStack$$Type>): boolean
 public "hasAnyOf"(set0: $Set$$Type<$Item$$Type>): boolean
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
@@ -4214,9 +4214,9 @@ public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "startOpen"(player0: $Player$$Type): void
 public "startPlaying"(): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -4316,17 +4316,17 @@ public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $I
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -4374,9 +4374,9 @@ public "setChanged"(): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -4513,19 +4513,19 @@ public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearContent"(): void
 public "count"(): integer
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onFinalCommit"(slot: integer, oldStack: $ItemStack$$Type, newStack: $ItemStack$$Type): void
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
 public "fabric_setSuppress"(suppress: boolean): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -4551,7 +4551,7 @@ public "getSlots"(): integer
 public "getStackInSlot"(slot: integer): $ItemStack
 public "getWidth"(): integer
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
-public "handler$gmm000$setStackBypass"(slot: integer, stack: $ItemStack$$Type, ci: $CallbackInfo$$Type): void
+public "handler$gmp000$setStackBypass"(slot: integer, stack: $ItemStack$$Type, ci: $CallbackInfo$$Type): void
 public "hasAnyMatching"(predicate0: $Predicate$$Type<$ItemStack$$Type>): boolean
 public "hasAnyOf"(set0: $Set$$Type<$Item$$Type>): boolean
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
@@ -4579,9 +4579,9 @@ public "setItem"(int0: integer, itemStack1: $ItemStack$$Type): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void
@@ -4621,7 +4621,7 @@ import { $StructureTemplate$$Type } from "net.minecraft.world.level.levelgen.str
 import { $TrackedDataRegistry$$Type } from "dev.corgitaco.dataanchor.data.registry.TrackedDataRegistry"
 import { $AzAnimatorAccessor } from "mod.azure.azurelib.animation.AzAnimatorAccessor"
 import { $ETFEntityRenderState } from "traben.entity_texture_features.features.state.ETFEntityRenderState"
-import { $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
+import { $ClientboundBlockEntityDataPacket, $ClientboundBlockEntityDataPacket$$Type } from "net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket"
 import { $RandomSource } from "net.minecraft.util.RandomSource"
 import { $AttachmentType$$Type } from "net.fabricmc.fabric.api.attachment.v1.AttachmentType"
 import { $ModelData } from "net.minecraftforge.client.model.data.ModelData"
@@ -4671,15 +4671,16 @@ public "getStructureName"(): string
 public "getStructurePath"(): string
 public "getStructurePos"(): $BlockPos
 public "getStructureSize"(): $Vec3i
+public "getUpdatePacket"(): $ClientboundBlockEntityDataPacket
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hasStructureName"(): boolean
 public "isIgnoreEntities"(): boolean
 public "isPowered"(): boolean
 public "isStructureLoadable"(): boolean
-public "loadStructure"(serverLevel0: $ServerLevel$$Type, boolean1: boolean): boolean
 public "loadStructure"(serverLevel0: $ServerLevel$$Type): boolean
 public "loadStructure"(serverLevel0: $ServerLevel$$Type, boolean1: boolean, structureTemplate2: $StructureTemplate$$Type): boolean
+public "loadStructure"(serverLevel0: $ServerLevel$$Type, boolean1: boolean): boolean
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
@@ -4687,8 +4688,8 @@ public "onDataPacket"(connection0: $Connection$$Type, clientboundBlockEntityData
 public "onLoad"(): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "requestModelDataUpdate"(): void
-public "saveStructure"(boolean0: boolean): boolean
 public "saveStructure"(): boolean
+public "saveStructure"(boolean0: boolean): boolean
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "setIgnoreEntities"(boolean0: boolean): void
@@ -4701,8 +4702,8 @@ public "setRotation"(rotation0: $Rotation$$Type): void
 public "setSeed"(long0: long): void
 public "setShowAir"(boolean0: boolean): void
 public "setShowBoundingBox"(boolean0: boolean): void
-public "setStructureName"(resourceLocation0: $ResourceLocation$$Type): void
 public "setStructureName"(string0: string): void
+public "setStructureName"(resourceLocation0: $ResourceLocation$$Type): void
 public "setStructurePos"(blockPos0: $BlockPos$$Type): void
 public "setStructureSize"(vec3i0: $Vec3i$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
@@ -4723,6 +4724,7 @@ get "structureName"(): string
 get "structurePath"(): string
 get "structurePos"(): $BlockPos
 get "structureSize"(): $Vec3i
+get "updatePacket"(): $ClientboundBlockEntityDataPacket
 get "ignoreEntities"(): boolean
 get "powered"(): boolean
 get "structureLoadable"(): boolean
@@ -4736,8 +4738,8 @@ set "rotation"(value: $Rotation$$Type)
 set "seed"(value: long)
 set "showAir"(value: boolean)
 set "showBoundingBox"(value: boolean)
-set "structureName"(value: $ResourceLocation$$Type)
 set "structureName"(value: string)
+set "structureName"(value: $ResourceLocation$$Type)
 set "structurePos"(value: $BlockPos$$Type)
 set "structureSize"(value: $Vec3i$$Type)
 }
@@ -4788,17 +4790,17 @@ public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $I
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(): integer
 public "count"(ingredient: $Ingredient$$Type): integer
+public "count"(): integer
 public "countItem"(item0: $Item$$Type): integer
-public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "countNonEmpty"(): integer
+public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fabric_onTransfer"(slot: integer, transaction: $TransactionContext$$Type): void
-public "find"(ingredient: $Ingredient$$Type): integer
 public "find"(): integer
+public "find"(ingredient: $Ingredient$$Type): integer
 public static "get"<K, T>(t0: T): $Optional<$AzAnimator<K, T>>
 public "getAllItems"(): $List<$ItemStack>
 public "getAnimator"(): $Optional<$AzAnimator<K, T>>
@@ -4845,9 +4847,9 @@ public "setRecipeUsed"(level0: $Level$$Type, serverPlayer1: $ServerPlayer$$Type,
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "shouldCloseCurrentScreen"(): boolean
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
+public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "tryClear"(object0: any): void

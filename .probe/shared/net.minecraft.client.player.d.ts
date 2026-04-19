@@ -113,9 +113,9 @@ public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$canBeBright"(): boolean
 public "etf$distanceTo"(entity0: $Entity$$Type): float
@@ -232,9 +232,9 @@ public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFake"(): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLeftHanded"(): boolean
 public "isLiving"(): boolean
 public "isMagnetizing"(): boolean
@@ -264,11 +264,11 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "paint"(tag: $CompoundTag$$Type): void
 public "playAttackAnimation"(name: string, animatedHand: $AnimatedHand$$Type, length: float, upswing: float): void
 public "playRollAnimation"(animationName: string, direction: $Vec3$$Type): void
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public static "registerSkinTexture"(resourceLocation0: $ResourceLocation$$Type, string1: string): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -309,8 +309,8 @@ public "setMouseItem"(item: $ItemStack$$Type): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setProjectionScale"(int0: integer): void
 public "setRotation"(yaw: float, pitch: float): void
@@ -643,9 +643,9 @@ public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "drop"(boolean0: boolean): boolean
 public "etf$canBeBright"(): boolean
@@ -752,15 +752,15 @@ public "getXp"(): integer
 public "getXpLevel"(): integer
 public "give"(item: $ItemStack$$Type): void
 public "giveInHand"(item: $ItemStack$$Type): void
-public "handler$dfb000$drop"(boolean0: boolean, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$egp000$caelus$checkFlight"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$eoa000$shouldAutoJump_HEAD"(cir: $CallbackInfoReturnable$$Type): void
-public "handler$fbf000$isControlledCamera"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$gpj000$l2complements_handleEntityEvent_stableBody"(byte0: byte, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$gpj000$l2complements_hurtTo_stableBody"(float0: float, callbackInfo1: $CallbackInfo$$Type): void
-public "handler$ifi000$onIsShiftKeyDown"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
-public "handler$ifi000$onMove"(moverType0: $MoverType$$Type, vec31: $Vec3$$Type, callbackInfo2: $CallbackInfo$$Type): void
-public "handler$ifi001$onAiStep"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$dfe000$drop"(boolean0: boolean, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$ehc000$caelus$checkFlight"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$eod000$shouldAutoJump_HEAD"(cir: $CallbackInfoReturnable$$Type): void
+public "handler$fbi000$isControlledCamera"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$gpm000$l2complements_handleEntityEvent_stableBody"(byte0: byte, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$gpm000$l2complements_hurtTo_stableBody"(float0: float, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$ifl000$onIsShiftKeyDown"(callbackInfoReturnable0: $CallbackInfoReturnable$$Type): void
+public "handler$ifl000$onMove"(moverType0: $MoverType$$Type, vec31: $Vec3$$Type, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$ifl001$onAiStep"(callbackInfo0: $CallbackInfo$$Type): void
 public "hasCustomName"(): boolean
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hurtTo"(float0: float): void
@@ -773,9 +773,9 @@ public "isFake"(): boolean
 public "isFrame"(): boolean
 public "isHandsBusy"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInMovementPhase"(): boolean
 public "isLiving"(): boolean
 public "isMagnetizing"(): boolean
@@ -793,7 +793,7 @@ public "isUndead"(): boolean
 public "isWaterCreature"(): boolean
 public "jumpInFluid"(fluidType0: $FluidType$$Type): void
 public "jumpableVehicle"(): $PlayerRideableJumping
-public "localvar$egp000$caelus$affixEmptyStack"(itemStack0: $ItemStack$$Type): $ItemStack
+public "localvar$ehc000$caelus$affixEmptyStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
@@ -806,11 +806,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onGameModeChanged"(gameType0: $GameType$$Type): void
 public "paint"(tag: $CompoundTag$$Type): void
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 public "removeRecipeHighlight"(recipe0: $Recipe$$Type<any>): void
@@ -855,8 +855,8 @@ public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
 public "setPermissionLevel"(int0: integer): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setProjectionScale"(int0: integer): void
 public "setRotation"(yaw: float, pitch: float): void

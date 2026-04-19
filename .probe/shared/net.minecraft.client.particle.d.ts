@@ -96,9 +96,9 @@ public "particle_core_getCache"(): $ConcurrentHashMap
 /** @deprecated */
 public "register"<T extends $ParticleOptions>(particleType0: $ParticleType$$Type<T>, spriteParticleRegistration1: $ParticleEngine$SpriteParticleRegistration$$Type<T>): void
 /** @deprecated */
-public "register"<T extends $ParticleOptions>(particleType0: $ParticleType$$Type<T>, sprite1: $ParticleProvider$Sprite$$Type<T>): void
-/** @deprecated */
 public "register"<T extends $ParticleOptions>(particleType0: $ParticleType$$Type<T>, particleProvider1: $ParticleProvider$$Type<T>): void
+/** @deprecated */
+public "register"<T extends $ParticleOptions>(particleType0: $ParticleType$$Type<T>, sprite1: $ParticleProvider$Sprite$$Type<T>): void
 public "reload"(preparationBarrier0: $PreparableReloadListener$PreparationBarrier$$Type, resourceManager1: $ResourceManager$$Type, profilerFiller2: $ProfilerFiller$$Type, profilerFiller3: $ProfilerFiller$$Type, executor4: $Executor$$Type, executor5: $Executor$$Type): $CompletableFuture<void>
 public "render"(poseStack0: $PoseStack$$Type, bufferSource1: $MultiBufferSource$BufferSource$$Type, lightTexture2: $LightTexture$$Type, camera3: $Camera$$Type, float4: float, frustum5: $Frustum$$Type): void
 /** @deprecated */
@@ -153,7 +153,7 @@ import { $AccessorBillboardParticle } from "com.leclowndu93150.particular.mixin.
 
 export class $SingleQuadParticle extends $Particle implements $AccessorBillboardParticle {
 public "getQuadSize"(float0: float): float
-public "handler$egi000$renderFast"(vertexConsumer0: $VertexConsumer$$Type, camera1: $Camera$$Type, float2: float, callbackInfo3: $CallbackInfo$$Type): void
+public "handler$egl000$renderFast"(vertexConsumer0: $VertexConsumer$$Type, camera1: $Camera$$Type, float2: float, callbackInfo3: $CallbackInfo$$Type): void
 }
 }
 

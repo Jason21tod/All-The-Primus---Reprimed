@@ -282,8 +282,8 @@ readonly "names": $Set<string>
 constructor(component: $RecipeComponent$$Type<T>, name: string)
 
 public "allowEmpty"(): $RecipeKey<T>
-public "alt"(name: string): $RecipeKey<T>
 public "alt"(...names: string[]): $RecipeKey<T>
+public "alt"(name: string): $RecipeKey<T>
 public "alwaysWrite"(): $RecipeKey<T>
 public "defaultOptional"(): $RecipeKey<T>
 public "exclude"(): $RecipeKey<T>
@@ -1216,8 +1216,8 @@ public "componentClass"(): $Class<any>
 public "componentType"(): string
 public "constructorDescription"(ctx: $DescriptionContext$$Type): $TypeDescJS
 public "createCopy"(): $RecipeComponentBuilder
-public "hasPriority"(recipe: $RecipeJS$$Type, from: any): boolean
 public "hasPriority"(hasPriority: $Predicate$$Type<$Set$$Type<string>>): $RecipeComponentBuilder
+public "hasPriority"(recipe: $RecipeJS$$Type, from: any): boolean
 public "inputRole"(): $RecipeComponentBuilder
 public "isInput"(recipe: $RecipeJS$$Type, value: $RecipeComponentBuilderMap$$Type, match: $ReplacementMatch$$Type): boolean
 public "isOutput"(recipe: $RecipeJS$$Type, value: $RecipeComponentBuilderMap$$Type, match: $ReplacementMatch$$Type): boolean
@@ -1231,6 +1231,7 @@ public "mapOut"(mappingFrom: $UnaryOperator$$Type<$JsonElement$$Type>): $Mapping
 public "or"<O>(other: $RecipeComponent$$Type<O>): $OrRecipeComponent<$RecipeComponentBuilderMap, O>
 public "orSelf"(): $RecipeComponent<$RecipeComponentBuilderMap>
 public "outputRole"(): $RecipeComponentBuilder
+public "read"(recipe: $RecipeJS$$Type, from: any): $RecipeComponentBuilderMap
 public "readFromJson"(recipe: $RecipeJS$$Type, cv: $RecipeComponentValue$$Type<$RecipeComponentBuilderMap$$Type>, json: $JsonObject$$Type): void
 public "readFromMap"(recipe: $RecipeJS$$Type, cv: $RecipeComponentValue$$Type<$RecipeComponentBuilderMap$$Type>, map: $Map$$Type<any, any>): void
 public "replaceInput"(recipe: $RecipeJS$$Type, original: $RecipeComponentBuilderMap$$Type, match: $ReplacementMatch$$Type, with_: $InputReplacement$$Type): $RecipeComponentBuilderMap
@@ -1290,8 +1291,8 @@ public "consumeIngredient"(filter: $IngredientActionFilter$$Type): $RecipeJS
 public "convertJavaToJs"(cx: $Context$$Type, scope: $Scriptable$$Type, staticType: $Class$$Type<any>): $Scriptable
 public "createRecipe"(): $Recipe<any>
 public "customIngredientAction"(filter: $IngredientActionFilter$$Type, id: string): $RecipeJS
-public "damageIngredient"(filter: $IngredientActionFilter$$Type): $RecipeJS
 public "damageIngredient"(filter: $IngredientActionFilter$$Type, damage: integer): $RecipeJS
+public "damageIngredient"(filter: $IngredientActionFilter$$Type): $RecipeJS
 public "deserialize"(merge: boolean): void
 public "get"(key: string): any
 public "getAllValueMap"(): $Map<string, $RecipeComponentValue<any>>

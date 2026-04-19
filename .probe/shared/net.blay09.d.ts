@@ -1052,8 +1052,8 @@ import { $BalmEvent } from "net.blay09.mods.balm.api.event.BalmEvent"
 import { $DamageSource, $DamageSource$$Type } from "net.minecraft.world.damagesource.DamageSource"
 
 export class $LivingDamageEvent extends $BalmEvent {
-constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float)
 
 public "getDamageAmount"(): float
 public "getDamageSource"(): $DamageSource
@@ -1657,8 +1657,8 @@ import { $BalmConfigSchema$$Type } from "net.blay09.mods.balm.api.config.schema.
 import { $LoadedConfig, $LoadedConfig$$Type } from "net.blay09.mods.balm.api.config.LoadedConfig"
 
 export interface $MutableLoadedConfig extends $LoadedConfig {
-"applyFrom"(balmConfigSchema0: $BalmConfigSchema$$Type, loadedConfig1: $LoadedConfig$$Type): void
 "applyFrom"(balmConfigSchema0: $BalmConfigSchema$$Type, loadedConfig1: $LoadedConfig$$Type, predicate2: $Predicate$$Type<$ConfiguredProperty$$Type<any>>): void
+"applyFrom"(balmConfigSchema0: $BalmConfigSchema$$Type, loadedConfig1: $LoadedConfig$$Type): void
 "copy"(): $MutableLoadedConfig
 "getRaw"<T>(configuredProperty0: $ConfiguredProperty$$Type<T>): T
 "mutable"(balmConfigSchema0: $BalmConfigSchema$$Type): $MutableLoadedConfig

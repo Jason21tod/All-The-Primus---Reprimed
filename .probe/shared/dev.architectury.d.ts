@@ -461,8 +461,8 @@ function suggest(stream0: $Stream$$Type<string>, suggestionsBuilder1: $Suggestio
 function suggest<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 function suggest2DCoordinates(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 function suggestCoordinates(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
-function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 function suggestResource<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
@@ -478,8 +478,8 @@ static "suggest"(stream0: $Stream$$Type<string>, suggestionsBuilder1: $Suggestio
 static "suggest"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 static "suggest2DCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 static "suggestCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
-static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 static "suggestResource"<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
@@ -669,61 +669,61 @@ export interface $ArchitecturyFluidAttributes {
 "canConvertToSource"(): boolean
 "getBlock"(): $LiquidBlock
 "getBucketItem"(): $Item
-"getColor"(stack: $FluidStack$$Type): integer
 "getColor"(): integer
-"getColor"(state: $FluidState$$Type, level: $BlockAndTintGetter$$Type, pos: $BlockPos$$Type): integer
 /** @deprecated */
 "getColor"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
-"getDensity"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
+"getColor"(state: $FluidState$$Type, level: $BlockAndTintGetter$$Type, pos: $BlockPos$$Type): integer
+"getColor"(stack: $FluidStack$$Type): integer
 "getDensity"(): integer
+"getDensity"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
 "getDensity"(stack: $FluidStack$$Type): integer
-"getDropOff"(): integer
 "getDropOff"(levelReader0: $LevelReader$$Type): integer
-"getEmptySound"(stack: $FluidStack$$Type): $SoundEvent
+"getDropOff"(): integer
 "getEmptySound"(): $SoundEvent
+"getEmptySound"(stack: $FluidStack$$Type): $SoundEvent
 "getEmptySound"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): $SoundEvent
 "getExplosionResistance"(): float
-"getFillSound"(): $SoundEvent
-"getFillSound"(stack: $FluidStack$$Type): $SoundEvent
 "getFillSound"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): $SoundEvent
+"getFillSound"(stack: $FluidStack$$Type): $SoundEvent
+"getFillSound"(): $SoundEvent
 "getFlowingFluid"(): $Fluid
-"getFlowingTexture"(stack: $FluidStack$$Type): $ResourceLocation
 "getFlowingTexture"(): $ResourceLocation
 "getFlowingTexture"(state: $FluidState$$Type, level: $BlockAndTintGetter$$Type, pos: $BlockPos$$Type): $ResourceLocation
+"getFlowingTexture"(stack: $FluidStack$$Type): $ResourceLocation
 /** @deprecated */
 "getFlowingTexture"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): $ResourceLocation
-"getLuminosity"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
 "getLuminosity"(): integer
 "getLuminosity"(stack: $FluidStack$$Type): integer
-"getName"(): $Component
+"getLuminosity"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
 "getName"(stack: $FluidStack$$Type): $Component
-"getOverlayTexture"(stack: $FluidStack$$Type): $ResourceLocation
+"getName"(): $Component
 "getOverlayTexture"(): $ResourceLocation
+"getOverlayTexture"(stack: $FluidStack$$Type): $ResourceLocation
 "getOverlayTexture"(state: $FluidState$$Type, level: $BlockAndTintGetter$$Type, pos: $BlockPos$$Type): $ResourceLocation
+"getRarity"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): $Rarity
 "getRarity"(stack: $FluidStack$$Type): $Rarity
 "getRarity"(): $Rarity
-"getRarity"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): $Rarity
 "getSlopeFindDistance"(levelReader0: $LevelReader$$Type): integer
 "getSlopeFindDistance"(): integer
 "getSourceFluid"(): $Fluid
-"getSourceTexture"(): $ResourceLocation
-"getSourceTexture"(state: $FluidState$$Type, level: $BlockAndTintGetter$$Type, pos: $BlockPos$$Type): $ResourceLocation
 "getSourceTexture"(stack: $FluidStack$$Type): $ResourceLocation
+"getSourceTexture"(): $ResourceLocation
 /** @deprecated */
 "getSourceTexture"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): $ResourceLocation
-"getTemperature"(stack: $FluidStack$$Type): integer
-"getTemperature"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
+"getSourceTexture"(state: $FluidState$$Type, level: $BlockAndTintGetter$$Type, pos: $BlockPos$$Type): $ResourceLocation
 "getTemperature"(): integer
-"getTickDelay"(): integer
+"getTemperature"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
+"getTemperature"(stack: $FluidStack$$Type): integer
 "getTickDelay"(levelReader0: $LevelReader$$Type): integer
+"getTickDelay"(): integer
 "getTranslationKey"(fluidStack0: $FluidStack$$Type): string
 "getTranslationKey"(): string
 "getViscosity"(stack: $FluidStack$$Type): integer
 "getViscosity"(): integer
 "getViscosity"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
 "isLighterThanAir"(): boolean
-"isLighterThanAir"(stack: $FluidStack$$Type): boolean
 "isLighterThanAir"(fluidStack0: $FluidStack$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): boolean
+"isLighterThanAir"(stack: $FluidStack$$Type): boolean
 get "block"(): $LiquidBlock
 get "bucketItem"(): $Item
 get "color"(): integer

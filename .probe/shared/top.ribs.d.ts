@@ -128,6 +128,7 @@ public "isAuto"(): boolean
 public "isEnableGunLight"(): boolean
 public "isRevolver"(): boolean
 public "isSilenced"(): boolean
+public "serializeNBT"(): $CompoundTag
 public "setCurrentAmmoTypeIndex"(int0: integer): void
 public "setMeleeDamage"(float0: float): void
 public "toJsonObject"(): $JsonObject
@@ -258,8 +259,8 @@ export interface $IGunModifier {
 "additionalProjectileGravity"(): double
 "criticalChance"(): float
 "isMeleeOnly"(): boolean
-"kickModifier"(itemStack0: $ItemStack$$Type): float
 "kickModifier"(): float
+"kickModifier"(itemStack0: $ItemStack$$Type): float
 "modifyAimDownSightSpeed"(double0: double): double
 "modifyAmmoCapacity"(int0: integer): integer
 "modifyDamageFalloffEnd"(float0: float): float
@@ -309,6 +310,7 @@ public "getPreFire"(): $ResourceLocation
 public "getPreReload"(): $ResourceLocation
 public "getReload"(): $ResourceLocation
 public "getSilencedFire"(): $ResourceLocation
+public "serializeNBT"(): $CompoundTag
 public "toJsonObject"(): $JsonObject
 get "cock"(): $ResourceLocation
 get "enchantedFire"(): $ResourceLocation
@@ -661,8 +663,8 @@ public "getAttachmentPosition"(type0: $IAttachment$Type$$Type): $Gun$ScaledPosit
 public "getBaseGripType"(): $GripType
 public static "getBurstCooldown"(itemStack0: $ItemStack$$Type): integer
 public static "getBurstCount"(itemStack0: $ItemStack$$Type): integer
-public "getCurrentAmmoItem"(itemStack0: $ItemStack$$Type): $Item
 public "getCurrentAmmoItem"(): $Item
+public "getCurrentAmmoItem"(itemStack0: $ItemStack$$Type): $Item
 public "getDisplay"(): $Gun$Display
 public "getEditorLabel"(): $Component
 public "getEditorWidgets"(list0: $List$$Type<$Pair$$Type<$Component$$Type, $Supplier$$Type<$IDebugWidget$$Type>>>): void
@@ -697,7 +699,6 @@ public static "removeMagazineStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "removeScopeStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "removeStockStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public static "removeUnderBarrelStack"(itemStack0: $ItemStack$$Type): $ItemStack
-public "serializeNBT"(): $CompoundTag
 public "toJsonObject"(): $JsonObject
 get "baseGripType"(): $GripType
 get "currentAmmoItem"(): $Item
@@ -845,9 +846,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -862,10 +863,10 @@ public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onHit"(hitResult0: $HitResult$$Type, vec31: $Vec3$$Type, vec32: $Vec3$$Type): void
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
-public "rayTrace"(distance: double): $RayTraceResultJS
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readSpawnData"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -881,8 +882,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -1334,7 +1335,6 @@ public "getMagazine"(): $Gun$ScaledPositioned
 public "getScope"(): $Gun$ScaledPositioned
 public "getStock"(): $Gun$ScaledPositioned
 public "getUnderBarrel"(): $Gun$ScaledPositioned
-public "serializeNBT"(): $CompoundTag
 public "toJsonObject"(): $JsonObject
 get "barrel"(): $Gun$ScaledPositioned
 get "magazine"(): $Gun$ScaledPositioned

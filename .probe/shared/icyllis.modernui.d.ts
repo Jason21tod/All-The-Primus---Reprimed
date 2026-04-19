@@ -13,10 +13,10 @@ constructor()
 public "getResources"(): $Resources
 public "getSystemService"(string0: string): any
 public "getTheme"(): $Resources$Theme
-public "obtainStyledAttributes"(set: $AttributeSet$$Type, attrs: string[]): $TypedArray
-public "obtainStyledAttributes"(resId: $ResourceId$$Type, attrs: string[]): $TypedArray
 public "obtainStyledAttributes"(set: $AttributeSet$$Type, defStyleAttr: $ResourceId$$Type, defStyleRes: $ResourceId$$Type, attrs: string[]): $TypedArray
 public "obtainStyledAttributes"(attrs: string[]): $TypedArray
+public "obtainStyledAttributes"(resId: $ResourceId$$Type, attrs: string[]): $TypedArray
+public "obtainStyledAttributes"(set: $AttributeSet$$Type, attrs: string[]): $TypedArray
 public "setTheme"(resourceId0: $ResourceId$$Type): void
 get "resources"(): $Resources
 get "theme"(): $Resources$Theme
@@ -141,11 +141,11 @@ public "getPrimaryNavigationFragment"(): $Fragment
 public "isDestroyed"(): boolean
 public "isStateSaved"(): boolean
 public "popBackStack"(): void
-public "popBackStack"(name: string, flags: integer): void
 public "popBackStack"(id: integer, flags: integer): void
-public "popBackStackImmediate"(id: integer, flags: integer): boolean
+public "popBackStack"(name: string, flags: integer): void
 public "popBackStackImmediate"(): boolean
 public "popBackStackImmediate"(name: string, flags: integer): boolean
+public "popBackStackImmediate"(id: integer, flags: integer): boolean
 public "putFragment"(bundle: $DataSet$$Type, key: string, fragment: $Fragment$$Type): void
 public "registerFragmentLifecycleCallbacks"(cb: $FragmentLifecycleCallbacks$$Type, recursive: boolean): void
 public "removeFragmentOnAttachListener"(listener: $FragmentOnAttachListener$$Type): void
@@ -180,7 +180,6 @@ constructor()
 public "addListener"(listener: $AnimatorListener$$Type): void
 public "canReverse"(): boolean
 public "cancel"(): void
-public "clone"(): $Animator
 public "end"(): void
 public "getDuration"(): long
 public "getInterpolator"(): $TimeInterpolator
@@ -450,18 +449,18 @@ static readonly "SERIF": $FontFamily
 
 constructor(font: $Font$$Type)
 
-public static "createFamilies"(file: $File$$Type, register: boolean): $FontFamily[]
 public static "createFamilies"(stream: $InputStream$$Type, register: boolean): $FontFamily[]
-public static "createFamily"(file: $File$$Type, register: boolean): $FontFamily
+public static "createFamilies"(file: $File$$Type, register: boolean): $FontFamily[]
 public static "createFamily"(stream: $InputStream$$Type, register: boolean): $FontFamily
+public static "createFamily"(file: $File$$Type, register: boolean): $FontFamily
 public "getClosestMatch"(style: integer): $Font
-public "getFamilyName"(): string
 public "getFamilyName"(locale: $Locale$$Type): string
+public "getFamilyName"(): string
 public static "getSystemFontAliases"(): $Map<string, string>
 public static "getSystemFontMap"(): $Map<string, $FontFamily>
 public static "getSystemFontWithAlias"(name: string): $FontFamily
-public "hasGlyph"(ch: integer): boolean
 public "hasGlyph"(ch: integer, vs: integer): boolean
+public "hasGlyph"(ch: integer): boolean
 public "isColorEmojiFamily"(): boolean
 public "isEastAsianFamily"(): boolean
 get "familyName"(): string
@@ -538,13 +537,13 @@ public "getTarget"(): $Handler
 public "getWhen"(): long
 public "isAsynchronous"(): boolean
 public static "obtain"(): $Message
-public static "obtain"(h: $Handler$$Type, what: integer, int2: integer, int3: integer, obj: any): $Message
 public static "obtain"(h: $Handler$$Type, what: integer, obj: any): $Message
-public static "obtain"(h: $Handler$$Type, what: integer): $Message
-public static "obtain"(h: $Handler$$Type, callback: $Runnable$$Type): $Message
-public static "obtain"(h: $Handler$$Type): $Message
-public static "obtain"(h: $Handler$$Type, what: integer, int2: integer, int3: integer): $Message
 public static "obtain"(o: $Message$$Type): $Message
+public static "obtain"(h: $Handler$$Type): $Message
+public static "obtain"(h: $Handler$$Type, callback: $Runnable$$Type): $Message
+public static "obtain"(h: $Handler$$Type, what: integer, int2: integer, int3: integer): $Message
+public static "obtain"(h: $Handler$$Type, what: integer, int2: integer, int3: integer, obj: any): $Message
+public static "obtain"(h: $Handler$$Type, what: integer): $Message
 public "recycle"(): void
 public "sendToTarget"(): void
 public "setAsynchronous"(async: boolean): void
@@ -624,16 +623,16 @@ constructor()
 public "centerX"(): integer
 public "centerY"(): integer
 public "contains"(x: integer, y: integer): boolean
-public "contains"(left: integer, top: integer, right: integer, bottom: integer): boolean
 public "contains"(r: $Rect$$Type): boolean
+public "contains"(left: integer, top: integer, right: integer, bottom: integer): boolean
 public "copy"(): $Rect
 public static "copy"(r: $Rect$$Type): $Rect
 public "exactCenterX"(): float
 public "exactCenterY"(): float
 public "height"(): integer
+public "inset"(left: integer, top: integer, right: integer, bottom: integer): void
 public "inset"(insets: $Rect$$Type): void
 public "inset"(dx: integer, dy: integer): void
-public "inset"(left: integer, top: integer, right: integer, bottom: integer): void
 public "intersect"(left: integer, top: integer, right: integer, bottom: integer): boolean
 public "intersect"(r: $Rect$$Type): boolean
 public "intersectUnchecked"(other: $Rect$$Type): void
@@ -643,8 +642,8 @@ public "isEmpty"(): boolean
 public "join"(left: integer, top: integer, right: integer, bottom: integer): void
 public "offset"(dx: integer, dy: integer): void
 public "offsetTo"(newLeft: integer, newTop: integer): void
-public "set"(left: integer, top: integer, right: integer, bottom: integer): void
 public "set"(src: $Rect$$Type): void
+public "set"(left: integer, top: integer, right: integer, bottom: integer): void
 public "setEmpty"(): void
 public "setIntersect"(a: $Rect$$Type, b: $Rect$$Type): boolean
 public "sort"(): void
@@ -1060,9 +1059,9 @@ public "isStateSaved"(): boolean
 public "isVisible"(): boolean
 public "onAttach"(context: $Context$$Type): void
 public "onCreate"(savedInstanceState: $DataSet$$Type): void
-public "onCreateAnimator"(transit: integer, enter: boolean, isPop: boolean, nextAnim: $ResourceId$$Type): $Animator
 /** @deprecated */
 public "onCreateAnimator"(transit: integer, enter: boolean, nextAnim: integer): $Animator
+public "onCreateAnimator"(transit: integer, enter: boolean, isPop: boolean, nextAnim: $ResourceId$$Type): $Animator
 public "onCreateContextMenu"(menu: $ContextMenu$$Type, v: $View$$Type, menuInfo: $ContextMenu$ContextMenuInfo$$Type): void
 public "onCreateView"(inflater: $LayoutInflater$$Type, container: $ViewGroup$$Type, savedInstanceState: $DataSet$$Type): $View
 public "onDestroy"(): void
@@ -1172,22 +1171,21 @@ static readonly "MATCH_NAME": integer
 constructor()
 
 public "addListener"(listener: $TransitionListener$$Type): $Transition
-public "addTarget"(targetType: $Class$$Type<any>): $Transition
 public "addTarget"(targetName: string): $Transition
+public "addTarget"(targetType: $Class$$Type<any>): $Transition
 public "addTarget"(target: $View$$Type): $Transition
 public "addTarget"(targetId: integer): $Transition
 public "cancel"(): void
 public "captureEndValues"(transitionValues0: $TransitionValues$$Type): void
 public "captureStartValues"(transitionValues0: $TransitionValues$$Type): void
-public "clone"(): $Transition
 public "createAnimator"(sceneRoot: $ViewGroup$$Type, startValues: $TransitionValues$$Type, endValues: $TransitionValues$$Type): $Animator
 public "excludeChildren"(type: $Class$$Type<any>, exclude: boolean): $Transition
 public "excludeChildren"(targetId: integer, exclude: boolean): $Transition
 public "excludeChildren"(target: $View$$Type, exclude: boolean): $Transition
 public "excludeTarget"(type: $Class$$Type<any>, exclude: boolean): $Transition
-public "excludeTarget"(target: $View$$Type, exclude: boolean): $Transition
-public "excludeTarget"(targetId: integer, exclude: boolean): $Transition
 public "excludeTarget"(targetName: string, exclude: boolean): $Transition
+public "excludeTarget"(targetId: integer, exclude: boolean): $Transition
+public "excludeTarget"(target: $View$$Type, exclude: boolean): $Transition
 public "getDuration"(): long
 public "getEpicenter"(): $Rect
 public "getEpicenterCallback"(): $Transition$EpicenterCallback
@@ -1204,10 +1202,10 @@ public "getTransitionValues"(view: $View$$Type, start: boolean): $TransitionValu
 public "isTransitionRequired"(startValues: $TransitionValues$$Type, endValues: $TransitionValues$$Type): boolean
 public "pause"(sceneRoot: $View$$Type): void
 public "removeListener"(listener: $TransitionListener$$Type): $Transition
-public "removeTarget"(target: $Class$$Type<any>): $Transition
-public "removeTarget"(targetName: string): $Transition
-public "removeTarget"(targetId: integer): $Transition
 public "removeTarget"(target: $View$$Type): $Transition
+public "removeTarget"(targetId: integer): $Transition
+public "removeTarget"(targetName: string): $Transition
+public "removeTarget"(target: $Class$$Type<any>): $Transition
 public "setDuration"(duration: long): $Transition
 public "setEpicenterCallback"(epicenterCallback: $Transition$EpicenterCallback$$Type): void
 public "setInterpolator"(interpolator: $TimeInterpolator$$Type): $Transition
@@ -1246,8 +1244,8 @@ export class $Handler {
 constructor(looper: $Looper$$Type, callback: $Handler$Callback$$Type)
 constructor(looper: $Looper$$Type)
 
-public static "createAsync"(looper: $Looper$$Type): $Handler
 public static "createAsync"(looper: $Looper$$Type, callback: $Handler$Callback$$Type): $Handler
+public static "createAsync"(looper: $Looper$$Type): $Handler
 public "dispatchMessage"(msg: $Message$$Type): void
 public "getMessageName"(message: $Message$$Type): string
 public "getQueue"(): $MessageQueue
@@ -1258,10 +1256,10 @@ public "hasMessages"(): boolean
 public "hasMessages"(what: integer): boolean
 public "isCurrentThread"(): boolean
 public "obtainMessage"(what: integer, int1: integer, int2: integer, obj: any): $Message
-public "obtainMessage"(): $Message
-public "obtainMessage"(what: integer): $Message
 public "obtainMessage"(what: integer, int1: integer, int2: integer): $Message
+public "obtainMessage"(): $Message
 public "obtainMessage"(what: integer, obj: any): $Message
+public "obtainMessage"(what: integer): $Message
 public "post"(r: $Runnable$$Type): boolean
 public "postAtFrontOfQueue"(r: $Runnable$$Type): boolean
 public "postAtTime"(r: $Runnable$$Type, timeMillis: long): boolean
@@ -1366,8 +1364,8 @@ import { $Animator$$Type } from "icyllis.modernui.animation.Animator"
 
 export interface $AnimatorListener {
 "onAnimationCancel"(animation: $Animator$$Type): void
-"onAnimationEnd"(animation: $Animator$$Type): void
 "onAnimationEnd"(animation: $Animator$$Type, isReverse: boolean): void
+"onAnimationEnd"(animation: $Animator$$Type): void
 "onAnimationPause"(animation: $Animator$$Type): void
 "onAnimationRepeat"(animation: $Animator$$Type): void
 "onAnimationResume"(animation: $Animator$$Type): void
@@ -2226,20 +2224,20 @@ public "setFilter"(filter: boolean): void
 public "setFilterMode"(filter: integer): void
 public "setLinearText"(linearText: boolean): void
 public "setMipmapMode"(mipmap: integer): void
-public "setRGBA"(r: float, g: float, b: float, a: float): void
 public "setRGBA"(r: integer, g: integer, b: integer, a: integer): void
+public "setRGBA"(r: float, g: float, b: float, a: float): void
 public "setShader"(shader: $Shader$$Type): void
 public "setStroke"(stroke: boolean): void
-public "setStrokeAlign"(align: integer): void
 public "setStrokeAlign"(align: $Paint$Align$$Type): void
+public "setStrokeAlign"(align: integer): void
 public "setStrokeCap"(cap: $Paint$Cap$$Type): void
 public "setStrokeCap"(cap: integer): void
 public "setStrokeJoin"(join: $Paint$Join$$Type): void
 public "setStrokeJoin"(join: integer): void
 public "setStrokeMiter"(miter: float): void
 public "setStrokeWidth"(width: float): void
-public "setStyle"(style: $Paint$Style$$Type): void
 public "setStyle"(style: integer): void
+public "setStyle"(style: $Paint$Style$$Type): void
 public "setTextAntiAlias"(textAA: boolean): void
 public "setTextSize"(textSize: float): void
 get "alpha"(): integer
@@ -2276,16 +2274,16 @@ set "linearText"(value: boolean)
 set "mipmapMode"(value: integer)
 set "shader"(value: $Shader$$Type)
 set "stroke"(value: boolean)
-set "strokeAlign"(value: integer)
 set "strokeAlign"(value: $Paint$Align$$Type)
+set "strokeAlign"(value: integer)
 set "strokeCap"(value: $Paint$Cap$$Type)
 set "strokeCap"(value: integer)
 set "strokeJoin"(value: $Paint$Join$$Type)
 set "strokeJoin"(value: integer)
 set "strokeMiter"(value: float)
 set "strokeWidth"(value: float)
-set "style"(value: $Paint$Style$$Type)
 set "style"(value: integer)
+set "style"(value: $Paint$Style$$Type)
 set "textAntiAlias"(value: boolean)
 set "textSize"(value: float)
 }
@@ -2399,31 +2397,31 @@ static readonly "QUAD_AA_FLAG_LEFT": integer
 static readonly "QUAD_AA_FLAG_RIGHT": integer
 static readonly "QUAD_AA_FLAG_TOP": integer
 
-public "clear"(color: integer): void
 public "clear"(r: float, g: float, b: float, a: float): void
-public "clipOutRect"(rect: $Rect$$Type): boolean
+public "clear"(color: integer): void
 public "clipOutRect"(float0: float, float1: float, float2: float, float3: float): boolean
+public "clipOutRect"(rect: $Rect$$Type): boolean
 public "clipOutRect"(rect: $RectF$$Type): boolean
+public "clipRect"(float0: float, float1: float, float2: float, float3: float): boolean
 public "clipRect"(rect: $Rect$$Type): boolean
 public "clipRect"(rect: $RectF$$Type): boolean
-public "clipRect"(float0: float, float1: float, float2: float, float3: float): boolean
 public "concat"(matrix0: $Matrix$$Type): void
 public "concat"(matrix40: $Matrix4$$Type): void
-public "drawArc"(float0: float, float1: float, float2: float, float3: float, float4: float, cap5: $Paint$Cap$$Type, float6: float, paint7: $Paint$$Type): void
 public "drawArc"(center: $PointF$$Type, radius: float, startAngle: float, sweepAngle: float, paint: $Paint$$Type): void
+public "drawArc"(float0: float, float1: float, float2: float, float3: float, float4: float, cap5: $Paint$Cap$$Type, float6: float, paint7: $Paint$$Type): void
 public "drawArc"(float0: float, float1: float, float2: float, float3: float, float4: float, paint5: $Paint$$Type): void
 /** @deprecated */
-public "drawBezier"(x0: float, y0: float, x1: float, y1: float, x2: float, y2: float, paint: $Paint$$Type): void
-/** @deprecated */
 public "drawBezier"(p0: $PointF$$Type, p1: $PointF$$Type, p2: $PointF$$Type, paint: $Paint$$Type): void
+/** @deprecated */
+public "drawBezier"(x0: float, y0: float, x1: float, y1: float, x2: float, y2: float, paint: $Paint$$Type): void
 public "drawChord"(center: $PointF$$Type, radius: float, startAngle: float, sweepAngle: float, paint: $Paint$$Type): void
 public "drawChord"(float0: float, float1: float, float2: float, float3: float, float4: float, paint5: $Paint$$Type): void
-public "drawCircle"(float0: float, float1: float, float2: float, paint3: $Paint$$Type): void
 public "drawCircle"(center: $PointF$$Type, radius: float, paint: $Paint$$Type): void
-public "drawColor"(int0: integer, blendMode1: $BlendMode$$Type): void
+public "drawCircle"(float0: float, float1: float, float2: float, paint3: $Paint$$Type): void
 public "drawColor"(float0: float, float1: float, float2: float, float3: float, blendMode4: $BlendMode$$Type): void
-public "drawColor"(r: float, g: float, b: float, a: float): void
 public "drawColor"(color: integer): void
+public "drawColor"(int0: integer, blendMode1: $BlendMode$$Type): void
+public "drawColor"(r: float, g: float, b: float, a: float): void
 /** @deprecated */
 public "drawCustomDrawable"(drawable: $CustomDrawable$$Type, matrix: $Matrix4$$Type): void
 /** @deprecated */
@@ -2432,39 +2430,39 @@ public "drawEdgeAAQuad"(rect: $RectF$$Type, clip: float[], edgeFlags: integer, p
 public "drawGlyphs"(int0s: integer[], int1: integer, float2s: float[], int3: integer, int4: integer, font5: $Font$$Type, float6: float, float7: float, paint8: $Paint$$Type): void
 public "drawImage"(image0: $Image$$Type, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, float8: float, paint9: $Paint$$Type): void
 public "drawImage"(image: $Image$$Type, src: $Rect$$Type, dst: $RectF$$Type, paint: $Paint$$Type): void
-public "drawImage"(image: $Image$$Type, src: $Rect$$Type, dst: $Rect$$Type, paint: $Paint$$Type): void
 public "drawImage"(image0: $Image$$Type, float1: float, float2: float, paint3: $Paint$$Type): void
+public "drawImage"(image: $Image$$Type, src: $Rect$$Type, dst: $Rect$$Type, paint: $Paint$$Type): void
 public "drawLine"(x0: float, y0: float, x1: float, y1: float, thickness: float, paint: $Paint$$Type): void
+public "drawLine"(float0: float, float1: float, float2: float, float3: float, paint4: $Paint$$Type): void
 public "drawLine"(p0: $PointF$$Type, p1: $PointF$$Type, thickness: float, paint: $Paint$$Type): void
 public "drawLine"(float0: float, float1: float, float2: float, float3: float, cap4: $Paint$Cap$$Type, float5: float, paint6: $Paint$$Type): void
 public "drawLine"(p0: $PointF$$Type, p1: $PointF$$Type, paint: $Paint$$Type): void
-public "drawLine"(float0: float, float1: float, float2: float, float3: float, paint4: $Paint$$Type): void
 public "drawLineListMesh"(pos: $FloatBuffer$$Type, color: $IntBuffer$$Type, paint: $Paint$$Type): void
 public "drawLines"(float0s: float[], int1: integer, int2: integer, boolean3: boolean, paint4: $Paint$$Type): void
 public "drawMesh"(vertexMode0: $Canvas$VertexMode$$Type, floatBuffer1: $FloatBuffer$$Type, floatBuffer2: $FloatBuffer$$Type, intBuffer3: $IntBuffer$$Type, shortBuffer4: $ShortBuffer$$Type, blendMode5: $BlendMode$$Type, paint6: $Paint$$Type): void
 public "drawPaint"(paint0: $Paint$$Type): void
 public "drawPie"(center: $PointF$$Type, radius: float, startAngle: float, sweepAngle: float, paint: $Paint$$Type): void
 public "drawPie"(float0: float, float1: float, float2: float, float3: float, float4: float, paint5: $Paint$$Type): void
-public "drawPoint"(float0: float, float1: float, paint2: $Paint$$Type): void
 public "drawPoint"(p: $PointF$$Type, paint: $Paint$$Type): void
+public "drawPoint"(float0: float, float1: float, paint2: $Paint$$Type): void
 public "drawPointListMesh"(pos: $FloatBuffer$$Type, color: $IntBuffer$$Type, paint: $Paint$$Type): void
 public "drawPoints"(float0s: float[], int1: integer, int2: integer, paint3: $Paint$$Type): void
 public "drawPoints"(pts: float[], paint: $Paint$$Type): void
+public "drawRect"(r: $Rect$$Type, paint: $Paint$$Type): void
 public "drawRect"(float0: float, float1: float, float2: float, float3: float, paint4: $Paint$$Type): void
 public "drawRect"(r: $RectF$$Type, paint: $Paint$$Type): void
-public "drawRect"(r: $Rect$$Type, paint: $Paint$$Type): void
 /** @deprecated */
 public "drawRoundImage"(image: $Image$$Type, left: float, top: float, radius: float, paint: $Paint$$Type): void
 /** @deprecated */
 public "drawRoundLines"(pts: float[], offset: integer, count: integer, strip: boolean, paint: $Paint$$Type): void
+public "drawRoundRect"(rect: $RectF$$Type, radius: float, paint: $Paint$$Type): void
+public "drawRoundRect"(float0: float, float1: float, float2: float, float3: float, float4: float, paint5: $Paint$$Type): void
+public "drawRoundRect"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, paint8: $Paint$$Type): void
+public "drawRoundRect"(rect: $RectF$$Type, topLeftRadius: float, topRightRadius: float, bottomRightRadius: float, bottomLeftRadius: float, paint: $Paint$$Type): void
 /** @deprecated */
 public "drawRoundRect"(left: float, top: float, right: float, bottom: float, radius: float, sides: integer, paint: $Paint$$Type): void
 /** @deprecated */
 public "drawRoundRect"(rect: $RectF$$Type, radius: float, sides: integer, paint: $Paint$$Type): void
-public "drawRoundRect"(rect: $RectF$$Type, topLeftRadius: float, topRightRadius: float, bottomRightRadius: float, bottomLeftRadius: float, paint: $Paint$$Type): void
-public "drawRoundRect"(float0: float, float1: float, float2: float, float3: float, float4: float, paint5: $Paint$$Type): void
-public "drawRoundRect"(rect: $RectF$$Type, radius: float, paint: $Paint$$Type): void
-public "drawRoundRect"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, paint8: $Paint$$Type): void
 public "drawShapedText"(text: $ShapedText$$Type, x: float, y: float, paint: $Paint$$Type): void
 public "drawSimpleText"(text: character[], font: $Font$$Type, x: float, y: float, paint: $Paint$$Type): void
 public "drawSimpleText"(text: string, font: $Font$$Type, x: float, y: float, paint: $Paint$$Type): void
@@ -2477,22 +2475,22 @@ public "getMatrix"(): $Matrix4
 public "getSaveCount"(): integer
 public "isClipEmpty"(): boolean
 public "isClipRect"(): boolean
-public "quickReject"(float0: float, float1: float, float2: float, float3: float): boolean
 public "quickReject"(rect: $RectF$$Type): boolean
+public "quickReject"(float0: float, float1: float, float2: float, float3: float): boolean
 public "restore"(): void
 public "restoreToCount"(int0: integer): void
-public "rotate"(float0: float): void
 public "rotate"(float0: float, float1: float, float2: float): void
+public "rotate"(float0: float): void
 public "save"(): integer
 /** @deprecated */
-public "saveLayer"(bounds: $RectF$$Type, alpha: integer): integer
-/** @deprecated */
 public "saveLayer"(float0: float, float1: float, float2: float, float3: float, int4: integer): integer
+/** @deprecated */
+public "saveLayer"(bounds: $RectF$$Type, alpha: integer): integer
 public "scale"(float0: float, float1: float): void
 public "scale"(float0: float, float1: float, float2: float, float3: float): void
 public "scale"(float0: float, float1: float, float2: float): void
-public "shear"(float0: float, float1: float, float2: float, float3: float): void
 public "shear"(float0: float, float1: float): void
+public "shear"(float0: float, float1: float, float2: float, float3: float): void
 public "skew"(sx: float, sy: float, px: float, py: float): void
 public "skew"(sx: float, sy: float): void
 public "translate"(float0: float, float1: float, float2: float): void
@@ -2648,8 +2646,8 @@ public static "isCombining"(c: integer): boolean
 public static "isEmojiBreak"(prevCh: integer, ch: integer): boolean
 public static "isStickyWhitelisted"(c: integer): boolean
 public static "isVariationSelector"(c: integer): boolean
-public "itemize"(text: character[], offset: integer, limit: integer, runLimit: integer): $List<$FontCollection$Run>
 public "itemize"(text: character[], offset: integer, limit: integer): $List<$FontCollection$Run>
+public "itemize"(text: character[], offset: integer, limit: integer, runLimit: integer): $List<$FontCollection$Run>
 get "families"(): $List<$FontFamily>
 }
 }
@@ -2664,8 +2662,8 @@ import { $Menu } from "icyllis.modernui.view.Menu"
 export interface $SubMenu extends $Menu {
 "add"(charSequence0: charseq): $MenuItem
 "add"(int0: integer, int1: integer, int2: integer, charSequence3: charseq): $MenuItem
-"addSubMenu"(charSequence0: charseq): $SubMenu
 "addSubMenu"(int0: integer, int1: integer, int2: integer, charSequence3: charseq): $SubMenu
+"addSubMenu"(charSequence0: charseq): $SubMenu
 "clear"(): void
 "clearHeader"(): void
 "close"(): void
@@ -2942,8 +2940,8 @@ constructor(context: $Context$$Type, attrs: $AttributeSet$$Type, defStyleAttr: $
 constructor(context: $Context$$Type, attrs: $AttributeSet$$Type)
 constructor(context: $Context$$Type)
 
-public "addFocusables"(views: $ArrayList$$Type<$View$$Type>, direction: integer, focusableMode: integer): void
 public "addFocusables"(views: $ArrayList$$Type<$View$$Type>, direction: integer): void
+public "addFocusables"(views: $ArrayList$$Type<$View$$Type>, direction: integer, focusableMode: integer): void
 public "addKeyboardNavigationClusters"(views: $Collection$$Type<$View$$Type>, direction: integer): void
 public "addOnAttachStateChangeListener"(listener: $View$OnAttachStateChangeListener$$Type): void
 public "addOnLayoutChangeListener"(listener: $View$OnLayoutChangeListener$$Type): void
@@ -2994,8 +2992,8 @@ public "getBaseline"(): integer
 public "getBottom"(): integer
 public "getBoundsOnScreen"(outRect: $Rect$$Type, clipToParent: boolean): void
 public "getBoundsOnScreen"(outRect: $Rect$$Type): void
-public "getClipBounds"(outRect: $Rect$$Type): boolean
 public "getClipBounds"(): $Rect
+public "getClipBounds"(outRect: $Rect$$Type): boolean
 public "getContentDescription"(): charseq
 public "getContext"(): $Context
 public static "getDefaultSize"(size: integer, measureSpec: integer): integer
@@ -3009,8 +3007,8 @@ public "getFocusables"(direction: integer): $ArrayList<$View>
 public "getFocusedRect"(r: $Rect$$Type): void
 public "getForeground"(): $Drawable
 public "getForegroundGravity"(): integer
-public "getGlobalVisibleRect"(r: $Rect$$Type): boolean
 public "getGlobalVisibleRect"(r: $Rect$$Type, globalOffset: $Point$$Type): boolean
+public "getGlobalVisibleRect"(r: $Rect$$Type): boolean
 public "getHandler"(): $Handler
 public "getHasOverlappingRendering"(): boolean
 public "getHeight"(): integer
@@ -3073,8 +3071,8 @@ public "getScrollX"(): integer
 public "getScrollY"(): integer
 public "getStateDescription"(): charseq
 public "getStateListAnimator"(): $StateListAnimator
-public "getTag"(key: integer): any
 public "getTag"(): any
+public "getTag"(key: integer): any
 public "getTextAlignment"(): integer
 public "getTextDirection"(): integer
 public "getTooltipText"(): charseq
@@ -3110,8 +3108,8 @@ public "hasTransientState"(): boolean
 public "hasTranslationTransientState"(): boolean
 public "hasWindowFocus"(): boolean
 public "invalidate"(dirty: $Rect$$Type): void
-public "invalidate"(): void
 public "invalidate"(l: integer, t: integer, r: integer, b: integer): void
+public "invalidate"(): void
 public "invalidateDrawable"(drawable: $Drawable$$Type): void
 public "invalidateOutline"(): void
 public "isActivated"(): boolean
@@ -3180,12 +3178,12 @@ public "onTouchEvent"(event: $MotionEvent$$Type): boolean
 public "onVisibilityAggregated"(isVisible: boolean): void
 public "onWindowFocusChanged"(hasWindowFocus: boolean): void
 public "performClick"(): boolean
-public "performContextClick"(): boolean
 public "performContextClick"(x: float, y: float): boolean
-public "performHapticFeedback"(feedbackConstant: integer): boolean
+public "performContextClick"(): boolean
 public "performHapticFeedback"(feedbackConstant: integer, flags: integer): boolean
-public "performLongClick"(): boolean
+public "performHapticFeedback"(feedbackConstant: integer): boolean
 public "performLongClick"(x: float, y: float): boolean
+public "performLongClick"(): boolean
 public "playSoundEffect"(soundConstant: integer): void
 public "pointInView"(localX: float, localY: float, slop: float): boolean
 public "post"(action: $Runnable$$Type): boolean
@@ -3199,8 +3197,8 @@ public "refreshDrawableState"(): void
 public "removeCallbacks"(action: $Runnable$$Type): void
 public "removeOnAttachStateChangeListener"(listener: $View$OnAttachStateChangeListener$$Type): void
 public "removeOnLayoutChangeListener"(listener: $View$OnLayoutChangeListener$$Type): void
-public "requestFocus"(direction: integer): boolean
 public "requestFocus"(): boolean
+public "requestFocus"(direction: integer): boolean
 public "requestFocus"(direction: integer, previouslyFocusedRect: $Rect$$Type): boolean
 public "requestLayout"(): void
 public "requestRectangleOnScreen"(rectangle: $Rect$$Type): boolean
@@ -3291,8 +3289,8 @@ public "setScrollBarDefaultDelayBeforeFade"(scrollBarDefaultDelayBeforeFade: int
 public "setScrollBarFadeDuration"(scrollBarFadeDuration: integer): void
 public "setScrollBarSize"(scrollBarSize: integer): void
 public "setScrollBarStyle"(style: integer): void
-public "setScrollIndicators"(indicators: integer, mask: integer): void
 public "setScrollIndicators"(indicators: integer): void
+public "setScrollIndicators"(indicators: integer, mask: integer): void
 public "setScrollX"(value: integer): void
 public "setScrollY"(value: integer): void
 public "setScrollbarFadingEnabled"(fadeScrollbars: boolean): void
@@ -3300,8 +3298,8 @@ public "setSelected"(selected: boolean): void
 public "setSoundEffectsEnabled"(soundEffectsEnabled: boolean): void
 public "setStateDescription"(stateDescription: charseq): void
 public "setStateListAnimator"(stateListAnimator: $StateListAnimator$$Type): void
-public "setTag"(key: integer, tag: any): void
 public "setTag"(tag: any): void
+public "setTag"(key: integer, tag: any): void
 public "setTextAlignment"(textAlignment: integer): void
 public "setTextDirection"(textDirection: integer): void
 public "setTooltipText"(tooltipText: charseq): void
@@ -3321,11 +3319,11 @@ public "setWillNotDraw"(willNotDraw: boolean): void
 public "setX"(x: float): void
 public "setY"(y: float): void
 public "setZ"(z: float): void
-public "showContextMenu"(): boolean
 public "showContextMenu"(x: float, y: float): boolean
+public "showContextMenu"(): boolean
 public "sp"(value: float): integer
-public "startActionMode"(callback: $ActionMode$Callback$$Type, type: integer): $ActionMode
 public "startActionMode"(callback: $ActionMode$Callback$$Type): $ActionMode
+public "startActionMode"(callback: $ActionMode$Callback$$Type, type: integer): $ActionMode
 public "startDragAndDrop"(localState: any, shadow: $View$DragShadow$$Type, flags: integer): boolean
 public "startNestedScroll"(axes: integer, type: integer): boolean
 public "stopNestedScroll"(type: integer): void
@@ -3334,8 +3332,8 @@ public "toLocalMotionEvent"(ev: $MotionEvent$$Type): boolean
 public "transformFromViewToWindowSpace"(inOutLocation: integer[]): void
 public "transformMatrixToGlobal"(matrix: $Matrix$$Type): void
 public "transformMatrixToLocal"(matrix: $Matrix$$Type): void
-public "unscheduleDrawable"(who: $Drawable$$Type, what: $Runnable$$Type): void
 public "unscheduleDrawable"(who: $Drawable$$Type): void
+public "unscheduleDrawable"(who: $Drawable$$Type, what: $Runnable$$Type): void
 public "willNotDraw"(): boolean
 get "alpha"(): float
 get "animationMatrix"(): $Matrix
@@ -3582,8 +3580,8 @@ import { $Menu } from "icyllis.modernui.view.Menu"
 export interface $ContextMenu extends $Menu {
 "add"(charSequence0: charseq): $MenuItem
 "add"(int0: integer, int1: integer, int2: integer, charSequence3: charseq): $MenuItem
-"addSubMenu"(charSequence0: charseq): $SubMenu
 "addSubMenu"(int0: integer, int1: integer, int2: integer, charSequence3: charseq): $SubMenu
+"addSubMenu"(charSequence0: charseq): $SubMenu
 "clear"(): void
 "clearHeader"(): void
 "close"(): void
@@ -3653,8 +3651,8 @@ import { $KeyEvent$$Type } from "icyllis.modernui.view.KeyEvent"
 export interface $Menu {
 "add"(charSequence0: charseq): $MenuItem
 "add"(int0: integer, int1: integer, int2: integer, charSequence3: charseq): $MenuItem
-"addSubMenu"(charSequence0: charseq): $SubMenu
 "addSubMenu"(int0: integer, int1: integer, int2: integer, charSequence3: charseq): $SubMenu
+"addSubMenu"(charSequence0: charseq): $SubMenu
 "clear"(): void
 "close"(): void
 "findItem"(int0: integer): $MenuItem
@@ -3768,8 +3766,8 @@ public "getShort"(key: string, defaultValue: short): short
 public "getShortArray"(key: string): short[]
 public "getString"(key: string, defaultValue: string): string
 public "getString"(key: string): string
-public "getUUID"(key: string): $UUID
 public "getUUID"(key: string, defaultValue: $UUID$$Type): $UUID
+public "getUUID"(key: string): $UUID
 public "getValue"<T>(key: string, clazz: $Class$$Type<T>): T
 public "getValue"<T>(key: string): T
 public "isEmpty"(): boolean
@@ -3862,6 +3860,7 @@ static readonly "DATE_FORMAT": $DateFormat
 static readonly "MARKER": $Marker
 
 public "clear"(color: float[], area: $Rect$$Type): boolean
+public "clone"(): $Bitmap
 public "close"(): void
 public "copyPixelsFromBuffer"(src: $Buffer$$Type, rowBytes: integer, dstX: integer, dstY: integer, width: integer, height: integer): boolean
 public "copyPixelsToBuffer"(dst: $Buffer$$Type, rowBytes: integer, srcX: integer, srcY: integer, width: integer, height: integer): boolean
@@ -3879,8 +3878,8 @@ public "getInfo"(): $ImageInfo
 public "getPixelARGB"(x: integer, y: integer): integer
 public "getPixels"(dst: $Bitmap$$Type, dstX: integer, dstY: integer, srcX: integer, srcY: integer, width: integer, height: integer): void
 public "getPixels"(dst: integer[], offset: integer, stride: integer, srcX: integer, srcY: integer, width: integer, height: integer): void
-public "getPixels"(): $PixelRef
 public "getPixels"(dst: float[], offset: integer, stride: integer, srcX: integer, srcY: integer, width: integer, height: integer): void
+public "getPixels"(): $PixelRef
 public "getPixmap"(): $Pixmap
 public "getRowBytes"(): integer
 public "getRowStride"(): integer
@@ -3905,9 +3904,9 @@ public "setColor4f"(x: integer, y: integer, src: float[]): void
 public "setColorSpace"(newColorSpace: $ColorSpace$$Type): void
 public "setFormat"(format: $Bitmap$Format$$Type): void
 public "setImmutable"(): void
-public "setPixels"(src: float[], offset: integer, stride: integer, dstX: integer, dstY: integer, width: integer, height: integer): void
-public "setPixels"(src: $Bitmap$$Type, srcX: integer, srcY: integer, dstX: integer, dstY: integer, width: integer, height: integer): void
 public "setPixels"(src: integer[], offset: integer, stride: integer, dstX: integer, dstY: integer, width: integer, height: integer): void
+public "setPixels"(src: $Bitmap$$Type, srcX: integer, srcY: integer, dstX: integer, dstY: integer, width: integer, height: integer): void
+public "setPixels"(src: float[], offset: integer, stride: integer, dstX: integer, dstY: integer, width: integer, height: integer): void
 public "setPremultiplied"(premultiplied: boolean): void
 public static "wrap"(address: long, rowBytes: integer, freeFn: $LongConsumer$$Type, width: integer, height: integer, format: $Bitmap$Format$$Type, isPremultiplied: boolean, colorSpace: $ColorSpace$$Type): $Bitmap
 get "address"(): long
@@ -3976,11 +3975,11 @@ constructor(context: $Context$$Type)
 
 public "addStatesFromChildren"(): boolean
 public "addTransientView"(view: $View$$Type, index: integer): void
-public "addView"(child: $View$$Type, index: integer, params: $ViewGroup$LayoutParams$$Type): void
-public "addView"(child: $View$$Type, params: $ViewGroup$LayoutParams$$Type): void
-public "addView"(child: $View$$Type, width: integer, height: integer): void
 public "addView"(child: $View$$Type): void
 public "addView"(child: $View$$Type, index: integer): void
+public "addView"(child: $View$$Type, width: integer, height: integer): void
+public "addView"(child: $View$$Type, params: $ViewGroup$LayoutParams$$Type): void
+public "addView"(child: $View$$Type, index: integer, params: $ViewGroup$LayoutParams$$Type): void
 public "bringChildToFront"(child: $View$$Type): void
 public "canResolveLayoutDirection"(): boolean
 public "canResolveTextAlignment"(): boolean
@@ -3999,8 +3998,8 @@ public "getChildAt"(index: integer): $View
 public "getChildCount"(): integer
 public "getChildDrawingOrder"(drawingPosition: integer): integer
 public static "getChildMeasureSpec"(spec: integer, padding: integer, childDimension: integer): integer
-public "getChildVisibleRect"(child: $View$$Type, r: $Rect$$Type, offset: $Point$$Type, forceParentCheck: boolean): boolean
 public "getChildVisibleRect"(child: $View$$Type, r: $Rect$$Type, offset: $Point$$Type): boolean
+public "getChildVisibleRect"(child: $View$$Type, r: $Rect$$Type, offset: $Point$$Type, forceParentCheck: boolean): boolean
 public "getClipChildren"(): boolean
 public "getClipToPadding"(): boolean
 public "getDescendantFocusability"(): integer
@@ -4166,15 +4165,15 @@ constructor()
 
 public "centerX"(): float
 public "centerY"(): float
-public "contains"(left: float, top: float, right: float, bottom: float): boolean
 public "contains"(r: $RectF$$Type): boolean
+public "contains"(left: float, top: float, right: float, bottom: float): boolean
 public "contains"(x: float, y: float): boolean
 public "copy"(): $RectF
 public static "copy"(r: $RectF$$Type): $RectF
 public "height"(): float
 public "inset"(dx: float, dy: float): void
-public "intersect"(r: $RectF$$Type): boolean
 public "intersect"(left: float, top: float, right: float, bottom: float): boolean
+public "intersect"(r: $RectF$$Type): boolean
 public "intersects"(left: float, top: float, right: float, bottom: float): boolean
 public static "intersects"(a: $RectF$$Type, b: $RectF$$Type): boolean
 public "isEmpty"(): boolean
@@ -4184,15 +4183,15 @@ public "offset"(dx: float, dy: float): void
 public "offsetTo"(newLeft: float, newTop: float): void
 public "round"(dst: $Rect$$Type): void
 public "roundOut"(dst: $Rect$$Type): void
-public "set"(src: $Rect$$Type): void
 public "set"(left: float, top: float, right: float, bottom: float): void
+public "set"(src: $Rect$$Type): void
 public "set"(src: $RectF$$Type): void
 public "setEmpty"(): void
 public "setIntersect"(a: $RectF$$Type, b: $RectF$$Type): boolean
 public "sort"(): void
 public "transform"(m: $Matrix$$Type): void
-public "union"(r: $RectF$$Type): void
 public "union"(left: float, top: float, right: float, bottom: float): void
+public "union"(r: $RectF$$Type): void
 public "union"(x: float, y: float): void
 public "width"(): float
 get "bottom"(): float
@@ -4412,10 +4411,10 @@ static readonly "BIDI_RTL": integer
 
 constructor(text: character[], contextStart: integer, contextLimit: integer, start: integer, limit: integer, bidiFlags: integer, paint: $FontPaint$$Type)
 
-public static "doLayoutRun"(text: character[], contextStart: integer, contextLimit: integer, start: integer, limit: integer, isRtl: boolean, paint: $FontPaint$$Type, extent: $FontMetricsInt$$Type, consumer: $ShapedText$RunConsumer$$Type): float
 public static "doLayoutRun"(text: character[], contextStart: integer, contextLimit: integer, start: integer, limit: integer, isRtl: boolean, paint: $FontPaint$$Type, layoutStart: integer, advances: float[], curAdvance: float, glyphs: $IntArrayList$$Type, positions: $FloatArrayList$$Type, fontIndices: $ByteArrayList$$Type, idGet: $Function$$Type<$Font$$Type, byte>, extent: $FontMetricsInt$$Type, consumer: $ShapedText$RunConsumer$$Type): float
-public "getAdvance"(): float
+public static "doLayoutRun"(text: character[], contextStart: integer, contextLimit: integer, start: integer, limit: integer, isRtl: boolean, paint: $FontPaint$$Type, extent: $FontMetricsInt$$Type, consumer: $ShapedText$RunConsumer$$Type): float
 public "getAdvance"(i: integer): float
+public "getAdvance"(): float
 public "getAdvances"(): float[]
 public "getAscent"(): integer
 public "getCharCount"(): integer
@@ -4423,8 +4422,8 @@ public "getDescent"(): integer
 public "getFont"(i: integer): $Font
 public "getGlyph"(i: integer): integer
 public "getGlyphCount"(): integer
-public "getGlyphs"(glyphIndex: integer, glyphCount: integer, dstGlyphs: integer[], dstOffset: integer): void
 public "getGlyphs"(): integer[]
+public "getGlyphs"(glyphIndex: integer, glyphCount: integer, dstGlyphs: integer[], dstOffset: integer): void
 public "getMemoryUsage"(): integer
 public "getPositions"(): float[]
 public "getPositions"(glyphIndex: integer, glyphCount: integer, dstPositions: float[], dstOffset: integer): void
@@ -4617,8 +4616,8 @@ export interface $MenuItem {
 "setEnabled"(boolean0: boolean): $MenuItem
 "setIcon"(drawable0: $Drawable$$Type): $MenuItem
 "setIconTintList"(tint: $ColorStateList$$Type): $MenuItem
-"setNumericShortcut"(char0: character): $MenuItem
 "setNumericShortcut"(numericChar: character, numericModifiers: integer): $MenuItem
+"setNumericShortcut"(char0: character): $MenuItem
 "setOnActionExpandListener"(onActionExpandListener0: $MenuItem$OnActionExpandListener$$Type): $MenuItem
 "setOnMenuItemClickListener"(onMenuItemClickListener0: $MenuItem$OnMenuItemClickListener$$Type): $MenuItem
 "setShortcut"(char0: character, char1: character): $MenuItem
@@ -4719,21 +4718,21 @@ constructor()
 
 public "mapPoint"(p: $PointF$$Type): void
 public "mapPoint"(p: float[]): void
+public "mapPoints"(pts: float[]): void
 public "mapPoints"(pts: float[], pos: integer, count: integer): void
 public "mapPoints"(pts: float[], count: integer): void
 public "mapPoints"(src: float[], dst: float[], count: integer): void
-public "mapPoints"(pts: float[]): void
+public "mapRect"(r: $Rect$$Type, out: $Rect$$Type): void
 public "mapRect"(left: float, top: float, right: float, bottom: float, out: $Rect$$Type): void
 public "mapRect"(r: $RectF$$Type): void
 public "mapRect"(r: $RectF$$Type, out: $Rect$$Type): void
-public "mapRect"(r: $Rect$$Type, out: $Rect$$Type): void
-public "mapRect"(r: $Rect2i$$Type): void
-public "mapRect"(r: $Rect2fc$$Type, out: $Rect2i$$Type): void
-public "mapRect"(r: $Rect2ic$$Type, out: $Rect2i$$Type): void
 public "mapRect"(rect: $Rect2f$$Type): boolean
+public "mapRect"(r: $Rect2ic$$Type, out: $Rect2i$$Type): void
+public "mapRect"(r: $Rect2fc$$Type, out: $Rect2i$$Type): void
+public "mapRect"(r: $Rect2i$$Type): void
+public "mapRectOut"(left: float, top: float, right: float, bottom: float, out: $Rect$$Type): void
 public "mapRectOut"(r: $RectF$$Type, out: $Rect$$Type): void
 public "mapRectOut"(r: $Rect$$Type, out: $Rect$$Type): void
-public "mapRectOut"(left: float, top: float, right: float, bottom: float, out: $Rect$$Type): void
 public "mapRectOut"(r: $Rect2fc$$Type, dst: $Rect2i$$Type): void
 public "mapRectOut"(r: $Rect2i$$Type): void
 public "mapRectOut"(r: $Rect2ic$$Type, dst: $Rect2i$$Type): void
@@ -4756,10 +4755,10 @@ constructor()
 
 public "capacity"(): integer
 public "freeData"(): void
-public "limit"(): integer
 public "limit"(newLimit: integer): void
-public "position"(): integer
+public "limit"(): integer
 public "position"(newPosition: integer): void
+public "position"(): integer
 public "readArray"<T>(loader: $ClassLoader$$Type, clazz: $Class$$Type<T>): T[]
 public "readBoolean"(): boolean
 public "readBooleanArray"(): boolean[]
@@ -4796,8 +4795,8 @@ public "writeBooleanArray"(value: boolean[]): void
 public "writeByte"(v: integer): void
 public "writeByteArray"(b: byte[]): void
 public "writeByteArray"(b: byte[], off: integer, len: integer): void
-public "writeBytes"(src: byte[]): void
 public "writeBytes"(src: byte[], off: integer, len: integer): void
+public "writeBytes"(src: byte[]): void
 public "writeChar"(v: integer): void
 public "writeCharArray"(value: character[]): void
 public "writeCharSequence"(cs: charseq): void
@@ -5078,8 +5077,8 @@ export interface $Font {
 "calcGlyphScore"(buf: character[], start: integer, limit: integer): integer
 "doComplexLayout"(char0s: character[], int1: integer, int2: integer, int3: integer, int4: integer, boolean5: boolean, fontPaint6: $FontPaint$$Type, intArrayList7: $IntArrayList$$Type, floatArrayList8: $FloatArrayList$$Type, float9s: float[], int10: integer, rect11: $Rect$$Type, float12: float, float13: float): float
 "doSimpleLayout"(char0s: character[], int1: integer, int2: integer, fontPaint3: $FontPaint$$Type, intArrayList4: $IntArrayList$$Type, floatArrayList5: $FloatArrayList$$Type, float6: float, float7: float): float
-"getFamilyName"(locale0: $Locale$$Type): string
 "getFamilyName"(): string
+"getFamilyName"(locale0: $Locale$$Type): string
 "getFullName"(locale0: $Locale$$Type): string
 "getFullName"(): string
 "getMetrics"(fontPaint0: $FontPaint$$Type, fontMetricsInt1: $FontMetricsInt$$Type): integer
@@ -5254,13 +5253,13 @@ public "isStateful"(): boolean
 public "isVisible"(): boolean
 public "jumpToCurrentState"(): void
 public "mutate"(): $Drawable
-public static "scaleFromDensity"(pixels: float, sourceDensity: integer, targetDensity: integer): float
 public static "scaleFromDensity"(pixels: integer, sourceDensity: integer, targetDensity: integer, isSize: boolean): integer
+public static "scaleFromDensity"(pixels: float, sourceDensity: integer, targetDensity: integer): float
 public "scheduleSelf"(what: $Runnable$$Type, when: long): void
 public "setAlpha"(alpha: integer): void
 public "setAutoMirrored"(mirrored: boolean): void
-public "setBounds"(bounds: $Rect$$Type): void
 public "setBounds"(left: integer, top: integer, right: integer, bottom: integer): void
+public "setBounds"(bounds: $Rect$$Type): void
 public "setCallback"(cb: $Drawable$Callback$$Type): void
 public "setChangingConfigurations"(configs: integer): void
 public "setColorFilter"(colorFilter: $ColorFilter$$Type): void

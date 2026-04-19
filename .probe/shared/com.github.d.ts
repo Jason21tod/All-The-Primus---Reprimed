@@ -28,8 +28,8 @@ import { $GuiGraphics, $GuiGraphics$$Type } from "net.minecraft.client.gui.GuiGr
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $EventRenderSplashText extends $Event implements $EventItf {
-constructor(string0: string, guiGraphics1: $GuiGraphics$$Type, float2: float)
 constructor()
+constructor(string0: string, guiGraphics1: $GuiGraphics$$Type, float2: float)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -524,8 +524,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $ClientLevel, $ClientLevel$$Type } from "net.minecraft.client.multiplayer.ClientLevel"
 
 export class $EventGetStarBrightness extends $Event implements $EventItf {
-constructor()
 constructor(clientLevel0: $ClientLevel$$Type, float1: float, float2: float)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -817,8 +817,8 @@ import { $ResourceKey, $ResourceKey$$Type } from "net.minecraft.resources.Resour
 
 /** @deprecated */
 export class $EventReplaceBiome extends $Event implements $EventItf {
-constructor()
 constructor(expandedBiomeSource0: $ExpandedBiomeSource$$Type, holder1: $Holder$$Type<$Biome$$Type>, int2: integer, int3: integer, int4: integer, float5: float, float6: float, float7: float, float8: float, float9: float, float10: float, long11: long, resourceKey12: $ResourceKey$$Type<$Level>, sampler13: $Climate$Sampler$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

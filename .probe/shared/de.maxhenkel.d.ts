@@ -29,8 +29,8 @@ public "getPosY"(): double
 public "getPosZ"(): double
 public "getTimestamp"(): long
 public "processDrops"(collection0: $Collection$$Type<$ItemEntity$$Type>): void
-public "toNBT"(): $CompoundTag
 public "toNBT"(boolean0: boolean): $CompoundTag
+public "toNBT"(): $CompoundTag
 get "additionalItems"(): $NonNullList<$ItemStack>
 get "allItems"(): $NonNullList<$ItemStack>
 get "armorInventory"(): $NonNullList<$ItemStack>

@@ -70,9 +70,9 @@ public "getAnimatable"(): T
 public "getGeoModel"(): $GeoModel<T>
 public "getInstanceId"(t0: T): long
 public "getMotionAnimThreshold"(t0: T): float
+public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 /** @deprecated */
 public "getPackedOverlay"(t0: T, float1: float): integer
-public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 public "getRenderColor"(t0: T, float1: float, int2: integer): $Color
 public "getRenderLayers"(): $List<$GeoRenderLayer<T>>
 public "getRenderType"(t0: T, resourceLocation1: $ResourceLocation$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float): $RenderType
@@ -266,9 +266,9 @@ export interface $GeoRenderer<T extends $GeoAnimatable = $GeoAnimatable> {
 "getGeoModel"(): $GeoModel<T>
 "getInstanceId"(t0: T): long
 "getMotionAnimThreshold"(t0: T): float
+"getPackedOverlay"(t0: T, float1: float, float2: float): integer
 /** @deprecated */
 "getPackedOverlay"(t0: T, float1: float): integer
-"getPackedOverlay"(t0: T, float1: float, float2: float): integer
 "getRenderColor"(t0: T, float1: float, int2: integer): $Color
 "getRenderLayers"(): $List<$GeoRenderLayer<T>>
 "getRenderType"(t0: T, resourceLocation1: $ResourceLocation$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float): $RenderType
@@ -446,7 +446,7 @@ declare module "software.bernie.geckolib.event.GeoRenderEvent$Object" {
 import { $EventItf } from "com.mega.endinglib.api.event.EventItf"
 import { $GeoRenderEvent } from "software.bernie.geckolib.event.GeoRenderEvent"
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
-import { $GeoObjectRenderer, $GeoObjectRenderer$$Type } from "software.bernie.geckolib.renderer.GeoObjectRenderer"
+import { $GeoObjectRenderer$$Type } from "software.bernie.geckolib.renderer.GeoObjectRenderer"
 
 export class $GeoRenderEvent$Object extends $Event implements $GeoRenderEvent, $EventItf {
 constructor()
@@ -454,10 +454,8 @@ constructor(geoObjectRenderer0: $GeoObjectRenderer$$Type<any>)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
-public "getRenderer"(): $GeoObjectRenderer<any>
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
-get "renderer"(): $GeoObjectRenderer<any>
 }
 }
 
@@ -510,9 +508,9 @@ public "getGeoModel"(): $GeoModel<T>
 public "getInstanceId"(t0: T): long
 public "getMotionAnimThreshold"(t0: T): float
 public "getName"(): string
+public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 /** @deprecated */
 public "getPackedOverlay"(t0: T, float1: float): integer
-public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 public "getRenderColor"(t0: T, float1: float, int2: integer): $Color
 public "getRenderLayers"(): $List<$GeoRenderLayer<T>>
 public "getRenderType"(t0: T, resourceLocation1: $ResourceLocation$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float): $RenderType
@@ -531,8 +529,8 @@ public "scaleModelForRender"(float0: float, float1: float, poseStack2: $PoseStac
 public "setupLightingForGuiRender"(): void
 public "updateAnimatedTextureFrame"(t0: T): void
 public "useAlternateGuiLighting"(): $GeoItemRenderer<T>
-public "withScale"(float0: float): $GeoItemRenderer<T>
 public "withScale"(float0: float, float1: float): $GeoItemRenderer<T>
+public "withScale"(float0: float): $GeoItemRenderer<T>
 get "currentItemStack"(): $ItemStack
 get "geoModel"(): $GeoModel<T>
 get "name"(): string
@@ -655,8 +653,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $ItemStack } from "net.minecraft.world.item.ItemStack"
 
 export class $GeoRenderEvent$Armor extends $Event implements $GeoRenderEvent, $EventItf {
-constructor(geoArmorRenderer0: $GeoArmorRenderer$$Type<any>)
 constructor()
+constructor(geoArmorRenderer0: $GeoArmorRenderer$$Type<any>)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -696,8 +694,8 @@ public "setData"<D>(dataTicket0: $DataTicket$$Type<D>, d1: D): void
 public "startedAt"(double0: double): void
 public "stopTriggeredAnimation"(string0: string): void
 public "stopTriggeredAnimation"(string0: string, string1: string): void
-public "tryTriggerAnimation"(string0: string): void
 public "tryTriggerAnimation"(string0: string, string1: string): void
+public "tryTriggerAnimation"(string0: string): void
 public "updatedAt"(double0: double): void
 get "animationControllers"(): $Map<string, $AnimationController<T>>
 get "boneSnapshotCollection"(): $Map<string, $BoneSnapshot>
@@ -814,10 +812,10 @@ public "getRed"(): integer
 public "getRedFloat"(): float
 public static "ofHSB"(float0: float, float1: float, float2: float): $Color
 public static "ofOpaque"(int0: integer): $Color
-public static "ofRGB"(int0: integer, int1: integer, int2: integer): $Color
 public static "ofRGB"(float0: float, float1: float, float2: float): $Color
-public static "ofRGBA"(int0: integer, int1: integer, int2: integer, int3: integer): $Color
+public static "ofRGB"(int0: integer, int1: integer, int2: integer): $Color
 public static "ofRGBA"(float0: float, float1: float, float2: float, float3: float): $Color
+public static "ofRGBA"(int0: integer, int1: integer, int2: integer, int3: integer): $Color
 get "alpha"(): integer
 get "alphaFloat"(): float
 get "blue"(): integer
@@ -866,8 +864,8 @@ export interface $GeoItem extends $SingletonGeoAnimatable {
 "registerControllers"(controllerRegistrar0: $AnimatableManager$ControllerRegistrar$$Type): void
 "setAnimData"<D>(entity0: $Entity$$Type, long1: long, serializableDataTicket2: $SerializableDataTicket$$Type<D>, d3: D): void
 "shouldPlayAnimsWhileGamePaused"(): boolean
-"stopTriggeredAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string, packetTarget4: $PacketDistributor$PacketTarget$$Type): void
 "stopTriggeredAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
+"stopTriggeredAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string, packetTarget4: $PacketDistributor$PacketTarget$$Type): void
 "stopTriggeredArmorAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
 "syncAnimData"<D>(long0: long, serializableDataTicket1: $SerializableDataTicket$$Type<D>, d2: D, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
 "triggerAnim"<D>(long0: long, string1: string, string2: string, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
@@ -929,10 +927,10 @@ import { $CoreGeoModel$$Type } from "software.bernie.geckolib.core.animatable.mo
 import { $AnimationController$State } from "software.bernie.geckolib.core.animation.AnimationController$State"
 
 export class $AnimationController<T extends $GeoAnimatable = $GeoAnimatable> implements $IAnimationControllerJS {
-constructor(t0: T, animationStateHandler1: $AnimationController$AnimationStateHandler$$Type<T>)
 constructor(t0: T, string1: string, int2: integer, animationStateHandler3: $AnimationController$AnimationStateHandler$$Type<T>)
-constructor(t0: T, string1: string, animationStateHandler2: $AnimationController$AnimationStateHandler$$Type<T>)
 constructor(t0: T, int1: integer, animationStateHandler2: $AnimationController$AnimationStateHandler$$Type<T>)
+constructor(t0: T, string1: string, animationStateHandler2: $AnimationController$AnimationStateHandler$$Type<T>)
+constructor(t0: T, animationStateHandler1: $AnimationController$AnimationStateHandler$$Type<T>)
 
 public "forceAnimationReset"(): void
 public "getAnimationSpeed"(): double
@@ -1047,12 +1045,13 @@ public "doPostRenderCleanup"(): void
 public "fireCompileRenderLayersEvent"(): void
 public "firePostRenderEvent"(poseStack0: $PoseStack$$Type, bakedGeoModel1: $BakedGeoModel$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float, int4: integer): void
 public "firePreRenderEvent"(poseStack0: $PoseStack$$Type, bakedGeoModel1: $BakedGeoModel$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float, int4: integer): boolean
+public "getAnimatable"(): T
 public "getGeoModel"(): $GeoModel<T>
 public "getInstanceId"(t0: T): long
 public "getMotionAnimThreshold"(t0: T): float
+public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 /** @deprecated */
 public "getPackedOverlay"(t0: T, float1: float): integer
-public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 public "getRenderColor"(t0: T, float1: float, int2: integer): $Color
 public "getRenderLayers"(): $List<$GeoRenderLayer<T>>
 public "getRenderType"(t0: T, resourceLocation1: $ResourceLocation$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float): $RenderType
@@ -1072,8 +1071,9 @@ public "scaleModelForRender"(float0: float, float1: float, poseStack2: $PoseStac
 public "shouldRender"(t0: T, vec31: $Vec3$$Type): boolean
 public "shouldRenderOffScreen"(t0: T): boolean
 public "updateAnimatedTextureFrame"(t0: T): void
-public "withScale"(float0: float): $GeoBlockRenderer<T>
 public "withScale"(float0: float, float1: float): $GeoBlockRenderer<T>
+public "withScale"(float0: float): $GeoBlockRenderer<T>
+get "animatable"(): T
 get "geoModel"(): $GeoModel<T>
 get "renderLayers"(): $List<$GeoRenderLayer<T>>
 get "viewDistance"(): integer
@@ -1177,8 +1177,8 @@ export interface $SingletonGeoAnimatable extends $GeoAnimatable {
 "registerControllers"(controllerRegistrar0: $AnimatableManager$ControllerRegistrar$$Type): void
 "setAnimData"<D>(entity0: $Entity$$Type, long1: long, serializableDataTicket2: $SerializableDataTicket$$Type<D>, d3: D): void
 "shouldPlayAnimsWhileGamePaused"(): boolean
-"stopTriggeredAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string, packetTarget4: $PacketDistributor$PacketTarget$$Type): void
 "stopTriggeredAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
+"stopTriggeredAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string, packetTarget4: $PacketDistributor$PacketTarget$$Type): void
 "stopTriggeredArmorAnim"(entity0: $Entity$$Type, long1: long, string2: string, string3: string): void
 "syncAnimData"<D>(long0: long, serializableDataTicket1: $SerializableDataTicket$$Type<D>, d2: D, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
 "triggerAnim"<D>(long0: long, string1: string, string2: string, packetTarget3: $PacketDistributor$PacketTarget$$Type): void
@@ -1590,7 +1590,7 @@ public static "values"(): $PlayState[]
 }
 
 declare module "software.bernie.geckolib.event.GeoRenderEvent$Item" {
-import { $GeoItemRenderer, $GeoItemRenderer$$Type } from "software.bernie.geckolib.renderer.GeoItemRenderer"
+import { $GeoItemRenderer$$Type } from "software.bernie.geckolib.renderer.GeoItemRenderer"
 import { $EventItf } from "com.mega.endinglib.api.event.EventItf"
 import { $GeoRenderEvent } from "software.bernie.geckolib.event.GeoRenderEvent"
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
@@ -1603,11 +1603,9 @@ constructor(geoItemRenderer0: $GeoItemRenderer$$Type<any>)
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
 public "getItemStack"(): $ItemStack
-public "getRenderer"(): $GeoItemRenderer<any>
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
 get "itemStack"(): $ItemStack
-get "renderer"(): $GeoItemRenderer<any>
 }
 }
 
@@ -1666,9 +1664,9 @@ public "getLeftArmBone"(): $GeoBone
 public "getLeftBootBone"(): $GeoBone
 public "getLeftLegBone"(): $GeoBone
 public "getMotionAnimThreshold"(t0: T): float
+public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 /** @deprecated */
 public "getPackedOverlay"(t0: T, float1: float): integer
-public "getPackedOverlay"(t0: T, float1: float, float2: float): integer
 public "getRenderColor"(t0: T, float1: float, int2: integer): $Color
 public "getRenderLayers"(): $List<$GeoRenderLayer<T>>
 public "getRenderType"(t0: T, resourceLocation1: $ResourceLocation$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float): $RenderType
@@ -1690,8 +1688,8 @@ public "renderRecursively"(poseStack0: $PoseStack$$Type, t1: T, geoBone2: $GeoBo
 public "scaleModelForBaby"(poseStack0: $PoseStack$$Type, t1: T, float2: float, boolean3: boolean): void
 public "scaleModelForRender"(float0: float, float1: float, poseStack2: $PoseStack$$Type, t3: T, bakedGeoModel4: $BakedGeoModel$$Type, boolean5: boolean, float6: float, int7: integer, int8: integer): void
 public "updateAnimatedTextureFrame"(t0: T): void
-public "withScale"(float0: float): $GeoArmorRenderer<T>
 public "withScale"(float0: float, float1: float): $GeoArmorRenderer<T>
+public "withScale"(float0: float): $GeoArmorRenderer<T>
 get "animatable"(): T
 get "bodyBone"(): $GeoBone
 get "currentEntity"(): $Entity
@@ -1761,6 +1759,7 @@ public "getAnimation"(t0: T, string1: string): $Animation
 public "getAnimationProcessor"(): $AnimationProcessor<T>
 public "getAnimationResource"(t0: T): $ResourceLocation
 public "getAnimationResourceFallbacks"(t0: T): $ResourceLocation[]
+public "getBakedGeoModel"(string0: string): $BakedGeoModel
 public "getBakedModel"(resourceLocation0: $ResourceLocation$$Type): $BakedGeoModel
 public "getBone"(string0: string): $Optional<$GeoBone>
 public "getModelResource"(t0: T): $ResourceLocation
@@ -1914,8 +1913,8 @@ import { $Double2DoubleFunction, $Double2DoubleFunction$$Type } from "it.unimi.d
 import { $Map } from "java.util.Map"
 
 export interface $EasingType {
-"apply"(animationPoint0: $AnimationPoint$$Type): double
 "apply"(animationPoint0: $AnimationPoint$$Type, double1: double, double2: double): double
+"apply"(animationPoint0: $AnimationPoint$$Type): double
 "buildTransformer"(double0: double): $Double2DoubleFunction
 }
 
@@ -2440,7 +2439,6 @@ public "doPostRenderCleanup"(): void
 public "fireCompileRenderLayersEvent"(): void
 public "firePostRenderEvent"(poseStack0: $PoseStack$$Type, bakedGeoModel1: $BakedGeoModel$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float, int4: integer): void
 public "firePreRenderEvent"(poseStack0: $PoseStack$$Type, bakedGeoModel1: $BakedGeoModel$$Type, multiBufferSource2: $MultiBufferSource$$Type, float3: float, int4: integer): boolean
-public "getAnimatable"(): T
 public "getGeoModel"(): $GeoModel<T>
 public "getInstanceId"(t0: T): long
 public "getMotionAnimThreshold"(t0: T): float
@@ -2464,9 +2462,8 @@ public "renderLeash"<E extends $Entity, M extends $Mob>(m0: M, float1: float, po
 public "renderRecursively"(poseStack0: $PoseStack$$Type, t1: T, geoBone2: $GeoBone$$Type, renderType3: $RenderType$$Type, multiBufferSource4: $MultiBufferSource$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, float7: float, int8: integer, int9: integer, float10: float, float11: float, float12: float, float13: float): void
 public "scaleModelForRender"(float0: float, float1: float, poseStack2: $PoseStack$$Type, t3: T, bakedGeoModel4: $BakedGeoModel$$Type, boolean5: boolean, float6: float, int7: integer, int8: integer): void
 public "updateAnimatedTextureFrame"(t0: T): void
-public "withScale"(float0: float, float1: float): $GeoEntityRenderer<T>
 public "withScale"(float0: float): $GeoEntityRenderer<T>
-get "animatable"(): T
+public "withScale"(float0: float, float1: float): $GeoEntityRenderer<T>
 get "geoModel"(): $GeoModel<T>
 get "renderLayers"(): $List<$GeoRenderLayer<T>>
 }

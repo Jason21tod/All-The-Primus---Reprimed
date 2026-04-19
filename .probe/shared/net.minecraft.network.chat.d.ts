@@ -32,9 +32,9 @@ public "isUnderlined"(): boolean
 public static "of"(style0: $Style$$Type): $StyleItf
 public "withBold"(boolean0: boolean): $Style
 public "withClickEvent"(clickEvent0: $ClickEvent$$Type): $Style
+public "withColor"(textColor0: $TextColor$$Type): $Style
 public "withColor"(chatFormatting0: $ChatFormatting$$Type): $Style
 public "withColor"(int0: integer): $Style
-public "withColor"(textColor0: $TextColor$$Type): $Style
 public "withFont"(resourceLocation0: $ResourceLocation$$Type): $Style
 public "withHoverEvent"(hoverEvent0: $HoverEvent$$Type): $Style
 public "withInsertion"(string0: string): $Style
@@ -191,8 +191,8 @@ import { $Style$$Type } from "net.minecraft.network.chat.Style"
 
 export interface $ComponentContents {
 "resolve"(commandSourceStack0: $CommandSourceStack$$Type, entity1: $Entity$$Type, int2: integer): $MutableComponent
-"visit"<T>(contentConsumer0: $FormattedText$ContentConsumer$$Type<T>): $Optional<T>
 "visit"<T>(styledContentConsumer0: $FormattedText$StyledContentConsumer$$Type<T>, style1: $Style$$Type): $Optional<T>
+"visit"<T>(contentConsumer0: $FormattedText$ContentConsumer$$Type<T>): $Optional<T>
 }
 
 export namespace $ComponentContents {
@@ -324,8 +324,8 @@ public "aqua"(): $MutableComponent
 public "asIterable"(): $Iterable<$Component>
 public "black"(): $MutableComponent
 public "blue"(): $MutableComponent
-public "bold"(): $MutableComponent
 public "bold"(value: boolean): $MutableComponent
+public "bold"(): $MutableComponent
 public "click"(s: $ClickEvent$$Type): $MutableComponent
 public "clickChangePage"(page: string): $MutableComponent
 public "clickCopy"(text: string): $MutableComponent
@@ -374,8 +374,8 @@ public "noColor"(): $MutableComponent
 public static "nullToEmpty"(string0: string): $Component
 public "obfuscated"(value: boolean): $MutableComponent
 public "obfuscated"(): $MutableComponent
-public static "of"(string0: string): $FormattedText
 public static "of"(string0: string, style1: $Style$$Type): $FormattedText
+public static "of"(string0: string): $FormattedText
 public "plainCopy"(): $MutableComponent
 /** @deprecated */
 public "rawComponent"(): $MutableComponent
@@ -386,24 +386,24 @@ public static "score"(string0: string, string1: string): $MutableComponent
 public static "selector"(string0: string, optional1: $Optional$$Type<$Component$$Type>): $MutableComponent
 public "self"(): $MutableComponent
 public "setStyle"(style0: $Style$$Type): $MutableComponent
-public "strikethrough"(value: boolean): $MutableComponent
 public "strikethrough"(): $MutableComponent
+public "strikethrough"(value: boolean): $MutableComponent
 public "toFlatList"(style0: $Style$$Type): $List<$Component>
 public "toFlatList"(): $List<$Component>
 public "toJson"(): $JsonElement
 public static "translatable"(string0: string): $MutableComponent
 public static "translatable"(string0: string, ...object1s: any[]): $MutableComponent
-public static "translatableWithFallback"(string0: string, string1: string): $MutableComponent
 public static "translatableWithFallback"(string0: string, string1: string, ...object2s: any[]): $MutableComponent
-public "underlined"(value: boolean): $MutableComponent
+public static "translatableWithFallback"(string0: string, string1: string): $MutableComponent
 public "underlined"(): $MutableComponent
+public "underlined"(value: boolean): $MutableComponent
 public "visit"<T>(contentConsumer0: $FormattedText$ContentConsumer$$Type<T>): $Optional<T>
 public "visit"<T>(styledContentConsumer0: $FormattedText$StyledContentConsumer$$Type<T>, style1: $Style$$Type): $Optional<T>
 public "white"(): $MutableComponent
-public "withStyle"(unaryOperator0: $UnaryOperator$$Type<$Style$$Type>): $MutableComponent
-public "withStyle"(chatFormatting0: $ChatFormatting$$Type): $MutableComponent
-public "withStyle"(style0: $Style$$Type): $MutableComponent
 public "withStyle"(...chatFormatting0s: $ChatFormatting$$Type[]): $MutableComponent
+public "withStyle"(chatFormatting0: $ChatFormatting$$Type): $MutableComponent
+public "withStyle"(unaryOperator0: $UnaryOperator$$Type<$Style$$Type>): $MutableComponent
+public "withStyle"(style0: $Style$$Type): $MutableComponent
 public "yellow"(): $MutableComponent
 get "contents"(): $ComponentContents
 get "siblings"(): $List<$Component>
@@ -434,8 +434,8 @@ const EMPTY: $FormattedText
 const STOP_ITERATION: $Optional<$Unit>
 function composite(...formattedText0s: $FormattedText$$Type[]): $FormattedText
 function composite(list0: $List$$Type<$FormattedText$$Type>): $FormattedText
-function of(string0: string): $FormattedText
 function of(string0: string, style1: $Style$$Type): $FormattedText
+function of(string0: string): $FormattedText
 }
 export abstract class $FormattedText$$Static implements $FormattedText {
 static readonly "EMPTY": $FormattedText
@@ -443,8 +443,8 @@ static readonly "STOP_ITERATION": $Optional<$Unit>
 
 static "composite"(...formattedText0s: $FormattedText$$Type[]): $FormattedText
 static "composite"(list0: $List$$Type<$FormattedText$$Type>): $FormattedText
-static "of"(string0: string): $FormattedText
 static "of"(string0: string, style1: $Style$$Type): $FormattedText
+static "of"(string0: string): $FormattedText
 }
 }
 
@@ -812,14 +812,14 @@ function keybind(string0: string): $MutableComponent
 function literal(string0: string): $MutableComponent
 function nbt(string0: string, boolean1: boolean, optional2: $Optional$$Type<$Component$$Type>, dataSource3: $DataSource$$Type): $MutableComponent
 function nullToEmpty(string0: string): $Component
-function of(string0: string): $FormattedText
 function of(string0: string, style1: $Style$$Type): $FormattedText
+function of(string0: string): $FormattedText
 function score(string0: string, string1: string): $MutableComponent
 function selector(string0: string, optional1: $Optional$$Type<$Component$$Type>): $MutableComponent
 function translatable(string0: string): $MutableComponent
 function translatable(string0: string, ...object1s: any[]): $MutableComponent
-function translatableWithFallback(string0: string, string1: string): $MutableComponent
 function translatableWithFallback(string0: string, string1: string, ...object2s: any[]): $MutableComponent
+function translatableWithFallback(string0: string, string1: string): $MutableComponent
 }
 export abstract class $Component$$Static implements $Component {
 static "composite"(...formattedText0s: $FormattedText$$Type[]): $FormattedText
@@ -829,14 +829,14 @@ static "keybind"(string0: string): $MutableComponent
 static "literal"(string0: string): $MutableComponent
 static "nbt"(string0: string, boolean1: boolean, optional2: $Optional$$Type<$Component$$Type>, dataSource3: $DataSource$$Type): $MutableComponent
 static "nullToEmpty"(string0: string): $Component
-static "of"(string0: string): $FormattedText
 static "of"(string0: string, style1: $Style$$Type): $FormattedText
+static "of"(string0: string): $FormattedText
 static "score"(string0: string, string1: string): $MutableComponent
 static "selector"(string0: string, optional1: $Optional$$Type<$Component$$Type>): $MutableComponent
 static "translatable"(string0: string): $MutableComponent
 static "translatable"(string0: string, ...object1s: any[]): $MutableComponent
-static "translatableWithFallback"(string0: string, string1: string): $MutableComponent
 static "translatableWithFallback"(string0: string, string1: string, ...object2s: any[]): $MutableComponent
+static "translatableWithFallback"(string0: string, string1: string): $MutableComponent
 }
 }
 

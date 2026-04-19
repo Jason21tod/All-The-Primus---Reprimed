@@ -442,8 +442,8 @@ public "excludeSymbol"(name: string): void
 public "findCode"<T extends $Code>(type: $Class$$Type<T>): $Optional<T>
 public "findCodeNullable"<T extends $Code>(type: $Class$$Type<T>): T
 public "format"(): $List<string>
-public "write"(writer: $Writer$$Type): void
 public "write"(writeTo: $Path$$Type): void
+public "write"(writer: $Writer$$Type): void
 }
 }
 
@@ -1164,8 +1164,8 @@ import { $TSArrayAccessType } from "zzzank.probejs.lang.typescript.code.type.ts.
 export class $BaseType extends $Code {
 constructor()
 
-public "access"(index: $BaseType$$Type): $TSArrayAccessType
 public "access"(index: string): $TSArrayAccessType
+public "access"(index: $BaseType$$Type): $TSArrayAccessType
 public "and"(...types: $BaseType$$Type[]): $JSJoinedType$Intersection
 public "asArray"(): $TSArrayType
 public "comment"(comment: string): $WithFormatType
@@ -1177,9 +1177,9 @@ public "line"(declaration: $Declaration$$Type): string
 public "line"(declaration: $Declaration$$Type, formatType: $BaseType$FormatType$$Type): string
 public "optional"(): $TSOptionalType
 public "or"(...types: $BaseType$$Type[]): $JSJoinedType$Union
-public "withParams"(...params: string[]): $TSParamType
-public "withParams"(params: $Collection$$Type<$BaseType$$Type>): $TSParamType
 public "withParams"(...params: $BaseType$$Type[]): $TSParamType
+public "withParams"(params: $Collection$$Type<$BaseType$$Type>): $TSParamType
+public "withParams"(...params: string[]): $TSParamType
 public "withPossibleParams"(params: $Collection$$Type<$BaseType$$Type>): $BaseType
 }
 }
@@ -1251,8 +1251,8 @@ const THIS: $JSPrimitiveType
 const UNDEFINED: $JSPrimitiveType
 const UNKNOWN: $JSPrimitiveType
 const VOID: $JSPrimitiveType
-function and(...types: $BaseType$$Type[]): $BaseType
 function and(types: $Collection$$Type<$BaseType$$Type>): $BaseType
+function and(...types: $BaseType$$Type[]): $BaseType
 function array(base: $BaseType$$Type): $TSArrayType
 function contextShield<T extends $BaseType>(type: T, formatType: $BaseType$FormatType$$Type): $ContextShield<T>
 function custom(formatter: $BiFunction$$Type<$Declaration$$Type, $BaseType$FormatType$$Type, string>): $CustomType
@@ -1276,12 +1276,12 @@ function literal(content: boolean): $JSPrimitiveType
 function object(properties: $Map$$Type<charseq, $BaseType$$Type>): $JSObjectType$Builder
 function object(): $JSObjectType$Builder
 function optional(type: $BaseType$$Type): $TSOptionalType
-function or(...types: $BaseType$$Type[]): $BaseType
 function or(types: $Collection$$Type<$BaseType$$Type>): $BaseType
+function or(...types: $BaseType$$Type[]): $BaseType
 function orEnumLike(objects: $Collection$$Type<any>, lowerCase: boolean): $BaseType
 function orEnumLike(objects: $Stream$$Type<any>, lowerCase: boolean): $BaseType
-function parameterized(base: $BaseType$$Type, ...params: $BaseType$$Type[]): $TSParamType
 function parameterized(base: $BaseType$$Type, params: $Collection$$Type<$BaseType$$Type>): $TSParamType
+function parameterized(base: $BaseType$$Type, ...params: $BaseType$$Type[]): $TSParamType
 function primitive(type: string): $JSPrimitiveType
 function staticType(path: $ClassPath$$Type): $StaticType
 function templateLiteral(content: string): $JSPrimitiveType
@@ -1289,8 +1289,8 @@ function ternary(symbol: string, extend: $BaseType$$Type, ifTrue: $BaseType$$Typ
 function tuple(): $JSTupleType$Builder
 function type(classPath: $ClassPath$$Type): $TSClassType
 function type(clazz: $Class$$Type<any>): $TSClassType
-function typeOf(clazz: $Class$$Type<any>): $JSTypeOfType
 function typeOf(classPath: $ClassPath$$Type): $JSTypeOfType
+function typeOf(clazz: $Class$$Type<any>): $JSTypeOfType
 function typeOf(classType: $BaseType$$Type): $JSTypeOfType
 function withComment(type: $BaseType$$Type, comment: string): $WithFormatType
 }
@@ -1309,8 +1309,8 @@ static readonly "UNDEFINED": $JSPrimitiveType
 static readonly "UNKNOWN": $JSPrimitiveType
 static readonly "VOID": $JSPrimitiveType
 
-static "and"(...types: $BaseType$$Type[]): $BaseType
 static "and"(types: $Collection$$Type<$BaseType$$Type>): $BaseType
+static "and"(...types: $BaseType$$Type[]): $BaseType
 static "array"(base: $BaseType$$Type): $TSArrayType
 static "contextShield"<T extends $BaseType>(type: T, formatType: $BaseType$FormatType$$Type): $ContextShield<T>
 static "custom"(formatter: $BiFunction$$Type<$Declaration$$Type, $BaseType$FormatType$$Type, string>): $CustomType
@@ -1334,12 +1334,12 @@ static "literal"(content: boolean): $JSPrimitiveType
 static "object"(properties: $Map$$Type<charseq, $BaseType$$Type>): $JSObjectType$Builder
 static "object"(): $JSObjectType$Builder
 static "optional"(type: $BaseType$$Type): $TSOptionalType
-static "or"(...types: $BaseType$$Type[]): $BaseType
 static "or"(types: $Collection$$Type<$BaseType$$Type>): $BaseType
+static "or"(...types: $BaseType$$Type[]): $BaseType
 static "orEnumLike"(objects: $Collection$$Type<any>, lowerCase: boolean): $BaseType
 static "orEnumLike"(objects: $Stream$$Type<any>, lowerCase: boolean): $BaseType
-static "parameterized"(base: $BaseType$$Type, ...params: $BaseType$$Type[]): $TSParamType
 static "parameterized"(base: $BaseType$$Type, params: $Collection$$Type<$BaseType$$Type>): $TSParamType
+static "parameterized"(base: $BaseType$$Type, ...params: $BaseType$$Type[]): $TSParamType
 static "primitive"(type: string): $JSPrimitiveType
 static "staticType"(path: $ClassPath$$Type): $StaticType
 static "templateLiteral"(content: string): $JSPrimitiveType
@@ -1347,8 +1347,8 @@ static "ternary"(symbol: string, extend: $BaseType$$Type, ifTrue: $BaseType$$Typ
 static "tuple"(): $JSTupleType$Builder
 static "type"(classPath: $ClassPath$$Type): $TSClassType
 static "type"(clazz: $Class$$Type<any>): $TSClassType
-static "typeOf"(clazz: $Class$$Type<any>): $JSTypeOfType
 static "typeOf"(classPath: $ClassPath$$Type): $JSTypeOfType
+static "typeOf"(clazz: $Class$$Type<any>): $JSTypeOfType
 static "typeOf"(classType: $BaseType$$Type): $JSTypeOfType
 static "withComment"(type: $BaseType$$Type, comment: string): $WithFormatType
 }
@@ -1374,12 +1374,12 @@ public "addAll"(infos: $Collection$$Type<$ImportInfo$$Type>): $ImportInfos
 public "addAll"(other: $ImportInfos$$Type): $ImportInfos
 public "addAll"(infos: $Stream$$Type<$ImportInfo$$Type>): $ImportInfos
 public "forEach"(consumer0: $Consumer$$Type<$ImportInfo$$Type>): void
-public "fromCode"(code: $Code$$Type): $ImportInfos
 public "fromCode"(code: $BaseType$$Type, type: $BaseType$FormatType$$Type): $ImportInfos
-public "fromCodes"(codes: $Collection$$Type<$BaseType$$Type>, type: $BaseType$FormatType$$Type): $ImportInfos
+public "fromCode"(code: $Code$$Type): $ImportInfos
+public "fromCodes"(codes: $Collection$$Type<$Code$$Type>): $ImportInfos
 public "fromCodes"(codes: $Stream$$Type<$Code$$Type>): $ImportInfos
 public "fromCodes"(codes: $Stream$$Type<$BaseType$$Type>, type: $BaseType$FormatType$$Type): $ImportInfos
-public "fromCodes"(codes: $Collection$$Type<$Code$$Type>): $ImportInfos
+public "fromCodes"(codes: $Collection$$Type<$BaseType$$Type>, type: $BaseType$FormatType$$Type): $ImportInfos
 public "getImports"(): $Collection<$ImportInfo>
 public "getRaw"(): $Map<$ClassPath, $ImportInfo>
 public "iterator"(): $Iterator<$ImportInfo>
@@ -1825,10 +1825,10 @@ constructor(parent: $SharedDump$$Type, type: $ScriptType$$Type, scriptPath: $Pat
 public "acceptClasses"(classes: $Collection$$Type<$Clazz$$Type>): void
 public "addGlobal"(identifier: string, ...content: $Code$$Type[]): void
 public "addGlobal"(identifier: string, excludedNames: $Collection$$Type<string>, ...content: $Code$$Type[]): void
-public "assignType"(classPath: $Class$$Type<any>, type: $BaseType$$Type): void
 public "assignType"(classPath: $ClassPath$$Type, type: $BaseType$$Type): void
-public "assignType"(classPath: $ClassPath$$Type, name: string, type: $BaseType$$Type): void
 public "assignType"(classPath: $Class$$Type<any>, name: string, type: $BaseType$$Type): void
+public "assignType"(classPath: $ClassPath$$Type, name: string, type: $BaseType$$Type): void
+public "assignType"(classPath: $Class$$Type<any>, type: $BaseType$$Type): void
 public "dump"(): void
 public "pjsDumpName"(): string
 public "retrieveClasses"(): $Set<$Class<any>>
@@ -2029,8 +2029,8 @@ import { $Function$$Type } from "java.util.function.Function"
 export class $MultiDump extends $TSDumpBase {
 constructor(base: $Path$$Type)
 
-public "addChild"<T extends $TSDump>(dump: T): T
 public "addChild"<T extends $TSDump>(relativePath: $Path$$Type, dump: $Function$$Type<$Path$$Type, T>): T
+public "addChild"<T extends $TSDump>(dump: T): T
 public "addChild"<T extends $TSDump>(relativePath: string, dump: $Function$$Type<$Path$$Type, T>): T
 public "cleanOldDumps"(): void
 public "dumpImpl"(): void

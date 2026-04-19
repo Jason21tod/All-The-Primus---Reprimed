@@ -24,7 +24,7 @@ static "pickUpItem"(mob0: $Mob$$Type, inventoryCarrier1: $InventoryCarrier$$Type
 
 declare module "net.minecraft.world.entity.npc.AbstractVillager" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
-import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
+import { $LivingEntity, $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $MerchantOffers, $MerchantOffers$$Type } from "net.minecraft.world.item.trading.MerchantOffers"
 import { $Direction } from "net.minecraft.core.Direction"
 import { $GameProfile } from "com.mojang.authlib.GameProfile"
@@ -117,9 +117,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -187,7 +187,7 @@ public "getType"(): string
 public "getUnhappyCounter"(): integer
 public "getVillagerXp"(): integer
 public static "getWeightedVisionEntityVariants"(list0: $List$$Type<$VisionEntityVariant$$Type>): $ArrayList<$VisionEntityVariant>
-public "handler$hon000$replaceRandom"(merchantOffers0: $MerchantOffers$$Type, itemListing1s: $VillagerTrades$ItemListing$$Type[], int2: integer, callbackInfo3: $CallbackInfo$$Type, localRef4: $LocalRef$$Type): void
+public "handler$hpa000$replaceRandom"(merchantOffers0: $MerchantOffers$$Type, itemListing1s: $VillagerTrades$ItemListing$$Type[], int2: integer, callbackInfo3: $CallbackInfo$$Type, localRef4: $LocalRef$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
@@ -195,9 +195,9 @@ public "isClientSide"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -214,8 +214,8 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "modifyAttribute"(attribute: $Attribute$$Type, identifier: string, d: double, operation: $AttributeModifier$Operation$$Type): void
-public "modifyExpressionValue$hon000$replaceRandom"(randomSource0: $RandomSource$$Type, merchantOffers1: $MerchantOffers$$Type, localRef2: $LocalRef$$Type): $RandomSource
-public "modifyExpressionValue$hon000$setTierForOffer"(merchantOffer0: $MerchantOffer$$Type): $MerchantOffer
+public "modifyExpressionValue$hpa000$replaceRandom"(randomSource0: $RandomSource$$Type, merchantOffers1: $MerchantOffers$$Type, localRef2: $LocalRef$$Type): $RandomSource
+public "modifyExpressionValue$hpa000$setTierForOffer"(merchantOffer0: $MerchantOffer$$Type): $MerchantOffer
 public "moveInFluid"(fluidState0: $FluidState$$Type, vec31: $Vec3$$Type, double2: double): boolean
 public "notifyTrade"(merchantOffer0: $MerchantOffer$$Type): void
 public "notifyTradeUpdated"(itemStack0: $ItemStack$$Type): void
@@ -226,11 +226,11 @@ public "overrideOffers"(merchantOffers0: $MerchantOffers$$Type): void
 public "overrideXp"(int0: integer): void
 public static "pickUpItem"(mob0: $Mob$$Type, inventoryCarrier1: $InventoryCarrier$$Type, itemEntity2: $ItemEntity$$Type): void
 public "playCelebrateSound"(): void
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readInventoryFromTag"(compoundTag0: $CompoundTag$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -244,6 +244,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "self"(): $LivingEntity
 public "serializeNBT"(): $CompoundTag
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -263,8 +264,8 @@ public "setMotionZ"(z: double): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -367,7 +368,7 @@ declare module "net.minecraft.world.entity.npc.Villager" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $VillagerDataHolder } from "net.minecraft.world.entity.npc.VillagerDataHolder"
 import { $ReputationEventType$$Type } from "net.minecraft.world.entity.ai.village.ReputationEventType"
-import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
+import { $LivingEntity, $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $MerchantOffers$$Type } from "net.minecraft.world.item.trading.MerchantOffers"
 import { $Direction } from "net.minecraft.core.Direction"
 import { $Item } from "net.minecraft.world.item.Item"
@@ -427,7 +428,7 @@ import { $ImmutableList } from "com.google.common.collect.ImmutableList"
 import { $ReputationEventHandler } from "net.minecraft.world.entity.ReputationEventHandler"
 import { $DamageSource$$Type } from "net.minecraft.world.damagesource.DamageSource"
 import { $MobCategory } from "net.minecraft.world.entity.MobCategory"
-import { $VillagerType$$Type } from "net.minecraft.world.entity.npc.VillagerType"
+import { $VillagerType, $VillagerType$$Type } from "net.minecraft.world.entity.npc.VillagerType"
 import { $VisionEntityVariant, $VisionEntityVariant$$Type } from "net.lixir.vminus.vision.util.VisionEntityVariant"
 import { $LightningBolt$$Type } from "net.minecraft.world.entity.LightningBolt"
 import { $EntityPotionEffectsJS } from "dev.latvian.mods.kubejs.entity.EntityPotionEffectsJS"
@@ -482,9 +483,9 @@ public static "createAttributes"(): $AttributeSupplier$Builder
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "eatAndDigestFood"(): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
@@ -550,12 +551,13 @@ public "getStepHeight"(): float
 public "getTeamId"(): string
 public "getTotalMovementSpeed"(): double
 public "getType"(): string
+public "getVariant"(): $VillagerType
 public "getVillagerData"(): $VillagerData
 public static "getWeightedVisionEntityVariants"(list0: $List$$Type<$VisionEntityVariant$$Type>): $ArrayList<$VisionEntityVariant>
 public "gossip"(serverLevel0: $ServerLevel$$Type, villager1: $Villager$$Type, long2: long): void
-public "handler$icl000$resetRestocks"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$icl000$restock"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$znl000$goetyThunderHit"(serverLevel0: $ServerLevel$$Type, lightningBolt1: $LightningBolt$$Type, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$ico000$resetRestocks"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$ico000$restock"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$zno000$goetyThunderHit"(serverLevel0: $ServerLevel$$Type, lightningBolt1: $LightningBolt$$Type, callbackInfo2: $CallbackInfo$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "hasExcessFood"(): boolean
 public "hasFarmSeeds"(): boolean
@@ -565,9 +567,9 @@ public "isChasing"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -590,12 +592,12 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onReputationEventFrom"(reputationEventType0: $ReputationEventType$$Type, entity1: $Entity$$Type): void
 public "openTradingScreen"(player0: $Player$$Type, component1: $Component$$Type, int2: integer): void
 public static "pickUpItem"(mob0: $Mob$$Type, inventoryCarrier1: $InventoryCarrier$$Type, itemEntity2: $ItemEntity$$Type): void
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "playWorkSound"(): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readInventoryFromTag"(compoundTag0: $CompoundTag$$Type): void
 public "refreshBrain"(serverLevel0: $ServerLevel$$Type): void
 public "releasePoi"(memoryModuleType0: $MemoryModuleType$$Type<$GlobalPos$$Type>): void
@@ -612,6 +614,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "self"(): $LivingEntity
 public "serializeNBT"(): $CompoundTag
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChasing"(boolean0: boolean): void
@@ -634,8 +637,8 @@ public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
 public "setOffers"(merchantOffers0: $MerchantOffers$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -697,6 +700,7 @@ get "stepHeight"(): float
 get "teamId"(): string
 get "totalMovementSpeed"(): double
 get "type"(): string
+get "variant"(): $VillagerType
 get "villagerData"(): $VillagerData
 get "ambientCreature"(): boolean
 get "animal"(): boolean
@@ -745,9 +749,11 @@ import { $VariantHolder } from "net.minecraft.world.entity.VariantHolder"
 import { $VillagerType, $VillagerType$$Type } from "net.minecraft.world.entity.npc.VillagerType"
 
 export interface $VillagerDataHolder extends $VariantHolder<$VillagerType> {
+"getVariant"(): $VillagerType
 "getVillagerData"(): $VillagerData
 "setVariant"(villagerType0: $VillagerType$$Type): void
 "setVillagerData"(villagerData0: $VillagerData$$Type): void
+get "variant"(): $VillagerType
 get "villagerData"(): $VillagerData
 set "variant"(value: $VillagerType$$Type)
 set "villagerData"(value: $VillagerData$$Type)
@@ -820,7 +826,7 @@ set "type"(value: $VillagerType$$Type)
 
 declare module "net.minecraft.world.entity.npc.WanderingTrader" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
-import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
+import { $LivingEntity, $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $Direction } from "net.minecraft.core.Direction"
 import { $GameProfile } from "com.mojang.authlib.GameProfile"
 import { $AbstractVillager } from "net.minecraft.world.entity.npc.AbstractVillager"
@@ -904,9 +910,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
+public "damageHeldItem"(): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -976,9 +982,9 @@ public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -1000,11 +1006,11 @@ public static "of"(livingEntity0: $LivingEntity$$Type): $ExtraLivingEntity
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "openTradingScreen"(player0: $Player$$Type, component1: $Component$$Type, int2: integer): void
 public static "pickUpItem"(mob0: $Mob$$Type, inventoryCarrier1: $InventoryCarrier$$Type, itemEntity2: $ItemEntity$$Type): void
-public "playSound"(id: $SoundEvent$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
+public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double): $RayTraceResultJS
 public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
+public "rayTrace"(distance: double): $RayTraceResultJS
 public "readInventoryFromTag"(compoundTag0: $CompoundTag$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -1018,6 +1024,7 @@ public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
+public "self"(): $LivingEntity
 public "serializeNBT"(): $CompoundTag
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -1038,8 +1045,8 @@ public "setMotionZ"(z: double): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(x: double, y: double, z: double): void
 public "setPosition"(block: $BlockContainerJS$$Type): void
+public "setPosition"(x: double, y: double, z: double): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void

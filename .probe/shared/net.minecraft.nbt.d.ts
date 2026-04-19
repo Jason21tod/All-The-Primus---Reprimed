@@ -30,8 +30,8 @@ import { $UnaryOperator$$Type } from "java.util.function.UnaryOperator"
 import { $Consumer$$Type } from "java.util.function.Consumer"
 import { $List } from "java.util.List"
 import { $Stream } from "java.util.stream.Stream"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $Spliterator } from "java.util.Spliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
@@ -39,8 +39,8 @@ import { $IntFunction$$Type } from "java.util.function.IntFunction"
 export class $CollectionTag<T extends $Tag = $Tag> extends $AbstractList<T> implements $Tag {
 constructor()
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "add"(int0: integer, t1: T): void
 public "addAll"(collection0: $Collection$$Type<T>): boolean
@@ -107,21 +107,21 @@ import { $TagType$$Type } from "net.minecraft.nbt.TagType"
 import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export interface $StreamTagVisitor {
-"visit"(int0: integer): $StreamTagVisitor$ValueResult
 "visit"(string0: string): $StreamTagVisitor$ValueResult
-"visit"(byte0s: byte[]): $StreamTagVisitor$ValueResult
-"visit"(int0s: integer[]): $StreamTagVisitor$ValueResult
-"visit"(long0s: long[]): $StreamTagVisitor$ValueResult
-"visit"(float0: float): $StreamTagVisitor$ValueResult
-"visit"(double0: double): $StreamTagVisitor$ValueResult
 "visit"(byte0: byte): $StreamTagVisitor$ValueResult
 "visit"(short0: short): $StreamTagVisitor$ValueResult
+"visit"(double0: double): $StreamTagVisitor$ValueResult
+"visit"(float0: float): $StreamTagVisitor$ValueResult
 "visit"(long0: long): $StreamTagVisitor$ValueResult
+"visit"(byte0s: byte[]): $StreamTagVisitor$ValueResult
+"visit"(long0s: long[]): $StreamTagVisitor$ValueResult
+"visit"(int0s: integer[]): $StreamTagVisitor$ValueResult
+"visit"(int0: integer): $StreamTagVisitor$ValueResult
 "visitContainerEnd"(): $StreamTagVisitor$ValueResult
 "visitElement"(tagType0: $TagType$$Type<any>, int1: integer): $StreamTagVisitor$EntryResult
 "visitEnd"(): $StreamTagVisitor$ValueResult
-"visitEntry"(tagType0: $TagType$$Type<any>, string1: string): $StreamTagVisitor$EntryResult
 "visitEntry"(tagType0: $TagType$$Type<any>): $StreamTagVisitor$EntryResult
+"visitEntry"(tagType0: $TagType$$Type<any>, string1: string): $StreamTagVisitor$EntryResult
 "visitList"(tagType0: $TagType$$Type<any>, int1: integer): $StreamTagVisitor$ValueResult
 "visitRootEntry"(tagType0: $TagType$$Type<any>): $StreamTagVisitor$ValueResult
 }
@@ -162,8 +162,8 @@ import { $CompoundTag } from "net.minecraft.nbt.CompoundTag"
 import { $Stream } from "java.util.stream.Stream"
 import { $IParentTag, $IParentTag$$Type } from "com.recipeessentials.nbt.IParentTag"
 import { $CollectionTag } from "net.minecraft.nbt.CollectionTag"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $Spliterator } from "java.util.Spliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
@@ -173,8 +173,8 @@ static readonly "TYPE": $TagType<$ListTag>
 
 constructor()
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "addAll"(collection0: $Collection$$Type<$Tag$$Type>): boolean
 public "addFirst"(tag0: $Tag$$Type): void
@@ -183,7 +183,6 @@ public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$Tag$$Type>): void
-public "get"(int0: integer): $Tag
 public "getAsString"(): string
 public "getCompound"(int0: integer): $CompoundTag
 public "getDouble"(int0: integer): double
@@ -212,7 +211,6 @@ public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$Tag>
 public "parent"(): $IParentTag
-public "remove"(int0: integer): $Tag
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
 public "removeFirst"(): $Tag
@@ -244,12 +242,12 @@ import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $Tag } from "net.minecraft.nbt.Tag"
 import { $SpecialEquality } from "dev.latvian.mods.rhino.util.SpecialEquality"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export class $NumericTag implements $Tag, $SpecialEquality {
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
 public "copy"(): $Tag
@@ -293,8 +291,8 @@ import { $List, $List$$Type } from "java.util.List"
 import { $Stream } from "java.util.stream.Stream"
 import { $IParentTag, $IParentTag$$Type } from "com.recipeessentials.nbt.IParentTag"
 import { $CollectionTag } from "net.minecraft.nbt.CollectionTag"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $Spliterator } from "java.util.Spliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
@@ -305,8 +303,8 @@ static readonly "TYPE": $TagType<$IntArrayTag>
 constructor(int0s: integer[])
 constructor(list0: $List$$Type<integer>)
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "add"(int0: integer, intTag1: $IntTag$$Type): void
 public "addAll"(collection0: $Collection$$Type<$IntTag$$Type>): boolean
@@ -317,7 +315,6 @@ public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public "copy"(): $IntArrayTag
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$IntTag$$Type>): void
-public "get"(int0: integer): $IntTag
 public "getAsIntArray"(): integer[]
 public "getAsString"(): string
 public "getFirst"(): $IntTag
@@ -371,12 +368,12 @@ declare module "net.minecraft.nbt.Tag" {
 import { $TagType } from "net.minecraft.nbt.TagType"
 import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export interface $Tag {
-"accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 "accept"(tagVisitor0: $TagVisitor$$Type): void
+"accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 "copy"(): $Tag
 "getAsString"(): string
@@ -449,8 +446,8 @@ import { $List, $List$$Type } from "java.util.List"
 import { $Stream } from "java.util.stream.Stream"
 import { $IParentTag, $IParentTag$$Type } from "com.recipeessentials.nbt.IParentTag"
 import { $CollectionTag } from "net.minecraft.nbt.CollectionTag"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $Spliterator } from "java.util.Spliterator"
 import { $LongSet$$Type } from "it.unimi.dsi.fastutil.longs.LongSet"
@@ -463,8 +460,8 @@ constructor(list0: $List$$Type<long>)
 constructor(longSet0: $LongSet$$Type)
 constructor(long0s: long[])
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "add"(int0: integer, longTag1: $LongTag$$Type): void
 public "addAll"(collection0: $Collection$$Type<$LongTag$$Type>): boolean
@@ -530,15 +527,15 @@ import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $Tag } from "net.minecraft.nbt.Tag"
 import { $SpecialEquality } from "dev.latvian.mods.rhino.util.SpecialEquality"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $DataInput$$Type } from "java.io.DataInput"
 
 export class $StringTag implements $Tag, $SpecialEquality {
 static readonly "TYPE": $TagType<$StringTag>
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
 public "getAsString"(): string
@@ -561,15 +558,15 @@ import { $NumericTag } from "net.minecraft.nbt.NumericTag"
 import { $TagType } from "net.minecraft.nbt.TagType"
 import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export class $FloatTag extends $NumericTag {
 static readonly "TYPE": $TagType<$FloatTag>
 static readonly "ZERO": $FloatTag
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
 public "copy"(): $FloatTag
@@ -638,8 +635,8 @@ export interface $TagType<T extends $Tag = $Tag> {
 "load"(dataInput0: $DataInput$$Type, int1: integer, nbtAccounter2: $NbtAccounter$$Type): T
 "parse"(dataInput0: $DataInput$$Type, streamTagVisitor1: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 "parseRoot"(dataInput0: $DataInput$$Type, streamTagVisitor1: $StreamTagVisitor$$Type): void
-"skip"(dataInput0: $DataInput$$Type, int1: integer): void
 "skip"(dataInput0: $DataInput$$Type): void
+"skip"(dataInput0: $DataInput$$Type, int1: integer): void
 get "name"(): string
 get "prettyName"(): string
 get "value"(): boolean
@@ -671,14 +668,14 @@ import { $NumericTag } from "net.minecraft.nbt.NumericTag"
 import { $TagType } from "net.minecraft.nbt.TagType"
 import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export class $IntTag extends $NumericTag {
 static readonly "TYPE": $TagType<$IntTag>
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
 public "copy"(): $IntTag
@@ -699,17 +696,16 @@ import { $TagType } from "net.minecraft.nbt.TagType"
 import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $Tag } from "net.minecraft.nbt.Tag"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export class $EndTag implements $Tag {
 static readonly "INSTANCE": $EndTag
 static readonly "TYPE": $TagType<$EndTag>
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
-public "copy"(): $EndTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$EndTag>
@@ -726,15 +722,15 @@ import { $NumericTag } from "net.minecraft.nbt.NumericTag"
 import { $TagType } from "net.minecraft.nbt.TagType"
 import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export class $DoubleTag extends $NumericTag {
 static readonly "TYPE": $TagType<$DoubleTag>
 static readonly "ZERO": $DoubleTag
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
 public "copy"(): $DoubleTag
@@ -755,14 +751,14 @@ import { $NumericTag } from "net.minecraft.nbt.NumericTag"
 import { $TagType } from "net.minecraft.nbt.TagType"
 import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export class $LongTag extends $NumericTag {
 static readonly "TYPE": $TagType<$LongTag>
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
 public "copy"(): $LongTag
@@ -783,14 +779,14 @@ import { $NumericTag } from "net.minecraft.nbt.NumericTag"
 import { $TagType } from "net.minecraft.nbt.TagType"
 import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export class $ShortTag extends $NumericTag {
 static readonly "TYPE": $TagType<$ShortTag>
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
 public "copy"(): $ShortTag
@@ -821,8 +817,8 @@ import { $List, $List$$Type } from "java.util.List"
 import { $Stream } from "java.util.stream.Stream"
 import { $IParentTag, $IParentTag$$Type } from "com.recipeessentials.nbt.IParentTag"
 import { $CollectionTag } from "net.minecraft.nbt.CollectionTag"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $Spliterator } from "java.util.Spliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
@@ -833,8 +829,8 @@ static readonly "TYPE": $TagType<$ByteArrayTag>
 constructor(byte0s: byte[])
 constructor(list0: $List$$Type<byte>)
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "add"(int0: integer, byteTag1: $ByteTag$$Type): void
 public "addAll"(collection0: $Collection$$Type<$ByteTag$$Type>): boolean
@@ -845,7 +841,6 @@ public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public "copy"(): $Tag
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$ByteTag$$Type>): void
-public "get"(int0: integer): $ByteTag
 public "getAsByteArray"(): byte[]
 public "getAsString"(): string
 public "getFirst"(): $ByteTag
@@ -900,18 +895,19 @@ import { $NumericTag } from "net.minecraft.nbt.NumericTag"
 import { $TagType } from "net.minecraft.nbt.TagType"
 import { $DataOutput$$Type } from "java.io.DataOutput"
 import { $StreamTagVisitor$$Type } from "net.minecraft.nbt.StreamTagVisitor"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export class $ByteTag extends $NumericTag {
 static readonly "ONE": $ByteTag
 static readonly "TYPE": $TagType<$ByteTag>
 static readonly "ZERO": $ByteTag
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
+public "copy"(): $ByteTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$ByteTag>
@@ -940,8 +936,8 @@ import { $List$$Type } from "java.util.List"
 import { $Codec } from "com.mojang.serialization.Codec"
 import { $IParentTag, $IParentTag$$Type } from "com.recipeessentials.nbt.IParentTag"
 import { $Map, $Map$$Type } from "java.util.Map"
-import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $TagVisitor$$Type } from "net.minecraft.nbt.TagVisitor"
+import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 import { $ListTag } from "net.minecraft.nbt.ListTag"
 import { $NbtCompoundExtensions } from "virtuoel.pehkui.util.NbtCompoundExtensions"
 
@@ -952,11 +948,12 @@ static readonly "TYPE": $TagType<$CompoundTag>
 constructor(map0: $Map$$Type<string, $Tag$$Type>)
 constructor()
 
-public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "accept"(tagVisitor0: $TagVisitor$$Type): void
+public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "contains"(string0: string, int1: integer): boolean
 public "contains"(string0: string): boolean
+public "copy"(): $CompoundTag
 public "get"(string0: string): $Tag
 public "getAllKeys"(): $Set<string>
 public "getAsString"(): string
@@ -978,13 +975,13 @@ public "getString"(string0: string): string
 public "getTagType"(string0: string): byte
 public "getType"(): $TagType<$CompoundTag>
 public "getUUID"(string0: string): $UUID
-public "handler$flb000$afterComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$flb000$befOreComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$flb000$get"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$flb000$getCompound"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$flb000$getList"(string0: string, int1: integer, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$flb000$put"(string0: string, tag1: $Tag$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
-public "handler$flb000$remove"(string0: string, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$fle000$afterComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$fle000$befOreComparetest"(object0: any, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$fle000$get"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$fle000$getCompound"(string0: string, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$fle000$getList"(string0: string, int1: integer, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$fle000$put"(string0: string, tag1: $Tag$$Type, callbackInfoReturnable2: $CallbackInfoReturnable$$Type): void
+public "handler$fle000$remove"(string0: string, callbackInfo1: $CallbackInfo$$Type): void
 public "hasUUID"(string0: string): boolean
 public "isEmpty"(): boolean
 public "markDirty"(): void
@@ -1000,8 +997,8 @@ public "putByteArray"(string0: string, list1: $List$$Type<byte>): void
 public "putDouble"(string0: string, double1: double): void
 public "putFloat"(string0: string, float1: float): void
 public "putInt"(string0: string, int1: integer): void
-public "putIntArray"(string0: string, list1: $List$$Type<integer>): void
 public "putIntArray"(string0: string, int1s: integer[]): void
+public "putIntArray"(string0: string, list1: $List$$Type<integer>): void
 public "putLong"(string0: string, long1: long): void
 public "putLongArray"(string0: string, long1s: long[]): void
 public "putLongArray"(string0: string, list1: $List$$Type<long>): void

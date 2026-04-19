@@ -101,8 +101,8 @@ import { $RepeatingPlacement } from "net.minecraft.world.level.levelgen.placemen
 export class $CountPlacement extends $RepeatingPlacement implements $CountPlacementAccessor {
 static readonly "CODEC": $Codec<$CountPlacement>
 
-public static "of"(int0: integer): $CountPlacement
 public static "of"(intProvider0: $IntProvider$$Type): $CountPlacement
+public static "of"(int0: integer): $CountPlacement
 }
 }
 

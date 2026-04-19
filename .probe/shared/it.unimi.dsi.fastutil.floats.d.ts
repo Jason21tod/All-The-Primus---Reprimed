@@ -7,6 +7,7 @@ import { $FloatComparator$$Type } from "it.unimi.dsi.fastutil.floats.FloatCompar
 import { $RandomAccess } from "java.util.RandomAccess"
 import { $DoubleIterator } from "it.unimi.dsi.fastutil.doubles.DoubleIterator"
 import { $FloatUnaryOperator$$Type } from "it.unimi.dsi.fastutil.floats.FloatUnaryOperator"
+import { $FloatSpliterator } from "it.unimi.dsi.fastutil.floats.FloatSpliterator"
 import { $IntFunction$$Type } from "java.util.function.IntFunction"
 import { $Cloneable } from "java.lang.Cloneable"
 import { $Iterator$$Type } from "java.util.Iterator"
@@ -46,6 +47,7 @@ public "addAll"(int0: integer, floatList1: $FloatList$$Type): boolean
 public "addAll"(floatList0: $FloatList$$Type): boolean
 public "addFirst"(float0: float): void
 public "addLast"(float0: float): void
+public "clone"(): $FloatArrayList
 public "compareTo"(floatArrayList0: $FloatArrayList$$Type): integer
 /** @deprecated */
 public "contains"(object0: any): boolean
@@ -67,8 +69,8 @@ public "getLast"(): float
 public "indexOf"(object0: any): integer
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
-public static "of"(...float0s: float[]): $FloatArrayList
 public static "of"(): $FloatArrayList
+public static "of"(...float0s: float[]): $FloatArrayList
 public static "of"(float0: float, float1: float): $FloatList
 public static "of"(float0: float): $FloatList
 public static "of"(float0: float, float1: float, float2: float): $FloatList
@@ -108,6 +110,7 @@ public "setElements"(float0s: float[]): void
 public "sort"(floatComparator0: $FloatComparator$$Type): void
 /** @deprecated */
 public "sort"(comparator0: $Comparator$$Type<float>): void
+public "spliterator"(): $FloatSpliterator
 /** @deprecated */
 public "stream"(): $Stream<float>
 public "toArray"(): any[]
@@ -118,8 +121,8 @@ public "trim"(int0: integer): void
 public "unstableSort"(floatComparator0: $FloatComparator$$Type): void
 /** @deprecated */
 public "unstableSort"(comparator0: $Comparator$$Type<float>): void
-public static "wrap"(float0s: float[], int1: integer): $FloatArrayList
 public static "wrap"(float0s: float[]): $FloatArrayList
+public static "wrap"(float0s: float[], int1: integer): $FloatArrayList
 get "first"(): float
 get "last"(): float
 }
@@ -178,8 +181,8 @@ export interface $Float2FloatFunction extends $Function<float, float>, $DoubleUn
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(float0: float): boolean
-"defaultReturnValue"(): float
 "defaultReturnValue"(float0: float): void
+"defaultReturnValue"(): float
 "get"(float0: float): float
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
@@ -266,20 +269,20 @@ export interface $Float2ObjectFunction<V = any> extends $Function$0<float, V>, $
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(float0: float): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(float0: float): V
-/** @deprecated */
-"getOrDefault"(object0: any, v1: V): V
 "getOrDefault"(float0: float, v1: V): V
 /** @deprecated */
+"getOrDefault"(object0: any, v1: V): V
+/** @deprecated */
 "put"(float0: float, v1: V): V
 "put"(float0: float, v1: V): V
-"remove"(float0: float): V
 /** @deprecated */
 "remove"(object0: any): V
+"remove"(float0: float): V
 "size"(): integer
 }
 
@@ -333,6 +336,7 @@ import { $FloatCollection, $FloatCollection$$Type } from "it.unimi.dsi.fastutil.
 import { $List, $List$$Type } from "java.util.List"
 import { $Stream } from "java.util.stream.Stream"
 import { $DoubleIterator } from "it.unimi.dsi.fastutil.doubles.DoubleIterator"
+import { $FloatListIterator } from "it.unimi.dsi.fastutil.floats.FloatListIterator"
 import { $FloatUnaryOperator$$Type } from "it.unimi.dsi.fastutil.floats.FloatUnaryOperator"
 import { $FloatPredicate$$Type } from "it.unimi.dsi.fastutil.floats.FloatPredicate"
 import { $Comparable } from "java.lang.Comparable"
@@ -353,8 +357,8 @@ export interface $FloatList extends $List<float>, $Comparable<$List<float>>, $Fl
 "addAll"(collection0: $Collection$$Type<float>): boolean
 "addAll"(int0: integer, collection1: $Collection$$Type<float>): boolean
 "addAll"(floatCollection0: $FloatCollection$$Type): boolean
-"addElements"(int0: integer, float1s: float[]): void
 "addElements"(int0: integer, float1s: float[], int2: integer, int3: integer): void
+"addElements"(int0: integer, float1s: float[]): void
 "addFirst"(float0: float): void
 "addLast"(float0: float): void
 "clear"(): void
@@ -385,6 +389,7 @@ export interface $FloatList extends $List<float>, $Comparable<$List<float>>, $Fl
 /** @deprecated */
 "lastIndexOf"(object0: any): integer
 "lastIndexOf"(float0: float): integer
+"listIterator"(int0: integer): $FloatListIterator
 /** @deprecated */
 "parallelStream"(): $Stream<float>
 "rem"(float0: float): boolean
@@ -576,20 +581,20 @@ export interface $Float2ReferenceFunction<V = any> extends $Function$0<float, V>
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(float0: float): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(float0: float): V
-/** @deprecated */
-"getOrDefault"(object0: any, v1: V): V
 "getOrDefault"(float0: float, v1: V): V
 /** @deprecated */
+"getOrDefault"(object0: any, v1: V): V
+/** @deprecated */
 "put"(float0: float, v1: V): V
 "put"(float0: float, v1: V): V
-"remove"(float0: float): V
 /** @deprecated */
 "remove"(object0: any): V
+"remove"(float0: float): V
 "size"(): integer
 }
 
@@ -706,6 +711,8 @@ export interface $Float2IntFunction extends $Function$0<float, integer>, $Double
 "put"(float0: float, integer1: integer): integer
 "put"(float0: float, int1: integer): integer
 "remove"(float0: float): integer
+/** @deprecated */
+"remove"(object0: any): integer
 "size"(): integer
 }
 
@@ -824,6 +831,8 @@ export interface $Float2ByteFunction extends $Function$0<float, byte>, $DoubleTo
 "put"(float0: float, byte1: byte): byte
 "put"(float0: float, byte1: byte): byte
 "remove"(float0: float): byte
+/** @deprecated */
+"remove"(object0: any): byte
 "size"(): integer
 }
 
@@ -936,6 +945,8 @@ export interface $Float2LongFunction extends $Function$0<float, long>, $DoubleTo
 "put"(float0: float, long1: long): long
 "put"(float0: float, long1: long): long
 "remove"(float0: float): long
+/** @deprecated */
+"remove"(object0: any): long
 "size"(): integer
 }
 
@@ -1140,20 +1151,22 @@ export interface $Float2BooleanFunction extends $Function$0<float, boolean>, $Do
 "containsKey"(float0: float): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): boolean
 "defaultReturnValue"(boolean0: boolean): void
+"defaultReturnValue"(): boolean
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(float0: float): boolean
-"getOrDefault"(float0: float, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
+"getOrDefault"(float0: float, boolean1: boolean): boolean
 "negate"(): $DoublePredicate
 "or"(doublePredicate0: $DoublePredicate$$Type): $DoublePredicate
 /** @deprecated */
 "put"(float0: float, boolean1: boolean): boolean
 "put"(float0: float, boolean1: boolean): boolean
 "remove"(float0: float): boolean
+/** @deprecated */
+"remove"(object0: any): boolean
 "size"(): integer
 /** @deprecated */
 "test"(double0: double): boolean
@@ -1226,8 +1239,8 @@ public "addAll"(int0: integer, floatCollection1: $FloatCollection$$Type): boolea
 public "addAll"(int0: integer, collection1: $Collection$$Type<float>): boolean
 public "addAll"(int0: integer, floatList1: $FloatList$$Type): boolean
 public "addAll"(floatList0: $FloatList$$Type): boolean
-public "addElements"(int0: integer, float1s: float[]): void
 public "addElements"(int0: integer, float1s: float[], int2: integer, int3: integer): void
+public "addElements"(int0: integer, float1s: float[]): void
 public "addFirst"(float0: float): void
 public "addLast"(float0: float): void
 public "compareTo"(list0: $List$$Type<float>): integer
@@ -1254,8 +1267,6 @@ public "iterator"(): $FloatListIterator
 public "lastIndexOf"(float0: float): integer
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
-public "listIterator"(): $FloatListIterator
-public "listIterator"(int0: integer): $FloatListIterator
 public static "of"(): $FloatList
 public static "of"(float0: float, float1: float): $FloatList
 public static "of"(float0: float): $FloatList
@@ -1524,6 +1535,8 @@ export interface $Float2DoubleFunction extends $Function$0<float, double>, $Doub
 "put"(float0: float, double1: double): double
 "put"(float0: float, double1: double): double
 "remove"(float0: float): double
+/** @deprecated */
+"remove"(object0: any): double
 "size"(): integer
 }
 
@@ -1639,6 +1652,8 @@ export interface $Float2CharFunction extends $Function$0<float, character>, $Dou
 "put"(float0: float, character1: character): character
 "put"(float0: float, char1: character): character
 "remove"(float0: float): character
+/** @deprecated */
+"remove"(object0: any): character
 "size"(): integer
 }
 
@@ -1728,6 +1743,8 @@ export interface $Float2ShortFunction extends $Function$0<float, short>, $Double
 "put"(float0: float, short1: short): short
 "put"(float0: float, short1: short): short
 "remove"(float0: float): short
+/** @deprecated */
+"remove"(object0: any): short
 "size"(): integer
 }
 

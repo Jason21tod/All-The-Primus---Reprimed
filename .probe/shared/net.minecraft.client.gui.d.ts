@@ -509,9 +509,9 @@ import { $Component$$Type } from "net.minecraft.network.chat.Component"
 export class $NarrationThunk<T = any> {
 static readonly "EMPTY": $NarrationThunk<any>
 
-public static "from"(component0: $Component$$Type): $NarrationThunk<any>
-public static "from"(list0: $List$$Type<$Component$$Type>): $NarrationThunk<any>
 public static "from"(string0: string): $NarrationThunk<any>
+public static "from"(list0: $List$$Type<$Component$$Type>): $NarrationThunk<any>
+public static "from"(component0: $Component$$Type): $NarrationThunk<any>
 public "getText"(consumer0: $Consumer$$Type<string>): void
 }
 }
@@ -618,11 +618,11 @@ import { $Style } from "net.minecraft.network.chat.Style"
 export class $ChatComponent {
 constructor(minecraft0: $Minecraft$$Type)
 
-public "addMessage"(component0: $Component$$Type): void
 public "addMessage"(component0: $Component$$Type, messageSignature1: $MessageSignature$$Type, guiMessageTag2: $GuiMessageTag$$Type): void
+public "addMessage"(component0: $Component$$Type): void
 public "addRecentChat"(string0: string): void
 public "clearMessages"(boolean0: boolean): void
-public "constant$fnp000$placebo_unEscapeChatLogNewlines"(string0: string): string
+public "constant$foc000$placebo_unEscapeChatLogNewlines"(string0: string): string
 public static "defaultUnfocusedPct"(): double
 public "deleteMessage"(messageSignature0: $MessageSignature$$Type): void
 public "getClickedComponentStyleAt"(double0: double, double1: double): $Style
@@ -632,8 +632,8 @@ public "getLinesPerPage"(): integer
 public "getMessageTagAt"(double0: double, double1: double): $GuiMessageTag
 public "getRecentChat"(): $List<string>
 public "getScale"(): double
-public static "getWidth"(double0: double): integer
 public "getWidth"(): integer
+public static "getWidth"(double0: double): integer
 public "handleChatQueueClicked"(double0: double, double1: double): boolean
 public "render"(guiGraphics0: $GuiGraphics$$Type, int1: integer, int2: integer, int3: integer): void
 public "rescaleChat"(): void
@@ -830,7 +830,7 @@ public "getTitle"(): $Component
 public static "getTooltipFromItem"(minecraft0: $Minecraft$$Type, itemStack1: $ItemStack$$Type): $List<$Component>
 public "handleComponentClicked"(style0: $Style$$Type): boolean
 public "handleDelayedNarration"(): void
-public "handler$hei000$onWidgetAdded"(widget: $GuiEventListener$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$hel000$onWidgetAdded"(widget: $GuiEventListener$$Type, cir: $CallbackInfoReturnable$$Type): void
 public static "hasAltDown"(): boolean
 public static "hasControlDown"(): boolean
 public static "hasShiftDown"(): boolean
@@ -862,9 +862,9 @@ public "renderDirtBackground"(guiGraphics0: $GuiGraphics$$Type): void
 public "renderWithTooltip"(guiGraphics0: $GuiGraphics$$Type, int1: integer, int2: integer, float3: float): void
 public "resize"(minecraft0: $Minecraft$$Type, int1: integer, int2: integer): void
 public "setFocused"(boolean0: boolean): void
-public "setTooltipForNextRenderPass"(tooltip0: $Tooltip$$Type, clientTooltipPositioner1: $ClientTooltipPositioner$$Type, boolean2: boolean): void
 public "setTooltipForNextRenderPass"(list0: $List$$Type<$FormattedCharSequence$$Type>): void
 public "setTooltipForNextRenderPass"(list0: $List$$Type<$FormattedCharSequence$$Type>, clientTooltipPositioner1: $ClientTooltipPositioner$$Type, boolean2: boolean): void
+public "setTooltipForNextRenderPass"(tooltip0: $Tooltip$$Type, clientTooltipPositioner1: $ClientTooltipPositioner$$Type, boolean2: boolean): void
 public "shouldCloseOnEsc"(): boolean
 public "tick"(): void
 public "triggerImmediateNarration"(boolean0: boolean): void
@@ -1228,7 +1228,7 @@ static readonly "SMALL_WIDTH": integer
 public static "builder"(component0: $Component$$Type, onPress1: $Button$OnPress$$Type): $Button$Builder
 public "charTyped"(char0: character, int1: integer): boolean
 public "getCurrentFocusPath"(): $ComponentPath
-public "handler$heg000$onPress"(ci: $CallbackInfo$$Type): void
+public "handler$hej000$onPress"(ci: $CallbackInfo$$Type): void
 public "keyReleased"(int0: integer, int1: integer, int2: integer): boolean
 public "mouseMoved"(double0: double, double1: double): void
 public "mouseScrolled"(double0: double, double1: double, double2: double): boolean
@@ -1320,12 +1320,12 @@ public "getFont"(): $Font
 public "getGuiTicks"(): integer
 public "getSpectatorGui"(): $SpectatorGui
 public "getTabList"(): $PlayerTabOverlay
-public "handler$cnn001$iris$handleHudHidingScreens"(pGui0: $GuiGraphics$$Type, pFloat1: float, ci: $CallbackInfo$$Type): void
-public "handler$idh000$changeArmorItem"(guiGraphics0: $GuiGraphics$$Type, resourceLocation1: $ResourceLocation$$Type, float2: float, callbackInfo3: $CallbackInfo$$Type): void
-public "handler$iha000$irons_spellbooks$disableJumpBar"(playerRideableJumping0: $PlayerRideableJumping$$Type, guiGraphics1: $GuiGraphics$$Type, int2: integer, callbackInfo3: $CallbackInfo$$Type): void
-public "handler$iha000$irons_spellbooks$disableXpBar"(guiGraphics0: $GuiGraphics$$Type, int1: integer, callbackInfo2: $CallbackInfo$$Type): void
-public "handler$iod000$renderExperienceBar$0"(guiGraphics0: $GuiGraphics$$Type, int1: integer, callbackInfo2: $CallbackInfo$$Type): void
-public "handler$iod000$renderExperienceBar$1"(guiGraphics0: $GuiGraphics$$Type, int1: integer, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$coa001$iris$handleHudHidingScreens"(pGui0: $GuiGraphics$$Type, pFloat1: float, ci: $CallbackInfo$$Type): void
+public "handler$idk000$changeArmorItem"(guiGraphics0: $GuiGraphics$$Type, resourceLocation1: $ResourceLocation$$Type, float2: float, callbackInfo3: $CallbackInfo$$Type): void
+public "handler$ihd000$irons_spellbooks$disableJumpBar"(playerRideableJumping0: $PlayerRideableJumping$$Type, guiGraphics1: $GuiGraphics$$Type, int2: integer, callbackInfo3: $CallbackInfo$$Type): void
+public "handler$ihd000$irons_spellbooks$disableXpBar"(guiGraphics0: $GuiGraphics$$Type, int1: integer, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$iog000$renderExperienceBar$0"(guiGraphics0: $GuiGraphics$$Type, int1: integer, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$iog000$renderExperienceBar$1"(guiGraphics0: $GuiGraphics$$Type, int1: integer, callbackInfo2: $CallbackInfo$$Type): void
 public "isShowingChatDisabledByPlayer"(): boolean
 public "magneticMove"(itemStack0: $ItemStack$$Type): boolean
 public "modify$zln000$changeCrosshair"(resourceLocation0: $ResourceLocation$$Type): $ResourceLocation
@@ -1342,8 +1342,8 @@ public "renderEffects"(guiGraphics0: $GuiGraphics$$Type): void
 public "renderExperienceBar"(guiGraphics0: $GuiGraphics$$Type, int1: integer): void
 public "renderHotbar"(float0: float, guiGraphics1: $GuiGraphics$$Type): void
 public "renderJumpMeter"(playerRideableJumping0: $PlayerRideableJumping$$Type, guiGraphics1: $GuiGraphics$$Type, int2: integer): void
-public "renderSelectedItemName"(guiGraphics0: $GuiGraphics$$Type): void
 public "renderSelectedItemName"(guiGraphics0: $GuiGraphics$$Type, int1: integer): void
+public "renderSelectedItemName"(guiGraphics0: $GuiGraphics$$Type): void
 public "renderSpyglassOverlay"(guiGraphics0: $GuiGraphics$$Type, float1: float): void
 public "renderVignette"(guiGraphics0: $GuiGraphics$$Type, entity1: $Entity$$Type): void
 public "resetTitleTimes"(): void
@@ -1420,12 +1420,12 @@ public "getSlotUnderMouse"(): $Slot
 public "getTabOrderGroup"(): integer
 public "getXSize"(): integer
 public "getYSize"(): integer
-public "handler$dco000$apoth_superMouseDragged"(double0: double, double1: double, int2: integer, double3: double, double4: double, callbackInfoReturnable5: $CallbackInfoReturnable$$Type): void
-public "handler$ekf000$l2library$onClose$trackClose"(callbackInfo0: $CallbackInfo$$Type): void
-public "handler$fao000$renderSlot"(guiGraphics0: $GuiGraphics$$Type, slot1: $Slot$$Type, callbackInfo2: $CallbackInfo$$Type, itemStack3: $ItemStack$$Type): void
-public "handler$fao000$renderSlotAfter"(guiGraphics0: $GuiGraphics$$Type, slot1: $Slot$$Type, callbackInfo2: $CallbackInfo$$Type): void
-public "handler$fmb000$renderTooltip"(guiGraphics0: $GuiGraphics$$Type, int1: integer, int2: integer, callbackInfo3: $CallbackInfo$$Type): void
-public "handler$fmb001$keyPressed"(int0: integer, int1: integer, int2: integer, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
+public "handler$ddb000$apoth_superMouseDragged"(double0: double, double1: double, int2: integer, double3: double, double4: double, callbackInfoReturnable5: $CallbackInfoReturnable$$Type): void
+public "handler$eki000$l2library$onClose$trackClose"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$fbb000$renderSlot"(guiGraphics0: $GuiGraphics$$Type, slot1: $Slot$$Type, callbackInfo2: $CallbackInfo$$Type, itemStack3: $ItemStack$$Type): void
+public "handler$fbb000$renderSlotAfter"(guiGraphics0: $GuiGraphics$$Type, slot1: $Slot$$Type, callbackInfo2: $CallbackInfo$$Type): void
+public "handler$fme000$renderTooltip"(guiGraphics0: $GuiGraphics$$Type, int1: integer, int2: integer, callbackInfo3: $CallbackInfo$$Type): void
+public "handler$fme001$keyPressed"(int0: integer, int1: integer, int2: integer, callbackInfoReturnable3: $CallbackInfoReturnable$$Type): void
 public "isFocused"(): boolean
 public "isHovering"(int0: integer, int1: integer, int2: integer, int3: integer, double4: double, double5: double): boolean
 public "isHovering"(slot0: $Slot$$Type, double1: double, double2: double): boolean
@@ -1440,11 +1440,11 @@ public "mouseScrolled"(double0: double, double1: double, double2: double): boole
 public "nextFocusPath"(focusNavigationEvent0: $FocusNavigationEvent$$Type): $ComponentPath
 public "renderFloatingItem"(guiGraphics0: $GuiGraphics$$Type, itemStack1: $ItemStack$$Type, int2: integer, int3: integer, string4: string): void
 public "renderSlot"(guiGraphics0: $GuiGraphics$$Type, slot1: $Slot$$Type): void
-public static "renderSlotHighlight"(guiGraphics0: $GuiGraphics$$Type, int1: integer, int2: integer, int3: integer): void
 public static "renderSlotHighlight"(guiGraphics0: $GuiGraphics$$Type, int1: integer, int2: integer, int3: integer, int4: integer): void
+public static "renderSlotHighlight"(guiGraphics0: $GuiGraphics$$Type, int1: integer, int2: integer, int3: integer): void
 public "setFocused"(boolean0: boolean): void
 public "slotClicked"(slot0: $Slot$$Type, int1: integer, int2: integer, clickType3: $ClickType$$Type): void
-public "wrapOperation$dhh000$l2backpack$renderTooltips$isEmpty"(itemStack0: $ItemStack$$Type, operation1: $Operation$$Type): boolean
+public "wrapOperation$dhk000$l2backpack$renderTooltips$isEmpty"(itemStack0: $ItemStack$$Type, operation1: $Operation$$Type): boolean
 get "clickedSlot"(): $Slot
 set "clickedSlot"(value: $Slot$$Type)
 get "doubleclick"(): boolean
@@ -1655,10 +1655,10 @@ readonly "random": $RandomSource
 constructor(function0: $Function$$Type<$ResourceLocation$$Type, $FontSet>, boolean1: boolean)
 
 public "bidirectionalShaping"(string0: string): string
-public "drawInBatch"(string0: string, float1: float, float2: float, int3: integer, boolean4: boolean, matrix4f5: $Matrix4f$$Type, multiBufferSource6: $MultiBufferSource$$Type, displayMode7: $Font$DisplayMode$$Type, int8: integer, int9: integer): integer
-public "drawInBatch"(component0: $Component$$Type, float1: float, float2: float, int3: integer, boolean4: boolean, matrix4f5: $Matrix4f$$Type, multiBufferSource6: $MultiBufferSource$$Type, displayMode7: $Font$DisplayMode$$Type, int8: integer, int9: integer): integer
 public "drawInBatch"(formattedCharSequence0: $FormattedCharSequence$$Type, float1: float, float2: float, int3: integer, boolean4: boolean, matrix4f5: $Matrix4f$$Type, multiBufferSource6: $MultiBufferSource$$Type, displayMode7: $Font$DisplayMode$$Type, int8: integer, int9: integer): integer
 public "drawInBatch"(string0: string, float1: float, float2: float, int3: integer, boolean4: boolean, matrix4f5: $Matrix4f$$Type, multiBufferSource6: $MultiBufferSource$$Type, displayMode7: $Font$DisplayMode$$Type, int8: integer, int9: integer, boolean10: boolean): integer
+public "drawInBatch"(component0: $Component$$Type, float1: float, float2: float, int3: integer, boolean4: boolean, matrix4f5: $Matrix4f$$Type, multiBufferSource6: $MultiBufferSource$$Type, displayMode7: $Font$DisplayMode$$Type, int8: integer, int9: integer): integer
+public "drawInBatch"(string0: string, float1: float, float2: float, int3: integer, boolean4: boolean, matrix4f5: $Matrix4f$$Type, multiBufferSource6: $MultiBufferSource$$Type, displayMode7: $Font$DisplayMode$$Type, int8: integer, int9: integer): integer
 public "drawInBatch8xOutline"(formattedCharSequence0: $FormattedCharSequence$$Type, float1: float, float2: float, int3: integer, int4: integer, matrix4f5: $Matrix4f$$Type, multiBufferSource6: $MultiBufferSource$$Type, int7: integer): void
 public "ellipsize"(formattedText0: $FormattedText$$Type, int1: integer): $FormattedText
 public "getFontSet"(resourceLocation0: $ResourceLocation$$Type): $FontSet
@@ -1672,9 +1672,9 @@ public "renderText"(string0: string, float1: float, float2: float, int3: integer
 public "self"(): $Font
 public "split"(formattedText0: $FormattedText$$Type, int1: integer): $List<$FormattedCharSequence>
 public "substrByWidth"(formattedText0: $FormattedText$$Type, int1: integer): $FormattedText
-public "width"(formattedText0: $FormattedText$$Type): integer
-public "width"(string0: string): integer
 public "width"(formattedCharSequence0: $FormattedCharSequence$$Type): integer
+public "width"(string0: string): integer
+public "width"(formattedText0: $FormattedText$$Type): integer
 public "wordWrapHeight"(formattedText0: $FormattedText$$Type, int1: integer): integer
 public "wordWrapHeight"(string0: string, int1: integer): integer
 get "splitter"(): $StringSplitter
@@ -1808,7 +1808,7 @@ import { $VertexConsumer$$Type } from "com.mojang.blaze3d.vertex.VertexConsumer"
 export class $BakedGlyph implements $BakedGlyphAccessor {
 constructor(glyphRenderTypes0: $GlyphRenderTypes$$Type, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, float8: float)
 
-public "handler$dam000$render"(italic: boolean, x: float, y: float, matrix: $Matrix4f$$Type, vertexConsumer: $VertexConsumer$$Type, red: float, green: float, blue: float, alpha: float, light: integer, ci: $CallbackInfo$$Type): void
+public "handler$dap000$render"(italic: boolean, x: float, y: float, matrix: $Matrix4f$$Type, vertexConsumer: $VertexConsumer$$Type, red: float, green: float, blue: float, alpha: float, light: integer, ci: $CallbackInfo$$Type): void
 public "render"(boolean0: boolean, float1: float, float2: float, matrix4f3: $Matrix4f$$Type, vertexConsumer4: $VertexConsumer$$Type, float5: float, float6: float, float7: float, float8: float, int9: integer): void
 public "renderEffect"(effect0: $BakedGlyph$Effect$$Type, matrix4f1: $Matrix4f$$Type, vertexConsumer2: $VertexConsumer$$Type, int3: integer): void
 public "renderType"(displayMode0: $Font$DisplayMode$$Type): $RenderType
@@ -1980,80 +1980,80 @@ static readonly "MIN_GUI_Z": float
 constructor(minecraft0: $Minecraft$$Type, poseStack1: $PoseStack$$Type, bufferSource2: $MultiBufferSource$BufferSource$$Type)
 constructor(minecraft0: $Minecraft$$Type, bufferSource1: $MultiBufferSource$BufferSource$$Type)
 
-public "blit"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, float5: float, float6: float, int7: integer, int8: integer, int9: integer, int10: integer): void
 public "blit"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, textureAtlasSprite5: $TextureAtlasSprite$$Type): void
-public "blit"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer): void
-public "blit"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, textureAtlasSprite5: $TextureAtlasSprite$$Type, float6: float, float7: float, float8: float, float9: float): void
-public "blit"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, float4: float, float5: float, int6: integer, int7: integer, int8: integer, int9: integer): void
 public "blit"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, float3: float, float4: float, int5: integer, int6: integer, int7: integer, int8: integer): void
+public "blit"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, float4: float, float5: float, int6: integer, int7: integer, int8: integer, int9: integer): void
+public "blit"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, textureAtlasSprite5: $TextureAtlasSprite$$Type, float6: float, float7: float, float8: float, float9: float): void
+public "blit"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer): void
+public "blit"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, float5: float, float6: float, int7: integer, int8: integer, int9: integer, int10: integer): void
 public "blitInscribed"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, boolean7: boolean, boolean8: boolean): void
 public "blitInscribed"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer): void
-public "blitNineSliced"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer, int10: integer): void
 public "blitNineSliced"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer, int10: integer, int11: integer, int12: integer): void
+public "blitNineSliced"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer, int10: integer): void
 public "blitNineSliced"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer): void
 public "blitNineSlicedSized"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer, int10: integer, int11: integer, int12: integer): void
 public "blitNineSlicedSized"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer, int10: integer, int11: integer, int12: integer, int13: integer, int14: integer): void
 public "blitNineSlicedSized"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer, int10: integer, int11: integer): void
-public "blitRepeating"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer, int10: integer): void
 public "blitRepeating"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer): void
+public "blitRepeating"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer, int10: integer): void
 public "blitWithBorder"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer): void
 public "blitWithBorder"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer, int9: integer, int10: integer, int11: integer, int12: integer): void
 public "bufferSource"(): $MultiBufferSource$BufferSource
 public "disableScissor"(): void
-public "drawCenteredString"(font0: $Font$$Type, formattedCharSequence1: $FormattedCharSequence$$Type, int2: integer, int3: integer, int4: integer): void
-public "drawCenteredString"(font0: $Font$$Type, string1: string, int2: integer, int3: integer, int4: integer): void
 public "drawCenteredString"(font0: $Font$$Type, component1: $Component$$Type, int2: integer, int3: integer, int4: integer): void
+public "drawCenteredString"(font0: $Font$$Type, string1: string, int2: integer, int3: integer, int4: integer): void
+public "drawCenteredString"(font0: $Font$$Type, formattedCharSequence1: $FormattedCharSequence$$Type, int2: integer, int3: integer, int4: integer): void
 /** @deprecated */
 public "drawManaged"(runnable0: $Runnable$$Type): void
-public "drawString"(font0: $Font$$Type, formattedCharSequence1: $FormattedCharSequence$$Type, int2: integer, int3: integer, int4: integer, boolean5: boolean): integer
 public "drawString"(font0: $Font$$Type, formattedCharSequence1: $FormattedCharSequence$$Type, int2: integer, int3: integer, int4: integer): integer
-public "drawString"(font0: $Font$$Type, component1: $Component$$Type, int2: integer, int3: integer, int4: integer): integer
-public "drawString"(font0: $Font$$Type, component1: $Component$$Type, int2: integer, int3: integer, int4: integer, boolean5: boolean): integer
 public "drawString"(font0: $Font$$Type, string1: string, int2: integer, int3: integer, int4: integer): integer
-public "drawString"(font0: $Font$$Type, formattedCharSequence1: $FormattedCharSequence$$Type, float2: float, float3: float, int4: integer, boolean5: boolean): integer
-public "drawString"(font0: $Font$$Type, string1: string, float2: float, float3: float, int4: integer, boolean5: boolean): integer
+public "drawString"(font0: $Font$$Type, component1: $Component$$Type, int2: integer, int3: integer, int4: integer): integer
 public "drawString"(font0: $Font$$Type, string1: string, int2: integer, int3: integer, int4: integer, boolean5: boolean): integer
+public "drawString"(font0: $Font$$Type, formattedCharSequence1: $FormattedCharSequence$$Type, int2: integer, int3: integer, int4: integer, boolean5: boolean): integer
+public "drawString"(font0: $Font$$Type, component1: $Component$$Type, int2: integer, int3: integer, int4: integer, boolean5: boolean): integer
+public "drawString"(font0: $Font$$Type, string1: string, float2: float, float3: float, int4: integer, boolean5: boolean): integer
+public "drawString"(font0: $Font$$Type, formattedCharSequence1: $FormattedCharSequence$$Type, float2: float, float3: float, int4: integer, boolean5: boolean): integer
 public "drawWordWrap"(font0: $Font$$Type, formattedText1: $FormattedText$$Type, int2: integer, int3: integer, int4: integer, int5: integer): void
 public "enableScissor"(int0: integer, int1: integer, int2: integer, int3: integer): void
 public "endingLibrary$innerBlit"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, float6: float, float7: float, float8: float, float9: float): void
 public "endingLibrary$innerBlit"(resourceLocation0: $ResourceLocation$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, float6: float, float7: float, float8: float, float9: float, float10: float, float11: float, float12: float, float13: float): void
-public "fill"(renderType0: $RenderType$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): void
-public "fill"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer): void
-public "fill"(renderType0: $RenderType$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer): void
 public "fill"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): void
+public "fill"(renderType0: $RenderType$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer): void
+public "fill"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer): void
+public "fill"(renderType0: $RenderType$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): void
+public "fillGradient"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer): void
 public "fillGradient"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer): void
 public "fillGradient"(renderType0: $RenderType$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, int7: integer): void
-public "fillGradient"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer): void
 public "flush"(): void
 public "getColorFromFormattingCharacter"(char0: character, boolean1: boolean): integer
 public "guiHeight"(): integer
 public "guiWidth"(): integer
 public "hLine"(renderType0: $RenderType$$Type, int1: integer, int2: integer, int3: integer, int4: integer): void
 public "hLine"(int0: integer, int1: integer, int2: integer, int3: integer): void
-public "handler$zno000$renderFocusCooldown"(font0: $Font$$Type, itemStack1: $ItemStack$$Type, int2: integer, int3: integer, callbackInfo4: $CallbackInfo$$Type): void
+public "handler$zob000$renderFocusCooldown"(font0: $Font$$Type, itemStack1: $ItemStack$$Type, int2: integer, int3: integer, callbackInfo4: $CallbackInfo$$Type): void
 public "pose"(): $PoseStack
 public "renderComponentHoverEffect"(font0: $Font$$Type, style1: $Style$$Type, int2: integer, int3: integer): void
-public "renderComponentTooltip"(font0: $Font$$Type, list1: $List$$Type<$FormattedText$$Type>, int2: integer, int3: integer, itemStack4: $ItemStack$$Type): void
 public "renderComponentTooltip"(font0: $Font$$Type, list1: $List$$Type<$Component$$Type>, int2: integer, int3: integer): void
+public "renderComponentTooltip"(font0: $Font$$Type, list1: $List$$Type<$FormattedText$$Type>, int2: integer, int3: integer, itemStack4: $ItemStack$$Type): void
 public "renderComponentTooltipFromElements"(font0: $Font$$Type, list1: $List$$Type<$Either$$Type<$FormattedText$$Type, $TooltipComponent$$Type>>, int2: integer, int3: integer, itemStack4: $ItemStack$$Type): void
 public "renderFakeItem"(itemStack0: $ItemStack$$Type, int1: integer, int2: integer): void
-public "renderItem"(itemStack0: $ItemStack$$Type, int1: integer, int2: integer): void
 public "renderItem"(itemStack0: $ItemStack$$Type, int1: integer, int2: integer, int3: integer): void
+public "renderItem"(itemStack0: $ItemStack$$Type, int1: integer, int2: integer): void
 public "renderItem"(itemStack0: $ItemStack$$Type, int1: integer, int2: integer, int3: integer, int4: integer): void
 public "renderItem"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type, int2: integer, int3: integer, int4: integer): void
 public "renderItemDecorations"(font0: $Font$$Type, itemStack1: $ItemStack$$Type, int2: integer, int3: integer, string4: string): void
 public "renderItemDecorations"(font0: $Font$$Type, itemStack1: $ItemStack$$Type, int2: integer, int3: integer): void
 public "renderOutline"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer): void
-public "renderTooltip"(font0: $Font$$Type, list1: $List$$Type<$Component$$Type>, optional2: $Optional$$Type<$TooltipComponent$$Type>, itemStack3: $ItemStack$$Type, int4: integer, int5: integer): void
-public "renderTooltip"(font0: $Font$$Type, list1: $List$$Type<$Component$$Type>, optional2: $Optional$$Type<$TooltipComponent$$Type>, int3: integer, int4: integer): void
 public "renderTooltip"(font0: $Font$$Type, itemStack1: $ItemStack$$Type, int2: integer, int3: integer): void
+public "renderTooltip"(font0: $Font$$Type, list1: $List$$Type<$Component$$Type>, optional2: $Optional$$Type<$TooltipComponent$$Type>, int3: integer, int4: integer): void
 public "renderTooltip"(font0: $Font$$Type, list1: $List$$Type<$FormattedCharSequence$$Type>, clientTooltipPositioner2: $ClientTooltipPositioner$$Type, int3: integer, int4: integer): void
 public "renderTooltip"(font0: $Font$$Type, component1: $Component$$Type, int2: integer, int3: integer): void
 public "renderTooltip"(font0: $Font$$Type, list1: $List$$Type<$FormattedCharSequence$$Type>, int2: integer, int3: integer): void
+public "renderTooltip"(font0: $Font$$Type, list1: $List$$Type<$Component$$Type>, optional2: $Optional$$Type<$TooltipComponent$$Type>, itemStack3: $ItemStack$$Type, int4: integer, int5: integer): void
 public "renderTooltipInternal"(font0: $Font$$Type, list1: $List$$Type<$ClientTooltipComponent$$Type>, int2: integer, int3: integer, clientTooltipPositioner4: $ClientTooltipPositioner$$Type): void
 public "setColor"(float0: float, float1: float, float2: float, float3: float): void
-public "vLine"(renderType0: $RenderType$$Type, int1: integer, int2: integer, int3: integer, int4: integer): void
 public "vLine"(int0: integer, int1: integer, int2: integer, int3: integer): void
+public "vLine"(renderType0: $RenderType$$Type, int1: integer, int2: integer, int3: integer, int4: integer): void
 get "minecraft"(): $Minecraft
 set "minecraft"(value: $Minecraft$$Type)
 get "tooltipStack"(): $ItemStack
@@ -2068,9 +2068,9 @@ import { $Component$$Type } from "net.minecraft.network.chat.Component"
 
 export interface $NarrationElementOutput {
 "add"(narratedElementType0: $NarratedElementType$$Type, string1: string): void
-"add"(narratedElementType0: $NarratedElementType$$Type, component1: $Component$$Type): void
-"add"(narratedElementType0: $NarratedElementType$$Type, narrationThunk1: $NarrationThunk$$Type<any>): void
 "add"(narratedElementType0: $NarratedElementType$$Type, ...component1s: $Component$$Type[]): void
+"add"(narratedElementType0: $NarratedElementType$$Type, narrationThunk1: $NarrationThunk$$Type<any>): void
+"add"(narratedElementType0: $NarratedElementType$$Type, component1: $Component$$Type): void
 "nest"(): $NarrationElementOutput
 }
 
@@ -2202,8 +2202,8 @@ import { $TooltipAccessor as $TooltipAccessor$0 } from "traben.entity_texture_fe
 export class $Tooltip implements $NarrationSupplier, $TooltipAccessor, $TooltipAccessor$0 {
 constructor(component0: $Component$$Type, component1: $Component$$Type)
 
-public static "create"(component0: $Component$$Type, component1: $Component$$Type): $Tooltip
 public static "create"(component0: $Component$$Type): $Tooltip
+public static "create"(component0: $Component$$Type, component1: $Component$$Type): $Tooltip
 public static "splitTooltip"(minecraft0: $Minecraft$$Type, component1: $Component$$Type): $List<$FormattedCharSequence>
 public "toCharSequence"(minecraft0: $Minecraft$$Type): $List<$FormattedCharSequence>
 public "updateNarration"(narrationElementOutput0: $NarrationElementOutput$$Type): void

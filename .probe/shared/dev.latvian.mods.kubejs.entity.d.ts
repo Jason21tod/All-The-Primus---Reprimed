@@ -39,8 +39,8 @@ import { $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 export class $LivingEntityDropsEventJS extends $LivingEntityEventJS {
 constructor(e: $LivingDropsEvent$$Type)
 
-public "addDrop"(stack: $ItemStack$$Type): $ItemEntity
 public "addDrop"(stack: $ItemStack$$Type, chance: float): $ItemEntity
+public "addDrop"(stack: $ItemStack$$Type): $ItemEntity
 public "getDrops"(): $List<$ItemEntity>
 public "getLootingLevel"(): integer
 public "getSource"(): $DamageSource

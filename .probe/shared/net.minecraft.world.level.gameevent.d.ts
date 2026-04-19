@@ -161,9 +161,9 @@ export class $GameEvent$Context extends $Record {
 constructor(entity0: $Entity$$Type, blockState1: $BlockState$$Type)
 
 public "affectedState"(): $BlockState
+public static "of"(blockState0: $BlockState$$Type): $GameEvent$Context
 public static "of"(entity0: $Entity$$Type): $GameEvent$Context
 public static "of"(entity0: $Entity$$Type, blockState1: $BlockState$$Type): $GameEvent$Context
-public static "of"(blockState0: $BlockState$$Type): $GameEvent$Context
 public "sourceEntity"(): $Entity
 }
 }

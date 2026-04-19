@@ -294,8 +294,8 @@ import { $LevelAccessor } from "net.minecraft.world.level.LevelAccessor"
 import { $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $FireConsumeBlockEvent extends $BlockEvent implements $IFireConsumeBlockEvent {
-constructor()
 constructor(world: $Level$$Type, pos: $BlockPos$$Type, state: $BlockState$$Type, chance: integer, age: integer, face: $Direction$$Type)
+constructor()
 
 public static "create"(pos: $BlockPos$$Type, level: $Level$$Type, state: $BlockState$$Type, chance: integer, age: integer, face: $Direction$$Type): $IFireConsumeBlockEvent
 public "getAge"(): integer

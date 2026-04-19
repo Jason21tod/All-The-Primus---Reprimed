@@ -8,6 +8,7 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $ResourceOrTagArgument$Info<T = any> implements $ArgumentTypeInfo<$ResourceOrTagArgument<T>, $ResourceOrTagArgument$Info$Template<>> {
 constructor()
 
+public "deserializeFromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $ResourceOrTagArgument$Info$Template<>
 public "serializeToJson"(template0: $ResourceOrTagArgument$Info$Template$$Type<>, jsonObject1: $JsonObject$$Type): void
 public "serializeToNetwork"(template0: $ResourceOrTagArgument$Info$Template$$Type<>, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "unpack"(resourceOrTagArgument0: $ResourceOrTagArgument$$Type<T>): $ResourceOrTagArgument$Info$Template<>
@@ -95,6 +96,7 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $EntityArgument$Info implements $ArgumentTypeInfo<$EntityArgument, $EntityArgument$Info$Template> {
 constructor()
 
+public "deserializeFromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $EntityArgument$Info$Template
 public "serializeToJson"(template0: $EntityArgument$Info$Template$$Type, jsonObject1: $JsonObject$$Type): void
 public "serializeToNetwork"(template0: $EntityArgument$Info$Template$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "unpack"(entityArgument0: $EntityArgument$$Type): $EntityArgument$Info$Template
@@ -155,8 +157,8 @@ constructor(boolean0: boolean)
 
 public "getExamples"(): $Collection<string>
 public static "getName"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string): string
-public static "getNames"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string): $Collection<string>
 public static "getNames"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string, supplier2: $Supplier$$Type<$Collection<string>>): $Collection<string>
+public static "getNames"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string): $Collection<string>
 public static "getNamesWithDefaultWildcard"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string): $Collection<string>
 public "listSuggestions"<S>(commandContext0: $CommandContext$$Type<S>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 public "parse"(stringReader0: $StringReader$$Type): $ScoreHolderArgument$Result
@@ -176,6 +178,7 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $ResourceArgument$Info<T = any> implements $ArgumentTypeInfo<$ResourceArgument<T>, $ResourceArgument$Info$Template<>> {
 constructor()
 
+public "deserializeFromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $ResourceArgument$Info$Template<>
 public "serializeToJson"(template0: $ResourceArgument$Info$Template$$Type<>, jsonObject1: $JsonObject$$Type): void
 public "serializeToNetwork"(template0: $ResourceArgument$Info$Template$$Type<>, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "unpack"(resourceArgument0: $ResourceArgument$$Type<T>): $ResourceArgument$Info$Template<>
@@ -294,8 +297,8 @@ function suggest(stream0: $Stream$$Type<string>, suggestionsBuilder1: $Suggestio
 function suggest<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 function suggest2DCoordinates(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 function suggestCoordinates(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
-function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 function suggestResource<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
@@ -311,8 +314,8 @@ static "suggest"(stream0: $Stream$$Type<string>, suggestionsBuilder1: $Suggestio
 static "suggest"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 static "suggest2DCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 static "suggestCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
-static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 static "suggestResource"<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
@@ -345,8 +348,6 @@ constructor(string0: string, string1: string, string2: string)
 }
 
 declare module "net.minecraft.commands.arguments.EntityArgument" {
-import { $ServerPlayer } from "net.minecraft.server.level.ServerPlayer"
-import { $Entity } from "net.minecraft.world.entity.Entity"
 import { $Suggestions } from "com.mojang.brigadier.suggestion.Suggestions"
 import { $CommandContext$$Type } from "com.mojang.brigadier.context.CommandContext"
 import { $CommandSourceStack$$Type } from "net.minecraft.commands.CommandSourceStack"
@@ -355,6 +356,9 @@ import { $CompletableFuture } from "java.util.concurrent.CompletableFuture"
 import { $EntitySelector } from "net.minecraft.commands.arguments.selector.EntitySelector"
 import { $ArgumentType } from "com.mojang.brigadier.arguments.ArgumentType"
 import { $SimpleCommandExceptionType } from "com.mojang.brigadier.exceptions.SimpleCommandExceptionType"
+import { $ServerPlayer } from "net.minecraft.server.level.ServerPlayer"
+import { $Entity } from "net.minecraft.world.entity.Entity"
+import { $StringReader$$Type } from "com.mojang.brigadier.StringReader"
 import { $SuggestionsBuilder$$Type } from "com.mojang.brigadier.suggestion.SuggestionsBuilder"
 
 export class $EntityArgument implements $ArgumentType<$EntitySelector> {
@@ -375,6 +379,7 @@ public static "getOptionalPlayers"(commandContext0: $CommandContext$$Type<$Comma
 public static "getPlayer"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string): $ServerPlayer
 public static "getPlayers"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string): $Collection<$ServerPlayer>
 public "listSuggestions"<S>(commandContext0: $CommandContext$$Type<S>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+public "parse"(stringReader0: $StringReader$$Type): $EntitySelector
 public static "player"(): $EntityArgument
 public static "players"(): $EntityArgument
 get "examples"(): $Collection<string>
@@ -437,6 +442,7 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $TimeArgument$Info implements $ArgumentTypeInfo<$TimeArgument, $TimeArgument$Info$Template> {
 constructor()
 
+public "deserializeFromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $TimeArgument$Info$Template
 public "serializeToJson"(template0: $TimeArgument$Info$Template$$Type, jsonObject1: $JsonObject$$Type): void
 public "serializeToNetwork"(template0: $TimeArgument$Info$Template$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "unpack"(timeArgument0: $TimeArgument$$Type): $TimeArgument$Info$Template
@@ -467,6 +473,7 @@ import { $ScoreHolderArgument, $ScoreHolderArgument$$Type } from "net.minecraft.
 export class $ScoreHolderArgument$Info implements $ArgumentTypeInfo<$ScoreHolderArgument, $ScoreHolderArgument$Info$Template> {
 constructor()
 
+public "deserializeFromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $ScoreHolderArgument$Info$Template
 public "serializeToJson"(template0: $ScoreHolderArgument$Info$Template$$Type, jsonObject1: $JsonObject$$Type): void
 public "serializeToNetwork"(template0: $ScoreHolderArgument$Info$Template$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "unpack"(scoreHolderArgument0: $ScoreHolderArgument$$Type): $ScoreHolderArgument$Info$Template
@@ -483,6 +490,7 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $ResourceKeyArgument$Info<T = any> implements $ArgumentTypeInfo<$ResourceKeyArgument<T>, $ResourceKeyArgument$Info$Template<>> {
 constructor()
 
+public "deserializeFromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $ResourceKeyArgument$Info$Template<>
 public "serializeToJson"(template0: $ResourceKeyArgument$Info$Template$$Type<>, jsonObject1: $JsonObject$$Type): void
 public "serializeToNetwork"(template0: $ResourceKeyArgument$Info$Template$$Type<>, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "unpack"(resourceKeyArgument0: $ResourceKeyArgument$$Type<T>): $ResourceKeyArgument$Info$Template<>
@@ -576,6 +584,7 @@ import { $CommandBuildContext$$Type } from "net.minecraft.commands.CommandBuildC
 export class $SingletonArgumentInfo<A extends $ArgumentType<any> = $ArgumentType<any>> implements $ArgumentTypeInfo<A, $SingletonArgumentInfo$Template<>> {
 public static "contextAware"<T extends $ArgumentType<any>>(function0: $Function$$Type<$CommandBuildContext$$Type, T>): $SingletonArgumentInfo<T>
 public static "contextFree"<T extends $ArgumentType<any>>(supplier0: $Supplier$$Type<T>): $SingletonArgumentInfo<T>
+public "deserializeFromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $SingletonArgumentInfo$Template<>
 public "serializeToJson"(template0: $SingletonArgumentInfo$Template$$Type<>, jsonObject1: $JsonObject$$Type): void
 public "serializeToNetwork"(template0: $SingletonArgumentInfo$Template$$Type<>, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "unpack"(a0: A): $SingletonArgumentInfo$Template<>
@@ -815,6 +824,7 @@ import { $ResourceOrTagKeyArgument$Info$Template, $ResourceOrTagKeyArgument$Info
 export class $ResourceOrTagKeyArgument$Info<T = any> implements $ArgumentTypeInfo<$ResourceOrTagKeyArgument<T>, $ResourceOrTagKeyArgument$Info$Template<>> {
 constructor()
 
+public "deserializeFromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $ResourceOrTagKeyArgument$Info$Template<>
 public "serializeToJson"(template0: $ResourceOrTagKeyArgument$Info$Template$$Type<>, jsonObject1: $JsonObject$$Type): void
 public "serializeToNetwork"(template0: $ResourceOrTagKeyArgument$Info$Template$$Type<>, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "unpack"(resourceOrTagKeyArgument0: $ResourceOrTagKeyArgument$$Type<T>): $ResourceOrTagKeyArgument$Info$Template<>
@@ -937,8 +947,8 @@ public static "suggest2DCoordinates"(string0: string, collection1: $Collection$$
 public static "suggestCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 public "suggestRegistryElements"(resourceKey0: $ResourceKey$$Type<$Registry<any>>, elementSuggestionType1: $SharedSuggestionProvider$ElementSuggestionType$$Type, suggestionsBuilder2: $SuggestionsBuilder$$Type, commandContext3: $CommandContext$$Type<any>): $CompletableFuture<$Suggestions>
 public "suggestRegistryElements"(registry0: $Registry$$Type<any>, elementSuggestionType1: $SharedSuggestionProvider$ElementSuggestionType$$Type, suggestionsBuilder2: $SuggestionsBuilder$$Type): void
-public static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 public static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+public static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 public static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
 public static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 public static "suggestResource"<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
@@ -997,8 +1007,8 @@ import { $SuggestionsBuilder$$Type } from "com.mojang.brigadier.suggestion.Sugge
 export class $TimeArgument implements $ArgumentType<integer> {
 public "getExamples"(): $Collection<string>
 public "listSuggestions"<S>(commandContext0: $CommandContext$$Type<S>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
-public static "time"(): $TimeArgument
 public static "time"(int0: integer): $TimeArgument
+public static "time"(): $TimeArgument
 get "examples"(): $Collection<string>
 }
 }

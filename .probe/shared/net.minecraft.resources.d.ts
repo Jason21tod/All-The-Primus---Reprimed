@@ -37,9 +37,9 @@ public static "read"(string0: string): $DataResult<$ResourceLocation>
 public static "read"(stringReader0: $StringReader$$Type): $ResourceLocation
 public "specialEquals"(o: any, shallow: boolean): boolean
 public "toDebugFileName"(): string
-public "toLanguageKey"(string0: string): string
-public "toLanguageKey"(): string
 public "toLanguageKey"(string0: string, string1: string): string
+public "toLanguageKey"(): string
+public "toLanguageKey"(string0: string): string
 public "toShortLanguageKey"(): string
 public static "tryBuild"(string0: string, string1: string): $ResourceLocation
 public static "tryBySeparator"(string0: string, char1: character): $ResourceLocation

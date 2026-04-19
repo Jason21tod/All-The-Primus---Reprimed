@@ -11,11 +11,11 @@ import { $CallbackInfoReturnable$$Type } from "org.spongepowered.asm.mixin.injec
 export class $MapItemSavedData$HoldingPlayer implements $IHoldingPlayerExtension {
 readonly "player": $Player
 
-public "handler$hlf000$checkLocked"(mapId: integer, cir: $CallbackInfoReturnable$$Type): void
-public "handler$hlf000$initializeDirty"(mapItemSavedData: $MapItemSavedData$$Type, player: $Player$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hlf000$lockData"(x: integer, z: integer, ci: $CallbackInfo$$Type): void
-public "handler$hlf000$sanityCheck"(x: integer, z: integer, ci: $CallbackInfo$$Type): void
-public "modifyReturnValue$hlf000$addExtraPacketData"(packet: $Packet$$Type, mapId: integer): $Packet
+public "handler$hli000$checkLocked"(mapId: integer, cir: $CallbackInfoReturnable$$Type): void
+public "handler$hli000$initializeDirty"(mapItemSavedData: $MapItemSavedData$$Type, player: $Player$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hli000$lockData"(x: integer, z: integer, ci: $CallbackInfo$$Type): void
+public "handler$hli000$sanityCheck"(x: integer, z: integer, ci: $CallbackInfo$$Type): void
+public "modifyReturnValue$hli000$addExtraPacketData"(packet: $Packet$$Type, mapId: integer): $Packet
 public "moonlight$setCustomDataDirty"(type: $CustomMapData$Type$$Type, dirtySetter: $Consumer$$Type): void
 public "moonlight$setCustomMarkersDirty"(): void
 get "step"(): integer
@@ -73,12 +73,12 @@ public "getDecorations"(): $Iterable<$MapDecoration>
 public "getHoldingPlayer"(player0: $Player$$Type): $MapItemSavedData$HoldingPlayer
 public "getUpdatePacket"(int0: integer, player1: $Player$$Type): $Packet<any>
 public "getVanillaDecorationSize"(): integer
-public "handler$hlk000$checkCustomDeco"(world: $BlockGetter$$Type, x: integer, z: integer, ci: $CallbackInfo$$Type): void
-public "handler$hlk000$initCustomData"(i: integer, j: integer, b: byte, bl: boolean, bl2: boolean, bl3: boolean, resourceKey: $ResourceKey$$Type, ci: $CallbackInfo$$Type): void
-public "handler$hlk000$locked"(cir: $CallbackInfoReturnable$$Type): void
-public "handler$hlk000$save"(tag: $CompoundTag$$Type, cir: $CallbackInfoReturnable$$Type): void
-public "handler$hlk000$scaled"(cir: $CallbackInfoReturnable$$Type): void
-public "handler$hlk000$tickCarriedBy"(player: $Player$$Type, stack: $ItemStack$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hln000$checkCustomDeco"(world: $BlockGetter$$Type, x: integer, z: integer, ci: $CallbackInfo$$Type): void
+public "handler$hln000$initCustomData"(i: integer, j: integer, b: byte, bl: boolean, bl2: boolean, bl3: boolean, resourceKey: $ResourceKey$$Type, ci: $CallbackInfo$$Type): void
+public "handler$hln000$locked"(cir: $CallbackInfoReturnable$$Type): void
+public "handler$hln000$save"(tag: $CompoundTag$$Type, cir: $CallbackInfoReturnable$$Type): void
+public "handler$hln000$scaled"(cir: $CallbackInfoReturnable$$Type): void
+public "handler$hln000$tickCarriedBy"(player: $Player$$Type, stack: $ItemStack$$Type, ci: $CallbackInfo$$Type): void
 public "isExplorationMap"(): boolean
 public "isTrackedCountOverLimit"(int0: integer): boolean
 public static "load"(compoundTag0: $CompoundTag$$Type): $MapItemSavedData

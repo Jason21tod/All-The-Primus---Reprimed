@@ -341,7 +341,7 @@ public "getXOff"(float0: float): float
 public "getYOff"(float0: float): float
 public "getZOff"(float0: float): float
 public "handleUpdateTag"(compoundTag0: $CompoundTag$$Type): void
-public "handler$hlo000$onFinishedShortPulse"(ci: $CallbackInfo$$Type): void
+public "handler$hmb000$onFinishedShortPulse"(ci: $CallbackInfo$$Type): void
 public "hasCustomOutlineRendering"(player0: $Player$$Type): boolean
 public "isExtending"(): boolean
 public "isSourcePiston"(): boolean

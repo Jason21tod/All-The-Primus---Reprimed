@@ -68,8 +68,8 @@ constructor()
 public static "createDefault"(): $BlockColors
 public "embeddium$getOverridenVanillaBlocks"(): $ReferenceSet
 public "get"(block: $Block$$Type): $BlockColor
-public "getColor"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type): integer
 public "getColor"(blockState0: $BlockState$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type, int3: integer): integer
+public "getColor"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type): integer
 public "getColoringProperties"(block0: $Block$$Type): $Set<$Property<any>>
 public static "getOverridenVanillaBlocks"(blockColors0: $BlockColors$$Type): $ReferenceSet<$Block>
 public static "getProviders"(blockColors0: $BlockColors$$Type): $Reference2ReferenceMap<$Block, $BlockColor>

@@ -132,8 +132,8 @@ export interface $FileConfig extends $Config, $AutoCloseable {
 "clear"(): void
 "close"(): void
 "configFormat"(): $ConfigFormat<any>
-"contains"(string0: string): boolean
 "contains"(list0: $List$$Type<string>): boolean
+"contains"(string0: string): boolean
 "createSubConfig"(): $Config
 "entrySet"(): $Set<$Config$Entry>
 "get"<T>(string0: string): T
@@ -148,50 +148,50 @@ export interface $FileConfig extends $Config, $AutoCloseable {
 "getCharOrElse"(string0: string, char1: character): character
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): T
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
 "getFile"(): $File
 "getInt"(string0: string): integer
 "getInt"(list0: $List$$Type<string>): integer
 "getIntOrElse"(list0: $List$$Type<string>, int1: integer): integer
-"getIntOrElse"(string0: string, int1: integer): integer
 "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
 "getIntOrElse"(list0: $List$$Type<string>, intSupplier1: $IntSupplier$$Type): integer
+"getIntOrElse"(string0: string, int1: integer): integer
 "getLong"(list0: $List$$Type<string>): long
 "getLong"(string0: string): long
 "getLongOrElse"(string0: string, long1: long): long
-"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(string0: string, longSupplier1: $LongSupplier$$Type): long
+"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
 "getNioPath"(): $Path
-"getOptional"<T>(string0: string): $Optional<T>
 "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
-"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
+"getOptional"<T>(string0: string): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
+"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
 "getOptionalInt"(list0: $List$$Type<string>): $OptionalInt
 "getOptionalInt"(string0: string): $OptionalInt
 "getOptionalLong"(list0: $List$$Type<string>): $OptionalLong
 "getOptionalLong"(string0: string): $OptionalLong
-"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
 "getOrElse"<T>(string0: string, t1: T): T
-"getRaw"<T>(string0: string): T
+"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
+"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
+"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
 "getRaw"<T>(list0: $List$$Type<string>): T
+"getRaw"<T>(string0: string): T
 "getShort"(string0: string): short
 "getShort"(list0: $List$$Type<string>): short
-"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "getShortOrElse"(string0: string, short1: short): short
+"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "isEmpty"(): boolean
 "isNull"(string0: string): boolean
 "isNull"(list0: $List$$Type<string>): boolean
@@ -220,8 +220,8 @@ function builder(path0: $Path$$Type): $FileConfigBuilder
 function builder(string0: string, configFormat1: $ConfigFormat$$Type<any>): $FileConfigBuilder
 function builder(string0: string): $FileConfigBuilder
 function builder(file0: $File$$Type): $FileConfigBuilder
-function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $Config
 function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type): $Config
+function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $Config
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>): $Config
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type): $Config
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>, configFormat2: $ConfigFormat$$Type<any>): $Config
@@ -258,8 +258,8 @@ static "builder"(path0: $Path$$Type): $FileConfigBuilder
 static "builder"(string0: string, configFormat1: $ConfigFormat$$Type<any>): $FileConfigBuilder
 static "builder"(string0: string): $FileConfigBuilder
 static "builder"(file0: $File$$Type): $FileConfigBuilder
-static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $Config
 static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type): $Config
+static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $Config
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>): $Config
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type): $Config
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>, configFormat2: $ConfigFormat$$Type<any>): $Config
@@ -359,8 +359,8 @@ export interface $UnmodifiableConfig {
 "apply"<T>(string0: string): T
 "apply"<T>(list0: $List$$Type<string>): T
 "configFormat"(): $ConfigFormat<any>
-"contains"(string0: string): boolean
 "contains"(list0: $List$$Type<string>): boolean
+"contains"(string0: string): boolean
 "entrySet"(): $Set<$UnmodifiableConfig$Entry>
 "get"<T>(string0: string): T
 "get"<T>(list0: $List$$Type<string>): T
@@ -374,48 +374,48 @@ export interface $UnmodifiableConfig {
 "getCharOrElse"(string0: string, char1: character): character
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): T
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
 "getInt"(string0: string): integer
 "getInt"(list0: $List$$Type<string>): integer
 "getIntOrElse"(list0: $List$$Type<string>, int1: integer): integer
-"getIntOrElse"(string0: string, int1: integer): integer
 "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
 "getIntOrElse"(list0: $List$$Type<string>, intSupplier1: $IntSupplier$$Type): integer
+"getIntOrElse"(string0: string, int1: integer): integer
 "getLong"(list0: $List$$Type<string>): long
 "getLong"(string0: string): long
 "getLongOrElse"(string0: string, long1: long): long
-"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(string0: string, longSupplier1: $LongSupplier$$Type): long
+"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
-"getOptional"<T>(string0: string): $Optional<T>
 "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
-"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
+"getOptional"<T>(string0: string): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
+"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
 "getOptionalInt"(list0: $List$$Type<string>): $OptionalInt
 "getOptionalInt"(string0: string): $OptionalInt
 "getOptionalLong"(list0: $List$$Type<string>): $OptionalLong
 "getOptionalLong"(string0: string): $OptionalLong
-"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
 "getOrElse"<T>(string0: string, t1: T): T
-"getRaw"<T>(string0: string): T
+"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
+"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
+"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
 "getRaw"<T>(list0: $List$$Type<string>): T
+"getRaw"<T>(string0: string): T
 "getShort"(string0: string): short
 "getShort"(list0: $List$$Type<string>): short
-"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "getShortOrElse"(string0: string, short1: short): short
+"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "isEmpty"(): boolean
 "isNull"(string0: string): boolean
 "isNull"(list0: $List$$Type<string>): boolean
@@ -469,8 +469,8 @@ export interface $Config extends $UnmodifiableConfig {
 "checked"(): $Config
 "clear"(): void
 "configFormat"(): $ConfigFormat<any>
-"contains"(string0: string): boolean
 "contains"(list0: $List$$Type<string>): boolean
+"contains"(string0: string): boolean
 "createSubConfig"(): $Config
 "entrySet"(): $Set<$Config$Entry>
 "get"<T>(string0: string): T
@@ -485,48 +485,48 @@ export interface $Config extends $UnmodifiableConfig {
 "getCharOrElse"(string0: string, char1: character): character
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): T
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
 "getInt"(string0: string): integer
 "getInt"(list0: $List$$Type<string>): integer
 "getIntOrElse"(list0: $List$$Type<string>, int1: integer): integer
-"getIntOrElse"(string0: string, int1: integer): integer
 "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
 "getIntOrElse"(list0: $List$$Type<string>, intSupplier1: $IntSupplier$$Type): integer
+"getIntOrElse"(string0: string, int1: integer): integer
 "getLong"(list0: $List$$Type<string>): long
 "getLong"(string0: string): long
 "getLongOrElse"(string0: string, long1: long): long
-"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(string0: string, longSupplier1: $LongSupplier$$Type): long
+"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
-"getOptional"<T>(string0: string): $Optional<T>
 "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
-"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
+"getOptional"<T>(string0: string): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
+"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
 "getOptionalInt"(list0: $List$$Type<string>): $OptionalInt
 "getOptionalInt"(string0: string): $OptionalInt
 "getOptionalLong"(list0: $List$$Type<string>): $OptionalLong
 "getOptionalLong"(string0: string): $OptionalLong
-"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
 "getOrElse"<T>(string0: string, t1: T): T
-"getRaw"<T>(string0: string): T
+"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
+"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
+"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
 "getRaw"<T>(list0: $List$$Type<string>): T
+"getRaw"<T>(string0: string): T
 "getShort"(string0: string): short
 "getShort"(list0: $List$$Type<string>): short
-"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "getShortOrElse"(string0: string, short1: short): short
+"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "isEmpty"(): boolean
 "isNull"(string0: string): boolean
 "isNull"(list0: $List$$Type<string>): boolean
@@ -545,8 +545,8 @@ get "empty"(): boolean
 }
 
 export namespace $Config {
-function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $Config
 function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type): $Config
+function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $Config
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>): $Config
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type): $Config
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>, configFormat2: $ConfigFormat$$Type<any>): $Config
@@ -565,8 +565,8 @@ function setInsertionOrderPreserved(boolean0: boolean): void
 function wrap(map0: $Map$$Type<string, any>, configFormat1: $ConfigFormat$$Type<any>): $Config
 }
 export abstract class $Config$$Static implements $Config {
-static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $Config
 static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type): $Config
+static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $Config
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>): $Config
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type): $Config
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>, configFormat2: $ConfigFormat$$Type<any>): $Config
@@ -608,13 +608,13 @@ import { $WriterSupplier$$Type } from "com.electronwill.nightconfig.core.utils.W
 
 export interface $ConfigFormat<C extends $Config = $Config> {
 "createConcurrentConfig"(): C
-"createConfig"(supplier0: $Supplier$$Type<$Map<string, any>>): C
 "createConfig"(): C
+"createConfig"(supplier0: $Supplier$$Type<$Map<string, any>>): C
 "createParser"(): $ConfigParser<C>
 "createWriter"(): $ConfigWriter
+"initEmptyFile"(path0: $Path$$Type): void
 "initEmptyFile"(writerSupplier0: $WriterSupplier$$Type): void
 "initEmptyFile"(file0: $File$$Type): void
-"initEmptyFile"(path0: $Path$$Type): void
 "isInMemory"(): boolean
 "supportsComments"(): boolean
 "supportsType"(class0: $Class$$Type<any>): boolean
@@ -664,8 +664,8 @@ export interface $CommentedFileConfig extends $CommentedConfig, $FileConfig {
 "close"(): void
 "commentMap"(): $Map<string, string>
 "configFormat"(): $ConfigFormat<any>
-"contains"(string0: string): boolean
 "contains"(list0: $List$$Type<string>): boolean
+"contains"(string0: string): boolean
 "containsComment"(list0: $List$$Type<string>): boolean
 "containsComment"(string0: string): boolean
 "createSubConfig"(): $CommentedConfig
@@ -682,63 +682,63 @@ export interface $CommentedFileConfig extends $CommentedConfig, $FileConfig {
 "getCharOrElse"(string0: string, char1: character): character
 "getComment"(string0: string): string
 "getComment"(list0: $List$$Type<string>): string
-"getComments"(): $Map<string, $UnmodifiableCommentedConfig$CommentNode>
 "getComments"(map0: $Map$$Type<string, $UnmodifiableCommentedConfig$CommentNode$$Type>): void
+"getComments"(): $Map<string, $UnmodifiableCommentedConfig$CommentNode>
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): T
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
 "getFile"(): $File
 "getInt"(string0: string): integer
 "getInt"(list0: $List$$Type<string>): integer
 "getIntOrElse"(list0: $List$$Type<string>, int1: integer): integer
-"getIntOrElse"(string0: string, int1: integer): integer
 "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
 "getIntOrElse"(list0: $List$$Type<string>, intSupplier1: $IntSupplier$$Type): integer
+"getIntOrElse"(string0: string, int1: integer): integer
 "getLong"(list0: $List$$Type<string>): long
 "getLong"(string0: string): long
 "getLongOrElse"(string0: string, long1: long): long
-"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(string0: string, longSupplier1: $LongSupplier$$Type): long
+"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
 "getNioPath"(): $Path
-"getOptional"<T>(string0: string): $Optional<T>
 "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
+"getOptional"<T>(string0: string): $Optional<T>
 "getOptionalComment"(string0: string): $Optional<string>
 "getOptionalComment"(list0: $List$$Type<string>): $Optional<string>
-"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
+"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
 "getOptionalInt"(list0: $List$$Type<string>): $OptionalInt
 "getOptionalInt"(string0: string): $OptionalInt
 "getOptionalLong"(list0: $List$$Type<string>): $OptionalLong
 "getOptionalLong"(string0: string): $OptionalLong
-"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
 "getOrElse"<T>(string0: string, t1: T): T
-"getRaw"<T>(string0: string): T
+"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
+"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
+"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
 "getRaw"<T>(list0: $List$$Type<string>): T
+"getRaw"<T>(string0: string): T
 "getShort"(string0: string): short
 "getShort"(list0: $List$$Type<string>): short
-"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "getShortOrElse"(string0: string, short1: short): short
+"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "isEmpty"(): boolean
 "isNull"(string0: string): boolean
 "isNull"(list0: $List$$Type<string>): boolean
 "load"(): void
 "putAll"(unmodifiableConfig0: $UnmodifiableConfig$$Type): void
-"putAllComments"(map0: $Map$$Type<string, $UnmodifiableCommentedConfig$CommentNode$$Type>): void
 "putAllComments"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): void
+"putAllComments"(map0: $Map$$Type<string, $UnmodifiableCommentedConfig$CommentNode$$Type>): void
 "remove"<T>(string0: string): T
 "remove"<T>(list0: $List$$Type<string>): T
 "removeAll"(unmodifiableConfig0: $UnmodifiableConfig$$Type): void
@@ -766,10 +766,10 @@ function builder(path0: $Path$$Type, configFormat1: $ConfigFormat$$Type<$Comment
 function builder(file0: $File$$Type): $CommentedFileConfigBuilder
 function builder(string0: string, configFormat1: $ConfigFormat$$Type<$CommentedConfig$$Type>): $CommentedFileConfigBuilder
 function builder(file0: $File$$Type, configFormat1: $ConfigFormat$$Type<$CommentedConfig$$Type>): $CommentedFileConfigBuilder
-function concurrentCopy(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): $CommentedConfig
-function concurrentCopy(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
+function concurrentCopy(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type): $CommentedConfig
+function concurrentCopy(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): $CommentedConfig
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>, configFormat2: $ConfigFormat$$Type<any>): $CommentedConfig
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>): $CommentedConfig
@@ -812,10 +812,10 @@ static "builder"(path0: $Path$$Type, configFormat1: $ConfigFormat$$Type<$Comment
 static "builder"(file0: $File$$Type): $CommentedFileConfigBuilder
 static "builder"(string0: string, configFormat1: $ConfigFormat$$Type<$CommentedConfig$$Type>): $CommentedFileConfigBuilder
 static "builder"(file0: $File$$Type, configFormat1: $ConfigFormat$$Type<$CommentedConfig$$Type>): $CommentedFileConfigBuilder
-static "concurrentCopy"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): $CommentedConfig
-static "concurrentCopy"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
+static "concurrentCopy"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type): $CommentedConfig
+static "concurrentCopy"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): $CommentedConfig
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>, configFormat2: $ConfigFormat$$Type<any>): $CommentedConfig
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>): $CommentedConfig
@@ -884,8 +884,8 @@ export interface $CommentedConfig extends $UnmodifiableCommentedConfig, $Config 
 "clearComments"(): void
 "commentMap"(): $Map<string, string>
 "configFormat"(): $ConfigFormat<any>
-"contains"(string0: string): boolean
 "contains"(list0: $List$$Type<string>): boolean
+"contains"(string0: string): boolean
 "containsComment"(list0: $List$$Type<string>): boolean
 "containsComment"(string0: string): boolean
 "createSubConfig"(): $CommentedConfig
@@ -902,60 +902,60 @@ export interface $CommentedConfig extends $UnmodifiableCommentedConfig, $Config 
 "getCharOrElse"(string0: string, char1: character): character
 "getComment"(string0: string): string
 "getComment"(list0: $List$$Type<string>): string
-"getComments"(): $Map<string, $UnmodifiableCommentedConfig$CommentNode>
 "getComments"(map0: $Map$$Type<string, $UnmodifiableCommentedConfig$CommentNode$$Type>): void
+"getComments"(): $Map<string, $UnmodifiableCommentedConfig$CommentNode>
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): T
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
 "getInt"(string0: string): integer
 "getInt"(list0: $List$$Type<string>): integer
 "getIntOrElse"(list0: $List$$Type<string>, int1: integer): integer
-"getIntOrElse"(string0: string, int1: integer): integer
 "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
 "getIntOrElse"(list0: $List$$Type<string>, intSupplier1: $IntSupplier$$Type): integer
+"getIntOrElse"(string0: string, int1: integer): integer
 "getLong"(list0: $List$$Type<string>): long
 "getLong"(string0: string): long
 "getLongOrElse"(string0: string, long1: long): long
-"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(string0: string, longSupplier1: $LongSupplier$$Type): long
+"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
-"getOptional"<T>(string0: string): $Optional<T>
 "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
+"getOptional"<T>(string0: string): $Optional<T>
 "getOptionalComment"(string0: string): $Optional<string>
 "getOptionalComment"(list0: $List$$Type<string>): $Optional<string>
-"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
+"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
 "getOptionalInt"(list0: $List$$Type<string>): $OptionalInt
 "getOptionalInt"(string0: string): $OptionalInt
 "getOptionalLong"(list0: $List$$Type<string>): $OptionalLong
 "getOptionalLong"(string0: string): $OptionalLong
-"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
 "getOrElse"<T>(string0: string, t1: T): T
-"getRaw"<T>(string0: string): T
+"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
+"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
+"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
 "getRaw"<T>(list0: $List$$Type<string>): T
+"getRaw"<T>(string0: string): T
 "getShort"(string0: string): short
 "getShort"(list0: $List$$Type<string>): short
-"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "getShortOrElse"(string0: string, short1: short): short
+"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "isEmpty"(): boolean
 "isNull"(string0: string): boolean
 "isNull"(list0: $List$$Type<string>): boolean
 "putAll"(unmodifiableConfig0: $UnmodifiableConfig$$Type): void
-"putAllComments"(map0: $Map$$Type<string, $UnmodifiableCommentedConfig$CommentNode$$Type>): void
 "putAllComments"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): void
+"putAllComments"(map0: $Map$$Type<string, $UnmodifiableCommentedConfig$CommentNode$$Type>): void
 "remove"<T>(string0: string): T
 "remove"<T>(list0: $List$$Type<string>): T
 "removeAll"(unmodifiableConfig0: $UnmodifiableConfig$$Type): void
@@ -974,10 +974,10 @@ get "empty"(): boolean
 }
 
 export namespace $CommentedConfig {
-function concurrentCopy(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): $CommentedConfig
-function concurrentCopy(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
+function concurrentCopy(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 function concurrentCopy(unmodifiableConfig0: $UnmodifiableConfig$$Type): $CommentedConfig
+function concurrentCopy(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): $CommentedConfig
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>, configFormat2: $ConfigFormat$$Type<any>): $CommentedConfig
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 function copy(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>): $CommentedConfig
@@ -1002,10 +1002,10 @@ function setInsertionOrderPreserved(boolean0: boolean): void
 function wrap(map0: $Map$$Type<string, any>, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 }
 export abstract class $CommentedConfig$$Static implements $CommentedConfig {
-static "concurrentCopy"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): $CommentedConfig
-static "concurrentCopy"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
+static "concurrentCopy"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 static "concurrentCopy"(unmodifiableConfig0: $UnmodifiableConfig$$Type): $CommentedConfig
+static "concurrentCopy"(unmodifiableCommentedConfig0: $UnmodifiableCommentedConfig$$Type): $CommentedConfig
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>, configFormat2: $ConfigFormat$$Type<any>): $CommentedConfig
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, configFormat1: $ConfigFormat$$Type<any>): $CommentedConfig
 static "copy"(unmodifiableConfig0: $UnmodifiableConfig$$Type, supplier1: $Supplier$$Type<$Map<string, any>>): $CommentedConfig
@@ -1107,10 +1107,10 @@ export namespace $FileNotFoundAction {
 const CREATE_EMPTY: $FileNotFoundAction
 const READ_NOTHING: $FileNotFoundAction
 const THROW_ERROR: $FileNotFoundAction
-function copyData(uRL0: $URL$$Type): $FileNotFoundAction
 function copyData(file0: $File$$Type): $FileNotFoundAction
-function copyData(inputStream0: $InputStream$$Type): $FileNotFoundAction
+function copyData(uRL0: $URL$$Type): $FileNotFoundAction
 function copyData(path0: $Path$$Type): $FileNotFoundAction
+function copyData(inputStream0: $InputStream$$Type): $FileNotFoundAction
 function copyResource(string0: string): $FileNotFoundAction
 }
 export abstract class $FileNotFoundAction$$Static implements $FileNotFoundAction {
@@ -1118,10 +1118,10 @@ static readonly "CREATE_EMPTY": $FileNotFoundAction
 static readonly "READ_NOTHING": $FileNotFoundAction
 static readonly "THROW_ERROR": $FileNotFoundAction
 
-static "copyData"(uRL0: $URL$$Type): $FileNotFoundAction
 static "copyData"(file0: $File$$Type): $FileNotFoundAction
-static "copyData"(inputStream0: $InputStream$$Type): $FileNotFoundAction
+static "copyData"(uRL0: $URL$$Type): $FileNotFoundAction
 static "copyData"(path0: $Path$$Type): $FileNotFoundAction
+static "copyData"(inputStream0: $InputStream$$Type): $FileNotFoundAction
 static "copyResource"(string0: string): $FileNotFoundAction
 }
 }
@@ -1231,9 +1231,9 @@ public "backingMapCreator"(supplier0: $Supplier$$Type<$Map<string, any>>): $Gene
 public "build"(): Result
 public "charset"(charset0: $Charset$$Type): $GenericBuilder<Base, Result>
 public "concurrent"(): $GenericBuilder<Base, Result>
-public "defaultData"(file0: $File$$Type): $GenericBuilder<Base, Result>
 public "defaultData"(uRL0: $URL$$Type): $GenericBuilder<Base, Result>
 public "defaultData"(path0: $Path$$Type): $GenericBuilder<Base, Result>
+public "defaultData"(file0: $File$$Type): $GenericBuilder<Base, Result>
 public "defaultResource"(string0: string): $GenericBuilder<Base, Result>
 public "onFileNotFound"(fileNotFoundAction0: $FileNotFoundAction$$Type): $GenericBuilder<Base, Result>
 public "parsingMode"(parsingMode0: $ParsingMode$$Type): $GenericBuilder<Base, Result>
@@ -1340,8 +1340,8 @@ export interface $UnmodifiableCommentedConfig extends $UnmodifiableConfig {
 "apply"<T>(list0: $List$$Type<string>): T
 "commentMap"(): $Map<string, string>
 "configFormat"(): $ConfigFormat<any>
-"contains"(string0: string): boolean
 "contains"(list0: $List$$Type<string>): boolean
+"contains"(string0: string): boolean
 "containsComment"(list0: $List$$Type<string>): boolean
 "containsComment"(string0: string): boolean
 "entrySet"(): $Set<$UnmodifiableCommentedConfig$Entry>
@@ -1357,54 +1357,54 @@ export interface $UnmodifiableCommentedConfig extends $UnmodifiableConfig {
 "getCharOrElse"(string0: string, char1: character): character
 "getComment"(string0: string): string
 "getComment"(list0: $List$$Type<string>): string
-"getComments"(): $Map<string, $UnmodifiableCommentedConfig$CommentNode>
 "getComments"(map0: $Map$$Type<string, $UnmodifiableCommentedConfig$CommentNode$$Type>): void
+"getComments"(): $Map<string, $UnmodifiableCommentedConfig$CommentNode>
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): T
 "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
-"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
 "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+"getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
 "getInt"(string0: string): integer
 "getInt"(list0: $List$$Type<string>): integer
 "getIntOrElse"(list0: $List$$Type<string>, int1: integer): integer
-"getIntOrElse"(string0: string, int1: integer): integer
 "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
 "getIntOrElse"(list0: $List$$Type<string>, intSupplier1: $IntSupplier$$Type): integer
+"getIntOrElse"(string0: string, int1: integer): integer
 "getLong"(list0: $List$$Type<string>): long
 "getLong"(string0: string): long
 "getLongOrElse"(string0: string, long1: long): long
-"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(string0: string, longSupplier1: $LongSupplier$$Type): long
+"getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
-"getOptional"<T>(string0: string): $Optional<T>
 "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
+"getOptional"<T>(string0: string): $Optional<T>
 "getOptionalComment"(string0: string): $Optional<string>
 "getOptionalComment"(list0: $List$$Type<string>): $Optional<string>
-"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
+"getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
 "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
 "getOptionalInt"(list0: $List$$Type<string>): $OptionalInt
 "getOptionalInt"(string0: string): $OptionalInt
 "getOptionalLong"(list0: $List$$Type<string>): $OptionalLong
 "getOptionalLong"(string0: string): $OptionalLong
-"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
-"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
 "getOrElse"<T>(string0: string, t1: T): T
-"getRaw"<T>(string0: string): T
+"getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
+"getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
+"getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
 "getRaw"<T>(list0: $List$$Type<string>): T
+"getRaw"<T>(string0: string): T
 "getShort"(string0: string): short
 "getShort"(list0: $List$$Type<string>): short
-"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "getShortOrElse"(string0: string, short1: short): short
+"getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 "isEmpty"(): boolean
 "isNull"(string0: string): boolean
 "isNull"(list0: $List$$Type<string>): boolean
@@ -1458,48 +1458,48 @@ public "getCharOrElse"(list0: $List$$Type<string>, char1: character): character
 public "getCharOrElse"(string0: string, char1: character): character
 public "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): T
 public "getEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
-public "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 public "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): T
-public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-public "getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
-public "getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
-public "getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+public "getEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): T
 public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
-public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
-public "getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+public "getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
 public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T): T
+public "getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, t1: T, enumGetMethod2: $EnumGetMethod$$Type): T
+public "getEnumOrElse"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, supplier2: $Supplier$$Type<T>): T
+public "getEnumOrElse"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type, supplier3: $Supplier$$Type<T>): T
+public "getEnumOrElse"<T extends $Enum<T>>(string0: string, t1: T): T
 public "getInt"(string0: string): integer
 public "getInt"(list0: $List$$Type<string>): integer
 public "getIntOrElse"(list0: $List$$Type<string>, int1: integer): integer
-public "getIntOrElse"(string0: string, int1: integer): integer
 public "getIntOrElse"(string0: string, intSupplier1: $IntSupplier$$Type): integer
 public "getIntOrElse"(list0: $List$$Type<string>, intSupplier1: $IntSupplier$$Type): integer
+public "getIntOrElse"(string0: string, int1: integer): integer
 public "getLong"(list0: $List$$Type<string>): long
 public "getLong"(string0: string): long
 public "getLongOrElse"(string0: string, long1: long): long
-public "getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 public "getLongOrElse"(string0: string, longSupplier1: $LongSupplier$$Type): long
+public "getLongOrElse"(list0: $List$$Type<string>, long1: long): long
 public "getLongOrElse"(list0: $List$$Type<string>, longSupplier1: $LongSupplier$$Type): long
-public "getOptional"<T>(string0: string): $Optional<T>
 public "getOptional"<T>(list0: $List$$Type<string>): $Optional<T>
-public "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
+public "getOptional"<T>(string0: string): $Optional<T>
 public "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
+public "getOptionalEnum"<T extends $Enum<T>>(list0: $List$$Type<string>, class1: $Class$$Type<T>): $Optional<T>
 public "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>): $Optional<T>
 public "getOptionalEnum"<T extends $Enum<T>>(string0: string, class1: $Class$$Type<T>, enumGetMethod2: $EnumGetMethod$$Type): $Optional<T>
 public "getOptionalInt"(list0: $List$$Type<string>): $OptionalInt
 public "getOptionalInt"(string0: string): $OptionalInt
 public "getOptionalLong"(list0: $List$$Type<string>): $OptionalLong
 public "getOptionalLong"(string0: string): $OptionalLong
-public "getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
-public "getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
-public "getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
 public "getOrElse"<T>(string0: string, t1: T): T
+public "getOrElse"<T>(list0: $List$$Type<string>, t1: T): T
+public "getOrElse"<T>(list0: $List$$Type<string>, supplier1: $Supplier$$Type<T>): T
+public "getOrElse"<T>(string0: string, supplier1: $Supplier$$Type<T>): T
 public "getRaw"<T>(list0: $List$$Type<string>): T
 public "getRaw"<T>(string0: string): T
 public "getShort"(string0: string): short
 public "getShort"(list0: $List$$Type<string>): short
-public "getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 public "getShortOrElse"(string0: string, short1: short): short
+public "getShortOrElse"(list0: $List$$Type<string>, short1: short): short
 public "isEmpty"(): boolean
 public "isNull"(string0: string): boolean
 public "isNull"(list0: $List$$Type<string>): boolean

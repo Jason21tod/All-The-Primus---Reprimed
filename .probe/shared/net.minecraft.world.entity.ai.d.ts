@@ -10,7 +10,7 @@ static readonly "TEMPTATION_RANGE": integer
 
 constructor(ingredient0: $Ingredient$$Type)
 
-public "modifyExpressionValue$icj000$quark$findTroughs"(object0: any, serverLevel1: $ServerLevel$$Type, pathfinderMob2: $PathfinderMob$$Type): any
+public "modifyExpressionValue$icm000$quark$findTroughs"(object0: any, serverLevel1: $ServerLevel$$Type, pathfinderMob2: $PathfinderMob$$Type): any
 }
 }
 
@@ -45,7 +45,7 @@ public "getModifierValue"(attribute0: $Attribute$$Type, uUID1: $UUID$$Type): dou
 public "getOwner"(): $LivingEntity
 public "getSyncableAttributes"(): $Collection<$AttributeInstance>
 public "getValue"(attribute0: $Attribute$$Type): double
-public "handler$dcf000$apoth_attrModifiedEvent"(attributeInstance0: $AttributeInstance$$Type, callbackInfo1: $CallbackInfo$$Type): void
+public "handler$dci000$apoth_attrModifiedEvent"(attributeInstance0: $AttributeInstance$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public "hasAttribute"(attribute0: $Attribute$$Type): boolean
 public "hasAttribute"(holder0: $Holder$$Type<$Attribute$$Type>): boolean
 public "hasModifier"(attribute0: $Attribute$$Type, uUID1: $UUID$$Type): boolean
@@ -444,8 +444,8 @@ public "decay"(): void
 public "getCountForType"(gossipType0: $GossipType$$Type, doublePredicate1: $DoublePredicate$$Type): long
 public "getGossipEntries"(): $Map<$UUID, $Object2IntMap<$GossipType>>
 public "getReputation"(uUID0: $UUID$$Type, predicate1: $Predicate$$Type<$GossipType$$Type>): integer
-public "remove"(uUID0: $UUID$$Type, gossipType1: $GossipType$$Type): void
 public "remove"(uUID0: $UUID$$Type, gossipType1: $GossipType$$Type, int2: integer): void
+public "remove"(uUID0: $UUID$$Type, gossipType1: $GossipType$$Type): void
 public "remove"(gossipType0: $GossipType$$Type): void
 public "store"<T>(dynamicOps0: $DynamicOps$$Type<T>): T
 public "transferFrom"(gossipContainer0: $GossipContainer$$Type, randomSource1: $RandomSource$$Type, int2: integer): void
@@ -702,11 +702,11 @@ public "getWantedX"(): double
 public "getWantedY"(): double
 public "getWantedZ"(): double
 public "isLookingAtTarget"(): boolean
-public "setLookAt"(entity0: $Entity$$Type, float1: float, float2: float): void
 public "setLookAt"(double0: double, double1: double, double2: double): void
-public "setLookAt"(entity0: $Entity$$Type): void
-public "setLookAt"(double0: double, double1: double, double2: double, float3: float, float4: float): void
+public "setLookAt"(entity0: $Entity$$Type, float1: float, float2: float): void
 public "setLookAt"(vec30: $Vec3$$Type): void
+public "setLookAt"(double0: double, double1: double, double2: double, float3: float, float4: float): void
+public "setLookAt"(entity0: $Entity$$Type): void
 public "tick"(): void
 get "lookAtCooldown"(): integer
 set "lookAtCooldown"(value: integer)
@@ -718,8 +718,8 @@ get "wantedX"(): double
 get "wantedY"(): double
 get "wantedZ"(): double
 get "lookingAtTarget"(): boolean
-set "lookAt"(value: $Entity$$Type)
 set "lookAt"(value: $Vec3$$Type)
+set "lookAt"(value: $Entity$$Type)
 }
 }
 
@@ -836,8 +836,8 @@ constructor()
 declare module "net.minecraft.world.entity.ai.navigation.PathNavigation" {
 import { $CallbackInfo$$Type } from "org.spongepowered.asm.mixin.injection.callback.CallbackInfo"
 import { $Path, $Path$$Type } from "net.minecraft.world.level.pathfinder.Path"
-import { $Entity$$Type } from "net.minecraft.world.entity.Entity"
 import { $Stream$$Type } from "java.util.stream.Stream"
+import { $Entity$$Type } from "net.minecraft.world.entity.Entity"
 import { $BlockPos, $BlockPos$$Type } from "net.minecraft.core.BlockPos"
 import { $BlockPathTypes$$Type } from "net.minecraft.world.level.pathfinder.BlockPathTypes"
 import { $NodeEvaluator } from "net.minecraft.world.level.pathfinder.NodeEvaluator"
@@ -851,25 +851,25 @@ constructor(mob0: $Mob$$Type, level1: $Level$$Type)
 
 public "canCutCorner"(blockPathTypes0: $BlockPathTypes$$Type): boolean
 public "canFloat"(): boolean
-public "createPath"(entity0: $Entity$$Type, int1: integer): $Path
-public "createPath"(blockPos0: $BlockPos$$Type, int1: integer, int2: integer): $Path
 public "createPath"(stream0: $Stream$$Type<$BlockPos$$Type>, int1: integer): $Path
 public "createPath"(set0: $Set$$Type<$BlockPos$$Type>, int1: integer): $Path
-public "createPath"(double0: double, double1: double, double2: double, int3: integer): $Path
+public "createPath"(blockPos0: $BlockPos$$Type, int1: integer, int2: integer): $Path
 public "createPath"(blockPos0: $BlockPos$$Type, int1: integer): $Path
+public "createPath"(entity0: $Entity$$Type, int1: integer): $Path
+public "createPath"(double0: double, double1: double, double2: double, int3: integer): $Path
 public "getMaxDistanceToWaypoint"(): float
 public "getNodeEvaluator"(): $NodeEvaluator
 public "getPath"(): $Path
 public "getTargetPos"(): $BlockPos
-public "handler$dhn000$shouldRecomputePath"(blockPos0: $BlockPos$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
-public "handler$dho000$recomputePath"(callbackInfo0: $CallbackInfo$$Type): void
+public "handler$dia000$shouldRecomputePath"(blockPos0: $BlockPos$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$dib000$recomputePath"(callbackInfo0: $CallbackInfo$$Type): void
 public "isDone"(): boolean
 public "isInProgress"(): boolean
 public "isStableDestination"(blockPos0: $BlockPos$$Type): boolean
 public "isStuck"(): boolean
-public "moveTo"(path0: $Path$$Type, double1: double): boolean
-public "moveTo"(entity0: $Entity$$Type, double1: double): boolean
 public "moveTo"(double0: double, double1: double, double2: double, double3: double): boolean
+public "moveTo"(entity0: $Entity$$Type, double1: double): boolean
+public "moveTo"(path0: $Path$$Type, double1: double): boolean
 public "recomputePath"(): void
 public "resetMaxVisitedNodesMultiplier"(): void
 public "setCanFloat"(boolean0: boolean): void
@@ -928,8 +928,8 @@ public "toBaseComponent"(double0: double, double1: double, boolean2: boolean, to
 public static "toBaseComponent"(attribute0: $Attribute$$Type, double1: double, double2: double, boolean3: boolean, tooltipFlag4: $TooltipFlag$$Type): $MutableComponent
 public static "toComponent"(attribute0: $Attribute$$Type, attributeModifier1: $AttributeModifier$$Type, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
 public "toComponent"(attributeModifier0: $AttributeModifier$$Type, tooltipFlag1: $TooltipFlag$$Type): $MutableComponent
-public static "toValueComponent"(attribute0: $Attribute$$Type, operation1: $AttributeModifier$Operation$$Type, double2: double, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
 public "toValueComponent"(operation0: $AttributeModifier$Operation$$Type, double1: double, tooltipFlag2: $TooltipFlag$$Type): $MutableComponent
+public static "toValueComponent"(attribute0: $Attribute$$Type, operation1: $AttributeModifier$Operation$$Type, double2: double, tooltipFlag3: $TooltipFlag$$Type): $MutableComponent
 get "baseUUID"(): $UUID
 get "maxValue"(): double
 get "minValue"(): double

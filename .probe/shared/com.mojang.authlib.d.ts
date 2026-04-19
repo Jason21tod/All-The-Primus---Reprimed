@@ -621,8 +621,8 @@ public "createMinecraftSessionService"(): $MinecraftSessionService
 public "createProfileRepository"(): $GameProfileRepository
 public "createUserAuthentication"(agent0: $Agent$$Type): $UserAuthentication
 public "getProxy"(): $Proxy
-public "performGetRequest"(uRL0: $URL$$Type, string1: string): string
 public "performGetRequest"(uRL0: $URL$$Type): string
+public "performGetRequest"(uRL0: $URL$$Type, string1: string): string
 public "performPostRequest"(uRL0: $URL$$Type, string1: string, string2: string): string
 get "proxy"(): $Proxy
 }

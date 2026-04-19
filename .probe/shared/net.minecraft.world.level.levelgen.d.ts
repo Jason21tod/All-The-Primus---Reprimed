@@ -152,7 +152,6 @@ public "blockY"(): integer
 public "blockZ"(): integer
 public "fillAllDirectly"(double0s: double[], densityFunction1: $DensityFunction$$Type): void
 public static "forChunk"(chunkAccess0: $ChunkAccess$$Type, randomState1: $RandomState$$Type, beardifierOrMarker2: $DensityFunctions$BeardifierOrMarker$$Type, noiseGeneratorSettings3: $NoiseGeneratorSettings$$Type, fluidPicker4: $Aquifer$FluidPicker$$Type, blender5: $Blender$$Type): $NoiseChunk
-public "forIndex"(int0: integer): $NoiseChunk
 public "getBlender"(): $Blender
 public "initializeForFirstCellX"(): void
 public "irons_spellbooks$getAquifierStatus"(): $IExtendedNoiseChunk$AquifierNuke

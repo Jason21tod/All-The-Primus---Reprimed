@@ -34,6 +34,7 @@ constructor(o: $JsonObject$$Type)
 
 public "addCondition"(o: $JsonObject$$Type): $LootTableEntry
 public "addConditionalFunction"(func: $Consumer$$Type<$ConditionalFunction$$Type>): $FunctionContainer
+public "addFunction"(o: $JsonObject$$Type): $LootTableEntry
 public "copyName"(source: $CopyNameFunction$NameSource$$Type): $FunctionContainer
 public "count"(count: $NumberProvider$$Type): $FunctionContainer
 public "damage"(damage: $NumberProvider$$Type): $FunctionContainer
@@ -200,13 +201,13 @@ readonly "functions": $JsonArray
 
 constructor()
 
+public "addCondition"(o: $JsonObject$$Type): $LootBuilderPool
 public "addConditionalFunction"(func: $Consumer$$Type<$ConditionalFunction$$Type>): $FunctionContainer
 public "addEmpty"(weight: integer): $LootTableEntry
 public "addEntry"(json: $JsonObject$$Type): $LootTableEntry
-public "addFunction"(o: $JsonObject$$Type): $LootBuilderPool
-public "addItem"(item: $ItemStack$$Type, weight: integer): $LootTableEntry
 public "addItem"(item: $ItemStack$$Type, weight: integer, count: $NumberProvider$$Type): $LootTableEntry
 public "addItem"(item: $ItemStack$$Type): $LootTableEntry
+public "addItem"(item: $ItemStack$$Type, weight: integer): $LootTableEntry
 public "addLootTable"(table: $ResourceLocation$$Type): $LootTableEntry
 public "addTag"(tag: string, expand: boolean): $LootTableEntry
 public "copyName"(source: $CopyNameFunction$NameSource$$Type): $FunctionContainer

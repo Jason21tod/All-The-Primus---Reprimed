@@ -511,8 +511,8 @@ public "getAllTopLevelAnimationsByVanillaPartName"(): $LinkedHashMap<string, $Li
 public "getCustomTexture"(): $ResourceLocation
 public "getMobModelIDInfo"(): $EMFModel_ID
 public "prepare"(directoryContext: $EMFDirectoryHandler$$Type, mobModelIDInfo: $EMFModel_ID$$Type): void
-public "validateJemTexture"(textureIn: string): $ResourceLocation
 public "validateJemTexture"(textureIn: string, canRemoveRedundancy: boolean): $ResourceLocation
+public "validateJemTexture"(textureIn: string): $ResourceLocation
 public "validateResourcePathAndExists"(pathIn: string, fileTypeExtension: string): $ResourceLocation
 get "models"(): $LinkedList<$EMFPartData>
 set "models"(value: $LinkedList$$Type<$EMFPartData$$Type>)
@@ -536,9 +536,9 @@ export class $EMFModel_ID implements $Comparable<$EMFModel_ID> {
 constructor(both: string, mapId: string)
 constructor(both: string)
 
-public "addFallbackModel"(fileName: string): $EMFModel_ID
 public "addFallbackModel"(namespace: string, fileName: string): $EMFModel_ID
 public "addFallbackModel"(namespace: string, fileName: string, first: boolean): $EMFModel_ID
+public "addFallbackModel"(fileName: string): $EMFModel_ID
 public "areBothSame"(): boolean
 public "compareTo"(o: $EMFModel_ID$$Type): integer
 public "finishAndPrepAutomatedFallbacks"(): void
@@ -550,10 +550,10 @@ public "getNextFallbackModel"(): $EMFModel_ID
 public "getfileName"(): string
 public "hasFallbackModels"(): boolean
 public "pushNewMainModelAddingOldAsFallback"(fileName: string): $EMFModel_ID
-public "pushNewMainModelAndMapIdAddingOldAsFallback"(fileName: string, mapId: string): $EMFModel_ID
 public "pushNewMainModelAndMapIdAddingOldAsFallback"(both: string): $EMFModel_ID
-public "setBoth"(fileName: string, mapId: string): $EMFModel_ID
+public "pushNewMainModelAndMapIdAddingOldAsFallback"(fileName: string, mapId: string): $EMFModel_ID
 public "setBoth"(both: string): $EMFModel_ID
+public "setBoth"(fileName: string, mapId: string): $EMFModel_ID
 public "setFileName"(fileName: string): $EMFModel_ID
 public "setMapIdAndAddFallbackModel"(mapId: string, fileName: string): $EMFModel_ID
 public "setMapIdAndAddFallbackModel"(both: string): $EMFModel_ID
@@ -590,13 +590,14 @@ import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resour
 import { $List$$Type } from "java.util.List"
 import { $ModelPart$Cube$$Type } from "net.minecraft.client.model.geom.ModelPart$Cube"
 import { $ModelPartData } from "me.jellysquid.mods.sodium.client.render.immediate.model.ModelPartData"
+import { $EMFModelPartAccessor } from "win.demistorm.visual_health.client.mixin.EMFModelPartAccessor"
 import { $Map$$Type } from "java.util.Map"
 import { $HashMap } from "java.util.HashMap"
 import { $VertexConsumer$$Type } from "com.mojang.blaze3d.vertex.VertexConsumer"
 import { $ModelPart, $ModelPart$$Type } from "net.minecraft.client.model.geom.ModelPart"
 import { $PoseStack$$Type } from "com.mojang.blaze3d.vertex.PoseStack"
 
-export class $EMFModelPart extends $ModelPart {
+export class $EMFModelPart extends $ModelPart implements $EMFModelPartAccessor {
 constructor(cuboids: $List$$Type<$ModelPart$Cube$$Type>, children: $Map$$Type<string, $ModelPart$$Type>)
 
 public static "from"(modelPart0: $ModelPart$$Type): $ModelPartData

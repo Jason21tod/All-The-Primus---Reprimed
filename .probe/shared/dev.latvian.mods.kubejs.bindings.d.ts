@@ -260,8 +260,8 @@ function queueIO(runnable: $Runnable$$Type): void
 function randomOf(random: $Random$$Type, objects: $Collection$$Type<any>): any
 function regex(pattern: string, flags: integer): $Pattern
 function regex(s: any): $Pattern
-function rollChestLoot(id: $ResourceLocation$$Type, entity: $Entity$$Type): $List<$ItemStack>
 function rollChestLoot(id: $ResourceLocation$$Type): $List<$ItemStack>
+function rollChestLoot(id: $ResourceLocation$$Type, entity: $Entity$$Type): $List<$ItemStack>
 function runAsync(task: $Runnable$$Type): $CompletableFuture<void>
 function snakeCaseToCamelCase(string: string): string
 function snakeCaseToTitleCase(string: string): string
@@ -330,10 +330,10 @@ static "randomOf"(random: $Random$$Type, objects: $Collection$$Type<any>): any
 static "regex"(pattern: string, flags: integer): $Pattern
 /** Returns a regex pattern of the input */
 static "regex"(s: any): $Pattern
-/** Returns the results of rolling the specified loot table with the entity as a parameter (it does not have to be a chest loot table) */
-static "rollChestLoot"(id: $ResourceLocation$$Type, entity: $Entity$$Type): $List<$ItemStack>
 /** Returns the results of rolling the specified loot table (it does not have to be a chest loot table) */
 static "rollChestLoot"(id: $ResourceLocation$$Type): $List<$ItemStack>
+/** Returns the results of rolling the specified loot table with the entity as a parameter (it does not have to be a chest loot table) */
+static "rollChestLoot"(id: $ResourceLocation$$Type, entity: $Entity$$Type): $List<$ItemStack>
 /** Runs the provided runnable function in KubeJS' background thread and returns its CompletableFuture */
 static "runAsync"(task: $Runnable$$Type): $CompletableFuture<void>
 /** Returns the provided snake_case_string in camelCase */

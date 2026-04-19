@@ -220,8 +220,8 @@ public "ceil"(): $Unit
 public "clamp"(a: $Unit$$Type, b: $Unit$$Type): $Unit
 public "cos"(): $Unit
 public "deg"(): $Unit
-public "div"(other: $Unit$$Type): $Unit
 public "div"(value: double): $Unit
+public "div"(other: $Unit$$Type): $Unit
 public "divSet"(unit: $Unit$$Type): $Unit
 public "eq"(other: $Unit$$Type): $Unit
 public "floor"(): $Unit

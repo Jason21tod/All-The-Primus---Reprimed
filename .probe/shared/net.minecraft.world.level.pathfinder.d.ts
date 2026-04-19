@@ -193,8 +193,8 @@ public "canOpenDoors"(): boolean
 public "canPassDoors"(): boolean
 public "canWalkOverFences"(): boolean
 public "done"(): void
-public "getBlockPathType"(blockGetter0: $BlockGetter$$Type, int1: integer, int2: integer, int3: integer, mob4: $Mob$$Type): $BlockPathTypes
 public "getBlockPathType"(blockGetter0: $BlockGetter$$Type, int1: integer, int2: integer, int3: integer): $BlockPathTypes
+public "getBlockPathType"(blockGetter0: $BlockGetter$$Type, int1: integer, int2: integer, int3: integer, mob4: $Mob$$Type): $BlockPathTypes
 public "getGoal"(double0: double, double1: double, double2: double): $Target
 public "getNeighbors"(node0s: $Node$$Type[], node1: $Node$$Type): integer
 public "getStart"(): $Node

@@ -186,7 +186,7 @@ constructor(rarity0: $Enchantment$Rarity$$Type, ...equipmentSlot1s: $EquipmentSl
 
 public "allowedInCreativeTab"(item0: $Item$$Type, set1: $Set$$Type<$EnchantmentCategory$$Type>): boolean
 public "getDamageBonus"(int0: integer, mobType1: $MobType$$Type, itemStack2: $ItemStack$$Type): float
-public "handler$ipl000$onCanEnchant"(itemStack0: $ItemStack$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
+public "handler$ipo000$onCanEnchant"(itemStack0: $ItemStack$$Type, callbackInfoReturnable1: $CallbackInfoReturnable$$Type): void
 public "vMinus$update"(): void
 }
 }
@@ -382,7 +382,7 @@ constructor(rarity0: $Enchantment$Rarity$$Type, ...equipmentSlot1s: $EquipmentSl
 public "allowedInCreativeTab"(item0: $Item$$Type, set1: $Set$$Type<$EnchantmentCategory$$Type>): boolean
 public "getDamageBonus"(int0: integer, mobType1: $MobType$$Type, itemStack2: $ItemStack$$Type): float
 public static "getSweepingDamageRatio"(int0: integer): float
-public "handler$enc000$getMaxLevel_DisableSweeping"(cir: $CallbackInfoReturnable$$Type): void
+public "handler$enf000$getMaxLevel_DisableSweeping"(cir: $CallbackInfoReturnable$$Type): void
 public "vMinus$update"(): void
 }
 }

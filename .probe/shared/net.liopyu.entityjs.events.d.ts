@@ -505,17 +505,6 @@ public "arbitraryTargetGoal"(priority: integer, goalSupplier: $Function$$Type<T,
  */
 public "hurtByTarget"(priority: integer, toIgnoreDamage: $List$$Type<$Class$$Type<any>>, alertOthers: boolean, toIgnoreAlert: $List$$Type<$Class$$Type<any>>): void
 /**
- * Adds a `NearestAttackableTargetGoal` to the entity
- * 
- * @param priority - The priority of the goal
- * @param targetClass - The entity class that should be targeted
- * @param randomInterval - The interval at which the goal amy be 'refreshed'
- * @param mustSee - If the mob must have line of sight at all times
- * @param mustReach - If the mob must be able to reach the target to attack
- * @param targetConditions - The conditions under which the targeted entity will be targeted, may be null
- */
-public "nearestAttackableTarget"<E extends $LivingEntity>(priority: integer, targetClass: $Class$$Type<E>, randomInterval: integer, mustSee: boolean, mustReach: boolean, targetConditions: $Predicate$$Type<$LivingEntity$$Type>): void
-/**
  * Adds a `NearestAttackableTargetGoalJS` to the entity
  * 
  * @param priority - The priority of the goal
@@ -527,6 +516,17 @@ public "nearestAttackableTarget"<E extends $LivingEntity>(priority: integer, tar
  * @param radius - The AABB radius to check for a potential target
  */
 public "nearestAttackableTarget"<E extends $LivingEntity>(priority: integer, targetClass: $Class$$Type<E>, randomInterval: integer, mustSee: boolean, mustReach: boolean, targetConditions: $Predicate$$Type<$LivingEntity$$Type>, radius: $AABB$$Type): void
+/**
+ * Adds a `NearestAttackableTargetGoal` to the entity
+ * 
+ * @param priority - The priority of the goal
+ * @param targetClass - The entity class that should be targeted
+ * @param randomInterval - The interval at which the goal amy be 'refreshed'
+ * @param mustSee - If the mob must have line of sight at all times
+ * @param mustReach - If the mob must be able to reach the target to attack
+ * @param targetConditions - The conditions under which the targeted entity will be targeted, may be null
+ */
+public "nearestAttackableTarget"<E extends $LivingEntity>(priority: integer, targetClass: $Class$$Type<E>, randomInterval: integer, mustSee: boolean, mustReach: boolean, targetConditions: $Predicate$$Type<$LivingEntity$$Type>): void
 /**
  * Adds a `NonTameRandomTargetGoal` to the entity, only applicable to **tamable** mobs
  * 

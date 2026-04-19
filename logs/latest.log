@@ -14203,3 +14203,48 @@ com.google.gson.JsonSyntaxException: Missing sbCaps, expected to find a string
 [19Apr2026 08:31:02.821] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
 [19Apr2026 08:31:02.834] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Novo mundo]'/minecraft:overworld
 [19Apr2026 08:31:02.846] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Novo mundo]'/irons_spellbooks:pocket_dimension
+[19Apr2026 08:35:03.403] [Render thread/INFO] [AllTheLeaks/]: Listing events...
+[19Apr2026 08:35:03.403] [Render thread/INFO] [AllTheLeaks/]: World join: 2
+[19Apr2026 08:35:03.403] [Render thread/INFO] [AllTheLeaks/]:   Singleplayer: 2
+[19Apr2026 08:35:03.403] [Render thread/INFO] [AllTheLeaks/]:   Multiplayer: 0
+[19Apr2026 08:35:03.403] [Render thread/INFO] [AllTheLeaks/]: Client Level Updates: 5
+[19Apr2026 08:35:03.403] [Render thread/INFO] [AllTheLeaks/]: Client Player Logout: 3
+[19Apr2026 08:35:03.403] [Render thread/INFO] [AllTheLeaks/]: Server Player Logout: 1
+[19Apr2026 08:35:03.403] [Render thread/INFO] [AllTheLeaks/]: Server Stopped: 1
+[19Apr2026 08:35:03.403] [Render thread/INFO] [AllTheLeaks/]: Listing memory leaks so far...
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: B: 2472MB / C: 3320MB / Diff: +848MB
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: Memory Leaks detected: (/atl force_refresh to update)
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: | ChunkAccess:
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: |- LevelChunk (minecraft): 601
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: | Level:
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: |- ClientLevel (minecraft): 1
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: |- ServerLevel (minecraft): 2
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: | Player:
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: |- ServerPlayer (minecraft): 1
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: |- LocalPlayer (minecraft): 1
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: | MinecraftServer:
+[19Apr2026 08:35:03.404] [Render thread/INFO] [AllTheLeaks/]: |- IntegratedServer (minecraft): 1
+[19Apr2026 08:42:22.722] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[19Apr2026 08:42:22.733] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Novo mundo]'/minecraft:overworld
+[19Apr2026 08:42:22.740] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Novo mundo]'/irons_spellbooks:pocket_dimension
+[19Apr2026 08:45:03.394] [Render thread/INFO] [AllTheLeaks/]: Listing events...
+[19Apr2026 08:45:03.394] [Render thread/INFO] [AllTheLeaks/]: World join: 2
+[19Apr2026 08:45:03.394] [Render thread/INFO] [AllTheLeaks/]:   Singleplayer: 2
+[19Apr2026 08:45:03.394] [Render thread/INFO] [AllTheLeaks/]:   Multiplayer: 0
+[19Apr2026 08:45:03.394] [Render thread/INFO] [AllTheLeaks/]: Client Level Updates: 5
+[19Apr2026 08:45:03.394] [Render thread/INFO] [AllTheLeaks/]: Client Player Logout: 3
+[19Apr2026 08:45:03.394] [Render thread/INFO] [AllTheLeaks/]: Server Player Logout: 1
+[19Apr2026 08:45:03.394] [Render thread/INFO] [AllTheLeaks/]: Server Stopped: 1
+[19Apr2026 08:45:03.394] [Render thread/INFO] [AllTheLeaks/]: Listing memory leaks so far...
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: B: 2472MB / C: 4944MB / Diff: +2472MB
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: Memory Leaks detected: (/atl force_refresh to update)
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: | ChunkAccess:
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: |- LevelChunk (minecraft): 601
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: | Level:
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: |- ClientLevel (minecraft): 1
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: |- ServerLevel (minecraft): 2
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: | Player:
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: |- ServerPlayer (minecraft): 1
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: |- LocalPlayer (minecraft): 1
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: | MinecraftServer:
+[19Apr2026 08:45:03.395] [Render thread/INFO] [AllTheLeaks/]: |- IntegratedServer (minecraft): 1

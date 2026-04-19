@@ -546,7 +546,6 @@ readonly "spawnProtection": integer
 
 constructor(boolean0: boolean, boolean1: boolean, boolean2: boolean, boolean3: boolean, int4: integer, boolean5: boolean, int6: integer, int7: integer, boolean8: boolean, string9: string)
 
-public "clone"(): $RealmsWorldOptions
 public static "createDefaults"(): $RealmsWorldOptions
 public static "createEmptyDefaults"(): $RealmsWorldOptions
 public "getDefaultSlotName"(int0: integer): string

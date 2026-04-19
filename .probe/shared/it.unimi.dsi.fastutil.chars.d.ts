@@ -78,6 +78,8 @@ export interface $Char2ShortFunction extends $Function$0<character, short>, $Int
 "put"(character0: character, short1: short): short
 "put"(char0: character, short1: short): short
 "remove"(char0: character): short
+/** @deprecated */
+"remove"(object0: any): short
 "size"(): integer
 }
 
@@ -169,6 +171,8 @@ export interface $Char2ByteFunction extends $Function$0<character, byte>, $IntUn
 "put"(character0: character, byte1: byte): byte
 "put"(char0: character, byte1: byte): byte
 "remove"(char0: character): byte
+/** @deprecated */
+"remove"(object0: any): byte
 "size"(): integer
 }
 
@@ -258,6 +262,8 @@ export interface $Char2FloatFunction extends $Function$0<character, float>, $Int
 "put"(character0: character, float1: float): float
 "put"(char0: character, float1: float): float
 "remove"(char0: character): float
+/** @deprecated */
+"remove"(object0: any): float
 "size"(): integer
 }
 
@@ -347,6 +353,8 @@ export interface $Char2DoubleFunction extends $Function$0<character, double>, $I
 "put"(character0: character, double1: double): double
 "put"(char0: character, double1: double): double
 "remove"(char0: character): double
+/** @deprecated */
+"remove"(object0: any): double
 "size"(): integer
 }
 
@@ -423,20 +431,20 @@ export interface $Char2ObjectFunction<V = any> extends $Function$0<character, V>
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(char0: character): V
+"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "put"(character0: character, v1: V): V
 "put"(char0: character, v1: V): V
-"remove"(char0: character): V
 /** @deprecated */
 "remove"(object0: any): V
+"remove"(char0: character): V
 "size"(): integer
 }
 
@@ -501,8 +509,8 @@ export interface $Char2CharFunction extends $Function<character, character>, $In
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(): character
 "defaultReturnValue"(char0: character): void
+"defaultReturnValue"(): character
 "get"(char0: character): character
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
@@ -589,20 +597,20 @@ export interface $Char2ReferenceFunction<V = any> extends $Function$0<character,
 /** @deprecated */
 "containsKey"(object0: any): boolean
 "containsKey"(char0: character): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(char0: character): V
+"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "getOrDefault"(object0: any, v1: V): V
-"getOrDefault"(char0: character, v1: V): V
 /** @deprecated */
 "put"(character0: character, v1: V): V
 "put"(char0: character, v1: V): V
-"remove"(char0: character): V
 /** @deprecated */
 "remove"(object0: any): V
+"remove"(char0: character): V
 "size"(): integer
 }
 
@@ -694,6 +702,8 @@ export interface $Char2IntFunction extends $Function$0<character, integer>, $Int
 "put"(character0: character, integer1: integer): integer
 "put"(char0: character, int1: integer): integer
 "remove"(char0: character): integer
+/** @deprecated */
+"remove"(object0: any): integer
 "size"(): integer
 }
 
@@ -783,6 +793,8 @@ export interface $Char2LongFunction extends $Function$0<character, long>, $IntTo
 "put"(character0: character, long1: long): long
 "put"(char0: character, long1: long): long
 "remove"(char0: character): long
+/** @deprecated */
+"remove"(object0: any): long
 "size"(): integer
 }
 
@@ -862,20 +874,22 @@ export interface $Char2BooleanFunction extends $Function$0<character, boolean>, 
 "containsKey"(char0: character): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): boolean
 "defaultReturnValue"(boolean0: boolean): void
+"defaultReturnValue"(): boolean
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(char0: character): boolean
-"getOrDefault"(char0: character, boolean1: boolean): boolean
 /** @deprecated */
 "getOrDefault"(object0: any, boolean1: boolean): boolean
+"getOrDefault"(char0: character, boolean1: boolean): boolean
 "negate"(): $IntPredicate
 "or"(intPredicate0: $IntPredicate$$Type): $IntPredicate
 /** @deprecated */
 "put"(character0: character, boolean1: boolean): boolean
 "put"(char0: character, boolean1: boolean): boolean
 "remove"(char0: character): boolean
+/** @deprecated */
+"remove"(object0: any): boolean
 "size"(): integer
 /** @deprecated */
 "test"(int0: integer): boolean

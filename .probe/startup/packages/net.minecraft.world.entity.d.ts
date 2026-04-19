@@ -287,7 +287,7 @@ import { $Mule } from "net.minecraft.world.entity.animal.horse.Mule"
 import { $Pillager } from "net.minecraft.world.entity.monster.Pillager"
 import { $AABB } from "net.minecraft.world.phys.AABB"
 import { $WitherSkull } from "net.minecraft.world.entity.projectile.WitherSkull"
-import { $EntityDefinition, $EntityDefinition$$Type } from "net.lixir.vminus.api.registry.definition.EntityDefinition"
+import { $EntityDefinition$$Type } from "net.lixir.vminus.api.registry.definition.EntityDefinition"
 import { $Goat } from "net.minecraft.world.entity.animal.goat.Goat"
 import { $WitherBoss } from "net.minecraft.world.entity.boss.wither.WitherBoss"
 import { $Vex } from "net.minecraft.world.entity.monster.Vex"
@@ -596,9 +596,9 @@ public "canSummon"(): boolean
 public static "cast"<T extends $BlockEntity>(entityType: $BlockEntityType$$Type<T>): $DynamicLightHandlerHolder<T>
 public static "cast"<T extends $Entity>(entityType: $EntityType$$Type<T>): $DynamicLightHandlerHolder<T>
 public "clientTrackingRange"(): integer
+public "create"(serverLevel0: $ServerLevel$$Type, compoundTag1: $CompoundTag$$Type, consumer2: $Consumer$$Type<T>, blockPos3: $BlockPos$$Type, mobSpawnType4: $MobSpawnType$$Type, boolean5: boolean, boolean6: boolean): T
 public static "create"(compoundTag0: $CompoundTag$$Type, level1: $Level$$Type): $Optional<$Entity>
 public "create"(level0: $Level$$Type): T
-public "create"(serverLevel0: $ServerLevel$$Type, compoundTag1: $CompoundTag$$Type, consumer2: $Consumer$$Type<T>, blockPos3: $BlockPos$$Type, mobSpawnType4: $MobSpawnType$$Type, boolean5: boolean, boolean6: boolean): T
 public static "createDefaultStackConfig"<T extends $Entity>(serverLevel0: $ServerLevel$$Type, itemStack1: $ItemStack$$Type, player2: $Player$$Type): $Consumer<T>
 public "customClientSpawn"(spawnEntity0: $PlayMessages$SpawnEntity$$Type, level1: $Level$$Type): T
 public "embPlus$isAllowed"(): boolean
@@ -627,15 +627,14 @@ public "sodiumdynamiclights$getDynamicLightHandler"(): $DynamicLightHandler
 public "sodiumdynamiclights$getName"(): $Component
 public "sodiumdynamiclights$getSetting"(): boolean
 public "sodiumdynamiclights$setDynamicLightHandler"(handler: $DynamicLightHandler$$Type): void
+public "spawn"(serverLevel0: $ServerLevel$$Type, blockPos1: $BlockPos$$Type, mobSpawnType2: $MobSpawnType$$Type): T
 public "spawn"(serverLevel0: $ServerLevel$$Type, itemStack1: $ItemStack$$Type, player2: $Player$$Type, blockPos3: $BlockPos$$Type, mobSpawnType4: $MobSpawnType$$Type, boolean5: boolean, boolean6: boolean): T
 public "spawn"(serverLevel0: $ServerLevel$$Type, compoundTag1: $CompoundTag$$Type, consumer2: $Consumer$$Type<T>, blockPos3: $BlockPos$$Type, mobSpawnType4: $MobSpawnType$$Type, boolean5: boolean, boolean6: boolean): T
-public "spawn"(serverLevel0: $ServerLevel$$Type, blockPos1: $BlockPos$$Type, mobSpawnType2: $MobSpawnType$$Type): T
 public "toShortString"(): string
 public "trackDeltas"(): boolean
 public "tryCast"(entity0: $Entity$$Type): T
 public static "updateCustomEntityTag"(level0: $Level$$Type, player1: $Player$$Type, entity2: $Entity$$Type, compoundTag3: $CompoundTag$$Type): void
 public "updateInterval"(): integer
-public "vMinus$getDefinition"(): $EntityDefinition
 public "vMinus$getVisionId"(): $ResourceLocation
 public "vMinus$getVisionType"(): $VisionType
 public "vMinus$setDefinition"(entityDefinition0: $EntityDefinition$$Type): void

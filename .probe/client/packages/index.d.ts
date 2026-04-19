@@ -158,6 +158,7 @@
 /// <reference path="mods.flammpfeil.d.ts" />
 /// <reference path="net.liopyu.entityjs.events.d.ts" />
 /// <reference path="net.minecraft.world.level.block.entity.d.ts" />
+/// <reference path="win.demistorm.d.ts" />
 /// <reference path="net.minecraft.world.item.alchemy.d.ts" />
 /// <reference path="net.minecraft.world.level.material.d.ts" />
 /// <reference path="java.security.d.ts" />

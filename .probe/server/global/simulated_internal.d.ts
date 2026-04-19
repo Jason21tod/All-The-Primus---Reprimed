@@ -3108,6 +3108,7 @@ import { $MapColor$Brightness, $MapColor$Brightness$$Type } from "net.minecraft.
 import { $PoiType, $PoiType$$Type } from "net.minecraft.world.entity.ai.village.poi.PoiType"
 import { $LongJumpToPreferredBlock, $LongJumpToPreferredBlock$$Type } from "net.minecraft.world.entity.ai.behavior.LongJumpToPreferredBlock"
 import { $SolidPredicate, $SolidPredicate$$Type } from "net.minecraft.world.level.levelgen.blockpredicates.SolidPredicate"
+import { $EMFModelPartAccessor, $EMFModelPartAccessor$$Type } from "win.demistorm.visual_health.client.mixin.EMFModelPartAccessor"
 import { $ColorStateList, $ColorStateList$$Type } from "icyllis.modernui.util.ColorStateList"
 import { $SmithingTableBlock, $SmithingTableBlock$$Type } from "net.minecraft.world.level.block.SmithingTableBlock"
 import { $OverlayTexture, $OverlayTexture$$Type } from "net.minecraft.client.renderer.texture.OverlayTexture"
@@ -14480,6 +14481,8 @@ export type LongJumpToPreferredBlock<E extends $Mob> = $LongJumpToPreferredBlock
 export type LongJumpToPreferredBlock_<E extends $Mob> = $LongJumpToPreferredBlock$$Type<E>;
 export type SolidPredicate = $SolidPredicate;
 export type SolidPredicate_ = $SolidPredicate$$Type;
+export type EMFModelPartAccessor = $EMFModelPartAccessor;
+export type EMFModelPartAccessor_ = $EMFModelPartAccessor$$Type;
 export type ColorStateList = $ColorStateList;
 export type ColorStateList_ = $ColorStateList$$Type;
 export type SmithingTableBlock = $SmithingTableBlock;

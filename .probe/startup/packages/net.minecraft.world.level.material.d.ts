@@ -101,7 +101,7 @@ public "getPickupSound"(): $Optional<$SoundEvent>
 public "getShape"(fluidState0: $FluidState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): $VoxelShape
 public "getStateDefinition"(): $StateDefinition<$Fluid, $FluidState>
 public "getTickDelay"(levelReader0: $LevelReader$$Type): integer
-public "handler$gmn000$hookGetBucketFillSound"(cir: $CallbackInfoReturnable$$Type): void
+public "handler$gna000$hookGetBucketFillSound"(cir: $CallbackInfoReturnable$$Type): void
 /** @deprecated */
 public "is"(tagKey0: $TagKey$$Type<$Fluid$$Type>): boolean
 public "isSame"(fluid0: $Fluid$$Type): boolean
