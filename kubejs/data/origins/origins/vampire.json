@@ -5,7 +5,7 @@
         "origins:vampire_weakness",
         "origins:vampire_blood"
     ],
-    "icon": "irons_spellbooks:blood_vial",
+    "icon": "kubejs:blood_bottle",
     "order": 0,
     "impact": 1,
     "name": "Vampiro",

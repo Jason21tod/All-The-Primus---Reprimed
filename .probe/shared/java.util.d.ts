@@ -3965,7 +3965,6 @@ public "thenCompose"<U>(function0: $Function$$Type<T, $CompletionStage<U>>): $Co
 public "thenComposeAsync"<U>(function0: $Function$$Type<T, $CompletionStage<U>>, executor1: $Executor$$Type): $CompletableFuture<U>
 public "thenRunAsync"(runnable0: $Runnable$$Type, executor1: $Executor$$Type): $CompletableFuture<void>
 public "toCompletableFuture"(): $CompletableFuture<T>
-public "whenComplete"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>): $CompletableFuture<T>
 public "whenCompleteAsync"(biConsumer0: $BiConsumer$$Type<T, $Throwable$$Type>, executor1: $Executor$$Type): $CompletableFuture<T>
 get "numberOfDependents"(): integer
 get "cancelled"(): boolean

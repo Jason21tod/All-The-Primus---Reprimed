@@ -154,22 +154,22 @@ public "doesBlink"(): boolean
 public "doesBlink2"(): boolean
 public "exists"(): boolean
 public "getEmissiveIdentifierOfCurrentState"(): $ResourceLocation
-public "getEmissiveRenderLayer"(model: $Model$$Type): $RenderType
 public "getEmissiveRenderLayer"(model: $Model$$Type, modeToUsePossiblyManuallyChosen: $ETFConfig$EmissiveRenderModes$$Type): $RenderType
+public "getEmissiveRenderLayer"(model: $Model$$Type): $RenderType
 public "getEmissiveVertexConsumer"(vertexConsumerProvider: $MultiBufferSource$$Type, model: $Model$$Type, modeToUsePossiblyManuallyChosen: $ETFConfig$EmissiveRenderModes$$Type): $VertexConsumer
 public "getEnchantIdentifierOfCurrentState"(): $ResourceLocation
 public "getPaintingSprite"(originalSprite: $TextureAtlasSprite$$Type, originalID: $ResourceLocation$$Type): $ETFSprite
 public "getTextureIdentifier"(entity: $ETFEntityRenderState$$Type): $ResourceLocation
 public "isEmissive"(): boolean
 public "isEnchanted"(): boolean
-public static "manual"(modifiedSkinIdentifier: $ResourceLocation$$Type, blinkIdentifier: $ResourceLocation$$Type, blink2Identifier: $ResourceLocation$$Type, emissiveIdentifier: $ResourceLocation$$Type, blinkEmissiveIdentifier: $ResourceLocation$$Type, blink2EmissiveIdentifier: $ResourceLocation$$Type, enchantIdentifier: $ResourceLocation$$Type, blinkenchantIdentifier: $ResourceLocation$$Type, blink2enchantIdentifier: $ResourceLocation$$Type, patchIdentifier: $ResourceLocation$$Type, blinkpatchIdentifier: $ResourceLocation$$Type, blink2patchIdentifier: $ResourceLocation$$Type): $ETFTexture
 public static "manual"(modifiedSkinIdentifier: $ResourceLocation$$Type, emissiveIdentifier: $ResourceLocation$$Type, enchantIdentifier: $ResourceLocation$$Type): $ETFTexture
+public static "manual"(modifiedSkinIdentifier: $ResourceLocation$$Type, blinkIdentifier: $ResourceLocation$$Type, blink2Identifier: $ResourceLocation$$Type, emissiveIdentifier: $ResourceLocation$$Type, blinkEmissiveIdentifier: $ResourceLocation$$Type, blink2EmissiveIdentifier: $ResourceLocation$$Type, enchantIdentifier: $ResourceLocation$$Type, blinkenchantIdentifier: $ResourceLocation$$Type, blink2enchantIdentifier: $ResourceLocation$$Type, patchIdentifier: $ResourceLocation$$Type, blinkpatchIdentifier: $ResourceLocation$$Type, blink2patchIdentifier: $ResourceLocation$$Type): $ETFTexture
 public static "ofUnmodifiable"(identifier: $ResourceLocation$$Type, emissiveIdentifier: $ResourceLocation$$Type): $ETFTexture
 public static "patchTextureToRemoveZFightingWithOtherTexture"(baseImage: $NativeImage$$Type, otherImage: $NativeImage$$Type): void
-public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, modelPart: $ModelPart$$Type): void
+public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, model: $Model$$Type): void
 public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, model: $Model$$Type, modeToUsePossiblyManuallyChosen: $ETFConfig$EmissiveRenderModes$$Type): void
 public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, modelPart: $ModelPart$$Type, modeToUsePossiblyManuallyChosen: $ETFConfig$EmissiveRenderModes$$Type): void
-public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, model: $Model$$Type): void
+public "renderEmissive"(matrixStack: $PoseStack$$Type, vertexConsumerProvider: $MultiBufferSource$$Type, modelPart: $ModelPart$$Type): void
 public "setGUIBlink"(): void
 get "currentTextureState"(): $ETFTexture$TextureReturnState
 set "currentTextureState"(value: $ETFTexture$TextureReturnState$$Type)
@@ -455,8 +455,8 @@ public "computeIntIfAbsentPartial"(uUID0: $UUID$$Type, object2IntFunction1: $Obj
 /** @deprecated */
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(int0: integer): void
 public "defaultReturnValue"(): integer
+public "defaultReturnValue"(int0: integer): void
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "firstEntry"(): $Map$Entry<$UUID, integer>
 public "forEach"(biConsumer0: $BiConsumer$$Type<$UUID$$Type, integer>): void

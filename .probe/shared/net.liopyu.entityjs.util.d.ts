@@ -1224,8 +1224,8 @@ declare module "net.liopyu.entityjs.util.implementation.IProjectilsJs" {
 import { $EntitySerializerType$$Type } from "net.liopyu.entityjs.util.EntitySerializerType"
 
 export interface $IProjectilsJs {
-"addSyncedData"(identifier: string, value: any): void
 "addSyncedData"(type: $EntitySerializerType$$Type, key: string, value: any): void
+"addSyncedData"(identifier: string, value: any): void
 "getSyncedData"<T>(identifier: string): T
 "setSyncedData"(key: string, value: any): void
 }

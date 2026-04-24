@@ -1136,8 +1136,8 @@ public "getRotated"(rotation0: $Rotation$$Type): $Rotation
 public "getSerializedName"(): string
 public static "getShuffled"(randomSource0: $RandomSource$$Type): $List<$Rotation>
 public static "keys"(stringRepresentable0s: $StringRepresentable$$Type[]): $Keyable
-public "rotate"(direction0: $Direction$$Type): $Direction
 public "rotate"(int0: integer, int1: integer): integer
+public "rotate"(direction0: $Direction$$Type): $Direction
 public "rotation"(): $OctahedralGroup
 public static "valueOf"(string0: string): $Rotation
 public static "values"(): $Rotation[]
@@ -11533,8 +11533,8 @@ public "canHarvestBlock"(blockState0: $BlockState$$Type, blockGetter1: $BlockGet
 public "canPlaceLiquid"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, fluid3: $Fluid$$Type): boolean
 public "canStickTo"(blockState0: $BlockState$$Type, blockState1: $BlockState$$Type): boolean
 public "collisionExtendsVertically"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): boolean
-public static "createNewHangingPropagule"(): $BlockState
 public static "createNewHangingPropagule"(int0: integer): $BlockState
+public static "createNewHangingPropagule"(): $BlockState
 public "getAdjacentBlockPathType"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, mob3: $Mob$$Type, blockPathTypes4: $BlockPathTypes$$Type): $BlockPathTypes
 public "getAppearance"(blockState0: $BlockState$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type, direction3: $Direction$$Type, blockState4: $BlockState$$Type, blockPos5: $BlockPos$$Type): $BlockState
 public "getBeaconColorMultiplier"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, blockPos3: $BlockPos$$Type): float[]
@@ -16510,8 +16510,8 @@ public static "getNext"(block0: $Block$$Type): $Optional<$Block>
 public "getPickupSound"(): $Optional<$SoundEvent>
 public "getPickupSound"(blockState0: $BlockState$$Type): $Optional<$SoundEvent>
 public "getPistonPushReaction"(blockState0: $BlockState$$Type): $PushReaction
-public static "getPrevious"(blockState0: $BlockState$$Type): $Optional<$BlockState>
 public static "getPrevious"(block0: $Block$$Type): $Optional<$Block>
+public static "getPrevious"(blockState0: $BlockState$$Type): $Optional<$BlockState>
 public "getRespawnPosition"(blockState0: $BlockState$$Type, entityType1: $EntityType$$Type<any>, levelReader2: $LevelReader$$Type, blockPos3: $BlockPos$$Type, float4: float, livingEntity5: $LivingEntity$$Type): $Optional<$Vec3>
 public "getSoundType"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): $SoundType
 public "getStateAtViewpoint"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, vec33: $Vec3$$Type): $BlockState
@@ -17716,8 +17716,8 @@ public static "litBlockEmission"(int0: integer): $ToIntFunction<$BlockState>
 public static "log"(mapColor0: $MapColor$$Type, mapColor1: $MapColor$$Type): $RotatedPillarBlock
 public static "log"(mapColor0: $MapColor$$Type, mapColor1: $MapColor$$Type, soundType2: $SoundType$$Type): $RotatedPillarBlock
 public static "netherStem"(mapColor0: $MapColor$$Type): $Block
-public static "never"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
 public static "never"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, entityType3: $EntityType$$Type<any>): boolean
+public static "never"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
 public static "ocelotOrParrot"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, entityType3: $EntityType$$Type<any>): boolean
 public static "rebuildCache"(): void
 public static "register"(string0: string, block1: $Block$$Type): $Block
@@ -24137,8 +24137,8 @@ public "getMod"(): string
 public "getNext"(blockState0: $BlockState$$Type): $Optional<$BlockState>
 public static "getNext"(block0: $Block$$Type): $Optional<$Block>
 public "getPistonPushReaction"(blockState0: $BlockState$$Type): $PushReaction
-public static "getPrevious"(blockState0: $BlockState$$Type): $Optional<$BlockState>
 public static "getPrevious"(block0: $Block$$Type): $Optional<$Block>
+public static "getPrevious"(blockState0: $BlockState$$Type): $Optional<$BlockState>
 public "getRespawnPosition"(blockState0: $BlockState$$Type, entityType1: $EntityType$$Type<any>, levelReader2: $LevelReader$$Type, blockPos3: $BlockPos$$Type, float4: float, livingEntity5: $LivingEntity$$Type): $Optional<$Vec3>
 public "getSoundType"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): $SoundType
 public "getStateAtViewpoint"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, vec33: $Vec3$$Type): $BlockState
@@ -26318,8 +26318,8 @@ public "isScaffolding"(blockState0: $BlockState$$Type, levelReader1: $LevelReade
 public "isSlimeBlock"(blockState0: $BlockState$$Type): boolean
 public "isStickyBlock"(blockState0: $BlockState$$Type): boolean
 public "isValidSpawn"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, type3: $SpawnPlacements$Type$$Type, entityType4: $EntityType$$Type<any>): boolean
-public static "isWoodenDoor"(blockState0: $BlockState$$Type): boolean
 public static "isWoodenDoor"(level0: $Level$$Type, blockPos1: $BlockPos$$Type): boolean
+public static "isWoodenDoor"(blockState0: $BlockState$$Type): boolean
 public "makesOpenTrapdoorAboveClimbable"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type): boolean
 public static "of"(block0: $Block$$Type): $BlockDefinitionDuck
 public "onBlockExploded"(blockState0: $BlockState$$Type, level1: $Level$$Type, blockPos2: $BlockPos$$Type, explosion3: $Explosion$$Type): void
@@ -29813,8 +29813,8 @@ const PREVIOUS_BY_BLOCK: $Supplier<$BiMap<$Block, $Block>>
 function getFirst(block0: $Block$$Type): $Block
 function getFirst(blockState0: $BlockState$$Type): $BlockState
 function getNext(block0: $Block$$Type): $Optional<$Block>
-function getPrevious(blockState0: $BlockState$$Type): $Optional<$BlockState>
 function getPrevious(block0: $Block$$Type): $Optional<$Block>
+function getPrevious(blockState0: $BlockState$$Type): $Optional<$BlockState>
 }
 export abstract class $WeatheringCopper$$Static implements $WeatheringCopper {
 static readonly "NEXT_BY_BLOCK": $Supplier<$BiMap<$Block, $Block>>
@@ -29823,8 +29823,8 @@ static readonly "PREVIOUS_BY_BLOCK": $Supplier<$BiMap<$Block, $Block>>
 static "getFirst"(block0: $Block$$Type): $Block
 static "getFirst"(blockState0: $BlockState$$Type): $BlockState
 static "getNext"(block0: $Block$$Type): $Optional<$Block>
-static "getPrevious"(blockState0: $BlockState$$Type): $Optional<$BlockState>
 static "getPrevious"(block0: $Block$$Type): $Optional<$Block>
+static "getPrevious"(blockState0: $BlockState$$Type): $Optional<$BlockState>
 }
 }
 
@@ -33980,8 +33980,8 @@ public "isFlammable"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$
 public "isFlexibleRail"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
 public "isLadder"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, livingEntity3: $LivingEntity$$Type): boolean
 public "isPortalFrame"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
-public static "isRail"(blockState0: $BlockState$$Type): boolean
 public static "isRail"(level0: $Level$$Type, blockPos1: $BlockPos$$Type): boolean
+public static "isRail"(blockState0: $BlockState$$Type): boolean
 public "isScaffolding"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, livingEntity3: $LivingEntity$$Type): boolean
 public "isSlimeBlock"(blockState0: $BlockState$$Type): boolean
 public "isStickyBlock"(blockState0: $BlockState$$Type): boolean
@@ -34272,8 +34272,8 @@ public static "getNext"(block0: $Block$$Type): $Optional<$Block>
 public "getPickupSound"(): $Optional<$SoundEvent>
 public "getPickupSound"(blockState0: $BlockState$$Type): $Optional<$SoundEvent>
 public "getPistonPushReaction"(blockState0: $BlockState$$Type): $PushReaction
-public static "getPrevious"(blockState0: $BlockState$$Type): $Optional<$BlockState>
 public static "getPrevious"(block0: $Block$$Type): $Optional<$Block>
+public static "getPrevious"(blockState0: $BlockState$$Type): $Optional<$BlockState>
 public "getRespawnPosition"(blockState0: $BlockState$$Type, entityType1: $EntityType$$Type<any>, levelReader2: $LevelReader$$Type, blockPos3: $BlockPos$$Type, float4: float, livingEntity5: $LivingEntity$$Type): $Optional<$Vec3>
 public "getSoundType"(blockState0: $BlockState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type, entity3: $Entity$$Type): $SoundType
 public "getStateAtViewpoint"(blockState0: $BlockState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, vec33: $Vec3$$Type): $BlockState

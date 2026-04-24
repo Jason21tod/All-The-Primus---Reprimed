@@ -164,13 +164,14 @@ constructor(m: $Matrix4c$$Type)
 constructor()
 
 public "add"(m: $Matrix4$$Type): void
+public "clone"(): $Matrix4
 public static "copy"(m: $Matrix4c$$Type): $Matrix4
 public "determinant"(): float
 public "hasPerspective"(): boolean
 public "hasTranslation"(): boolean
 public static "identity"(): $Matrix4c
-public "invert"(dest: $Matrix4$$Type): boolean
 public "invert"(): boolean
+public "invert"(dest: $Matrix4$$Type): boolean
 public "isAffine"(): boolean
 public "isApproxEqual"(m: $Matrix4$$Type): boolean
 public "isAxisAligned"(): boolean
@@ -203,31 +204,31 @@ public static "makeTranslate"(x: float, y: float, z: float): $Matrix4
 public "mapPoint"(p: float[]): void
 public "mapPointX"(x: float, y: float): float
 public "mapPointY"(x: float, y: float): float
+public "mapRect"(r: $Rect2ic$$Type, dest: $Rect2i$$Type): void
 public "mapRect"(left: float, top: float, right: float, bottom: float, dest: $Rect2i$$Type): void
-public "mapRect"(r: $Rect2fc$$Type, dest: $Rect2f$$Type): void
+public "mapRect"(r: $Rect2f$$Type): void
 public "mapRect"(left: float, top: float, right: float, bottom: float, dest: $Rect2f$$Type): void
 public "mapRect"(r: $Rect2fc$$Type, dest: $Rect2i$$Type): void
-public "mapRect"(r: $Rect2ic$$Type, dest: $Rect2i$$Type): void
-public "mapRect"(r: $Rect2f$$Type): void
+public "mapRect"(r: $Rect2fc$$Type, dest: $Rect2f$$Type): void
 public "mapRectIn"(left: float, top: float, right: float, bottom: float, dest: $Rect2i$$Type): void
 public "mapRectIn"(r: $Rect2fc$$Type, dest: $Rect2i$$Type): void
 public "mapRectOut"(r: $Rect2fc$$Type, dest: $Rect2i$$Type): void
-public "mapRectOut"(left: float, top: float, right: float, bottom: float, dest: $Rect2i$$Type): void
 public "mapRectOut"(r: $Rect2ic$$Type, dest: $Rect2i$$Type): void
+public "mapRectOut"(left: float, top: float, right: float, bottom: float, dest: $Rect2i$$Type): void
 public "mapVec3"(vec: float[]): void
 public "normalizePerspective"(): void
-public "postConcat"(rhs: $Matrix4c$$Type): void
-public "postConcat"(rhs: $Matrix3$$Type): void
 public "postConcat"(r11: float, r12: float, r13: float, r14: float, r21: float, r22: float, r23: float, r24: float, r31: float, r32: float, r33: float, r34: float, r41: float, r42: float, r43: float, r44: float): void
+public "postConcat"(rhs: $Matrix3$$Type): void
+public "postConcat"(rhs: $Matrix4c$$Type): void
 public "postConcat2D"(r11: float, r12: float, r14: float, r21: float, r22: float, r24: float, r41: float, r42: float, r44: float): void
-public "postRotate"(angleX: double, angleY: double, angleZ: double): void
 public "postRotate"(x: double, y: double, z: double, angle: double): void
+public "postRotate"(angleX: double, angleY: double, angleZ: double): void
 public "postRotateX"(angle: double): void
 public "postRotateY"(angle: double): void
 public "postRotateZ"(angle: double): void
-public "postScale"(s: $Vector3$$Type): void
 public "postScale"(sx: float, sy: float, sz: float): void
 public "postScale"(sx: float, sy: float): void
+public "postScale"(s: $Vector3$$Type): void
 public "postScaleX"(s: float): void
 public "postScaleY"(s: float): void
 public "postScaleZ"(s: float): void
@@ -235,20 +236,20 @@ public "postShear"(sxy: float, sxz: float, syx: float, syz: float, szx: float, s
 public "postShear2D"(sx: float, sy: float): void
 public "postTransform"(vec: $Vector3$$Type): void
 public "postTransform"(vec: $Vector4$$Type): void
+public "postTranslate"(t: $Vector3$$Type): void
 public "postTranslate"(dx: float, dy: float, dz: float): void
 public "postTranslate"(dx: float, dy: float): void
-public "postTranslate"(t: $Vector3$$Type): void
 public "postTranslateX"(dx: float): void
 public "postTranslateY"(dy: float): void
 public "postTranslateZ"(dz: float): void
 public "preConcat"(l11: float, l12: float, l13: float, l14: float, l21: float, l22: float, l23: float, l24: float, l31: float, l32: float, l33: float, l34: float, l41: float, l42: float, l43: float, l44: float): void
-public "preConcat"(lhs: $Matrix4c$$Type): void
 public "preConcat"(lhs: $Matrix3$$Type): void
+public "preConcat"(lhs: $Matrix4c$$Type): void
 public "preConcat2D"(l11: float, l12: float, l14: float, l21: float, l22: float, l24: float, l41: float, l42: float, l44: float): void
-public "preRotate"(x: double, y: double, z: double, angle: double): void
 public "preRotate"(q: $Quaternion$$Type): void
-public "preRotate"(axis: $Vector3$$Type, angle: float): void
+public "preRotate"(x: double, y: double, z: double, angle: double): void
 public "preRotate"(angleX: double, angleY: double, angleZ: double): void
+public "preRotate"(axis: $Vector3$$Type, angle: float): void
 public "preRotateX"(angle: double): void
 public "preRotateY"(angle: double): void
 public "preRotateZ"(angle: double): void
@@ -262,46 +263,46 @@ public "preShear"(sxy: float, sxz: float, syx: float, syz: float, szx: float, sz
 public "preShear2D"(sx: float, sy: float): void
 public "preTransform"(vec: $Vector3$$Type): void
 public "preTransform"(vec: $Vector4$$Type): void
-public "preTranslate"(t: $Vector3$$Type): void
 public "preTranslate"(dx: float, dy: float): void
 public "preTranslate"(dx: float, dy: float, dz: float): void
+public "preTranslate"(t: $Vector3$$Type): void
 public "preTranslateX"(dx: float): void
 public "preTranslateY"(dy: float): void
 public "preTranslateZ"(dz: float): void
-public "set"(a: float[], offset: integer): void
 public "set"(a: $ByteBuffer$$Type): void
-public "set"(a: $FloatBuffer$$Type): void
+public "set"(a: float[], offset: integer): void
 public "set"(a: float[]): void
-public "set"(m11: float, m12: float, m13: float, m14: float, m21: float, m22: float, m23: float, m24: float, m31: float, m32: float, m33: float, m34: float, m41: float, m42: float, m43: float, m44: float): void
 public "set"(m: $Matrix4c$$Type): void
+public "set"(a: $FloatBuffer$$Type): void
 public "set"(p: long): void
+public "set"(m11: float, m12: float, m13: float, m14: float, m21: float, m22: float, m23: float, m24: float, m31: float, m32: float, m33: float, m34: float, m41: float, m42: float, m43: float, m44: float): void
 public "setIdentity"(): void
+public "setOrthographic"(left: float, right: float, bottom: float, top: float, near: float, far: float): $Matrix4
 public "setOrthographic"(left: float, right: float, bottom: float, top: float, near: float, far: float, negativeOneToOne: boolean): void
 public "setOrthographic"(width: float, height: float, near: float, far: float, flipY: boolean): $Matrix4
-public "setOrthographic"(left: float, right: float, bottom: float, top: float, near: float, far: float): $Matrix4
 public "setOrthographicLH"(left: float, right: float, bottom: float, top: float, near: float, far: float, negativeOneToOne: boolean): void
-public "setPerspective"(fov: float, aspect: float, near: float, far: float): $Matrix4
 public "setPerspective"(fov: double, aspect: double, near: float, far: float, negativeOneToOne: boolean): void
+public "setPerspective"(fov: float, aspect: float, near: float, far: float): $Matrix4
 public "setPerspective"(left: float, right: float, bottom: float, top: float, near: float, far: float): $Matrix4
 public "setPerspectiveLH"(fov: double, aspect: double, near: float, far: float, negativeOneToOne: boolean): void
 public "setRotation"(q: $Quaternion$$Type): void
-public "setScale"(x: float, y: float, z: float): void
 public "setScale"(s: $Vector3$$Type): void
+public "setScale"(x: float, y: float, z: float): void
 public "setShear"(sxy: float, sxz: float, syx: float, syz: float, szx: float, szy: float): void
-public "setTranslate"(x: float, y: float, z: float): void
 public "setTranslate"(t: $Vector3$$Type): void
+public "setTranslate"(x: float, y: float, z: float): void
 public "setZero"(): void
-public "store"(a: $ByteBuffer$$Type): void
 public "store"(a: $FloatBuffer$$Type): void
 public "store"(p: long): void
+public "store"(a: float[], offset: integer): void
+public "store"(a: $ByteBuffer$$Type): void
 public "store"(m: $Matrix4$$Type): void
 public "store"(a: float[]): void
-public "store"(a: float[], offset: integer): void
 public "storeAs2D"(p: long): void
 public "storeAs2DAligned"(p: long): void
 public "subtract"(m: $Matrix4$$Type): void
-public "toMatrix3"(): $Matrix3
 public "toMatrix3"(dest: $Matrix3$$Type): void
+public "toMatrix3"(): $Matrix3
 public "trace"(): float
 public "transpose"(): void
 get "affine"(): boolean
@@ -400,8 +401,8 @@ constructor(x: float, y: float, z: float)
 
 public "add"(v: $Vector3$$Type): void
 public "copy"(): $Vector3
-public "cross"(v: $Vector3$$Type): void
 public "cross"(x: float, y: float, z: float): void
+public "cross"(v: $Vector3$$Type): void
 public "dot"(v: $Vector3$$Type): float
 public "dot"(x: float, y: float, z: float): float
 public "equivalent"(v: $Vector3$$Type): boolean
@@ -479,8 +480,8 @@ public "isIdentity"(): boolean
 public "isNormalized"(): boolean
 public "length"(): float
 public "lengthSq"(): float
-public static "makeAxisAngle"(axisX: float, axisY: float, axisZ: float, angle: float): $Quaternion
 public static "makeAxisAngle"(axis: $Vector3$$Type, angle: float): $Quaternion
+public static "makeAxisAngle"(axisX: float, axisY: float, axisZ: float, angle: float): $Quaternion
 public static "makeEulerAngles"(rotationX: float, rotationY: float, rotationZ: float): $Quaternion
 public "multiply"(q: $Quaternion$$Type): void
 public "multiply"(s: float): void
@@ -494,20 +495,20 @@ public "rotateY"(angle: float): void
 public "rotateZ"(angle: float): void
 public "set"(x: float, y: float, z: float, w: float): void
 public "set"(q: $Quaternion$$Type): void
-public "setFromAxisAngle"(axis: $Vector3$$Type, angle: float): void
 public "setFromAxisAngle"(axisX: float, axisY: float, axisZ: float, angle: float): void
+public "setFromAxisAngle"(axis: $Vector3$$Type, angle: float): void
 public "setFromEulerAngles"(rotationX: float, rotationY: float, rotationZ: float): void
 public "setIdentity"(): void
 public "setZero"(): void
-public "slerp"(a: $Quaternion$$Type, b: $Quaternion$$Type, t: float): void
 public "slerp"(a: $Quaternion$$Type, t: float): void
+public "slerp"(a: $Quaternion$$Type, b: $Quaternion$$Type, t: float): void
 public "subtract"(q: $Quaternion$$Type): void
-public "toAxisAngle"(axis: float[]): float
 public "toAxisAngle"(axis: $Vector3$$Type): float
+public "toAxisAngle"(axis: float[]): float
 public "toEulerAngles"(result: $Vector3$$Type): void
 public "toEulerAngles"(angles: float[]): void
-public "toMatrix3"(): $Matrix3
 public "toMatrix3"(out: $Matrix3$$Type): $Matrix3
+public "toMatrix3"(): $Matrix3
 public "toMatrix4"(out: $Matrix4$$Type): $Matrix4
 public "toMatrix4"(): $Matrix4
 get "normalized"(): boolean
@@ -653,8 +654,8 @@ export interface $Rect2fc {
 "right"(): float
 "round"(rect2i0: $Rect2i$$Type): void
 "round"(rect2f0: $Rect2f$$Type): void
-"roundIn"(rect2f0: $Rect2f$$Type): void
 "roundIn"(rect2i0: $Rect2i$$Type): void
+"roundIn"(rect2f0: $Rect2f$$Type): void
 "roundOut"(rect2i0: $Rect2i$$Type): void
 "roundOut"(rect2f0: $Rect2f$$Type): void
 "store"(rect2f0: $Rect2f$$Type): void
@@ -772,14 +773,14 @@ public static "empty"(): $Rect2fc
 public "halfHeight"(): float
 public "halfWidth"(): float
 public "height"(): float
+public "inset"(left: float, top: float, right: float, bottom: float): void
 public "inset"(insets: $Rect2fc$$Type): void
 public "inset"(insets: $Rect2ic$$Type): void
-public "inset"(left: float, top: float, right: float, bottom: float): void
 public "inset"(dx: float, dy: float): void
 public "intersect"(r: $Rect2ic$$Type): boolean
 public "intersect"(left: float, top: float, right: float, bottom: float): boolean
-public "intersect"(a: $Rect2fc$$Type, b: $Rect2fc$$Type): boolean
 public "intersect"(r: $Rect2fc$$Type): boolean
+public "intersect"(a: $Rect2fc$$Type, b: $Rect2fc$$Type): boolean
 public "intersectNoCheck"(r: $Rect2fc$$Type): void
 public "intersectNoCheck"(left: float, top: float, right: float, bottom: float): void
 public "intersectNoCheck"(r: $Rect2ic$$Type): void
@@ -794,9 +795,9 @@ public "join"(r: $Rect2ic$$Type): void
 public "join"(x: float, y: float): void
 public "join"(left: float, top: float, right: float, bottom: float): void
 public "join"(r: $Rect2fc$$Type): void
+public "joinNoCheck"(r: $Rect2fc$$Type): void
 public "joinNoCheck"(left: float, top: float, right: float, bottom: float): void
 public "joinNoCheck"(r: $Rect2ic$$Type): void
-public "joinNoCheck"(r: $Rect2fc$$Type): void
 public "left"(): float
 public static "makeInfiniteInverted"(): $Rect2f
 public "offset"(dx: float, dy: float): void
@@ -849,8 +850,8 @@ constructor(r: $Rect2ic$$Type)
 constructor(left: integer, top: integer, right: integer, bottom: integer)
 constructor()
 
-public "adjust"(adjusts: $Rect2ic$$Type): void
 public "adjust"(left: integer, top: integer, right: integer, bottom: integer): void
+public "adjust"(adjusts: $Rect2ic$$Type): void
 public "bottom"(): integer
 public "contains"(x: integer, y: integer): boolean
 public "contains"(left: integer, top: integer, right: integer, bottom: integer): boolean
@@ -863,13 +864,13 @@ public "height"(): integer
 public "inset"(dx: integer, dy: integer): void
 public "inset"(left: integer, top: integer, right: integer, bottom: integer): void
 public "inset"(insets: $Rect2ic$$Type): void
+public "intersect"(left: integer, top: integer, right: integer, bottom: integer): boolean
 public "intersect"(a: $Rect2ic$$Type, b: $Rect2ic$$Type): boolean
 public "intersect"(r: $Rect2ic$$Type): boolean
-public "intersect"(left: integer, top: integer, right: integer, bottom: integer): boolean
-public "intersectNoCheck"(r: $Rect2ic$$Type): void
 public "intersectNoCheck"(left: integer, top: integer, right: integer, bottom: integer): void
-public "intersects"(r: $Rect2ic$$Type): boolean
+public "intersectNoCheck"(r: $Rect2ic$$Type): void
 public "intersects"(left: integer, top: integer, right: integer, bottom: integer): boolean
+public "intersects"(r: $Rect2ic$$Type): boolean
 public static "intersects"(a: $Rect2ic$$Type, b: $Rect2ic$$Type): boolean
 public "isEmpty"(): boolean
 public "isSorted"(): boolean
@@ -942,9 +943,9 @@ export interface $Matrix4c extends $Cloneable {
 "m42"(): float
 "m43"(): float
 "m44"(): float
-"mapRect"(rect2f0: $Rect2f$$Type): void
-"mapRect"(rect2ic0: $Rect2ic$$Type, rect2i1: $Rect2i$$Type): void
 "mapRect"(rect2fc0: $Rect2fc$$Type, rect2i1: $Rect2i$$Type): void
+"mapRect"(rect2ic0: $Rect2ic$$Type, rect2i1: $Rect2i$$Type): void
+"mapRect"(rect2f0: $Rect2f$$Type): void
 "mapRect"(rect2fc0: $Rect2fc$$Type, rect2f1: $Rect2f$$Type): void
 "mapRectIn"(rect2fc0: $Rect2fc$$Type, rect2i1: $Rect2i$$Type): void
 "mapRectOut"(rect2fc0: $Rect2fc$$Type, rect2i1: $Rect2i$$Type): void
@@ -955,8 +956,8 @@ export interface $Matrix4c extends $Cloneable {
 "store"(byteBuffer0: $ByteBuffer$$Type): void
 "store"(floatBuffer0: $FloatBuffer$$Type): void
 "store"(long0: long): void
-"toMatrix3"(matrix30: $Matrix3$$Type): void
 "toMatrix3"(): $Matrix3
+"toMatrix3"(matrix30: $Matrix3$$Type): void
 get "axisAligned"(): boolean
 get "scaleTranslate"(): boolean
 }

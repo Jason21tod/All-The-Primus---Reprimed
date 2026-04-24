@@ -70,8 +70,8 @@ export interface $ShortList extends $List<short>, $Comparable<$List<short>>, $Sh
 "addAll"(collection0: $Collection$$Type<short>): boolean
 "addAll"(int0: integer, collection1: $Collection$$Type<short>): boolean
 "addAll"(shortCollection0: $ShortCollection$$Type): boolean
-"addElements"(int0: integer, short1s: short[]): void
 "addElements"(int0: integer, short1s: short[], int2: integer, int3: integer): void
+"addElements"(int0: integer, short1s: short[]): void
 "addFirst"(short0: short): void
 "addLast"(short0: short): void
 "clear"(): void
@@ -103,6 +103,7 @@ export interface $ShortList extends $List<short>, $Comparable<$List<short>>, $Sh
 "lastIndexOf"(object0: any): integer
 "lastIndexOf"(short0: short): integer
 "listIterator"(int0: integer): $ShortListIterator
+"listIterator"(): $ShortListIterator
 /** @deprecated */
 "parallelStream"(): $Stream<short>
 "rem"(short0: short): boolean
@@ -127,8 +128,8 @@ export interface $ShortList extends $List<short>, $Comparable<$List<short>>, $Sh
 /** @deprecated */
 "set"(int0: integer, short1: short): short
 "set"(int0: integer, short1: short): short
-"setElements"(short0s: short[]): void
 "setElements"(int0: integer, short1s: short[], int2: integer, int3: integer): void
+"setElements"(short0s: short[]): void
 "setElements"(int0: integer, short1s: short[]): void
 "size"(int0: integer): void
 "size"(): integer
@@ -141,12 +142,12 @@ export interface $ShortList extends $List<short>, $Comparable<$List<short>>, $Sh
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(short0s: short[]): short[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toShortArray"(): short[]
 /** @deprecated */
 "toShortArray"(short0s: short[]): short[]
+"toShortArray"(): short[]
+"unstableSort"(shortComparator0: $ShortComparator$$Type): void
 /** @deprecated */
 "unstableSort"(comparator0: $Comparator$$Type<short>): void
-"unstableSort"(shortComparator0: $ShortComparator$$Type): void
 get "first"(): short
 get "last"(): short
 get "empty"(): boolean
@@ -286,9 +287,9 @@ export interface $ShortSet extends $ShortCollection, $Set<short> {
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toShortArray"(): short[]
 /** @deprecated */
 "toShortArray"(short0s: short[]): short[]
+"toShortArray"(): short[]
 get "empty"(): boolean
 }
 
@@ -421,9 +422,9 @@ export interface $ShortCollection extends $Collection<short>, $ShortIterable {
 "toArray"<T>(t0s: T[]): T[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 "toArray"(): any[]
-"toShortArray"(): short[]
 /** @deprecated */
 "toShortArray"(short0s: short[]): short[]
+"toShortArray"(): short[]
 get "empty"(): boolean
 }
 
@@ -502,8 +503,8 @@ export interface $Short2BooleanFunction extends $Function$0<short, boolean>, $In
 "containsKey"(short0: short): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
+"defaultReturnValue"(boolean0: boolean): void
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(short0: short): boolean
@@ -607,8 +608,8 @@ export interface $Short2ByteFunction extends $Function$0<short, byte>, $IntUnary
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(short0: short, byte1: byte): byte
-/** @deprecated */
 "put"(short0: short, byte1: byte): byte
+/** @deprecated */
 "put"(short0: short, byte1: byte): byte
 "remove"(short0: short): byte
 /** @deprecated */
@@ -864,8 +865,8 @@ export interface $Short2LongFunction extends $Function$0<short, long>, $IntToLon
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
 "getOrDefault"(short0: short, long1: long): long
-/** @deprecated */
 "put"(short0: short, long1: long): long
+/** @deprecated */
 "put"(short0: short, long1: long): long
 "remove"(short0: short): long
 /** @deprecated */
@@ -984,9 +985,9 @@ export interface $Short2CharFunction extends $Function$0<short, character>, $Int
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
 "getOrDefault"(short0: short, char1: character): character
+"put"(short0: short, char1: character): character
 /** @deprecated */
 "put"(short0: short, character1: character): character
-"put"(short0: short, char1: character): character
 "remove"(short0: short): character
 /** @deprecated */
 "remove"(object0: any): character
@@ -1099,8 +1100,8 @@ export interface $Short2DoubleFunction extends $Function$0<short, double>, $IntT
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
 "getOrDefault"(short0: short, double1: double): double
-/** @deprecated */
 "put"(short0: short, double1: double): double
+/** @deprecated */
 "put"(short0: short, double1: double): double
 "remove"(short0: short): double
 /** @deprecated */
@@ -1192,9 +1193,9 @@ export interface $Short2IntFunction extends $Function$0<short, integer>, $IntUna
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
 "getOrDefault"(short0: short, int1: integer): integer
+"put"(short0: short, int1: integer): integer
 /** @deprecated */
 "put"(short0: short, integer1: integer): integer
-"put"(short0: short, int1: integer): integer
 "remove"(short0: short): integer
 /** @deprecated */
 "remove"(object0: any): integer
@@ -1283,8 +1284,8 @@ export interface $Short2FloatFunction extends $Function$0<short, float>, $IntToD
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(short0: short, float1: float): float
-/** @deprecated */
 "put"(short0: short, float1: float): float
+/** @deprecated */
 "put"(short0: short, float1: float): float
 "remove"(short0: short): float
 /** @deprecated */

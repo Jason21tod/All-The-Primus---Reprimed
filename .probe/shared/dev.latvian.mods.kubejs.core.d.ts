@@ -35,8 +35,8 @@ export interface $ClientLevelKJS extends $LevelKJS {
 "createEntity"(type: $EntityType$$Type<any>): $Entity
 "createEntityList"(entities: $Collection$$Type<$Entity$$Type>): $EntityArrayList
 "createExplosion"(x: double, y: double, z: double): $ExplosionJS
-"getBlock"(x: integer, y: integer, z: integer): $BlockContainerJS
 "getBlock"(blockEntity: $BlockEntity$$Type): $BlockContainerJS
+"getBlock"(x: integer, y: integer, z: integer): $BlockContainerJS
 "getBlock"(pos: $BlockPos$$Type): $BlockContainerJS
 "getData"(): $AttachedData<$Level>
 "getDimension"(): $ResourceLocation
@@ -93,8 +93,8 @@ export interface $ItemFrameEntityKJS extends $EntityKJS {
 "attack"(hp: float): void
 "getBlock"(): $BlockContainerJS
 "getDisplayName"(): $Component
-"getDistance"(pos: $BlockPos$$Type): double
 "getDistance"(x: double, y: double, z: double): double
+"getDistance"(pos: $BlockPos$$Type): double
 "getDistanceSq"(pos: $BlockPos$$Type): double
 "getFacing"(): $Direction
 "getItem"(): $ItemStack
@@ -123,16 +123,16 @@ export interface $ItemFrameEntityKJS extends $EntityKJS {
 "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 "playSound"(id: $SoundEvent$$Type): void
-"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "rayTrace"(distance: double): $RayTraceResultJS
+"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "runCommand"(command: string): integer
 "runCommandSilent"(command: string): integer
 "setMotionX"(x: double): void
 "setMotionY"(y: double): void
 "setMotionZ"(z: double): void
 "setNbt"(nbt: $CompoundTag$$Type): void
-"setPosition"(block: $BlockContainerJS$$Type): void
 "setPosition"(x: double, y: double, z: double): void
+"setPosition"(block: $BlockContainerJS$$Type): void
 "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 "setRotation"(yaw: float, pitch: float): void
 "setStatusMessage"(message: $Component$$Type): void
@@ -211,8 +211,8 @@ export interface $ServerLevelKJS extends $LevelKJS, $WithPersistentData {
 "createEntity"(type: $EntityType$$Type<any>): $Entity
 "createEntityList"(entities: $Collection$$Type<$Entity$$Type>): $EntityArrayList
 "createExplosion"(x: double, y: double, z: double): $ExplosionJS
-"getBlock"(x: integer, y: integer, z: integer): $BlockContainerJS
 "getBlock"(blockEntity: $BlockEntity$$Type): $BlockContainerJS
+"getBlock"(x: integer, y: integer, z: integer): $BlockContainerJS
 "getBlock"(pos: $BlockPos$$Type): $BlockContainerJS
 "getData"(): $AttachedData<$Level>
 "getDimension"(): $ResourceLocation
@@ -229,8 +229,8 @@ export interface $ServerLevelKJS extends $LevelKJS, $WithPersistentData {
 "setStatusMessage"(message: $Component$$Type): void
 "setTime"(time: long): void
 "spawnFireworks"(x: double, y: double, z: double, f: $FireworksJS$$Type): void
-"spawnLightning"(x: double, y: double, z: double, effectOnly: boolean): void
 "spawnLightning"(x: double, y: double, z: double, effectOnly: boolean, player: $ServerPlayer$$Type): void
+"spawnLightning"(x: double, y: double, z: double, effectOnly: boolean): void
 "spawnParticles"(options: $ParticleOptions$$Type, overrideLimiter: boolean, x: double, y: double, z: double, vx: double, vy: double, vz: double, count: integer, speed: double): void
 "tell"(message: $Component$$Type): void
 get "data"(): $AttachedData<$Level>
@@ -293,8 +293,8 @@ export interface $ItemEntityKJS extends $EntityKJS {
 "attack"(hp: float): void
 "getBlock"(): $BlockContainerJS
 "getDisplayName"(): $Component
-"getDistance"(pos: $BlockPos$$Type): double
 "getDistance"(x: double, y: double, z: double): double
+"getDistance"(pos: $BlockPos$$Type): double
 "getDistanceSq"(pos: $BlockPos$$Type): double
 "getFacing"(): $Direction
 "getItem"(): $ItemStack
@@ -325,8 +325,8 @@ export interface $ItemEntityKJS extends $EntityKJS {
 "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 "playSound"(id: $SoundEvent$$Type): void
-"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "rayTrace"(distance: double): $RayTraceResultJS
+"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "runCommand"(command: string): integer
 "runCommandSilent"(command: string): integer
 "setDefaultPickUpDelay"(): void
@@ -338,8 +338,8 @@ export interface $ItemEntityKJS extends $EntityKJS {
 "setNbt"(nbt: $CompoundTag$$Type): void
 "setNoDespawn"(): void
 "setNoPickUpDelay"(): void
-"setPosition"(block: $BlockContainerJS$$Type): void
 "setPosition"(x: double, y: double, z: double): void
+"setPosition"(block: $BlockContainerJS$$Type): void
 "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 "setRotation"(yaw: float, pitch: float): void
 "setStatusMessage"(message: $Component$$Type): void
@@ -536,9 +536,9 @@ export interface $PlayerKJS extends $LivingEntityKJS, $DataSenderKJS, $WithAttac
 "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 "damageEquipment"(slot: $EquipmentSlot$$Type): void
-"damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 "damageHeldItem"(): void
+"damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 "foodEaten"(is: $ItemStack$$Type): void
 "getAttributeBaseValue"(attribute: $Attribute$$Type): double
 "getAttributeTotalValue"(attribute: $Attribute$$Type): double
@@ -548,8 +548,8 @@ export interface $PlayerKJS extends $LivingEntityKJS, $DataSenderKJS, $WithAttac
 "getData"(): $AttachedData<$Player>
 "getDefaultMovementSpeed"(): double
 "getDisplayName"(): $Component
-"getDistance"(pos: $BlockPos$$Type): double
 "getDistance"(x: double, y: double, z: double): double
+"getDistance"(pos: $BlockPos$$Type): double
 "getDistanceSq"(pos: $BlockPos$$Type): double
 "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 "getFacing"(): $Direction
@@ -610,8 +610,8 @@ export interface $PlayerKJS extends $LivingEntityKJS, $DataSenderKJS, $WithAttac
 "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 "playSound"(id: $SoundEvent$$Type): void
 "rayTrace"(): $RayTraceResultJS
-"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "rayTrace"(distance: double): $RayTraceResultJS
+"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 "runCommand"(command: string): integer
 "runCommandSilent"(command: string): integer
@@ -637,8 +637,8 @@ export interface $PlayerKJS extends $LivingEntityKJS, $DataSenderKJS, $WithAttac
 "setMovementSpeedAddition"(speed: double): void
 "setNbt"(nbt: $CompoundTag$$Type): void
 "setOffHandItem"(item: $ItemStack$$Type): void
-"setPosition"(block: $BlockContainerJS$$Type): void
 "setPosition"(x: double, y: double, z: double): void
+"setPosition"(block: $BlockContainerJS$$Type): void
 "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 "setRotation"(yaw: float, pitch: float): void
 "setSaturation"(saturation: float): void
@@ -816,8 +816,8 @@ export interface $LevelKJS extends $WithAttachedData<$Level>, $ScriptTypeHolder 
 "createEntity"(type: $EntityType$$Type<any>): $Entity
 "createEntityList"(entities: $Collection$$Type<$Entity$$Type>): $EntityArrayList
 "createExplosion"(x: double, y: double, z: double): $ExplosionJS
-"getBlock"(x: integer, y: integer, z: integer): $BlockContainerJS
 "getBlock"(blockEntity: $BlockEntity$$Type): $BlockContainerJS
+"getBlock"(x: integer, y: integer, z: integer): $BlockContainerJS
 "getBlock"(pos: $BlockPos$$Type): $BlockContainerJS
 "getData"(): $AttachedData<$Level>
 "getDimension"(): $ResourceLocation
@@ -921,8 +921,8 @@ export interface $EntityKJS extends $WithPersistentData, $MessageSenderKJS, $Scr
 "attack"(hp: float): void
 "getBlock"(): $BlockContainerJS
 "getDisplayName"(): $Component
-"getDistance"(pos: $BlockPos$$Type): double
 "getDistance"(x: double, y: double, z: double): double
+"getDistance"(pos: $BlockPos$$Type): double
 "getDistanceSq"(pos: $BlockPos$$Type): double
 "getFacing"(): $Direction
 "getItem"(): $ItemStack
@@ -951,8 +951,8 @@ export interface $EntityKJS extends $WithPersistentData, $MessageSenderKJS, $Scr
 "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 "playSound"(id: $SoundEvent$$Type): void
-"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "rayTrace"(distance: double): $RayTraceResultJS
+"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "runCommand"(command: string): integer
 "runCommandSilent"(command: string): integer
 "self"(): $Entity
@@ -960,8 +960,8 @@ export interface $EntityKJS extends $WithPersistentData, $MessageSenderKJS, $Scr
 "setMotionY"(y: double): void
 "setMotionZ"(z: double): void
 "setNbt"(nbt: $CompoundTag$$Type): void
-"setPosition"(block: $BlockContainerJS$$Type): void
 "setPosition"(x: double, y: double, z: double): void
+"setPosition"(block: $BlockContainerJS$$Type): void
 "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 "setRotation"(yaw: float, pitch: float): void
 "setStatusMessage"(message: $Component$$Type): void
@@ -1122,8 +1122,8 @@ export interface $ComponentKJS extends $Component, $JsonSerializable, $WrappedJS
 "asIterable"(): $Iterable<$Component>
 "black"(): $MutableComponent
 "blue"(): $MutableComponent
-"bold"(value: boolean): $MutableComponent
 "bold"(): $MutableComponent
+"bold"(value: boolean): $MutableComponent
 "click"(s: $ClickEvent$$Type): $MutableComponent
 "clickChangePage"(page: string): $MutableComponent
 "clickCopy"(text: string): $MutableComponent
@@ -1158,12 +1158,12 @@ export interface $ComponentKJS extends $Component, $JsonSerializable, $WrappedJS
 "hover"(s: $Component$$Type): $MutableComponent
 "insertion"(s: string): $MutableComponent
 "isEmpty"(): boolean
-"italic"(value: boolean): $MutableComponent
 "italic"(): $MutableComponent
+"italic"(value: boolean): $MutableComponent
 "lightPurple"(): $MutableComponent
 "noColor"(): $MutableComponent
-"obfuscated"(value: boolean): $MutableComponent
 "obfuscated"(): $MutableComponent
+"obfuscated"(value: boolean): $MutableComponent
 "plainCopy"(): $MutableComponent
 /** @deprecated */
 "rawComponent"(): $MutableComponent
@@ -1197,14 +1197,14 @@ function keybind(string0: string): $MutableComponent
 function literal(string0: string): $MutableComponent
 function nbt(string0: string, boolean1: boolean, optional2: $Optional$$Type<$Component$$Type>, dataSource3: $DataSource$$Type): $MutableComponent
 function nullToEmpty(string0: string): $Component
-function of(string0: string, style1: $Style$$Type): $FormattedText
 function of(string0: string): $FormattedText
+function of(string0: string, style1: $Style$$Type): $FormattedText
 function score(string0: string, string1: string): $MutableComponent
 function selector(string0: string, optional1: $Optional$$Type<$Component$$Type>): $MutableComponent
 function translatable(string0: string): $MutableComponent
 function translatable(string0: string, ...object1s: any[]): $MutableComponent
-function translatableWithFallback(string0: string, string1: string, ...object2s: any[]): $MutableComponent
 function translatableWithFallback(string0: string, string1: string): $MutableComponent
+function translatableWithFallback(string0: string, string1: string, ...object2s: any[]): $MutableComponent
 }
 export abstract class $ComponentKJS$$Static implements $ComponentKJS {
 static "composite"(...formattedText0s: $FormattedText$$Type[]): $FormattedText
@@ -1214,14 +1214,14 @@ static "keybind"(string0: string): $MutableComponent
 static "literal"(string0: string): $MutableComponent
 static "nbt"(string0: string, boolean1: boolean, optional2: $Optional$$Type<$Component$$Type>, dataSource3: $DataSource$$Type): $MutableComponent
 static "nullToEmpty"(string0: string): $Component
-static "of"(string0: string, style1: $Style$$Type): $FormattedText
 static "of"(string0: string): $FormattedText
+static "of"(string0: string, style1: $Style$$Type): $FormattedText
 static "score"(string0: string, string1: string): $MutableComponent
 static "selector"(string0: string, optional1: $Optional$$Type<$Component$$Type>): $MutableComponent
 static "translatable"(string0: string): $MutableComponent
 static "translatable"(string0: string, ...object1s: any[]): $MutableComponent
-static "translatableWithFallback"(string0: string, string1: string, ...object2s: any[]): $MutableComponent
 static "translatableWithFallback"(string0: string, string1: string): $MutableComponent
+static "translatableWithFallback"(string0: string, string1: string, ...object2s: any[]): $MutableComponent
 }
 }
 
@@ -1294,9 +1294,9 @@ export interface $ServerPlayerKJS extends $PlayerKJS {
 "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 "damageEquipment"(slot: $EquipmentSlot$$Type): void
-"damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 "damageHeldItem"(): void
+"damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 "foodEaten"(is: $ItemStack$$Type): void
 "getAttributeBaseValue"(attribute: $Attribute$$Type): double
 "getAttributeTotalValue"(attribute: $Attribute$$Type): double
@@ -1306,8 +1306,8 @@ export interface $ServerPlayerKJS extends $PlayerKJS {
 "getData"(): $AttachedData<$Player>
 "getDefaultMovementSpeed"(): double
 "getDisplayName"(): $Component
-"getDistance"(pos: $BlockPos$$Type): double
 "getDistance"(x: double, y: double, z: double): double
+"getDistance"(pos: $BlockPos$$Type): double
 "getDistanceSq"(pos: $BlockPos$$Type): double
 "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 "getFacing"(): $Direction
@@ -1363,8 +1363,8 @@ export interface $ServerPlayerKJS extends $PlayerKJS {
 "isPlayer"(): boolean
 "isUndead"(): boolean
 "isWaterCreature"(): boolean
-"kick"(reason: $Component$$Type): void
 "kick"(): void
+"kick"(reason: $Component$$Type): void
 "mergeNbt"(tag: $CompoundTag$$Type): $Entity
 "modifyAttribute"(attribute: $Attribute$$Type, identifier: string, d: double, operation: $AttributeModifier$Operation$$Type): void
 "notify"(builder: $NotificationBuilder$$Type): void
@@ -1376,8 +1376,8 @@ export interface $ServerPlayerKJS extends $PlayerKJS {
 "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 "playSound"(id: $SoundEvent$$Type): void
 "rayTrace"(): $RayTraceResultJS
-"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "rayTrace"(distance: double): $RayTraceResultJS
+"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 "revokeAdvancement"(id: $ResourceLocation$$Type): void
 "runCommand"(command: string): integer
@@ -1405,8 +1405,8 @@ export interface $ServerPlayerKJS extends $PlayerKJS {
 "setMovementSpeedAddition"(speed: double): void
 "setNbt"(nbt: $CompoundTag$$Type): void
 "setOffHandItem"(item: $ItemStack$$Type): void
-"setPosition"(block: $BlockContainerJS$$Type): void
 "setPosition"(x: double, y: double, z: double): void
+"setPosition"(block: $BlockContainerJS$$Type): void
 "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 "setRotation"(yaw: float, pitch: float): void
 "setSaturation"(saturation: float): void
@@ -1568,12 +1568,12 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 export interface $ItemStackKJS extends $SpecialEquality, $NBTSerializable, $JsonSerializable, $IngredientSupplierKJS {
 "areItemsEqual"(other: $ItemStack$$Type): boolean
 "asIngredient"(): $Ingredient
-"enchant"(enchantments: $Map$$Type<any, any>): $ItemStack
 "enchant"(enchantment: $Enchantment$$Type, level: integer): $ItemStack
+"enchant"(enchantments: $Map$$Type<any, any>): $ItemStack
 "equalsIgnoringCount"(stack: $ItemStack$$Type): boolean
 "getEnchantments"(): $Map<string, integer>
-"getHarvestSpeed"(block: $BlockContainerJS$$Type): float
 "getHarvestSpeed"(): float
+"getHarvestSpeed"(block: $BlockContainerJS$$Type): float
 "getId"(): string
 "getIdLocation"(): $ResourceLocation
 "getMod"(): string
@@ -1592,6 +1592,7 @@ export interface $ItemStackKJS extends $SpecialEquality, $NBTSerializable, $Json
 "strongNBT"(): $Ingredient
 "toItemString"(): string
 "toJson"(): $JsonObject
+"toNBT"(): $CompoundTag
 "weakNBT"(): $Ingredient
 "withChance"(chance: double): $OutputItem
 "withCount"(c: integer): $ItemStack
@@ -1791,9 +1792,9 @@ export interface $ClientPlayerKJS extends $PlayerKJS {
 "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 "damageEquipment"(slot: $EquipmentSlot$$Type): void
-"damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 "damageHeldItem"(): void
+"damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 "foodEaten"(is: $ItemStack$$Type): void
 "getAttributeBaseValue"(attribute: $Attribute$$Type): double
 "getAttributeTotalValue"(attribute: $Attribute$$Type): double
@@ -1803,8 +1804,8 @@ export interface $ClientPlayerKJS extends $PlayerKJS {
 "getData"(): $AttachedData<$Player>
 "getDefaultMovementSpeed"(): double
 "getDisplayName"(): $Component
-"getDistance"(pos: $BlockPos$$Type): double
 "getDistance"(x: double, y: double, z: double): double
+"getDistance"(pos: $BlockPos$$Type): double
 "getDistanceSq"(pos: $BlockPos$$Type): double
 "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 "getFacing"(): $Direction
@@ -1866,8 +1867,8 @@ export interface $ClientPlayerKJS extends $PlayerKJS {
 "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 "playSound"(id: $SoundEvent$$Type): void
 "rayTrace"(): $RayTraceResultJS
-"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "rayTrace"(distance: double): $RayTraceResultJS
+"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 "runCommand"(command: string): integer
 "runCommandSilent"(command: string): integer
@@ -1893,8 +1894,8 @@ export interface $ClientPlayerKJS extends $PlayerKJS {
 "setMovementSpeedAddition"(speed: double): void
 "setNbt"(nbt: $CompoundTag$$Type): void
 "setOffHandItem"(item: $ItemStack$$Type): void
-"setPosition"(block: $BlockContainerJS$$Type): void
 "setPosition"(x: double, y: double, z: double): void
+"setPosition"(block: $BlockContainerJS$$Type): void
 "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 "setRotation"(yaw: float, pitch: float): void
 "setSaturation"(saturation: float): void
@@ -2031,9 +2032,9 @@ export interface $LivingEntityKJS extends $EntityKJS {
 "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 "damageEquipment"(slot: $EquipmentSlot$$Type): void
-"damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 "damageHeldItem"(): void
+"damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 "foodEaten"(is: $ItemStack$$Type): void
 "getAttributeBaseValue"(attribute: $Attribute$$Type): double
 "getAttributeTotalValue"(attribute: $Attribute$$Type): double
@@ -2041,8 +2042,8 @@ export interface $LivingEntityKJS extends $EntityKJS {
 "getChestArmorItem"(): $ItemStack
 "getDefaultMovementSpeed"(): double
 "getDisplayName"(): $Component
-"getDistance"(pos: $BlockPos$$Type): double
 "getDistance"(x: double, y: double, z: double): double
+"getDistance"(pos: $BlockPos$$Type): double
 "getDistanceSq"(pos: $BlockPos$$Type): double
 "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 "getFacing"(): $Direction
@@ -2085,8 +2086,8 @@ export interface $LivingEntityKJS extends $EntityKJS {
 "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 "playSound"(id: $SoundEvent$$Type): void
 "rayTrace"(): $RayTraceResultJS
-"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "rayTrace"(distance: double): $RayTraceResultJS
+"rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 "runCommand"(command: string): integer
 "runCommandSilent"(command: string): integer
@@ -2108,8 +2109,8 @@ export interface $LivingEntityKJS extends $EntityKJS {
 "setMovementSpeedAddition"(speed: double): void
 "setNbt"(nbt: $CompoundTag$$Type): void
 "setOffHandItem"(item: $ItemStack$$Type): void
-"setPosition"(block: $BlockContainerJS$$Type): void
 "setPosition"(x: double, y: double, z: double): void
+"setPosition"(block: $BlockContainerJS$$Type): void
 "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 "setRotation"(yaw: float, pitch: float): void
 "setStatusMessage"(message: $Component$$Type): void
@@ -2344,15 +2345,15 @@ import { $Ingredient$$Type } from "net.minecraft.world.item.crafting.Ingredient"
 
 export interface $InventoryKJS {
 "asContainer"(): $Container
-"clear"(ingredient: $Ingredient$$Type): void
 "clear"(): void
-"count"(ingredient: $Ingredient$$Type): integer
+"clear"(ingredient: $Ingredient$$Type): void
 "count"(): integer
+"count"(ingredient: $Ingredient$$Type): integer
 "countNonEmpty"(): integer
 "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-"find"(): integer
 "find"(ingredient: $Ingredient$$Type): integer
+"find"(): integer
 "getAllItems"(): $List<$ItemStack>
 "getBlock"(level: $Level$$Type): $BlockContainerJS
 "getHeight"(): integer

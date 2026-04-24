@@ -709,18 +709,18 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $WeightedReward$$Type = ($WeightedReward);
 }
 
-declare module "dev.ftb.mods.ftblibrary.config.LongConfig" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $LongConfig$$Type = ($LongConfig);
-}
-
 declare module "dev.ftb.mods.ftbquests.quest.reward.RewardType$Provider" {
 import { $Quest } from "dev.ftb.mods.ftbquests.quest.Quest"
 import { $Reward$$Type } from "dev.ftb.mods.ftbquests.quest.reward.Reward"
 
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $RewardType$Provider$$Type = ($RewardType$Provider | ((arg0: long, arg1: $Quest) => $Reward$$Type));
+}
+
+declare module "dev.ftb.mods.ftblibrary.config.LongConfig" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $LongConfig$$Type = ($LongConfig);
 }
 
 declare module "dev.ftb.mods.ftbquests.events.ObjectCompletedEvent$ChapterEvent" {

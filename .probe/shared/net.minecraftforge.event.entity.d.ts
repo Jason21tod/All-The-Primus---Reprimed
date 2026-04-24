@@ -250,8 +250,8 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $PlayerEvent$ItemCraftedEvent extends $PlayerEvent {
-constructor(player0: $Player$$Type, itemStack1: $ItemStack$$Type, container2: $Container$$Type)
 constructor()
+constructor(player0: $Player$$Type, itemStack1: $ItemStack$$Type, container2: $Container$$Type)
 
 public "getCrafting"(): $ItemStack
 public "getInventory"(): $Container
@@ -267,8 +267,8 @@ import { $ProjectileImpactEvent$ImpactResult, $ProjectileImpactEvent$ImpactResul
 import { $EntityEvent } from "net.minecraftforge.event.entity.EntityEvent"
 
 export class $ProjectileImpactEvent extends $EntityEvent {
-constructor(projectile0: $Projectile$$Type, hitResult1: $HitResult$$Type)
 constructor()
+constructor(projectile0: $Projectile$$Type, hitResult1: $HitResult$$Type)
 
 public "getImpactResult"(): $ProjectileImpactEvent$ImpactResult
 public "getProjectile"(): $Projectile
@@ -389,8 +389,8 @@ import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent"
 
 export class $LivingKnockBackEvent extends $LivingEvent {
-constructor(livingEntity0: $LivingEntity$$Type, float1: float, double2: double, double3: double)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, float1: float, double2: double, double3: double)
 
 public "getOriginalRatioX"(): double
 public "getOriginalRatioZ"(): double
@@ -421,8 +421,8 @@ import { $AdvancementEvent$AdvancementProgressEvent$ProgressType, $AdvancementEv
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $AdvancementEvent$AdvancementProgressEvent extends $AdvancementEvent {
-constructor(player0: $Player$$Type, advancement1: $Advancement$$Type, advancementProgress2: $AdvancementProgress$$Type, string3: string, progressType4: $AdvancementEvent$AdvancementProgressEvent$ProgressType$$Type)
 constructor()
+constructor(player0: $Player$$Type, advancement1: $Advancement$$Type, advancementProgress2: $AdvancementProgress$$Type, string3: string, progressType4: $AdvancementEvent$AdvancementProgressEvent$ProgressType$$Type)
 
 public "getAdvancementProgress"(): $AdvancementProgress
 public "getCriterionName"(): string
@@ -751,8 +751,8 @@ import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent
 import { $DamageSource, $DamageSource$$Type } from "net.minecraft.world.damagesource.DamageSource"
 
 export class $LivingDamageEvent extends $LivingEvent {
-constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float)
 
 public "getAmount"(): float
 public "getSource"(): $DamageSource
@@ -794,8 +794,8 @@ import { $Entity, $Entity$$Type } from "net.minecraft.world.entity.Entity"
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $CriticalHitEvent extends $PlayerEvent {
-constructor()
 constructor(player0: $Player$$Type, entity1: $Entity$$Type, float2: float, boolean3: boolean)
+constructor()
 
 public "getDamageModifier"(): float
 public "getOldDamageModifier"(): float
@@ -872,8 +872,8 @@ import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent
 import { $DamageSource, $DamageSource$$Type } from "net.minecraft.world.damagesource.DamageSource"
 
 export class $LivingHurtEvent extends $LivingEvent {
-constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float)
 
 public "getAmount"(): float
 public "getSource"(): $DamageSource
@@ -1312,10 +1312,10 @@ import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $LivingEvent } from "net.minecraftforge.event.entity.living.LivingEvent"
 
 export class $LivingDrownEvent extends $LivingEvent {
-constructor()
+constructor(livingEntity0: $LivingEntity$$Type, boolean1: boolean, float2: float, int3: integer)
 /** @deprecated */
 constructor(livingEntity0: $LivingEntity$$Type, boolean1: boolean)
-constructor(livingEntity0: $LivingEntity$$Type, boolean1: boolean, float2: float, int3: integer)
+constructor()
 
 public "getBubbleCount"(): integer
 public "getDamageAmount"(): float
@@ -1472,8 +1472,8 @@ import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $ArrowLooseEvent extends $PlayerEvent {
-constructor()
 constructor(player0: $Player$$Type, itemStack1: $ItemStack$$Type, level2: $Level$$Type, int3: integer, boolean4: boolean)
+constructor()
 
 public "getBow"(): $ItemStack
 public "getCharge"(): integer
@@ -1699,8 +1699,8 @@ import { $Optional } from "java.util.Optional"
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $PlayerEvent$BreakSpeed extends $PlayerEvent {
-constructor()
 constructor(player0: $Player$$Type, blockState1: $BlockState$$Type, float2: float, blockPos3: $BlockPos$$Type)
+constructor()
 
 public "getNewSpeed"(): float
 public "getOriginalSpeed"(): float
@@ -1796,10 +1796,10 @@ import { $PlayerInteractEvent } from "net.minecraftforge.event.entity.player.Pla
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 
 export class $PlayerInteractEvent$LeftClickBlock extends $PlayerInteractEvent {
-constructor()
-constructor(player0: $Player$$Type, blockPos1: $BlockPos$$Type, direction2: $Direction$$Type, action3: $PlayerInteractEvent$LeftClickBlock$Action$$Type)
 /** @deprecated */
 constructor(player0: $Player$$Type, blockPos1: $BlockPos$$Type, direction2: $Direction$$Type)
+constructor(player0: $Player$$Type, blockPos1: $BlockPos$$Type, direction2: $Direction$$Type, action3: $PlayerInteractEvent$LeftClickBlock$Action$$Type)
+constructor()
 
 public "getAction"(): $PlayerInteractEvent$LeftClickBlock$Action
 public "getUseBlock"(): $Event$Result
@@ -1822,8 +1822,8 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $InteractionHand, $InteractionHand$$Type } from "net.minecraft.world.InteractionHand"
 
 export class $LivingUseTotemEvent extends $LivingEvent {
-constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, itemStack2: $ItemStack$$Type, interactionHand3: $InteractionHand$$Type)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, itemStack2: $ItemStack$$Type, interactionHand3: $InteractionHand$$Type)
 
 public "getHandHolding"(): $InteractionHand
 public "getSource"(): $DamageSource
@@ -2107,8 +2107,8 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $LivingSwapItemsEvent } from "net.minecraftforge.event.entity.living.LivingSwapItemsEvent"
 
 export class $LivingSwapItemsEvent$Hands extends $LivingSwapItemsEvent {
-constructor(livingEntity0: $LivingEntity$$Type)
 constructor()
+constructor(livingEntity0: $LivingEntity$$Type)
 
 public "getItemSwappedToMainHand"(): $ItemStack
 public "getItemSwappedToOffHand"(): $ItemStack

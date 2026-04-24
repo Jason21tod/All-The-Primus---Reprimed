@@ -266,8 +266,8 @@ constructor(m: $ScriptType$$Type, log: $Logger$$Type)
 
 public "debug"(message: any): $ConsoleLine
 public "debugf"(message: string, ...args: any[]): $ConsoleLine
-public "error"(message: string, throwable: $Throwable$$Type): $ConsoleLine
 public "error"(message: string, error: $Throwable$$Type, exitPattern: $Pattern$$Type): $ConsoleLine
+public "error"(message: string, throwable: $Throwable$$Type): $ConsoleLine
 public "error"(message: any): $ConsoleLine
 public "errorf"(message: string, ...args: any[]): $ConsoleLine
 public "errorsComponent"(command: string): $Component
@@ -300,8 +300,8 @@ public "warn"(message: any): $ConsoleLine
 public "warn"(message: string, error: $Throwable$$Type, exitPattern: $Pattern$$Type): $ConsoleLine
 public "warn"(message: string, error: $Throwable$$Type): $ConsoleLine
 public "warnf"(message: string, ...args: any[]): $ConsoleLine
-public "writeToFile"(type: $LogType$$Type, timestamp: long, line: string): void
 public "writeToFile"(type: $LogType$$Type, line: string): void
+public "writeToFile"(type: $LogType$$Type, timestamp: long, line: string): void
 get "debugEnabled"(): boolean
 get "logger"(): $Logger
 get "muted"(): boolean

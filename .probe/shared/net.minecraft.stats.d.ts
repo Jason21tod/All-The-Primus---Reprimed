@@ -133,8 +133,8 @@ constructor()
 
 public "add"(recipe0: $Recipe$$Type<any>): void
 public "addHighlight"(recipe0: $Recipe$$Type<any>): void
-public "contains"(resourceLocation0: $ResourceLocation$$Type): boolean
 public "contains"(recipe0: $Recipe$$Type<any>): boolean
+public "contains"(resourceLocation0: $ResourceLocation$$Type): boolean
 public "copyOverData"(recipeBook0: $RecipeBook$$Type): void
 public "getBookSettings"(): $RecipeBookSettings
 public "handler$heg000$onCopy"(pOther: $RecipeBook$$Type, ci: $CallbackInfo$$Type): void
@@ -178,8 +178,8 @@ import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 export class $StatsCounter {
 constructor()
 
-public "getValue"<T>(statType0: $StatType$$Type<T>, t1: T): integer
 public "getValue"(stat0: $Stat$$Type<any>): integer
+public "getValue"<T>(statType0: $StatType$$Type<T>, t1: T): integer
 public "increment"(player0: $Player$$Type, stat1: $Stat$$Type<any>, int2: integer): void
 public "setValue"(player0: $Player$$Type, stat1: $Stat$$Type<any>, int2: integer): void
 }

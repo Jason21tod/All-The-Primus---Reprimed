@@ -50,8 +50,8 @@ import { $SheetGlyphInfo$$Type } from "com.mojang.blaze3d.font.SheetGlyphInfo"
 
 export interface $GlyphInfo {
 "bake"(function0: $Function$$Type<$SheetGlyphInfo$$Type, $BakedGlyph>): $BakedGlyph
-"getAdvance"(): float
 "getAdvance"(boolean0: boolean): float
+"getAdvance"(): float
 "getBoldOffset"(): float
 "getShadowOffset"(): float
 get "advance"(): float
@@ -239,8 +239,8 @@ constructor(boolean0: boolean)
 
 public "bindRead"(): void
 public "bindWrite"(boolean0: boolean): void
-public "blitToScreen"(int0: integer, int1: integer): void
 public "blitToScreen"(int0: integer, int1: integer, boolean2: boolean): void
+public "blitToScreen"(int0: integer, int1: integer): void
 public "checkStatus"(): void
 public "clear"(boolean0: boolean): void
 public "copyDepthFrom"(renderTarget0: $RenderTarget$$Type): void
@@ -298,8 +298,8 @@ public "blendPixel"(int0: integer, int1: integer, int2: integer): void
 public "close"(): void
 public "copyFrom"(nativeImage0: $NativeImage$$Type): void
 public "copyFromFont"(sTBTTFontinfo0: $STBTTFontinfo$$Type, int1: integer, int2: integer, int3: integer, float4: float, float5: float, float6: float, float7: float, int8: integer, int9: integer): void
-public "copyRect"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, boolean6: boolean, boolean7: boolean): void
 public "copyRect"(nativeImage0: $NativeImage$$Type, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, boolean7: boolean, boolean8: boolean): void
+public "copyRect"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, boolean6: boolean, boolean7: boolean): void
 public "downloadDepthBuffer"(float0: float): void
 public "downloadTexture"(int0: integer, boolean1: boolean): void
 public "drawPixels"(): void
@@ -317,20 +317,20 @@ public "getWidth"(): integer
 /** @deprecated */
 public "makePixelArray"(): integer[]
 public "mappedCopy"(intUnaryOperator0: $IntUnaryOperator$$Type): $NativeImage
-public static "read"(inputStream0: $InputStream$$Type): $NativeImage
-public static "read"(format0: $NativeImage$Format$$Type, byteBuffer1: $ByteBuffer$$Type): $NativeImage
-public static "read"(byte0s: byte[]): $NativeImage
-public static "read"(format0: $NativeImage$Format$$Type, inputStream1: $InputStream$$Type): $NativeImage
 public static "read"(byteBuffer0: $ByteBuffer$$Type): $NativeImage
+public static "read"(format0: $NativeImage$Format$$Type, byteBuffer1: $ByteBuffer$$Type): $NativeImage
+public static "read"(format0: $NativeImage$Format$$Type, inputStream1: $InputStream$$Type): $NativeImage
+public static "read"(byte0s: byte[]): $NativeImage
+public static "read"(inputStream0: $InputStream$$Type): $NativeImage
 public "resizeSubRectTo"(int0: integer, int1: integer, int2: integer, int3: integer, nativeImage4: $NativeImage$$Type): void
 public "setPixelLuminance"(int0: integer, int1: integer, byte2: byte): void
 public "setPixelRGBA"(int0: integer, int1: integer, int2: integer): void
 public "untrack"(): void
-public "upload"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, boolean7: boolean, boolean8: boolean, boolean9: boolean, boolean10: boolean): void
 public "upload"(int0: integer, int1: integer, int2: integer, boolean3: boolean): void
 public "upload"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, boolean7: boolean, boolean8: boolean): void
-public "writeToFile"(path0: $Path$$Type): void
+public "upload"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer, int6: integer, boolean7: boolean, boolean8: boolean, boolean9: boolean, boolean10: boolean): void
 public "writeToFile"(file0: $File$$Type): void
+public "writeToFile"(path0: $Path$$Type): void
 get "pixels"(): long
 set "pixels"(value: long)
 get "height"(): integer
@@ -377,24 +377,24 @@ import { $ByteBuffer$$Type } from "java.nio.ByteBuffer"
 export interface $VertexConsumer extends $IForgeVertexConsumer {
 "applyBakedLighting"(int0: integer, byteBuffer1: $ByteBuffer$$Type): integer
 "applyBakedNormals"(vector3f0: $Vector3f$$Type, byteBuffer1: $ByteBuffer$$Type, matrix3f2: $Matrix3f$$Type): void
-"color"(int0: integer, int1: integer, int2: integer, int3: integer): $VertexConsumer
 "color"(float0: float, float1: float, float2: float, float3: float): $VertexConsumer
+"color"(int0: integer, int1: integer, int2: integer, int3: integer): $VertexConsumer
 "color"(int0: integer): $VertexConsumer
 "defaultColor"(int0: integer, int1: integer, int2: integer, int3: integer): void
 "endVertex"(): void
 "misc"(vertexFormatElement0: $VertexFormatElement$$Type, ...int1s: integer[]): $VertexConsumer
 "normal"(float0: float, float1: float, float2: float): $VertexConsumer
 "normal"(matrix3f0: $Matrix3f$$Type, float1: float, float2: float, float3: float): $VertexConsumer
-"overlayCoords"(int0: integer, int1: integer): $VertexConsumer
 "overlayCoords"(int0: integer): $VertexConsumer
+"overlayCoords"(int0: integer, int1: integer): $VertexConsumer
 "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, float6: float, int7s: integer[], int8: integer, boolean9: boolean): void
-"putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, int6s: integer[], int7: integer, boolean8: boolean): void
 "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, int5: integer, int6: integer): void
+"putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, int6s: integer[], int7: integer, boolean8: boolean): void
 "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, float5: float, int6: integer, int7: integer, boolean8: boolean): void
 "unsetDefaultColor"(): void
 "uv"(float0: float, float1: float): $VertexConsumer
-"uv2"(int0: integer, int1: integer): $VertexConsumer
 "uv2"(int0: integer): $VertexConsumer
+"uv2"(int0: integer, int1: integer): $VertexConsumer
 "vertex"(double0: double, double1: double, double2: double): $VertexConsumer
 "vertex"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, float8: float, int9: integer, int10: integer, float11: float, float12: float, float13: float): void
 "vertex"(matrix4f0: $Matrix4f$$Type, float1: float, float2: float, float3: float): $VertexConsumer
@@ -953,8 +953,8 @@ public "overlayCoords"(int0: integer): $VertexConsumer
 public "particle_core_particleVertex"(x: float, y: float, z: float, red: float, green: float, blue: float, alpha: float, u: float, v: float, light: integer): void
 public "push"(memoryStack0: $MemoryStack$$Type, long1: long, int2: integer, vertexFormatDescription3: $VertexFormatDescription$$Type): void
 public "putBulkData"(byteBuffer0: $ByteBuffer$$Type): void
-public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, int6s: integer[], int7: integer, boolean8: boolean): void
 public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, int5: integer, int6: integer): void
+public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, int6s: integer[], int7: integer, boolean8: boolean): void
 public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, float6: float, int7s: integer[], int8: integer, boolean9: boolean): void
 public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, float5: float, int6: integer, int7: integer, boolean8: boolean): void
 public "putByte"(int0: integer, byte1: byte): void
@@ -1067,8 +1067,8 @@ export interface $BufferVertexConsumer extends $VertexConsumer {
 "overlayCoords"(int0: integer, int1: integer): $VertexConsumer
 "overlayCoords"(int0: integer): $VertexConsumer
 "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, float6: float, int7s: integer[], int8: integer, boolean9: boolean): void
-"putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, int6s: integer[], int7: integer, boolean8: boolean): void
 "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, int5: integer, int6: integer): void
+"putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, int6s: integer[], int7: integer, boolean8: boolean): void
 "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, float5: float, int6: integer, int7: integer, boolean8: boolean): void
 "putByte"(int0: integer, byte1: byte): void
 "putFloat"(int0: integer, float1: float): void
@@ -1106,24 +1106,24 @@ constructor()
 
 public "applyBakedLighting"(int0: integer, byteBuffer1: $ByteBuffer$$Type): integer
 public "applyBakedNormals"(vector3f0: $Vector3f$$Type, byteBuffer1: $ByteBuffer$$Type, matrix3f2: $Matrix3f$$Type): void
-public "color"(int0: integer, int1: integer, int2: integer, int3: integer): $VertexConsumer
 public "color"(float0: float, float1: float, float2: float, float3: float): $VertexConsumer
+public "color"(int0: integer, int1: integer, int2: integer, int3: integer): $VertexConsumer
 public "color"(int0: integer): $VertexConsumer
 public "defaultColor"(int0: integer, int1: integer, int2: integer, int3: integer): void
 public "endVertex"(): void
 public "misc"(vertexFormatElement0: $VertexFormatElement$$Type, ...int1s: integer[]): $VertexConsumer
 public "normal"(float0: float, float1: float, float2: float): $VertexConsumer
 public "normal"(matrix3f0: $Matrix3f$$Type, float1: float, float2: float, float3: float): $VertexConsumer
-public "overlayCoords"(int0: integer, int1: integer): $VertexConsumer
 public "overlayCoords"(int0: integer): $VertexConsumer
+public "overlayCoords"(int0: integer, int1: integer): $VertexConsumer
 public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, float6: float, int7s: integer[], int8: integer, boolean9: boolean): void
-public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, int6s: integer[], int7: integer, boolean8: boolean): void
 public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, int5: integer, int6: integer): void
+public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2s: float[], float3: float, float4: float, float5: float, int6s: integer[], int7: integer, boolean8: boolean): void
 public "putBulkData"(pose0: $PoseStack$Pose$$Type, bakedQuad1: $BakedQuad$$Type, float2: float, float3: float, float4: float, float5: float, int6: integer, int7: integer, boolean8: boolean): void
 public "unsetDefaultColor"(): void
 public "uv"(float0: float, float1: float): $VertexConsumer
-public "uv2"(int0: integer, int1: integer): $VertexConsumer
 public "uv2"(int0: integer): $VertexConsumer
+public "uv2"(int0: integer, int1: integer): $VertexConsumer
 public "vertex"(double0: double, double1: double, double2: double): $VertexConsumer
 public "vertex"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, float8: float, int9: integer, int10: integer, float11: float, float12: float, float13: float): void
 public "vertex"(matrix4f0: $Matrix4f$$Type, float1: float, float2: float, float3: float): $VertexConsumer
@@ -1342,19 +1342,19 @@ import { $Matrix4f$$Type } from "org.joml.Matrix4f"
 export class $AbstractUniform {
 constructor()
 
-public "set"(vector4f0: $Vector4f$$Type): void
-public "set"(int0: integer, int1: integer): void
-public "set"(int0: integer, int1: integer, int2: integer, int3: integer): void
-public "set"(int0: integer, int1: integer, int2: integer): void
-public "set"(vector3f0: $Vector3f$$Type): void
-public "set"(float0s: float[]): void
 public "set"(matrix4f0: $Matrix4f$$Type): void
-public "set"(int0: integer): void
-public "set"(matrix3f0: $Matrix3f$$Type): void
+public "set"(float0s: float[]): void
+public "set"(vector3f0: $Vector3f$$Type): void
+public "set"(float0: float): void
 public "set"(float0: float, float1: float, float2: float): void
 public "set"(float0: float, float1: float): void
 public "set"(float0: float, float1: float, float2: float, float3: float): void
-public "set"(float0: float): void
+public "set"(matrix3f0: $Matrix3f$$Type): void
+public "set"(int0: integer): void
+public "set"(int0: integer, int1: integer): void
+public "set"(int0: integer, int1: integer, int2: integer): void
+public "set"(int0: integer, int1: integer, int2: integer, int3: integer): void
+public "set"(vector4f0: $Vector4f$$Type): void
 public "setMat2x2"(float0: float, float1: float, float2: float, float3: float): void
 public "setMat2x3"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float): void
 public "setMat2x4"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float): void
@@ -1364,8 +1364,8 @@ public "setMat3x4"(float0: float, float1: float, float2: float, float3: float, f
 public "setMat4x2"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float): void
 public "setMat4x3"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, float8: float, float9: float, float10: float, float11: float): void
 public "setMat4x4"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, float8: float, float9: float, float10: float, float11: float, float12: float, float13: float, float14: float, float15: float): void
-public "setSafe"(float0: float, float1: float, float2: float, float3: float): void
 public "setSafe"(int0: integer, int1: integer, int2: integer, int3: integer): void
+public "setSafe"(float0: float, float1: float, float2: float, float3: float): void
 }
 }
 

@@ -376,13 +376,14 @@ import { $RealmsServer$State, $RealmsServer$State$$Type } from "com.mojang.realm
 export class $RealmsServer extends $ValueObject {
 constructor()
 
+public "clone"(): $RealmsServer
 public "cloneSlots"(map0: $Map$$Type<integer, $RealmsWorldOptions$$Type>): $Map<integer, $RealmsWorldOptions>
 public "getDescription"(): string
 public "getMinigameName"(): string
 public "getName"(): string
 public "getWorldName"(int0: integer): string
-public static "parse"(string0: string): $RealmsServer
 public static "parse"(jsonObject0: $JsonObject$$Type): $RealmsServer
+public static "parse"(string0: string): $RealmsServer
 public "setDescription"(string0: string): void
 public "setName"(string0: string): void
 public "toServerData"(string0: string): $ServerData
@@ -546,6 +547,7 @@ readonly "spawnProtection": integer
 
 constructor(boolean0: boolean, boolean1: boolean, boolean2: boolean, boolean3: boolean, int4: integer, boolean5: boolean, int6: integer, int7: integer, boolean8: boolean, string9: string)
 
+public "clone"(): $RealmsWorldOptions
 public static "createDefaults"(): $RealmsWorldOptions
 public static "createEmptyDefaults"(): $RealmsWorldOptions
 public "getDefaultSlotName"(int0: integer): string

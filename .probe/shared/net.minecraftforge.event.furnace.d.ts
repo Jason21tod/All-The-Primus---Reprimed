@@ -5,8 +5,8 @@ import { $ItemStack, $ItemStack$$Type } from "net.minecraft.world.item.ItemStack
 import { $RecipeType, $RecipeType$$Type } from "net.minecraft.world.item.crafting.RecipeType"
 
 export class $FurnaceFuelBurnTimeEvent extends $Event implements $EventItf {
-constructor()
 constructor(itemStack0: $ItemStack$$Type, int1: integer, recipeType2: $RecipeType$$Type<any>)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

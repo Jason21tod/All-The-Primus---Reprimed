@@ -8,11 +8,11 @@ import { $UUID$$Type } from "java.util.UUID"
 import { $Iterable } from "java.lang.Iterable"
 
 export interface $LevelEntityGetter<T extends $EntityAccess = $EntityAccess> {
-"get"(int0: integer): T
+"get"(aABB0: $AABB$$Type, consumer1: $Consumer$$Type<T>): void
+"get"<U extends T>(entityTypeTest0: $EntityTypeTest$$Type<T, U>, aABB1: $AABB$$Type, abortableIterationConsumer2: $AbortableIterationConsumer$$Type<U>): void
 "get"<U extends T>(entityTypeTest0: $EntityTypeTest$$Type<T, U>, abortableIterationConsumer1: $AbortableIterationConsumer$$Type<U>): void
 "get"(uUID0: $UUID$$Type): T
-"get"<U extends T>(entityTypeTest0: $EntityTypeTest$$Type<T, U>, aABB1: $AABB$$Type, abortableIterationConsumer2: $AbortableIterationConsumer$$Type<U>): void
-"get"(aABB0: $AABB$$Type, consumer1: $Consumer$$Type<T>): void
+"get"(int0: integer): T
 "getAll"(): $Iterable<T>
 get "all"(): $Iterable<T>
 }
@@ -227,8 +227,8 @@ public "addNewEntityWithoutEvent"(t0: T): boolean
 public "addWorldGenChunkEntities"(stream0: $Stream$$Type<T>): void
 public "areEntitiesLoaded"(long0: long): boolean
 public "autoSave"(): void
-public "canPositionTick"(chunkPos0: $ChunkPos$$Type): boolean
 public "canPositionTick"(blockPos0: $BlockPos$$Type): boolean
+public "canPositionTick"(chunkPos0: $ChunkPos$$Type): boolean
 public "close"(): void
 public "dumpSections"(writer0: $Writer$$Type): void
 public "gatherStats"(): string

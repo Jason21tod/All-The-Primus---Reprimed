@@ -23,8 +23,8 @@ public static "generateRegistryPackets"(boolean0: boolean): $List<$Pair<string, 
 public "getName"<V>(iForgeRegistry0: $IForgeRegistry$$Type<V>): $ResourceLocation
 public "getName"(): string
 public "getRegistry"<V>(resourceLocation0: $ResourceLocation$$Type, registryManager1: $RegistryManager$$Type): $ForgeRegistry<V>
-public "getRegistry"<V>(resourceLocation0: $ResourceLocation$$Type): $ForgeRegistry<V>
 public "getRegistry"<V>(resourceKey0: $ResourceKey$$Type<$Registry<V>>): $ForgeRegistry<V>
+public "getRegistry"<V>(resourceLocation0: $ResourceLocation$$Type): $ForgeRegistry<V>
 public static "getRegistryNamesForSyncToClient"(): $List<$ResourceLocation>
 public static "getVanillaRegistryKeys"(): $Set<$ResourceLocation>
 public static "postNewRegistryEvent"(): void
@@ -79,15 +79,15 @@ export interface $IForgeRegistryInternal<V = any> extends $IForgeRegistry<V> {
 "forEach"(consumer0: $Consumer$$Type<V>): void
 "getCodec"(): $Codec<V>
 "getDefaultKey"(): $ResourceLocation
-"getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
 "getDelegate"(v0: V): $Optional<$Holder$Reference<V>>
 "getDelegate"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder$Reference<V>>
+"getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
 "getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type<V>): $Holder$Reference<V>
-"getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference<V>
 "getDelegateOrThrow"(v0: V): $Holder$Reference<V>
+"getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference<V>
 "getEntries"(): $Set<$Map$Entry<$ResourceKey<V>, V>>
-"getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
 "getHolder"(v0: V): $Optional<$Holder<V>>
+"getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
 "getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 "getKey"(v0: V): $ResourceLocation
 "getKeys"(): $Set<$ResourceLocation>
@@ -148,15 +148,15 @@ export interface $IForgeRegistry<V = any> extends $Iterable<V> {
 "forEach"(consumer0: $Consumer$$Type<V>): void
 "getCodec"(): $Codec<V>
 "getDefaultKey"(): $ResourceLocation
-"getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
 "getDelegate"(v0: V): $Optional<$Holder$Reference<V>>
 "getDelegate"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder$Reference<V>>
+"getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
 "getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type<V>): $Holder$Reference<V>
-"getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference<V>
 "getDelegateOrThrow"(v0: V): $Holder$Reference<V>
+"getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference<V>
 "getEntries"(): $Set<$Map$Entry<$ResourceKey<V>, V>>
-"getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
 "getHolder"(v0: V): $Optional<$Holder<V>>
+"getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
 "getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 "getKey"(v0: V): $ResourceLocation
 "getKeys"(): $Set<$ResourceLocation>
@@ -222,8 +222,8 @@ export abstract class $IForgeRegistry$BakeCallback$$Static<V = any> implements $
 
 declare module "net.minecraftforge.registries.RegisterEvent" {
 import { $Registry } from "net.minecraft.core.Registry"
-import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $Consumer$$Type } from "java.util.function.Consumer"
+import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $EventItf } from "com.mega.endinglib.api.event.EventItf"
 import { $IModBusEvent } from "net.minecraftforge.fml.event.IModBusEvent"
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
@@ -240,8 +240,8 @@ public "el_setEventUnCancelable"(boolean0: boolean): void
 public "getForgeRegistry"<T>(): $IForgeRegistry<T>
 public "getRegistryKey"(): $ResourceKey<$Registry<any>>
 public "getVanillaRegistry"<T>(): $Registry<T>
-public "register"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>, resourceLocation1: $ResourceLocation$$Type, supplier2: $Supplier$$Type<T>): void
 public "register"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>, consumer1: $Consumer$$Type<$RegisterEvent$RegisterHelper$$Type<T>>): void
+public "register"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>, resourceLocation1: $ResourceLocation$$Type, supplier2: $Supplier$$Type<T>): void
 get "el_isUnCancelable"(): boolean
 set "el_isUnCancelable"(value: boolean)
 get "forgeRegistry"(): $IForgeRegistry<T>
@@ -341,8 +341,8 @@ readonly "overrides": $Map<$ResourceLocation, string>
 constructor()
 
 public "getPacketData"(): $FriendlyByteBuf
-public static "read"(compoundTag0: $CompoundTag$$Type): $ForgeRegistry$Snapshot
 public static "read"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $ForgeRegistry$Snapshot
+public static "read"(compoundTag0: $CompoundTag$$Type): $ForgeRegistry$Snapshot
 public "write"(): $CompoundTag
 get "packetData"(): $FriendlyByteBuf
 }
@@ -489,12 +489,12 @@ public "addOptionalTagDefaults"(tagKey0: $TagKey$$Type<T>, set1: $Set$$Type<$Sup
 public static "create"<B>(iForgeRegistry0: $IForgeRegistry$$Type<B>, string1: string): $DeferredRegister<B>
 public static "create"<B>(resourceKey0: $ResourceKey$$Type<$Registry<B>>, string1: string): $DeferredRegister<B>
 public static "create"<B>(resourceLocation0: $ResourceLocation$$Type, string1: string): $DeferredRegister<B>
-public static "createOptional"<B>(resourceLocation0: $ResourceLocation$$Type, string1: string): $DeferredRegister<B>
 public static "createOptional"<B>(resourceKey0: $ResourceKey$$Type<$Registry<B>>, string1: string): $DeferredRegister<B>
-public "createOptionalTagKey"(resourceLocation0: $ResourceLocation$$Type, set1: $Set$$Type<$Supplier$$Type<T>>): $TagKey<T>
+public static "createOptional"<B>(resourceLocation0: $ResourceLocation$$Type, string1: string): $DeferredRegister<B>
 public "createOptionalTagKey"(string0: string, set1: $Set$$Type<$Supplier$$Type<T>>): $TagKey<T>
-public "createTagKey"(string0: string): $TagKey<T>
+public "createOptionalTagKey"(resourceLocation0: $ResourceLocation$$Type, set1: $Set$$Type<$Supplier$$Type<T>>): $TagKey<T>
 public "createTagKey"(resourceLocation0: $ResourceLocation$$Type): $TagKey<T>
+public "createTagKey"(string0: string): $TagKey<T>
 public "getEntries"(): $Collection<$RegistryObject<T>>
 public "getRegistryKey"(): $ResourceKey<$Registry<T>>
 public "getRegistryName"(): $ResourceLocation
@@ -543,15 +543,15 @@ export interface $IForgeRegistryModifiable<V = any> extends $IForgeRegistry<V> {
 "forEach"(consumer0: $Consumer$$Type<V>): void
 "getCodec"(): $Codec<V>
 "getDefaultKey"(): $ResourceLocation
-"getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
 "getDelegate"(v0: V): $Optional<$Holder$Reference<V>>
 "getDelegate"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder$Reference<V>>
+"getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
 "getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type<V>): $Holder$Reference<V>
-"getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference<V>
 "getDelegateOrThrow"(v0: V): $Holder$Reference<V>
+"getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference<V>
 "getEntries"(): $Set<$Map$Entry<$ResourceKey<V>, V>>
-"getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
 "getHolder"(v0: V): $Optional<$Holder<V>>
+"getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
 "getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
 "getKey"(v0: V): $ResourceLocation
 "getKeys"(): $Set<$ResourceLocation>
@@ -615,8 +615,8 @@ import { $ResourceKey, $ResourceKey$$Type } from "net.minecraft.resources.Resour
 import { $IForgeRegistry, $IForgeRegistry$$Type } from "net.minecraftforge.registries.IForgeRegistry"
 
 export class $MissingMappingsEvent extends $Event implements $EventItf {
-constructor(resourceKey0: $ResourceKey$$Type<$Registry<any>>, iForgeRegistry1: $IForgeRegistry$$Type<any>, collection2: $Collection$$Type<$MissingMappingsEvent$Mapping$$Type<any>>)
 constructor()
+constructor(resourceKey0: $ResourceKey$$Type<$Registry<any>>, iForgeRegistry1: $IForgeRegistry$$Type<any>, collection2: $Collection$$Type<$MissingMappingsEvent$Mapping$$Type<any>>)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -669,20 +669,20 @@ public "forEach"(consumer0: $Consumer$$Type<V>): void
 public "freeze"(): void
 public "getCodec"(): $Codec<V>
 public "getDefaultKey"(): $ResourceLocation
-public "getDelegate"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder$Reference<V>>
 public "getDelegate"(v0: V): $Optional<$Holder$Reference<V>>
+public "getDelegate"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder$Reference<V>>
 public "getDelegate"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder$Reference<V>>
 public "getDelegateOrThrow"(object0: any): $Holder$Reference
-public "getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference
 public "getDelegateOrThrow"(resourceKey0: $ResourceKey$$Type): $Holder$Reference
+public "getDelegateOrThrow"(resourceLocation0: $ResourceLocation$$Type): $Holder$Reference
 public "getEntries"(): $Set<$Map$Entry<$ResourceKey<V>, V>>
+public "getHolder"(v0: V): $Optional<$Holder<V>>
 public "getHolder"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Holder<V>>
 public "getHolder"(resourceKey0: $ResourceKey$$Type<V>): $Optional<$Holder<V>>
-public "getHolder"(v0: V): $Optional<$Holder<V>>
-public "getID"(resourceLocation0: $ResourceLocation$$Type): integer
 public "getID"(v0: V): integer
-public "getKey"(v0: V): $ResourceLocation
+public "getID"(resourceLocation0: $ResourceLocation$$Type): integer
 public "getKey"(int0: integer): $ResourceKey<V>
+public "getKey"(v0: V): $ResourceLocation
 public "getKeys"(): $Set<$ResourceLocation>
 public "getMissingEvent"(resourceLocation0: $ResourceLocation$$Type, object2IntMap1: $Object2IntMap$$Type<$ResourceLocation$$Type>): $MissingMappingsEvent
 public "getRaw"(resourceLocation0: $ResourceLocation$$Type): V
@@ -690,8 +690,8 @@ public "getRegistryKey"(): $ResourceKey<$Registry<V>>
 public "getRegistryName"(): $ResourceLocation
 public "getResourceKey"(v0: V): $Optional<$ResourceKey<V>>
 public "getSlaveMap"<T>(resourceLocation0: $ResourceLocation$$Type, class1: $Class$$Type<T>): T
-public "getValue"(resourceLocation0: $ResourceLocation$$Type): V
 public "getValue"(int0: integer): V
+public "getValue"(resourceLocation0: $ResourceLocation$$Type): V
 public "getValues"(): $Collection<V>
 public "isEmpty"(): boolean
 public "isLocked"(): boolean
@@ -752,8 +752,8 @@ export class $RegistryObject<T = any> implements $Supplier<T> {
 public static "create"<T, U extends T>(resourceLocation0: $ResourceLocation$$Type, resourceLocation1: $ResourceLocation$$Type, string2: string): $RegistryObject<U>
 public static "create"<T, U extends T>(resourceLocation0: $ResourceLocation$$Type, resourceKey1: $ResourceKey$$Type<$Registry<T>>, string2: string): $RegistryObject<U>
 public static "create"<T, U extends T>(resourceLocation0: $ResourceLocation$$Type, iForgeRegistry1: $IForgeRegistry$$Type<T>): $RegistryObject<U>
-public static "createOptional"<T, U extends T>(resourceLocation0: $ResourceLocation$$Type, resourceKey1: $ResourceKey$$Type<$Registry<T>>, string2: string): $RegistryObject<U>
 public static "createOptional"<T, U extends T>(resourceLocation0: $ResourceLocation$$Type, resourceLocation1: $ResourceLocation$$Type, string2: string): $RegistryObject<U>
+public static "createOptional"<T, U extends T>(resourceLocation0: $ResourceLocation$$Type, resourceKey1: $ResourceKey$$Type<$Registry<T>>, string2: string): $RegistryObject<U>
 public "filter"(predicate0: $Predicate$$Type<T>): $RegistryObject<T>
 public "flatMap"<U>(function0: $Function$$Type<T, $Optional<U>>): $Optional<U>
 public "get"(): any

@@ -81,16 +81,16 @@ get "serializedName"(): string
 }
 
 declare module "net.minecraft.world.level.block.state.properties.DirectionProperty" {
-import { $Predicate$$Type } from "java.util.function.Predicate"
 import { $Direction, $Direction$$Type } from "net.minecraft.core.Direction"
+import { $Predicate$$Type } from "java.util.function.Predicate"
 import { $EnumProperty } from "net.minecraft.world.level.block.state.properties.EnumProperty"
 import { $Collection$$Type } from "java.util.Collection"
 
 export class $DirectionProperty extends $EnumProperty<$Direction> {
-public static "create"(string0: string): $DirectionProperty
+public static "create"(string0: string, ...direction1s: $Direction$$Type[]): $DirectionProperty
 public static "create"(string0: string, predicate1: $Predicate$$Type<$Direction$$Type>): $DirectionProperty
 public static "create"(string0: string, collection1: $Collection$$Type<$Direction$$Type>): $DirectionProperty
-public static "create"(string0: string, ...direction1s: $Direction$$Type[]): $DirectionProperty
+public static "create"(string0: string): $DirectionProperty
 }
 }
 
@@ -417,8 +417,8 @@ public "getPossibleValues"(): $Collection<T>
 public "getValue"(string0: string): $Optional<T>
 public "getValueClass"(): $Class<T>
 public "parseValue"<U, S extends $StateHolder<any, S>>(dynamicOps0: $DynamicOps$$Type<U>, s1: S, u2: U): $DataResult<S>
-public "value"(t0: T): $Property$Value<T>
 public "value"(stateHolder0: $StateHolder$$Type<any, any>): $Property$Value<T>
+public "value"(t0: T): $Property$Value<T>
 public "valueCodec"(): $Codec<$Property$Value<T>>
 get "allValues"(): $Stream<$Property$Value<T>>
 get "name"(): string
@@ -1034,9 +1034,9 @@ public "liquid"(): $BlockBehaviour$Properties
 public "lock"(): void
 public static "lock"(settings: $BlockBehaviour$Properties$$Type): $BlockBehaviour$Properties
 public "lootFrom"(supplier0: $Supplier$$Type<$Block>): $BlockBehaviour$Properties
-public "mapColor"(function0: $Function$$Type<$BlockState$$Type, $MapColor>): $BlockBehaviour$Properties
 public "mapColor"(dyeColor0: $DyeColor$$Type): $BlockBehaviour$Properties
 public "mapColor"(mapColor0: $MapColor$$Type): $BlockBehaviour$Properties
+public "mapColor"(function0: $Function$$Type<$BlockState$$Type, $MapColor>): $BlockBehaviour$Properties
 public "noCollission"(): $BlockBehaviour$Properties
 public "noLootTable"(): $BlockBehaviour$Properties
 public "noOcclusion"(): $BlockBehaviour$Properties
@@ -1170,8 +1170,8 @@ public "getAnalogOutputSignal"(level0: $Level$$Type, blockPos1: $BlockPos$$Type)
 public "getBlock"(): $Block
 public "getBlockHolder"(): $Holder<$Block>
 public "getBlockSupportShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): $VoxelShape
-public "getCollisionShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): $VoxelShape
 public "getCollisionShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): $VoxelShape
+public "getCollisionShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): $VoxelShape
 public "getDestroyProgress"(player0: $Player$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): float
 public "getDestroySpeed"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): float
 public "getDirectSignal"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, direction2: $Direction$$Type): integer
@@ -1190,8 +1190,8 @@ public "getPistonPushReaction"(): $PushReaction
 public "getRenderShape"(): $RenderShape
 public "getSeed"(blockPos0: $BlockPos$$Type): long
 public "getShadeBrightness"(blockGetter: $BlockGetter$$Type, blockPos: $BlockPos$$Type): float
-public "getShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): $VoxelShape
 public "getShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, collisionContext2: $CollisionContext$$Type): $VoxelShape
+public "getShape"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type): $VoxelShape
 public "getSignal"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, direction2: $Direction$$Type): integer
 public "getSoundType"(): $SoundType
 public "getTags"(): $Stream<$TagKey<$Block>>
@@ -1248,10 +1248,10 @@ public "skipRendering"(blockState0: $BlockState$$Type, direction1: $Direction$$T
 public "spawnAfterBreak"(serverLevel0: $ServerLevel$$Type, blockPos1: $BlockPos$$Type, itemStack2: $ItemStack$$Type, boolean3: boolean): void
 public "tick"(serverLevel0: $ServerLevel$$Type, blockPos1: $BlockPos$$Type, randomSource2: $RandomSource$$Type): void
 public "triggerEvent"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, int2: integer, int3: integer): boolean
-public "updateIndirectNeighbourShapes"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, int2: integer): void
 public "updateIndirectNeighbourShapes"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, int2: integer, int3: integer): void
-public "updateNeighbourShapes"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, int2: integer): void
+public "updateIndirectNeighbourShapes"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, int2: integer): void
 public "updateNeighbourShapes"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, int2: integer, int3: integer): void
+public "updateNeighbourShapes"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, int2: integer): void
 public "updateShape"(direction0: $Direction$$Type, blockState1: $BlockState$$Type, levelAccessor2: $LevelAccessor$$Type, blockPos3: $BlockPos$$Type, blockPos4: $BlockPos$$Type): $BlockState
 public "use"(level0: $Level$$Type, player1: $Player$$Type, interactionHand2: $InteractionHand$$Type, blockHitResult3: $BlockHitResult$$Type): $InteractionResult
 public "useShapeForLightOcclusion"(): boolean
@@ -1457,10 +1457,10 @@ import { $Class$$Type } from "java.lang.Class"
 import { $Property } from "net.minecraft.world.level.block.state.properties.Property"
 
 export class $EnumProperty<T extends ($Enum<T> & $StringRepresentable) = ($Enum<T> & $StringRepresentable)> extends $Property<T> {
-public static "create"<T extends ($Enum<T> & $StringRepresentable)>(string0: string, class1: $Class$$Type<T>): $EnumProperty<T>
+public static "create"<T extends ($Enum<T> & $StringRepresentable)>(string0: string, class1: $Class$$Type<T>, ...t2s: T[]): $EnumProperty<T>
 public static "create"<T extends ($Enum<T> & $StringRepresentable)>(string0: string, class1: $Class$$Type<T>, predicate2: $Predicate$$Type<T>): $EnumProperty<T>
 public static "create"<T extends ($Enum<T> & $StringRepresentable)>(string0: string, class1: $Class$$Type<T>, collection2: $Collection$$Type<T>): $EnumProperty<T>
-public static "create"<T extends ($Enum<T> & $StringRepresentable)>(string0: string, class1: $Class$$Type<T>, ...t2s: T[]): $EnumProperty<T>
+public static "create"<T extends ($Enum<T> & $StringRepresentable)>(string0: string, class1: $Class$$Type<T>): $EnumProperty<T>
 public "getName"(t0: T): string
 public "getPossibleValues"(): $Collection<T>
 public "getValue"(string0: string): $Optional<T>

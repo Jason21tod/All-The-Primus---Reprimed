@@ -27,9 +27,9 @@ static readonly "MAX_CONTAINER_SIZE": integer
 public "contains"(featureFlag0: $FeatureFlag$$Type): boolean
 public "isSubsetOf"(featureFlagSet0: $FeatureFlagSet$$Type): boolean
 public "join"(featureFlagSet0: $FeatureFlagSet$$Type): $FeatureFlagSet
-public static "of"(): $FeatureFlagSet
-public static "of"(featureFlag0: $FeatureFlag$$Type, ...featureFlag1s: $FeatureFlag$$Type[]): $FeatureFlagSet
 public static "of"(featureFlag0: $FeatureFlag$$Type): $FeatureFlagSet
+public static "of"(featureFlag0: $FeatureFlag$$Type, ...featureFlag1s: $FeatureFlag$$Type[]): $FeatureFlagSet
+public static "of"(): $FeatureFlagSet
 }
 }
 

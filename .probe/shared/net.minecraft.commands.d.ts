@@ -157,8 +157,8 @@ constructor(boolean0: boolean)
 
 public "getExamples"(): $Collection<string>
 public static "getName"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string): string
-public static "getNames"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string, supplier2: $Supplier$$Type<$Collection<string>>): $Collection<string>
 public static "getNames"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string): $Collection<string>
+public static "getNames"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string, supplier2: $Supplier$$Type<$Collection<string>>): $Collection<string>
 public static "getNamesWithDefaultWildcard"(commandContext0: $CommandContext$$Type<$CommandSourceStack$$Type>, string1: string): $Collection<string>
 public "listSuggestions"<S>(commandContext0: $CommandContext$$Type<S>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 public "parse"(stringReader0: $StringReader$$Type): $ScoreHolderArgument$Result
@@ -275,8 +275,8 @@ export interface $SharedSuggestionProvider {
 "hasPermission"(int0: integer): boolean
 "levels"(): $Set<$ResourceKey<$Level>>
 "registryAccess"(): $RegistryAccess
-"suggestRegistryElements"(resourceKey0: $ResourceKey$$Type<$Registry<any>>, elementSuggestionType1: $SharedSuggestionProvider$ElementSuggestionType$$Type, suggestionsBuilder2: $SuggestionsBuilder$$Type, commandContext3: $CommandContext$$Type<any>): $CompletableFuture<$Suggestions>
 "suggestRegistryElements"(registry0: $Registry$$Type<any>, elementSuggestionType1: $SharedSuggestionProvider$ElementSuggestionType$$Type, suggestionsBuilder2: $SuggestionsBuilder$$Type): void
+"suggestRegistryElements"(resourceKey0: $ResourceKey$$Type<$Registry<any>>, elementSuggestionType1: $SharedSuggestionProvider$ElementSuggestionType$$Type, suggestionsBuilder2: $SuggestionsBuilder$$Type, commandContext3: $CommandContext$$Type<any>): $CompletableFuture<$Suggestions>
 get "absoluteCoordinates"(): $Collection<$SharedSuggestionProvider$TextCoordinates>
 get "allTeams"(): $Collection<string>
 get "availableSounds"(): $Stream<$ResourceLocation>
@@ -291,35 +291,35 @@ export namespace $SharedSuggestionProvider {
 function filterResources<T>(iterable0: $Iterable$$Type<T>, string1: string, string2: string, function3: $Function$$Type<T, $ResourceLocation>, consumer4: $Consumer$$Type<T>): void
 function filterResources(iterable0: $Iterable$$Type, string1: string, function2: $Function$$Type, consumer3: $Consumer$$Type): void
 function matchesSubStr(string0: string, string1: string): boolean
+function suggest<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 function suggest(iterable0: $Iterable$$Type<string>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 function suggest(string0s: string[], suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 function suggest(stream0: $Stream$$Type<string>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
-function suggest<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 function suggest2DCoordinates(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 function suggestCoordinates(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
-function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
-function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
-function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
-function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 function suggestResource<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 function suggestResource<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
+function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
+function suggestResource(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
+function suggestResource(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 }
 export abstract class $SharedSuggestionProvider$$Static implements $SharedSuggestionProvider {
 static "filterResources"<T>(iterable0: $Iterable$$Type<T>, string1: string, string2: string, function3: $Function$$Type<T, $ResourceLocation>, consumer4: $Consumer$$Type<T>): void
 static "filterResources"(iterable0: $Iterable$$Type, string1: string, function2: $Function$$Type, consumer3: $Consumer$$Type): void
 static "matchesSubStr"(string0: string, string1: string): boolean
+static "suggest"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 static "suggest"(iterable0: $Iterable$$Type<string>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 static "suggest"(string0s: string[], suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 static "suggest"(stream0: $Stream$$Type<string>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
-static "suggest"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 static "suggest2DCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 static "suggestCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
-static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
-static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
-static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
-static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 static "suggestResource"<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 static "suggestResource"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
+static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
+static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
+static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 }
 }
 
@@ -584,10 +584,8 @@ import { $CommandBuildContext$$Type } from "net.minecraft.commands.CommandBuildC
 export class $SingletonArgumentInfo<A extends $ArgumentType<any> = $ArgumentType<any>> implements $ArgumentTypeInfo<A, $SingletonArgumentInfo$Template<>> {
 public static "contextAware"<T extends $ArgumentType<any>>(function0: $Function$$Type<$CommandBuildContext$$Type, T>): $SingletonArgumentInfo<T>
 public static "contextFree"<T extends $ArgumentType<any>>(supplier0: $Supplier$$Type<T>): $SingletonArgumentInfo<T>
-public "deserializeFromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $SingletonArgumentInfo$Template<>
 public "serializeToJson"(template0: $SingletonArgumentInfo$Template$$Type<>, jsonObject1: $JsonObject$$Type): void
 public "serializeToNetwork"(template0: $SingletonArgumentInfo$Template$$Type<>, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
-public "unpack"(a0: A): $SingletonArgumentInfo$Template<>
 }
 }
 
@@ -897,8 +895,8 @@ public "arch$sendFailure"(message: $Component$$Type): void
 public "arch$sendSuccess"(message: $Supplier$$Type, broadcastToAdmins: boolean): void
 public "customSuggestion"(commandContext0: $CommandContext$$Type<any>): $CompletableFuture<$Suggestions>
 public "enabledFeatures"(): $FeatureFlagSet
-public "facing"(entity0: $Entity$$Type, anchor1: $EntityAnchorArgument$Anchor$$Type): $CommandSourceStack
 public "facing"(vec30: $Vec3$$Type): $CommandSourceStack
+public "facing"(entity0: $Entity$$Type, anchor1: $EntityAnchorArgument$Anchor$$Type): $CommandSourceStack
 public static "filterResources"<T>(iterable0: $Iterable$$Type<T>, string1: string, string2: string, function3: $Function$$Type<T, $ResourceLocation>, consumer4: $Consumer$$Type<T>): void
 public static "filterResources"(iterable0: $Iterable$$Type, string1: string, function2: $Function$$Type, consumer3: $Consumer$$Type): void
 public "getAbsoluteCoordinates"(): $Collection<$SharedSuggestionProvider$TextCoordinates>
@@ -939,23 +937,23 @@ public "sendSuccess"(component: $Component$$Type, broadcastToAdmins: boolean): v
 public "sendSuccessLazy"(component: $LazyComponentKJS$$Type, broadcastToAdmins: boolean): void
 public "sendSystemMessage"(component0: $Component$$Type): void
 public "shouldFilterMessageTo"(serverPlayer0: $ServerPlayer$$Type): boolean
+public static "suggest"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 public static "suggest"(iterable0: $Iterable$$Type<string>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 public static "suggest"(string0s: string[], suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 public static "suggest"(stream0: $Stream$$Type<string>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
-public static "suggest"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, string>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 public static "suggest2DCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 public static "suggestCoordinates"(string0: string, collection1: $Collection$$Type<$SharedSuggestionProvider$TextCoordinates$$Type>, suggestionsBuilder2: $SuggestionsBuilder$$Type, predicate3: $Predicate$$Type<string>): $CompletableFuture<$Suggestions>
 public "suggestRegistryElements"(resourceKey0: $ResourceKey$$Type<$Registry<any>>, elementSuggestionType1: $SharedSuggestionProvider$ElementSuggestionType$$Type, suggestionsBuilder2: $SuggestionsBuilder$$Type, commandContext3: $CommandContext$$Type<any>): $CompletableFuture<$Suggestions>
 public "suggestRegistryElements"(registry0: $Registry$$Type<any>, elementSuggestionType1: $SharedSuggestionProvider$ElementSuggestionType$$Type, suggestionsBuilder2: $SuggestionsBuilder$$Type): void
-public static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
-public static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
-public static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
-public static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 public static "suggestResource"<T>(stream0: $Stream$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
 public static "suggestResource"<T>(iterable0: $Iterable$$Type<T>, suggestionsBuilder1: $SuggestionsBuilder$$Type, function2: $Function$$Type<T, $ResourceLocation>, function3: $Function$$Type<T, $Message>): $CompletableFuture<$Suggestions>
+public static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
+public static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
+public static "suggestResource"(iterable0: $Iterable$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type, string2: string): $CompletableFuture<$Suggestions>
+public static "suggestResource"(stream0: $Stream$$Type<$ResourceLocation$$Type>, suggestionsBuilder1: $SuggestionsBuilder$$Type): $CompletableFuture<$Suggestions>
 public "withAnchor"(anchor0: $EntityAnchorArgument$Anchor$$Type): $CommandSourceStack
-public "withCallback"(resultConsumer0: $ResultConsumer$$Type<$CommandSourceStack$$Type>): $CommandSourceStack
 public "withCallback"(resultConsumer0: $ResultConsumer$$Type<$CommandSourceStack$$Type>, binaryOperator1: $BinaryOperator$$Type<$ResultConsumer$$Type<$CommandSourceStack$$Type>>): $CommandSourceStack
+public "withCallback"(resultConsumer0: $ResultConsumer$$Type<$CommandSourceStack$$Type>): $CommandSourceStack
 public "withChatMessageChainer"(taskChainer0: $TaskChainer$$Type): $CommandSourceStack
 public "withEntity"(entity0: $Entity$$Type): $CommandSourceStack
 public "withLevel"(serverLevel0: $ServerLevel$$Type): $CommandSourceStack
@@ -1046,8 +1044,8 @@ export class $EntityAnchorArgument$Anchor extends $Enum<$EntityAnchorArgument$An
 static readonly "EYES": $EntityAnchorArgument$Anchor
 static readonly "FEET": $EntityAnchorArgument$Anchor
 
-public "apply"(entity0: $Entity$$Type): $Vec3
 public "apply"(commandSourceStack0: $CommandSourceStack$$Type): $Vec3
+public "apply"(entity0: $Entity$$Type): $Vec3
 public static "getByName"(string0: string): $EntityAnchorArgument$Anchor
 public static "valueOf"(string0: string): $EntityAnchorArgument$Anchor
 public static "values"(): $EntityAnchorArgument$Anchor[]

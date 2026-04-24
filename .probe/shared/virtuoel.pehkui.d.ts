@@ -81,8 +81,8 @@ public "getInitialScale"(): float
 public "getPersistence"(): boolean
 public "getPrevBaseScale"(): float
 public "getPrevScale"(): float
-public "getScale"(delta: float): float
 public "getScale"(): float
+public "getScale"(delta: float): float
 public "getScaleTickDelay"(): integer
 public "getScaleType"(): $ScaleType
 public "getTargetScale"(): float
@@ -91,8 +91,8 @@ public "isReset"(): boolean
 public "markForSync"(sync: boolean): void
 public "onUpdate"(): void
 public "readNbt"(tag: $CompoundTag$$Type): void
-public "resetScale"(): $ScaleData
 public "resetScale"(notifyListener: boolean): $ScaleData
+public "resetScale"(): $ScaleData
 public "setBaseScale"(scale: float): void
 public "setEasing"(easing: $Float2FloatFunction$$Type): void
 public "setPersistence"(persistent: boolean): void

@@ -152,6 +152,7 @@ public "blockY"(): integer
 public "blockZ"(): integer
 public "fillAllDirectly"(double0s: double[], densityFunction1: $DensityFunction$$Type): void
 public static "forChunk"(chunkAccess0: $ChunkAccess$$Type, randomState1: $RandomState$$Type, beardifierOrMarker2: $DensityFunctions$BeardifierOrMarker$$Type, noiseGeneratorSettings3: $NoiseGeneratorSettings$$Type, fluidPicker4: $Aquifer$FluidPicker$$Type, blender5: $Blender$$Type): $NoiseChunk
+public "forIndex"(int0: integer): $NoiseChunk
 public "getBlender"(): $Blender
 public "initializeForFirstCellX"(): void
 public "irons_spellbooks$getAquifierStatus"(): $IExtendedNoiseChunk$AquifierNuke
@@ -257,8 +258,8 @@ import { $StringBuilder$$Type } from "java.lang.StringBuilder"
 export interface $PositionalRandomFactory {
 "at"(blockPos0: $BlockPos$$Type): $RandomSource
 "at"(int0: integer, int1: integer, int2: integer): $RandomSource
-"fromHashOf"(string0: string): $RandomSource
 "fromHashOf"(resourceLocation0: $ResourceLocation$$Type): $RandomSource
+"fromHashOf"(string0: string): $RandomSource
 "parityConfigString"(stringBuilder0: $StringBuilder$$Type): void
 }
 
@@ -311,8 +312,8 @@ static readonly "CODEC": $Codec<$WorldGenSettings>
 constructor(worldOptions0: $WorldOptions$$Type, worldDimensions1: $WorldDimensions$$Type)
 
 public "dimensions"(): $WorldDimensions
-public static "encode"<T>(dynamicOps0: $DynamicOps$$Type<T>, worldOptions1: $WorldOptions$$Type, worldDimensions2: $WorldDimensions$$Type): $DataResult<T>
 public static "encode"<T>(dynamicOps0: $DynamicOps$$Type<T>, worldOptions1: $WorldOptions$$Type, registryAccess2: $RegistryAccess$$Type): $DataResult<T>
+public static "encode"<T>(dynamicOps0: $DynamicOps$$Type<T>, worldOptions1: $WorldOptions$$Type, worldDimensions2: $WorldDimensions$$Type): $DataResult<T>
 public "options"(): $WorldOptions
 }
 }

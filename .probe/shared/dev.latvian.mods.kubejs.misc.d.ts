@@ -26,11 +26,11 @@ export class $PotionBuilder extends $BuilderBase<$Potion> {
 constructor(i: $ResourceLocation$$Type)
 
 public "addEffect"(effect: $MobEffectInstance$$Type): $PotionBuilder
+public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type, duration: integer): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean, showIcon: boolean, hiddenEffect: $MobEffectInstance$$Type): $PotionBuilder
-public "effect"(effect: $MobEffect$$Type, duration: integer, amplifier: integer, ambient: boolean, visible: boolean): $PotionBuilder
 public "effect"(effect: $MobEffect$$Type): $PotionBuilder
 }
 }
@@ -114,7 +114,6 @@ import { $BuilderBase } from "dev.latvian.mods.kubejs.registry.BuilderBase"
 export class $ParticleTypeBuilder extends $BuilderBase<$ParticleType<any>> {
 constructor(i: $ResourceLocation$$Type)
 
-public "createObject"(): $ParticleType<any>
 public "deserializer"(d: $ParticleOptions$Deserializer$$Type): $ParticleTypeBuilder
 public "overrideLimiter"(o: boolean): $ParticleTypeBuilder
 }
@@ -171,6 +170,7 @@ public "breakable"(): $EnchantmentBuilder
 public "canEnchant"(i: $Object2BooleanFunction$$Type<$ItemStack$$Type>): $EnchantmentBuilder
 public "category"(c: $EnchantmentCategory$$Type): $EnchantmentBuilder
 public "checkCompatibility"(i: $Object2BooleanFunction$$Type<$ResourceLocation$$Type>): $EnchantmentBuilder
+public "createObject"(): $Enchantment
 public "crossbow"(): $EnchantmentBuilder
 public "curse"(): $EnchantmentBuilder
 public "damageBonus"(i: $EnchantmentBuilder$DamageBonusFunction$$Type): $EnchantmentBuilder

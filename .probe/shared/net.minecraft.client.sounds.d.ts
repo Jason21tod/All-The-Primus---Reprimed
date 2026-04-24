@@ -81,8 +81,8 @@ constructor(minecraft0: $Minecraft$$Type)
 
 public "isPlayingMusic"(music0: $Music$$Type): boolean
 public "startPlaying"(music0: $Music$$Type): void
-public "stopPlaying"(music0: $Music$$Type): void
 public "stopPlaying"(): void
+public "stopPlaying"(music0: $Music$$Type): void
 public "tick"(): void
 }
 }
@@ -166,7 +166,6 @@ declare module "net.minecraft.client.sounds.WeighedSoundEvents" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $Weighted, $Weighted$$Type } from "net.minecraft.client.sounds.Weighted"
 import { $Component } from "net.minecraft.network.chat.Component"
-import { $RandomSource$$Type } from "net.minecraft.util.RandomSource"
 import { $SoundEngine$$Type } from "net.minecraft.client.sounds.SoundEngine"
 import { $Sound, $Sound$$Type } from "net.minecraft.client.resources.sounds.Sound"
 
@@ -174,7 +173,6 @@ export class $WeighedSoundEvents implements $Weighted<$Sound> {
 constructor(resourceLocation0: $ResourceLocation$$Type, string1: string)
 
 public "addSound"(weighted0: $Weighted$$Type<$Sound$$Type>): void
-public "getSound"(randomSource0: $RandomSource$$Type): $Sound
 public "getSubtitle"(): $Component
 public "getWeight"(): integer
 public "preloadIfRequired"(soundEngine0: $SoundEngine$$Type): void
@@ -254,9 +252,9 @@ public "queueTickingSound"(tickableSoundInstance0: $TickableSoundInstance$$Type)
 public "reload"(): void
 public "removeListener"(soundEventListener0: $SoundEventListener$$Type): void
 public "resume"(): void
+public "stop"(resourceLocation0: $ResourceLocation$$Type, soundSource1: $SoundSource$$Type): void
 public "stop"(): void
 public "stop"(soundInstance0: $SoundInstance$$Type): void
-public "stop"(resourceLocation0: $ResourceLocation$$Type, soundSource1: $SoundSource$$Type): void
 public "tick"(boolean0: boolean): void
 public "updateSource"(camera0: $Camera$$Type): void
 public "updateSourceVolume"(soundSource0: $SoundSource$$Type, float1: float): void

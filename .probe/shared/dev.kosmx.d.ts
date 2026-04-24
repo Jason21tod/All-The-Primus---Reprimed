@@ -247,8 +247,8 @@ public "getFirstPersonConfiguration"(tickDelta: float): $FirstPersonConfiguratio
 public "getFirstPersonMode"(tickDelta: float): $FirstPersonMode
 public "isActive"(): boolean
 public "removeModifier"(idx: integer): void
-public "replaceAnimationWithFade"(fadeModifier: $AbstractFadeModifier$$Type, newAnimation: T): void
 public "replaceAnimationWithFade"(fadeModifier: $AbstractFadeModifier$$Type, newAnimation: T, fadeFromNothing: boolean): void
+public "replaceAnimationWithFade"(fadeModifier: $AbstractFadeModifier$$Type, newAnimation: T): void
 public "setAnimation"(animation: T): void
 public "setupAnim"(tickDelta: float): void
 public "size"(): integer

@@ -1017,8 +1017,8 @@ public static "legacy"(string0: string): $Function<$StructureTemplatePool$Projec
 public static "list"(list0: $List$$Type<$Function$$Type<$StructureTemplatePool$Projection$$Type, $StructurePoolElement$$Type>>): $Function<$StructureTemplatePool$Projection, $ListPoolElement>
 public "place"(structureTemplateManager0: $StructureTemplateManager$$Type, worldGenLevel1: $WorldGenLevel$$Type, structureManager2: $StructureManager$$Type, chunkGenerator3: $ChunkGenerator$$Type, blockPos4: $BlockPos$$Type, blockPos5: $BlockPos$$Type, rotation6: $Rotation$$Type, boundingBox7: $BoundingBox$$Type, randomSource8: $RandomSource$$Type, boolean9: boolean): boolean
 public "setProjection"(projection0: $StructureTemplatePool$Projection$$Type): $StructurePoolElement
-public static "single"(string0: string): $Function<$StructureTemplatePool$Projection, $SinglePoolElement>
 public static "single"(string0: string, holder1: $Holder$$Type<$StructureProcessorList$$Type>): $Function<$StructureTemplatePool$Projection, $SinglePoolElement>
+public static "single"(string0: string): $Function<$StructureTemplatePool$Projection, $SinglePoolElement>
 get "groundLevelDelta"(): integer
 get "projection"(): $StructureTemplatePool$Projection
 get "type"(): $StructurePoolElementType<any>
@@ -1172,9 +1172,9 @@ constructor(blockPos0: $BlockPos$$Type)
 constructor(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, int5: integer)
 
 /** @deprecated */
-public "encapsulate"(blockPos0: $BlockPos$$Type): $BoundingBox
-/** @deprecated */
 public "encapsulate"(boundingBox0: $BoundingBox$$Type): $BoundingBox
+/** @deprecated */
+public "encapsulate"(blockPos0: $BlockPos$$Type): $BoundingBox
 public static "encapsulatingBoxes"(iterable0: $Iterable$$Type<$BoundingBox$$Type>): $Optional<$BoundingBox>
 public static "encapsulatingPositions"(iterable0: $Iterable$$Type<$BlockPos$$Type>): $Optional<$BoundingBox>
 public "forAllCorners"(consumer0: $Consumer$$Type<$BlockPos$$Type>): void
@@ -1188,8 +1188,8 @@ public static "infinite"(): $BoundingBox
 public "inflatedBy"(int0: integer): $BoundingBox
 public "intersects"(boundingBox0: $BoundingBox$$Type): boolean
 public "intersects"(int0: integer, int1: integer, int2: integer, int3: integer): boolean
-public "isInside"(int0: integer, int1: integer, int2: integer): boolean
 public "isInside"(vec3i0: $Vec3i$$Type): boolean
+public "isInside"(int0: integer, int1: integer, int2: integer): boolean
 public "maxX"(): integer
 public "maxY"(): integer
 public "maxZ"(): integer
@@ -1690,13 +1690,13 @@ constructor()
 public "calculateConnectedPosition"(structurePlaceSettings0: $StructurePlaceSettings$$Type, blockPos1: $BlockPos$$Type, structurePlaceSettings2: $StructurePlaceSettings$$Type, blockPos3: $BlockPos$$Type): $BlockPos
 public static "calculateRelativePosition"(structurePlaceSettings0: $StructurePlaceSettings$$Type, blockPos1: $BlockPos$$Type): $BlockPos
 public "fillFromWorld"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, vec3i2: $Vec3i$$Type, boolean3: boolean, block4: $Block$$Type): void
-public "filterBlocks"(blockPos0: $BlockPos$$Type, structurePlaceSettings1: $StructurePlaceSettings$$Type, block2: $Block$$Type, boolean3: boolean): $ObjectArrayList<$StructureTemplate$StructureBlockInfo>
 public "filterBlocks"(blockPos0: $BlockPos$$Type, structurePlaceSettings1: $StructurePlaceSettings$$Type, block2: $Block$$Type): $List<$StructureTemplate$StructureBlockInfo>
+public "filterBlocks"(blockPos0: $BlockPos$$Type, structurePlaceSettings1: $StructurePlaceSettings$$Type, block2: $Block$$Type, boolean3: boolean): $ObjectArrayList<$StructureTemplate$StructureBlockInfo>
 public "getAuthor"(): string
-public "getBoundingBox"(structurePlaceSettings0: $StructurePlaceSettings$$Type, blockPos1: $BlockPos$$Type): $BoundingBox
 public "getBoundingBox"(blockPos0: $BlockPos$$Type, rotation1: $Rotation$$Type, blockPos2: $BlockPos$$Type, mirror3: $Mirror$$Type): $BoundingBox
-public "getSize"(): $Vec3i
+public "getBoundingBox"(structurePlaceSettings0: $StructurePlaceSettings$$Type, blockPos1: $BlockPos$$Type): $BoundingBox
 public "getSize"(rotation0: $Rotation$$Type): $Vec3i
+public "getSize"(): $Vec3i
 public "getZeroPositionWithTransform"(blockPos0: $BlockPos$$Type, mirror1: $Mirror$$Type, rotation2: $Rotation$$Type): $BlockPos
 public static "getZeroPositionWithTransform"(blockPos0: $BlockPos$$Type, mirror1: $Mirror$$Type, rotation2: $Rotation$$Type, int3: integer, int4: integer): $BlockPos
 public "load"(holderGetter0: $HolderGetter$$Type<$Block$$Type>, compoundTag1: $CompoundTag$$Type): void

@@ -42,13 +42,13 @@ static readonly "SECRET_KEY": integer
 static readonly "UNWRAP_MODE": integer
 static readonly "WRAP_MODE": integer
 
+public "doFinal"(byte0s: byte[], int1: integer, int2: integer): byte[]
+public "doFinal"(): byte[]
 public "doFinal"(byte0s: byte[], int1: integer): integer
 public "doFinal"(byte0s: byte[]): byte[]
-public "doFinal"(): byte[]
+public "doFinal"(byte0s: byte[], int1: integer, int2: integer, byte3s: byte[]): integer
 public "doFinal"(byte0s: byte[], int1: integer, int2: integer, byte3s: byte[], int4: integer): integer
 public "doFinal"(byteBuffer0: $ByteBuffer$$Type, byteBuffer1: $ByteBuffer$$Type): integer
-public "doFinal"(byte0s: byte[], int1: integer, int2: integer, byte3s: byte[]): integer
-public "doFinal"(byte0s: byte[], int1: integer, int2: integer): byte[]
 public "getAlgorithm"(): string
 public "getBlockSize"(): integer
 public "getExemptionMechanism"(): $ExemptionMechanism
@@ -75,8 +75,8 @@ public "update"(byte0s: byte[], int1: integer, int2: integer, byte3s: byte[]): i
 public "update"(byte0s: byte[], int1: integer, int2: integer): byte[]
 public "update"(byte0s: byte[]): byte[]
 public "update"(byteBuffer0: $ByteBuffer$$Type, byteBuffer1: $ByteBuffer$$Type): integer
-public "updateAAD"(byteBuffer0: $ByteBuffer$$Type): void
 public "updateAAD"(byte0s: byte[], int1: integer, int2: integer): void
+public "updateAAD"(byteBuffer0: $ByteBuffer$$Type): void
 public "updateAAD"(byte0s: byte[]): void
 public "wrap"(key0: $Key$$Type): byte[]
 get "algorithm"(): string

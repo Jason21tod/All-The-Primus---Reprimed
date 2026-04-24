@@ -40,15 +40,6 @@ public "playSoundOverride"(player: $Player$$Type, soundEvent: $SoundEvent$$Type,
  */
 public "signalTo"(f: $Function$$Type<$ContextUtils$ItemUseContext$$Type, any>): $EyeOfEnderItemBuilder
 /**
- * A function to determine structure the thrown ender eye item will head towards in a certain chunk radius.
- * 
- * Example usage:
- * ```javascript
- * builder.signalToStructure("minecraft:village_plains", 100);
- * ```
- */
-public "signalToStructure"(resourceLocation: $ResourceLocation$$Type, chunkRadius: integer): $EyeOfEnderItemBuilder
-/**
  * A function to determine structure the thrown ender eye item will head towards in a 100 chunk radius.
  * 
  * Example usage:
@@ -57,6 +48,15 @@ public "signalToStructure"(resourceLocation: $ResourceLocation$$Type, chunkRadiu
  * ```
  */
 public "signalToStructure"(resourceLocation: $ResourceLocation$$Type): $EyeOfEnderItemBuilder
+/**
+ * A function to determine structure the thrown ender eye item will head towards in a certain chunk radius.
+ * 
+ * Example usage:
+ * ```javascript
+ * builder.signalToStructure("minecraft:village_plains", 100);
+ * ```
+ */
+public "signalToStructure"(resourceLocation: $ResourceLocation$$Type, chunkRadius: integer): $EyeOfEnderItemBuilder
 /**
  * A function to determine which structure tag the thrown ender eye item will head towards in a 100 chunk radius.
  * 

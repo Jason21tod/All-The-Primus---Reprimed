@@ -106,8 +106,8 @@ public "dumpAllSheets"(path0: $Path$$Type): void
 public "getFabricDependencies"(): $Collection
 public "getFabricId"(): $ResourceLocation
 public "getName"(): string
-public "getTexture"(resourceLocation0: $ResourceLocation$$Type): $AbstractTexture
 public "getTexture"(resourceLocation0: $ResourceLocation$$Type, abstractTexture1: $AbstractTexture$$Type): $AbstractTexture
+public "getTexture"(resourceLocation0: $ResourceLocation$$Type): $AbstractTexture
 public "preload"(resourceLocation0: $ResourceLocation$$Type, executor1: $Executor$$Type): $CompletableFuture<void>
 public "register"(resourceLocation0: $ResourceLocation$$Type, abstractTexture1: $AbstractTexture$$Type): void
 public "register"(string0: string, dynamicTexture1: $DynamicTexture$$Type): $ResourceLocation
@@ -213,8 +213,8 @@ public static "energySwirl"(resourceLocation0: $ResourceLocation$$Type, float1: 
 public static "entityCutout"(resourceLocation0: $ResourceLocation$$Type): $RenderType
 public static "entityCutoutNoCull"(resourceLocation0: $ResourceLocation$$Type, boolean1: boolean): $RenderType
 public static "entityCutoutNoCull"(resourceLocation0: $ResourceLocation$$Type): $RenderType
-public static "entityCutoutNoCullZOffset"(resourceLocation0: $ResourceLocation$$Type, boolean1: boolean): $RenderType
 public static "entityCutoutNoCullZOffset"(resourceLocation0: $ResourceLocation$$Type): $RenderType
+public static "entityCutoutNoCullZOffset"(resourceLocation0: $ResourceLocation$$Type, boolean1: boolean): $RenderType
 public static "entityDecal"(resourceLocation0: $ResourceLocation$$Type): $RenderType
 public static "entityGlint"(): $RenderType
 public static "entityGlintDirect"(): $RenderType
@@ -390,15 +390,15 @@ public static "enableCaching"(): void
 /** @deprecated */
 public "renderModel"(pose0: $PoseStack$Pose$$Type, vertexConsumer1: $VertexConsumer$$Type, blockState2: $BlockState$$Type, bakedModel3: $BakedModel$$Type, float4: float, float5: float, float6: float, int7: integer, int8: integer): void
 public "renderModel"(pose0: $PoseStack$Pose$$Type, vertexConsumer1: $VertexConsumer$$Type, blockState2: $BlockState$$Type, bakedModel3: $BakedModel$$Type, float4: float, float5: float, float6: float, int7: integer, int8: integer, modelData9: $ModelData$$Type, renderType10: $RenderType$$Type): void
-/** @deprecated */
-public "tesselateBlock"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bakedModel1: $BakedModel$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, poseStack4: $PoseStack$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, randomSource7: $RandomSource$$Type, long8: long, int9: integer): void
 public "tesselateBlock"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bakedModel1: $BakedModel$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, poseStack4: $PoseStack$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, randomSource7: $RandomSource$$Type, long8: long, int9: integer, modelData10: $ModelData$$Type, renderType11: $RenderType$$Type): void
 /** @deprecated */
-public "tesselateWithAO"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bakedModel1: $BakedModel$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, poseStack4: $PoseStack$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, randomSource7: $RandomSource$$Type, long8: long, int9: integer): void
+public "tesselateBlock"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bakedModel1: $BakedModel$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, poseStack4: $PoseStack$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, randomSource7: $RandomSource$$Type, long8: long, int9: integer): void
 public "tesselateWithAO"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bakedModel1: $BakedModel$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, poseStack4: $PoseStack$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, randomSource7: $RandomSource$$Type, long8: long, int9: integer, modelData10: $ModelData$$Type, renderType11: $RenderType$$Type): void
 /** @deprecated */
-public "tesselateWithoutAO"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bakedModel1: $BakedModel$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, poseStack4: $PoseStack$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, randomSource7: $RandomSource$$Type, long8: long, int9: integer): void
+public "tesselateWithAO"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bakedModel1: $BakedModel$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, poseStack4: $PoseStack$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, randomSource7: $RandomSource$$Type, long8: long, int9: integer): void
 public "tesselateWithoutAO"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bakedModel1: $BakedModel$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, poseStack4: $PoseStack$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, randomSource7: $RandomSource$$Type, long8: long, int9: integer, modelData10: $ModelData$$Type, renderType11: $RenderType$$Type): void
+/** @deprecated */
+public "tesselateWithoutAO"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bakedModel1: $BakedModel$$Type, blockState2: $BlockState$$Type, blockPos3: $BlockPos$$Type, poseStack4: $PoseStack$$Type, vertexConsumer5: $VertexConsumer$$Type, boolean6: boolean, randomSource7: $RandomSource$$Type, long8: long, int9: integer): void
 }
 }
 
@@ -1592,9 +1592,9 @@ public "reload"(preparationBarrier0: $PreparableReloadListener$PreparationBarrie
 /** @deprecated */
 public "renderBatched"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, blockAndTintGetter2: $BlockAndTintGetter$$Type, poseStack3: $PoseStack$$Type, vertexConsumer4: $VertexConsumer$$Type, boolean5: boolean, randomSource6: $RandomSource$$Type): void
 public "renderBatched"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, blockAndTintGetter2: $BlockAndTintGetter$$Type, poseStack3: $PoseStack$$Type, vertexConsumer4: $VertexConsumer$$Type, boolean5: boolean, randomSource6: $RandomSource$$Type, modelData7: $ModelData$$Type, renderType8: $RenderType$$Type): void
-public "renderBreakingTexture"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, blockAndTintGetter2: $BlockAndTintGetter$$Type, poseStack3: $PoseStack$$Type, vertexConsumer4: $VertexConsumer$$Type, modelData5: $ModelData$$Type): void
 /** @deprecated */
 public "renderBreakingTexture"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, blockAndTintGetter2: $BlockAndTintGetter$$Type, poseStack3: $PoseStack$$Type, vertexConsumer4: $VertexConsumer$$Type): void
+public "renderBreakingTexture"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, blockAndTintGetter2: $BlockAndTintGetter$$Type, poseStack3: $PoseStack$$Type, vertexConsumer4: $VertexConsumer$$Type, modelData5: $ModelData$$Type): void
 public "renderLiquid"(blockPos0: $BlockPos$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, vertexConsumer2: $VertexConsumer$$Type, blockState3: $BlockState$$Type, fluidState4: $FluidState$$Type): void
 /** @deprecated */
 public "renderSingleBlock"(blockState0: $BlockState$$Type, poseStack1: $PoseStack$$Type, multiBufferSource2: $MultiBufferSource$$Type, int3: integer, int4: integer): void
@@ -2402,8 +2402,8 @@ readonly "playingRecords": $Map<$BlockPos, $SoundInstance>
 
 constructor(minecraft0: $Minecraft$$Type, entityRenderDispatcher1: $EntityRenderDispatcher$$Type, blockEntityRenderDispatcher2: $BlockEntityRenderDispatcher$$Type, renderBuffers3: $RenderBuffers$$Type)
 
-public static "addChainedFilledBoxVertices"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, float8: float, float9: float, float10: float, float11: float): void
 public static "addChainedFilledBoxVertices"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, double2: double, double3: double, double4: double, double5: double, double6: double, double7: double, float8: float, float9: float, float10: float, float11: float): void
+public static "addChainedFilledBoxVertices"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, float2: float, float3: float, float4: float, float5: float, float6: float, float7: float, float8: float, float9: float, float10: float, float11: float): void
 public "addParticle"(particleOptions0: $ParticleOptions$$Type, boolean1: boolean, double2: double, double3: double, double4: double, double5: double, double6: double, double7: double): void
 public "addParticle"(particleOptions0: $ParticleOptions$$Type, boolean1: boolean, boolean2: boolean, double3: double, double4: double, double5: double, double6: double, double7: double, double8: double): void
 public "addRecentlyCompiledChunk"(renderChunk0: $ChunkRenderDispatcher$RenderChunk$$Type): void
@@ -2425,8 +2425,8 @@ public "getFabricId"(): $ResourceLocation
 public "getFrustum"(): $Frustum
 public "getItemEntityTarget"(): $RenderTarget
 public "getLastViewDistance"(): double
-public static "getLightColor"(blockAndTintGetter0: $BlockAndTintGetter$$Type, blockState1: $BlockState$$Type, blockPos2: $BlockPos$$Type): integer
 public static "getLightColor"(blockAndTintGetter0: $BlockAndTintGetter$$Type, blockPos1: $BlockPos$$Type): integer
+public static "getLightColor"(blockAndTintGetter0: $BlockAndTintGetter$$Type, blockState1: $BlockState$$Type, blockPos2: $BlockPos$$Type): integer
 public "getName"(): string
 public "getParticlesTarget"(): $RenderTarget
 public "getTotalChunks"(): double
@@ -2449,18 +2449,18 @@ public "localvar$cjn000$modifyPartialTicks"(partialTicks: float): float
 public "localvar$cjn000$modifyPoseStack"(poseStack: $PoseStack$$Type): $PoseStack
 public "needsUpdate"(): void
 public "onResourceManagerReload"(resourceManager0: $ResourceManager$$Type): void
-public "playStreamingMusic"(soundEvent0: $SoundEvent$$Type, blockPos1: $BlockPos$$Type, recordItem2: $RecordItem$$Type): void
 /** @deprecated */
 public "playStreamingMusic"(soundEvent0: $SoundEvent$$Type, blockPos1: $BlockPos$$Type): void
+public "playStreamingMusic"(soundEvent0: $SoundEvent$$Type, blockPos1: $BlockPos$$Type, recordItem2: $RecordItem$$Type): void
 public "prepareCullFrustum"(poseStack0: $PoseStack$$Type, vec31: $Vec3$$Type, matrix4f2: $Matrix4f$$Type): void
 public "reload"(preparationBarrier0: $PreparableReloadListener$PreparationBarrier$$Type, resourceManager1: $ResourceManager$$Type, profilerFiller2: $ProfilerFiller$$Type, profilerFiller3: $ProfilerFiller$$Type, executor4: $Executor$$Type, executor5: $Executor$$Type): $CompletableFuture<void>
 public "renderClouds"(poseStack0: $PoseStack$$Type, matrix4f1: $Matrix4f$$Type, float2: float, double3: double, double4: double, double5: double): void
 public "renderHitOutline"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, entity2: $Entity$$Type, double3: double, double4: double, double5: double, blockPos6: $BlockPos$$Type, blockState7: $BlockState$$Type): void
 public "renderLevel"(poseStack0: $PoseStack$$Type, float1: float, long2: long, boolean3: boolean, camera4: $Camera$$Type, gameRenderer5: $GameRenderer$$Type, lightTexture6: $LightTexture$$Type, matrix4f7: $Matrix4f$$Type): void
+public static "renderLineBox"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, double2: double, double3: double, double4: double, double5: double, double6: double, double7: double, float8: float, float9: float, float10: float, float11: float): void
 public static "renderLineBox"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, aABB2: $AABB$$Type, float3: float, float4: float, float5: float, float6: float): void
 public static "renderLineBox"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, double2: double, double3: double, double4: double, double5: double, double6: double, double7: double, float8: float, float9: float, float10: float, float11: float, float12: float, float13: float, float14: float): void
 public static "renderLineBox"(vertexConsumer0: $VertexConsumer$$Type, double1: double, double2: double, double3: double, double4: double, double5: double, double6: double, float7: float, float8: float, float9: float, float10: float): void
-public static "renderLineBox"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, double2: double, double3: double, double4: double, double5: double, double6: double, double7: double, float8: float, float9: float, float10: float, float11: float): void
 public static "renderShape"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, voxelShape2: $VoxelShape$$Type, double3: double, double4: double, double5: double, float6: float, float7: float, float8: float, float9: float): void
 public "renderSky"(poseStack0: $PoseStack$$Type, matrix4f1: $Matrix4f$$Type, float2: float, camera3: $Camera$$Type, boolean4: boolean, runnable5: $Runnable$$Type): void
 public static "renderVoxelShape"(poseStack0: $PoseStack$$Type, vertexConsumer1: $VertexConsumer$$Type, voxelShape2: $VoxelShape$$Type, double3: double, double4: double, double5: double, float6: float, float7: float, float8: float, float9: float, boolean10: boolean): void
@@ -3330,13 +3330,13 @@ public static "getTargetedEntity"(entity0: $Entity$$Type, int1: integer): $Optio
 public "handler$enk000$renderColliderDebug"(matrices: $PoseStack$$Type, vertexConsumers: $MultiBufferSource$BufferSource$$Type, cameraX: double, cameraY: double, cameraZ: double, ci: $CallbackInfo$$Type): void
 public "printDebug"(obb: $OrientedBoundingBox$$Type): void
 public "render"(poseStack0: $PoseStack$$Type, bufferSource1: $MultiBufferSource$BufferSource$$Type, double2: double, double3: double, double4: double): void
-public static "renderFilledBox"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, aABB2: $AABB$$Type, float3: float, float4: float, float5: float, float6: float): void
-public static "renderFilledBox"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, blockPos2: $BlockPos$$Type, float3: float, float4: float, float5: float, float6: float, float7: float): void
 public static "renderFilledBox"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, blockPos2: $BlockPos$$Type, blockPos3: $BlockPos$$Type, float4: float, float5: float, float6: float, float7: float): void
+public static "renderFilledBox"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, blockPos2: $BlockPos$$Type, float3: float, float4: float, float5: float, float6: float, float7: float): void
+public static "renderFilledBox"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, aABB2: $AABB$$Type, float3: float, float4: float, float5: float, float6: float): void
 public static "renderFilledBox"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, double2: double, double3: double, double4: double, double5: double, double6: double, double7: double, float8: float, float9: float, float10: float, float11: float): void
+public static "renderFloatingText"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, string2: string, double3: double, double4: double, double5: double, int6: integer): void
 public static "renderFloatingText"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, string2: string, int3: integer, int4: integer, int5: integer, int6: integer): void
 public static "renderFloatingText"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, string2: string, double3: double, double4: double, double5: double, int6: integer, float7: float): void
-public static "renderFloatingText"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, string2: string, double3: double, double4: double, double5: double, int6: integer): void
 public static "renderFloatingText"(poseStack0: $PoseStack$$Type, multiBufferSource1: $MultiBufferSource$$Type, string2: string, double3: double, double4: double, double5: double, int6: integer, float7: float, boolean8: boolean, float9: float, boolean10: boolean): void
 public "switchRenderChunkborder"(): boolean
 }
@@ -3370,8 +3370,8 @@ import { $RenderStateShard$OverlayStateShard$$Type } from "net.minecraft.client.
 import { $RenderStateShard$TransparencyStateShard$$Type } from "net.minecraft.client.renderer.RenderStateShard$TransparencyStateShard"
 
 export class $RenderType$CompositeState$CompositeStateBuilder {
-public "createCompositeState"(outlineProperty0: $RenderType$OutlineProperty$$Type): $RenderType$CompositeState
 public "createCompositeState"(boolean0: boolean): $RenderType$CompositeState
+public "createCompositeState"(outlineProperty0: $RenderType$OutlineProperty$$Type): $RenderType$CompositeState
 public "setColorLogicState"(colorLogicStateShard0: $RenderStateShard$ColorLogicStateShard$$Type): $RenderType$CompositeState$CompositeStateBuilder
 public "setCullState"(cullStateShard0: $RenderStateShard$CullStateShard$$Type): $RenderType$CompositeState$CompositeStateBuilder
 public "setDepthTestState"(depthTestStateShard0: $RenderStateShard$DepthTestStateShard$$Type): $RenderType$CompositeState$CompositeStateBuilder

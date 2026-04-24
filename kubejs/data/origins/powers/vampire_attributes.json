@@ -33,5 +33,12 @@
                 "comparison": "<=",
                 "compare_to": 0.5
         }
+    },
+    "grant_skill_tree": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "puffish_skills category unlock @s puffish_skills:vampire"
+        }
     }
 }

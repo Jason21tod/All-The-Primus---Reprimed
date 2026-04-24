@@ -107,21 +107,21 @@ import { $TagType$$Type } from "net.minecraft.nbt.TagType"
 import { $StreamTagVisitor$ValueResult } from "net.minecraft.nbt.StreamTagVisitor$ValueResult"
 
 export interface $StreamTagVisitor {
+"visit"(int0: integer): $StreamTagVisitor$ValueResult
 "visit"(string0: string): $StreamTagVisitor$ValueResult
 "visit"(byte0: byte): $StreamTagVisitor$ValueResult
+"visit"(long0: long): $StreamTagVisitor$ValueResult
 "visit"(short0: short): $StreamTagVisitor$ValueResult
 "visit"(double0: double): $StreamTagVisitor$ValueResult
 "visit"(float0: float): $StreamTagVisitor$ValueResult
-"visit"(long0: long): $StreamTagVisitor$ValueResult
 "visit"(byte0s: byte[]): $StreamTagVisitor$ValueResult
-"visit"(long0s: long[]): $StreamTagVisitor$ValueResult
 "visit"(int0s: integer[]): $StreamTagVisitor$ValueResult
-"visit"(int0: integer): $StreamTagVisitor$ValueResult
+"visit"(long0s: long[]): $StreamTagVisitor$ValueResult
 "visitContainerEnd"(): $StreamTagVisitor$ValueResult
 "visitElement"(tagType0: $TagType$$Type<any>, int1: integer): $StreamTagVisitor$EntryResult
 "visitEnd"(): $StreamTagVisitor$ValueResult
-"visitEntry"(tagType0: $TagType$$Type<any>): $StreamTagVisitor$EntryResult
 "visitEntry"(tagType0: $TagType$$Type<any>, string1: string): $StreamTagVisitor$EntryResult
+"visitEntry"(tagType0: $TagType$$Type<any>): $StreamTagVisitor$EntryResult
 "visitList"(tagType0: $TagType$$Type<any>, int1: integer): $StreamTagVisitor$ValueResult
 "visitRootEntry"(tagType0: $TagType$$Type<any>): $StreamTagVisitor$ValueResult
 }
@@ -211,6 +211,7 @@ public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$Tag>
 public "parent"(): $IParentTag
+public "remove"(int0: integer): $Tag
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
 public "removeFirst"(): $Tag
@@ -315,6 +316,7 @@ public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public "copy"(): $IntArrayTag
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$IntTag$$Type>): void
+public "get"(int0: integer): $IntTag
 public "getAsIntArray"(): integer[]
 public "getAsString"(): string
 public "getFirst"(): $IntTag
@@ -336,7 +338,6 @@ public static "of"<E>(e0: E, e1: E, e2: E, e3: E, e4: E, e5: E, e6: E): $List<E>
 public static "of"<E>(e0: E, e1: E, e2: E, e3: E): $List<E>
 public "parallelStream"(): $Stream<$IntTag>
 public "parent"(): $IParentTag
-public "remove"(int0: integer): $IntTag
 public "remove"(object0: any): boolean
 public "removeAll"(collection0: $Collection$$Type<any>): boolean
 public "removeFirst"(): $IntTag
@@ -469,7 +470,6 @@ public "addFirst"(longTag0: $LongTag$$Type): void
 public "addLast"(longTag0: $LongTag$$Type): void
 public "contains"(object0: any): boolean
 public "containsAll"(collection0: $Collection$$Type<any>): boolean
-public "copy"(): $LongArrayTag
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$LongTag$$Type>): void
 public "get"(int0: integer): $LongTag
@@ -538,6 +538,7 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
+public "copy"(): $StringTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$StringTag>
@@ -569,7 +570,6 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
-public "copy"(): $FloatTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$FloatTag>
@@ -635,8 +635,8 @@ export interface $TagType<T extends $Tag = $Tag> {
 "load"(dataInput0: $DataInput$$Type, int1: integer, nbtAccounter2: $NbtAccounter$$Type): T
 "parse"(dataInput0: $DataInput$$Type, streamTagVisitor1: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 "parseRoot"(dataInput0: $DataInput$$Type, streamTagVisitor1: $StreamTagVisitor$$Type): void
-"skip"(dataInput0: $DataInput$$Type): void
 "skip"(dataInput0: $DataInput$$Type, int1: integer): void
+"skip"(dataInput0: $DataInput$$Type): void
 get "name"(): string
 get "prettyName"(): string
 get "value"(): boolean
@@ -678,7 +678,6 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
-public "copy"(): $IntTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$IntTag>
@@ -733,7 +732,6 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
-public "copy"(): $DoubleTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$DoubleTag>
@@ -761,7 +759,6 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
-public "copy"(): $LongTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$LongTag>
@@ -789,7 +786,6 @@ public "accept"(tagVisitor0: $TagVisitor$$Type): void
 public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$ValueResult
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public static "checkSpecialEquality"(o: any, o1: any, shallow: boolean): boolean
-public "copy"(): $ShortTag
 public "getAsString"(): string
 public "getId"(): byte
 public "getType"(): $TagType<$ShortTag>
@@ -841,6 +837,7 @@ public "containsAll"(collection0: $Collection$$Type<any>): boolean
 public "copy"(): $Tag
 public static "copyOf"<E>(collection0: $Collection$$Type<E>): $List<E>
 public "forEach"(consumer0: $Consumer$$Type<$ByteTag$$Type>): void
+public "get"(int0: integer): $ByteTag
 public "getAsByteArray"(): byte[]
 public "getAsString"(): string
 public "getFirst"(): $ByteTag
@@ -953,7 +950,6 @@ public "accept"(streamTagVisitor0: $StreamTagVisitor$$Type): $StreamTagVisitor$V
 public "acceptAsRoot"(streamTagVisitor0: $StreamTagVisitor$$Type): void
 public "contains"(string0: string, int1: integer): boolean
 public "contains"(string0: string): boolean
-public "copy"(): $CompoundTag
 public "get"(string0: string): $Tag
 public "getAllKeys"(): $Set<string>
 public "getAsString"(): string
@@ -992,16 +988,16 @@ public "pehkui_getUuid"(key: string): $UUID
 public "put"(string0: string, tag1: $Tag$$Type): $Tag
 public "putBoolean"(string0: string, boolean1: boolean): void
 public "putByte"(string0: string, byte1: byte): void
-public "putByteArray"(string0: string, byte1s: byte[]): void
 public "putByteArray"(string0: string, list1: $List$$Type<byte>): void
+public "putByteArray"(string0: string, byte1s: byte[]): void
 public "putDouble"(string0: string, double1: double): void
 public "putFloat"(string0: string, float1: float): void
 public "putInt"(string0: string, int1: integer): void
-public "putIntArray"(string0: string, int1s: integer[]): void
 public "putIntArray"(string0: string, list1: $List$$Type<integer>): void
+public "putIntArray"(string0: string, int1s: integer[]): void
 public "putLong"(string0: string, long1: long): void
-public "putLongArray"(string0: string, long1s: long[]): void
 public "putLongArray"(string0: string, list1: $List$$Type<long>): void
+public "putLongArray"(string0: string, long1s: long[]): void
 public "putShort"(string0: string, short1: short): void
 public "putString"(string0: string, string1: string): void
 public "putUUID"(string0: string, uUID1: $UUID$$Type): void

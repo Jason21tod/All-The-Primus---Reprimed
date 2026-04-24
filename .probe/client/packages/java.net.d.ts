@@ -192,8 +192,8 @@ constructor(int0: integer)
 constructor()
 
 public "accept"(): $Socket
-public "bind"(socketAddress0: $SocketAddress$$Type): void
 public "bind"(socketAddress0: $SocketAddress$$Type, int1: integer): void
+public "bind"(socketAddress0: $SocketAddress$$Type): void
 public "close"(): void
 public "getChannel"(): $ServerSocketChannel
 public "getInetAddress"(): $InetAddress
@@ -272,8 +272,8 @@ constructor()
 
 public "bind"(socketAddress0: $SocketAddress$$Type): void
 public "close"(): void
-public "connect"(inetAddress0: $InetAddress$$Type, int1: integer): void
 public "connect"(socketAddress0: $SocketAddress$$Type): void
+public "connect"(inetAddress0: $InetAddress$$Type, int1: integer): void
 public "disconnect"(): void
 public "getBroadcast"(): boolean
 public "getChannel"(): $DatagramChannel
@@ -476,8 +476,8 @@ constructor(inetAddress0: $InetAddress$$Type, int1: integer, inetAddress2: $Inet
 
 public "bind"(socketAddress0: $SocketAddress$$Type): void
 public "close"(): void
-public "connect"(socketAddress0: $SocketAddress$$Type, int1: integer): void
 public "connect"(socketAddress0: $SocketAddress$$Type): void
+public "connect"(socketAddress0: $SocketAddress$$Type, int1: integer): void
 public "getChannel"(): $SocketChannel
 public "getInetAddress"(): $InetAddress
 public "getInputStream"(): $InputStream

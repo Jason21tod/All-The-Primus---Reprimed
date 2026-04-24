@@ -57,7 +57,6 @@ constructor(r: $RegistryInfo$$Type<T>)
 
 public "create"(id: string): $BuilderBase<T>
 public "create"(id: string, type: string): $BuilderBase<T>
-public "createCustom"(id: string, object: (() => T)): $CustomBuilderObject
 /**
  * Creates a new custom entity based on an existing living entity class.
  * This allows extending or modifying behavior of vanilla or modded entities dynamically.
@@ -75,6 +74,7 @@ public "createCustom"(id: string, object: (() => T)): $CustomBuilderObject
  * ```
  */
 public "createCustom"(id: string, entityClass: $Class$$Type, consumer: $Consumer$$Type): $CustomEntityBuilder
+public "createCustom"(id: string, object: (() => T)): $CustomBuilderObject
 /** @deprecated */
 public "custom"(id: string, object: any): $CustomBuilderObject
 }

@@ -41,8 +41,8 @@ import { $IEventBusInvokeDispatcher$$Type } from "net.minecraftforge.eventbus.ap
 
 export interface $IEventBus {
 "addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, eventPriority1: $EventPriority$$Type, boolean2: boolean, class3: $Class$$Type<T>, consumer4: $Consumer$$Type<T>): void
-"addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, consumer1: $Consumer$$Type<T>): void
 "addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, eventPriority1: $EventPriority$$Type, boolean2: boolean, consumer3: $Consumer$$Type<T>): void
+"addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, consumer1: $Consumer$$Type<T>): void
 "addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, eventPriority1: $EventPriority$$Type, consumer2: $Consumer$$Type<T>): void
 "addListener"<T extends $Event>(consumer0: $Consumer$$Type<T>): void
 "addListener"<T extends $Event>(eventPriority0: $EventPriority$$Type, boolean1: boolean, consumer2: $Consumer$$Type<T>): void
@@ -242,17 +242,17 @@ constructor(busBuilderImpl0: $BusBuilderImpl$$Type)
 
 public "addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, eventPriority1: $EventPriority$$Type, boolean2: boolean, class3: $Class$$Type<T>, consumer4: $Consumer$$Type<T>): void
 public "addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, eventPriority1: $EventPriority$$Type, consumer2: $Consumer$$Type<T>): void
-public "addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, consumer1: $Consumer$$Type<T>): void
 public "addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, eventPriority1: $EventPriority$$Type, boolean2: boolean, consumer3: $Consumer$$Type<T>): void
-public "addListener"<T extends $Event>(eventPriority0: $EventPriority$$Type, boolean1: boolean, consumer2: $Consumer$$Type<T>): void
+public "addGenericListener"<T extends $GenericEvent<F>, F>(class0: $Class$$Type<F>, consumer1: $Consumer$$Type<T>): void
 public "addListener"<T extends $Event>(eventPriority0: $EventPriority$$Type, boolean1: boolean, class2: $Class$$Type<T>, consumer3: $Consumer$$Type<T>): void
 public "addListener"<T extends $Event>(eventPriority0: $EventPriority$$Type, consumer1: $Consumer$$Type<T>): void
+public "addListener"<T extends $Event>(eventPriority0: $EventPriority$$Type, boolean1: boolean, consumer2: $Consumer$$Type<T>): void
 public "addListener"<T extends $Event>(consumer0: $Consumer$$Type<T>): void
 public "fire"<T extends $Event>(t0: T, iEventBusInvokeDispatcher1: $IEventBusInvokeDispatcher$$Type): T
 public "fire"<T extends $Event>(t0: T): T
 public "handleException"(iEventBus0: $IEventBus$$Type, event1: $Event$$Type, iEventListener2s: $IEventListener$$Type[], int3: integer, throwable4: $Throwable$$Type): void
-public "post"(event0: $Event$$Type): boolean
 public "post"(event0: $Event$$Type, iEventBusInvokeDispatcher1: $IEventBusInvokeDispatcher$$Type): boolean
+public "post"(event0: $Event$$Type): boolean
 public "register"(object0: any): void
 public "shutdown"(): void
 public "start"(): void

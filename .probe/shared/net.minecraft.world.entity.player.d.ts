@@ -76,16 +76,16 @@ public "clearContent"(): void
 public "clearOrCountMatchingItems"(predicate0: $Predicate$$Type<$ItemStack$$Type>, int1: integer, container2: $Container$$Type): integer
 public "contains"(tagKey0: $TagKey$$Type<$Item$$Type>): boolean
 public "contains"(itemStack0: $ItemStack$$Type): boolean
-public "count"(ingredient: $Ingredient$$Type): integer
 public "count"(): integer
+public "count"(ingredient: $Ingredient$$Type): integer
 public "countItem"(item0: $Item$$Type): integer
 public "countNonEmpty"(): integer
 public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "dropAll"(): void
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
 public "fillStackedContents"(stackedContents0: $StackedContents$$Type): void
-public "find"(): integer
 public "find"(ingredient: $Ingredient$$Type): integer
+public "find"(): integer
 public "findSlotMatchingItem"(itemStack0: $ItemStack$$Type): integer
 public "findSlotMatchingUnusedItem"(itemStack0: $ItemStack$$Type): integer
 public "getAllItems"(): $List<$ItemStack>
@@ -133,8 +133,8 @@ public "pickSlot"(int0: integer): void
 public "placeItemBackInInventory"(itemStack0: $ItemStack$$Type): void
 public "placeItemBackInInventory"(itemStack0: $ItemStack$$Type, boolean1: boolean): void
 public "removeFromSelected"(boolean0: boolean): $ItemStack
-public "removeItem"(itemStack0: $ItemStack$$Type): void
 public "removeItem"(int0: integer, int1: integer): $ItemStack
+public "removeItem"(itemStack0: $ItemStack$$Type): void
 public "removeItemNoUpdate"(int0: integer): $ItemStack
 public "replaceWith"(inventory0: $Inventory$$Type): void
 public "save"(listTag0: $ListTag$$Type): $ListTag
@@ -145,9 +145,9 @@ public "setPickedItem"(itemStack0: $ItemStack$$Type): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
 public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
+public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public "swapPaint"(double0: double): void
 public "tick"(): void
@@ -455,10 +455,10 @@ public "attack"(entity0: $Entity$$Type): void
 public "attack"(hp: float): void
 public "awardRecipes"(collection0: $Collection$$Type<$Recipe$$Type<any>>): integer
 public "awardRecipesByKey"(resourceLocation0s: $ResourceLocation$$Type[]): void
-public "awardStat"(resourceLocation0: $ResourceLocation$$Type): void
-public "awardStat"(stat0: $Stat$$Type<any>): void
 public "awardStat"(resourceLocation0: $ResourceLocation$$Type, int1: integer): void
+public "awardStat"(stat0: $Stat$$Type<any>): void
 public "awardStat"(stat0: $Stat$$Type<any>, int1: integer): void
+public "awardStat"(resourceLocation0: $ResourceLocation$$Type): void
 public "blockActionRestricted"(level0: $Level$$Type, blockPos1: $BlockPos$$Type, gameType2: $GameType$$Type): boolean
 public "boostElytraFlight"(): void
 public "canBeRiddenUnderFluidType"(fluidType0: $FluidType$$Type, entity1: $Entity$$Type): boolean
@@ -492,9 +492,9 @@ public "crit"(entity0: $Entity$$Type): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "disableShield"(boolean0: boolean): void
 public "displayClientMessage"(component0: $Component$$Type, boolean1: boolean): void
@@ -571,8 +571,8 @@ public "getDefaultMovementSpeed"(): double
 public "getDestroySpeed"(blockState0: $BlockState$$Type): float
 public "getDigSpeed"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type): float
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEnchantmentSeed"(): integer
 public "getEnderChestInventory"(): $PlayerEnderChestContainer
@@ -693,9 +693,9 @@ public "isFake"(): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
 public "isHurt"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isLocalPlayer"(): boolean
 public "isMagnetizing"(): boolean
@@ -747,12 +747,12 @@ public "paint"(renderer: $CompoundTag$$Type): void
 public "playNotifySound"(soundEvent0: $SoundEvent$$Type, soundSource1: $SoundSource$$Type, float2: float, float3: float): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "playerAnimator_getAnimation"(): $AnimationApplier
 public "playerAnimator_getAnimation"(id: $ResourceLocation$$Type): $IAnimation
+public "playerAnimator_getAnimation"(): $AnimationApplier
 public "playerAnimator_setAnimation"(id: $ResourceLocation$$Type, animation: $IAnimation$$Type): $IAnimation
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "redirect$clb000$isSubmergedInProxy"(player0: $Player$$Type, tagKey1: $TagKey$$Type): boolean
 public "redirect$enc000$getMainHandStack_Redirect"(instance: $Player$$Type): $ItemStack
 public "redirect$enc000$setStackInHand_Redirect"(instance: $Player$$Type, handArg: $InteractionHand$$Type, itemStack: $ItemStack$$Type): void
@@ -780,7 +780,6 @@ public "sendData"(channel: string): void
 public "sendInventoryUpdate"(): void
 public "sendMerchantOffers"(int0: integer, merchantOffers1: $MerchantOffers$$Type, int2: integer, int3: integer, boolean4: boolean, boolean5: boolean): void
 public "sendSystemMessage"(component0: $Component$$Type): void
-public "serializeNBT"(): $CompoundTag
 public "setActiveSpawnPower"(resourceKey0: $ResourceKey$$Type): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChantColor"(int0: integer): void
@@ -811,8 +810,8 @@ public "setMouseItem"(item: $ItemStack$$Type): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setProjectionScale"(int0: integer): void
 public "setPulseScale"(int0: integer): void
@@ -845,8 +844,8 @@ public "spawn"(): void
 public "startAutoSpinAttack"(int0: integer): void
 public "startFallFlying"(): void
 public "startSleepInBed"(blockPos0: $BlockPos$$Type): $Either<$Player$BedSleepingProblem, $Unit>
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public "stopFallFlying"(): void
 public "stopSleepInBed"(boolean0: boolean, boolean1: boolean): void
 public "sweepAttack"(): void

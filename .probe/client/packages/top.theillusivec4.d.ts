@@ -89,16 +89,16 @@ export {} // Mark the file as a module, do not remove unless there are other imp
 export type $DropRulesEvent$$Type = ($DropRulesEvent);
 }
 
-declare module "top.theillusivec4.curios.api.event.CurioEquipEvent" {
-export {} // Mark the file as a module, do not remove unless there are other import/exports!
-/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $CurioEquipEvent$$Type = ($CurioEquipEvent);
-}
-
 declare module "top.theillusivec4.curios.api.SlotResult" {
 export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $SlotResult$$Type = ($SlotResult);
+}
+
+declare module "top.theillusivec4.curios.api.event.CurioEquipEvent" {
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
+/** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
+export type $CurioEquipEvent$$Type = ($CurioEquipEvent);
 }
 
 declare module "top.theillusivec4.curios.api.type.inventory.IDynamicStackHandler" {

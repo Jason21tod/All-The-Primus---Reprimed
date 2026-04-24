@@ -20,14 +20,14 @@ public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $I
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
 public "clearContent"(): void
-public "count"(ingredient: $Ingredient$$Type): integer
 public "count"(): integer
+public "count"(ingredient: $Ingredient$$Type): integer
 public "countItem"(item0: $Item$$Type): integer
 public "countNonEmpty"(): integer
 public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-public "find"(): integer
 public "find"(ingredient: $Ingredient$$Type): integer
+public "find"(): integer
 public "getAllItems"(): $List<$ItemStack>
 public "getBlock"(level: $Level$$Type): $BlockContainerJS
 public "getContainerSize"(): integer
@@ -55,9 +55,9 @@ public "setItem"(int0: integer, itemStack1: $ItemStack$$Type): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "startOpen"(player0: $Player$$Type): void
 public "stillValid"(player0: $Player$$Type): boolean
-public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
 public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
+public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public static "tryClear"(object0: any): void
 get "allItems"(): $List<$ItemStack>
@@ -244,8 +244,8 @@ export class $ILycheeRecipe$NBTPatchContext extends $Record {
 constructor(template: $JsonObject$$Type, usedIndexes: $IntCollection$$Type, splits: $Object2IntMap$$Type<$JsonPointer$$Type>)
 
 public "convertPath"(jsonPointer0: $JsonPointer$$Type, biFunction1: $BiFunction$$Type<string, string, string>): $JsonPointer
-public "countTargets"(iLycheeRecipe0: $ILycheeRecipe$$Type<any>, reference1: $Reference$$Type): integer
 public "countTargets"(iLycheeRecipe0: $ILycheeRecipe$$Type<any>, jsonPointer1: $JsonPointer$$Type): integer
+public "countTargets"(iLycheeRecipe0: $ILycheeRecipe$$Type<any>, reference1: $Reference$$Type): integer
 public "splits"(): $Object2IntMap<$JsonPointer>
 public "template"(): $JsonObject
 public "usedIndexes"(): $IntCollection
@@ -632,15 +632,15 @@ public "canPlaceItem"(int0: integer, itemStack1: $ItemStack$$Type): boolean
 public "canTakeItem"(container0: $Container$$Type, int1: integer, itemStack2: $ItemStack$$Type): boolean
 public "clear"(): void
 public "clear"(ingredient: $Ingredient$$Type): void
-public "count"(ingredient: $Ingredient$$Type): integer
 public "count"(): integer
+public "count"(ingredient: $Ingredient$$Type): integer
 public "countItem"(item0: $Item$$Type): integer
 public "countNonEmpty"(): integer
 public "countNonEmpty"(ingredient: $Ingredient$$Type): integer
 public "enqueueActions"(stream0: $Stream$$Type<$PostAction$$Type>, int1: integer, boolean2: boolean): void
 public "extractItem"(slot: integer, amount: integer, simulate: boolean): $ItemStack
-public "find"(): integer
 public "find"(ingredient: $Ingredient$$Type): integer
+public "find"(): integer
 public "getAllItems"(): $List<$ItemStack>
 public "getBlock"(level: $Level$$Type): $BlockContainerJS
 public "getHeight"(): integer
@@ -672,9 +672,9 @@ public "setChanged"(): void
 public "setParam"(lootContextParam0: $LootContextParam$$Type<any>, object1: any): void
 public "setStackInSlot"(slot: integer, stack: $ItemStack$$Type): void
 public "startOpen"(player0: $Player$$Type): void
-public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type): boolean
 public static "stillValidBlockEntity"(blockEntity: $BlockEntity$$Type, player: $Player$$Type, range: integer): boolean
+public static "stillValidBlockEntity"(blockEntity0: $BlockEntity$$Type, player1: $Player$$Type, double2: double): boolean
 public "stopOpen"(player0: $Player$$Type): void
 public "toLootContext"(): $LootContext
 public static "tryClear"(object0: any): void

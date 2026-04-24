@@ -578,8 +578,8 @@ static readonly "ZOMBIE_HORSE": $EntityType<$ZombieHorse>
 static readonly "ZOMBIE_VILLAGER": $EntityType<$ZombieVillager>
 static readonly "ZOMBIFIED_PIGLIN": $EntityType<$ZombifiedPiglin>
 
-constructor(entityFactory0: $EntityType$EntityFactory$$Type<T>, mobCategory1: $MobCategory$$Type, boolean2: boolean, boolean3: boolean, boolean4: boolean, boolean5: boolean, immutableSet6: $ImmutableSet$$Type<$Block$$Type>, entityDimensions7: $EntityDimensions$$Type, int8: integer, int9: integer, featureFlagSet10: $FeatureFlagSet$$Type)
 constructor(entityFactory0: $EntityType$EntityFactory$$Type<T>, mobCategory1: $MobCategory$$Type, boolean2: boolean, boolean3: boolean, boolean4: boolean, boolean5: boolean, immutableSet6: $ImmutableSet$$Type<$Block$$Type>, entityDimensions7: $EntityDimensions$$Type, int8: integer, int9: integer, featureFlagSet10: $FeatureFlagSet$$Type, predicate11: $Predicate$$Type<$EntityType$$Type<any>>, toIntFunction12: $ToIntFunction$$Type<$EntityType$$Type<any>>, toIntFunction13: $ToIntFunction$$Type<$EntityType$$Type<any>>, biFunction14: $BiFunction$$Type<$PlayMessages$SpawnEntity$$Type, $Level$$Type, T>)
+constructor(entityFactory0: $EntityType$EntityFactory$$Type<T>, mobCategory1: $MobCategory$$Type, boolean2: boolean, boolean3: boolean, boolean4: boolean, boolean5: boolean, immutableSet6: $ImmutableSet$$Type<$Block$$Type>, entityDimensions7: $EntityDimensions$$Type, int8: integer, int9: integer, featureFlagSet10: $FeatureFlagSet$$Type)
 
 public static "appendCustomEntityStackConfig"<T extends $Entity>(consumer0: $Consumer$$Type<T>, serverLevel1: $ServerLevel$$Type, itemStack2: $ItemStack$$Type, player3: $Player$$Type): $Consumer<T>
 public static "appendCustomNameConfig"<T extends $Entity>(consumer0: $Consumer$$Type<T>, itemStack1: $ItemStack$$Type): $Consumer<T>
@@ -627,9 +627,9 @@ public "sodiumdynamiclights$getDynamicLightHandler"(): $DynamicLightHandler
 public "sodiumdynamiclights$getName"(): $Component
 public "sodiumdynamiclights$getSetting"(): boolean
 public "sodiumdynamiclights$setDynamicLightHandler"(handler: $DynamicLightHandler$$Type): void
+public "spawn"(serverLevel0: $ServerLevel$$Type, compoundTag1: $CompoundTag$$Type, consumer2: $Consumer$$Type<T>, blockPos3: $BlockPos$$Type, mobSpawnType4: $MobSpawnType$$Type, boolean5: boolean, boolean6: boolean): T
 public "spawn"(serverLevel0: $ServerLevel$$Type, blockPos1: $BlockPos$$Type, mobSpawnType2: $MobSpawnType$$Type): T
 public "spawn"(serverLevel0: $ServerLevel$$Type, itemStack1: $ItemStack$$Type, player2: $Player$$Type, blockPos3: $BlockPos$$Type, mobSpawnType4: $MobSpawnType$$Type, boolean5: boolean, boolean6: boolean): T
-public "spawn"(serverLevel0: $ServerLevel$$Type, compoundTag1: $CompoundTag$$Type, consumer2: $Consumer$$Type<T>, blockPos3: $BlockPos$$Type, mobSpawnType4: $MobSpawnType$$Type, boolean5: boolean, boolean6: boolean): T
 public "toShortString"(): string
 public "trackDeltas"(): boolean
 public "tryCast"(entity0: $Entity$$Type): T

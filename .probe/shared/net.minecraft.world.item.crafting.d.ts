@@ -333,8 +333,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $SmithingTransformRecipe$Serializer implements $RecipeSerializer<$SmithingTransformRecipe> {
 constructor()
 
+public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): $SmithingTransformRecipe
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): $SmithingTransformRecipe
-public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): $SmithingTransformRecipe
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, smithingTransformRecipe1: $SmithingTransformRecipe$$Type): void
 }
@@ -643,9 +643,9 @@ public "mfix$clearReference"(): void
 public "mfix$hasNoElements"(): boolean
 public "negate"(): $Predicate<$ItemStack>
 public static "not"<T>(predicate0: $Predicate$$Type<T>): $Predicate<T>
+public static "of"(tagKey0: $TagKey$$Type<$Item$$Type>): $Ingredient
 public static "of"(...itemStack0s: $ItemStack$$Type[]): $Ingredient
 public static "of"(): $Ingredient
-public static "of"(tagKey0: $TagKey$$Type<$Item$$Type>): $Ingredient
 public static "of"(...itemLike0s: $ItemLike$$Type[]): $Ingredient
 public static "of"(stream0: $Stream$$Type<$ItemStack$$Type>): $Ingredient
 public "or"(predicate0: $Predicate$$Type<$ItemStack$$Type>): $Predicate<$ItemStack>
@@ -735,8 +735,8 @@ import { $ICondition$IContext$$Type } from "net.minecraftforge.common.crafting.c
 import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 
 export class $SingleItemRecipe$Serializer<T extends $SingleItemRecipe = $SingleItemRecipe> implements $RecipeSerializer<T> {
+public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): T
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): T
-public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): T
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, t1: T): void
 }
@@ -1211,8 +1211,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $SmithingTrimRecipe$Serializer implements $RecipeSerializer<$SmithingTrimRecipe> {
 constructor()
 
+public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): $SmithingTrimRecipe
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): $SmithingTrimRecipe
-public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): $SmithingTrimRecipe
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, smithingTrimRecipe1: $SmithingTrimRecipe$$Type): void
 }
@@ -1231,8 +1231,8 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $SimpleCraftingRecipeSerializer<T extends $CraftingRecipe = $CraftingRecipe> implements $RecipeSerializer<T> {
 constructor(factory0: $SimpleCraftingRecipeSerializer$Factory$$Type<T>)
 
+public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): T
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): T
-public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): T
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, t1: T): void
 }
@@ -1394,9 +1394,9 @@ constructor(iContext0: $ICondition$IContext$$Type)
 public "byKey"(resourceLocation0: $ResourceLocation$$Type): $Optional<$Recipe<any>>
 public "byType"<C extends $Container, T extends $Recipe<C>>(recipeType0: $RecipeType$$Type<T>): $Map<$ResourceLocation, T>
 public static "createCheck"<C extends $Container, T extends $Recipe<C>>(recipeType0: $RecipeType$$Type<T>): $RecipeManager$CachedCheck<C, T>
-public static "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): $Recipe<any>
 /** @deprecated */
 public static "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): $Recipe<any>
+public static "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): $Recipe<any>
 public "getAllRecipesFor"<C extends $Container, T extends $Recipe<C>>(recipeType0: $RecipeType$$Type<T>): $List<T>
 public "getFabricDependencies"(): $Collection
 public "getFabricId"(): $ResourceLocation
@@ -1555,7 +1555,9 @@ import { $FriendlyByteBuf$$Type } from "net.minecraft.network.FriendlyByteBuf"
 export class $ShapelessRecipe$Serializer implements $RecipeSerializer<$ShapelessRecipe> {
 constructor()
 
+public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type): $ShapelessRecipe
 public "fromJson"(resourceLocation0: $ResourceLocation$$Type, jsonObject1: $JsonObject$$Type, iContext2: $ICondition$IContext$$Type): $ShapelessRecipe
+public "fromNetwork"(resourceLocation0: $ResourceLocation$$Type, friendlyByteBuf1: $FriendlyByteBuf$$Type): $ShapelessRecipe
 public static "register"<S extends $RecipeSerializer<T>, T extends $Recipe<any>>(string0: string, s1: S): S
 public "toNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type, shapelessRecipe1: $ShapelessRecipe$$Type): void
 }

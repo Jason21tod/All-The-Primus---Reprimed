@@ -34,19 +34,19 @@ get "rootPath"(): $Path
 }
 
 export namespace $SecureJar {
-function from(supplier0: $Supplier$$Type<$Manifest>, function1: $Function$$Type<$SecureJar$$Type, $JarMetadata>, biPredicate2: $BiPredicate$$Type<string, string>, ...path3s: $Path$$Type[]): $SecureJar
-function from(biPredicate0: $BiPredicate$$Type<string, string>, ...path1s: $Path$$Type[]): $SecureJar
 function from(...path0s: $Path$$Type[]): $SecureJar
-function from(function0: $Function$$Type<$SecureJar$$Type, $JarMetadata>, ...path1s: $Path$$Type[]): $SecureJar
+function from(supplier0: $Supplier$$Type<$Manifest>, function1: $Function$$Type<$SecureJar$$Type, $JarMetadata>, biPredicate2: $BiPredicate$$Type<string, string>, ...path3s: $Path$$Type[]): $SecureJar
 function from(supplier0: $Supplier$$Type<$Manifest>, function1: $Function$$Type<$SecureJar$$Type, $JarMetadata>, ...path2s: $Path$$Type[]): $SecureJar
+function from(biPredicate0: $BiPredicate$$Type<string, string>, ...path1s: $Path$$Type[]): $SecureJar
+function from(function0: $Function$$Type<$SecureJar$$Type, $JarMetadata>, ...path1s: $Path$$Type[]): $SecureJar
 function from(function0: $Function$$Type<$SecureJar$$Type, $JarMetadata>, biPredicate1: $BiPredicate$$Type<string, string>, ...path2s: $Path$$Type[]): $SecureJar
 }
 export abstract class $SecureJar$$Static implements $SecureJar {
-static "from"(supplier0: $Supplier$$Type<$Manifest>, function1: $Function$$Type<$SecureJar$$Type, $JarMetadata>, biPredicate2: $BiPredicate$$Type<string, string>, ...path3s: $Path$$Type[]): $SecureJar
-static "from"(biPredicate0: $BiPredicate$$Type<string, string>, ...path1s: $Path$$Type[]): $SecureJar
 static "from"(...path0s: $Path$$Type[]): $SecureJar
-static "from"(function0: $Function$$Type<$SecureJar$$Type, $JarMetadata>, ...path1s: $Path$$Type[]): $SecureJar
+static "from"(supplier0: $Supplier$$Type<$Manifest>, function1: $Function$$Type<$SecureJar$$Type, $JarMetadata>, biPredicate2: $BiPredicate$$Type<string, string>, ...path3s: $Path$$Type[]): $SecureJar
 static "from"(supplier0: $Supplier$$Type<$Manifest>, function1: $Function$$Type<$SecureJar$$Type, $JarMetadata>, ...path2s: $Path$$Type[]): $SecureJar
+static "from"(biPredicate0: $BiPredicate$$Type<string, string>, ...path1s: $Path$$Type[]): $SecureJar
+static "from"(function0: $Function$$Type<$SecureJar$$Type, $JarMetadata>, ...path1s: $Path$$Type[]): $SecureJar
 static "from"(function0: $Function$$Type<$SecureJar$$Type, $JarMetadata>, biPredicate1: $BiPredicate$$Type<string, string>, ...path2s: $Path$$Type[]): $SecureJar
 }
 }

@@ -14,9 +14,9 @@ constructor()
 
 public "arch$getTab"(): $CreativeModeTab
 public "arch$getTabSupplier"(): $DeferredSupplier
-public "arch$tab"(tab: $CreativeModeTab$$Type): $Item$Properties
-public "arch$tab"(tab: $ResourceKey$$Type): $Item$Properties
 public "arch$tab"(tab: $DeferredSupplier$$Type): $Item$Properties
+public "arch$tab"(tab: $ResourceKey$$Type): $Item$Properties
+public "arch$tab"(tab: $CreativeModeTab$$Type): $Item$Properties
 public "craftRemainder"(item0: $Item$$Type): $Item$Properties
 public "defaultDurability"(int0: integer): $Item$Properties
 public "durability"(int0: integer): $Item$Properties
@@ -2046,7 +2046,7 @@ import { $IItemExtension } from "de.mrjulsen.mcdragonlib.item.IItemExtension"
 import { $Holder } from "net.minecraft.core.Holder"
 import { $ClipContext$Fluid$$Type } from "net.minecraft.world.level.ClipContext$Fluid"
 import { $ItemFTBL } from "dev.ftb.mods.ftblibrary.core.ItemFTBL"
-import { $ItemDefinition, $ItemDefinition$$Type } from "net.lixir.vminus.api.registry.definition.ItemDefinition"
+import { $ItemDefinition$$Type } from "net.lixir.vminus.api.registry.definition.ItemDefinition"
 import { $Map } from "java.util.Map"
 import { $Vector3f } from "org.joml.Vector3f"
 import { $TooltipComponent } from "net.minecraft.world.inventory.tooltip.TooltipComponent"
@@ -2204,8 +2204,8 @@ public "getEquipmentSlot"(itemStack0: $ItemStack$$Type): $EquipmentSlot
 public "getFoodProperties"(): $FoodProperties
 public "getFoodProperties"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): $FoodProperties
 public "getHighlightTip"(itemStack0: $ItemStack$$Type, component1: $Component$$Type): $Component
-public static "getId"(item0: $Item$$Type): integer
 public "getId"(): string
+public static "getId"(item0: $Item$$Type): integer
 public "getIdLocation"(): $ResourceLocation
 public "getItem"(): $Item
 public "getItemBuilder"(): $ItemBuilder
@@ -2311,7 +2311,6 @@ public "shouldOverrideMultiplayerNbt"(): boolean
 public "use"(level0: $Level$$Type, player1: $Player$$Type, interactionHand2: $InteractionHand$$Type): $InteractionResultHolder<$ItemStack>
 public "useOn"(useOnContext0: $UseOnContext$$Type): $InteractionResult
 public "useOnRelease"(itemStack0: $ItemStack$$Type): boolean
-public "vMinus$getDefinition"(): $ItemDefinition
 public "vMinus$getVisionId"(): $ResourceLocation
 public "vMinus$getVisionType"(): $VisionType
 public "vMinus$setDefinition"(itemDefinition0: $ItemDefinition$$Type): void
@@ -3660,10 +3659,10 @@ import { $ItemStack$$Type } from "net.minecraft.world.item.ItemStack"
 import { $CreativeModeTab$TabVisibility$$Type } from "net.minecraft.world.item.CreativeModeTab$TabVisibility"
 
 export interface $CreativeModeTab$Output {
-"accept"(itemLike0: $ItemLike$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 "accept"(itemStack0: $ItemStack$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 "accept"(itemStack0: $ItemStack$$Type): void
 "accept"(itemLike0: $ItemLike$$Type): void
+"accept"(itemLike0: $ItemLike$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>): void
 }
@@ -5845,8 +5844,8 @@ static readonly "TAG_ENCH": string
 static readonly "TAG_LORE": string
 
 constructor(holder0: $Holder$$Type<$Item$$Type>, int1: integer)
-constructor(itemLike0: $ItemLike$$Type, int1: integer, compoundTag2: $CompoundTag$$Type)
 constructor(itemLike0: $ItemLike$$Type, int1: integer)
+constructor(itemLike0: $ItemLike$$Type, int1: integer, compoundTag2: $CompoundTag$$Type)
 constructor(itemLike0: $ItemLike$$Type)
 constructor(holder0: $Holder$$Type<$Item$$Type>)
 
@@ -5872,8 +5871,8 @@ public "copyWithCount"(int0: integer): $ItemStack
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "doesSneakBypassUse"(levelReader0: $LevelReader$$Type, blockPos1: $BlockPos$$Type, player2: $Player$$Type): boolean
 public "elytraFlightTick"(livingEntity0: $LivingEntity$$Type, int1: integer): boolean
-public "enchant"(enchantments: $Map$$Type<any, any>): $ItemStack
 public "enchant"(enchantment: $Enchantment$$Type, level: integer): $ItemStack
+public "enchant"(enchantments: $Map$$Type<any, any>): $ItemStack
 public "enchantStack"(enchantment0: $Enchantment$$Type, int1: integer): void
 public "endingLibrary$getComponentManager"(): $ItemComponentManager
 public "endingLibrary$setComponentManager"(itemComponentManager0: $ItemComponentManager$$Type): void
@@ -5907,8 +5906,8 @@ public "getEntityRepresentation"(): $Entity
 public "getEquipmentSlot"(): $EquipmentSlot
 public "getFoodProperties"(livingEntity0: $LivingEntity$$Type): $FoodProperties
 public "getFrame"(): $ItemFrame
-public "getHarvestSpeed"(block: $BlockContainerJS$$Type): float
 public "getHarvestSpeed"(): float
+public "getHarvestSpeed"(block: $BlockContainerJS$$Type): float
 public "getHighlightTip"(component0: $Component$$Type): $Component
 public "getHoverName"(): $Component
 public "getId"(): string
@@ -5974,10 +5973,10 @@ public "hurtEnemy"(livingEntity0: $LivingEntity$$Type, player1: $Player$$Type): 
 public "ignoreNBT"(): $Ingredient
 public "interactLivingEntity"(player0: $Player$$Type, livingEntity1: $LivingEntity$$Type, interactionHand2: $InteractionHand$$Type): $InteractionResult
 public "inventoryTick"(level0: $Level$$Type, entity1: $Entity$$Type, int2: integer, boolean3: boolean): void
+public "is"(holder0: $Holder$$Type<$Item$$Type>): boolean
+public "is"(predicate0: $Predicate$$Type<$Holder$$Type<$Item$$Type>>): boolean
 public "is"(tagKey0: $TagKey$$Type<$Item$$Type>): boolean
 public "is"(item0: $Item$$Type): boolean
-public "is"(predicate0: $Predicate$$Type<$Holder$$Type<$Item$$Type>>): boolean
-public "is"(holder0: $Holder$$Type<$Item$$Type>): boolean
 public "isBarVisible"(): boolean
 public "isBlock"(): boolean
 public "isBookEnchantable"(itemStack0: $ItemStack$$Type): boolean
@@ -6036,6 +6035,7 @@ public "removeTagKey"(string0: string): void
 public "resetHoverName"(): void
 public "save"(compoundTag0: $CompoundTag$$Type): $CompoundTag
 public "self"(): $ItemStack
+public "serializeNBT"(): $CompoundTag
 public "setAnimator"(azAnimator0: $AzAnimator$$Type): void
 public "setCount"(int0: integer): void
 public "setDamageValue"(int0: integer): void
@@ -6055,6 +6055,7 @@ public "split"(int0: integer): $ItemStack
 public "strongNBT"(): $Ingredient
 public "toItemString"(): string
 public "toJson"(): $JsonObject
+public "toNBT"(): $CompoundTag
 public "use"(level0: $Level$$Type, player1: $Player$$Type, interactionHand2: $InteractionHand$$Type): $InteractionResultHolder<$ItemStack>
 public "useOn"(useOnContext0: $UseOnContext$$Type): $InteractionResult
 public "useOnRelease"(): boolean
@@ -8062,8 +8063,8 @@ public "noScrollBar"(): $CreativeModeTab$Builder
 public "title"(component0: $Component$$Type): $CreativeModeTab$Builder
 public "withBackgroundLocation"(resourceLocation0: $ResourceLocation$$Type): $CreativeModeTab$Builder
 public "withLabelColor"(int0: integer): $CreativeModeTab$Builder
-public "withSearchBar"(int0: integer): $CreativeModeTab$Builder
 public "withSearchBar"(): $CreativeModeTab$Builder
+public "withSearchBar"(int0: integer): $CreativeModeTab$Builder
 public "withSlotColor"(int0: integer): $CreativeModeTab$Builder
 public "withTabFactory"(function0: $Function$$Type<$CreativeModeTab$Builder$$Type, $CreativeModeTab>): $CreativeModeTab$Builder
 public "withTabsAfter"(...resourceLocation0s: $ResourceLocation$$Type[]): $CreativeModeTab$Builder
@@ -10269,12 +10270,12 @@ static "ZOMBIFIED_PIGLIN_SPAWN_EGG": $Item
 
 constructor()
 
-public static "registerBlock"(block0: $Block$$Type, ...block1s: $Block$$Type[]): $Item
-public static "registerBlock"(block0: $Block$$Type): $Item
 public static "registerBlock"(blockItem0: $BlockItem$$Type): $Item
+public static "registerBlock"(block0: $Block$$Type): $Item
+public static "registerBlock"(block0: $Block$$Type, ...block1s: $Block$$Type[]): $Item
 public static "registerBlock"(block0: $Block$$Type, item1: $Item$$Type): $Item
-public static "registerItem"(resourceLocation0: $ResourceLocation$$Type, item1: $Item$$Type): $Item
 public static "registerItem"(string0: string, item1: $Item$$Type): $Item
+public static "registerItem"(resourceLocation0: $ResourceLocation$$Type, item1: $Item$$Type): $Item
 public static "registerItem"(resourceKey0: $ResourceKey$$Type<$Item>, item1: $Item$$Type): $Item
 }
 }
@@ -15392,8 +15393,8 @@ public "canElytraFly"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity
 public "canGrindstoneRepair"(itemStack0: $ItemStack$$Type): boolean
 public "canPerformAction"(itemStack0: $ItemStack$$Type, toolAction1: $ToolAction$$Type): boolean
 public "canWalkOnPowderedSnow"(itemStack0: $ItemStack$$Type, livingEntity1: $LivingEntity$$Type): boolean
-public static "createArmorTrimTemplate"(resourceLocation0: $ResourceLocation$$Type): $SmithingTemplateItem
 public static "createArmorTrimTemplate"(resourceKey0: $ResourceKey$$Type<$TrimPattern>): $SmithingTemplateItem
+public static "createArmorTrimTemplate"(resourceLocation0: $ResourceLocation$$Type): $SmithingTemplateItem
 public "createEntity"(level0: $Level$$Type, entity1: $Entity$$Type, itemStack2: $ItemStack$$Type): $Entity
 public static "createNetheriteUpgradeIconList"(): $List<$ResourceLocation>
 public static "createNetheriteUpgradeMaterialList"(): $List<$ResourceLocation>
@@ -15868,8 +15869,8 @@ public "getMaxDamage"(itemStack0: $ItemStack$$Type): integer
 public "getMaxStackSize"(itemStack0: $ItemStack$$Type): integer
 public "getMod"(): string
 public "getRecipeRemainder"(stack: $ItemStack$$Type): $ItemStack
-public static "getSavedData"(itemStack0: $ItemStack$$Type, level1: $Level$$Type): $MapItemSavedData
 public static "getSavedData"(integer0: integer, level1: $Level$$Type): $MapItemSavedData
+public static "getSavedData"(itemStack0: $ItemStack$$Type, level1: $Level$$Type): $MapItemSavedData
 public "getShareTag"(itemStack0: $ItemStack$$Type): $CompoundTag
 public "getSweepHitBox"(stack: $ItemStack$$Type, player: $Player$$Type, target: $Entity$$Type): $AABB
 public "getXpRepairRatio"(itemStack0: $ItemStack$$Type): float

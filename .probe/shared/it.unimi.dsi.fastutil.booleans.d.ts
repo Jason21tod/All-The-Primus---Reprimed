@@ -64,8 +64,8 @@ export interface $Boolean2DoubleFunction extends $Function$0<boolean, double> {
 "containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): double
 "defaultReturnValue"(double0: double): void
+"defaultReturnValue"(): double
 /** @deprecated */
 "get"(object0: any): double
 "get"(boolean0: boolean): double
@@ -154,8 +154,8 @@ export interface $Boolean2ObjectFunction<V = any> extends $Function$0<boolean, V
 "containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(boolean0: boolean): V
@@ -244,8 +244,8 @@ export interface $Boolean2ReferenceFunction<V = any> extends $Function$0<boolean
 "containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(v0: V): void
 "defaultReturnValue"(): V
+"defaultReturnValue"(v0: V): void
 /** @deprecated */
 "get"(object0: any): V
 "get"(boolean0: boolean): V
@@ -335,8 +335,8 @@ export interface $Boolean2ByteFunction extends $Function$0<boolean, byte> {
 "containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): byte
 "defaultReturnValue"(byte0: byte): void
+"defaultReturnValue"(): byte
 /** @deprecated */
 "get"(object0: any): byte
 "get"(boolean0: boolean): byte
@@ -426,8 +426,8 @@ export interface $Boolean2FloatFunction extends $Function$0<boolean, float> {
 "containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): float
 "defaultReturnValue"(float0: float): void
+"defaultReturnValue"(): float
 /** @deprecated */
 "get"(object0: any): float
 "get"(boolean0: boolean): float
@@ -517,8 +517,8 @@ export interface $Boolean2ShortFunction extends $Function$0<boolean, short> {
 "containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): short
 "defaultReturnValue"(short0: short): void
+"defaultReturnValue"(): short
 /** @deprecated */
 "get"(object0: any): short
 "get"(boolean0: boolean): short
@@ -608,8 +608,8 @@ export interface $Boolean2LongFunction extends $Function$0<boolean, long> {
 "containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): long
 "defaultReturnValue"(long0: long): void
+"defaultReturnValue"(): long
 /** @deprecated */
 "get"(object0: any): long
 "get"(boolean0: boolean): long
@@ -699,8 +699,8 @@ export interface $Boolean2IntFunction extends $Function$0<boolean, integer> {
 "containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): integer
 "defaultReturnValue"(int0: integer): void
+"defaultReturnValue"(): integer
 /** @deprecated */
 "get"(object0: any): integer
 "get"(boolean0: boolean): integer
@@ -790,8 +790,8 @@ export interface $Boolean2CharFunction extends $Function$0<boolean, character> {
 "containsKey"(boolean0: boolean): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(): character
 "defaultReturnValue"(char0: character): void
+"defaultReturnValue"(): character
 /** @deprecated */
 "get"(object0: any): character
 "get"(boolean0: boolean): character

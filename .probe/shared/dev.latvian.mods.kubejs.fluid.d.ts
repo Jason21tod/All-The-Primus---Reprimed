@@ -62,8 +62,8 @@ public static "getEmpty"(): $FluidStackJS
 public static "getId"(fluid: $Fluid$$Type): $ResourceLocation
 public static "getType"(id: $ResourceLocation$$Type): $Fluid
 public static "getTypes"(): $List<string>
-public static "lava"(): $FluidStackJS
 public static "lava"(amount: integer): $FluidStackJS
+public static "lava"(): $FluidStackJS
 public static "of"(o: $FluidStackJS$$Type): $FluidStackJS
 public static "of"(o: $FluidStackJS$$Type, amount: integer, nbt: $CompoundTag$$Type): $FluidStackJS
 public static "of"(o: $FluidStackJS$$Type, nbt: $CompoundTag$$Type): $FluidStackJS
@@ -172,7 +172,6 @@ export class $FluidStackJS implements $WrappedJS, $InputFluid, $OutputFluid {
 constructor()
 
 public "copy"(): $FluidStackJS
-public "copy"(long0: long): $FluidStackJS
 public static "fromJson"(e: $JsonElement$$Type): $FluidStackJS
 public "getAmount"(): long
 public "getChance"(): double

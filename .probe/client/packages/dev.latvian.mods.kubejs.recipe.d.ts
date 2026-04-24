@@ -209,8 +209,8 @@ public "recipeStream"(filter: $RecipeFilter$$Type): $Stream<$RecipeJS>
 public "remove"(filter: $RecipeFilter$$Type): void
 public "replaceInput"(filter: $RecipeFilter$$Type, match: $ReplacementMatch$$Type, with_: $InputReplacement$$Type): void
 public "replaceOutput"(filter: $RecipeFilter$$Type, match: $ReplacementMatch$$Type, with_: $OutputReplacement$$Type): void
-public static "runInParallel"(runnable: $Runnable$$Type): void
 public static "runInParallel"<T>(callable: $Callable$$Type<T>): T
+public static "runInParallel"(runnable: $Runnable$$Type): void
 public "setItemErrors"(b: boolean): void
 public "stage"(filter: $RecipeFilter$$Type, stage: string): void
 public "takeId"(recipe: $RecipeJS$$Type, prefix: string, ids: string): $ResourceLocation

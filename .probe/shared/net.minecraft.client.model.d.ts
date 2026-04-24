@@ -556,15 +556,15 @@ import { $CubeDeformation$$Type } from "net.minecraft.client.model.geom.builders
 export class $CubeListBuilder {
 constructor()
 
+public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, cubeDeformation6: $CubeDeformation$$Type, float7: float, float8: float): $CubeListBuilder
 public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float): $CubeListBuilder
 public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, cubeDeformation6: $CubeDeformation$$Type): $CubeListBuilder
+public "addBox"(string0: string, float1: float, float2: float, float3: float, int4: integer, int5: integer, int6: integer, cubeDeformation7: $CubeDeformation$$Type, int8: integer, int9: integer): $CubeListBuilder
 public "addBox"(string0: string, float1: float, float2: float, float3: float, int4: integer, int5: integer, int6: integer, int7: integer, int8: integer): $CubeListBuilder
 public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, set6: $Set$$Type<$Direction$$Type>): $CubeListBuilder
-public "addBox"(string0: string, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, cubeDeformation7: $CubeDeformation$$Type): $CubeListBuilder
 public "addBox"(string0: string, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float): $CubeListBuilder
+public "addBox"(string0: string, float1: float, float2: float, float3: float, float4: float, float5: float, float6: float, cubeDeformation7: $CubeDeformation$$Type): $CubeListBuilder
 public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, boolean6: boolean): $CubeListBuilder
-public "addBox"(string0: string, float1: float, float2: float, float3: float, int4: integer, int5: integer, int6: integer, cubeDeformation7: $CubeDeformation$$Type, int8: integer, int9: integer): $CubeListBuilder
-public "addBox"(float0: float, float1: float, float2: float, float3: float, float4: float, float5: float, cubeDeformation6: $CubeDeformation$$Type, float7: float, float8: float): $CubeListBuilder
 public static "create"(): $CubeListBuilder
 public "getCubes"(): $List<$CubeDefinition>
 public "mirror"(): $CubeListBuilder

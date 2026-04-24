@@ -117,8 +117,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public static "getExperienceValue"(int0: integer): integer
 /** @deprecated */
@@ -156,9 +156,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -175,8 +175,8 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readAdditionalSaveData"(compoundTag0: $CompoundTag$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -184,13 +184,12 @@ public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -389,9 +388,9 @@ public static "checkGlowSquideSpawnRules"(entityType0: $EntityType$$Type<$Living
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -415,8 +414,8 @@ public "getClassification"(boolean0: boolean): $MobCategory
 public "getDarkTicksRemaining"(): integer
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 /** @deprecated */
@@ -460,9 +459,9 @@ public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -484,8 +483,8 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 public "runCommand"(command: string): integer
@@ -499,7 +498,6 @@ public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
-public "serializeNBT"(): $CompoundTag
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
 public "setDefaultMovementSpeed"(speed: double): void
@@ -518,8 +516,8 @@ public "setMotionZ"(z: double): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -689,8 +687,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -720,9 +718,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -738,21 +736,20 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -920,8 +917,8 @@ public "getBlockState"(): $BlockState
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -951,9 +948,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -969,22 +966,21 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setBlockState"(blockState0: $BlockState$$Type): void
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -1172,9 +1168,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -1197,8 +1193,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 /** @deprecated */
@@ -1242,9 +1238,9 @@ public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -1266,8 +1262,8 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 public "runCommand"(command: string): integer
@@ -1282,7 +1278,6 @@ public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
 public "self"(): $LivingEntity
-public "serializeNBT"(): $CompoundTag
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
 public "setDefaultMovementSpeed"(speed: double): void
@@ -1301,8 +1296,8 @@ public "setMotionZ"(z: double): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -1451,8 +1446,8 @@ import { $InteractionHand$$Type } from "net.minecraft.world.InteractionHand"
 export class $AgeableMob extends $PathfinderMob {
 static readonly "BABY_START_AGE": integer
 
-public "ageUp"(int0: integer): void
 public "ageUp"(int0: integer, boolean1: boolean): void
+public "ageUp"(int0: integer): void
 public "alwaysAccepts"(): boolean
 public "attack"(hp: float): void
 public "bettermobcombat$isCombatAnimationActive"(): boolean
@@ -1470,9 +1465,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -1497,8 +1492,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 /** @deprecated */
@@ -1543,9 +1538,9 @@ public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -1567,8 +1562,8 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 public "runCommand"(command: string): integer
@@ -1582,7 +1577,6 @@ public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
-public "serializeNBT"(): $CompoundTag
 public "setAge"(int0: integer): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -1602,8 +1596,8 @@ public "setMotionZ"(z: double): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -1789,9 +1783,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -1814,8 +1808,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 /** @deprecated */
@@ -1861,9 +1855,9 @@ public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInSittingPose"(): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -1889,8 +1883,8 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 public "runCommand"(command: string): integer
@@ -1904,7 +1898,6 @@ public "sdl$resetDynamicLight"(): void
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
-public "serializeNBT"(): $CompoundTag
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
 public "setDefaultMovementSpeed"(speed: double): void
@@ -1926,8 +1919,8 @@ public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
 public "setOrderedToSit"(boolean0: boolean): void
 public "setOwnerUUID"(uUID0: $UUID$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -2215,21 +2208,21 @@ public "canSprint"(): boolean
 public "canStartSwimming"(): boolean
 public "canSwimInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "canTrample"(blockState0: $BlockState$$Type, blockPos1: $BlockPos$$Type, float2: float): boolean
-public "canUpdate"(boolean0: boolean): void
 public "canUpdate"(): boolean
+public "canUpdate"(boolean0: boolean): void
 public "captureDrops"(): $Collection<$ItemEntity>
 public "captureDrops"(collection0: $Collection$$Type<$ItemEntity$$Type>): $Collection<$ItemEntity>
 public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "causeFallDamage"(float0: float, float1: float, damageSource2: $DamageSource$$Type): boolean
 public "celestisynth$thisEntity"(): $Entity
-public "changeDimension"(serverLevel0: $ServerLevel$$Type): $Entity
 public "changeDimension"(serverLevel0: $ServerLevel$$Type, iTeleporter1: $ITeleporter$$Type): $Entity
+public "changeDimension"(serverLevel0: $ServerLevel$$Type): $Entity
 public "checkBelowWorld"(): void
 public "checkDespawn"(): void
 public "checkSlowFallDistance"(): void
 public "chunkPosition"(): $ChunkPos
-public "closerThan"(entity0: $Entity$$Type, double1: double): boolean
 public "closerThan"(entity0: $Entity$$Type, double1: double, double2: double): boolean
+public "closerThan"(entity0: $Entity$$Type, double1: double): boolean
 public "collide"(vec30: $Vec3$$Type): $Vec3
 public static "collideBoundingBox"(entity0: $Entity$$Type, vec31: $Vec3$$Type, aABB2: $AABB$$Type, level3: $Level$$Type, list4: $List$$Type<$VoxelShape$$Type>): $Vec3
 public "copyPosition"(entity0: $Entity$$Type): void
@@ -2354,8 +2347,8 @@ public "getDimensionsForge"(pose0: $Pose$$Type): $EntityDimensions
 public "getDismountLocationForPassenger"(livingEntity0: $LivingEntity$$Type): $Vec3
 public "getDisplayName"(): $Component
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(double0: double, double1: double, double2: double): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEncodeId"(): string
@@ -2586,9 +2579,9 @@ public "isGlowing"(): boolean
 public "isIgnoringBlockTriggers"(): boolean
 public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>, boolean1: boolean): boolean
 public "isInFluidType"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInLava"(): boolean
 public "isInWall"(): boolean
 public "isInWater"(): boolean
@@ -2666,8 +2659,8 @@ public "modifyReturnValue$zcm000$additionalEntityAttributes$getMaxAir"(int0: int
 public "move"(moverType0: $MoverType$$Type, vec31: $Vec3$$Type): void
 public "moveRelative"(float0: float, vec31: $Vec3$$Type): void
 public "moveTo"(double0: double, double1: double, double2: double): void
-public "moveTo"(vec30: $Vec3$$Type): void
 public "moveTo"(blockPos0: $BlockPos$$Type, float1: float, float2: float): void
+public "moveTo"(vec30: $Vec3$$Type): void
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onAboveBubbleCol"(boolean0: boolean): void
 public "onAddedToWorld"(): void
@@ -2703,8 +2696,8 @@ public "position"(): $Vec3
 public "positionRider"(entity0: $Entity$$Type): void
 public "postMagnetJump"(): void
 public "push"(entity0: $Entity$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "recreateFromPacket"(clientboundAddEntityPacket0: $ClientboundAddEntityPacket$$Type): void
 public "refreshDimensions"(): void
 public "remove"(removalReason0: $Entity$RemovalReason$$Type): void
@@ -2733,7 +2726,6 @@ public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $Entity
 public "sendSystemMessage"(component0: $Component$$Type): void
-public "serializeNBT"(): $CompoundTag
 public "setAirSupply"(int0: integer): void
 public "setAnimator"(azAnimator0: $AzAnimator$$Type): void
 public "setAttached"(type: $AttachmentType$$Type, value: any): any
@@ -2769,14 +2761,14 @@ public "setOnGround"(boolean0: boolean): void
 public "setOnGroundWithKnownMovement"(boolean0: boolean, vec31: $Vec3$$Type): void
 public "setOutOfCamera"(value: boolean): void
 public "setPitch"(float0: float): void
-public "setPortalCooldown"(int0: integer): void
 public "setPortalCooldown"(): void
-public "setPos"(double0: double, double1: double, double2: double): void
+public "setPortalCooldown"(int0: integer): void
 public "setPos"(vec30: $Vec3$$Type): void
+public "setPos"(double0: double, double1: double, double2: double): void
 public "setPosRaw"(double0: double, double1: double, double2: double): void
 public "setPose"(pose0: $Pose$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(double0: double, double1: double, double2: double, float3: float, float4: float): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRemainingFireTicks"(int0: integer): void
@@ -2818,9 +2810,9 @@ public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(renderer: $LevelRender
 public "sodiumdynamiclights$updateDynamicLight"(renderer: $LevelRenderer$$Type): boolean
 public "spawn"(): void
 public "spawnAtLocation"(itemStack0: $ItemStack$$Type): $ItemEntity
-public "spawnAtLocation"(itemStack0: $ItemStack$$Type, float1: float): $ItemEntity
-public "spawnAtLocation"(itemLike0: $ItemLike$$Type): $ItemEntity
 public "spawnAtLocation"(itemLike0: $ItemLike$$Type, int1: integer): $ItemEntity
+public "spawnAtLocation"(itemLike0: $ItemLike$$Type): $ItemEntity
+public "spawnAtLocation"(itemStack0: $ItemStack$$Type, float1: float): $ItemEntity
 public "startRiding"(entity0: $Entity$$Type): boolean
 public "startRiding"(entity0: $Entity$$Type, boolean1: boolean): boolean
 public "startSeenByPlayer"(serverPlayer0: $ServerPlayer$$Type): void
@@ -2842,11 +2834,11 @@ public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentT
 public "turn"(double0: double, double1: double): void
 public "unRide"(): void
 public "updateDynamicGameEventListener"(biConsumer0: $BiConsumer$$Type<$DynamicGameEventListener$$Type<any>, $ServerLevel$$Type>): void
-/** @deprecated */
-public "updateFluidHeightAndDoFluidPushing"(tagKey0: $TagKey$$Type<$Fluid$$Type>, double1: double): boolean
+public "updateFluidHeightAndDoFluidPushing"(predicate0: $Predicate$$Type<$FluidState$$Type>): void
 /** @deprecated */
 public "updateFluidHeightAndDoFluidPushing"(): void
-public "updateFluidHeightAndDoFluidPushing"(predicate0: $Predicate$$Type<$FluidState$$Type>): void
+/** @deprecated */
+public "updateFluidHeightAndDoFluidPushing"(tagKey0: $TagKey$$Type<$Fluid$$Type>, double1: double): boolean
 public "updateSwimming"(): void
 public "vMinus$getSpeed"(): double
 public "vMinus$getVisionId"(): $ResourceLocation
@@ -3189,16 +3181,16 @@ export interface $SlotAccess {
 
 export namespace $SlotAccess {
 const NULL: $SlotAccess
-function forContainer(container0: $Container$$Type, int1: integer): $SlotAccess
 function forContainer(container0: $Container$$Type, int1: integer, predicate2: $Predicate$$Type<$ItemStack$$Type>): $SlotAccess
+function forContainer(container0: $Container$$Type, int1: integer): $SlotAccess
 function forEquipmentSlot(livingEntity0: $LivingEntity$$Type, equipmentSlot1: $EquipmentSlot$$Type): $SlotAccess
 function forEquipmentSlot(livingEntity0: $LivingEntity$$Type, equipmentSlot1: $EquipmentSlot$$Type, predicate2: $Predicate$$Type<$ItemStack$$Type>): $SlotAccess
 }
 export abstract class $SlotAccess$$Static implements $SlotAccess {
 static readonly "NULL": $SlotAccess
 
-static "forContainer"(container0: $Container$$Type, int1: integer): $SlotAccess
 static "forContainer"(container0: $Container$$Type, int1: integer, predicate2: $Predicate$$Type<$ItemStack$$Type>): $SlotAccess
+static "forContainer"(container0: $Container$$Type, int1: integer): $SlotAccess
 static "forEquipmentSlot"(livingEntity0: $LivingEntity$$Type, equipmentSlot1: $EquipmentSlot$$Type): $SlotAccess
 static "forEquipmentSlot"(livingEntity0: $LivingEntity$$Type, equipmentSlot1: $EquipmentSlot$$Type, predicate2: $Predicate$$Type<$ItemStack$$Type>): $SlotAccess
 }
@@ -3440,7 +3432,7 @@ public static "values"(): $EquipmentSlot$Type[]
 
 declare module "net.minecraft.world.entity.AreaEffectCloud" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
-import { $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
+import { $LivingEntity, $LivingEntity$$Type } from "net.minecraft.world.entity.LivingEntity"
 import { $EntityType$$Type } from "net.minecraft.world.entity.EntityType"
 import { $Direction } from "net.minecraft.core.Direction"
 import { $ParticleOptions, $ParticleOptions$$Type } from "net.minecraft.core.particles.ParticleOptions"
@@ -3518,8 +3510,8 @@ public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getColor"(): integer
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getDuration"(): integer
 public "getDurationOnUse"(): integer
@@ -3536,6 +3528,7 @@ public "getMotionZ"(): double
 public "getName"(): $Component
 public "getNbt"(): $CompoundTag
 public static "getOrNull"<K, T>(t0: T): $AzAnimator<K, T>
+public "getOwner"(): $LivingEntity
 public "getParticle"(): $ParticleOptions
 public "getParts"(): $PartEntity<any>[]
 public "getPassengers"(): $EntityArrayList
@@ -3557,9 +3550,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -3576,15 +3569,14 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setDuration"(int0: integer): void
 public "setDurationOnUse"(int0: integer): void
 public "setFixedColor"(int0: integer): void
@@ -3594,8 +3586,8 @@ public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOwner"(livingEntity0: $LivingEntity$$Type): void
 public "setParticle"(particleOptions0: $ParticleOptions$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setPotion"(potion0: $Potion$$Type): void
 public "setRadius"(float0: float): void
@@ -3629,6 +3621,7 @@ get "motionY"(): double
 get "motionZ"(): double
 get "name"(): $Component
 get "nbt"(): $CompoundTag
+get "owner"(): $LivingEntity
 get "particle"(): $ParticleOptions
 get "parts"(): $PartEntity<any>[]
 get "passengers"(): $EntityArrayList
@@ -3776,8 +3769,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -3808,9 +3801,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -3827,8 +3820,8 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "orientation"(): $Quaternionf
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "renderState"(): $Display$RenderState
 public "runCommand"(command: string): integer
@@ -3836,15 +3829,14 @@ public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setBillboardConstraints"(billboardConstraints0: $Display$BillboardConstraints$$Type): void
 public "setInterpolationEasing"(easing0: $Easing$$Type): void
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -3977,8 +3969,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -4008,9 +4000,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -4027,21 +4019,20 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -4231,8 +4222,8 @@ static readonly "OFFHAND": $EquipmentSlot
 public static "byName"(string0: string): $EquipmentSlot
 public static "byTypeAndIndex"(type0: $EquipmentSlot$Type$$Type, int1: integer): $EquipmentSlot
 public "getFilterFlag"(): integer
-public "getIndex"(): integer
 public "getIndex"(int0: integer): integer
+public "getIndex"(): integer
 public "getName"(): string
 public "getType"(): $EquipmentSlot$Type
 public "isArmor"(): boolean
@@ -4337,8 +4328,8 @@ public "getCause"(): $ServerPlayer
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDamage"(): float
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -4370,9 +4361,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -4388,23 +4379,22 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setCause"(serverPlayer0: $ServerPlayer$$Type): void
 public "setDamage"(float0: float): void
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -4569,8 +4559,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -4602,9 +4592,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -4620,21 +4610,20 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -4853,10 +4842,10 @@ public "ac_dropCustomDeathLoot"(damageSource0: $DamageSource$$Type, int1: intege
 public "ac_getEquipmentDropChance"(equipmentSlot0: $EquipmentSlot$$Type): float
 public "ac_setDropChance"(equipmentSlot0: $EquipmentSlot$$Type, float1: float): void
 public "addAdditionalSaveData"(compoundTag0: $CompoundTag$$Type): void
-public "addEffect"(mobEffectInstance0: $MobEffectInstance$$Type): boolean
 public "addEffect"(mobEffectInstance0: $MobEffectInstance$$Type, entity1: $Entity$$Type): boolean
-public "addSyncedData"(identifier: string, value: any): void
+public "addEffect"(mobEffectInstance0: $MobEffectInstance$$Type): boolean
 public "addSyncedData"(type: $EntitySerializerType$$Type, key: string, value: any): void
+public "addSyncedData"(identifier: string, value: any): void
 public "aiStep"(): void
 public "alwaysAccepts"(): boolean
 public static "areAllEffectsAmbient"(collection0: $Collection$$Type<$MobEffectInstance$$Type>): boolean
@@ -4874,8 +4863,8 @@ public "callIsPreserved"(): boolean
 public "callIsWebbed"(): boolean
 public "callSetPreserved"(boolean0: boolean): void
 public "callSetWebbed"(boolean0: boolean): void
-public "canAttack"(livingEntity0: $LivingEntity$$Type): boolean
 public "canAttack"(livingEntity0: $LivingEntity$$Type, targetingConditions1: $TargetingConditions$$Type): boolean
+public "canAttack"(livingEntity0: $LivingEntity$$Type): boolean
 public "canAttackType"(entityType0: $EntityType$$Type<any>): boolean
 public "canBeAffected"(mobEffectInstance0: $MobEffectInstance$$Type): boolean
 public "canBeRiddenUnderFluidType"(fluidType0: $FluidType$$Type, entity1: $Entity$$Type): boolean
@@ -4901,9 +4890,9 @@ public "curePotionEffects"(itemStack0: $ItemStack$$Type): boolean
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "die"(damageSource0: $DamageSource$$Type): void
 public "doHurtTarget"(entity0: $Entity$$Type): boolean
@@ -4933,12 +4922,12 @@ public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrThrow"<A>(type: $AttachmentType$$Type<A>): A
 public "getAttackAnim"(float0: float): float
 public "getAttribute"(attribute0: $Attribute$$Type): $AttributeInstance
-public "getAttributeBaseValue"(attribute0: $Attribute$$Type): double
 public "getAttributeBaseValue"(holder0: $Holder$$Type<$Attribute$$Type>): double
+public "getAttributeBaseValue"(attribute0: $Attribute$$Type): double
 public "getAttributeBaseValue"(attribute: $Attribute$$Type): double
 public "getAttributeTotalValue"(attribute: $Attribute$$Type): double
-public "getAttributeValue"(attribute0: $Attribute$$Type): double
 public "getAttributeValue"(holder0: $Holder$$Type<$Attribute$$Type>): double
+public "getAttributeValue"(attribute0: $Attribute$$Type): double
 public "getAttributes"(): $AttributeMap
 public "getBedOrientation"(): $Direction
 public "getBlock"(): $BlockContainerJS
@@ -4953,8 +4942,8 @@ public "getCurrentModifyFoodPowers"(): $List
 public "getDefaultMovementSpeed"(): double
 public "getDismountPoses"(): $ImmutableList<$Pose>
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEatingSound"(itemStack0: $ItemStack$$Type): $SoundEvent
 public "getEffect"(mobEffect0: $MobEffect$$Type): $MobEffectInstance
@@ -5117,9 +5106,9 @@ public "isFreezingFromFrostmint"(): boolean
 public "isHolding"(predicate0: $Predicate$$Type<$ItemStack$$Type>): boolean
 public "isHolding"(item0: $Item$$Type): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInvertedHealAndHarm"(): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
@@ -5165,8 +5154,8 @@ public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "randomTeleport"(double0: double, double1: double, double2: double, boolean3: boolean): boolean
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readAdditionalSaveData"(compoundTag0: $CompoundTag$$Type): void
 public "redirect$ckm000$method_26317Proxy"(livingEntity0: $LivingEntity$$Type, double1: double, boolean2: boolean, vec33: $Vec3$$Type): $Vec3
 public "redirect$dcm000$apoth_applyArmorPen"(float0: float, float1: float, float2: float, damageSource3: $DamageSource$$Type, float4: float): float
@@ -5196,7 +5185,6 @@ public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
 public "self"(): $LivingEntity
 public "sendEffectToPassengers"(mobEffectInstance0: $MobEffectInstance$$Type): void
-public "serializeNBT"(): $CompoundTag
 public "setAbsorptionAmount"(float0: float): void
 public "setArmorValues"(int0: integer, int1: integer): void
 public "setArrowCount"(int0: integer): void
@@ -5235,8 +5223,8 @@ public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setNoActionTime"(int0: integer): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
 public "setOriginalFoodStack"(itemStack0: $ItemStack$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setPossessedByWatcher"(boolean0: boolean): void
 public "setPreserved"(boolean0: boolean): void
@@ -5592,8 +5580,8 @@ public "getBlock"(): $BlockContainerJS
 public "getCapability"<T>(capability0: $Capability$$Type<T>): $LazyOptional<T>
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntity"(): $Marker
 /** @deprecated */
@@ -5624,9 +5612,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -5645,21 +5633,20 @@ public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOpera
 public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
 public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -5994,9 +5981,9 @@ public static "createMobAttributes"(): $AttributeSupplier$Builder
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "dropLeash"(boolean0: boolean, boolean1: boolean): void
 public "equipItemIfPossible"(itemStack0: $ItemStack$$Type): $ItemStack
@@ -6027,8 +6014,8 @@ public "getComboCount"(): integer
 public "getCurrentAttack"(): $AttackHand
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 public static "getEquipmentForSlot"(equipmentSlot0: $EquipmentSlot$$Type, int1: integer): $Item
@@ -6113,9 +6100,9 @@ public "isDrinkingPotion"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLeashed"(): boolean
 public "isLeftHanded"(): boolean
 public "isLiving"(): boolean
@@ -6133,8 +6120,8 @@ public "isUndead"(): boolean
 public "isWaterCreature"(): boolean
 public "isWeaponSwingInProgress"(): boolean
 public "isWithinMeleeAttackRange"(livingEntity0: $LivingEntity$$Type): boolean
-public "isWithinRestriction"(blockPos0: $BlockPos$$Type): boolean
 public "isWithinRestriction"(): boolean
+public "isWithinRestriction"(blockPos0: $BlockPos$$Type): boolean
 public "jumpInFluid"(fluidType0: $FluidType$$Type): void
 public "lookAt"(entity0: $Entity$$Type, float1: float, float2: float): void
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean): $TrackedDataContainer<O, T>
@@ -6176,8 +6163,8 @@ public "playerAnimator_getAnimation"(resourceLocation0: $ResourceLocation$$Type)
 public "playerAnimator_getAnimation"(): $AnimationApplier
 public "playerAnimator_setAnimation"(resourceLocation0: $ResourceLocation$$Type, iAnimation1: $IAnimation$$Type): $IAnimation
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "redirect$hle000$fixSpawnAnimX"(instance: $Mob$$Type, v: double): double
 public "removeAllGoals"(predicate0: $Predicate$$Type<$Goal$$Type>): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
@@ -6198,7 +6185,6 @@ public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $LivingEntity
 public "self"(): $LivingEntity
-public "serializeNBT"(): $CompoundTag
 public "setAggressive"(boolean0: boolean): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setBaby"(boolean0: boolean): void
@@ -6233,8 +6219,8 @@ public "setNoAi"(boolean0: boolean): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
 public "setPathfindingMalus"(blockPathTypes0: $BlockPathTypes$$Type, float1: float): void
 public "setPersistenceRequired"(): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setSpawnCancelled"(boolean0: boolean): void
@@ -6479,9 +6465,9 @@ public static "cast"<K, T>(t0: T): $AzAnimatorAccessor<K, T>
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$getETFRenderState"(): $ETFEntityRenderState
 public "foodEaten"(is: $ItemStack$$Type): void
@@ -6504,8 +6490,8 @@ public "getChestArmorItem"(): $ItemStack
 public "getClassification"(boolean0: boolean): $MobCategory
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
 /** @deprecated */
@@ -6542,8 +6528,8 @@ public "getStepHeight"(): float
 public "getTeamId"(): string
 public "getTotalMovementSpeed"(): double
 public "getType"(): string
-public "getWalkTargetValue"(blockPos0: $BlockPos$$Type, levelReader1: $LevelReader$$Type): float
 public "getWalkTargetValue"(blockPos0: $BlockPos$$Type): float
+public "getWalkTargetValue"(blockPos0: $BlockPos$$Type, levelReader1: $LevelReader$$Type): float
 public static "getWeightedVisionEntityVariants"(list0: $List$$Type<$VisionEntityVariant$$Type>): $ArrayList<$VisionEntityVariant>
 public "handler$cij001$init"(entityType: $EntityType$$Type, level: $Level$$Type, ci: $CallbackInfo$$Type): void
 public "handler$fec000$getWalkTargetValue"(pPos: $BlockPos$$Type, pLevel: $LevelReader$$Type, cir: $CallbackInfoReturnable$$Type): void
@@ -6553,9 +6539,9 @@ public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -6579,8 +6565,8 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 public "runCommand"(command: string): integer
@@ -6595,7 +6581,6 @@ public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "sdl$shouldUpdateDynamicLight"(): boolean
 public "self"(): $PathfinderMob
 public "self"(): $LivingEntity
-public "serializeNBT"(): $CompoundTag
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
 public "setDefaultMovementSpeed"(speed: double): void
@@ -6615,8 +6600,8 @@ public "setMotionZ"(z: double): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void

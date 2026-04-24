@@ -61,8 +61,8 @@ constructor(registry0: $Registry$$Type<T>)
 
 public "contains"(t0: T): boolean
 public "forEach"(consumer0: $Consumer$$Type<$Stat$$Type<T>>): void
-public "get"(t0: T): $Stat<T>
 public "get"(t0: T, statFormatter1: $StatFormatter$$Type): $Stat<T>
+public "get"(t0: T): $Stat<T>
 public "getDisplayName"(): $Component
 public "getRegistry"(): $Registry<T>
 public "getTranslationKey"(): string

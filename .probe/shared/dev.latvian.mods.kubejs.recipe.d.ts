@@ -1216,8 +1216,8 @@ public "componentClass"(): $Class<any>
 public "componentType"(): string
 public "constructorDescription"(ctx: $DescriptionContext$$Type): $TypeDescJS
 public "createCopy"(): $RecipeComponentBuilder
-public "hasPriority"(hasPriority: $Predicate$$Type<$Set$$Type<string>>): $RecipeComponentBuilder
 public "hasPriority"(recipe: $RecipeJS$$Type, from: any): boolean
+public "hasPriority"(hasPriority: $Predicate$$Type<$Set$$Type<string>>): $RecipeComponentBuilder
 public "inputRole"(): $RecipeComponentBuilder
 public "isInput"(recipe: $RecipeJS$$Type, value: $RecipeComponentBuilderMap$$Type, match: $ReplacementMatch$$Type): boolean
 public "isOutput"(recipe: $RecipeJS$$Type, value: $RecipeComponentBuilderMap$$Type, match: $ReplacementMatch$$Type): boolean
@@ -1291,8 +1291,8 @@ public "consumeIngredient"(filter: $IngredientActionFilter$$Type): $RecipeJS
 public "convertJavaToJs"(cx: $Context$$Type, scope: $Scriptable$$Type, staticType: $Class$$Type<any>): $Scriptable
 public "createRecipe"(): $Recipe<any>
 public "customIngredientAction"(filter: $IngredientActionFilter$$Type, id: string): $RecipeJS
-public "damageIngredient"(filter: $IngredientActionFilter$$Type, damage: integer): $RecipeJS
 public "damageIngredient"(filter: $IngredientActionFilter$$Type): $RecipeJS
+public "damageIngredient"(filter: $IngredientActionFilter$$Type, damage: integer): $RecipeJS
 public "deserialize"(merge: boolean): void
 public "get"(key: string): any
 public "getAllValueMap"(): $Map<string, $RecipeComponentValue<any>>

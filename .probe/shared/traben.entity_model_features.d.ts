@@ -511,8 +511,8 @@ public "getAllTopLevelAnimationsByVanillaPartName"(): $LinkedHashMap<string, $Li
 public "getCustomTexture"(): $ResourceLocation
 public "getMobModelIDInfo"(): $EMFModel_ID
 public "prepare"(directoryContext: $EMFDirectoryHandler$$Type, mobModelIDInfo: $EMFModel_ID$$Type): void
-public "validateJemTexture"(textureIn: string, canRemoveRedundancy: boolean): $ResourceLocation
 public "validateJemTexture"(textureIn: string): $ResourceLocation
+public "validateJemTexture"(textureIn: string, canRemoveRedundancy: boolean): $ResourceLocation
 public "validateResourcePathAndExists"(pathIn: string, fileTypeExtension: string): $ResourceLocation
 get "models"(): $LinkedList<$EMFPartData>
 set "models"(value: $LinkedList$$Type<$EMFPartData$$Type>)
@@ -536,9 +536,9 @@ export class $EMFModel_ID implements $Comparable<$EMFModel_ID> {
 constructor(both: string, mapId: string)
 constructor(both: string)
 
+public "addFallbackModel"(fileName: string): $EMFModel_ID
 public "addFallbackModel"(namespace: string, fileName: string): $EMFModel_ID
 public "addFallbackModel"(namespace: string, fileName: string, first: boolean): $EMFModel_ID
-public "addFallbackModel"(fileName: string): $EMFModel_ID
 public "areBothSame"(): boolean
 public "compareTo"(o: $EMFModel_ID$$Type): integer
 public "finishAndPrepAutomatedFallbacks"(): void
@@ -555,8 +555,8 @@ public "pushNewMainModelAndMapIdAddingOldAsFallback"(fileName: string, mapId: st
 public "setBoth"(both: string): $EMFModel_ID
 public "setBoth"(fileName: string, mapId: string): $EMFModel_ID
 public "setFileName"(fileName: string): $EMFModel_ID
-public "setMapIdAndAddFallbackModel"(mapId: string, fileName: string): $EMFModel_ID
 public "setMapIdAndAddFallbackModel"(both: string): $EMFModel_ID
+public "setMapIdAndAddFallbackModel"(mapId: string, fileName: string): $EMFModel_ID
 get "namespace"(): string
 set "namespace"(value: string)
 get "displayFileName"(): string

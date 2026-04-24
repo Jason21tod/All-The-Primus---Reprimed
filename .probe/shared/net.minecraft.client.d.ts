@@ -245,10 +245,10 @@ public "fovEffectScale"(): $OptionInstance<double>
 public "framerateLimit"(): $OptionInstance<integer>
 public "fullscreen"(): $OptionInstance<boolean>
 public "gamma"(): $OptionInstance<double>
-public static "genericValueLabel"(component0: $Component$$Type, component1: $Component$$Type): $Component
 public static "genericValueLabel"(component0: $Component$$Type, int1: integer): $Component
-public "getBackgroundColor"(int0: integer): integer
+public static "genericValueLabel"(component0: $Component$$Type, component1: $Component$$Type): $Component
 public "getBackgroundColor"(float0: float): integer
+public "getBackgroundColor"(int0: integer): integer
 public "getBackgroundOpacity"(float0: float): float
 public "getCameraType"(): $CameraType
 public "getCloudsType"(): $CloudStatus
@@ -478,13 +478,13 @@ constructor(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$
 
 public static "cachedConstantTooltip"<T>(component0: $Component$$Type): $OptionInstance$TooltipSupplier<T>
 public "codec"(): $Codec<T>
-public static "createBoolean"(string0: string, boolean1: boolean, consumer2: $Consumer$$Type<boolean>): $OptionInstance<boolean>
-public static "createBoolean"(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<boolean>, boolean2: boolean): $OptionInstance<boolean>
 public static "createBoolean"(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<boolean>, boolean2: boolean, consumer3: $Consumer$$Type<boolean>): $OptionInstance<boolean>
+public static "createBoolean"(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<boolean>, boolean2: boolean): $OptionInstance<boolean>
+public static "createBoolean"(string0: string, boolean1: boolean, consumer2: $Consumer$$Type<boolean>): $OptionInstance<boolean>
 public static "createBoolean"(string0: string, tooltipSupplier1: $OptionInstance$TooltipSupplier$$Type<boolean>, captionBasedToString2: $OptionInstance$CaptionBasedToString$$Type<boolean>, boolean3: boolean, consumer4: $Consumer$$Type<boolean>): $OptionInstance<boolean>
 public static "createBoolean"(string0: string, boolean1: boolean): $OptionInstance<boolean>
-public "createButton"(options0: $Options$$Type, int1: integer, int2: integer, int3: integer): $AbstractWidget
 public "createButton"(options0: $Options$$Type, int1: integer, int2: integer, int3: integer, consumer4: $Consumer$$Type<T>): $AbstractWidget
+public "createButton"(options0: $Options$$Type, int1: integer, int2: integer, int3: integer): $AbstractWidget
 public static "forOptionEnum"<T extends $OptionEnum>(): $OptionInstance$CaptionBasedToString<T>
 public "get"(): T
 public static "noTooltip"<T>(): $OptionInstance$TooltipSupplier<T>
@@ -522,12 +522,12 @@ static readonly "CATEGORY_MISC": string
 static readonly "CATEGORY_MOVEMENT": string
 static readonly "CATEGORY_MULTIPLAYER": string
 
-constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, keyModifier2: $KeyModifier$$Type, key3: $InputConstants$Key$$Type, string4: string)
-constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, keyModifier2: $KeyModifier$$Type, type3: $InputConstants$Type$$Type, int4: integer, string5: string)
 constructor(string0: string, int1: integer, string2: string)
 constructor(string0: string, type1: $InputConstants$Type$$Type, int2: integer, string3: string)
-constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, type2: $InputConstants$Type$$Type, int3: integer, string4: string)
+constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, keyModifier2: $KeyModifier$$Type, key3: $InputConstants$Key$$Type, string4: string)
 constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, key2: $InputConstants$Key$$Type, string3: string)
+constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, type2: $InputConstants$Type$$Type, int3: integer, string4: string)
+constructor(string0: string, iKeyConflictContext1: $IKeyConflictContext$$Type, keyModifier2: $KeyModifier$$Type, type3: $InputConstants$Type$$Type, int4: integer, string5: string)
 
 public static "click"(key0: $InputConstants$Key$$Type): void
 public "compareTo"(keyMapping0: $KeyMapping$$Type): integer
@@ -1446,8 +1446,8 @@ import { $Style, $Style$$Type } from "net.minecraft.network.chat.Style"
 export class $StringSplitter implements $StringSplitterAccessor, $StringSplitterAccessor$0 {
 constructor(widthProvider0: $StringSplitter$WidthProvider$$Type)
 
-public "componentStyleAtWidth"(formattedCharSequence0: $FormattedCharSequence$$Type, int1: integer): $Style
 public "componentStyleAtWidth"(formattedText0: $FormattedText$$Type, int1: integer): $Style
+public "componentStyleAtWidth"(formattedCharSequence0: $FormattedCharSequence$$Type, int1: integer): $Style
 public "findLineBreak"(string0: string, int1: integer, style2: $Style$$Type): integer
 public "formattedHeadByWidth"(string0: string, int1: integer, style2: $Style$$Type): string
 public "formattedIndexByWidth"(string0: string, int1: integer, style2: $Style$$Type): integer
@@ -1456,13 +1456,13 @@ public "headByWidth"(formattedText0: $FormattedText$$Type, int1: integer, style2
 public "plainHeadByWidth"(string0: string, int1: integer, style2: $Style$$Type): string
 public "plainIndexAtWidth"(string0: string, int1: integer, style2: $Style$$Type): integer
 public "plainTailByWidth"(string0: string, int1: integer, style2: $Style$$Type): string
-public "splitLines"(string0: string, int1: integer, style2: $Style$$Type): $List<$FormattedText>
 public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type): $List<$FormattedText>
-public "splitLines"(string0: string, int1: integer, style2: $Style$$Type, boolean3: boolean, linePosConsumer4: $StringSplitter$LinePosConsumer$$Type): void
-public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type, formattedText3: $FormattedText$$Type): $List<$FormattedText>
+public "splitLines"(string0: string, int1: integer, style2: $Style$$Type): $List<$FormattedText>
 public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type, biConsumer3: $BiConsumer$$Type<$FormattedText$$Type, boolean>): void
-public "stringWidth"(formattedText0: $FormattedText$$Type): float
+public "splitLines"(formattedText0: $FormattedText$$Type, int1: integer, style2: $Style$$Type, formattedText3: $FormattedText$$Type): $List<$FormattedText>
+public "splitLines"(string0: string, int1: integer, style2: $Style$$Type, boolean3: boolean, linePosConsumer4: $StringSplitter$LinePosConsumer$$Type): void
 public "stringWidth"(string0: string): float
+public "stringWidth"(formattedText0: $FormattedText$$Type): float
 public "stringWidth"(formattedCharSequence0: $FormattedCharSequence$$Type): float
 }
 }

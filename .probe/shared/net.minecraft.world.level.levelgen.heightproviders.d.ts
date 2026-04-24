@@ -89,8 +89,8 @@ import { $HeightProvider } from "net.minecraft.world.level.levelgen.heightprovid
 export class $TrapezoidHeight extends $HeightProvider implements $TrapezoidHeightAccessor {
 static readonly "CODEC": $Codec<$TrapezoidHeight>
 
-public static "of"(verticalAnchor0: $VerticalAnchor$$Type, verticalAnchor1: $VerticalAnchor$$Type): $TrapezoidHeight
 public static "of"(verticalAnchor0: $VerticalAnchor$$Type, verticalAnchor1: $VerticalAnchor$$Type, int2: integer): $TrapezoidHeight
+public static "of"(verticalAnchor0: $VerticalAnchor$$Type, verticalAnchor1: $VerticalAnchor$$Type): $TrapezoidHeight
 }
 }
 

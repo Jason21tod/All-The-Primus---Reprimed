@@ -29,8 +29,8 @@ public "getPosY"(): double
 public "getPosZ"(): double
 public "getTimestamp"(): long
 public "processDrops"(collection0: $Collection$$Type<$ItemEntity$$Type>): void
-public "toNBT"(boolean0: boolean): $CompoundTag
 public "toNBT"(): $CompoundTag
+public "toNBT"(boolean0: boolean): $CompoundTag
 get "additionalItems"(): $NonNullList<$ItemStack>
 get "allItems"(): $NonNullList<$ItemStack>
 get "armorInventory"(): $NonNullList<$ItemStack>
@@ -59,8 +59,8 @@ import { $DamageSource, $DamageSource$$Type } from "net.minecraft.world.damageso
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $PlayerDeathEvent extends $Event implements $EventItf {
-constructor()
 constructor(death0: $Death$$Type, serverPlayer1: $ServerPlayer$$Type, damageSource2: $DamageSource$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void

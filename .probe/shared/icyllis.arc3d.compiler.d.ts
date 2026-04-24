@@ -26,10 +26,10 @@ static readonly "kVoid_TypeKind": byte
 public "canCoerceTo"(other: $Type$$Type, allowNarrowing: boolean): boolean
 public "checkLiteralOutOfRange"(context: $Context$$Type, pos: integer, value: double): boolean
 public "coerceExpression"(context: $Context$$Type, expr: $Expression$$Type): $Expression
-public "convertArraySize"(context: $Context$$Type, position: integer, size: $Expression$$Type): integer
 public "convertArraySize"(context: $Context$$Type, position: integer, sizePosition: integer, size: long): integer
-public "getArrayName"(size: integer): string
+public "convertArraySize"(context: $Context$$Type, position: integer, size: $Expression$$Type): integer
 public static "getArrayName"(baseName: string, size: integer): string
+public "getArrayName"(size: integer): string
 public "getArraySize"(): integer
 public "getCoercibleTypes"(): $List<$Type>
 public "getCoercionCost"(other: $Type$$Type): long
@@ -79,16 +79,16 @@ public "isUnsizedArray"(): boolean
 public "isUsableInArray"(context: $Context$$Type, position: integer): boolean
 public "isVector"(): boolean
 public "isVoid"(): boolean
-public static "makeAliasType"(position: integer, name: string, type: $Type$$Type): $Type
 public static "makeAliasType"(name: string, type: $Type$$Type): $Type
+public static "makeAliasType"(position: integer, name: string, type: $Type$$Type): $Type
 public static "makeArrayType"(name: string, type: $Type$$Type, size: integer): $Type
 public static "makeCombinedType"(name: string, abbr: string, component: $Type$$Type, dimensions: integer, isShadow: boolean, isArrayed: boolean, isMultiSampled: boolean): $Type
 public static "makeGenericType"(name: string, ...types: $Type$$Type[]): $Type
 public static "makeImageType"(name: string, abbr: string, component: $Type$$Type, dimensions: integer, isArrayed: boolean, isMultiSampled: boolean): $Type
 public static "makeMatrixType"(name: string, desc: string, columnType: $Type$$Type, cols: integer): $Type
 public static "makeSamplerType"(name: string, abbr: string, component: $Type$$Type, dimensions: integer, isShadow: boolean, isArrayed: boolean, isMultiSampled: boolean, isSampled: boolean, isSampler: boolean): $Type
-public static "makeScalarType"(name: string, desc: string, kind: byte, rank: integer, width: integer): $Type
 public static "makeScalarType"(name: string, desc: string, kind: byte, rank: integer, minWidth: integer, width: integer): $Type
+public static "makeScalarType"(name: string, desc: string, kind: byte, rank: integer, width: integer): $Type
 public static "makeSeparateType"(name: string, abbr: string, component: $Type$$Type, isShadow: boolean): $Type
 public static "makeSpecialType"(name: string, abbr: string, kind: byte): $Type
 public static "makeStructType"(context: $Context$$Type, position: integer, name: string, fields: $List$$Type<$Type$Field$$Type>, interfaceBlock: boolean): $Type
@@ -309,8 +309,8 @@ public "errorCount"(): integer
 public "getSource"(): string
 public "reset"(): void
 public "setSource"(source: string): void
-public "warning"(start: integer, end: integer, msg: string): void
 public "warning"(pos: integer, msg: string): void
+public "warning"(start: integer, end: integer, msg: string): void
 public "warningCount"(): integer
 get "source"(): string
 set "source"(value: string)
@@ -596,8 +596,8 @@ constructor(errorHandler: $ErrorHandler$$Type)
 public "convertIdentifier"(position: integer, name: string): $Expression
 public "end"(): void
 public "enterScope"(): void
-public "error"(start: integer, end: integer, msg: string): void
 public "error"(position: integer, msg: string): void
+public "error"(start: integer, end: integer, msg: string): void
 public "getErrorHandler"(): $ErrorHandler
 public "getKind"(): $ShaderKind
 public "getOptions"(): $CompileOptions
@@ -609,8 +609,8 @@ public "isModule"(): boolean
 public "leaveScope"(): void
 public "setErrorHandler"(errorHandler: $ErrorHandler$$Type): void
 public "start"(kind: $ShaderKind$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type, isBuiltin: boolean, isModule: boolean): void
-public "warning"(position: integer, msg: string): void
 public "warning"(start: integer, end: integer, msg: string): void
+public "warning"(position: integer, msg: string): void
 get "errorHandler"(): $ErrorHandler
 get "kind"(): $ShaderKind
 get "options"(): $CompileOptions
@@ -640,8 +640,8 @@ static readonly "POISON_TAG": string
 
 constructor()
 
-public "compileIntoSPIRV"(source: charseq, kind: $ShaderKind$$Type, shaderCaps: $ShaderCaps$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $ByteBuffer
 public "compileIntoSPIRV"(source: string, kind: $ShaderKind$$Type, shaderCaps: $ShaderCaps$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $ByteBuffer
+public "compileIntoSPIRV"(source: charseq, kind: $ShaderKind$$Type, shaderCaps: $ShaderCaps$$Type, options: $CompileOptions$$Type, parent: $ModuleUnit$$Type): $ByteBuffer
 public "endContext"(): void
 public "errorCount"(): integer
 public "generateGLSL"(translationUnit: $TranslationUnit$$Type, shaderCaps: $ShaderCaps$$Type): $ByteBuffer
@@ -674,8 +674,8 @@ import { $Type, $Type$$Type } from "icyllis.arc3d.compiler.tree.Type"
 import { $Node } from "icyllis.arc3d.compiler.tree.Node"
 
 export class $Expression extends $Node {
-public "copy"(): $Expression
 public "copy"(int0: integer): $Expression
+public "copy"(): $Expression
 public "getCoercionCost"(other: $Type$$Type): long
 public "getConstantValue"(i: integer): $OptionalDouble
 public "getKind"(): $Node$ExpressionKind

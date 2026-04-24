@@ -602,8 +602,8 @@ public "getOriginZRot"(): double
 public "getOriginZoom"(): float
 public "getRaycastOffset"(float0: float): double
 public "getRaycastOffset0"(): $CameraValueInstance
-public "getX"(float0: float): double
 public "getX"(): $CameraValueInstance
+public "getX"(float0: float): double
 public "getXOffset"(float0: float): double
 public "getXOffset0"(): $CameraValueInstance
 public "getXRelative"(float0: float): double
@@ -1572,6 +1572,22 @@ static "simpleEnum"<T extends $Enum<T>>(class0: $Class$$Type<T>): $CapabilityDat
 }
 }
 
+declare module "com.mega.endinglib.api.client.camera.CameraKeyframeAnimation$AnimType" {
+import { $Codec } from "com.mojang.serialization.Codec"
+import { $Enum } from "java.lang.Enum"
+
+export class $CameraKeyframeAnimation$AnimType extends $Enum<$CameraKeyframeAnimation$AnimType> {
+static readonly "CODEC": $Codec<$CameraKeyframeAnimation$AnimType>
+static readonly "FOREVER": $CameraKeyframeAnimation$AnimType
+static readonly "LOOP": $CameraKeyframeAnimation$AnimType
+static readonly "STOP": $CameraKeyframeAnimation$AnimType
+static readonly "STOP_BACK_TO_ZERO": $CameraKeyframeAnimation$AnimType
+
+public static "valueOf"(string0: string): $CameraKeyframeAnimation$AnimType
+public static "values"(): $CameraKeyframeAnimation$AnimType[]
+}
+}
+
 declare module "com.mega.endinglib.mixin.accessor.AccessorSynchedEntityData" {
 import { $Entity } from "net.minecraft.world.entity.Entity"
 import { $SynchedEntityData$DataItem } from "net.minecraft.network.syncher.SynchedEntityData$DataItem"
@@ -1595,22 +1611,6 @@ export namespace $AccessorSynchedEntityData {
 const probejs$$marker: never
 }
 export abstract class $AccessorSynchedEntityData$$Static implements $AccessorSynchedEntityData {
-}
-}
-
-declare module "com.mega.endinglib.api.client.camera.CameraKeyframeAnimation$AnimType" {
-import { $Codec } from "com.mojang.serialization.Codec"
-import { $Enum } from "java.lang.Enum"
-
-export class $CameraKeyframeAnimation$AnimType extends $Enum<$CameraKeyframeAnimation$AnimType> {
-static readonly "CODEC": $Codec<$CameraKeyframeAnimation$AnimType>
-static readonly "FOREVER": $CameraKeyframeAnimation$AnimType
-static readonly "LOOP": $CameraKeyframeAnimation$AnimType
-static readonly "STOP": $CameraKeyframeAnimation$AnimType
-static readonly "STOP_BACK_TO_ZERO": $CameraKeyframeAnimation$AnimType
-
-public static "valueOf"(string0: string): $CameraKeyframeAnimation$AnimType
-public static "values"(): $CameraKeyframeAnimation$AnimType[]
 }
 }
 
@@ -1720,8 +1720,8 @@ public "getBaseValue"(): double
 public "getKeyframeAnimation"(string0: string): $CameraKeyframeAnimation
 public "getKeyframeAnimations"(): $Collection<$CameraKeyframeAnimation>
 public "getModifier"(uUID0: $UUID$$Type): $CameraModifier
-public "getModifiers"(): $Set<$CameraModifier>
 public "getModifiers"(operation0: $CameraModifier$Operation$$Type): $Set<$CameraModifier>
+public "getModifiers"(): $Set<$CameraModifier>
 public "getValue"(): double
 public "hasModifier"(cameraModifier0: $CameraModifier$$Type): boolean
 public "isAnimDirty"(): boolean
@@ -1744,11 +1744,11 @@ public "removePermanentModifierWithoutDirty"(uUID0: $UUID$$Type): boolean
 public "removeStaticKeyframeAnimations"(): void
 public "replaceFrom"(cameraValueInstance0: $CameraValueInstance$$Type): void
 public "save"(): $CompoundTag
-public "setAnimDirty"(boolean0: boolean): void
 public "setAnimDirty"(): void
+public "setAnimDirty"(boolean0: boolean): void
 public "setBaseValue"(double0: double): void
-public "setDirty"(boolean0: boolean): void
 public "setDirty"(): void
+public "setDirty"(boolean0: boolean): void
 public "tickAnimations"(): void
 get "baseValue"(): double
 get "keyframeAnimations"(): $Collection<$CameraKeyframeAnimation>
@@ -2105,8 +2105,8 @@ public "getOriginZRot"(): double
 public "getOriginZoom"(): float
 public "getRaycastOffset"(float0: float): double
 public "getRaycastOffset0"(): $CameraValueInstance
-public "getX"(): $CameraValueInstance
 public "getX"(float0: float): double
+public "getX"(): $CameraValueInstance
 public "getXOffset"(float0: float): double
 public "getXOffset0"(): $CameraValueInstance
 public "getXRelative"(float0: float): double
@@ -2121,8 +2121,8 @@ public "getYRelative"(float0: float): double
 public "getYRelative0"(): $CameraValueInstance
 public "getYRot0"(): $CameraValueInstance
 public "getYRotation"(float0: float): double
-public "getZ"(float0: float): double
 public "getZ"(): $CameraValueInstance
+public "getZ"(float0: float): double
 public "getZOffset"(float0: float): double
 public "getZOffset0"(): $CameraValueInstance
 public "getZRelative"(float0: float): double

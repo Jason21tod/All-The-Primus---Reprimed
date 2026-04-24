@@ -243,10 +243,10 @@ public static "getInstance"(string0: string, provider1: $Provider$$Type): $Signa
 public "getParameter"(string0: string): any
 public "getParameters"(): $AlgorithmParameters
 public "getProvider"(): $Provider
-public "initSign"(privateKey0: $PrivateKey$$Type): void
 public "initSign"(privateKey0: $PrivateKey$$Type, secureRandom1: $SecureRandom$$Type): void
-public "initVerify"(publicKey0: $PublicKey$$Type): void
+public "initSign"(privateKey0: $PrivateKey$$Type): void
 public "initVerify"(certificate0: $Certificate$$Type): void
+public "initVerify"(publicKey0: $PublicKey$$Type): void
 public "setParameter"(algorithmParameterSpec0: $AlgorithmParameterSpec$$Type): void
 /** @deprecated */
 public "setParameter"(string0: string, object1: any): void

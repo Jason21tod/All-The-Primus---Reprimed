@@ -73,8 +73,8 @@ export interface $ISpell {
 "castDuration"(livingEntity0: $LivingEntity$$Type, itemStack1: $ItemStack$$Type): integer
 "castingPitch"(): float
 "castingVolume"(): float
-"conditionsMet"(serverLevel0: $ServerLevel$$Type, livingEntity1: $LivingEntity$$Type, spellStat2: $SpellStat$$Type): boolean
 "conditionsMet"(serverLevel0: $ServerLevel$$Type, livingEntity1: $LivingEntity$$Type): boolean
+"conditionsMet"(serverLevel0: $ServerLevel$$Type, livingEntity1: $LivingEntity$$Type, spellStat2: $SpellStat$$Type): boolean
 "defaultCastDuration"(): integer
 "defaultSoulCost"(): integer
 "defaultSpellCooldown"(): integer

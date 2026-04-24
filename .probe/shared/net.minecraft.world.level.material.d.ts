@@ -429,10 +429,10 @@ public "getAdjacentBlockPathType"(fluidState0: $FluidState$$Type, blockGetter1: 
 public "getBlockPathType"(fluidState0: $FluidState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, mob3: $Mob$$Type, boolean4: boolean): $BlockPathTypes
 public "getExplosionResistance"(fluidState0: $FluidState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, explosion3: $Explosion$$Type): float
 public "getFlow"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, fluidState2: $FluidState$$Type): $Vec3
-public "getFlowing"(int0: integer, boolean1: boolean): $FluidState
 public "getFlowing"(): $Fluid
-public "getSource"(boolean0: boolean): $FluidState
+public "getFlowing"(int0: integer, boolean1: boolean): $FluidState
 public "getSource"(): $Fluid
+public "getSource"(boolean0: boolean): $FluidState
 public "handler$hik000$ac_canHoldFluid"(blockGetter0: $BlockGetter$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, fluid3: $Fluid$$Type, callbackInfoReturnable4: $CallbackInfoReturnable$$Type): void
 public "handler$hik000$ac_spreadTo"(levelAccessor0: $LevelAccessor$$Type, blockPos1: $BlockPos$$Type, blockState2: $BlockState$$Type, direction3: $Direction$$Type, fluidState4: $FluidState$$Type, callbackInfo5: $CallbackInfo$$Type): void
 public "move"(fluidState0: $FluidState$$Type, livingEntity1: $LivingEntity$$Type, vec32: $Vec3$$Type, double3: double): boolean

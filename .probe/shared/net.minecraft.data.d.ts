@@ -128,8 +128,8 @@ export class $PackOutput {
 constructor(path0: $Path$$Type)
 
 public "createPathProvider"(target0: $PackOutput$Target$$Type, string1: string): $PackOutput$PathProvider
-public "getOutputFolder"(): $Path
 public "getOutputFolder"(target0: $PackOutput$Target$$Type): $Path
+public "getOutputFolder"(): $Path
 get "outputFolder"(): $Path
 }
 }
@@ -224,8 +224,8 @@ static readonly "NORMAL_LEAVES_SAPLING_CHANCES": float[]
 static readonly "NORMAL_LEAVES_STICK_CHANCES": float[]
 readonly "map": $Map<$ResourceLocation, $LootTable$Builder>
 
-public "add"(block0: $Block$$Type, builder1: $LootTable$Builder$$Type): void
 public "add"(block0: $Block$$Type, function1: $Function$$Type<$Block$$Type, $LootTable$Builder>): void
+public "add"(block0: $Block$$Type, builder1: $LootTable$Builder$$Type): void
 public "addNetherVinesDropTable"(block0: $Block$$Type, block1: $Block$$Type): void
 public "applyExplosionCondition"<T extends $ConditionUserBuilder<T>>(itemLike0: $ItemLike$$Type, conditionUserBuilder1: $ConditionUserBuilder$$Type<T>): T
 public "applyExplosionDecay"<T extends $FunctionUserBuilder<T>>(itemLike0: $ItemLike$$Type, functionUserBuilder1: $FunctionUserBuilder$$Type<T>): T
@@ -260,10 +260,10 @@ public "createShulkerBoxDrop"(block0: $Block$$Type): $LootTable$Builder
 public static "createSilkTouchDispatchTable"(block0: $Block$$Type, builder1: $LootPoolEntryContainer$Builder$$Type<any>): $LootTable$Builder
 public static "createSilkTouchOnlyTable"(itemLike0: $ItemLike$$Type): $LootTable$Builder
 public static "createSilkTouchOrShearsDispatchTable"(block0: $Block$$Type, builder1: $LootPoolEntryContainer$Builder$$Type<any>): $LootTable$Builder
-public "createSingleItemTable"(itemLike0: $ItemLike$$Type): $LootTable$Builder
 public "createSingleItemTable"(itemLike0: $ItemLike$$Type, numberProvider1: $NumberProvider$$Type): $LootTable$Builder
-public "createSingleItemTableWithSilkTouch"(block0: $Block$$Type, itemLike1: $ItemLike$$Type): $LootTable$Builder
+public "createSingleItemTable"(itemLike0: $ItemLike$$Type): $LootTable$Builder
 public "createSingleItemTableWithSilkTouch"(block0: $Block$$Type, itemLike1: $ItemLike$$Type, numberProvider2: $NumberProvider$$Type): $LootTable$Builder
+public "createSingleItemTableWithSilkTouch"(block0: $Block$$Type, itemLike1: $ItemLike$$Type): $LootTable$Builder
 public "createSinglePropConditionTable"<T extends ($Comparable<T> & $StringRepresentable)>(block0: $Block$$Type, property1: $Property$$Type<T>, t2: T): $LootTable$Builder
 public "createSlabItemTable"(block0: $Block$$Type): $LootTable$Builder
 public "createStemDrops"(block0: $Block$$Type, item1: $Item$$Type): $LootTable$Builder

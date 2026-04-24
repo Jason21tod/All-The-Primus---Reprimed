@@ -48,8 +48,8 @@ public "hasItem"<T>(entityDataAccessor0: $EntityDataAccessor$$Type<T>): boolean
 public "isDirty"(): boolean
 public "isEmpty"(): boolean
 public "packDirty"(): $List<$SynchedEntityData$DataValue<any>>
-public "set"<T>(entityDataAccessor0: $EntityDataAccessor$$Type<T>, t1: T): void
 public "set"<T>(entityDataAccessor0: $EntityDataAccessor$$Type<T>, t1: T, boolean2: boolean): void
+public "set"<T>(entityDataAccessor0: $EntityDataAccessor$$Type<T>, t1: T): void
 get "nonDefaultValues"(): $List<$SynchedEntityData$DataValue<any>>
 get "dirty"(): boolean
 get "empty"(): boolean

@@ -253,9 +253,9 @@ function registry(extra: "decorated_pot_patterns", handler: ((event: DecoratedPo
 function registry(extra: "worldgen/multi_noise_biome_source_parameter_list", handler: ((event: WorldgenMultiNoiseBiomeSourceParameterList) => void)): void
 function registry(extra: "irons_spellbooks:spells", handler: ((event: Spells) => void)): void
 function registry(extra: "irons_spellbooks:schools", handler: ((event: Schools) => void)): void
+function registry(extra: "corgilib:villager_trades_item_listing", handler: ((event: VillagerTradesItemListing) => void)): void
 function registry(extra: "corgilib:condition", handler: ((event: Condition) => void)): void
 function registry(extra: "corgilib:blending_function", handler: ((event: BlendingFunction) => void)): void
-function registry(extra: "corgilib:villager_trades_item_listing", handler: ((event: VillagerTradesItemListing) => void)): void
 function registry(extra: "apoli:bientity_action", handler: ((event: BientityAction) => void)): void
 function registry(extra: "apoli:bientity_condition", handler: ((event: BientityCondition) => void)): void
 function registry(extra: "apoli:biome_condition", handler: ((event: BiomeCondition) => void)): void
@@ -320,14 +320,14 @@ function registry(extra: "origins:origins", handler: ((event: Origins) => void))
 function registry(extra: "slashblade:combo_state", handler: ((event: ComboState) => void)): void
 function registry(extra: "slashblade:slash_arts", handler: ((event: SlashArts) => void)): void
 function registry(extra: "slashblade:special_effect", handler: ((event: SpecialEffect) => void)): void
-function registry(extra: "moonlight:soft_fluids", handler: ((event: SoftFluids) => void)): void
-function registry(extra: "forge:structure_modifier", handler: ((event: StructureModifier) => void)): void
-function registry(extra: "slashblade:entity_drop", handler: ((event: EntityDrop) => void)): void
-function registry(extra: "slashblade:named_blades", handler: ((event: NamedBlades) => void)): void
-function registry(extra: "irons_spellbooks:upgrade_orb_type", handler: ((event: UpgradeOrbType) => void)): void
 function registry(extra: "moonlight:map_markers", handler: ((event: MapMarkers) => void)): void
-function registry(extra: "lionfishapi:modded_biome_slices", handler: ((event: ModdedBiomeSlices) => void)): void
 function registry(extra: "lithostitched:worldgen_modifier", handler: ((event: WorldgenModifier) => void)): void
+function registry(extra: "slashblade:named_blades", handler: ((event: NamedBlades) => void)): void
+function registry(extra: "forge:structure_modifier", handler: ((event: StructureModifier) => void)): void
+function registry(extra: "lionfishapi:modded_biome_slices", handler: ((event: ModdedBiomeSlices) => void)): void
+function registry(extra: "irons_spellbooks:upgrade_orb_type", handler: ((event: UpgradeOrbType) => void)): void
+function registry(extra: "moonlight:soft_fluids", handler: ((event: SoftFluids) => void)): void
 function registry(extra: "forge:biome_modifier", handler: ((event: BiomeModifier) => void)): void
+function registry(extra: "slashblade:entity_drop", handler: ((event: EntityDrop) => void)): void
 }
 }

@@ -14,8 +14,8 @@ readonly "y": float
 
 constructor(float0: float, float1: float)
 
-public "add"(vec20: $Vec2$$Type): $Vec2
 public "add"(float0: float): $Vec2
+public "add"(vec20: $Vec2$$Type): $Vec2
 public "distanceToSqr"(vec20: $Vec2$$Type): float
 public "dot"(vec20: $Vec2$$Type): float
 public "equals"(vec20: $Vec2$$Type): boolean
@@ -45,8 +45,8 @@ readonly "x": double
 readonly "y": double
 readonly "z": double
 
-constructor(double0: double, double1: double, double2: double)
 constructor(vector3f0: $Vector3f$$Type)
+constructor(double0: double, double1: double, double2: double)
 
 public "add"(double0: double, double1: double, double2: double): $Vec3
 public "add"(vec30: $Vec3$$Type): $Vec3
@@ -57,8 +57,8 @@ public static "atLowerCornerOf"(vec3i0: $Vec3i$$Type): $Vec3
 public static "atLowerCornerWithOffset"(vec3i0: $Vec3i$$Type, double1: double, double2: double, double3: double): $Vec3
 public "closerThan"(position0: $Position$$Type, double1: double): boolean
 public "cross"(vec30: $Vec3$$Type): $Vec3
-public static "directionFromRotation"(float0: float, float1: float): $Vec3
 public static "directionFromRotation"(vec20: $Vec2$$Type): $Vec3
+public static "directionFromRotation"(float0: float, float1: float): $Vec3
 public "distanceTo"(vec30: $Vec3$$Type): double
 public "distanceToSqr"(vec30: $Vec3$$Type): double
 public "distanceToSqr"(double0: double, double1: double, double2: double): double
@@ -190,10 +190,10 @@ public "forAllBoxes"(doubleLineConsumer0: $Shapes$DoubleLineConsumer$$Type): voi
 public "forAllEdges"(doubleLineConsumer0: $Shapes$DoubleLineConsumer$$Type): void
 public "getFaceShape"(direction0: $Direction$$Type): $VoxelShape
 public "isEmpty"(): boolean
-public "max"(axis0: $Direction$Axis$$Type): double
 public "max"(axis0: $Direction$Axis$$Type, double1: double, double2: double): double
-public "min"(axis0: $Direction$Axis$$Type): double
+public "max"(axis0: $Direction$Axis$$Type): double
 public "min"(axis0: $Direction$Axis$$Type, double1: double, double2: double): double
+public "min"(axis0: $Direction$Axis$$Type): double
 public "move"(double0: double, double1: double, double2: double): $VoxelShape
 public "optimize"(): $VoxelShape
 public "toAabbs"(): $List<$AABB>
@@ -251,8 +251,8 @@ constructor(double0: double, double1: double, double2: double, double3: double, 
 
 public "clip"(vec30: $Vec3$$Type, vec31: $Vec3$$Type): $Optional<$Vec3>
 public static "clip"(iterable0: $Iterable$$Type<$AABB$$Type>, vec31: $Vec3$$Type, vec32: $Vec3$$Type, blockPos3: $BlockPos$$Type): $BlockHitResult
-public "contains"(vec30: $Vec3$$Type): boolean
 public "contains"(double0: double, double1: double, double2: double): boolean
+public "contains"(vec30: $Vec3$$Type): boolean
 public "contract"(double0: double, double1: double, double2: double): $AABB
 public "deflate"(double0: double): $AABB
 public "deflate"(double0: double, double1: double, double2: double): $AABB
@@ -268,15 +268,15 @@ public "hasNaN"(): boolean
 public "inflate"(double0: double, double1: double, double2: double): $AABB
 public "inflate"(double0: double): $AABB
 public "intersect"(aABB0: $AABB$$Type): $AABB
-public "intersects"(double0: double, double1: double, double2: double, double3: double, double4: double, double5: double): boolean
 public "intersects"(vec30: $Vec3$$Type, vec31: $Vec3$$Type): boolean
 public "intersects"(aABB0: $AABB$$Type): boolean
+public "intersects"(double0: double, double1: double, double2: double, double3: double, double4: double, double5: double): boolean
 public "max"(axis0: $Direction$Axis$$Type): double
 public "min"(axis0: $Direction$Axis$$Type): double
 public "minmax"(aABB0: $AABB$$Type): $AABB
-public "move"(double0: double, double1: double, double2: double): $AABB
-public "move"(blockPos0: $BlockPos$$Type): $AABB
 public "move"(vec30: $Vec3$$Type): $AABB
+public "move"(blockPos0: $BlockPos$$Type): $AABB
+public "move"(double0: double, double1: double, double2: double): $AABB
 public static "of"(boundingBox0: $BoundingBox$$Type): $AABB
 public static "ofSize"(vec30: $Vec3$$Type, double1: double, double2: double, double3: double): $AABB
 public "setMaxX"(double0: double): $AABB
@@ -338,12 +338,12 @@ public "getXSize"(): integer
 public "getYSize"(): integer
 public "getZSize"(): integer
 public "isEmpty"(): boolean
-public "isFull"(int0: integer, int1: integer, int2: integer): boolean
 public "isFull"(axisCycle0: $AxisCycle$$Type, int1: integer, int2: integer, int3: integer): boolean
+public "isFull"(int0: integer, int1: integer, int2: integer): boolean
 public "isFullWide"(int0: integer, int1: integer, int2: integer): boolean
 public "isFullWide"(axisCycle0: $AxisCycle$$Type, int1: integer, int2: integer, int3: integer): boolean
-public "lastFull"(axis0: $Direction$Axis$$Type, int1: integer, int2: integer): integer
 public "lastFull"(axis0: $Direction$Axis$$Type): integer
+public "lastFull"(axis0: $Direction$Axis$$Type, int1: integer, int2: integer): integer
 get "xSize"(): integer
 get "ySize"(): integer
 get "zSize"(): integer

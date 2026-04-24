@@ -183,8 +183,8 @@ constructor()
 public "addConstant"(s: string, u: $Unit$$Type): void
 public "addFunction"(factory: $FunctionFactory$$Type): void
 public "createStream"(input: string): $UnitTokenStream
-public "debugInfo"(s: string): void
 public "debugInfo"(s: string, values: $Collection$$Type<any>): void
+public "debugInfo"(s: string): void
 public "getFunctionFactory"(name: string): $FunctionFactory
 public "isDebug"(): boolean
 public "parse"(input: string): $Unit
@@ -244,8 +244,8 @@ public "min"(other: $Unit$$Type): $Unit
 public "mod"(value: double): $Unit
 public "mod"(other: $Unit$$Type): $Unit
 public "modSet"(unit: $Unit$$Type): $Unit
-public "mul"(other: $Unit$$Type): $Unit
 public "mul"(value: double): $Unit
+public "mul"(other: $Unit$$Type): $Unit
 public "mulSet"(unit: $Unit$$Type): $Unit
 public "negate"(): $Unit
 public "neq"(other: $Unit$$Type): $Unit

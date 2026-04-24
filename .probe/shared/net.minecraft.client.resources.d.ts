@@ -225,7 +225,6 @@ import { $FileToIdConverter } from "net.minecraft.resources.FileToIdConverter"
 import { $ResourceLocation } from "net.minecraft.resources.ResourceLocation"
 import { $Weighted } from "net.minecraft.client.sounds.Weighted"
 import { $Sound$Type, $Sound$Type$$Type } from "net.minecraft.client.resources.sounds.Sound$Type"
-import { $RandomSource$$Type } from "net.minecraft.util.RandomSource"
 import { $SoundEngine$$Type } from "net.minecraft.client.sounds.SoundEngine"
 import { $SampledFloat, $SampledFloat$$Type } from "net.minecraft.util.valueproviders.SampledFloat"
 import { $CallbackInfoReturnable$$Type } from "org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable"
@@ -239,7 +238,6 @@ public "getAttenuationDistance"(): integer
 public "getLocation"(): $ResourceLocation
 public "getPath"(): $ResourceLocation
 public "getPitch"(): $SampledFloat
-public "getSound"(randomSource0: $RandomSource$$Type): $Sound
 public "getType"(): $Sound$Type
 public "getVolume"(): $SampledFloat
 public "getWeight"(): integer
@@ -379,8 +377,8 @@ static readonly "COMPARATOR": $Comparator<$Material>
 constructor(resourceLocation0: $ResourceLocation$$Type, resourceLocation1: $ResourceLocation$$Type)
 
 public "atlasLocation"(): $ResourceLocation
-public "buffer"(multiBufferSource0: $MultiBufferSource$$Type, function1: $Function$$Type<$ResourceLocation$$Type, $RenderType>, boolean2: boolean): $VertexConsumer
 public "buffer"(multiBufferSource0: $MultiBufferSource$$Type, function1: $Function$$Type<$ResourceLocation$$Type, $RenderType>): $VertexConsumer
+public "buffer"(multiBufferSource0: $MultiBufferSource$$Type, function1: $Function$$Type<$ResourceLocation$$Type, $RenderType>, boolean2: boolean): $VertexConsumer
 public "renderType"(function0: $Function$$Type<$ResourceLocation$$Type, $RenderType>): $RenderType
 public "sprite"(): $TextureAtlasSprite
 public "texture"(): $ResourceLocation
@@ -482,16 +480,16 @@ export interface $BakedModel extends $IForgeBakedModel, $FabricBakedModel, $Bake
 "getQuads"(blockState0: $BlockState$$Type, direction1: $Direction$$Type, randomSource2: $RandomSource$$Type): $List<$BakedQuad>
 "getQuads"(blockState0: $BlockState$$Type, direction1: $Direction$$Type, randomSource2: $RandomSource$$Type, modelData3: $ModelData$$Type, renderType4: $RenderType$$Type): $List<$BakedQuad>
 "getRenderPasses"(itemStack0: $ItemStack$$Type, boolean1: boolean): $List<$BakedModel>
-"getRenderTypes"(blockState0: $BlockState$$Type, randomSource1: $RandomSource$$Type, modelData2: $ModelData$$Type): $ChunkRenderTypeSet
 "getRenderTypes"(itemStack0: $ItemStack$$Type, boolean1: boolean): $List<$RenderType>
+"getRenderTypes"(blockState0: $BlockState$$Type, randomSource1: $RandomSource$$Type, modelData2: $ModelData$$Type): $ChunkRenderTypeSet
 /** @deprecated */
 "getTransforms"(): $ItemTransforms
 "isCustomRenderer"(): boolean
 "isGui3d"(): boolean
 "isVanillaAdapter"(): boolean
 "useAmbientOcclusion"(): boolean
-"useAmbientOcclusion"(blockState0: $BlockState$$Type, renderType1: $RenderType$$Type): boolean
 "useAmbientOcclusion"(blockState0: $BlockState$$Type): boolean
+"useAmbientOcclusion"(blockState0: $BlockState$$Type, renderType1: $RenderType$$Type): boolean
 "useAmbientOcclusionWithLightEmission"(blockState0: $BlockState$$Type, renderType1: $RenderType$$Type): boolean
 "usesBlockLight"(): boolean
 get "overrides"(): $ItemOverrides

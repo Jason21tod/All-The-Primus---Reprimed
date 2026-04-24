@@ -161,9 +161,9 @@ export class $GameEvent$Context extends $Record {
 constructor(entity0: $Entity$$Type, blockState1: $BlockState$$Type)
 
 public "affectedState"(): $BlockState
+public static "of"(entity0: $Entity$$Type, blockState1: $BlockState$$Type): $GameEvent$Context
 public static "of"(blockState0: $BlockState$$Type): $GameEvent$Context
 public static "of"(entity0: $Entity$$Type): $GameEvent$Context
-public static "of"(entity0: $Entity$$Type, blockState1: $BlockState$$Type): $GameEvent$Context
 public "sourceEntity"(): $Entity
 }
 }
@@ -314,6 +314,7 @@ constructor()
 
 public "codec"(): $Codec<$EntityPositionSource>
 public static "fromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $PositionSource
+public "read"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $EntityPositionSource
 public static "register"<S extends $PositionSourceType<T>, T extends $PositionSource>(string0: string, s1: S): S
 public static "toNetwork"<T extends $PositionSource>(t0: T, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "write"(friendlyByteBuf0: $FriendlyByteBuf$$Type, entityPositionSource1: $EntityPositionSource$$Type): void
@@ -347,6 +348,7 @@ constructor()
 
 public "codec"(): $Codec<$BlockPositionSource>
 public static "fromNetwork"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $PositionSource
+public "read"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $BlockPositionSource
 public static "register"<S extends $PositionSourceType<T>, T extends $PositionSource>(string0: string, s1: S): S
 public static "toNetwork"<T extends $PositionSource>(t0: T, friendlyByteBuf1: $FriendlyByteBuf$$Type): void
 public "write"(friendlyByteBuf0: $FriendlyByteBuf$$Type, blockPositionSource1: $BlockPositionSource$$Type): void

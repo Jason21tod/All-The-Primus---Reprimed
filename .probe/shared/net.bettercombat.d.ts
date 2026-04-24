@@ -28,8 +28,8 @@ constructor(center: $Vec3$$Type, width: double, height: double, depth: double, y
 public static "Intersects"(a: $OrientedBoundingBox$$Type, b: $OrientedBoundingBox$$Type): boolean
 public "contains"(point: $Vec3$$Type): boolean
 public "copy"(): $OrientedBoundingBox
-public "intersects"(boundingBox: $AABB$$Type): boolean
 public "intersects"(otherOBB: $OrientedBoundingBox$$Type): boolean
+public "intersects"(boundingBox: $AABB$$Type): boolean
 public "offset"(offset: $Vec3$$Type): $OrientedBoundingBox
 public "offsetAlongAxisX"(offset: double): $OrientedBoundingBox
 public "offsetAlongAxisY"(offset: double): $OrientedBoundingBox

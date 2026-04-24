@@ -236,8 +236,8 @@ import { $Event } from "net.minecraftforge.eventbus.api.Event"
 import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 
 export class $PlayLevelSoundEvent extends $Event implements $EventItf {
-constructor(level0: $Level$$Type, holder1: $Holder$$Type<$SoundEvent$$Type>, soundSource2: $SoundSource$$Type, float3: float, float4: float)
 constructor()
+constructor(level0: $Level$$Type, holder1: $Holder$$Type<$SoundEvent$$Type>, soundSource2: $SoundSource$$Type, float3: float, float4: float)
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -351,9 +351,9 @@ constructor(creativeModeTab0: $CreativeModeTab$$Type, resourceKey1: $ResourceKey
 public "accept"(supplier0: $Supplier$$Type<$ItemLike>, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 public "accept"(supplier0: $Supplier$$Type<$ItemLike>): void
 public "accept"(itemStack0: $ItemStack$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
-public "accept"(itemLike0: $ItemLike$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 public "accept"(itemStack0: $ItemStack$$Type): void
 public "accept"(itemLike0: $ItemLike$$Type): void
+public "accept"(itemLike0: $ItemLike$$Type, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 public "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>, tabVisibility1: $CreativeModeTab$TabVisibility$$Type): void
 public "acceptAll"(collection0: $Collection$$Type<$ItemStack$$Type>): void
 public "el_isEventUnCancelable"(): boolean
@@ -442,8 +442,8 @@ import { $RegistryAccess, $RegistryAccess$$Type } from "net.minecraft.core.Regis
 import { $ICondition$IContext } from "net.minecraftforge.common.crafting.conditions.ICondition$IContext"
 
 export class $AddReloadListenerEvent extends $Event implements $EventItf {
-constructor()
 constructor(reloadableServerResources0: $ReloadableServerResources$$Type, registryAccess1: $RegistryAccess$$Type)
+constructor()
 
 public "addListener"(preparableReloadListener0: $PreparableReloadListener$$Type): void
 public "el_isEventUnCancelable"(): boolean
@@ -508,8 +508,8 @@ import { $ParseResults, $ParseResults$$Type } from "com.mojang.brigadier.ParseRe
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $CommandEvent extends $Event implements $EventItf {
-constructor()
 constructor(parseResults0: $ParseResults$$Type<$CommandSourceStack$$Type>)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -579,8 +579,8 @@ import { $Level, $Level$$Type } from "net.minecraft.world.level.Level"
 import { $GameEvent$Context, $GameEvent$Context$$Type } from "net.minecraft.world.level.gameevent.GameEvent$Context"
 
 export class $VanillaGameEvent extends $Event implements $EventItf {
-constructor()
 constructor(level0: $Level$$Type, gameEvent1: $GameEvent$$Type, vec32: $Vec3$$Type, context3: $GameEvent$Context$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -609,8 +609,8 @@ import { $Player, $Player$$Type } from "net.minecraft.world.entity.player.Player
 import { $SlotAccess, $SlotAccess$$Type } from "net.minecraft.world.entity.SlotAccess"
 
 export class $ItemStackedOnOtherEvent extends $Event implements $EventItf {
-constructor()
 constructor(itemStack0: $ItemStack$$Type, itemStack1: $ItemStack$$Type, slot2: $Slot$$Type, clickAction3: $ClickAction$$Type, player4: $Player$$Type, slotAccess5: $SlotAccess$$Type)
+constructor()
 
 public "el_isEventUnCancelable"(): boolean
 public "el_setEventUnCancelable"(boolean0: boolean): void
@@ -676,8 +676,8 @@ import { $Multimap, $Multimap$$Type } from "com.google.common.collect.Multimap"
 import { $Attribute, $Attribute$$Type } from "net.minecraft.world.entity.ai.attributes.Attribute"
 
 export class $ItemAttributeModifierEvent extends $Event implements $EventItf {
-constructor(itemStack0: $ItemStack$$Type, equipmentSlot1: $EquipmentSlot$$Type, multimap2: $Multimap$$Type<$Attribute$$Type, $AttributeModifier$$Type>)
 constructor()
+constructor(itemStack0: $ItemStack$$Type, equipmentSlot1: $EquipmentSlot$$Type, multimap2: $Multimap$$Type<$Attribute$$Type, $AttributeModifier$$Type>)
 
 public "addModifier"(attribute0: $Attribute$$Type, attributeModifier1: $AttributeModifier$$Type): boolean
 public "clearModifiers"(): void

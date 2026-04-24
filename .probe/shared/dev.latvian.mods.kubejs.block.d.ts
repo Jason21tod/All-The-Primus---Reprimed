@@ -30,8 +30,8 @@ import { $WoodType$$Type } from "net.minecraft.world.level.block.state.propertie
 export class $FenceGateBlockBuilder extends $ShapedBlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
-public "behaviour"(wt: $WoodType$$Type): $FenceGateBlockBuilder
 public "behaviour"(wt: string): $FenceGateBlockBuilder
+public "behaviour"(wt: $WoodType$$Type): $FenceGateBlockBuilder
 }
 }
 
@@ -86,17 +86,17 @@ public "blockEntity"(callback: $Consumer$$Type<$BlockEntityInfo$$Type>): $BlockB
  */
 public "bounciness"(bounciness: float): $BlockBuilder
 /** Set the shape of the block. */
-public "box"(x0: double, y0: double, z0: double, x1: double, y1: double, z1: double): $BlockBuilder
-/** Set the shape of the block. */
 public "box"(x0: double, y0: double, z0: double, x1: double, y1: double, z1: double, scale16: boolean): $BlockBuilder
+/** Set the shape of the block. */
+public "box"(x0: double, y0: double, z0: double, x1: double, y1: double, z1: double): $BlockBuilder
 /** Set if the block can be replaced by something else. */
 public "canBeReplaced"(callbackJS: $Predicate$$Type<$CanBeReplacedCallbackJS$$Type>): $BlockBuilder
 /** Checks if the block can be waterlogged. */
 public "canBeWaterlogged"(): boolean
 /** Set the color of a specific layer of the block. */
-public "color"(index: integer, color: $BlockTintFunction$$Type): $BlockBuilder
-/** Set the color of a specific layer of the block. */
 public "color"(color: $BlockTintFunction$$Type): $BlockBuilder
+/** Set the color of a specific layer of the block. */
+public "color"(index: integer, color: $BlockTintFunction$$Type): $BlockBuilder
 public "createProperties"(): $BlockBehaviour$Properties
 public static "createShape"(boxes: $List$$Type<$AABB$$Type>): $VoxelShape
 public "cropSoundType"(): $BlockBuilder
@@ -358,7 +358,6 @@ export class $HorizontalDirectionalBlockBuilder extends $BlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
 public "createObject"(): $Block
-public "textureAll"(tex: string): $HorizontalDirectionalBlockBuilder
 }
 }
 
@@ -374,6 +373,11 @@ export class $EntityFallenOnBlockCallbackJS extends $EntitySteppedOnBlockCallbac
 constructor(level: $Level$$Type, entity: $Entity$$Type, pos: $BlockPos$$Type, state: $BlockState$$Type, fallHeight: float)
 
 /**
+ * Applies fall damage to the entity, multiplier by the multiplier.
+ * Note this does not force it, so entities that do not take fall damage are not affected.
+ */
+public "applyFallDamage"(multiplier: float): boolean
+/**
  * Applies fall damage to the entity as if they had fallen from the provided height, and multiplies it by the provided multiplier.
  * Note this does not force it, so entities that do not take fall damage are not affected.
  */
@@ -383,11 +387,6 @@ public "applyFallDamage"(fallHeight: float, multiplier: float): boolean
  * Note this does not force the damage, so entities that do not take fall damage are not affected.
  */
 public "applyFallDamage"(fallHeight: float, multiplier: float, damageSource: $DamageSource$$Type): boolean
-/**
- * Applies fall damage to the entity, multiplier by the multiplier.
- * Note this does not force it, so entities that do not take fall damage are not affected.
- */
-public "applyFallDamage"(multiplier: float): boolean
 /**
  * Applies default fall damage to the entity.
  * Note this does not force it, so entities that do not take fall damage are not affected.
@@ -501,12 +500,10 @@ get "item"(): $ItemStack
 declare module "dev.latvian.mods.kubejs.block.custom.CarpetBlockBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $ShapedBlockBuilder } from "dev.latvian.mods.kubejs.block.custom.ShapedBlockBuilder"
-import { $Block } from "net.minecraft.world.level.block.Block"
 
 export class $CarpetBlockBuilder extends $ShapedBlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
-public "createObject"(): $Block
 public "texture"(texture: string): $CarpetBlockBuilder
 }
 }
@@ -530,8 +527,8 @@ import { $BlockSetType$$Type } from "net.minecraft.world.level.block.state.prope
 export class $PressurePlateBlockBuilder extends $ShapedBlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
-public "behaviour"(wt: string): $PressurePlateBlockBuilder
 public "behaviour"(wt: $BlockSetType$$Type): $PressurePlateBlockBuilder
+public "behaviour"(wt: string): $PressurePlateBlockBuilder
 public "createObject"(): $Block
 }
 }
@@ -549,12 +546,10 @@ constructor(i: $ResourceLocation$$Type)
 declare module "dev.latvian.mods.kubejs.block.DetectorBlock$Builder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $BlockBuilder } from "dev.latvian.mods.kubejs.block.BlockBuilder"
-import { $Block } from "net.minecraft.world.level.block.Block"
 
 export class $DetectorBlock$Builder extends $BlockBuilder {
 constructor(i: $ResourceLocation$$Type)
 
-public "createObject"(): $Block
 public "detectorId"(id: string): $DetectorBlock$Builder
 }
 }
@@ -576,11 +571,11 @@ public "clientTick"(callback: $BlockEntityCallback$$Type): void
 public "enableSync"(): void
 public "eventHandler"(eventId: integer, callback: $BlockEntityEventCallback$$Type): void
 public "initialData"(data: $CompoundTag$$Type): void
-public "inventory"(width: integer, height: integer, inputFilter: $Ingredient$$Type): void
 public "inventory"(width: integer, height: integer): void
+public "inventory"(width: integer, height: integer, inputFilter: $Ingredient$$Type): void
 public "rightClickOpensInventory"(): void
-public "serverTick"(callback: $BlockEntityCallback$$Type): void
 public "serverTick"(frequency: integer, offset: integer, callback: $BlockEntityCallback$$Type): void
+public "serverTick"(callback: $BlockEntityCallback$$Type): void
 public "tick"(callback: $BlockEntityCallback$$Type): void
 public "tick"(frequency: integer, offset: integer, callback: $BlockEntityCallback$$Type): void
 }
@@ -603,9 +598,9 @@ public "bounce"(bounciness: float): void
 /** Returns the Vec3 of the entity's velocity. Use .x, .y and .z to get the respective components of that */
 public "getVelocity"(): $Vec3
 /** Sets the entity's velocity */
-public "setVelocity"(vec: $Vec3$$Type): void
-/** Sets the entity's velocity */
 public "setVelocity"(x: float, y: float, z: float): void
+/** Sets the entity's velocity */
+public "setVelocity"(vec: $Vec3$$Type): void
 get "velocity"(): $Vec3
 set "velocity"(value: $Vec3$$Type)
 }
@@ -724,11 +719,13 @@ static readonly "EMPTY_ARRAY": $BlockEntityAttachment[]
 declare module "dev.latvian.mods.kubejs.block.BlockItemBuilder" {
 import { $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $BlockBuilder, $BlockBuilder$$Type } from "dev.latvian.mods.kubejs.block.BlockBuilder"
+import { $Item } from "net.minecraft.world.item.Item"
 import { $ItemBuilder } from "dev.latvian.mods.kubejs.item.ItemBuilder"
 
 export class $BlockItemBuilder extends $ItemBuilder {
 constructor(i: $ResourceLocation$$Type)
 
+public "createObject"(): $Item
 get "blockBuilder"(): $BlockBuilder
 set "blockBuilder"(value: $BlockBuilder$$Type)
 }
@@ -925,7 +922,6 @@ import { $CropBlockBuilder$SurviveCallback$$Type } from "dev.latvian.mods.kubejs
 import { $BlockBuilder } from "dev.latvian.mods.kubejs.block.BlockBuilder"
 import { $ToDoubleFunction$$Type } from "java.util.function.ToDoubleFunction"
 import { $ToIntFunction$$Type } from "java.util.function.ToIntFunction"
-import { $Block } from "net.minecraft.world.level.block.Block"
 import { $CropBlockBuilder$ShapeBuilder$$Type } from "dev.latvian.mods.kubejs.block.custom.CropBlockBuilder$ShapeBuilder"
 import { $RandomTickCallbackJS$$Type } from "dev.latvian.mods.kubejs.block.RandomTickCallbackJS"
 
@@ -937,7 +933,6 @@ public "age"(age: integer): $CropBlockBuilder
 /** Set the age of the crop and the shape of the crop at that age. */
 public "age"(age: integer, builder: $Consumer$$Type<$CropBlockBuilder$ShapeBuilder$$Type>): $CropBlockBuilder
 public "bonemeal"(bonemealCallback: $ToIntFunction$$Type<$RandomTickCallbackJS$$Type>): $CropBlockBuilder
-public "createObject"(): $Block
 /** Add a crop output with a specific chance. */
 public "crop"(output: any, chance: double): $CropBlockBuilder
 /** Add a crop output with a 100% chance. */

@@ -31,21 +31,21 @@ static readonly "SHORT_TYPE": $Type
 static readonly "VOID": integer
 static readonly "VOID_TYPE": $Type
 
-public "getArgumentCount"(): integer
 public static "getArgumentCount"(string0: string): integer
-public static "getArgumentTypes"(method0: $Method$$Type): $Type[]
-public static "getArgumentTypes"(string0: string): $Type[]
+public "getArgumentCount"(): integer
 public "getArgumentTypes"(): $Type[]
-public "getArgumentsAndReturnSizes"(): integer
+public static "getArgumentTypes"(string0: string): $Type[]
+public static "getArgumentTypes"(method0: $Method$$Type): $Type[]
 public static "getArgumentsAndReturnSizes"(string0: string): integer
+public "getArgumentsAndReturnSizes"(): integer
 public "getClassName"(): string
 public static "getConstructorDescriptor"(constructor0: $Constructor$$Type<any>): string
 public static "getDescriptor"(class0: $Class$$Type<any>): string
 public "getDescriptor"(): string
 public "getDimensions"(): integer
 public "getElementType"(): $Type
-public "getInternalName"(): string
 public static "getInternalName"(class0: $Class$$Type<any>): string
+public "getInternalName"(): string
 public static "getMethodDescriptor"(type0: $Type$$Type, ...type1s: $Type$$Type[]): string
 public static "getMethodDescriptor"(method0: $Method$$Type): string
 public static "getMethodType"(string0: string): $Type

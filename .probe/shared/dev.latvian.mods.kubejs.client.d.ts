@@ -266,8 +266,8 @@ public "setShaderColor"(r: float, g: float, b: float, a: float): void
 public "setShaderInstance"(shader: $Supplier$$Type<$ShaderInstance>): void
 public "setShaderTexture"(tex: $ResourceLocation$$Type): void
 public "translate"(x: double, y: double, z: double): void
-public "vertex"(m: $Matrix4f$$Type, x: float, y: float, z: float, col: integer, u: float, v: float): void
 public "vertex"(m: $Matrix4f$$Type, x: float, y: float, z: float, col: integer): void
+public "vertex"(m: $Matrix4f$$Type, x: float, y: float, z: float, col: integer, u: float, v: float): void
 get "matrix"(): $Matrix4f
 set "shaderInstance"(value: $Supplier$$Type<$ShaderInstance>)
 set "shaderTexture"(value: $ResourceLocation$$Type)
@@ -313,8 +313,8 @@ public "alignX"(x: float, w: float, alignX: $AlignMode$$Type): float
 public "alignY"(y: float, h: float, alignY: $AlignMode$$Type): float
 public "getVariables"(): $VariableSet
 public "rawText"(text: $FormattedCharSequence$$Type, x: integer, y: integer, color: integer, shadow: boolean): void
-public "rectangle"(x: float, y: float, z: float, w: float, h: float, color: integer): void
 public "rectangle"(x: float, y: float, z: float, w: float, h: float, color: integer, u0: float, v0: float, u1: float, v1: float): void
+public "rectangle"(x: float, y: float, z: float, w: float, h: float, color: integer): void
 public "rotateDeg"(angle: float): void
 public "rotateRad"(angle: float): void
 public "scale"(x: float, y: float): void
@@ -384,8 +384,8 @@ import { $Direction$$Type } from "net.minecraft.core.Direction"
 export class $ModelGenerator$Face {
 constructor()
 
-public "cull"(d: $Direction$$Type): $ModelGenerator$Face
 public "cull"(): $ModelGenerator$Face
+public "cull"(d: $Direction$$Type): $ModelGenerator$Face
 public "tex"(t: string): $ModelGenerator$Face
 public "tintindex"(i: integer): $ModelGenerator$Face
 public "toJson"(): $JsonObject

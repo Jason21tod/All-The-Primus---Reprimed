@@ -63,8 +63,8 @@ static readonly "kSmooth_Interpolation": integer
 
 constructor(shaderCaps: $ShaderCaps$$Type)
 
-public "addVarying"(name: string, type: byte, interpolation: integer): void
 public "addVarying"(name: string, type: byte): void
+public "addVarying"(name: string, type: byte, interpolation: integer): void
 public "finish"(): void
 public "getFragDecls"(inputDecls: $StringBuilder$$Type): void
 public "getVertDecls"(outputDecls: $StringBuilder$$Type): void
@@ -1050,7 +1050,7 @@ import { $Device } from "icyllis.arc3d.sketch.Device"
 import { $Blender$$Type } from "icyllis.arc3d.sketch.Blender"
 import { $ImageViewProxy, $ImageViewProxy$$Type } from "icyllis.arc3d.engine.ImageViewProxy"
 import { $Draw$$Type } from "icyllis.arc3d.granite.Draw"
-import { $RecordingContext, $RecordingContext$$Type } from "icyllis.arc3d.granite.RecordingContext"
+import { $RecordingContext$$Type } from "icyllis.arc3d.granite.RecordingContext"
 import { $Matrixc$$Type } from "icyllis.arc3d.sketch.Matrixc"
 import { $Rect2f$$Type } from "icyllis.arc3d.core.Rect2f"
 import { $SubRunContainer$AtlasSubRun$$Type } from "icyllis.arc3d.granite.SubRunContainer$AtlasSubRun"
@@ -1068,14 +1068,12 @@ public "drawClipShape"(draw: $Draw$$Type): void
 public "drawGeometry"<GEO>(localToDevice: $Matrixc$$Type, geometry: GEO, boundsFn: $BiConsumer$$Type<GEO, $Rect2f$$Type>, inverseFill: boolean, paint: $Paint$$Type, renderer: $GeometryRenderer$$Type, primitiveBlender: $Blender$$Type): void
 public "flushPendingWork"(): void
 public "getClipStack"(): $ClipStack
-public "getCommandContext"(): $RecordingContext
 public "getReadView"(): $ImageViewProxy
-public static "make"(rc: $RecordingContext$$Type, deviceInfo: $ImageInfo$$Type, surfaceFlags: integer, origin: integer, initialLoadOp: byte, label: string, trackDevice: boolean): $GraniteDevice
 public static "make"(rc: $RecordingContext$$Type, targetView: $ImageViewProxy$$Type, deviceInfo: $ImageInfo$$Type, initialLoadOp: byte, trackDevice: boolean): $GraniteDevice
+public static "make"(rc: $RecordingContext$$Type, deviceInfo: $ImageInfo$$Type, surfaceFlags: integer, origin: integer, initialLoadOp: byte, label: string, trackDevice: boolean): $GraniteDevice
 public "makeImageCopy"(subset: $Rect2ic$$Type, budgeted: boolean, mipmapped: boolean, approxFit: boolean): $GraniteImage
 public "setImmutable"(): void
 get "clipStack"(): $ClipStack
-get "commandContext"(): $RecordingContext
 get "readView"(): $ImageViewProxy
 }
 }
@@ -1105,11 +1103,11 @@ public "write3f"(v0: float, v1: float, v2: float): void
 public "write4f"(v0: float, v1: float, v2: float, v3: float): void
 public "write4fv"(offset: integer, count: integer, value: float[]): void
 public "write4i"(v0: integer, v1: integer, v2: integer, v3: integer): void
-public "writeMatrix3f"(offset: integer, value: float[]): void
 public "writeMatrix3f"(matrix: $Matrixc$$Type): void
+public "writeMatrix3f"(offset: integer, value: float[]): void
 public "writeMatrix3f"(matrix: $Matrix3$$Type): void
-public "writeMatrix4f"(offset: integer, value: float[]): void
 public "writeMatrix4f"(matrix: $Matrix4c$$Type): void
+public "writeMatrix4f"(offset: integer, value: float[]): void
 public "writePaintColor"(r: float, g: float, b: float, a: float): void
 }
 }
@@ -1140,8 +1138,8 @@ public "getFinalBlendMode"(): $BlendMode
 public "getFinalBlender"(): $Blender
 public "getPrimitiveBlender"(): $Blender
 public "getShader"(): $Shader
-public "getSolidColor"(targetInfo: $ImageInfo$$Type, outColor: float[]): boolean
 public static "getSolidColor"(paint: $Paint$$Type, targetInfo: $ImageInfo$$Type, outColor: float[]): boolean
+public "getSolidColor"(targetInfo: $ImageInfo$$Type, outColor: float[]): boolean
 public "isSolidColor"(): boolean
 public static "prepareColorForDst"(color: float[], dstInfo: $ImageInfo$$Type, copyOnWrite: boolean): float[]
 public "r"(): float

@@ -183,8 +183,8 @@ constructor(level0: $Level$$Type, chunkPos1: $ChunkPos$$Type, upgradeData2: $Upg
 constructor(level0: $Level$$Type, chunkPos1: $ChunkPos$$Type)
 
 public "addAndRegisterBlockEntity"(blockEntity0: $BlockEntity$$Type): void
-public "areCapsCompatible"(capabilityDispatcher0: $CapabilityDispatcher$$Type): boolean
 public "areCapsCompatible"(capabilityProvider0: $CapabilityProvider$$Type<$LevelChunk$$Type>): boolean
+public "areCapsCompatible"(capabilityDispatcher0: $CapabilityDispatcher$$Type): boolean
 public "clearAllBlockEntities"(): void
 public static "clearNullReferences"(): void
 public "clip"(clipContext0: $ClipContext$$Type): $BlockHitResult
@@ -200,8 +200,8 @@ public "getAttachedOrSet"<A>(type: $AttachmentType$$Type<A>, defaultValue: A): A
 public "getAttachedOrThrow"<A>(type: $AttachmentType$$Type<A>): A
 public "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
 public "getBlockEntities"(): $Map<$BlockPos, $BlockEntity>
-public "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 public "getBlockEntity"(blockPos0: $BlockPos$$Type, entityCreationType1: $LevelChunk$EntityCreationType$$Type): $BlockEntity
+public "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 public "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
 public "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
 public "getBlockFloorHeight"(blockPos0: $BlockPos$$Type): double
@@ -252,8 +252,8 @@ public "runPostLoad"(): void
 public "scheduleRandomTick"(blockPos0: $BlockPos$$Type): void
 public "setFullStatus"(supplier0: $Supplier$$Type<$FullChunkStatus>): void
 public "setLoaded"(boolean0: boolean): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "traverseBlocks"<T, C>(vec30: $Vec3$$Type, vec31: $Vec3$$Type, c2: C, biFunction3: $BiFunction$$Type<C, $BlockPos$$Type, T>, function4: $Function$$Type<C, T>): T
 public "unpackTicks"(long0: long): void
@@ -353,8 +353,8 @@ import { $PalettedContainerRO, $PalettedContainerRO$$Type } from "net.minecraft.
 import { $PalettedContainer$CountConsumer$$Type } from "net.minecraft.world.level.chunk.PalettedContainer$CountConsumer"
 
 export class $PalettedContainer<T = any> implements $PaletteResize<T>, $PalettedContainerRO<T>, $ReadableContainerExtended {
-constructor(idMap0: $IdMap$$Type<T>, t1: T, strategy2: $PalettedContainer$Strategy$$Type)
 constructor(idMap0: $IdMap$$Type<T>, strategy1: $PalettedContainer$Strategy$$Type, configuration2: $PalettedContainer$Configuration$$Type<T>, bitStorage3: $BitStorage$$Type, list4: $List$$Type<T>)
+constructor(idMap0: $IdMap$$Type<T>, t1: T, strategy2: $PalettedContainer$Strategy$$Type)
 
 public "acquire"(): void
 public static "clone"<T>(palettedContainerRO0: $PalettedContainerRO$$Type<T>): $PalettedContainerRO<T>
@@ -534,8 +534,8 @@ public "setBelowZeroRetrogen"(belowZeroRetrogen0: $BelowZeroRetrogen$$Type): voi
 public "setCarvingMask"(carving0: $GenerationStep$Carving$$Type, carvingMask1: $CarvingMask$$Type): void
 public "setLightEngine"(levelLightEngine0: $LevelLightEngine$$Type): void
 public "setStatus"(chunkStatus0: $ChunkStatus$$Type): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "traverseBlocks"<T, C>(vec30: $Vec3$$Type, vec31: $Vec3$$Type, c2: C, biFunction3: $BiFunction$$Type<C, $BlockPos$$Type, T>, function4: $Function$$Type<C, T>): T
 public "unpackBlockTicks"(): $LevelChunkTicks<$Block>
@@ -788,8 +788,8 @@ public "getBelowZeroRetrogen"(): $BelowZeroRetrogen
 public "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
 public "getBlendingData"(): $BlendingData
 public "getBlockEntitiesPos"(): $Set<$BlockPos>
-public "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 public "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+public "getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 public "getBlockEntityNbt"(blockPos0: $BlockPos$$Type): $CompoundTag
 public "getBlockEntityNbtForSaving"(blockPos0: $BlockPos$$Type): $CompoundTag
 public "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
@@ -801,8 +801,8 @@ public "getBlockTicks"(): $TickContainerAccess<$Block>
 public "getExistingBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 public "getFluidState"(blockPos0: $BlockPos$$Type): $FluidState
 public "getFluidTicks"(): $TickContainerAccess<$Fluid>
-public "getHeight"(): integer
 public "getHeight"(types0: $Heightmap$Types$$Type, int1: integer, int2: integer): integer
+public "getHeight"(): integer
 public "getHeightAccessorForGeneration"(): $LevelHeightAccessor
 public "getHeightmaps"(): $Collection<$Map$Entry<$Heightmap$Types, $Heightmap>>
 public "getHighestFilledSectionIndex"(): integer
@@ -874,8 +874,8 @@ public "setStartForStructure"(structure0: $Structure$$Type, structureStart1: $St
 public "setUnsaved"(boolean0: boolean): void
 public "smoothchunk$getNextSaveTime"(): long
 public "smoothchunk$setSaveTimePoint"(long0: long): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "traverseBlocks"<T, C>(vec30: $Vec3$$Type, vec31: $Vec3$$Type, c2: C, biFunction3: $BiFunction$$Type<C, $BlockPos$$Type, T>, function4: $Function$$Type<C, T>): T
 public "wrap"(): $WeakReference<$Trackable>
@@ -1033,8 +1033,8 @@ public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $Trac
 public static "makeBasicContainer"<O, T extends $TrackedData<O>>(registry: $TrackedDataRegistry$$Type<O, T>, o: O, isClient: boolean, lazyLoad: boolean): $TrackedDataContainer<O, T>
 public "modifyAttached"<A>(type: $AttachmentType$$Type<A>, modifier: $UnaryOperator$$Type<A>): A
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public static "transfer"(original: $AttachmentTarget$$Type, target: $AttachmentTarget$$Type, isDeath: boolean): void
 public static "traverseBlocks"<T, C>(vec30: $Vec3$$Type, vec31: $Vec3$$Type, c2: C, biFunction3: $BiFunction$$Type<C, $BlockPos$$Type, T>, function4: $Function$$Type<C, T>): T
 public "wrap"(): $WeakReference<$Trackable>
@@ -1290,8 +1290,8 @@ constructor()
 
 public "close"(): void
 public "gatherStats"(): string
-public "getChunk"(int0: integer, int1: integer, boolean2: boolean): $LevelChunk
 public "getChunk"(int0: integer, int1: integer, chunkStatus2: $ChunkStatus$$Type, boolean3: boolean): $ChunkAccess
+public "getChunk"(int0: integer, int1: integer, boolean2: boolean): $LevelChunk
 public "getChunkForLighting"(int0: integer, int1: integer): $LightChunk
 public "getChunkNow"(int0: integer, int1: integer): $LevelChunk
 public "getLevel"(): $BlockGetter
@@ -1363,8 +1363,8 @@ export interface $LightChunk extends $BlockGetter {
 "clipWithInteractionOverride"(vec30: $Vec3$$Type, vec31: $Vec3$$Type, blockPos2: $BlockPos$$Type, voxelShape3: $VoxelShape$$Type, blockState4: $BlockState$$Type): $BlockHitResult
 "findBlockLightSources"(biConsumer0: $BiConsumer$$Type<$BlockPos$$Type, $BlockState$$Type>): void
 "getBiomeFabric"(pos: $BlockPos$$Type): $Holder<$Biome>
-"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntity"<T extends $BlockEntity>(blockPos0: $BlockPos$$Type, blockEntityType1: $BlockEntityType$$Type<T>): $Optional<T>
+"getBlockEntity"(blockPos0: $BlockPos$$Type): $BlockEntity
 "getBlockEntityRenderData"(pos: $BlockPos$$Type): any
 "getBlockFloorHeight"(blockPos0: $BlockPos$$Type): double
 "getBlockFloorHeight"(voxelShape0: $VoxelShape$$Type, supplier1: $Supplier$$Type<$VoxelShape>): double

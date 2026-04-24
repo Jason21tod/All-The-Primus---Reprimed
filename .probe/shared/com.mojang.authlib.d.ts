@@ -35,10 +35,10 @@ import { $JsonObject$$Type } from "com.google.gson.JsonObject"
 
 export interface $TelemetryPropertyContainer {
 "addNullProperty"(string0: string): void
+"addProperty"(string0: string, string1: string): void
 "addProperty"(string0: string, boolean1: boolean): void
 "addProperty"(string0: string, long1: long): void
 "addProperty"(string0: string, int1: integer): void
-"addProperty"(string0: string, string1: string): void
 }
 
 export namespace $TelemetryPropertyContainer {
@@ -652,10 +652,10 @@ import { $TelemetryPropertyContainer } from "com.mojang.authlib.minecraft.Teleme
 
 export interface $TelemetryEvent extends $TelemetryPropertyContainer {
 "addNullProperty"(string0: string): void
+"addProperty"(string0: string, string1: string): void
 "addProperty"(string0: string, boolean1: boolean): void
 "addProperty"(string0: string, long1: long): void
 "addProperty"(string0: string, int1: integer): void
-"addProperty"(string0: string, string1: string): void
 "send"(): void
 }
 

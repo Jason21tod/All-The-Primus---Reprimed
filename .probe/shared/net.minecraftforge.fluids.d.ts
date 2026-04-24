@@ -65,10 +65,10 @@ public "canBePlacedInLevel"(blockAndTintGetter0: $BlockAndTintGetter$$Type, bloc
 public "canConvertToSource"(fluidState0: $FluidState$$Type, levelReader1: $LevelReader$$Type, blockPos2: $BlockPos$$Type): boolean
 public "canConvertToSource"(fluidStack0: $FluidStack$$Type): boolean
 public "canDrownIn"(livingEntity0: $LivingEntity$$Type): boolean
-public "canExtinguish"(entity0: $Entity$$Type): boolean
 public "canExtinguish"(fluidState0: $FluidState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type): boolean
-public "canHydrate"(fluidStack0: $FluidStack$$Type): boolean
+public "canExtinguish"(entity0: $Entity$$Type): boolean
 public "canHydrate"(fluidState0: $FluidState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, blockState3: $BlockState$$Type, blockPos4: $BlockPos$$Type): boolean
+public "canHydrate"(fluidStack0: $FluidStack$$Type): boolean
 public "canHydrate"(entity0: $Entity$$Type): boolean
 public "canPushEntity"(entity0: $Entity$$Type): boolean
 public "canRideVehicleUnder"(entity0: $Entity$$Type, entity1: $Entity$$Type): boolean
@@ -78,30 +78,30 @@ public "getBlockForFluidState"(blockAndTintGetter0: $BlockAndTintGetter$$Type, b
 public "getBlockPathType"(fluidState0: $FluidState$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, mob3: $Mob$$Type, boolean4: boolean): $BlockPathTypes
 public "getBucket"(fluidStack0: $FluidStack$$Type): $ItemStack
 public "getDensity"(fluidStack0: $FluidStack$$Type): integer
-public "getDensity"(): integer
 public "getDensity"(fluidState0: $FluidState$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
-public "getDescription"(fluidStack0: $FluidStack$$Type): $Component
+public "getDensity"(): integer
 public "getDescription"(): $Component
-public "getDescriptionId"(): string
+public "getDescription"(fluidStack0: $FluidStack$$Type): $Component
 public "getDescriptionId"(fluidStack0: $FluidStack$$Type): string
+public "getDescriptionId"(): string
 public "getFallDistanceModifier"(entity0: $Entity$$Type): float
-public "getLightLevel"(fluidStack0: $FluidStack$$Type): integer
-public "getLightLevel"(): integer
 public "getLightLevel"(fluidState0: $FluidState$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
-public "getRarity"(fluidStack0: $FluidStack$$Type): $Rarity
+public "getLightLevel"(): integer
+public "getLightLevel"(fluidStack0: $FluidStack$$Type): integer
 public "getRarity"(): $Rarity
+public "getRarity"(fluidStack0: $FluidStack$$Type): $Rarity
 public "getRenderPropertiesInternal"(): any
-public "getSound"(player0: $Player$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, soundAction3: $SoundAction$$Type): $SoundEvent
 public "getSound"(soundAction0: $SoundAction$$Type): $SoundEvent
+public "getSound"(player0: $Player$$Type, blockGetter1: $BlockGetter$$Type, blockPos2: $BlockPos$$Type, soundAction3: $SoundAction$$Type): $SoundEvent
 public "getSound"(fluidStack0: $FluidStack$$Type, soundAction1: $SoundAction$$Type): $SoundEvent
 public "getSound"(entity0: $Entity$$Type, soundAction1: $SoundAction$$Type): $SoundEvent
 public "getStateForPlacement"(blockAndTintGetter0: $BlockAndTintGetter$$Type, blockPos1: $BlockPos$$Type, fluidStack2: $FluidStack$$Type): $FluidState
-public "getTemperature"(fluidStack0: $FluidStack$$Type): integer
 public "getTemperature"(): integer
 public "getTemperature"(fluidState0: $FluidState$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
+public "getTemperature"(fluidStack0: $FluidStack$$Type): integer
 public "getViscosity"(fluidStack0: $FluidStack$$Type): integer
-public "getViscosity"(fluidState0: $FluidState$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
 public "getViscosity"(): integer
+public "getViscosity"(fluidState0: $FluidState$$Type, blockAndTintGetter1: $BlockAndTintGetter$$Type, blockPos2: $BlockPos$$Type): integer
 public "initializeClient"(consumer0: $Consumer$$Type<$IClientFluidTypeExtensions$$Type>): void
 public "isAir"(): boolean
 public "isLighterThanAir"(): boolean
@@ -160,8 +160,8 @@ public "getTranslationKey"(): string
 public "grow"(int0: integer): void
 public "hasTag"(): boolean
 public "isEmpty"(): boolean
-public "isFluidEqual"(fluidStack0: $FluidStack$$Type): boolean
 public "isFluidEqual"(itemStack0: $ItemStack$$Type): boolean
+public "isFluidEqual"(fluidStack0: $FluidStack$$Type): boolean
 public "isFluidStackIdentical"(fluidStack0: $FluidStack$$Type): boolean
 public static "loadFluidStackFromNBT"(compoundTag0: $CompoundTag$$Type): $FluidStack
 public static "readFromPacket"(friendlyByteBuf0: $FriendlyByteBuf$$Type): $FluidStack

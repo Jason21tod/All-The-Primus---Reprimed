@@ -367,8 +367,8 @@ public "modelTextureOverride"(resourceLocation0: $ResourceLocation$$Type): $Bloc
 public "modelTextureSuffix"(string0: string): $BlockDefinition
 public "modelType"(blockModelType0: $BlockModelType$$Type): $BlockDefinition
 public static "of"(block0: $Block$$Type): $BlockDefinition
-public static "of"(blockItem0: $BlockItem$$Type): $BlockDefinition
 public static "of"(): $BlockDefinition
+public static "of"(blockItem0: $BlockItem$$Type): $BlockDefinition
 public "renderType"(renderTypeKey0: $RenderTypeKey$$Type): $BlockDefinition
 public "setDefault"(block0: $Block$$Type): $BlockDefinition
 public "tags"(...tagKey0s: $TagKey$$Type<$Block$$Type>[]): $BlockDefinition
@@ -423,17 +423,17 @@ public "registerDirtGrassBlock"(block0: $Block$$Type, resourceLocation1: $Resour
 public "registerTemplateGrassBlock"(block0: $Block$$Type, resourceLocation1: $ResourceLocation$$Type, resourceLocation2: $ResourceLocation$$Type, resourceLocation3: $ResourceLocation$$Type, resourceLocation4: $ResourceLocation$$Type): void
 public static "saveStable"(cachedOutput0: $CachedOutput$$Type, jsonElement1: $JsonElement$$Type, path2: $Path$$Type): $CompletableFuture<any>
 public "sign"(block0: $Block$$Type, string1: string): void
-public "slab"(block0: $Block$$Type, string1: string, resourceLocation2: $ResourceLocation$$Type): void
 public "slab"(block0: $Block$$Type, string1: string, string2: string, resourceLocation3: $ResourceLocation$$Type): void
-public "stairs"(block0: $Block$$Type, string1: string, resourceLocation2: $ResourceLocation$$Type): void
+public "slab"(block0: $Block$$Type, string1: string, resourceLocation2: $ResourceLocation$$Type): void
 public "stairs"(block0: $Block$$Type, string1: string, string2: string, resourceLocation3: $ResourceLocation$$Type): void
+public "stairs"(block0: $Block$$Type, string1: string, resourceLocation2: $ResourceLocation$$Type): void
 public "textureFromBlock"(block0: $Block$$Type, string1: string, string2: string): $ResourceLocation
 public "torch"(registryObject0: $RegistryObject$$Type<$Block$$Type>): void
 public "torch"(block0: $Block$$Type): void
 public "trapdoor"(block0: $Block$$Type): void
 public "veinBlock"(block0: $Block$$Type): void
-public "wall"(block0: $Block$$Type, string1: string, string2: string, resourceLocation3: $ResourceLocation$$Type): void
 public "wall"(block0: $Block$$Type, string1: string, resourceLocation2: $ResourceLocation$$Type): void
+public "wall"(block0: $Block$$Type, string1: string, string2: string, resourceLocation3: $ResourceLocation$$Type): void
 public "wallTorch"(block0: $Block$$Type, string1: string): void
 public "woodBlock"(block0: $Block$$Type, string1: string): void
 }
@@ -588,9 +588,9 @@ public static "getValues"<T>(item0: $Item$$Type, visionProperty1: $VisionPropert
 public static "getValues"<T>(block0: $Block$$Type, visionProperty1: $VisionProperty$$Type<T>): $List<T>
 public static "getValues"<T>(entityType0: $EntityType$$Type<any>, visionProperty1: $VisionProperty$$Type<T>, visionContext2: $VisionContext$$Type): $List<T>
 public static "getValues"<T>(entityType0: $EntityType$$Type<any>, visionProperty1: $VisionProperty$$Type<T>): $List<T>
-public static "getValues"<T>(entity0: $Entity$$Type, visionProperty1: $VisionProperty$$Type<T>, visionContext2: $VisionContext$$Type): $List<T>
-public static "getValues"<T>(entity0: $Entity$$Type, visionProperty1: $VisionProperty$$Type<T>): $List<T>
 public static "getValues"<T>(blockState0: $BlockState$$Type, visionProperty1: $VisionProperty$$Type<T>, visionContext2: $VisionContext$$Type): $List<T>
+public static "getValues"<T>(entity0: $Entity$$Type, visionProperty1: $VisionProperty$$Type<T>): $List<T>
+public static "getValues"<T>(entity0: $Entity$$Type, visionProperty1: $VisionProperty$$Type<T>, visionContext2: $VisionContext$$Type): $List<T>
 public static "resetVisions"(): void
 get "values"(): $ImmutableMap<string, $VisionValue<any>[]>
 }
@@ -739,8 +739,8 @@ public "getLangKey"(): $LangKey
 public static "isDatagen"(): boolean
 public "isDefaulted"(): boolean
 public "isEmpty"(): boolean
-public "langKey"(string0: string): E
 public "langKey"(langKey0: $LangKey$$Type): E
+public "langKey"(string0: string): E
 public "merge"(e0: E): E
 public "setDefault"(t0: T): E
 get "defaulted"(): boolean

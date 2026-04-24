@@ -1052,8 +1052,8 @@ import { $BalmEvent } from "net.blay09.mods.balm.api.event.BalmEvent"
 import { $DamageSource, $DamageSource$$Type } from "net.minecraft.world.damagesource.DamageSource"
 
 export class $LivingDamageEvent extends $BalmEvent {
-constructor()
 constructor(livingEntity0: $LivingEntity$$Type, damageSource1: $DamageSource$$Type, float2: float)
+constructor()
 
 public "getDamageAmount"(): float
 public "getDamageSource"(): $DamageSource

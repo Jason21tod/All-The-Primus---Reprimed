@@ -66,8 +66,8 @@ export interface $Int2BooleanFunction extends $Function$0<integer, boolean>, $In
 "containsKey"(int0: integer): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
+"defaultReturnValue"(boolean0: boolean): void
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(int0: integer): boolean
@@ -193,9 +193,9 @@ export interface $Int2LongFunction extends $Function$0<integer, long>, $IntToLon
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
 "getOrDefault"(int0: integer, long1: long): long
+"put"(int0: integer, long1: long): long
 /** @deprecated */
 "put"(integer0: integer, long1: long): long
-"put"(int0: integer, long1: long): long
 "remove"(int0: integer): long
 /** @deprecated */
 "remove"(object0: any): long
@@ -349,9 +349,9 @@ export interface $Int2DoubleFunction extends $Function$0<integer, double>, $IntT
 /** @deprecated */
 "getOrDefault"(object0: any, double1: double): double
 "getOrDefault"(int0: integer, double1: double): double
+"put"(int0: integer, double1: double): double
 /** @deprecated */
 "put"(integer0: integer, double1: double): double
-"put"(int0: integer, double1: double): double
 "remove"(int0: integer): double
 /** @deprecated */
 "remove"(object0: any): double
@@ -514,9 +514,9 @@ export interface $IntCollection extends $Collection<integer>, $IntIterable {
 "toArray"<T>(t0s: T[]): T[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 "toArray"(): any[]
-"toIntArray"(): integer[]
 /** @deprecated */
 "toIntArray"(int0s: integer[]): integer[]
+"toIntArray"(): integer[]
 get "empty"(): boolean
 }
 
@@ -602,9 +602,9 @@ export interface $Int2ShortFunction extends $Function$0<integer, short>, $IntUna
 /** @deprecated */
 "getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(int0: integer, short1: short): short
+"put"(int0: integer, short1: short): short
 /** @deprecated */
 "put"(integer0: integer, short1: short): short
-"put"(int0: integer, short1: short): short
 "remove"(int0: integer): short
 /** @deprecated */
 "remove"(object0: any): short
@@ -700,8 +700,8 @@ export interface $Int2ObjectMap<V = any> extends $Int2ObjectFunction<V>, $Map<in
 "containsKey"(object0: any): boolean
 "containsKey"(int0: integer): boolean
 "containsValue"(object0: any): boolean
-"defaultReturnValue"(): V
 "defaultReturnValue"(v0: V): void
+"defaultReturnValue"(): V
 "equals"(object0: any): boolean
 "forEach"(biConsumer0: $BiConsumer$$Type<integer, V>): void
 /** @deprecated */
@@ -846,9 +846,9 @@ export interface $Int2FloatFunction extends $Function$0<integer, float>, $IntToD
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(int0: integer, float1: float): float
+"put"(int0: integer, float1: float): float
 /** @deprecated */
 "put"(integer0: integer, float1: float): float
-"put"(int0: integer, float1: float): float
 "remove"(int0: integer): float
 /** @deprecated */
 "remove"(object0: any): float
@@ -967,8 +967,8 @@ public "intSpliterator"(): $IntSpliterator
 public "intStream"(): $IntStream
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
-public static "of"(...int0s: integer[]): $IntArrayList
 public static "of"(): $IntArrayList
+public static "of"(...int0s: integer[]): $IntArrayList
 public static "of"(int0: integer, int1: integer): $IntList
 public static "of"(int0: integer): $IntList
 public static "of"(int0: integer, int1: integer, int2: integer): $IntList
@@ -1001,11 +1001,12 @@ public "replaceAll"(unaryOperator0: $UnaryOperator$$Type<integer>): void
 public "replaceAll"(intUnaryOperator0: $IntUnaryOperator$$Type): void
 /** @deprecated */
 public "set"(int0: integer, integer1: integer): integer
-public "setElements"(int0s: integer[]): void
 public "setElements"(int0: integer, int1s: integer[]): void
+public "setElements"(int0s: integer[]): void
 public "sort"(intComparator0: $IntComparator$$Type): void
 /** @deprecated */
 public "sort"(comparator0: $Comparator$$Type<integer>): void
+public "spliterator"(): $IntSpliterator
 /** @deprecated */
 public "stream"(): $Stream<integer>
 public "toArray"(): any[]
@@ -1254,8 +1255,8 @@ public "computeIfPresent"(integer0: integer, biFunction1: $BiFunction$$Type<inte
 /** @deprecated */
 public "containsKey"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(): V
 public "defaultReturnValue"(v0: V): void
+public "defaultReturnValue"(): V
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "forEach"(biConsumer0: $BiConsumer$$Type<integer, V>): void
 public "get"(int0: integer): V
@@ -1394,8 +1395,8 @@ export interface $Int2DoubleMap extends $Int2DoubleFunction, $Map<integer, doubl
 /** @deprecated */
 "containsValue"(object0: any): boolean
 "containsValue"(double0: double): boolean
-"defaultReturnValue"(): double
 "defaultReturnValue"(double0: double): void
+"defaultReturnValue"(): double
 /** @deprecated */
 "entrySet"(): $ObjectSet<$Map$Entry<integer, double>>
 "equals"(object0: any): boolean
@@ -1413,8 +1414,8 @@ export interface $Int2DoubleMap extends $Int2DoubleFunction, $Map<integer, doubl
 "merge"(int0: integer, double1: double, biFunction2: $BiFunction$$Type<double, double, double>): double
 /** @deprecated */
 "merge"(integer0: integer, double1: double, biFunction2: $BiFunction$$Type<double, double, double>): double
-"mergeDouble"(int0: integer, double1: double, doubleBinaryOperator2: $DoubleBinaryOperator$$Type): double
 "mergeDouble"(int0: integer, double1: double, doubleBinaryOperator2: $DoubleBinaryOperator$0$$Type): double
+"mergeDouble"(int0: integer, double1: double, doubleBinaryOperator2: $DoubleBinaryOperator$$Type): double
 /** @deprecated */
 "put"(integer0: integer, double1: double): double
 "put"(int0: integer, double1: double): double
@@ -1724,8 +1725,8 @@ public "containsKey"(int0: integer): boolean
 public "containsKey"(object0: any): boolean
 public "containsValue"(object0: any): boolean
 public static "copyOf"<K, V>(map0: $Map$$Type<K, V>): $Map<K, V>
-public "defaultReturnValue"(): V
 public "defaultReturnValue"(v0: V): void
+public "defaultReturnValue"(): V
 public static "entry"<K, V>(k0: K, v1: V): $Map$Entry<K, V>
 public "forEach"(biConsumer0: $BiConsumer$$Type<integer, V>): void
 /** @deprecated */
@@ -2092,6 +2093,7 @@ import { $List, $List$$Type } from "java.util.List"
 import { $IntIterator } from "it.unimi.dsi.fastutil.ints.IntIterator"
 import { $IntList, $IntList$$Type } from "it.unimi.dsi.fastutil.ints.IntList"
 import { $Stream } from "java.util.stream.Stream"
+import { $IntListIterator } from "it.unimi.dsi.fastutil.ints.IntListIterator"
 import { $IntComparator$$Type } from "it.unimi.dsi.fastutil.ints.IntComparator"
 import { $Comparator$$Type } from "java.util.Comparator"
 import { $IntSpliterator } from "it.unimi.dsi.fastutil.ints.IntSpliterator"
@@ -2135,6 +2137,8 @@ public "isEmpty"(): boolean
 public "lastIndexOf"(int0: integer): integer
 /** @deprecated */
 public "lastIndexOf"(object0: any): integer
+public "listIterator"(): $IntListIterator
+public "listIterator"(int0: integer): $IntListIterator
 public static "of"(...int0s: integer[]): $IntList
 public static "of"(int0: integer, int1: integer): $IntList
 public static "of"(): $IntList
@@ -2177,8 +2181,8 @@ public "set"(int0: integer, int1: integer): integer
 /** @deprecated */
 public "set"(int0: integer, integer1: integer): integer
 public "setElements"(int0: integer, int1s: integer[], int2: integer, int3: integer): void
-public "setElements"(int0s: integer[]): void
 public "setElements"(int0: integer, int1s: integer[]): void
+public "setElements"(int0s: integer[]): void
 public "size"(int0: integer): void
 public "size"(): integer
 public "sort"(intComparator0: $IntComparator$$Type): void
@@ -2191,9 +2195,9 @@ public "toArray"(): any[]
 public "toArray"<T>(t0s: T[]): T[]
 public "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
 public "topInt"(): integer
+public "unstableSort"(intComparator0: $IntComparator$$Type): void
 /** @deprecated */
 public "unstableSort"(comparator0: $Comparator$$Type<integer>): void
-public "unstableSort"(intComparator0: $IntComparator$$Type): void
 get "first"(): integer
 get "last"(): integer
 get "empty"(): boolean
@@ -2298,9 +2302,9 @@ export interface $IntSet extends $IntCollection, $Set<integer> {
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(): any[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toIntArray"(): integer[]
 /** @deprecated */
 "toIntArray"(int0s: integer[]): integer[]
+"toIntArray"(): integer[]
 get "empty"(): boolean
 }
 
@@ -2419,9 +2423,9 @@ export interface $Int2CharFunction extends $Function$0<integer, character>, $Int
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
 "getOrDefault"(int0: integer, char1: character): character
+"put"(int0: integer, char1: character): character
 /** @deprecated */
 "put"(integer0: integer, character1: character): character
-"put"(int0: integer, char1: character): character
 "remove"(int0: integer): character
 /** @deprecated */
 "remove"(object0: any): character
@@ -2472,8 +2476,8 @@ export interface $IntList extends $List<integer>, $Comparable<$List<integer>>, $
 "addAll"(collection0: $Collection$$Type<integer>): boolean
 "addAll"(int0: integer, collection1: $Collection$$Type<integer>): boolean
 "addAll"(intCollection0: $IntCollection$$Type): boolean
-"addElements"(int0: integer, int1s: integer[]): void
 "addElements"(int0: integer, int1s: integer[], int2: integer, int3: integer): void
+"addElements"(int0: integer, int1s: integer[]): void
 "addFirst"(integer0: integer): void
 "addLast"(integer0: integer): void
 "clear"(): void
@@ -2531,9 +2535,9 @@ export interface $IntList extends $List<integer>, $Comparable<$List<integer>>, $
 "set"(int0: integer, int1: integer): integer
 /** @deprecated */
 "set"(int0: integer, integer1: integer): integer
-"setElements"(int0s: integer[]): void
 "setElements"(int0: integer, int1s: integer[], int2: integer, int3: integer): void
 "setElements"(int0: integer, int1s: integer[]): void
+"setElements"(int0s: integer[]): void
 "size"(int0: integer): void
 "size"(): integer
 "sort"(intComparator0: $IntComparator$$Type): void
@@ -2546,12 +2550,12 @@ export interface $IntList extends $List<integer>, $Comparable<$List<integer>>, $
 "toArray"<T>(t0s: T[]): T[]
 "toArray"(int0s: integer[]): integer[]
 "toArray"<T>(intFunction0: $IntFunction$$Type<T[]>): T[]
-"toIntArray"(): integer[]
 /** @deprecated */
 "toIntArray"(int0s: integer[]): integer[]
+"toIntArray"(): integer[]
+"unstableSort"(intComparator0: $IntComparator$$Type): void
 /** @deprecated */
 "unstableSort"(comparator0: $Comparator$$Type<integer>): void
-"unstableSort"(intComparator0: $IntComparator$$Type): void
 get "first"(): integer
 get "last"(): integer
 get "empty"(): boolean
@@ -2843,9 +2847,9 @@ export interface $Int2ByteFunction extends $Function$0<integer, byte>, $IntUnary
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(int0: integer, byte1: byte): byte
+"put"(int0: integer, byte1: byte): byte
 /** @deprecated */
 "put"(integer0: integer, byte1: byte): byte
-"put"(int0: integer, byte1: byte): byte
 "remove"(int0: integer): byte
 /** @deprecated */
 "remove"(object0: any): byte

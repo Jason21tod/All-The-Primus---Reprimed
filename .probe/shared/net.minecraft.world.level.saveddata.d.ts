@@ -235,10 +235,10 @@ export class $SavedData {
 constructor()
 
 public "isDirty"(): boolean
-public "save"(compoundTag0: $CompoundTag$$Type): $CompoundTag
 public "save"(file0: $File$$Type): void
-public "setDirty"(boolean0: boolean): void
+public "save"(compoundTag0: $CompoundTag$$Type): $CompoundTag
 public "setDirty"(): void
+public "setDirty"(boolean0: boolean): void
 get "dirty"(): boolean
 set "dirty"(value: boolean)
 }

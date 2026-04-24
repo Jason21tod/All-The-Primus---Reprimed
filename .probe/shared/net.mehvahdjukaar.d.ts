@@ -220,8 +220,8 @@ import { $Optional } from "java.util.Optional"
 import { $Event } from "net.minecraftforge.eventbus.api.Event"
 
 export class $VillagerBrainEvent extends $Event implements $IVillagerBrainEvent, $EventItf {
-constructor()
 constructor(brain: $Brain$$Type<$Villager$$Type>, villager: $Villager$$Type)
+constructor()
 
 public "addOrReplaceActivity"(activity: $Activity$$Type, activityPackage: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<$Villager$$Type>>>): void
 public "addSensor"(newSensor: $SensorType$$Type<$Sensor$$Type<$Villager$$Type>>): void
@@ -811,10 +811,10 @@ declare module "net.mehvahdjukaar.moonlight.api.block.IBlockHolder" {
 import { $BlockState, $BlockState$$Type } from "net.minecraft.world.level.block.state.BlockState"
 
 export interface $IBlockHolder {
-"getHeldBlock"(): $BlockState
 "getHeldBlock"(int0: integer): $BlockState
-"setHeldBlock"(blockState0: $BlockState$$Type, int1: integer): boolean
+"getHeldBlock"(): $BlockState
 "setHeldBlock"(state: $BlockState$$Type): boolean
+"setHeldBlock"(blockState0: $BlockState$$Type, int1: integer): boolean
 get "heldBlock"(): $BlockState
 set "heldBlock"(value: $BlockState$$Type)
 }

@@ -368,6 +368,7 @@ declare module "dev.latvian.mods.kubejs.item.custom.SmithingTemplateItemBuilder"
 import { $ResourceLocation, $ResourceLocation$$Type } from "net.minecraft.resources.ResourceLocation"
 import { $List } from "java.util.List"
 import { $Component, $Component$$Type } from "net.minecraft.network.chat.Component"
+import { $SmithingTemplateItem } from "net.minecraft.world.item.SmithingTemplateItem"
 import { $ItemBuilder } from "dev.latvian.mods.kubejs.item.ItemBuilder"
 
 export class $SmithingTemplateItemBuilder extends $ItemBuilder {
@@ -403,10 +404,18 @@ public "axeIcon"(): $SmithingTemplateItemBuilder
 public "bootsIcon"(): $SmithingTemplateItemBuilder
 /** Adds a chestplate to the list of base item slot icons that the smithing table cycles through when this smithing template is put in */
 public "chestplateIcon"(): $SmithingTemplateItemBuilder
+public "createObject"(): $SmithingTemplateItem
 /** Adds a dust, diamond, emerald, quartz, lapis lazuli and amethyst shard icons to the list of ingredient slot icons that the smithing table cycles through when this smithing template is put in */
 public "crystalIcons"(): $SmithingTemplateItemBuilder
 /** Adds a diamond to the list of ingredient slot icons that the smithing table cycles through when this smithing template is put in */
 public "diamondIcon"(): $SmithingTemplateItemBuilder
+/**
+ * Sets the name for this smithing template.
+ * Note that the normal display name for all smithing templates is the same and cannot be changed, this instead sets the name in the tooltip (see vanilla smithing templates for what this looks like).
+ * 
+ * This will be overridden by a lang file if it exists.
+ */
+public "displayName"(name: $Component$$Type): $SmithingTemplateItemBuilder
 /** Adds a dust to the list of ingredient slot icons that the smithing table cycles through when this smithing template is put in */
 public "dustIcon"(): $SmithingTemplateItemBuilder
 /** Adds an emerald to the list of ingredient slot icons that the smithing table cycles through when this smithing template is put in */
@@ -497,10 +506,10 @@ public "eaten"(e: $Consumer$$Type<$FoodEatenEventJS$$Type>): $FoodBuilder
  * @param probability - The probability of the effect being applied. 1 = 100%.
  */
 public "effect"(mobEffectId: $ResourceLocation$$Type, duration: integer, amplifier: integer, probability: float): $FoodBuilder
-/** Sets the food is fast to eat (having half of the eating time). */
-public "fastToEat"(): $FoodBuilder
 /** Sets whether the food is fast to eat (having half of the eating time). */
 public "fastToEat"(flag: boolean): $FoodBuilder
+/** Sets the food is fast to eat (having half of the eating time). */
+public "fastToEat"(): $FoodBuilder
 /** Sets the hunger restored. */
 public "hunger"(h: integer): $FoodBuilder
 /** Sets whether the food is meat. */
@@ -749,8 +758,8 @@ public "transform"(transformer: $OutputReplacementTransformer$$Type): $OutputRep
 public "weakNBT"(): $InputItem
 public "withChance"(chance: double): $OutputItem
 public "withCount"(count: integer): $OutputItem
-public "withRolls"(rolls: $IntProvider$$Type): $OutputItem
 public "withRolls"(min: integer, max: integer): $OutputItem
+public "withRolls"(rolls: $IntProvider$$Type): $OutputItem
 get "count"(): integer
 get "nbt"(): $CompoundTag
 get "empty"(): boolean
@@ -807,8 +816,8 @@ public "add"(items: $ItemStack$$Type[]): void
 public "add"(items: $ItemStack$$Type[], visibility: $CreativeModeTab$TabVisibility$$Type): void
 public "addAfter"(order: $ItemStack$$Type, items: $ItemStack$$Type[]): void
 public "addAfter"(order: $ItemStack$$Type, items: $ItemStack$$Type[], visibility: $CreativeModeTab$TabVisibility$$Type): void
-public "addBefore"(order: $ItemStack$$Type, items: $ItemStack$$Type[], visibility: $CreativeModeTab$TabVisibility$$Type): void
 public "addBefore"(order: $ItemStack$$Type, items: $ItemStack$$Type[]): void
+public "addBefore"(order: $ItemStack$$Type, items: $ItemStack$$Type[], visibility: $CreativeModeTab$TabVisibility$$Type): void
 public "remove"(filter: $Ingredient$$Type): void
 public "removeDisplay"(filter: $Ingredient$$Type): void
 public "removeSearch"(filter: $Ingredient$$Type): void
@@ -1021,10 +1030,10 @@ public "createItemProperties"(): $Item$Properties
  * For example, when eating food, this is called when the player has finished eating the food, so hunger is restored.
  */
 public "finishUsing"(finishUsing: $ItemBuilder$FinishUsingCallback$$Type): $ItemBuilder
-/** Makes the item fire resistant like netherite tools (or not). */
-public "fireResistant"(isFireResistant: boolean): $ItemBuilder
 /** Makes the item fire resistant like netherite tools. */
 public "fireResistant"(): $ItemBuilder
+/** Makes the item fire resistant like netherite tools (or not). */
+public "fireResistant"(isFireResistant: boolean): $ItemBuilder
 /** Set the food properties of the item. */
 public "food"(b: $Consumer$$Type<$FoodBuilder$$Type>): $ItemBuilder
 /** Makes the item glow like enchanted, even if it's not enchanted. */
@@ -1194,7 +1203,6 @@ export class $CreativeTabBuilder extends $BuilderBase<$CreativeModeTab> {
 constructor(i: $ResourceLocation$$Type)
 
 public "content"(content: $CreativeTabContentSupplier$$Type): $CreativeTabBuilder
-public "createObject"(): $CreativeModeTab
 public "icon"(icon: $CreativeTabIconSupplier$$Type): $CreativeTabBuilder
 }
 }

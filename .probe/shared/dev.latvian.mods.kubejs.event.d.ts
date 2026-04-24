@@ -229,8 +229,8 @@ public "getIds"(context0: $Context$$Type): any[]
 public "getParentScope"(): $Scriptable
 public "getPrototype"(context0: $Context$$Type): $Scriptable
 public "has"(context0: $Context$$Type, int1: integer, scriptable2: $Scriptable$$Type): boolean
-public "hasListeners"(): boolean
 public "hasListeners"(extraId: any): boolean
+public "hasListeners"(): boolean
 public "hasResult"(): $EventHandler
 public "listen"(type: $ScriptType$$Type, extraId: any, handler: $IEventHandler$$Type): void
 public "post"(type: $ScriptTypeHolder$$Type, extraId: any, event: $EventJS$$Type): $EventResult

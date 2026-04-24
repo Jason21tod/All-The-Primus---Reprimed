@@ -270,8 +270,8 @@ export interface $Double2ShortFunction extends $Function$0<double, short>, $Doub
 /** @deprecated */
 "getOrDefault"(object0: any, short1: short): short
 "getOrDefault"(double0: double, short1: short): short
-/** @deprecated */
 "put"(double0: double, short1: short): short
+/** @deprecated */
 "put"(double0: double, short1: short): short
 "remove"(double0: double): short
 /** @deprecated */
@@ -439,8 +439,8 @@ export interface $DoubleList extends $List<double>, $Comparable<$List<double>>, 
 "addAll"(collection0: $Collection$$Type<double>): boolean
 "addAll"(int0: integer, collection1: $Collection$$Type<double>): boolean
 "addAll"(doubleCollection0: $DoubleCollection$$Type): boolean
-"addElements"(int0: integer, double1s: double[]): void
 "addElements"(int0: integer, double1s: double[], int2: integer, int3: integer): void
+"addElements"(int0: integer, double1s: double[]): void
 "addFirst"(double0: double): void
 "addLast"(double0: double): void
 "clear"(): void
@@ -498,9 +498,9 @@ export interface $DoubleList extends $List<double>, $Comparable<$List<double>>, 
 "set"(int0: integer, double1: double): double
 /** @deprecated */
 "set"(int0: integer, double1: double): double
-"setElements"(double0s: double[]): void
 "setElements"(int0: integer, double1s: double[], int2: integer, int3: integer): void
 "setElements"(int0: integer, double1s: double[]): void
+"setElements"(double0s: double[]): void
 "size"(int0: integer): void
 "size"(): integer
 "sort"(doubleComparator0: $DoubleComparator$$Type): void
@@ -713,8 +713,8 @@ export interface $Double2LongFunction extends $Function$0<double, long>, $Double
 /** @deprecated */
 "getOrDefault"(object0: any, long1: long): long
 "getOrDefault"(double0: double, long1: long): long
-/** @deprecated */
 "put"(double0: double, long1: long): long
+/** @deprecated */
 "put"(double0: double, long1: long): long
 "remove"(double0: double): long
 /** @deprecated */
@@ -803,9 +803,9 @@ export interface $Double2IntFunction extends $Function$0<double, integer>, $Doub
 /** @deprecated */
 "getOrDefault"(object0: any, integer1: integer): integer
 "getOrDefault"(double0: double, int1: integer): integer
+"put"(double0: double, int1: integer): integer
 /** @deprecated */
 "put"(double0: double, integer1: integer): integer
-"put"(double0: double, int1: integer): integer
 "remove"(double0: double): integer
 /** @deprecated */
 "remove"(object0: any): integer
@@ -893,8 +893,8 @@ export interface $Double2ByteFunction extends $Function$0<double, byte>, $Double
 /** @deprecated */
 "getOrDefault"(object0: any, byte1: byte): byte
 "getOrDefault"(double0: double, byte1: byte): byte
-/** @deprecated */
 "put"(double0: double, byte1: byte): byte
+/** @deprecated */
 "put"(double0: double, byte1: byte): byte
 "remove"(double0: double): byte
 /** @deprecated */
@@ -985,8 +985,8 @@ export interface $Double2FloatFunction extends $Function$0<double, float>, $Doub
 /** @deprecated */
 "getOrDefault"(object0: any, float1: float): float
 "getOrDefault"(double0: double, float1: float): float
-/** @deprecated */
 "put"(double0: double, float1: float): float
+/** @deprecated */
 "put"(double0: double, float1: float): float
 "remove"(double0: double): float
 /** @deprecated */
@@ -1075,9 +1075,9 @@ export interface $Double2CharFunction extends $Function$0<double, character>, $D
 /** @deprecated */
 "getOrDefault"(object0: any, character1: character): character
 "getOrDefault"(double0: double, char1: character): character
+"put"(double0: double, char1: character): character
 /** @deprecated */
 "put"(double0: double, character1: character): character
-"put"(double0: double, char1: character): character
 "remove"(double0: double): character
 /** @deprecated */
 "remove"(object0: any): character
@@ -1339,8 +1339,8 @@ export interface $Double2BooleanFunction extends $Function$0<double, boolean>, $
 "containsKey"(double0: double): boolean
 /** @deprecated */
 "containsKey"(object0: any): boolean
-"defaultReturnValue"(boolean0: boolean): void
 "defaultReturnValue"(): boolean
+"defaultReturnValue"(boolean0: boolean): void
 /** @deprecated */
 "get"(object0: any): boolean
 "get"(double0: double): boolean

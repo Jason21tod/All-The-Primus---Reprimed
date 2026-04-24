@@ -1600,8 +1600,8 @@ constructor(blockStateProvider0: $BlockStateProvider$$Type, list1: $List$$Type<$
 public "fallback"(): $BlockStateProvider
 public "getState"(worldGenLevel0: $WorldGenLevel$$Type, randomSource1: $RandomSource$$Type, blockPos2: $BlockPos$$Type): $BlockState
 public "rules"(): $List<$RuleBasedBlockStateProvider$Rule>
-public static "simple"(blockStateProvider0: $BlockStateProvider$$Type): $RuleBasedBlockStateProvider
 public static "simple"(block0: $Block$$Type): $RuleBasedBlockStateProvider
+public static "simple"(blockStateProvider0: $BlockStateProvider$$Type): $RuleBasedBlockStateProvider
 }
 }
 

@@ -40,16 +40,16 @@ public "getBaseValue"(attribute0: $Attribute$$Type): double
 public "getDirtyAttributes"(): $Set<$AttributeInstance>
 public "getInstance"(attribute0: $Attribute$$Type): $AttributeInstance
 public "getInstance"(holder0: $Holder$$Type<$Attribute$$Type>): $AttributeInstance
-public "getModifierValue"(holder0: $Holder$$Type<$Attribute$$Type>, uUID1: $UUID$$Type): double
 public "getModifierValue"(attribute0: $Attribute$$Type, uUID1: $UUID$$Type): double
+public "getModifierValue"(holder0: $Holder$$Type<$Attribute$$Type>, uUID1: $UUID$$Type): double
 public "getOwner"(): $LivingEntity
 public "getSyncableAttributes"(): $Collection<$AttributeInstance>
 public "getValue"(attribute0: $Attribute$$Type): double
 public "handler$dci000$apoth_attrModifiedEvent"(attributeInstance0: $AttributeInstance$$Type, callbackInfo1: $CallbackInfo$$Type): void
 public "hasAttribute"(attribute0: $Attribute$$Type): boolean
 public "hasAttribute"(holder0: $Holder$$Type<$Attribute$$Type>): boolean
-public "hasModifier"(attribute0: $Attribute$$Type, uUID1: $UUID$$Type): boolean
 public "hasModifier"(holder0: $Holder$$Type<$Attribute$$Type>, uUID1: $UUID$$Type): boolean
+public "hasModifier"(attribute0: $Attribute$$Type, uUID1: $UUID$$Type): boolean
 public "load"(listTag0: $ListTag$$Type): void
 public "removeAttributeModifiers"(multimap0: $Multimap$$Type<$Attribute$$Type, $AttributeModifier$$Type>): void
 public "save"(): $ListTag
@@ -255,8 +255,8 @@ public "getModifiers"(operation0: $AttributeModifier$Operation$$Type): $Set<$Att
 public "getValue"(): double
 public "hasModifier"(attributeModifier0: $AttributeModifier$$Type): boolean
 public "load"(compoundTag0: $CompoundTag$$Type): void
-public "removeModifier"(uUID0: $UUID$$Type): void
 public "removeModifier"(attributeModifier0: $AttributeModifier$$Type): void
+public "removeModifier"(uUID0: $UUID$$Type): void
 public "removeModifiers"(): void
 public "removePermanentModifier"(uUID0: $UUID$$Type): boolean
 public "replaceFrom"(attributeInstance0: $AttributeInstance$$Type): void
@@ -444,9 +444,9 @@ public "decay"(): void
 public "getCountForType"(gossipType0: $GossipType$$Type, doublePredicate1: $DoublePredicate$$Type): long
 public "getGossipEntries"(): $Map<$UUID, $Object2IntMap<$GossipType>>
 public "getReputation"(uUID0: $UUID$$Type, predicate1: $Predicate$$Type<$GossipType$$Type>): integer
-public "remove"(uUID0: $UUID$$Type, gossipType1: $GossipType$$Type, int2: integer): void
 public "remove"(uUID0: $UUID$$Type, gossipType1: $GossipType$$Type): void
 public "remove"(gossipType0: $GossipType$$Type): void
+public "remove"(uUID0: $UUID$$Type, gossipType1: $GossipType$$Type, int2: integer): void
 public "store"<T>(dynamicOps0: $DynamicOps$$Type<T>): T
 public "transferFrom"(gossipContainer0: $GossipContainer$$Type, randomSource1: $RandomSource$$Type, int2: integer): void
 public "update"(dynamic0: $Dynamic$$Type<any>): void
@@ -546,8 +546,8 @@ public static "codec"<T>(codec0: $Codec$$Type<T>): $Codec<$ExpirableValue<T>>
 public "getTimeToLive"(): long
 public "getValue"(): T
 public "hasExpired"(): boolean
-public static "of"<T>(t0: T): $ExpirableValue<T>
 public static "of"<T>(t0: T, long1: long): $ExpirableValue<T>
+public static "of"<T>(t0: T): $ExpirableValue<T>
 public "tick"(): void
 get "timeToLive"(): long
 get "value"(): T
@@ -702,11 +702,11 @@ public "getWantedX"(): double
 public "getWantedY"(): double
 public "getWantedZ"(): double
 public "isLookingAtTarget"(): boolean
-public "setLookAt"(double0: double, double1: double, double2: double): void
-public "setLookAt"(entity0: $Entity$$Type, float1: float, float2: float): void
 public "setLookAt"(vec30: $Vec3$$Type): void
-public "setLookAt"(double0: double, double1: double, double2: double, float3: float, float4: float): void
 public "setLookAt"(entity0: $Entity$$Type): void
+public "setLookAt"(double0: double, double1: double, double2: double, float3: float, float4: float): void
+public "setLookAt"(entity0: $Entity$$Type, float1: float, float2: float): void
+public "setLookAt"(double0: double, double1: double, double2: double): void
 public "tick"(): void
 get "lookAtCooldown"(): integer
 set "lookAtCooldown"(value: integer)
@@ -851,10 +851,10 @@ constructor(mob0: $Mob$$Type, level1: $Level$$Type)
 
 public "canCutCorner"(blockPathTypes0: $BlockPathTypes$$Type): boolean
 public "canFloat"(): boolean
-public "createPath"(stream0: $Stream$$Type<$BlockPos$$Type>, int1: integer): $Path
-public "createPath"(set0: $Set$$Type<$BlockPos$$Type>, int1: integer): $Path
-public "createPath"(blockPos0: $BlockPos$$Type, int1: integer, int2: integer): $Path
 public "createPath"(blockPos0: $BlockPos$$Type, int1: integer): $Path
+public "createPath"(blockPos0: $BlockPos$$Type, int1: integer, int2: integer): $Path
+public "createPath"(set0: $Set$$Type<$BlockPos$$Type>, int1: integer): $Path
+public "createPath"(stream0: $Stream$$Type<$BlockPos$$Type>, int1: integer): $Path
 public "createPath"(entity0: $Entity$$Type, int1: integer): $Path
 public "createPath"(double0: double, double1: double, double2: double, int3: integer): $Path
 public "getMaxDistanceToWaypoint"(): float
@@ -867,9 +867,9 @@ public "isDone"(): boolean
 public "isInProgress"(): boolean
 public "isStableDestination"(blockPos0: $BlockPos$$Type): boolean
 public "isStuck"(): boolean
-public "moveTo"(double0: double, double1: double, double2: double, double3: double): boolean
 public "moveTo"(entity0: $Entity$$Type, double1: double): boolean
 public "moveTo"(path0: $Path$$Type, double1: double): boolean
+public "moveTo"(double0: double, double1: double, double2: double, double3: double): boolean
 public "recomputePath"(): void
 public "resetMaxVisitedNodesMultiplier"(): void
 public "setCanFloat"(boolean0: boolean): void
@@ -1004,8 +1004,8 @@ import { $MemoryStatus$$Type } from "net.minecraft.world.entity.ai.memory.Memory
 import { $BrainAccessor } from "net.mehvahdjukaar.moonlight.core.mixins.accessor.BrainAccessor"
 import { $ExpirableValue } from "net.minecraft.world.entity.ai.memory.ExpirableValue"
 import { $Sensor$$Type } from "net.minecraft.world.entity.ai.sensing.Sensor"
-import { $Pair$$Type } from "com.mojang.datafixers.util.Pair"
 import { $BehaviorControl, $BehaviorControl$$Type } from "net.minecraft.world.entity.ai.behavior.BehaviorControl"
+import { $Pair$$Type } from "com.mojang.datafixers.util.Pair"
 import { $Schedule, $Schedule$$Type } from "net.minecraft.world.entity.schedule.Schedule"
 import { $List, $List$$Type } from "java.util.List"
 import { $Codec } from "com.mojang.serialization.Codec"
@@ -1015,8 +1015,8 @@ import { $Optional, $Optional$$Type } from "java.util.Optional"
 export class $Brain<E extends $LivingEntity = $LivingEntity> implements $BrainAccess, $BrainAccessor {
 constructor(collection0: $Collection$$Type<$MemoryModuleType$$Type<any>>, collection1: $Collection$$Type<$SensorType$$Type<$Sensor$$Type<E>>>, immutableList2: $ImmutableList$$Type<$Brain$MemoryValue$$Type<any>>, supplier3: $Supplier$$Type<$Codec<$Brain<E>>>)
 
-public "addActivity"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>): void
 public "addActivity"(activity0: $Activity$$Type, int1: integer, immutableList2: $ImmutableList$$Type<$BehaviorControl$$Type<E>>): void
+public "addActivity"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>): void
 public "addActivityAndRemoveMemoriesWhenStopped"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>, set2: $Set$$Type<$Pair$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>>, set3: $Set$$Type<$MemoryModuleType$$Type<any>>): void
 public "addActivityAndRemoveMemoryWhenStopped"(activity0: $Activity$$Type, int1: integer, immutableList2: $ImmutableList$$Type<$BehaviorControl$$Type<E>>, memoryModuleType3: $MemoryModuleType$$Type<any>): void
 public "addActivityWithConditions"(activity0: $Activity$$Type, immutableList1: $ImmutableList$$Type<$Pair$$Type<integer, $BehaviorControl$$Type<E>>>, set2: $Set$$Type<$Pair$$Type<$MemoryModuleType$$Type<any>, $MemoryStatus$$Type>>): void

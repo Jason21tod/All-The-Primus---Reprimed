@@ -4,8 +4,8 @@ import { $OptionGroup$Builder } from "me.jellysquid.mods.sodium.client.gui.optio
 import { $OptionIdentifier$$Type } from "toni.sodiumoptionsapi.api.OptionIdentifier"
 
 export interface $ExtendedOptionGroup {
-"sodiumOptionsAPI$setId"(optionIdentifier0: $OptionIdentifier$$Type<void>): $OptionGroup$Builder
 "sodiumOptionsAPI$setId"(resourceLocation0: $ResourceLocation$$Type): $OptionGroup$Builder
+"sodiumOptionsAPI$setId"(optionIdentifier0: $OptionIdentifier$$Type<void>): $OptionGroup$Builder
 }
 
 export namespace $ExtendedOptionGroup {

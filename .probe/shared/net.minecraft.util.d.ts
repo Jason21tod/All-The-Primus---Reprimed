@@ -79,8 +79,8 @@ export class $StringRepresentable$EnumCodec<E extends ($Enum<E> & $StringReprese
 constructor(e0s: E[], function1: $Function$$Type<string, E>)
 
 public "boxed"(): $Decoder$Boxed<E>
-public "byName"(string0: string, e1: E): E
 public "byName"(string0: string): E
+public "byName"(string0: string, e1: E): E
 public static "checkRange"<N extends (number & $Comparable<N>)>(n0: N, n1: N): $Function<N, $DataResult<N>>
 public "comap"<B>(function0: $Function$$Type<B, E>): $Encoder<B>
 public "comapFlatMap"<S>(function0: $Function$$Type<E, $DataResult<S>>, function1: $Function$$Type<S, E>): $Codec<S>
@@ -99,7 +99,6 @@ public static "empty"<A>(): $MapEncoder<A>
 public "encode"<T>(e0: E, dynamicOps1: $DynamicOps$$Type<T>, t2: T): $DataResult<T>
 public "encodeStart"<T>(dynamicOps0: $DynamicOps$$Type<T>, e1: E): $DataResult<T>
 public static "error"<A>(string0: string): $Encoder<A>
-public "fieldOf"(string0: string): $MapCodec<E>
 public "flatComap"<B>(function0: $Function$$Type<B, $DataResult<E>>): $Encoder<B>
 public "flatComapMap"<S>(function0: $Function$$Type<E, S>, function1: $Function$$Type<S, $DataResult<E>>): $Codec<S>
 public "flatMap"<B>(function0: $Function$$Type<E, $DataResult<B>>): $Decoder<B>
@@ -121,9 +120,9 @@ public static "ofSimple"<A>(simple0: $Decoder$Simple$$Type<A>): $Decoder<A>
 public static "ofTerminal"<A>(terminal0: $Decoder$Terminal$$Type<A>): $Decoder<A>
 public static "optionalField"<F>(string0: string, codec1: $Codec$$Type<F>): $MapCodec<$Optional<F>>
 public "optionalFieldOf"(string0: string, lifecycle1: $Lifecycle$$Type, e2: E, lifecycle3: $Lifecycle$$Type): $MapCodec<E>
-public "optionalFieldOf"(string0: string, e1: E, lifecycle2: $Lifecycle$$Type): $MapCodec<E>
-public "optionalFieldOf"(string0: string, e1: E): $MapCodec<E>
 public "optionalFieldOf"(string0: string): $MapCodec<$Optional<E>>
+public "optionalFieldOf"(string0: string, e1: E): $MapCodec<E>
+public "optionalFieldOf"(string0: string, e1: E, lifecycle2: $Lifecycle$$Type): $MapCodec<E>
 public "orElse"(e0: E): $Codec<E>
 public "orElse"(consumer0: $Consumer$$Type<string>, e1: E): $Codec<E>
 public "orElse"(unaryOperator0: $UnaryOperator$$Type<string>, e1: E): $Codec<E>
@@ -134,6 +133,7 @@ public static "pair"<F, S>(codec0: $Codec$$Type<F>, codec1: $Codec$$Type<S>): $C
 public "parse"<T>(dynamic0: $Dynamic$$Type<T>): $DataResult<E>
 public "parse"<T>(dynamicOps0: $DynamicOps$$Type<T>, t1: T): $DataResult<E>
 public "partialDispatch"<E>(string0: string, function1: $Function$$Type<E, $DataResult<E>>, function2: $Function$$Type<E, $DataResult<$Codec<E>>>): $Codec<E>
+public "promotePartial"(consumer0: $Consumer$$Type<string>): $Codec<E>
 public "simple"(): $Decoder$Simple<E>
 public static "simpleMap"<K, V>(codec0: $Codec$$Type<K>, codec1: $Codec$$Type<V>, keyable2: $Keyable$$Type): $SimpleMapCodec<K, V>
 public "stable"(): $Codec<E>
@@ -141,6 +141,7 @@ public "terminal"(): $Decoder$Terminal<E>
 public static "unboundedMap"<K, V>(codec0: $Codec$$Type<K>, codec1: $Codec$$Type<V>): $UnboundedMapCodec<K, V>
 public static "unit"<A>(a0: A): $Codec<A>
 public static "unit"<A>(supplier0: $Supplier$$Type<A>): $Codec<A>
+public "withLifecycle"(lifecycle0: $Lifecycle$$Type): $Codec<E>
 public "xmap"<S>(function0: $Function$$Type<E, S>, function1: $Function$$Type<S, E>): $Codec<S>
 }
 }
@@ -289,8 +290,8 @@ export interface $RandomSource {
 "nextFloat"(): float
 "nextGaussian"(): double
 "nextInt"(int0: integer): integer
-"nextInt"(): integer
 "nextInt"(int0: integer, int1: integer): integer
+"nextInt"(): integer
 "nextIntBetweenInclusive"(int0: integer, int1: integer): integer
 "nextLong"(): long
 "setSeed"(long0: long): void
@@ -440,13 +441,13 @@ export interface $FormattedCharSequence {
 
 export namespace $FormattedCharSequence {
 const EMPTY: $FormattedCharSequence
-function backward(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 function backward(string0: string, style1: $Style$$Type): $FormattedCharSequence
+function backward(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 function codepoint(int0: integer, style1: $Style$$Type): $FormattedCharSequence
-function composite(): $FormattedCharSequence
-function composite(formattedCharSequence0: $FormattedCharSequence$$Type): $FormattedCharSequence
-function composite(...formattedCharSequence0s: $FormattedCharSequence$$Type[]): $FormattedCharSequence
 function composite(formattedCharSequence0: $FormattedCharSequence$$Type, formattedCharSequence1: $FormattedCharSequence$$Type): $FormattedCharSequence
+function composite(formattedCharSequence0: $FormattedCharSequence$$Type): $FormattedCharSequence
+function composite(): $FormattedCharSequence
+function composite(...formattedCharSequence0s: $FormattedCharSequence$$Type[]): $FormattedCharSequence
 function composite(list0: $List$$Type<$FormattedCharSequence$$Type>): $FormattedCharSequence
 function decorateOutput(formattedCharSink0: $FormattedCharSink$$Type, int2IntFunction1: $Int2IntFunction$$Type): $FormattedCharSink
 function forward(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
@@ -457,13 +458,13 @@ function fromPair(formattedCharSequence0: $FormattedCharSequence$$Type, formatte
 export abstract class $FormattedCharSequence$$Static implements $FormattedCharSequence {
 static readonly "EMPTY": $FormattedCharSequence
 
-static "backward"(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 static "backward"(string0: string, style1: $Style$$Type): $FormattedCharSequence
+static "backward"(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
 static "codepoint"(int0: integer, style1: $Style$$Type): $FormattedCharSequence
-static "composite"(): $FormattedCharSequence
-static "composite"(formattedCharSequence0: $FormattedCharSequence$$Type): $FormattedCharSequence
-static "composite"(...formattedCharSequence0s: $FormattedCharSequence$$Type[]): $FormattedCharSequence
 static "composite"(formattedCharSequence0: $FormattedCharSequence$$Type, formattedCharSequence1: $FormattedCharSequence$$Type): $FormattedCharSequence
+static "composite"(formattedCharSequence0: $FormattedCharSequence$$Type): $FormattedCharSequence
+static "composite"(): $FormattedCharSequence
+static "composite"(...formattedCharSequence0s: $FormattedCharSequence$$Type[]): $FormattedCharSequence
 static "composite"(list0: $List$$Type<$FormattedCharSequence$$Type>): $FormattedCharSequence
 static "decorateOutput"(formattedCharSink0: $FormattedCharSink$$Type, int2IntFunction1: $Int2IntFunction$$Type): $FormattedCharSink
 static "forward"(string0: string, style1: $Style$$Type, int2IntFunction2: $Int2IntFunction$$Type): $FormattedCharSequence
@@ -631,9 +632,9 @@ import { $Supplier$$Type } from "java.util.function.Supplier"
 export interface $ProfilerFiller {
 "endTick"(): void
 "incrementCounter"(string0: string): void
-"incrementCounter"(supplier0: $Supplier$$Type<string>, int1: integer): void
 "incrementCounter"(string0: string, int1: integer): void
 "incrementCounter"(supplier0: $Supplier$$Type<string>): void
+"incrementCounter"(supplier0: $Supplier$$Type<string>, int1: integer): void
 "markForCharting"(metricCategory0: $MetricCategory$$Type): void
 "pop"(): void
 "popPush"(string0: string): void
@@ -973,8 +974,8 @@ export abstract class $ProfilerMeasured$$Static implements $ProfilerMeasured {
 
 declare module "net.minecraft.util.datafix.DataFixTypes" {
 import { $DSL$TypeReference } from "com.mojang.datafixers.DSL$TypeReference"
-import { $CompoundTag, $CompoundTag$$Type } from "net.minecraft.nbt.CompoundTag"
 import { $Dynamic, $Dynamic$$Type } from "com.mojang.serialization.Dynamic"
+import { $CompoundTag, $CompoundTag$$Type } from "net.minecraft.nbt.CompoundTag"
 import { $Enum } from "java.lang.Enum"
 import { $Set } from "java.util.Set"
 import { $DataFixer$$Type } from "com.mojang.datafixers.DataFixer"
@@ -994,10 +995,10 @@ static readonly "STRUCTURE": $DataFixTypes
 static readonly "TYPES_FOR_LEVEL_LIST": $Set<$DSL$TypeReference>
 static readonly "WORLD_GEN_SETTINGS": $DataFixTypes
 
-public "update"(dataFixer0: $DataFixer$$Type, compoundTag1: $CompoundTag$$Type, int2: integer, int3: integer): $CompoundTag
 public "update"<T>(dataFixer0: $DataFixer$$Type, dynamic1: $Dynamic$$Type<T>, int2: integer, int3: integer): $Dynamic<T>
-public "updateToCurrentVersion"(dataFixer0: $DataFixer$$Type, compoundTag1: $CompoundTag$$Type, int2: integer): $CompoundTag
+public "update"(dataFixer0: $DataFixer$$Type, compoundTag1: $CompoundTag$$Type, int2: integer, int3: integer): $CompoundTag
 public "updateToCurrentVersion"<T>(dataFixer0: $DataFixer$$Type, dynamic1: $Dynamic$$Type<T>, int2: integer): $Dynamic<T>
+public "updateToCurrentVersion"(dataFixer0: $DataFixer$$Type, compoundTag1: $CompoundTag$$Type, int2: integer): $CompoundTag
 public static "valueOf"(string0: string): $DataFixTypes
 public static "values"(): $DataFixTypes[]
 }

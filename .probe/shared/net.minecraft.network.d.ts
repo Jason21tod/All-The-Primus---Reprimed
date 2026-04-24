@@ -142,8 +142,8 @@ public "readAnySizeNbt"(): $CompoundTag
 public "readBitSet"(): $BitSet
 public "readBlockHitResult"(): $BlockHitResult
 public "readBlockPos"(): $BlockPos
-public "readById"<T>(idMap0: $IdMap$$Type<T>): T
 public "readById"<T>(idMap0: $IdMap$$Type<$Holder$$Type<T>>, reader1: $FriendlyByteBuf$Reader$$Type<T>): $Holder<T>
+public "readById"<T>(idMap0: $IdMap$$Type<T>): T
 public "readByteArray"(): byte[]
 public "readByteArray"(int0: integer): byte[]
 public "readChunkPos"(): $ChunkPos
@@ -163,13 +163,13 @@ public "readIntIdList"(): $IntList
 public "readItem"(): $ItemStack
 public "readJsonWithCodec"<T>(codec0: $Codec$$Type<T>): T
 public "readList"<T>(reader0: $FriendlyByteBuf$Reader$$Type<T>): $List<T>
-public "readLongArray"(long0s: long[], int1: integer): long[]
-public "readLongArray"(): long[]
 public "readLongArray"(long0s: long[]): long[]
-public "readMap"<K, V, M extends $Map<K, V>>(intFunction0: $IntFunction$$Type<M>, reader1: $FriendlyByteBuf$Reader$$Type<K>, reader2: $FriendlyByteBuf$Reader$$Type<V>): M
+public "readLongArray"(): long[]
+public "readLongArray"(long0s: long[], int1: integer): long[]
 public "readMap"<K, V>(reader0: $FriendlyByteBuf$Reader$$Type<K>, reader1: $FriendlyByteBuf$Reader$$Type<V>): $Map<K, V>
-public "readNbt"(nbtAccounter0: $NbtAccounter$$Type): $CompoundTag
+public "readMap"<K, V, M extends $Map<K, V>>(intFunction0: $IntFunction$$Type<M>, reader1: $FriendlyByteBuf$Reader$$Type<K>, reader2: $FriendlyByteBuf$Reader$$Type<V>): M
 public "readNbt"(): $CompoundTag
+public "readNbt"(nbtAccounter0: $NbtAccounter$$Type): $CompoundTag
 public "readNullable"<T>(reader0: $FriendlyByteBuf$Reader$$Type<T>): T
 public "readOptional"<T>(reader0: $FriendlyByteBuf$Reader$$Type<T>): $Optional<T>
 public "readProperty"(): $Property
@@ -182,19 +182,19 @@ public "readResourceKey"<T>(resourceKey0: $ResourceKey$$Type<$Registry<T>>): $Re
 public "readResourceLocation"(): $ResourceLocation
 public "readSectionPos"(): $SectionPos
 public "readUUID"(): $UUID
-public "readUtf"(int0: integer): string
 public "readUtf"(): string
+public "readUtf"(int0: integer): string
 public "readVarInt"(): integer
-public "readVarIntArray"(): integer[]
 public "readVarIntArray"(int0: integer): integer[]
+public "readVarIntArray"(): integer[]
 public "readVarLong"(): long
 public "readVector3f"(): $Vector3f
 /** @deprecated */
 public "readWithCodec"<T>(dynamicOps0: $DynamicOps$$Type<$Tag$$Type>, codec1: $Codec$$Type<T>): T
 public "readWithCount"(consumer0: $Consumer$$Type<$FriendlyByteBuf$$Type>): void
 public "refCnt"(): integer
-public "release"(): boolean
 public "release"(int0: integer): boolean
+public "release"(): boolean
 public "writeBitSet"(bitSet0: $BitSet$$Type): void
 public "writeBlockHitResult"(blockHitResult0: $BlockHitResult$$Type): void
 public "writeBlockPos"(blockPos0: $BlockPos$$Type): $FriendlyByteBuf
@@ -211,8 +211,8 @@ public "writeFluidStack"(fluidStack0: $FluidStack$$Type): void
 public "writeGameProfile"(gameProfile0: $GameProfile$$Type): void
 public "writeGameProfileProperties"(propertyMap0: $PropertyMap$$Type): void
 public "writeGlobalPos"(globalPos0: $GlobalPos$$Type): void
-public "writeId"<T>(idMap0: $IdMap$$Type<$Holder$$Type<T>>, holder1: $Holder$$Type<T>, writer2: $FriendlyByteBuf$Writer$$Type<T>): void
 public "writeId"<T>(idMap0: $IdMap$$Type<T>, t1: T): void
+public "writeId"<T>(idMap0: $IdMap$$Type<$Holder$$Type<T>>, holder1: $Holder$$Type<T>, writer2: $FriendlyByteBuf$Writer$$Type<T>): void
 public "writeInstant"(instant0: $Instant$$Type): void
 public "writeIntIdList"(intList0: $IntList$$Type): void
 public "writeItem"(itemStack0: $ItemStack$$Type): $FriendlyByteBuf
@@ -227,14 +227,14 @@ public "writeProperty"(property0: $Property$$Type): void
 public "writePublicKey"(publicKey0: $PublicKey$$Type): $FriendlyByteBuf
 public "writeQuaternion"(quaternionf0: $Quaternionf$$Type): void
 public "writeRegistryId"<T>(iForgeRegistry0: $IForgeRegistry$$Type<T>, t1: T): void
-public "writeRegistryIdUnsafe"<T>(iForgeRegistry0: $IForgeRegistry$$Type<T>, t1: T): void
 public "writeRegistryIdUnsafe"(iForgeRegistry0: $IForgeRegistry$$Type<any>, resourceLocation1: $ResourceLocation$$Type): void
+public "writeRegistryIdUnsafe"<T>(iForgeRegistry0: $IForgeRegistry$$Type<T>, t1: T): void
 public "writeResourceKey"(resourceKey0: $ResourceKey$$Type<any>): void
 public "writeResourceLocation"(resourceLocation0: $ResourceLocation$$Type): $FriendlyByteBuf
 public "writeSectionPos"(sectionPos0: $SectionPos$$Type): $FriendlyByteBuf
 public "writeUUID"(uUID0: $UUID$$Type): $FriendlyByteBuf
-public "writeUtf"(string0: string, int1: integer): $FriendlyByteBuf
 public "writeUtf"(string0: string): $FriendlyByteBuf
+public "writeUtf"(string0: string, int1: integer): $FriendlyByteBuf
 public "writeVarInt"(int0: integer): $FriendlyByteBuf
 public "writeVarIntArray"(int0s: integer[]): $FriendlyByteBuf
 public "writeVarLong"(long0: long): $FriendlyByteBuf

@@ -113,9 +113,9 @@ public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "etf$canBeBright"(): boolean
 public "etf$distanceTo"(entity0: $Entity$$Type): float
@@ -164,8 +164,8 @@ public "getCustomName"(): $Component
 public "getDefaultMovementSpeed"(): double
 public "getDeltaMovementLerped"(float0: float): $Vec3
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getElytraTextureLocation"(): $ResourceLocation
 public "getEntityReach"(): double
@@ -232,9 +232,9 @@ public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFake"(): boolean
 public "isFrame"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLeftHanded"(): boolean
 public "isLiving"(): boolean
 public "isMagnetizing"(): boolean
@@ -267,8 +267,8 @@ public "playRollAnimation"(animationName: string, direction: $Vec3$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public static "registerSkinTexture"(resourceLocation0: $ResourceLocation$$Type, string1: string): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
@@ -287,7 +287,6 @@ public "sendData"(channel: string, data: $CompoundTag$$Type): void
 public "sendData"(channel: string): void
 public "sendInventoryUpdate"(): void
 public "sendSystemMessage"(component0: $Component$$Type): void
-public "serializeNBT"(): $CompoundTag
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setCharge"(int0: integer): void
 public "setChestArmorItem"(item: $ItemStack$$Type): void
@@ -309,8 +308,8 @@ public "setMouseItem"(item: $ItemStack$$Type): void
 public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setProjectionScale"(int0: integer): void
 public "setRotation"(yaw: float, pitch: float): void
@@ -330,8 +329,8 @@ public "sinkInFluid"(fluidType0: $FluidType$$Type): void
 public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $LevelRenderer$$Type): void
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public "stopAttackAnimation"(length: float): void
 public "swing"(): void
 public "swing"(hand: $InteractionHand$$Type): void
@@ -643,9 +642,9 @@ public static "createWeakRefBasedSet"(): $ObjectOpenCustomHashSet<$WeakReference
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageEquipment"(slot: $EquipmentSlot$$Type): void
-public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer, onBroken: $Consumer$$Type<$ItemStack$$Type>): void
 public "damageHeldItem"(): void
+public "damageHeldItem"(hand: $InteractionHand$$Type, amount: integer): void
 public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "drop"(boolean0: boolean): boolean
 public "etf$canBeBright"(): boolean
@@ -694,8 +693,8 @@ public "getCurrentMood"(): float
 public "getCustomName"(): $Component
 public "getDefaultMovementSpeed"(): double
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 public "getEntityReach"(): double
 public "getEquipment"(slot: $EquipmentSlot$$Type): $ItemStack
@@ -773,9 +772,9 @@ public "isFake"(): boolean
 public "isFrame"(): boolean
 public "isHandsBusy"(): boolean
 public "isHoldingInAnyHand"(i: $Ingredient$$Type): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isInMovementPhase"(): boolean
 public "isLiving"(): boolean
 public "isMagnetizing"(): boolean
@@ -809,8 +808,8 @@ public "paint"(tag: $CompoundTag$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
 public "rayTrace"(): $RayTraceResultJS
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "removeAttribute"(attribute: $Attribute$$Type, identifier: string): void
 public "removeRecipeHighlight"(recipe0: $Recipe$$Type<any>): void
@@ -830,7 +829,6 @@ public "sendData"(channel: string, data: $CompoundTag$$Type): void
 public "sendData"(channel: string): void
 public "sendInventoryUpdate"(): void
 public "sendOpenInventory"(): void
-public "serializeNBT"(): $CompoundTag
 public "serverAiStep"(): void
 public "setAttributeBaseValue"(attribute: $Attribute$$Type, value: double): void
 public "setCharge"(int0: integer): void
@@ -855,8 +853,8 @@ public "setMovementSpeedAddition"(speed: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
 public "setOffHandItem"(item: $ItemStack$$Type): void
 public "setPermissionLevel"(int0: integer): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setProjectionScale"(int0: integer): void
 public "setRotation"(yaw: float, pitch: float): void
@@ -879,8 +877,8 @@ public "sinkInFluid"(fluidType0: $FluidType$$Type): void
 public "sodiumdynamiclights$scheduleTrackedChunksRebuild"(levelRenderer0: $LevelRenderer$$Type): void
 public "sodiumdynamiclights$updateDynamicLight"(levelRenderer0: $LevelRenderer$$Type): boolean
 public "spawn"(): void
-public static "startTracking"(object0: any): void
 public "startTracking"(): void
+public static "startTracking"(object0: any): void
 public "swing"(): void
 public "swing"(hand: $InteractionHand$$Type): void
 public "teleportTo"(dimension: $ResourceLocation$$Type, x: double, y: double, z: double, yaw: float, pitch: float): void

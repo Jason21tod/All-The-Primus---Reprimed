@@ -128,7 +128,6 @@ public "isAuto"(): boolean
 public "isEnableGunLight"(): boolean
 public "isRevolver"(): boolean
 public "isSilenced"(): boolean
-public "serializeNBT"(): $CompoundTag
 public "setCurrentAmmoTypeIndex"(int0: integer): void
 public "setMeleeDamage"(float0: float): void
 public "toJsonObject"(): $JsonObject
@@ -259,8 +258,8 @@ export interface $IGunModifier {
 "additionalProjectileGravity"(): double
 "criticalChance"(): float
 "isMeleeOnly"(): boolean
-"kickModifier"(): float
 "kickModifier"(itemStack0: $ItemStack$$Type): float
+"kickModifier"(): float
 "modifyAimDownSightSpeed"(double0: double): double
 "modifyAmmoCapacity"(int0: integer): integer
 "modifyDamageFalloffEnd"(float0: float): float
@@ -278,8 +277,8 @@ export interface $IGunModifier {
 "modifyProjectileSpread"(float0: float): float
 "modifyReloadSpeed"(double0: double): double
 "modifySensitivity"(double0: double): double
-"recoilModifier"(itemStack0: $ItemStack$$Type): float
 "recoilModifier"(): float
+"recoilModifier"(itemStack0: $ItemStack$$Type): float
 "silencedFire"(): boolean
 get "meleeOnly"(): boolean
 }
@@ -310,7 +309,6 @@ public "getPreFire"(): $ResourceLocation
 public "getPreReload"(): $ResourceLocation
 public "getReload"(): $ResourceLocation
 public "getSilencedFire"(): $ResourceLocation
-public "serializeNBT"(): $CompoundTag
 public "toJsonObject"(): $JsonObject
 get "cock"(): $ResourceLocation
 get "enchantedFire"(): $ResourceLocation
@@ -609,7 +607,6 @@ public "deserializeNBT"(compoundTag0: $CompoundTag$$Type): void
 public "getBeamOrigin"(): $Gun$Display$BeamOrigin
 public "getFlash"(): $Gun$Display$Flash
 public "getMuzzleFlashType"(): string
-public "serializeNBT"(): $CompoundTag
 public "setMuzzleFlashType"(string0: string): void
 public "toJsonObject"(): $JsonObject
 get "beamOrigin"(): $Gun$Display$BeamOrigin
@@ -663,8 +660,8 @@ public "getAttachmentPosition"(type0: $IAttachment$Type$$Type): $Gun$ScaledPosit
 public "getBaseGripType"(): $GripType
 public static "getBurstCooldown"(itemStack0: $ItemStack$$Type): integer
 public static "getBurstCount"(itemStack0: $ItemStack$$Type): integer
-public "getCurrentAmmoItem"(): $Item
 public "getCurrentAmmoItem"(itemStack0: $ItemStack$$Type): $Item
+public "getCurrentAmmoItem"(): $Item
 public "getDisplay"(): $Gun$Display
 public "getEditorLabel"(): $Component
 public "getEditorWidgets"(list0: $List$$Type<$Pair$$Type<$Component$$Type, $Supplier$$Type<$IDebugWidget$$Type>>>): void
@@ -675,16 +672,16 @@ public "getIdealAttackRange"(): double
 public static "getMaxAmmo"(itemStack0: $ItemStack$$Type): integer
 public "getMinAttackRange"(): double
 public "getModules"(): $Gun$Modules
-public "getProjectile"(): $Gun$Projectile
 public "getProjectile"(itemStack0: $ItemStack$$Type): $Gun$Projectile
+public "getProjectile"(): $Gun$Projectile
 public "getReloads"(): $Gun$Reloads
 public static "getReserveAmmoCount"(player0: $Player$$Type, item1: $Item$$Type): integer
 public static "getScope"(itemStack0: $ItemStack$$Type): $Scope
 public static "getScopeStack"(itemStack0: $ItemStack$$Type): $ItemStack
 public "getSounds"(): $Gun$Sounds
 public static "hasAmmo"(itemStack0: $ItemStack$$Type): boolean
-public static "hasAttachmentEquipped"(itemStack0: $ItemStack$$Type, type1: $IAttachment$Type$$Type): boolean
 public static "hasAttachmentEquipped"(itemStack0: $ItemStack$$Type, gun1: $Gun$$Type, type2: $IAttachment$Type$$Type): boolean
+public static "hasAttachmentEquipped"(itemStack0: $ItemStack$$Type, type1: $IAttachment$Type$$Type): boolean
 public static "hasBurstFire"(itemStack0: $ItemStack$$Type): boolean
 public static "hasCustomAttachment"(itemStack0: $ItemStack$$Type, type1: $IAttachment$Type$$Type, item2: $Item$$Type): boolean
 public static "hasExtendedBarrel"(itemStack0: $ItemStack$$Type): boolean
@@ -805,8 +802,8 @@ public "getClassification"(boolean0: boolean): $MobCategory
 public "getCriticalDamage"(itemStack0: $ItemStack$$Type, randomSource1: $RandomSource$$Type, float2: float): float
 public "getDamage"(): float
 public "getDisplayName"(): $Component
-public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistance"(x: double, y: double, z: double): double
+public "getDistance"(pos: $BlockPos$$Type): double
 public "getDistanceSq"(pos: $BlockPos$$Type): double
 /** @deprecated */
 public "getEyeHeightForge"(pose0: $Pose$$Type, entityDimensions1: $EntityDimensions$$Type): float
@@ -846,9 +843,9 @@ public "isAmbientCreature"(): boolean
 public "isAnimal"(): boolean
 public "isEyeInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isFrame"(): boolean
-public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
-public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
 public "isInFluidType"(fluidState0: $FluidState$$Type): boolean
+public "isInFluidType"(fluidType0: $FluidType$$Type): boolean
+public "isInFluidType"(biPredicate0: $BiPredicate$$Type<$FluidType$$Type, double>): boolean
 public "isLiving"(): boolean
 public "isMonster"(): boolean
 public "isMultipartEntity"(): boolean
@@ -865,8 +862,8 @@ public static "of"(entity0: $Entity$$Type): $ExtraEntity
 public "onHit"(hitResult0: $HitResult$$Type, vec31: $Vec3$$Type, vec32: $Vec3$$Type): void
 public "playSound"(id: $SoundEvent$$Type, volume: float, pitch: float): void
 public "playSound"(id: $SoundEvent$$Type): void
-public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "rayTrace"(distance: double): $RayTraceResultJS
+public "rayTrace"(distance: double, fluids: boolean): $RayTraceResultJS
 public "readSpawnData"(friendlyByteBuf0: $FriendlyByteBuf$$Type): void
 public "removeAttached"<A>(type: $AttachmentType$$Type<A>): A
 public "runCommand"(command: string): integer
@@ -874,7 +871,6 @@ public "runCommandSilent"(command: string): integer
 public "sdl$isDynamicLightEnabled"(): boolean
 public "sdl$setDynamicLightEnabled"(enabled: boolean): void
 public "self"(): $Entity
-public "serializeNBT"(): $CompoundTag
 public "setAdditionalDamage"(float0: float): void
 public "setArmorBypassAmount"(float0: float): void
 public "setItem"(itemStack0: $ItemStack$$Type): void
@@ -882,8 +878,8 @@ public "setMotionX"(x: double): void
 public "setMotionY"(y: double): void
 public "setMotionZ"(z: double): void
 public "setNbt"(nbt: $CompoundTag$$Type): void
-public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPosition"(x: double, y: double, z: double): void
+public "setPosition"(block: $BlockContainerJS$$Type): void
 public "setPositionAndRotation"(x: double, y: double, z: double, yaw: float, pitch: float): void
 public "setRotation"(yaw: float, pitch: float): void
 public "setStatusMessage"(message: $Component$$Type): void
@@ -1253,7 +1249,6 @@ public "isDamageReduceOverLife"(): boolean
 public "isGravity"(): boolean
 public "isSoulFire"(): boolean
 public "isVisible"(): boolean
-public "serializeNBT"(): $CompoundTag
 public "setCasingType"(resourceLocation0: $ResourceLocation$$Type): void
 public "setDamage"(float0: float): void
 public "setEnergyUse"(int0: integer): void
@@ -1434,7 +1429,6 @@ public "getAttachments"(): $Gun$Modules$Attachments
 public "getEditorLabel"(): $Component
 public "getEditorWidgets"(list0: $List$$Type<$Pair$$Type<$Component$$Type, $Supplier$$Type<$IDebugWidget$$Type>>>): void
 public "getZoom"(): $Gun$Modules$Zoom
-public "serializeNBT"(): $CompoundTag
 public "toJsonObject"(): $JsonObject
 get "attachments"(): $Gun$Modules$Attachments
 get "editorLabel"(): $Component

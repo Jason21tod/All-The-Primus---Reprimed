@@ -372,10 +372,10 @@ export interface $MemorySegment {
 "asByteBuffer"(): $ByteBuffer
 "asOverlappingSlice"(memorySegment0: $MemorySegment$$Type): $Optional<$MemorySegment>
 "asReadOnly"(): $MemorySegment
-"asSlice"(long0: long, long1: long): $MemorySegment
-"asSlice"(long0: long, memoryLayout1: $MemoryLayout$$Type): $MemorySegment
 "asSlice"(long0: long): $MemorySegment
 "asSlice"(long0: long, long1: long, long2: long): $MemorySegment
+"asSlice"(long0: long, memoryLayout1: $MemoryLayout$$Type): $MemorySegment
+"asSlice"(long0: long, long1: long): $MemorySegment
 "byteSize"(): long
 "copyFrom"(memorySegment0: $MemorySegment$$Type): $MemorySegment
 "elements"(memoryLayout0: $MemoryLayout$$Type): $Stream<$MemorySegment>
@@ -391,17 +391,17 @@ export interface $MemorySegment {
 "get"(ofFloat0: $ValueLayout$OfFloat$$Type, long1: long): float
 "get"(ofLong0: $ValueLayout$OfLong$$Type, long1: long): long
 "get"(ofByte0: $ValueLayout$OfByte$$Type, long1: long): byte
+"getAtIndex"(ofDouble0: $ValueLayout$OfDouble$$Type, long1: long): double
 "getAtIndex"(ofLong0: $ValueLayout$OfLong$$Type, long1: long): long
 "getAtIndex"(ofFloat0: $ValueLayout$OfFloat$$Type, long1: long): float
-"getAtIndex"(ofShort0: $ValueLayout$OfShort$$Type, long1: long): short
-"getAtIndex"(ofInt0: $ValueLayout$OfInt$$Type, long1: long): integer
-"getAtIndex"(ofChar0: $ValueLayout$OfChar$$Type, long1: long): character
-"getAtIndex"(ofByte0: $ValueLayout$OfByte$$Type, long1: long): byte
 "getAtIndex"(addressLayout0: $AddressLayout$$Type, long1: long): $MemorySegment
-"getAtIndex"(ofDouble0: $ValueLayout$OfDouble$$Type, long1: long): double
 "getAtIndex"(ofBoolean0: $ValueLayout$OfBoolean$$Type, long1: long): boolean
-"getString"(long0: long, charset1: $Charset$$Type): string
+"getAtIndex"(ofShort0: $ValueLayout$OfShort$$Type, long1: long): short
+"getAtIndex"(ofChar0: $ValueLayout$OfChar$$Type, long1: long): character
+"getAtIndex"(ofInt0: $ValueLayout$OfInt$$Type, long1: long): integer
+"getAtIndex"(ofByte0: $ValueLayout$OfByte$$Type, long1: long): byte
 "getString"(long0: long): string
+"getString"(long0: long, charset1: $Charset$$Type): string
 "hashCode"(): integer
 "heapBase"(): $Optional<any>
 "isAccessibleBy"(thread0: $Thread$$Type): boolean
@@ -412,9 +412,9 @@ export interface $MemorySegment {
 "load"(): void
 "maxByteAlignment"(): long
 "mismatch"(memorySegment0: $MemorySegment$$Type): long
-"reinterpret"(long0: long): $MemorySegment
-"reinterpret"(arena0: $Arena$$Type, consumer1: $Consumer$$Type<$MemorySegment$$Type>): $MemorySegment
 "reinterpret"(long0: long, arena1: $Arena$$Type, consumer2: $Consumer$$Type<$MemorySegment$$Type>): $MemorySegment
+"reinterpret"(arena0: $Arena$$Type, consumer1: $Consumer$$Type<$MemorySegment$$Type>): $MemorySegment
+"reinterpret"(long0: long): $MemorySegment
 "scope"(): $MemorySegment$Scope
 "set"(ofLong0: $ValueLayout$OfLong$$Type, long1: long, long2: long): void
 "set"(ofDouble0: $ValueLayout$OfDouble$$Type, long1: long, double2: double): void
@@ -425,17 +425,17 @@ export interface $MemorySegment {
 "set"(ofShort0: $ValueLayout$OfShort$$Type, long1: long, short2: short): void
 "set"(ofFloat0: $ValueLayout$OfFloat$$Type, long1: long, float2: float): void
 "set"(ofInt0: $ValueLayout$OfInt$$Type, long1: long, int2: integer): void
-"setAtIndex"(ofBoolean0: $ValueLayout$OfBoolean$$Type, long1: long, boolean2: boolean): void
-"setAtIndex"(ofChar0: $ValueLayout$OfChar$$Type, long1: long, char2: character): void
 "setAtIndex"(ofByte0: $ValueLayout$OfByte$$Type, long1: long, byte2: byte): void
-"setAtIndex"(ofShort0: $ValueLayout$OfShort$$Type, long1: long, short2: short): void
-"setAtIndex"(ofLong0: $ValueLayout$OfLong$$Type, long1: long, long2: long): void
-"setAtIndex"(ofDouble0: $ValueLayout$OfDouble$$Type, long1: long, double2: double): void
-"setAtIndex"(ofFloat0: $ValueLayout$OfFloat$$Type, long1: long, float2: float): void
 "setAtIndex"(addressLayout0: $AddressLayout$$Type, long1: long, memorySegment2: $MemorySegment$$Type): void
+"setAtIndex"(ofChar0: $ValueLayout$OfChar$$Type, long1: long, char2: character): void
 "setAtIndex"(ofInt0: $ValueLayout$OfInt$$Type, long1: long, int2: integer): void
-"setString"(long0: long, string1: string, charset2: $Charset$$Type): void
+"setAtIndex"(ofLong0: $ValueLayout$OfLong$$Type, long1: long, long2: long): void
+"setAtIndex"(ofFloat0: $ValueLayout$OfFloat$$Type, long1: long, float2: float): void
+"setAtIndex"(ofShort0: $ValueLayout$OfShort$$Type, long1: long, short2: short): void
+"setAtIndex"(ofDouble0: $ValueLayout$OfDouble$$Type, long1: long, double2: double): void
+"setAtIndex"(ofBoolean0: $ValueLayout$OfBoolean$$Type, long1: long, boolean2: boolean): void
 "setString"(long0: long, string1: string): void
+"setString"(long0: long, string1: string, charset2: $Charset$$Type): void
 "spliterator"(memoryLayout0: $MemoryLayout$$Type): $Spliterator<$MemorySegment>
 "toArray"(ofByte0: $ValueLayout$OfByte$$Type): byte[]
 "toArray"(ofDouble0: $ValueLayout$OfDouble$$Type): double[]
@@ -461,11 +461,11 @@ function mismatch(memorySegment0: $MemorySegment$$Type, long1: long, long2: long
 function ofAddress(long0: long): $MemorySegment
 function ofArray(byte0s: byte[]): $MemorySegment
 function ofArray(double0s: double[]): $MemorySegment
-function ofArray(char0s: character[]): $MemorySegment
 function ofArray(long0s: long[]): $MemorySegment
 function ofArray(int0s: integer[]): $MemorySegment
-function ofArray(float0s: float[]): $MemorySegment
 function ofArray(short0s: short[]): $MemorySegment
+function ofArray(char0s: character[]): $MemorySegment
+function ofArray(float0s: float[]): $MemorySegment
 function ofBuffer(buffer0: $Buffer$$Type): $MemorySegment
 }
 export abstract class $MemorySegment$$Static implements $MemorySegment {
@@ -479,11 +479,11 @@ static "mismatch"(memorySegment0: $MemorySegment$$Type, long1: long, long2: long
 static "ofAddress"(long0: long): $MemorySegment
 static "ofArray"(byte0s: byte[]): $MemorySegment
 static "ofArray"(double0s: double[]): $MemorySegment
-static "ofArray"(char0s: character[]): $MemorySegment
 static "ofArray"(long0s: long[]): $MemorySegment
 static "ofArray"(int0s: integer[]): $MemorySegment
-static "ofArray"(float0s: float[]): $MemorySegment
 static "ofArray"(short0s: short[]): $MemorySegment
+static "ofArray"(char0s: character[]): $MemorySegment
+static "ofArray"(float0s: float[]): $MemorySegment
 static "ofBuffer"(buffer0: $Buffer$$Type): $MemorySegment
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
@@ -787,7 +787,6 @@ export interface $SequenceLayout extends $MemoryLayout {
 "sliceHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $MethodHandle
 "toString"(): string
 "varHandle"(...pathElement0s: $MemoryLayout$PathElement$$Type[]): $VarHandle
-"withByteAlignment"(long0: long): $SequenceLayout
 "withElementCount"(long0: long): $SequenceLayout
 "withoutName"(): $MemoryLayout
 }
@@ -3971,19 +3970,19 @@ export interface $MemoryLayout$PathElement {
 
 export namespace $MemoryLayout$PathElement {
 function dereferenceElement(): $MemoryLayout$PathElement
-function groupElement(string0: string): $MemoryLayout$PathElement
 function groupElement(long0: long): $MemoryLayout$PathElement
-function sequenceElement(long0: long, long1: long): $MemoryLayout$PathElement
-function sequenceElement(): $MemoryLayout$PathElement
+function groupElement(string0: string): $MemoryLayout$PathElement
 function sequenceElement(long0: long): $MemoryLayout$PathElement
+function sequenceElement(): $MemoryLayout$PathElement
+function sequenceElement(long0: long, long1: long): $MemoryLayout$PathElement
 }
 export abstract class $MemoryLayout$PathElement$$Static implements $MemoryLayout$PathElement {
 static "dereferenceElement"(): $MemoryLayout$PathElement
-static "groupElement"(string0: string): $MemoryLayout$PathElement
 static "groupElement"(long0: long): $MemoryLayout$PathElement
-static "sequenceElement"(long0: long, long1: long): $MemoryLayout$PathElement
-static "sequenceElement"(): $MemoryLayout$PathElement
+static "groupElement"(string0: string): $MemoryLayout$PathElement
 static "sequenceElement"(long0: long): $MemoryLayout$PathElement
+static "sequenceElement"(): $MemoryLayout$PathElement
+static "sequenceElement"(long0: long, long1: long): $MemoryLayout$PathElement
 }
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
 export type $MemoryLayout$PathElement$$Type = ($MemoryLayout$PathElement);

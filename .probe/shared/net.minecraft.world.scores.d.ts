@@ -219,8 +219,8 @@ public static "getCustomCriteriaNames"(): $Set<string>
 public "getDefaultRenderType"(): $ObjectiveCriteria$RenderType
 public "getName"(): string
 public "isReadOnly"(): boolean
-public static "registerCustom"(string0: string, boolean1: boolean, renderType2: $ObjectiveCriteria$RenderType$$Type): $ObjectiveCriteria
 public static "registerCustom"(string0: string): $ObjectiveCriteria
+public static "registerCustom"(string0: string, boolean1: boolean, renderType2: $ObjectiveCriteria$RenderType$$Type): $ObjectiveCriteria
 get "defaultRenderType"(): $ObjectiveCriteria$RenderType
 get "name"(): string
 get "readOnly"(): boolean
@@ -263,8 +263,8 @@ public "getObjectiveNames"(): $Collection<string>
 public "getObjectives"(): $Collection<$Objective>
 public "getOrCreateObjective"(string0: string): $Objective
 public "getOrCreatePlayerScore"(string0: string, objective1: $Objective$$Type): $Score
-public "getPlayerScores"(string0: string): $Map<$Objective, $Score>
 public "getPlayerScores"(objective0: $Objective$$Type): $Collection<$Score>
+public "getPlayerScores"(string0: string): $Map<$Objective, $Score>
 public "getPlayerTeam"(string0: string): $PlayerTeam
 public "getPlayerTeams"(): $Collection<$PlayerTeam>
 public "getPlayersTeam"(string0: string): $PlayerTeam

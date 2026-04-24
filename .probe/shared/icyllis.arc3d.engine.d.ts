@@ -4,8 +4,8 @@ export class $Device$Stats {
 constructor()
 
 public "incImageCreates"(): void
-public "incNumDraws"(): void
 public "incNumDraws"(increment: integer): void
+public "incNumDraws"(): void
 public "incNumFailedDraws"(): void
 public "incNumScratchMSAAAttachmentsReused"(): void
 public "incNumScratchRenderTargetsReused"(): void
@@ -798,11 +798,11 @@ import { $Image } from "icyllis.arc3d.engine.Image"
 /** @deprecated */
 export class $GpuRenderTarget extends $GpuSurface {
 public "getBackendRenderTarget"(): $BackendRenderTarget
-public "getColorAttachment"(int0: integer): $Image
 public "getColorAttachment"(): $Image
+public "getColorAttachment"(int0: integer): $Image
 public "getDepthStencilAttachment"(): $Image
-public "getResolveAttachment"(): $Image
 public "getResolveAttachment"(int0: integer): $Image
+public "getResolveAttachment"(): $Image
 public "numColorTargets"(): integer
 get "backendRenderTarget"(): $BackendRenderTarget
 get "colorAttachment"(): $Image
@@ -948,8 +948,8 @@ public "endRenderPass"(): void
 public "setScissor"(int0: integer, int1: integer, int2: integer, int3: integer): void
 public "setViewport"(int0: integer, int1: integer, int2: integer, int3: integer): void
 public "trackCommandBufferResource"(resource: $Resource$$Type): void
-public "trackResource"(resource: $ManagedResource$$Type): void
 public "trackResource"(resource: $Resource$$Type): void
+public "trackResource"(resource: $ManagedResource$$Type): void
 }
 }
 
@@ -1066,9 +1066,9 @@ public "isRepeatedX"(): boolean
 public "isRepeatedY"(): boolean
 public "isRepeatedZ"(): boolean
 public static "make"(filter: integer): $SamplerDesc
+public static "make"(filter: integer, mipmap: integer): $SamplerDesc
 public static "make"(filter: integer, mipmap: integer, address: integer): $SamplerDesc
 public static "make"(magFilter: integer, minFilter: integer, mipmapMode: integer, addressModeX: integer, addressModeY: integer, addressModeZ: integer): $SamplerDesc
-public static "make"(filter: integer, mipmap: integer): $SamplerDesc
 public static "makeAnisotropy"(addressModeX: integer, addressModeY: integer, addressModeZ: integer, maxAnisotropy: integer, isMipmapped: boolean): $SamplerDesc
 public "resetMipmapMode"(): $SamplerDesc
 get "addressModeX"(): integer
@@ -1411,8 +1411,8 @@ public "set1i"(u: integer, v0: integer): void
 public "set1iv"(u: integer, offset: integer, count: integer, value: integer[]): void
 public "set1iv"(u: integer, count: integer, value: long): void
 public "set2f"(u: integer, v0: float, v1: float): void
-public "set2fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "set2fv"(u: integer, count: integer, value: long): void
+public "set2fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "set2i"(u: integer, v0: integer, v1: integer): void
 public "set2iv"(u: integer, count: integer, value: long): void
 public "set2iv"(u: integer, offset: integer, count: integer, value: integer[]): void
@@ -1420,20 +1420,20 @@ public "set3f"(u: integer, v0: float, v1: float, v2: float): void
 public "set3fv"(u: integer, count: integer, value: long): void
 public "set3fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "set3i"(u: integer, v0: integer, v1: integer, v2: integer): void
-public "set3iv"(u: integer, offset: integer, count: integer, value: integer[]): void
 public "set3iv"(u: integer, count: integer, value: long): void
+public "set3iv"(u: integer, offset: integer, count: integer, value: integer[]): void
 public "set4f"(u: integer, v0: float, v1: float, v2: float, v3: float): void
-public "set4fv"(u: integer, count: integer, value: long): void
 public "set4fv"(u: integer, offset: integer, count: integer, value: float[]): void
+public "set4fv"(u: integer, count: integer, value: long): void
 public "set4i"(u: integer, v0: integer, v1: integer, v2: integer, v3: integer): void
 public "set4iv"(u: integer, count: integer, value: long): void
 public "set4iv"(u: integer, offset: integer, count: integer, value: integer[]): void
-public "setMatrix2fv"(u: integer, count: integer, value: long): void
 public "setMatrix2fv"(u: integer, offset: integer, count: integer, value: float[]): void
+public "setMatrix2fv"(u: integer, count: integer, value: long): void
 public "setMatrix3f"(u: integer, matrix: $Matrix3$$Type): void
 public "setMatrix3f"(u: integer, matrix: $Matrixc$$Type): void
-public "setMatrix3fv"(u: integer, count: integer, value: long): void
 public "setMatrix3fv"(u: integer, offset: integer, count: integer, value: float[]): void
+public "setMatrix3fv"(u: integer, count: integer, value: long): void
 public "setMatrix4f"(u: integer, matrix: $Matrix4$$Type): void
 public "setMatrix4fv"(u: integer, offset: integer, count: integer, value: float[]): void
 public "setMatrix4fv"(u: integer, count: integer, value: long): void
@@ -1492,8 +1492,8 @@ public "isLazyMost"(): boolean
 public "isMipmapped"(): boolean
 public "isProtected"(): boolean
 public "isVolatile"(): boolean
-public static "make"(context: $Context$$Type, desc: $ImageDesc$$Type, origin: integer, swizzle: short, budgeted: boolean, label: string): $ImageViewProxy
 public static "make"(context: $Context$$Type, imageType: integer, colorType: integer, width: integer, height: integer, depthOrArraySize: integer, imageFlags: integer, origin: integer, swizzle: short): $ImageViewProxy
+public static "make"(context: $Context$$Type, desc: $ImageDesc$$Type, origin: integer, swizzle: short, budgeted: boolean, label: string): $ImageViewProxy
 public static "makeLazy"(desc: $ImageDesc$$Type, origin: integer, swizzle: short, budgeted: boolean, isVolatile: boolean, lazyDimensions: boolean, callback: $ImageViewProxy$LazyInstantiateCallback$$Type): $ImageViewProxy
 public "refImage"(): $Image
 public "setSwizzle"(swizzle: short): void
@@ -1578,19 +1578,19 @@ public "createImage"(width: integer, height: integer, format: $BackendFormat$$Ty
 public "createNewBuffer"(size: long, usage: integer): $Buffer
 public "createNewImage"(desc: $ImageDesc$$Type, label: string): $Image
 /** @deprecated */
+public "createRenderTarget"(width: integer, height: integer, colorFormat: $BackendFormat$$Type, colorFlags: integer, resolveFormat: $BackendFormat$$Type, resolveFlags: integer, depthStencilFormat: $BackendFormat$$Type, depthStencilFlags: integer, sampleCount: integer, surfaceFlags: integer, label: string): $GpuRenderTarget
+/** @deprecated */
 public "createRenderTarget"(numColorTargets: integer, colorTargets: $Image$$Type[], resolveTargets: $Image$$Type[], mipLevels: integer[], depthStencilTarget: $Image$$Type, surfaceFlags: integer): $GpuRenderTarget
 /** @deprecated */
 public "createRenderTarget"(width: integer, height: integer, sampleCount: integer): $GpuRenderTarget
 /** @deprecated */
-public "createRenderTarget"(width: integer, height: integer, colorFormat: $BackendFormat$$Type, colorFlags: integer, resolveFormat: $BackendFormat$$Type, resolveFlags: integer, depthStencilFormat: $BackendFormat$$Type, depthStencilFlags: integer, sampleCount: integer, surfaceFlags: integer, label: string): $GpuRenderTarget
-/** @deprecated */
 public "createTexture"(width: integer, height: integer, format: $BackendFormat$$Type, sampleCount: integer, surfaceFlags: integer, label: string): $Image
-public "findAndRefScratchImage"(key: $IResourceKey$$Type, budgeted: boolean, shareable: boolean, label: string): $Image
 public "findAndRefScratchImage"(desc: $ImageDesc$$Type, budgeted: boolean, shareable: boolean, label: string): $Image
-/** @deprecated */
-public "findAndRefScratchRenderTarget"(width: integer, height: integer, colorFormat: $BackendFormat$$Type, colorFlags: integer, resolveFormat: $BackendFormat$$Type, resolveFlags: integer, depthStencilFormat: $BackendFormat$$Type, depthStencilFlags: integer, sampleCount: integer, surfaceFlags: integer, label: string): $GpuRenderTarget
+public "findAndRefScratchImage"(key: $IResourceKey$$Type, budgeted: boolean, shareable: boolean, label: string): $Image
 /** @deprecated */
 public "findAndRefScratchRenderTarget"(key: $IResourceKey$$Type, label: string): $GpuRenderTarget
+/** @deprecated */
+public "findAndRefScratchRenderTarget"(width: integer, height: integer, colorFormat: $BackendFormat$$Type, colorFlags: integer, resolveFormat: $BackendFormat$$Type, resolveFlags: integer, depthStencilFormat: $BackendFormat$$Type, depthStencilFlags: integer, sampleCount: integer, surfaceFlags: integer, label: string): $GpuRenderTarget
 public "findOrCreateBuffer"(size: long, usage: integer, label: string): $Buffer
 public "findOrCreateCompatibleSampler"(desc: $SamplerDesc$$Type): $Sampler
 public "findOrCreateGraphicsPipeline"(pipelineDesc: $PipelineDesc$$Type, renderPassDesc: $RenderPassDesc$$Type): $GraphicsPipeline
@@ -1933,8 +1933,8 @@ public "dynamicStateArrayGeometryProcessorTextureSupport"(): boolean
 public "fenceSyncSupport"(): boolean
 public "getCompressedBackendFormat"(int0: integer): $BackendFormat
 public "getDefaultBackendFormat"(colorType: integer, renderable: boolean): $BackendFormat
-public "getDefaultColorImageDesc"(imageType: integer, colorType: integer, width: integer, height: integer, depthOrArraySize: integer, mipLevelCount: integer, sampleCount: integer, imageFlags: integer): $ImageDesc
 public "getDefaultColorImageDesc"(imageType: integer, colorType: integer, width: integer, height: integer, depthOrArraySize: integer, imageFlags: integer): $ImageDesc
+public "getDefaultColorImageDesc"(imageType: integer, colorType: integer, width: integer, height: integer, depthOrArraySize: integer, mipLevelCount: integer, sampleCount: integer, imageFlags: integer): $ImageDesc
 public "getDefaultDepthStencilImageDesc"(depthBits: integer, stencilBits: integer, width: integer, height: integer, sampleCount: integer, imageFlags: integer): $ImageDesc
 public "getImageDescForSampledCopy"(src: $ImageDesc$$Type, width: integer, height: integer, depthOrArraySize: integer, imageFlags: integer): $ImageDesc
 public "getInternalMultisampleCount"(format: $BackendFormat$$Type): integer

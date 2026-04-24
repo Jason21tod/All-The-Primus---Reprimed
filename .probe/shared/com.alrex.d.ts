@@ -39,8 +39,8 @@ import { $AdditionalProperties } from "com.alrex.parcool.common.action.Additiona
 import { $Player$$Type } from "net.minecraft.world.entity.player.Player"
 import { $ParCoolConfig$Server$Integers$$Type } from "com.alrex.parcool.config.ParCoolConfig$Server$Integers"
 import { $ParCoolConfig$Client$Doubles$$Type } from "com.alrex.parcool.config.ParCoolConfig$Client$Doubles"
-import { $ParCoolConfig$Server$Booleans$$Type } from "com.alrex.parcool.config.ParCoolConfig$Server$Booleans"
 import { $ParCoolConfig$Server$Doubles$$Type } from "com.alrex.parcool.config.ParCoolConfig$Server$Doubles"
+import { $ParCoolConfig$Server$Booleans$$Type } from "com.alrex.parcool.config.ParCoolConfig$Server$Booleans"
 import { $List } from "java.util.List"
 import { $ClientSetting } from "com.alrex.parcool.common.info.ClientSetting"
 import { $ParCoolConfig$Client$Integers$$Type } from "com.alrex.parcool.config.ParCoolConfig$Client$Integers"
@@ -58,9 +58,9 @@ public "getActionInfo"(): $ActionInfo
 public "getAdditionalProperties"(): $AdditionalProperties
 public "getBehaviorEnforcer"(): $BehaviorEnforcer
 public "getClientInfo"(): $ClientSetting
+public "getLimitedValue"(doubles0: $ParCoolConfig$Client$Doubles$$Type, doubles1: $ParCoolConfig$Server$Doubles$$Type): double
 public "getLimitedValue"(integers0: $ParCoolConfig$Client$Integers$$Type, integers1: $ParCoolConfig$Server$Integers$$Type): integer
 public "getLimitedValue"(booleans0: $ParCoolConfig$Client$Booleans$$Type, booleans1: $ParCoolConfig$Server$Booleans$$Type): boolean
-public "getLimitedValue"(doubles0: $ParCoolConfig$Client$Doubles$$Type, doubles1: $ParCoolConfig$Server$Doubles$$Type): double
 public "getList"(): $List<$Action>
 public "getServerLimitation"(): $ServerLimitation
 /** Client only, do not use in server scripts */
@@ -547,8 +547,8 @@ import { $ModelPart$$Type } from "net.minecraft.client.model.geom.ModelPart"
 export class $PlayerModelTransformer {
 constructor(player0: $Player$$Type, playerModel1: $PlayerModel$$Type, boolean2: boolean, float3: float, float4: float, float5: float, float6: float, float7: float)
 
-public "addRotateLeftArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "addRotateLeftArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
+public "addRotateLeftArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "addRotateLeftLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "addRotateLeftLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "addRotateRightArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
@@ -578,8 +578,8 @@ public "rotateHeadYaw"(float0: float): $PlayerModelTransformer
 public "rotateHeadYawRadian"(float0: float): $PlayerModelTransformer
 public "rotateLeftArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "rotateLeftArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
-public "rotateLeftLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "rotateLeftLeg"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
+public "rotateLeftLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "rotateRightArm"(float0: float, float1: float, float2: float, float3: float): $PlayerModelTransformer
 public "rotateRightArm"(float0: float, float1: float, float2: float): $PlayerModelTransformer
 public "rotateRightLeg"(float0: float, float1: float, float2: float): $PlayerModelTransformer

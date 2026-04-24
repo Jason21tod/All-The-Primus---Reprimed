@@ -181,8 +181,8 @@ static "CODEC": $Codec<$BiomeSource>
 public "addDebugInfo"(list0: $List$$Type<string>, blockPos1: $BlockPos$$Type, sampler2: $Climate$Sampler$$Type): void
 public "appendDeferredBiomesList"(list0: $List$$Type): void
 public "expandBiomesWith"(set0: $Set$$Type): void
-public "findBiomeHorizontal"(int0: integer, int1: integer, int2: integer, int3: integer, predicate4: $Predicate$$Type<$Holder$$Type<$Biome$$Type>>, randomSource5: $RandomSource$$Type, sampler6: $Climate$Sampler$$Type): $Pair<$BlockPos, $Holder<$Biome>>
 public "findBiomeHorizontal"(int0: integer, int1: integer, int2: integer, int3: integer, int4: integer, predicate5: $Predicate$$Type<$Holder$$Type<$Biome$$Type>>, randomSource6: $RandomSource$$Type, boolean7: boolean, sampler8: $Climate$Sampler$$Type): $Pair<$BlockPos, $Holder<$Biome>>
+public "findBiomeHorizontal"(int0: integer, int1: integer, int2: integer, int3: integer, predicate4: $Predicate$$Type<$Holder$$Type<$Biome$$Type>>, randomSource5: $RandomSource$$Type, sampler6: $Climate$Sampler$$Type): $Pair<$BlockPos, $Holder<$Biome>>
 public "findClosestBiome3d"(blockPos0: $BlockPos$$Type, int1: integer, int2: integer, int3: integer, predicate4: $Predicate$$Type<$Holder$$Type<$Biome$$Type>>, sampler5: $Climate$Sampler$$Type, levelReader6: $LevelReader$$Type): $Pair<$BlockPos, $Holder<$Biome>>
 public "getBiomesWithin"(int0: integer, int1: integer, int2: integer, int3: integer, sampler4: $Climate$Sampler$$Type): $Set<$Holder<$Biome>>
 public "getNoiseBiome"(int0: integer, int1: integer, int2: integer, sampler3: $Climate$Sampler$$Type): $Holder<$Biome>
@@ -564,14 +564,14 @@ static readonly "CODEC": $Codec<$Climate$Parameter>
 
 constructor(long0: long, long1: long)
 
-public "distance"(long0: long): long
 public "distance"(parameter0: $Climate$Parameter$$Type): long
+public "distance"(long0: long): long
 public "max"(): long
 public "min"(): long
 public static "point"(float0: float): $Climate$Parameter
-public static "span"(float0: float, float1: float): $Climate$Parameter
-public "span"(parameter0: $Climate$Parameter$$Type): $Climate$Parameter
 public static "span"(parameter0: $Climate$Parameter$$Type, parameter1: $Climate$Parameter$$Type): $Climate$Parameter
+public "span"(parameter0: $Climate$Parameter$$Type): $Climate$Parameter
+public static "span"(float0: float, float1: float): $Climate$Parameter
 }
 }
 

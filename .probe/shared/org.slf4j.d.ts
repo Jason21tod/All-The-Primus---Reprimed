@@ -73,26 +73,26 @@ export interface $Logger {
 "atLevel"(level0: $Level$$Type): $LoggingEventBuilder
 "atTrace"(): $LoggingEventBuilder
 "atWarn"(): $LoggingEventBuilder
-"debug"(string0: string, ...object1s: any[]): void
-"debug"(string0: string, throwable1: $Throwable$$Type): void
-"debug"(marker0: $Marker$$Type, string1: string): void
-"debug"(string0: string, object1: any, object2: any): void
-"debug"(string0: string, object1: any): void
-"debug"(string0: string): void
-"debug"(marker0: $Marker$$Type, string1: string, throwable2: $Throwable$$Type): void
 "debug"(marker0: $Marker$$Type, string1: string, ...object2s: any[]): void
+"debug"(string0: string, object1: any, object2: any): void
+"debug"(string0: string, throwable1: $Throwable$$Type): void
+"debug"(marker0: $Marker$$Type, string1: string, throwable2: $Throwable$$Type): void
+"debug"(string0: string, ...object1s: any[]): void
+"debug"(marker0: $Marker$$Type, string1: string): void
 "debug"(marker0: $Marker$$Type, string1: string, object2: any, object3: any): void
+"debug"(string0: string): void
 "debug"(marker0: $Marker$$Type, string1: string, object2: any): void
-"error"(marker0: $Marker$$Type, string1: string, object2: any): void
+"debug"(string0: string, object1: any): void
+"error"(marker0: $Marker$$Type, string1: string, ...object2s: any[]): void
 "error"(marker0: $Marker$$Type, string1: string): void
-"error"(marker0: $Marker$$Type, string1: string, object2: any, object3: any): void
-"error"(string0: string): void
 "error"(string0: string, object1: any): void
 "error"(string0: string, throwable1: $Throwable$$Type): void
 "error"(string0: string, ...object1s: any[]): void
-"error"(marker0: $Marker$$Type, string1: string, ...object2s: any[]): void
-"error"(marker0: $Marker$$Type, string1: string, throwable2: $Throwable$$Type): void
 "error"(string0: string, object1: any, object2: any): void
+"error"(string0: string): void
+"error"(marker0: $Marker$$Type, string1: string, object2: any): void
+"error"(marker0: $Marker$$Type, string1: string, object2: any, object3: any): void
+"error"(marker0: $Marker$$Type, string1: string, throwable2: $Throwable$$Type): void
 "getName"(): string
 "info"(string0: string, object1: any, object2: any): void
 "info"(string0: string, ...object1s: any[]): void
@@ -104,38 +104,38 @@ export interface $Logger {
 "info"(marker0: $Marker$$Type, string1: string, object2: any, object3: any): void
 "info"(marker0: $Marker$$Type, string1: string, object2: any): void
 "info"(marker0: $Marker$$Type, string1: string): void
-"isDebugEnabled"(): boolean
 "isDebugEnabled"(marker0: $Marker$$Type): boolean
+"isDebugEnabled"(): boolean
 "isEnabledForLevel"(level0: $Level$$Type): boolean
-"isErrorEnabled"(marker0: $Marker$$Type): boolean
 "isErrorEnabled"(): boolean
+"isErrorEnabled"(marker0: $Marker$$Type): boolean
 "isInfoEnabled"(marker0: $Marker$$Type): boolean
 "isInfoEnabled"(): boolean
-"isTraceEnabled"(): boolean
 "isTraceEnabled"(marker0: $Marker$$Type): boolean
+"isTraceEnabled"(): boolean
 "isWarnEnabled"(marker0: $Marker$$Type): boolean
 "isWarnEnabled"(): boolean
 "makeLoggingEventBuilder"(level0: $Level$$Type): $LoggingEventBuilder
 "trace"(marker0: $Marker$$Type, string1: string, throwable2: $Throwable$$Type): void
-"trace"(string0: string): void
+"trace"(string0: string, throwable1: $Throwable$$Type): void
 "trace"(string0: string, object1: any): void
 "trace"(string0: string, object1: any, object2: any): void
 "trace"(string0: string, ...object1s: any[]): void
-"trace"(string0: string, throwable1: $Throwable$$Type): void
-"trace"(marker0: $Marker$$Type, string1: string): void
 "trace"(marker0: $Marker$$Type, string1: string, object2: any): void
-"trace"(marker0: $Marker$$Type, string1: string, ...object2s: any[]): void
 "trace"(marker0: $Marker$$Type, string1: string, object2: any, object3: any): void
+"trace"(marker0: $Marker$$Type, string1: string): void
+"trace"(marker0: $Marker$$Type, string1: string, ...object2s: any[]): void
+"trace"(string0: string): void
+"warn"(string0: string): void
+"warn"(string0: string, ...object1s: any[]): void
+"warn"(string0: string, object1: any): void
+"warn"(marker0: $Marker$$Type, string1: string, throwable2: $Throwable$$Type): void
+"warn"(marker0: $Marker$$Type, string1: string, object2: any, object3: any): void
 "warn"(marker0: $Marker$$Type, string1: string, object2: any): void
 "warn"(marker0: $Marker$$Type, string1: string): void
-"warn"(marker0: $Marker$$Type, string1: string, object2: any, object3: any): void
-"warn"(string0: string, ...object1s: any[]): void
-"warn"(string0: string): void
-"warn"(string0: string, object1: any): void
-"warn"(string0: string, object1: any, object2: any): void
-"warn"(string0: string, throwable1: $Throwable$$Type): void
-"warn"(marker0: $Marker$$Type, string1: string, throwable2: $Throwable$$Type): void
 "warn"(marker0: $Marker$$Type, string1: string, ...object2s: any[]): void
+"warn"(string0: string, throwable1: $Throwable$$Type): void
+"warn"(string0: string, object1: any, object2: any): void
 get "name"(): string
 get "debugEnabled"(): boolean
 get "errorEnabled"(): boolean

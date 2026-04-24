@@ -39,8 +39,8 @@ import { $StringBuilder$$Type } from "java.lang.StringBuilder"
 
 export interface $TypeDescJS {
 "asArray"(): $TypeDescJS
-"asMap"(key: $TypeDescJS$$Type): $TypeDescJS
 "asMap"(): $TypeDescJS
+"asMap"(key: $TypeDescJS$$Type): $TypeDescJS
 "build"(): string
 "build"(stringBuilder0: $StringBuilder$$Type): void
 "or"(type: $TypeDescJS$$Type): $TypeDescJS
@@ -90,8 +90,8 @@ public "add"(key: string, value: $TypeDescJS$$Type, optional: boolean): $ObjectD
 public "add"(key: string, value: $TypeDescJS$$Type): $ObjectDescJS
 public static "any"(...types: $TypeDescJS$$Type[]): $TypeDescJS
 public "asArray"(): $TypeDescJS
-public "asMap"(key: $TypeDescJS$$Type): $TypeDescJS
 public "asMap"(): $TypeDescJS
+public "asMap"(key: $TypeDescJS$$Type): $TypeDescJS
 public "build"(builder: $StringBuilder$$Type): void
 public "build"(): string
 public static "fixedArray"(...types: $TypeDescJS$$Type[]): $TypeDescJS

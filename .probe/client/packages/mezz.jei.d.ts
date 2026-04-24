@@ -268,10 +268,9 @@ export type $IIngredientConsumer$$Type = ($IIngredientConsumer);
 }
 
 declare module "mezz.jei.api.gui.builder.IIngredientAcceptor" {
-import { $IIngredientType } from "mezz.jei.api.ingredients.IIngredientType"
-
+export {} // Mark the file as a module, do not remove unless there are other import/exports!
 /** Use `Internal.{Type}` and `Internal.{Type}_` for referencing this type in JS file */
-export type $IIngredientAcceptor$$Type<THIS extends $IIngredientAcceptor<THIS> = $IIngredientAcceptor<THIS>> = ($IIngredientAcceptor<THIS> | ((arg0: $IIngredientType<I>, arg1: I) => THIS));
+export type $IIngredientAcceptor$$Type<THIS extends $IIngredientAcceptor<THIS> = $IIngredientAcceptor<THIS>> = ($IIngredientAcceptor<THIS>);
 }
 
 declare module "mezz.jei.api.runtime.IJeiRuntime" {
