@@ -32,11 +32,8 @@
         }
     },
     "unholy_blood_message": {
-        "type": "origins:action_on_item_use",
-        "entity_action": {
-            "type": "origins:execute_command",
-            "command": "tell @s Você ganhou mais um ponto na árvore de habilidades de vampiro"
-        },
+        "type": "origins:tooltip",
+        "text": "Beba isso e torne-se ainda mais forte... Cuidado, altamente d-e-l-í-c-i-o-s-o",
         "item_condition": {
             "type": "origins:ingredient",
             "ingredient": {
